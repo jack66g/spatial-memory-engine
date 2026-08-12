@@ -1,0 +1,227 @@
+{
+ "generated_at": 1786229098.4128218,
+ "dialogue": "data\\dialogue_300.json",
+ "quiz": "data\\quiz_300.json",
+ "embedding_model": "BAAI/bge-small-zh-v1.5",
+ "llm_gen_cost": {
+  "calls": 300,
+  "total_tokens": 76849,
+  "prompt_tokens": 71718,
+  "completion_tokens": 5131,
+  "est_cost_yuan": 0.2305,
+  "avg_latency_ms": 947.7
+ },
+ "results": [
+  {
+   "name": "sme_chat",
+   "hit@1": 0.7179,
+   "hit@3": 0.8205,
+   "hit@5": 0.8205,
+   "sem@1": 0.7949,
+   "sem@3": 0.8974,
+   "sem@5": 0.9231,
+   "replay_seconds": 3.89,
+   "misses": [
+    {
+     "q": "在哪里",
+     "expect": "我在一家互联网公司做前端工程师"
+    },
+    {
+     "q": "养了什么宠物",
+     "expect": "可乐其实是只柯基"
+    },
+    {
+     "q": "最喜欢什么",
+     "expect": "我最喜欢的电影是《星际穿越》"
+    }
+   ],
+   "store_count": 600,
+   "store_avg_ms": 6.48,
+   "search_avg_ms": 15.91,
+   "memories": 600,
+   "regions": 5,
+   "qapairs": 0
+  },
+  {
+   "name": "sme_kb_dynamic",
+   "hit@1": 0.0256,
+   "hit@3": 0.0256,
+   "hit@5": 0.4615,
+   "sem@1": 0.8462,
+   "sem@3": 0.9487,
+   "sem@5": 0.9487,
+   "replay_seconds": 258.11,
+   "misses": [
+    {
+     "q": "住在哪里",
+     "expect": "其实我去年搬到上海了"
+    },
+    {
+     "q": "在哪里",
+     "expect": "我在一家互联网公司做前端工程师"
+    }
+   ],
+   "store_count": 600,
+   "store_avg_ms": 430.19,
+   "search_avg_ms": 8.09,
+   "memories": 111,
+   "regions": 23,
+   "qapairs": 0
+  },
+  {
+   "name": "sme_kb_static",
+   "hit@1": 0.0256,
+   "hit@3": 0.0513,
+   "hit@5": 0.4615,
+   "sem@1": 0.8462,
+   "sem@3": 0.9231,
+   "sem@5": 0.9231,
+   "replay_seconds": 261.84,
+   "misses": [
+    {
+     "q": "住在哪里",
+     "expect": "其实我去年搬到上海了"
+    },
+    {
+     "q": "在哪里",
+     "expect": "我在一家互联网公司做前端工程师"
+    },
+    {
+     "q": "最喜欢什么",
+     "expect": "我最喜欢的电影是《星际穿越》"
+    }
+   ],
+   "store_count": 600,
+   "store_avg_ms": 436.41,
+   "search_avg_ms": 7.93,
+   "memories": 111,
+   "regions": 22,
+   "qapairs": 0
+  },
+  {
+   "name": "sme_robot",
+   "hit@1": 0.7692,
+   "hit@3": 0.8205,
+   "hit@5": 0.8974,
+   "sem@1": 0.8205,
+   "sem@3": 0.8462,
+   "sem@5": 0.9231,
+   "replay_seconds": 1.87,
+   "misses": [
+    {
+     "q": "在哪里",
+     "expect": "我在一家互联网公司做前端工程师"
+    },
+    {
+     "q": "养了什么宠物",
+     "expect": "可乐其实是只柯基"
+    },
+    {
+     "q": "女朋友叫什么",
+     "expect": "我女朋友叫小雨，是设计师"
+    }
+   ],
+   "store_count": 600,
+   "store_avg_ms": 3.11,
+   "search_avg_ms": 7.18,
+   "memories": 80,
+   "regions": 18,
+   "qapairs": 0
+  },
+  {
+   "name": "sme_minimal",
+   "hit@1": 0.7436,
+   "hit@3": 0.8205,
+   "hit@5": 0.8205,
+   "sem@1": 0.8205,
+   "sem@3": 0.9231,
+   "sem@5": 0.9231,
+   "replay_seconds": 3.92,
+   "misses": [
+    {
+     "q": "在哪里",
+     "expect": "我在一家互联网公司做前端工程师"
+    },
+    {
+     "q": "养了什么宠物",
+     "expect": "可乐其实是只柯基"
+    },
+    {
+     "q": "最喜欢什么",
+     "expect": "我最喜欢的电影是《星际穿越》"
+    }
+   ],
+   "store_count": 600,
+   "store_avg_ms": 6.53,
+   "search_avg_ms": 13.3,
+   "memories": 600,
+   "regions": 16,
+   "qapairs": 0
+  },
+  {
+   "name": "rag",
+   "hit@1": 0.7949,
+   "hit@3": 0.8462,
+   "hit@5": 0.8718,
+   "sem@1": 0.8974,
+   "sem@3": 0.9487,
+   "sem@5": 0.9487,
+   "replay_seconds": 1.77,
+   "misses": [
+    {
+     "q": "在哪里",
+     "expect": "我在一家互联网公司做前端工程师"
+    },
+    {
+     "q": "养了什么宠物",
+     "expect": "可乐其实是只柯基"
+    }
+   ],
+   "store_count": 600,
+   "store_avg_ms": 2.95,
+   "search_avg_ms": 8.94,
+   "memories": 300
+  },
+  {
+   "name": "bm25",
+   "hit@1": 0.7436,
+   "hit@3": 0.8462,
+   "hit@5": 0.8718,
+   "sem@1": 0.8205,
+   "sem@3": 0.9487,
+   "sem@5": 0.9487,
+   "replay_seconds": 0.0,
+   "misses": [
+    {
+     "q": "在哪里",
+     "expect": "我在一家互联网公司做前端工程师"
+    },
+    {
+     "q": "养了什么宠物",
+     "expect": "可乐其实是只柯基"
+    }
+   ],
+   "store_count": 600,
+   "store_avg_ms": 0.0,
+   "search_avg_ms": 0.81,
+   "memories": 300
+  },
+  {
+   "name": "mem0",
+   "hit@1": 0.0,
+   "hit@3": 0.0,
+   "hit@5": 0.0256,
+   "sem@1": 0.9487,
+   "sem@3": 0.9744,
+   "sem@5": 0.9744,
+   "replay_seconds": 1296.27,
+   "misses": [],
+   "store_count": 600,
+   "store_avg_ms": 2160.44,
+   "search_avg_ms": 24.91,
+   "memories": 300,
+   "embedder": "BAAI/bge-small-zh-v1.5",
+   "llm": "DeepSeekLLM"
+  }
+ ]
+}

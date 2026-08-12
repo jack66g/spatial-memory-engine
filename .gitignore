@@ -1,0 +1,34 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.venv/
+venv/
+dist/
+build/
+
+# Engine runtime state (root only - 大实验/data 是实验数据，必须保留)
+/data/
+cold_archive.json
+*.state.json.gz
+*.embeddings.npz
+state.json.gz
+example_state.json.gz
+
+# 大实验 runtime workspaces（中间产物可重跑生成；results/*.json 结果数据保留）
+大实验/results/run_*/
+大实验/results/*_ws_*/
+大实验/results/mem0_qdrant/
+大实验/results/*.wal
+大实验/results/*.json.wal
+
+# IDE / OS
+.idea/
+.vscode/
+*.swp
+.DS_Store
+Thumbs.db
+
+# 冗余的源码压缩包
+源码.zip

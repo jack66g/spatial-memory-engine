@@ -1,0 +1,287 @@
+{
+ "name": "attack_quiz",
+ "tasks": [
+  {
+   "id": "attack_dialect_f_coffee",
+   "scene": "dialogue",
+   "question": "小林平时喝什么饮品呀",
+   "answer_keywords": [
+    "我喜欢喝手冲咖啡",
+    "不太喝速溶的"
+   ],
+   "expect_text": "我喜欢喝手冲咖啡，不太喝速溶的",
+   "conflict_text": null,
+   "top_k": 5,
+   "targets": [
+    "bm25",
+    "裸RAG"
+   ],
+   "note": "同义口语化改写（BM25 关键词不重叠）"
+  },
+  {
+   "id": "attack_dialect_f_basketball",
+   "scene": "dialogue",
+   "question": "小林周末喜欢啥运动",
+   "answer_keywords": [
+    "我周末经常和朋友打篮球"
+   ],
+   "expect_text": "我周末经常和朋友打篮球",
+   "conflict_text": null,
+   "top_k": 5,
+   "targets": [
+    "bm25",
+    "裸RAG"
+   ],
+   "note": "同义口语化改写（BM25 关键词不重叠）"
+  },
+  {
+   "id": "attack_dialect_f_dog",
+   "scene": "dialogue",
+   "question": "小林养的那个毛茸茸的家伙叫啥",
+   "answer_keywords": [
+    "我养了一只金毛",
+    "叫可乐"
+   ],
+   "expect_text": "我养了一只金毛，叫可乐",
+   "conflict_text": null,
+   "top_k": 5,
+   "targets": [
+    "bm25",
+    "裸RAG"
+   ],
+   "note": "同义口语化改写（BM25 关键词不重叠）"
+  },
+  {
+   "id": "attack_dialect_f_city",
+   "scene": "dialogue",
+   "question": "小林现在住哪儿来着",
+   "answer_keywords": [
+    "我住在杭州"
+   ],
+   "expect_text": "我住在杭州",
+   "conflict_text": null,
+   "top_k": 5,
+   "targets": [
+    "bm25",
+    "裸RAG"
+   ],
+   "note": "同义口语化改写（BM25 关键词不重叠）"
+  },
+  {
+   "id": "attack_dialect_f_age",
+   "scene": "dialogue",
+   "question": "小林今年二十几了",
+   "answer_keywords": [
+    "28",
+    "我今年"
+   ],
+   "expect_text": "我今年 28 岁",
+   "conflict_text": null,
+   "top_k": 5,
+   "targets": [
+    "bm25",
+    "裸RAG"
+   ],
+   "note": "同义口语化改写（BM25 关键词不重叠）"
+  },
+  {
+   "id": "attack_dialect_f_breakfast",
+   "scene": "dialogue",
+   "question": "小林早上都吃些啥",
+   "answer_keywords": [
+    "我早餐一般吃全麦面包和鸡蛋"
+   ],
+   "expect_text": "我早餐一般吃全麦面包和鸡蛋",
+   "conflict_text": null,
+   "top_k": 5,
+   "targets": [
+    "bm25",
+    "裸RAG"
+   ],
+   "note": "同义口语化改写（BM25 关键词不重叠）"
+  },
+  {
+   "id": "attack_double_corr",
+   "scene": "dialogue",
+   "question": "小林住在哪里",
+   "answer_keywords": [
+    "杭州"
+   ],
+   "expect_text": "我又搬回杭州了，上海太贵了",
+   "conflict_text": "我去年搬到上海了",
+   "pre_turns": [
+    "我住在杭州",
+    "其实我去年搬到上海了",
+    "不对不对，我又搬回杭州了，上海房租太贵了"
+   ],
+   "top_k": 5,
+   "targets": [
+    "裸RAG",
+    "bm25",
+    "无版本管理"
+   ],
+   "note": "双重纠错：第二次纠错后，第一次纠错的旧说法仍被检索会带偏回答"
+  },
+  {
+   "id": "attack_rel_f_dog_f_cat",
+   "scene": "dialogue",
+   "question": "可乐怕什么",
+   "answer_keywords": [
+    "可乐怕打雷",
+    "每次打雷都要躲到床底下"
+   ],
+   "expect_text": "可乐怕打雷，每次打雷都要躲到床底下",
+   "conflict_text": null,
+   "top_k": 8,
+   "targets": [
+    "无图谱选手",
+    "裸RAG",
+    "bm25",
+    "mem0"
+   ],
+   "note": "需关联 f_dog→f_cat 两个事实"
+  },
+  {
+   "id": "attack_rel_f_girlfriend_f_plan_marry",
+   "scene": "dialogue",
+   "question": "结婚计划定了吗",
+   "answer_keywords": [
+    "我们计划明年结婚"
+   ],
+   "expect_text": "我们计划明年结婚",
+   "conflict_text": null,
+   "top_k": 8,
+   "targets": [
+    "无图谱选手",
+    "裸RAG",
+    "bm25",
+    "mem0"
+   ],
+   "note": "需关联 f_girlfriend→f_plan_marry 两个事实"
+  },
+  {
+   "id": "attack_rel_f_sister_f_parents",
+   "scene": "dialogue",
+   "question": "妹妹在哪里读书",
+   "answer_keywords": [
+    "我爸妈住在宁波"
+   ],
+   "expect_text": "我爸妈住在宁波",
+   "conflict_text": null,
+   "top_k": 8,
+   "targets": [
+    "无图谱选手",
+    "裸RAG",
+    "bm25",
+    "mem0"
+   ],
+   "note": "需关联 f_sister→f_parents 两个事实"
+  },
+  {
+   "id": "attack_noise_0",
+   "scene": "dialogue",
+   "question": "小林一般几点睡觉",
+   "answer_keywords": [
+    "我一般十一点半睡觉",
+    "早上七点起"
+   ],
+   "expect_text": "我一般十一点半睡觉，早上七点起",
+   "conflict_text": null,
+   "top_k": 5,
+   "noise_inject": [
+    "今天天气不错哦",
+    "今天天气不错哦",
+    "今天天气不错哦",
+    "今天天气不错哦",
+    "今天天气不错哦",
+    "今天天气不错哦",
+    "今天天气不错哦",
+    "今天天气不错哦",
+    "今天天气不错哦",
+    "今天天气不错哦",
+    "今天天气不错哦",
+    "今天天气不错哦",
+    "今天天气不错哦",
+    "今天天气不错哦",
+    "今天天气不错哦",
+    "今天天气不错哦",
+    "今天天气不错哦",
+    "今天天气不错哦",
+    "今天天气不错哦",
+    "今天天气不错哦",
+    "今天天气不错哦",
+    "今天天气不错哦",
+    "今天天气不错哦",
+    "今天天气不错哦",
+    "今天天气不错哦",
+    "今天天气不错哦",
+    "今天天气不错哦",
+    "今天天气不错哦",
+    "今天天气不错哦",
+    "今天天气不错哦",
+    "好的好的",
+    "好的好的",
+    "好的好的",
+    "好的好的",
+    "好的好的",
+    "好的好的",
+    "好的好的",
+    "好的好的",
+    "好的好的",
+    "好的好的",
+    "好的好的",
+    "好的好的",
+    "好的好的",
+    "好的好的",
+    "好的好的",
+    "好的好的",
+    "好的好的",
+    "好的好的",
+    "好的好的",
+    "好的好的"
+   ],
+   "targets": [
+    "无噪音抑制",
+    "裸RAG",
+    "bm25"
+   ],
+   "note": "50 条重复模板句注入后，真实记忆被挤出 top-k"
+  },
+  {
+   "id": "attack_noise_1",
+   "scene": "dialogue",
+   "question": "小林是什么血型",
+   "answer_keywords": [
+    "型血"
+   ],
+   "expect_text": "我是 A 型血",
+   "conflict_text": null,
+   "top_k": 5,
+   "noise_inject": null,
+   "targets": [
+    "无噪音抑制",
+    "裸RAG",
+    "bm25"
+   ],
+   "note": "50 条重复模板句注入后，真实记忆被挤出 top-k"
+  },
+  {
+   "id": "attack_noise_2",
+   "scene": "dialogue",
+   "question": "小林早餐一般吃什么",
+   "answer_keywords": [
+    "我早餐一般吃全麦面包和鸡蛋"
+   ],
+   "expect_text": "我早餐一般吃全麦面包和鸡蛋",
+   "conflict_text": null,
+   "top_k": 5,
+   "noise_inject": null,
+   "targets": [
+    "无噪音抑制",
+    "裸RAG",
+    "bm25"
+   ],
+   "note": "50 条重复模板句注入后，真实记忆被挤出 top-k"
+  }
+ ]
+}

@@ -1,0 +1,15 @@
+{
+ "date": "2026-08-09",
+ "law": {
+  "source": "维基文库《中华人民共和国民法典》全文（2020-05-28 通过，2021-01-01 施行）",
+  "url": "https://zh.wikisource.org/wiki/中华人民共和国民法典",
+  "file": "data/law/civil_code.txt",
+  "chunks": "data/law/law_chunks.json"
+ },
+ "medical": {
+  "source": "默沙东诊疗手册公众版（msdmanuals.cn）",
+  "base_url": "https://www.msdmanuals.cn/zh-cn/home",
+  "pages": 3,
+  "chunks": "data/medical/medical_chunks.json"
+ }
+}

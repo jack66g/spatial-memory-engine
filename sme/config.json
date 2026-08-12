@@ -1,0 +1,230 @@
+{
+  "llm": {
+    "base_url": "",
+    "api_key": "",
+    "model": "",
+    "reasoning_effort": "",
+    "max_tokens": 1024,
+    "temperature": 0.6,
+    "timeout": 60
+  },
+  "embedding": {
+    "provider": "hashing",
+    "model": "text-embedding-3-small",
+    "dim": 64,
+    "base_url": "",
+    "api_key": "",
+    "batch_size": 32
+  },
+  "memory": {
+    "top_k": 6,
+    "window_rounds": 20,
+    "consolidate_every": 8,
+    "compress_every": 16,
+    "graph_expand": 1,
+    "reinforce_on": true,
+    "persist_path": ""
+  },
+  "policy": {
+    "decay_enabled": true,
+    "full_memory": true,
+    "importance_threshold": 0.25
+  },
+  "region": {
+    "auto_evolve": true,
+    "min_join_cosine": 0.7,
+    "min_region_size": 3,
+    "split_threshold": 48,
+    "merge_distance": 0.12,
+    "ann_enabled": true,
+    "evolve_interval": 40
+  },
+  "reinforcement": {
+    "ebbinghaus_half_life_days": 7.0,
+    "ebbinghaus_power": 1.2,
+    "hit_weight_delta": 0.1
+  },
+  "decay": {
+    "half_life_days": 30.0,
+    "max_weight_decay": 0.85
+  },
+  "consolidation": {
+    "similarity_threshold": 0.5,
+    "max_group_size": 12,
+    "summary_source": "template"
+  },
+  "compression": {
+    "age_days_threshold": 3.0,
+    "min_region_compact": 8,
+    "summary_source": "template"
+  },
+  "retrieval": {
+    "top_regions": 3,
+    "top_k": 10,
+    "vector_weight": 0.6,
+    "keyword_weight": 0.3,
+    "metadata_weight": 0.1,
+    "region_dampening": 0.1,
+    "cjk_bigram": true,
+    "candidate_window": 20
+  },
+  "ranking": {
+    "semantic": 0.4,
+    "importance": 0.12,
+    "freshness": 0.1,
+    "weight": 0.1,
+    "decay": 0.08,
+    "hit_count": 0.08,
+    "recency": 0.06,
+    "region": 0.06
+  },
+  "storage": {
+    "path": "data/engine.json",
+    "autosave": true,
+    "autosave_interval": 100,
+    "compress": true,
+    "backend": "json"
+  },
+  "extraction": {
+    "enabled": false,
+    "mode": "llm"
+  },
+  "factversion": {
+    "enabled": false
+  },
+  "noise": {
+    "enabled": false,
+    "min_density": 0.1,
+    "template_penalty": 0.3,
+    "dup_penalty": 0.5
+  },
+  "qapair": {
+    "enabled": false,
+    "max_age_days": 180.0
+  },
+  "factgraph": {
+    "enabled": false,
+    "extract_mode": "llm",
+    "max_depth": 3
+  },
+  "profile": {
+    "enabled": false,
+    "snapshot_every": 50
+  },
+  "persistence": {
+    "enabled": false,
+    "checkpoint_every": 10
+  },
+  "api": {
+    "host": "127.0.0.1",
+    "port": 8000,
+    "auth_token": ""
+  },
+  "observability": {
+    "enabled": false
+  },
+  "context": {
+    "enabled": false,
+    "budget_tokens": 4096
+  },
+  "namespaces": {
+    "enabled": false,
+    "default_ns": "default"
+  },
+  "rerank": {
+    "enabled": false,
+    "model": "BAAI/bge-reranker-base",
+    "top_n": 50
+  },
+  "_help": {
+    "llm.base_url": "OpenAI 兼容 /chat/completions 端点，如 https://api.deepseek.com/v1；留空 = 不使用 LLM（纯离线）",
+    "llm.api_key": "服务商密钥；留空则读取环境变量 SME_LLM_API_KEY（建议用环境变量，不写进文件）",
+    "llm.model": "模型名，如 deepseek-v4-flash / gpt-4o-mini / qwen-plus",
+    "llm.reasoning_effort": "推理型模型（如 deepseek-v4-flash）必须填 none，否则小 max_tokens 时返回空回复",
+    "llm.max_tokens": "单次回答最大 token 数，越长越贵",
+    "llm.temperature": "随机度 0~2；知识问答建议 0.3~0.6，越高越发散",
+    "llm.timeout": "请求超时秒数；本地模型可调大",
+    "embedding.provider": "hashing=离线零依赖（默认）/ openai=任意 OpenAI 兼容 embedding 接口 / sentence-transformers=本地模型（需 pip install sentence-transformers）",
+    "embedding.model": "本地如 BAAI/bge-small-zh-v1.5，接口如 BAAI/bge-m3",
+    "embedding.dim": "必须与模型一致（bge-small-zh=512，bge-m3=1024，hashing 可自定）",
+    "embedding.base_url": "embedding 端点（provider=openai 时必填），如 https://api.siliconflow.cn/v1",
+    "embedding.api_key": "留空则读取环境变量 SME_EMBEDDING_API_KEY",
+    "embedding.batch_size": "每次编码的条数；本地模型可调小省内存",
+    "memory.top_k": "每次检索返回的记忆条数，越大上下文越丰富但越占 token",
+    "memory.window_rounds": "上下文保留的最近对话轮数",
+    "memory.consolidate_every": "每 N 轮自动把相似记忆融合成摘要；填 off 关闭（知识库建议关闭）",
+    "memory.compress_every": "每 N 轮生成长期摘要；填 off 关闭",
+    "memory.graph_expand": "检索时沿记忆图扩展关联记忆的跳数；0=关闭（纯向量检索）",
+    "memory.reinforce_on": "检索命中后记忆权重增长（Ebbinghaus），常用记忆越来越靠前",
+    "memory.persist_path": "记忆状态文件路径（相对项目根），留空 = 不持久化",
+    "policy.decay_enabled": "旧记忆随时间降权；关 = 权重永不下降（纯知识库）",
+    "policy.full_memory": "关 = 只检索重要度达标的记忆（配合下方阈值）",
+    "policy.importance_threshold": "full_memory=关 时的检索过滤阈值",
+    "region.auto_evolve": "Region 自动拆分/融合；关 = 空间结构稳定",
+    "region.min_join_cosine": "记忆并入 Region 的相似度门槛；调大分区更细",
+    "region.min_region_size": "成员少于该值的 Region 会被并入邻居",
+    "region.split_threshold": "Region 成员数达到该值且密度达标时拆分",
+    "region.merge_distance": "邻近 Region 漂移融合距离阈值；0 = 永不融合",
+    "region.ann_enabled": "Region 数量多时加速最近邻检索；Region 少时可关",
+    "region.evolve_interval": "每 N 次写入触发一次演化检查",
+    "reinforcement.ebbinghaus_half_life_days": "Ebbinghaus 强化半衰期（天），越大强化越温和",
+    "reinforcement.ebbinghaus_power": "强化曲线陡峭度",
+    "reinforcement.hit_weight_delta": "每次命中权重增量；0 = 只计数不加权",
+    "decay.half_life_days": "衰减半衰期（天），越大衰减越慢",
+    "decay.max_weight_decay": "最大可衰减比例（1 = 可衰减到 0）",
+    "consolidation.similarity_threshold": "记忆融合的相似度门槛，越高越不容易合并",
+    "consolidation.max_group_size": "单组融合的成员数上限",
+    "consolidation.summary_source": "摘要生成方式；llm 需要配置 LLM",
+    "compression.age_days_threshold": "多少天前的旧记忆参与长期压缩",
+    "compression.min_region_compact": "Region 成员数达到该值才参与压缩",
+    "compression.summary_source": "压缩摘要生成方式；llm 需要配置 LLM",
+    "retrieval.top_regions": "第一阶段检索的 Region 数量",
+    "retrieval.top_k": "检索候选记忆上限",
+    "retrieval.vector_weight": "语义向量通道权重；三项之和不必为 1",
+    "retrieval.keyword_weight": "BM25 关键词通道权重；0 = 纯向量检索",
+    "retrieval.metadata_weight": "元数据匹配通道权重；0 = 关闭",
+    "retrieval.region_dampening": "全局补充记忆的区域惩罚分；0 = 无区域加分",
+    "retrieval.cjk_bigram": "BM25 关键词通道对中文启用 1-2 元切分（违约金→违约/约金）；关 = 单字切分",
+    "retrieval.candidate_window": "混合打分的最小候选池（实际取 max(top_k×2, 此值)）；模板句霸榜时调大可救回真实记忆",
+    "ranking.semantic": "最终分排序权重（八项建议总和 = 1）；语义=检索相似度",
+    "ranking.importance": "重要度越高越靠前（可被命中强化提升）",
+    "ranking.freshness": "最近创建/命中的记忆更靠前",
+    "ranking.weight": "强化权重（命中增长）的压缩映射",
+    "ranking.decay": "衰减因子（越旧越低）",
+    "ranking.hit_count": "累计命中次数越多越靠前",
+    "ranking.recency": "最近命中时间越近越靠前",
+    "ranking.region": "Region 检索得分加成",
+    "storage.path": "引擎快照文件路径",
+    "storage.autosave": "写入量满自动落盘，防丢记忆",
+    "storage.autosave_interval": "每 N 次写入自动保存一次",
+    "storage.compress": "快照 gzip 压缩（省空间）",
+    "storage.backend": "json=默认 / sqlite=一体库（切换后建议重启生效）",
+    "extraction.enabled": "写入前做事实提取，只存干净事实（问题/闲聊/AI 回答默认不入库）",
+    "extraction.mode": "llm=大模型提取 / rules=离线规则提取（不调 LLM）",
+    "factversion.enabled": "重复事实去重、纠正句以最新说法为准（旧版降权不删除）",
+    "noise.enabled": "模板句/重复短句检索时降权，真实记忆不被霸榜",
+    "noise.min_density": "低于该密度阈值（信息量）的句子受模板惩罚；调大可少误伤真实短记忆",
+    "noise.template_penalty": "模板覆盖率惩罚系数；越低越保守（少误伤），越高压制越强",
+    "noise.dup_penalty": "同句重复惩罚系数",
+    "qapair.enabled": "问→答固化为问答对，考问直接回放答案",
+    "qapair.max_age_days": "问答对多少天内有效",
+    "factgraph.enabled": "实体-关系时序图 + 多跳检索（新关系覆盖旧关系）",
+    "factgraph.extract_mode": "llm=大模型抽取 / rules=离线规则抽取",
+    "factgraph.max_depth": "实体关系图检索的最大跳数",
+    "profile.enabled": "聚合画像事实，\"总结一下我\"类查询加权",
+    "profile.snapshot_every": "每写入多少条画像事实自动生成快照",
+    "persistence.enabled": "增量写日志 + 周期快照，大库每轮保存提速（崩溃自动恢复）",
+    "persistence.checkpoint_every": "每 N 次写入做一次全量快照",
+    "api.host": "127.0.0.1=仅本机；0.0.0.0=局域网可访问",
+    "api.port": "监听端口",
+    "api.auth_token": "非空即启用 Bearer 鉴权（访问 /docs 与 /health 之外的接口需带 Authorization: Bearer <token>；留空=无鉴权）",
+    "observability.enabled": "记录事件/延迟/命中率，可导出 JSON/CSV 报告",
+    "context.enabled": "画像常驻 + token 预算内注入对话（省 token）",
+    "context.budget_tokens": "分层上下文管理的 token 预算",
+    "namespaces.enabled": "A/B 用户/场景记忆互不可见（机器人多人共用）",
+    "namespaces.default_ns": "未指定时的命名空间名",
+    "rerank.enabled": "检索后用交叉编码器（bge-reranker）精排；默认关=零影响，开需安装 sentence-transformers",
+    "rerank.model": "交叉编码器模型名（sentence-transformers CrossEncoder 兼容）",
+    "rerank.top_n": "参与精排的候选命中数（超出部分保持原序）"
+  }
+}

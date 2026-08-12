@@ -1,0 +1,15 @@
+# Spatial Memory Engine (SME) - core dependencies
+numpy>=1.24
+httpx>=0.24
+fastapi>=0.100
+uvicorn>=0.23
+matplotlib>=3.7
+networkx>=3.0
+python-multipart>=0.0.9
+
+# Optional: ANN acceleration (falls back to exact scanning when absent)
+hnswlib>=0.8
+
+# Optional: local embeddings (uncomment if you want SentenceTransformer-based embedding)
+# sentence-transformers>=2.2
+# torch>=2.0

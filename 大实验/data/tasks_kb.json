@@ -1,0 +1,354 @@
+{
+ "name": "kb_tasks",
+ "tasks": [
+  {
+   "id": "law_第五百八十五条",
+   "scene": "kb",
+   "question": "违约金怎么约定",
+   "answer_keywords": [
+    "第五百八十五条",
+    "违约金"
+   ],
+   "expect_text": "第五百八十五条　当事人可以约定一方违约时应当根据违约情况向对方支付一定数额的违约金，也可以约定因违约产生的损失赔偿额的计算方法。约定的违约金低于造成的损失的，人民法院或者仲裁机构可以根据当事人的请求予以增加；约定的违约金过分高于造成的损失的",
+   "conflict_text": null,
+   "top_k": 5
+  },
+  {
+   "id": "law_第五百八十五条",
+   "scene": "kb",
+   "question": "约定的违约金低于损失可以请求增加吗",
+   "answer_keywords": [
+    "第五百八十五条",
+    "增加"
+   ],
+   "expect_text": "第五百八十五条　当事人可以约定一方违约时应当根据违约情况向对方支付一定数额的违约金，也可以约定因违约产生的损失赔偿额的计算方法。约定的违约金低于造成的损失的，人民法院或者仲裁机构可以根据当事人的请求予以增加；约定的违约金过分高于造成的损失的",
+   "conflict_text": null,
+   "top_k": 5
+  },
+  {
+   "id": "law_第五百八十四条",
+   "scene": "kb",
+   "question": "损失赔偿额怎么计算",
+   "answer_keywords": [
+    "第五百八十四条",
+    "损失赔偿额"
+   ],
+   "expect_text": "第五百八十四条　当事人一方不履行合同义务或者履行合同义务不符合约定，造成对方损失的，损失赔偿额应当相当于因违约所造成的损失，包括合同履行后可以获得的利益；但是，不得超过违约一方订立合同时预见到或者应当预见到的因违约可能造成的损失。",
+   "conflict_text": null,
+   "top_k": 5
+  },
+  {
+   "id": "law_第五百七十七条",
+   "scene": "kb",
+   "question": "不履行合同义务要承担什么责任",
+   "answer_keywords": [
+    "第五百七十七条",
+    "违约责任"
+   ],
+   "expect_text": "第五百七十七条　当事人一方不履行合同义务或者履行合同义务不符合约定的，应当承担继续履行、采取补救措施或者赔偿损失等违约责任。",
+   "conflict_text": null,
+   "top_k": 5
+  },
+  {
+   "id": "law_第五百九十六条",
+   "scene": "kb",
+   "question": "买卖合同的定义是什么",
+   "answer_keywords": [
+    "第五百九十六条",
+    "买卖合同"
+   ],
+   "expect_text": "第五百九十六条　买卖合同的内容一般包括标的物的名称、数量、质量、价款、履行期限、履行地点和方式、包装方式、检验标准和方法、结算方式、合同使用的文字及其效力等条款。",
+   "conflict_text": null,
+   "top_k": 5
+  },
+  {
+   "id": "law_第六百零四条",
+   "scene": "kb",
+   "question": "标的物交付前毁损灭失风险谁承担",
+   "answer_keywords": [
+    "第六百零四条",
+    "风险"
+   ],
+   "expect_text": "第六百零四条　标的物毁损、灭失的风险，在标的物交付之前由出卖人承担，交付之后由买受人承担，但是法律另有规定或者当事人另有约定的除外。",
+   "conflict_text": null,
+   "top_k": 5
+  },
+  {
+   "id": "law_第七百零五条",
+   "scene": "kb",
+   "question": "租赁期限最长不得超过多少年",
+   "answer_keywords": [
+    "第七百零五条",
+    "二十年"
+   ],
+   "expect_text": "第七百零五条　租赁期限不得超过二十年。超过二十年的，超过部分无效。租赁期限届满，当事人可以续订租赁合同；但是，约定的租赁期限自续订之日起不得超过二十年。",
+   "conflict_text": null,
+   "top_k": 5
+  },
+  {
+   "id": "law_第七百七十条",
+   "scene": "kb",
+   "question": "承揽合同的定义",
+   "answer_keywords": [
+    "第七百七十条",
+    "承揽合同"
+   ],
+   "expect_text": "第七百七十条　承揽合同是承揽人按照定作人的要求完成工作，交付工作成果，定作人支付报酬的合同。承揽包括加工、定作、修理、复制、测试、检验等工作。",
+   "conflict_text": null,
+   "top_k": 5
+  },
+  {
+   "id": "law_第九百八十九条",
+   "scene": "kb",
+   "question": "人格权包括哪些权利",
+   "answer_keywords": [
+    "第九百八十九条",
+    "人格权"
+   ],
+   "expect_text": "第九百八十九条　本编调整因人格权的享有和保护产生的民事关系。",
+   "conflict_text": null,
+   "top_k": 5
+  },
+  {
+   "id": "law_第一千零六十一条",
+   "scene": "kb",
+   "question": "夫妻之间有相互继承遗产的权利吗",
+   "answer_keywords": [
+    "第一千零六十一条",
+    "继承"
+   ],
+   "expect_text": "第一千零六十一条　夫妻有相互继承遗产的权利。",
+   "conflict_text": null,
+   "top_k": 5
+  },
+  {
+   "id": "law_第一千一百六十五条",
+   "scene": "kb",
+   "question": "过错侵害他人民事权益要承担什么责任",
+   "answer_keywords": [
+    "第一千一百六十五条",
+    "侵权责任"
+   ],
+   "expect_text": "第一千一百六十五条　行为人因过错侵害他人民事权益造成损害的，应当承担侵权责任。依照法律规定推定行为人有过错，其不能证明自己没有过错的，应当承担侵权责任。",
+   "conflict_text": null,
+   "top_k": 5
+  },
+  {
+   "id": "law_第一千一百八十二条",
+   "scene": "kb",
+   "question": "侵害人身权益造成财产损失怎么赔偿",
+   "answer_keywords": [
+    "第一千一百八十二条",
+    "赔偿"
+   ],
+   "expect_text": "第一千一百八十二条　侵害他人人身权益造成财产损失的，按照被侵权人因此受到的损失或者侵权人因此获得的利益赔偿；被侵权人因此受到的损失以及侵权人因此获得的利益难以确定，被侵权人和侵权人就赔偿数额协商不一致，向人民法院提起诉讼的，由人民法院根据实",
+   "conflict_text": null,
+   "top_k": 5
+  },
+  {
+   "id": "law_第五百八十六条",
+   "scene": "kb",
+   "question": "定金数额有什么限制",
+   "answer_keywords": [
+    "第五百八十六条",
+    "定金"
+   ],
+   "expect_text": "第五百八十六条　当事人可以约定一方向对方给付定金作为债权的担保。定金合同自实际交付定金时成立。定金的数额由当事人约定；但是，不得超过主合同标的额的百分之二十，超过部分不产生定金的效力。实际交付的定金数额多于或者少于约定数额的，视为变更约定的",
+   "conflict_text": null,
+   "top_k": 5
+  },
+  {
+   "id": "law_第六百八十一条",
+   "scene": "kb",
+   "question": "订立保证合同的形式要求",
+   "answer_keywords": [
+    "第六百八十一条",
+    "保证"
+   ],
+   "expect_text": "第六百八十一条　保证合同是为保障债权的实现，保证人和债权人约定，当债务人不履行到期债务或者发生当事人约定的情形时，保证人履行债务或者承担责任的合同。",
+   "conflict_text": null,
+   "top_k": 5
+  },
+  {
+   "id": "law_第一千二百五十四条",
+   "scene": "kb",
+   "question": "高空抛物造成损害谁担责",
+   "answer_keywords": [
+    "第一千二百五十四条",
+    "高空抛物"
+   ],
+   "expect_text": "发生本条第一款规定的情形的，公安等机关应当依法及时调查，查清责任人。",
+   "conflict_text": null,
+   "top_k": 5
+  },
+  {
+   "id": "med_高血压_130/",
+   "scene": "kb",
+   "question": "血压持续超过多少算高血压",
+   "answer_keywords": [
+    "130/80",
+    "高血压",
+    "140/90"
+   ],
+   "expect_text": "若血壓持續超過 130/80 或 140/90 毫米汞柱（收縮壓/舒張壓），有可能是高血壓。",
+   "conflict_text": null,
+   "top_k": 5
+  },
+  {
+   "id": "med_高血压_藥物",
+   "scene": "kb",
+   "question": "高血压患者服用药物可以控制血压吗",
+   "answer_keywords": [
+    "藥物",
+    "高血压"
+   ],
+   "expect_text": "降低血壓和致命併發症的風險在於改變生活型態與藥物控制。",
+   "conflict_text": null,
+   "top_k": 5
+  },
+  {
+   "id": "med_2型糖尿病_非胰岛素",
+   "scene": "kb",
+   "question": "2型糖尿病的旧称是什么",
+   "answer_keywords": [
+    "非胰岛素依赖",
+    "2型糖尿病"
+   ],
+   "expect_text": "第2型糖尿病（Type 2 diabetes 或 Type 2 diabetes mellitus，简称 T2D 或 T2DM，或称第2型糖尿病），旧称非胰岛素依赖型糖尿病（英語：noninsulin-dependent diabetes ",
+   "conflict_text": null,
+   "top_k": 5
+  },
+  {
+   "id": "med_2型糖尿病_視網膜病",
+   "scene": "kb",
+   "question": "糖尿病长期并发症有哪些",
+   "answer_keywords": [
+    "視網膜病變",
+    "2型糖尿病"
+   ],
+   "expect_text": "高血糖帶來的長期併發症包括心臟病、中風、糖尿病視網膜病變，這可能導致失明、腎臟衰竭、甚至四肢血流不順而需要截肢",
+   "conflict_text": null,
+   "top_k": 5
+  },
+  {
+   "id": "med_流行性感冒_流感病毒",
+   "scene": "kb",
+   "question": "流感由什么病毒引起",
+   "answer_keywords": [
+    "流感病毒",
+    "流行性感冒"
+   ],
+   "expect_text": "流行性感冒（influenza），簡稱流感（the flu），為一種由流感病毒造成的傳染性疾病。",
+   "conflict_text": null,
+   "top_k": 5
+  },
+  {
+   "id": "med_流行性感冒_高燒",
+   "scene": "kb",
+   "question": "流感常见症状有哪些",
+   "answer_keywords": [
+    "高燒",
+    "流行性感冒"
+   ],
+   "expect_text": "流感的症狀可輕可重，最常見者為高燒、流鼻水、喉嚨痛、肌肉痠痛、頭痛、咳嗽和疲倦感。",
+   "conflict_text": null,
+   "top_k": 5
+  },
+  {
+   "id": "med_骨质疏松_脊椎",
+   "scene": "kb",
+   "question": "骨质疏松容易在哪些部位骨折",
+   "answer_keywords": [
+    "脊椎",
+    "骨质疏松"
+   ],
+   "expect_text": "易於因骨質疏鬆而骨折的骨骼部位有脊椎、前臂骨、髖關節骨。",
+   "conflict_text": null,
+   "top_k": 5
+  },
+  {
+   "id": "med_冠状动脉疾病_胸痛",
+   "scene": "kb",
+   "question": "心绞痛是什么引起的",
+   "answer_keywords": [
+    "胸痛",
+    "冠状动脉疾病"
+   ],
+   "expect_text": "胸痛可能表明心脏肌肉损伤（可以进展为心肌梗塞），有时进展为主动脉剥离，即主动脉内壁撕裂）、气促、咳嗽、咳血痰都是肺水肿的典型迹象。",
+   "conflict_text": null,
+   "top_k": 5
+  },
+  {
+   "id": "med_手足口病_7–10",
+   "scene": "kb",
+   "question": "手足口病的病程大约多久",
+   "answer_keywords": [
+    "7–10天",
+    "手足口病"
+   ],
+   "expect_text": "手足口病的多數病例屬於自限性疾病，病程約為7–10天，通常可自行痊癒。",
+   "conflict_text": null,
+   "top_k": 5
+  },
+  {
+   "id": "med_睡眠障碍_异态睡眠",
+   "scene": "kb",
+   "question": "睡眠障碍大致分为几类",
+   "answer_keywords": [
+    "异态睡眠",
+    "睡眠障碍"
+   ],
+   "expect_text": "睡眠障碍大致分为睡眠障碍、异态睡眠、涉及睡眠时间的昼夜节律睡眠障碍以及其他疾病，包括由医疗或心理状况引起的疾病。",
+   "conflict_text": null,
+   "top_k": 5
+  },
+  {
+   "id": "med_带状疱疹_水痘",
+   "scene": "kb",
+   "question": "带状疱疹的发病机制",
+   "answer_keywords": [
+    "水痘",
+    "带状疱疹"
+   ],
+   "expect_text": "帶狀疱疹（herpes zoster，shingles，zoster，zona）是由水痘带状疱疹病毒（VZV）引起，沿周围神经分布，以簇集性小水疱为主要特征的病毒性皮肤病，常伴明显的局部神经痛，部分患者疱疹消退后仍然存在被侵犯部位神经痛。",
+   "conflict_text": null,
+   "top_k": 5
+  },
+  {
+   "id": "med_哮喘_喘息",
+   "scene": "kb",
+   "question": "哮喘的常见症状",
+   "answer_keywords": [
+    "喘息",
+    "哮喘"
+   ],
+   "expect_text": "主要特征是出现广泛多变的可逆性气流受限，并引起反复发作性的喘息、胸闷、咳嗽等症状，常在夜间或清晨发作或加剧。",
+   "conflict_text": null,
+   "top_k": 5
+  },
+  {
+   "id": "med_偏头痛_血管",
+   "scene": "kb",
+   "question": "偏头痛的病因假说",
+   "answer_keywords": [
+    "血管",
+    "偏头痛"
+   ],
+   "expect_text": "肾功能的急速退化（急性肾损伤）和微血管溶血性贫血（血液细胞的破坏）也可能出现。",
+   "conflict_text": null,
+   "top_k": 5
+  },
+  {
+   "id": "med_心肌梗死_胸痛",
+   "scene": "kb",
+   "question": "心肌梗死发作时怎么办",
+   "answer_keywords": [
+    "胸痛",
+    "心肌梗死"
+   ],
+   "expect_text": "胸痛可能表明心脏肌肉损伤（可以进展为心肌梗塞），有时进展为主动脉剥离，即主动脉内壁撕裂）、气促、咳嗽、咳血痰都是肺水肿的典型迹象。",
+   "conflict_text": null,
+   "top_k": 5
+  }
+ ]
+}

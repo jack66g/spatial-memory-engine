@@ -1,0 +1,1026 @@
+{
+ "A0_全关基线": {
+  "accuracy": 0.277,
+  "spread": 0.0,
+  "n": 65,
+  "led_astray": 8,
+  "groups": {
+   "直接回忆(01)": {
+    "n": 15,
+    "acc": 0.4,
+    "spread": 0.0,
+    "astray": 8
+   },
+   "长尾细节": {
+    "n": 15,
+    "acc": 0.333,
+    "spread": 0.0,
+    "astray": 8
+   },
+   "纠错版本(05)": {
+    "n": 10,
+    "acc": 0.0,
+    "spread": 0.0,
+    "astray": 8
+   },
+   "问答回放(02)": {
+    "n": 10,
+    "acc": 0.0,
+    "spread": 0.0,
+    "astray": 8
+   },
+   "画像聚合(04)": {
+    "n": 2,
+    "acc": 0.5,
+    "spread": 0.0,
+    "astray": 8
+   },
+   "同义改写": {
+    "n": 6,
+    "acc": 0.5,
+    "spread": 0.0,
+    "astray": 8
+   },
+   "other": {
+    "n": 1,
+    "acc": 0.0,
+    "spread": 0.0,
+    "astray": 8
+   },
+   "图谱关联(03)": {
+    "n": 3,
+    "acc": 0.333,
+    "spread": 0.0,
+    "astray": 8
+   },
+   "噪音抑制(06)": {
+    "n": 3,
+    "acc": 0.667,
+    "spread": 0.0,
+    "astray": 8
+   }
+  },
+  "llm_calls": 96,
+  "memories": 653
+ },
+ "A_+01提取": {
+  "accuracy": 0.523,
+  "spread": 0.0,
+  "n": 65,
+  "led_astray": 4,
+  "groups": {
+   "直接回忆(01)": {
+    "n": 15,
+    "acc": 0.533,
+    "spread": 0.0,
+    "astray": 4
+   },
+   "长尾细节": {
+    "n": 15,
+    "acc": 0.533,
+    "spread": 0.0,
+    "astray": 4
+   },
+   "纠错版本(05)": {
+    "n": 10,
+    "acc": 0.6,
+    "spread": 0.0,
+    "astray": 4
+   },
+   "问答回放(02)": {
+    "n": 10,
+    "acc": 0.5,
+    "spread": 0.0,
+    "astray": 4
+   },
+   "画像聚合(04)": {
+    "n": 2,
+    "acc": 0.0,
+    "spread": 0.0,
+    "astray": 4
+   },
+   "同义改写": {
+    "n": 6,
+    "acc": 0.5,
+    "spread": 0.0,
+    "astray": 4
+   },
+   "other": {
+    "n": 1,
+    "acc": 1.0,
+    "spread": 0.0,
+    "astray": 4
+   },
+   "图谱关联(03)": {
+    "n": 3,
+    "acc": 0.667,
+    "spread": 0.0,
+    "astray": 4
+   },
+   "噪音抑制(06)": {
+    "n": 3,
+    "acc": 0.333,
+    "spread": 0.0,
+    "astray": 4
+   }
+  },
+  "llm_calls": 203,
+  "memories": 51
+ },
+ "A_+05纠错": {
+  "accuracy": 0.185,
+  "spread": 0.0,
+  "n": 65,
+  "led_astray": 6,
+  "groups": {
+   "直接回忆(01)": {
+    "n": 15,
+    "acc": 0.267,
+    "spread": 0.0,
+    "astray": 6
+   },
+   "长尾细节": {
+    "n": 15,
+    "acc": 0.2,
+    "spread": 0.0,
+    "astray": 6
+   },
+   "纠错版本(05)": {
+    "n": 10,
+    "acc": 0.2,
+    "spread": 0.0,
+    "astray": 6
+   },
+   "问答回放(02)": {
+    "n": 10,
+    "acc": 0.0,
+    "spread": 0.0,
+    "astray": 6
+   },
+   "画像聚合(04)": {
+    "n": 2,
+    "acc": 0.0,
+    "spread": 0.0,
+    "astray": 6
+   },
+   "同义改写": {
+    "n": 6,
+    "acc": 0.167,
+    "spread": 0.0,
+    "astray": 6
+   },
+   "other": {
+    "n": 1,
+    "acc": 0.0,
+    "spread": 0.0,
+    "astray": 6
+   },
+   "图谱关联(03)": {
+    "n": 3,
+    "acc": 0.333,
+    "spread": 0.0,
+    "astray": 6
+   },
+   "噪音抑制(06)": {
+    "n": 3,
+    "acc": 0.333,
+    "spread": 0.0,
+    "astray": 6
+   }
+  },
+  "llm_calls": 291,
+  "memories": 353
+ },
+ "A_+02问答对": {
+  "accuracy": 0.323,
+  "spread": 0.0,
+  "n": 65,
+  "led_astray": 6,
+  "groups": {
+   "直接回忆(01)": {
+    "n": 15,
+    "acc": 0.533,
+    "spread": 0.0,
+    "astray": 6
+   },
+   "长尾细节": {
+    "n": 15,
+    "acc": 0.267,
+    "spread": 0.0,
+    "astray": 6
+   },
+   "纠错版本(05)": {
+    "n": 10,
+    "acc": 0.2,
+    "spread": 0.0,
+    "astray": 6
+   },
+   "问答回放(02)": {
+    "n": 10,
+    "acc": 0.3,
+    "spread": 0.0,
+    "astray": 6
+   },
+   "画像聚合(04)": {
+    "n": 2,
+    "acc": 0.0,
+    "spread": 0.0,
+    "astray": 6
+   },
+   "同义改写": {
+    "n": 6,
+    "acc": 0.167,
+    "spread": 0.0,
+    "astray": 6
+   },
+   "other": {
+    "n": 1,
+    "acc": 0.0,
+    "spread": 0.0,
+    "astray": 6
+   },
+   "图谱关联(03)": {
+    "n": 3,
+    "acc": 0.667,
+    "spread": 0.0,
+    "astray": 6
+   },
+   "噪音抑制(06)": {
+    "n": 3,
+    "acc": 0.333,
+    "spread": 0.0,
+    "astray": 6
+   }
+  },
+  "llm_calls": 386,
+  "memories": 353
+ },
+ "A_+03图谱": {
+  "accuracy": 0.185,
+  "spread": 0.0,
+  "n": 65,
+  "led_astray": 6,
+  "groups": {
+   "直接回忆(01)": {
+    "n": 15,
+    "acc": 0.267,
+    "spread": 0.0,
+    "astray": 6
+   },
+   "长尾细节": {
+    "n": 15,
+    "acc": 0.2,
+    "spread": 0.0,
+    "astray": 6
+   },
+   "纠错版本(05)": {
+    "n": 10,
+    "acc": 0.2,
+    "spread": 0.0,
+    "astray": 6
+   },
+   "问答回放(02)": {
+    "n": 10,
+    "acc": 0.1,
+    "spread": 0.0,
+    "astray": 6
+   },
+   "画像聚合(04)": {
+    "n": 2,
+    "acc": 0.0,
+    "spread": 0.0,
+    "astray": 6
+   },
+   "同义改写": {
+    "n": 6,
+    "acc": 0.167,
+    "spread": 0.0,
+    "astray": 6
+   },
+   "other": {
+    "n": 1,
+    "acc": 0.0,
+    "spread": 0.0,
+    "astray": 6
+   },
+   "图谱关联(03)": {
+    "n": 3,
+    "acc": 0.0,
+    "spread": 0.0,
+    "astray": 6
+   },
+   "噪音抑制(06)": {
+    "n": 3,
+    "acc": 0.333,
+    "spread": 0.0,
+    "astray": 6
+   }
+  },
+  "llm_calls": 476,
+  "memories": 353
+ },
+ "A_+04画像": {
+  "accuracy": 0.2,
+  "spread": 0.0,
+  "n": 65,
+  "led_astray": 6,
+  "groups": {
+   "直接回忆(01)": {
+    "n": 15,
+    "acc": 0.267,
+    "spread": 0.0,
+    "astray": 6
+   },
+   "长尾细节": {
+    "n": 15,
+    "acc": 0.2,
+    "spread": 0.0,
+    "astray": 6
+   },
+   "纠错版本(05)": {
+    "n": 10,
+    "acc": 0.2,
+    "spread": 0.0,
+    "astray": 6
+   },
+   "问答回放(02)": {
+    "n": 10,
+    "acc": 0.1,
+    "spread": 0.0,
+    "astray": 6
+   },
+   "画像聚合(04)": {
+    "n": 2,
+    "acc": 0.0,
+    "spread": 0.0,
+    "astray": 6
+   },
+   "同义改写": {
+    "n": 6,
+    "acc": 0.167,
+    "spread": 0.0,
+    "astray": 6
+   },
+   "other": {
+    "n": 1,
+    "acc": 0.0,
+    "spread": 0.0,
+    "astray": 6
+   },
+   "图谱关联(03)": {
+    "n": 3,
+    "acc": 0.333,
+    "spread": 0.0,
+    "astray": 6
+   },
+   "噪音抑制(06)": {
+    "n": 3,
+    "acc": 0.333,
+    "spread": 0.0,
+    "astray": 6
+   }
+  },
+  "llm_calls": 565,
+  "memories": 353
+ },
+ "A_+06噪音": {
+  "accuracy": 0.323,
+  "spread": 0.0,
+  "n": 65,
+  "led_astray": 7,
+  "groups": {
+   "直接回忆(01)": {
+    "n": 15,
+    "acc": 0.333,
+    "spread": 0.0,
+    "astray": 7
+   },
+   "长尾细节": {
+    "n": 15,
+    "acc": 0.4,
+    "spread": 0.0,
+    "astray": 7
+   },
+   "纠错版本(05)": {
+    "n": 10,
+    "acc": 0.1,
+    "spread": 0.0,
+    "astray": 7
+   },
+   "问答回放(02)": {
+    "n": 10,
+    "acc": 0.1,
+    "spread": 0.0,
+    "astray": 7
+   },
+   "画像聚合(04)": {
+    "n": 2,
+    "acc": 0.5,
+    "spread": 0.0,
+    "astray": 7
+   },
+   "同义改写": {
+    "n": 6,
+    "acc": 0.5,
+    "spread": 0.0,
+    "astray": 7
+   },
+   "other": {
+    "n": 1,
+    "acc": 0.0,
+    "spread": 0.0,
+    "astray": 7
+   },
+   "图谱关联(03)": {
+    "n": 3,
+    "acc": 0.333,
+    "spread": 0.0,
+    "astray": 7
+   },
+   "噪音抑制(06)": {
+    "n": 3,
+    "acc": 1.0,
+    "spread": 0.0,
+    "astray": 7
+   }
+  },
+  "llm_calls": 659,
+  "memories": 653
+ },
+ "A_bigram关": {
+  "accuracy": 0.262,
+  "spread": 0.0,
+  "n": 65,
+  "led_astray": 8,
+  "groups": {
+   "直接回忆(01)": {
+    "n": 15,
+    "acc": 0.333,
+    "spread": 0.0,
+    "astray": 8
+   },
+   "长尾细节": {
+    "n": 15,
+    "acc": 0.267,
+    "spread": 0.0,
+    "astray": 8
+   },
+   "纠错版本(05)": {
+    "n": 10,
+    "acc": 0.0,
+    "spread": 0.0,
+    "astray": 8
+   },
+   "问答回放(02)": {
+    "n": 10,
+    "acc": 0.0,
+    "spread": 0.0,
+    "astray": 8
+   },
+   "画像聚合(04)": {
+    "n": 2,
+    "acc": 0.5,
+    "spread": 0.0,
+    "astray": 8
+   },
+   "同义改写": {
+    "n": 6,
+    "acc": 0.5,
+    "spread": 0.0,
+    "astray": 8
+   },
+   "other": {
+    "n": 1,
+    "acc": 0.0,
+    "spread": 0.0,
+    "astray": 8
+   },
+   "图谱关联(03)": {
+    "n": 3,
+    "acc": 0.333,
+    "spread": 0.0,
+    "astray": 8
+   },
+   "噪音抑制(06)": {
+    "n": 3,
+    "acc": 1.0,
+    "spread": 0.0,
+    "astray": 8
+   }
+  },
+  "llm_calls": 749,
+  "memories": 653
+ },
+ "B0_知识库全开": {
+  "accuracy": 0.4,
+  "spread": 0.0,
+  "n": 65,
+  "led_astray": 4,
+  "groups": {
+   "直接回忆(01)": {
+    "n": 15,
+    "acc": 0.4,
+    "spread": 0.0,
+    "astray": 4
+   },
+   "长尾细节": {
+    "n": 15,
+    "acc": 0.4,
+    "spread": 0.0,
+    "astray": 4
+   },
+   "纠错版本(05)": {
+    "n": 10,
+    "acc": 0.3,
+    "spread": 0.0,
+    "astray": 4
+   },
+   "问答回放(02)": {
+    "n": 10,
+    "acc": 0.3,
+    "spread": 0.0,
+    "astray": 4
+   },
+   "画像聚合(04)": {
+    "n": 2,
+    "acc": 0.0,
+    "spread": 0.0,
+    "astray": 4
+   },
+   "同义改写": {
+    "n": 6,
+    "acc": 0.667,
+    "spread": 0.0,
+    "astray": 4
+   },
+   "other": {
+    "n": 1,
+    "acc": 1.0,
+    "spread": 0.0,
+    "astray": 4
+   },
+   "图谱关联(03)": {
+    "n": 3,
+    "acc": 0.667,
+    "spread": 0.0,
+    "astray": 4
+   },
+   "噪音抑制(06)": {
+    "n": 3,
+    "acc": 0.333,
+    "spread": 0.0,
+    "astray": 4
+   }
+  },
+  "llm_calls": 856,
+  "memories": 98
+ },
+ "B_−01提取": {
+  "accuracy": 0.4,
+  "spread": 0.0,
+  "n": 65,
+  "led_astray": 6,
+  "groups": {
+   "直接回忆(01)": {
+    "n": 15,
+    "acc": 0.6,
+    "spread": 0.0,
+    "astray": 6
+   },
+   "长尾细节": {
+    "n": 15,
+    "acc": 0.467,
+    "spread": 0.0,
+    "astray": 6
+   },
+   "纠错版本(05)": {
+    "n": 10,
+    "acc": 0.2,
+    "spread": 0.0,
+    "astray": 6
+   },
+   "问答回放(02)": {
+    "n": 10,
+    "acc": 0.4,
+    "spread": 0.0,
+    "astray": 6
+   },
+   "画像聚合(04)": {
+    "n": 2,
+    "acc": 0.0,
+    "spread": 0.0,
+    "astray": 6
+   },
+   "同义改写": {
+    "n": 6,
+    "acc": 0.167,
+    "spread": 0.0,
+    "astray": 6
+   },
+   "other": {
+    "n": 1,
+    "acc": 0.0,
+    "spread": 0.0,
+    "astray": 6
+   },
+   "图谱关联(03)": {
+    "n": 3,
+    "acc": 0.667,
+    "spread": 0.0,
+    "astray": 6
+   },
+   "噪音抑制(06)": {
+    "n": 3,
+    "acc": 0.333,
+    "spread": 0.0,
+    "astray": 6
+   }
+  },
+  "llm_calls": 958,
+  "memories": 353
+ },
+ "B_−05纠错": {
+  "accuracy": 0.339,
+  "spread": 0.0,
+  "n": 65,
+  "led_astray": 6,
+  "groups": {
+   "直接回忆(01)": {
+    "n": 15,
+    "acc": 0.333,
+    "spread": 0.0,
+    "astray": 6
+   },
+   "长尾细节": {
+    "n": 15,
+    "acc": 0.333,
+    "spread": 0.0,
+    "astray": 6
+   },
+   "纠错版本(05)": {
+    "n": 10,
+    "acc": 0.1,
+    "spread": 0.0,
+    "astray": 6
+   },
+   "问答回放(02)": {
+    "n": 10,
+    "acc": 0.3,
+    "spread": 0.0,
+    "astray": 6
+   },
+   "画像聚合(04)": {
+    "n": 2,
+    "acc": 0.0,
+    "spread": 0.0,
+    "astray": 6
+   },
+   "同义改写": {
+    "n": 6,
+    "acc": 0.667,
+    "spread": 0.0,
+    "astray": 6
+   },
+   "other": {
+    "n": 1,
+    "acc": 1.0,
+    "spread": 0.0,
+    "astray": 6
+   },
+   "图谱关联(03)": {
+    "n": 3,
+    "acc": 0.667,
+    "spread": 0.0,
+    "astray": 6
+   },
+   "噪音抑制(06)": {
+    "n": 3,
+    "acc": 0.333,
+    "spread": 0.0,
+    "astray": 6
+   }
+  },
+  "llm_calls": 1061,
+  "memories": 82
+ },
+ "B_−02问答对": {
+  "accuracy": 0.431,
+  "spread": 0.0,
+  "n": 65,
+  "led_astray": 7,
+  "groups": {
+   "直接回忆(01)": {
+    "n": 15,
+    "acc": 0.467,
+    "spread": 0.0,
+    "astray": 7
+   },
+   "长尾细节": {
+    "n": 15,
+    "acc": 0.467,
+    "spread": 0.0,
+    "astray": 7
+   },
+   "纠错版本(05)": {
+    "n": 10,
+    "acc": 0.3,
+    "spread": 0.0,
+    "astray": 7
+   },
+   "问答回放(02)": {
+    "n": 10,
+    "acc": 0.4,
+    "spread": 0.0,
+    "astray": 7
+   },
+   "画像聚合(04)": {
+    "n": 2,
+    "acc": 0.0,
+    "spread": 0.0,
+    "astray": 7
+   },
+   "同义改写": {
+    "n": 6,
+    "acc": 0.5,
+    "spread": 0.0,
+    "astray": 7
+   },
+   "other": {
+    "n": 1,
+    "acc": 1.0,
+    "spread": 0.0,
+    "astray": 7
+   },
+   "图谱关联(03)": {
+    "n": 3,
+    "acc": 0.667,
+    "spread": 0.0,
+    "astray": 7
+   },
+   "噪音抑制(06)": {
+    "n": 3,
+    "acc": 0.333,
+    "spread": 0.0,
+    "astray": 7
+   }
+  },
+  "llm_calls": 1164,
+  "memories": 67
+ },
+ "B_−03图谱": {
+  "accuracy": 0.446,
+  "spread": 0.0,
+  "n": 65,
+  "led_astray": 4,
+  "groups": {
+   "直接回忆(01)": {
+    "n": 15,
+    "acc": 0.467,
+    "spread": 0.0,
+    "astray": 4
+   },
+   "长尾细节": {
+    "n": 15,
+    "acc": 0.467,
+    "spread": 0.0,
+    "astray": 4
+   },
+   "纠错版本(05)": {
+    "n": 10,
+    "acc": 0.3,
+    "spread": 0.0,
+    "astray": 4
+   },
+   "问答回放(02)": {
+    "n": 10,
+    "acc": 0.4,
+    "spread": 0.0,
+    "astray": 4
+   },
+   "画像聚合(04)": {
+    "n": 2,
+    "acc": 0.0,
+    "spread": 0.0,
+    "astray": 4
+   },
+   "同义改写": {
+    "n": 6,
+    "acc": 0.667,
+    "spread": 0.0,
+    "astray": 4
+   },
+   "other": {
+    "n": 1,
+    "acc": 1.0,
+    "spread": 0.0,
+    "astray": 4
+   },
+   "图谱关联(03)": {
+    "n": 3,
+    "acc": 0.667,
+    "spread": 0.0,
+    "astray": 4
+   },
+   "噪音抑制(06)": {
+    "n": 3,
+    "acc": 0.333,
+    "spread": 0.0,
+    "astray": 4
+   }
+  },
+  "llm_calls": 1271,
+  "memories": 98
+ },
+ "B_−04画像": {
+  "accuracy": 0.308,
+  "spread": 0.0,
+  "n": 65,
+  "led_astray": 4,
+  "groups": {
+   "直接回忆(01)": {
+    "n": 15,
+    "acc": 0.4,
+    "spread": 0.0,
+    "astray": 4
+   },
+   "长尾细节": {
+    "n": 15,
+    "acc": 0.267,
+    "spread": 0.0,
+    "astray": 4
+   },
+   "纠错版本(05)": {
+    "n": 10,
+    "acc": 0.3,
+    "spread": 0.0,
+    "astray": 4
+   },
+   "问答回放(02)": {
+    "n": 10,
+    "acc": 0.3,
+    "spread": 0.0,
+    "astray": 4
+   },
+   "画像聚合(04)": {
+    "n": 2,
+    "acc": 0.0,
+    "spread": 0.0,
+    "astray": 4
+   },
+   "同义改写": {
+    "n": 6,
+    "acc": 0.333,
+    "spread": 0.0,
+    "astray": 4
+   },
+   "other": {
+    "n": 1,
+    "acc": 1.0,
+    "spread": 0.0,
+    "astray": 4
+   },
+   "图谱关联(03)": {
+    "n": 3,
+    "acc": 0.333,
+    "spread": 0.0,
+    "astray": 4
+   },
+   "噪音抑制(06)": {
+    "n": 3,
+    "acc": 0.0,
+    "spread": 0.0,
+    "astray": 4
+   }
+  },
+  "llm_calls": 1379,
+  "memories": 98
+ },
+ "B_−06噪音": {
+  "accuracy": 0.354,
+  "spread": 0.0,
+  "n": 65,
+  "led_astray": 4,
+  "groups": {
+   "直接回忆(01)": {
+    "n": 15,
+    "acc": 0.4,
+    "spread": 0.0,
+    "astray": 4
+   },
+   "长尾细节": {
+    "n": 15,
+    "acc": 0.4,
+    "spread": 0.0,
+    "astray": 4
+   },
+   "纠错版本(05)": {
+    "n": 10,
+    "acc": 0.3,
+    "spread": 0.0,
+    "astray": 4
+   },
+   "问答回放(02)": {
+    "n": 10,
+    "acc": 0.2,
+    "spread": 0.0,
+    "astray": 4
+   },
+   "画像聚合(04)": {
+    "n": 2,
+    "acc": 0.0,
+    "spread": 0.0,
+    "astray": 4
+   },
+   "同义改写": {
+    "n": 6,
+    "acc": 0.333,
+    "spread": 0.0,
+    "astray": 4
+   },
+   "other": {
+    "n": 1,
+    "acc": 1.0,
+    "spread": 0.0,
+    "astray": 4
+   },
+   "图谱关联(03)": {
+    "n": 3,
+    "acc": 0.667,
+    "spread": 0.0,
+    "astray": 4
+   },
+   "噪音抑制(06)": {
+    "n": 3,
+    "acc": 0.333,
+    "spread": 0.0,
+    "astray": 4
+   }
+  },
+  "llm_calls": 1483,
+  "memories": 98
+ },
+ "B_−07WAL": {
+  "accuracy": 0.415,
+  "spread": 0.0,
+  "n": 65,
+  "led_astray": 4,
+  "groups": {
+   "直接回忆(01)": {
+    "n": 15,
+    "acc": 0.4,
+    "spread": 0.0,
+    "astray": 4
+   },
+   "长尾细节": {
+    "n": 15,
+    "acc": 0.4,
+    "spread": 0.0,
+    "astray": 4
+   },
+   "纠错版本(05)": {
+    "n": 10,
+    "acc": 0.3,
+    "spread": 0.0,
+    "astray": 4
+   },
+   "问答回放(02)": {
+    "n": 10,
+    "acc": 0.4,
+    "spread": 0.0,
+    "astray": 4
+   },
+   "画像聚合(04)": {
+    "n": 2,
+    "acc": 0.0,
+    "spread": 0.0,
+    "astray": 4
+   },
+   "同义改写": {
+    "n": 6,
+    "acc": 0.667,
+    "spread": 0.0,
+    "astray": 4
+   },
+   "other": {
+    "n": 1,
+    "acc": 1.0,
+    "spread": 0.0,
+    "astray": 4
+   },
+   "图谱关联(03)": {
+    "n": 3,
+    "acc": 0.667,
+    "spread": 0.0,
+    "astray": 4
+   },
+   "噪音抑制(06)": {
+    "n": 3,
+    "acc": 0.333,
+    "spread": 0.0,
+    "astray": 4
+   }
+  },
+  "llm_calls": 1589,
+  "memories": 98
+ }
+}

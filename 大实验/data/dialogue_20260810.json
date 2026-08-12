@@ -1,0 +1,3245 @@
+{
+ "persona": "小林，28 岁，在杭州做前端工程师",
+ "seed": 20260810,
+ "rounds": 300,
+ "facts": [
+  {
+   "id": "f_name",
+   "text": "我的名字叫小林",
+   "topic": "personal"
+  },
+  {
+   "id": "f_age",
+   "text": "我今年 28 岁",
+   "topic": "personal"
+  },
+  {
+   "id": "f_city",
+   "text": "我住在杭州",
+   "topic": "personal"
+  },
+  {
+   "id": "f_job",
+   "text": "我在一家互联网公司做前端工程师",
+   "topic": "work"
+  },
+  {
+   "id": "f_team",
+   "text": "我们前端组一共六个人",
+   "topic": "work"
+  },
+  {
+   "id": "f_remote",
+   "text": "我每周四在家远程办公",
+   "topic": "work"
+  },
+  {
+   "id": "f_stack",
+   "text": "我主要用 Vue 和 TypeScript 写代码",
+   "topic": "work"
+  },
+  {
+   "id": "f_lang",
+   "text": "我最近在学 Rust",
+   "topic": "study"
+  },
+  {
+   "id": "f_study",
+   "text": "我每天通勤路上听英语播客",
+   "topic": "study"
+  },
+  {
+   "id": "f_coffee",
+   "text": "我喜欢喝手冲咖啡，不太喝速溶的",
+   "topic": "food"
+  },
+  {
+   "id": "f_sweet",
+   "text": "我不太吃甜食，奶茶只喝三分糖",
+   "topic": "food"
+  },
+  {
+   "id": "f_spicy",
+   "text": "我很能吃辣，最爱重庆火锅",
+   "topic": "food"
+  },
+  {
+   "id": "f_breakfast",
+   "text": "我早餐一般吃全麦面包和鸡蛋",
+   "topic": "food"
+  },
+  {
+   "id": "f_basketball",
+   "text": "我周末经常和朋友打篮球",
+   "topic": "hobby"
+  },
+  {
+   "id": "f_piano",
+   "text": "我小时候学过六年钢琴",
+   "topic": "hobby"
+  },
+  {
+   "id": "f_read",
+   "text": "我最近在读《三体》第三部",
+   "topic": "hobby"
+  },
+  {
+   "id": "f_photo",
+   "text": "我喜欢用胶片相机拍照",
+   "topic": "hobby"
+  },
+  {
+   "id": "f_game",
+   "text": "我偶尔玩塞尔达传说",
+   "topic": "hobby"
+  },
+  {
+   "id": "f_dog",
+   "text": "我养了一只金毛，叫可乐",
+   "topic": "family"
+  },
+  {
+   "id": "f_cat",
+   "text": "可乐怕打雷，每次打雷都要躲到床底下",
+   "topic": "family"
+  },
+  {
+   "id": "f_sister",
+   "text": "我有个妹妹，在成都读研究生",
+   "topic": "family"
+  },
+  {
+   "id": "f_parents",
+   "text": "我爸妈住在宁波",
+   "topic": "family"
+  },
+  {
+   "id": "f_girlfriend",
+   "text": "我女朋友叫小雨，是设计师",
+   "topic": "family"
+  },
+  {
+   "id": "f_anniversary",
+   "text": "我们在一起三年了",
+   "topic": "family"
+  },
+  {
+   "id": "f_plan_marry",
+   "text": "我们计划明年结婚",
+   "topic": "plan"
+  },
+  {
+   "id": "f_plan_japan",
+   "text": "下个月我打算去日本玩一周",
+   "topic": "plan"
+  },
+  {
+   "id": "f_plan_fitness",
+   "text": "我办了张健身卡，想每周去三次",
+   "topic": "plan"
+  },
+  {
+   "id": "f_sleep",
+   "text": "我一般十一点半睡觉，早上七点起",
+   "topic": "health"
+  },
+  {
+   "id": "f_glasses",
+   "text": "我近视三百度，平时戴眼镜",
+   "topic": "health"
+  },
+  {
+   "id": "f_allergy",
+   "text": "我对花粉过敏，春天容易打喷嚏",
+   "topic": "health"
+  },
+  {
+   "id": "f_blood",
+   "text": "我是 A 型血",
+   "topic": "health"
+  },
+  {
+   "id": "f_apple",
+   "text": "我比较喜欢苹果，不喜欢香蕉",
+   "topic": "opinion"
+  },
+  {
+   "id": "f_movie",
+   "text": "我最喜欢的电影是《星际穿越》",
+   "topic": "opinion"
+  },
+  {
+   "id": "f_music",
+   "text": "我最近在循环听周杰伦的老歌",
+   "topic": "opinion"
+  },
+  {
+   "id": "f_weather",
+   "text": "我讨厌梅雨天，衣服老是晾不干",
+   "topic": "opinion"
+  },
+  {
+   "id": "f_book_shop",
+   "text": "我常去的那家书店在西湖边",
+   "topic": "daily"
+  },
+  {
+   "id": "f_metro",
+   "text": "我坐地铁一号线通勤",
+   "topic": "daily"
+  },
+  {
+   "id": "f_lunch",
+   "text": "我中午一般在公司食堂吃",
+   "topic": "daily"
+  },
+  {
+   "id": "f_bike",
+   "text": "我有一辆折叠自行车，周末骑",
+   "topic": "daily"
+  }
+ ],
+ "turns": [
+  {
+   "role": "user",
+   "text": "问你个问题，我喜欢用胶片相机拍照吗？",
+   "kind": "question",
+   "fact_id": "f_photo"
+  },
+  {
+   "role": "assistant",
+   "text": "当然喜欢呀，胶片那种颗粒感和等待冲洗的仪式感，最配你的文艺气质了。"
+  },
+  {
+   "role": "user",
+   "text": "谢谢你呀",
+   "kind": "chitchat",
+   "fact_id": null
+  },
+  {
+   "role": "assistant",
+   "text": "不客气～有胶片相伴的时光，一定很温柔。"
+  },
+  {
+   "role": "user",
+   "text": "跟你说个事，我一般十一点半睡觉，早上七点起。",
+   "kind": "statement",
+   "fact_id": "f_sleep"
+  },
+  {
+   "role": "assistant",
+   "text": "作息好规律呀，这样精神饱满，拍照也会更有灵感呢。"
+  },
+  {
+   "role": "user",
+   "text": "工作好累啊今天",
+   "kind": "chitchat",
+   "fact_id": null
+  },
+  {
+   "role": "assistant",
+   "text": "抱抱你，辛苦了。早点休息，明天又是元气满满的一天。"
+  },
+  {
+   "role": "user",
+   "text": "顺便说下，我坐地铁一号线通勤。",
+   "kind": "statement",
+   "fact_id": "f_metro"
+  },
+  {
+   "role": "assistant",
+   "text": "一号线沿途风景不错，通勤路上正好能放松放松心情～"
+  },
+  {
+   "role": "user",
+   "text": "顺便说下，我不太吃甜食，奶茶只喝三分糖。",
+   "kind": "statement",
+   "fact_id": "f_sweet"
+  },
+  {
+   "role": "assistant",
+   "text": "记住啦，三分糖的奶茶，甜度刚好，和你的生活态度一样克制又温柔。"
+  },
+  {
+   "role": "user",
+   "text": "更正一下，可乐其实是只柯基。",
+   "kind": "correction",
+   "fact_id": "f_dog",
+   "new": "可乐其实是只柯基"
+  },
+  {
+   "role": "assistant",
+   "text": "啊，原来可乐是只小柯基呀，那它一定每天摇着尾巴等你回家吧～"
+  },
+  {
+   "role": "user",
+   "text": "哈哈，你反应真快",
+   "kind": "chitchat",
+   "fact_id": null
+  },
+  {
+   "role": "assistant",
+   "text": "哈哈，被你夸得都有点不好意思了～你的每句话，我都记在心上呢。"
+  },
+  {
+   "role": "user",
+   "text": "今天天气不错",
+   "kind": "chitchat",
+   "fact_id": null
+  },
+  {
+   "role": "assistant",
+   "text": "是啊，好天气最适合出去走走，或者带可乐晒晒太阳啦～"
+  },
+  {
+   "role": "user",
+   "text": "我住在杭州，记住了哈。",
+   "kind": "statement",
+   "fact_id": "f_city"
+  },
+  {
+   "role": "assistant",
+   "text": "好呀，杭州是个好地方，西湖美景配好天气，住那儿真幸福～"
+  },
+  {
+   "role": "user",
+   "text": "谢谢你呀",
+   "kind": "chitchat",
+   "fact_id": null
+  },
+  {
+   "role": "assistant",
+   "text": "不客气～能帮到你我也很开心，随时找我聊天哦！"
+  },
+  {
+   "role": "user",
+   "text": "跟你说个事，我们计划明年结婚。",
+   "kind": "statement",
+   "fact_id": "f_plan_marry"
+  },
+  {
+   "role": "assistant",
+   "text": "哇，恭喜你们！到时候记得带上可乐一起拍婚纱照呀～"
+  },
+  {
+   "role": "user",
+   "text": "对了，我对花粉过敏，春天容易打喷嚏。",
+   "kind": "statement",
+   "fact_id": "f_allergy"
+  },
+  {
+   "role": "assistant",
+   "text": "好，记下了～春天出门记得戴口罩，让可乐帮你挡挡风哈哈。"
+  },
+  {
+   "role": "user",
+   "text": "顺便说下，我偶尔玩塞尔达传说。",
+   "kind": "statement",
+   "fact_id": "f_game"
+  },
+  {
+   "role": "assistant",
+   "text": "好呀，玩塞尔达的人运气都不会太差，下次可以聊攻略～"
+  },
+  {
+   "role": "user",
+   "text": "顺便说下，我有一辆折叠自行车，周末骑。",
+   "kind": "statement",
+   "fact_id": "f_bike"
+  },
+  {
+   "role": "assistant",
+   "text": "好呀，周末骑车兜风很舒服～折叠车也方便，西湖边绕一圈肯定很惬意！"
+  },
+  {
+   "role": "user",
+   "text": "对了，下个月我打算去日本玩一周。",
+   "kind": "statement",
+   "fact_id": "f_plan_japan"
+  },
+  {
+   "role": "assistant",
+   "text": "好呀，提前祝你玩得开心～记得查好樱花季和花粉预报，备好口罩哦！"
+  },
+  {
+   "role": "user",
+   "text": "我很能吃辣，最爱重庆火锅，这个我之前提过吗？",
+   "kind": "statement",
+   "fact_id": "f_spicy"
+  },
+  {
+   "role": "assistant",
+   "text": "提过啦，重庆火锅安排上！下次可以聊聊你最爱的涮菜搭配～"
+  },
+  {
+   "role": "user",
+   "text": "谢谢你呀",
+   "kind": "chitchat",
+   "fact_id": null
+  },
+  {
+   "role": "assistant",
+   "text": "不客气～你的事我都记着呢，随时找我聊就好！"
+  },
+  {
+   "role": "user",
+   "text": "哦对，我们前端组一共六个人。",
+   "kind": "statement",
+   "fact_id": "f_team"
+  },
+  {
+   "role": "assistant",
+   "text": "好，记下啦～前端组六人，人齐开黑写代码都方便。"
+  },
+  {
+   "role": "user",
+   "text": "我最近在学 Rust，这个我之前提过吗？",
+   "kind": "statement",
+   "fact_id": "f_lang"
+  },
+  {
+   "role": "assistant",
+   "text": "提过啦，Rust 学起来挺有挑战的，不过你肯定没问题～有不懂的随时找我聊！"
+  },
+  {
+   "role": "user",
+   "text": "不对不对，我之前说错了，其实我去年搬到上海了。",
+   "kind": "correction",
+   "fact_id": "f_city",
+   "new": "其实我去年搬到上海了"
+  },
+  {
+   "role": "assistant",
+   "text": "好，记下啦～你去年搬到上海了，以后聊到生活日常我就按这个来！"
+  },
+  {
+   "role": "user",
+   "text": "嗯，我近视三百度，平时戴眼镜。",
+   "kind": "statement",
+   "fact_id": "f_glasses"
+  },
+  {
+   "role": "assistant",
+   "text": "好，记下啦～你近视三百度，平时戴眼镜。"
+  },
+  {
+   "role": "user",
+   "text": "周末愉快",
+   "kind": "chitchat",
+   "fact_id": null
+  },
+  {
+   "role": "assistant",
+   "text": "周末愉快！记得好好休息，眼睛也放松一下～"
+  },
+  {
+   "role": "user",
+   "text": "我每周四在家远程办公，记住了哈。",
+   "kind": "statement",
+   "fact_id": "f_remote"
+  },
+  {
+   "role": "assistant",
+   "text": "好，记下啦～你每周四在家远程办公。"
+  },
+  {
+   "role": "user",
+   "text": "嗯，我小时候学过六年钢琴。",
+   "kind": "statement",
+   "fact_id": "f_piano"
+  },
+  {
+   "role": "assistant",
+   "text": "好，记下啦～你小时候学过六年钢琴，音乐底子肯定不错。"
+  },
+  {
+   "role": "user",
+   "text": "哦对，我讨厌梅雨天，衣服老是晾不干。",
+   "kind": "statement",
+   "fact_id": "f_weather"
+  },
+  {
+   "role": "assistant",
+   "text": "好，记下啦～你讨厌梅雨天，衣服晾不干确实烦人。"
+  },
+  {
+   "role": "user",
+   "text": "我们在一起三年了，这个我之前提过吗？",
+   "kind": "statement",
+   "fact_id": "f_anniversary"
+  },
+  {
+   "role": "assistant",
+   "text": "好，记下啦～你们在一起三年了，以后聊到感情的事我会记得的。"
+  },
+  {
+   "role": "user",
+   "text": "对了，我比较喜欢苹果，不喜欢香蕉。",
+   "kind": "statement",
+   "fact_id": "f_apple"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，记下啦～你喜欢苹果，不喜欢香蕉。"
+  },
+  {
+   "role": "user",
+   "text": "问你个问题，我早餐一般吃全麦面包和鸡蛋吗？",
+   "kind": "question",
+   "fact_id": "f_breakfast"
+  },
+  {
+   "role": "assistant",
+   "text": "根据你之前说的，早餐我没有记录过具体内容哦。不过全麦面包加鸡蛋听起来很健康，你喜欢就好～"
+  },
+  {
+   "role": "user",
+   "text": "哦对，我最近在读《三体》第三部。",
+   "kind": "statement",
+   "fact_id": "f_read"
+  },
+  {
+   "role": "assistant",
+   "text": "好，记下啦～你最近在读《三体》第三部，科幻迷的品味不错。"
+  },
+  {
+   "role": "user",
+   "text": "我有一辆折叠自行车，周末骑吗，你知道吗？",
+   "kind": "question",
+   "fact_id": "f_bike"
+  },
+  {
+   "role": "assistant",
+   "text": "好，记下啦～你有一辆折叠自行车，周末会骑出去转转，挺自在的。"
+  },
+  {
+   "role": "user",
+   "text": "嗯，我养了一只金毛，叫可乐。",
+   "kind": "statement",
+   "fact_id": "f_dog"
+  },
+  {
+   "role": "assistant",
+   "text": "好，记下啦～你养了一只金毛叫可乐，听起来好治愈，下次可以多聊聊它。"
+  },
+  {
+   "role": "user",
+   "text": "可乐怕打雷，每次打雷都要躲到床底下，这个我之前提过吗？",
+   "kind": "statement",
+   "fact_id": "f_cat"
+  },
+  {
+   "role": "assistant",
+   "text": "你之前没提过哦，不过记住了——可乐怕打雷会躲床底下，下次可以多聊聊它。"
+  },
+  {
+   "role": "user",
+   "text": "嗯，我喜欢用胶片相机拍照。",
+   "kind": "statement",
+   "fact_id": "f_photo"
+  },
+  {
+   "role": "assistant",
+   "text": "好，记下啦～你喜欢用胶片相机拍照，很有复古文艺范儿。"
+  },
+  {
+   "role": "user",
+   "text": "问你个问题，我们前端组一共六个人吗？",
+   "kind": "question",
+   "fact_id": "f_team"
+  },
+  {
+   "role": "assistant",
+   "text": "抱歉，这个我没法确认哦，你之前没提过团队人数。你可以告诉我，我帮你记下来～"
+  },
+  {
+   "role": "user",
+   "text": "那下个月我打算去日本玩一周吗？",
+   "kind": "question",
+   "fact_id": "f_plan_japan"
+  },
+  {
+   "role": "assistant",
+   "text": "好，记下啦～你下个月打算去日本玩一周，听起来很棒，到时候可以多分享照片和见闻～"
+  },
+  {
+   "role": "user",
+   "text": "嗯，我爸妈住在宁波。",
+   "kind": "statement",
+   "fact_id": "f_parents"
+  },
+  {
+   "role": "assistant",
+   "text": "好，记下啦～你爸妈住在宁波，以后聊起来我会记得的。"
+  },
+  {
+   "role": "user",
+   "text": "对了，我喜欢喝手冲咖啡，不太喝速溶的。",
+   "kind": "statement",
+   "fact_id": "f_coffee"
+  },
+  {
+   "role": "assistant",
+   "text": "好，记下啦～你喜欢手冲咖啡，不太喝速溶的，以后聊咖啡我就有数了。"
+  },
+  {
+   "role": "user",
+   "text": "问你个问题，我一般十一点半睡觉，早上七点起吗？",
+   "kind": "question",
+   "fact_id": "f_sleep"
+  },
+  {
+   "role": "assistant",
+   "text": "好，记下啦～你一般十一点半睡、早上七点起，作息挺规律的。"
+  },
+  {
+   "role": "user",
+   "text": "对了，我今年 28 岁。",
+   "kind": "statement",
+   "fact_id": "f_age"
+  },
+  {
+   "role": "assistant",
+   "text": "好，记下啦～你今年28岁，我记住了。"
+  },
+  {
+   "role": "user",
+   "text": "跟你说个事，我每天通勤路上听英语播客。",
+   "kind": "statement",
+   "fact_id": "f_study"
+  },
+  {
+   "role": "assistant",
+   "text": "好，记下啦～你每天通勤路上会听英语播客，这个习惯真不错。"
+  },
+  {
+   "role": "user",
+   "text": "我最喜欢的电影是《星际穿越》，这个我之前提过吗？",
+   "kind": "statement",
+   "fact_id": "f_movie"
+  },
+  {
+   "role": "assistant",
+   "text": "提过啦～你最喜欢《星际穿越》，我一直记着呢。"
+  },
+  {
+   "role": "user",
+   "text": "跟你说个事，我早餐一般吃全麦面包和鸡蛋。",
+   "kind": "statement",
+   "fact_id": "f_breakfast"
+  },
+  {
+   "role": "assistant",
+   "text": "好，记下啦～你早餐一般吃全麦面包和鸡蛋，营养又健康。"
+  },
+  {
+   "role": "user",
+   "text": "哦对，我最近在循环听周杰伦的老歌。",
+   "kind": "statement",
+   "fact_id": "f_music"
+  },
+  {
+   "role": "assistant",
+   "text": "好，记下啦～你最近在循环周杰伦的老歌，经典确实耐听。"
+  },
+  {
+   "role": "user",
+   "text": "好的好的",
+   "kind": "chitchat",
+   "fact_id": null
+  },
+  {
+   "role": "assistant",
+   "text": "好的，我都记下啦～有需要随时找我。"
+  },
+  {
+   "role": "user",
+   "text": "跟你说个事，我周末经常和朋友打篮球。",
+   "kind": "statement",
+   "fact_id": "f_basketball"
+  },
+  {
+   "role": "assistant",
+   "text": "好，记下啦～你周末常和朋友打篮球，运动习惯很棒。"
+  },
+  {
+   "role": "user",
+   "text": "我常去的那家书店在西湖边。",
+   "kind": "statement",
+   "fact_id": "f_book_shop"
+  },
+  {
+   "role": "assistant",
+   "text": "好，记下啦～你常去的那家书店在西湖边，听着就很惬意。"
+  },
+  {
+   "role": "user",
+   "text": "跟你说个事，我主要用 Vue 和 TypeScript 写代码。",
+   "kind": "statement",
+   "fact_id": "f_stack"
+  },
+  {
+   "role": "assistant",
+   "text": "好，记下啦～你主要用 Vue 和 TypeScript 写代码，技术栈很清晰。"
+  },
+  {
+   "role": "user",
+   "text": "更正一下，我最近不太能吃辣了，胃不太好。",
+   "kind": "correction",
+   "fact_id": "f_spicy",
+   "new": "我最近不太能吃辣了，胃不太好"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，记下啦～你最近胃不太好，不太能吃辣了，饮食上要多注意。"
+  },
+  {
+   "role": "user",
+   "text": "跟你说个事，我办了张健身卡，想每周去三次。",
+   "kind": "statement",
+   "fact_id": "f_plan_fitness"
+  },
+  {
+   "role": "assistant",
+   "text": "好，记下啦～你办了健身卡，计划每周去三次，坚持下来会很有收获。"
+  },
+  {
+   "role": "user",
+   "text": "问你个问题，我一般十一点半睡觉，早上七点起吗？",
+   "kind": "question",
+   "fact_id": "f_sleep"
+  },
+  {
+   "role": "assistant",
+   "text": "你一般十一点半睡、早上七点起，作息很规律呀～记得保持就好。"
+  },
+  {
+   "role": "user",
+   "text": "我中午一般在公司食堂吃，记住了哈。",
+   "kind": "statement",
+   "fact_id": "f_lunch"
+  },
+  {
+   "role": "assistant",
+   "text": "好，记下啦～你中午一般在公司食堂吃，省心又方便。"
+  },
+  {
+   "role": "user",
+   "text": "我是 A 型血。",
+   "kind": "statement",
+   "fact_id": "f_blood"
+  },
+  {
+   "role": "assistant",
+   "text": "好，记下啦～你是A型血，以后我会留意的。"
+  },
+  {
+   "role": "user",
+   "text": "问你个问题，我偶尔玩塞尔达传说吗？",
+   "kind": "question",
+   "fact_id": "f_game"
+  },
+  {
+   "role": "assistant",
+   "text": "你偶尔会玩《塞尔达传说》，我记住啦～"
+  },
+  {
+   "role": "user",
+   "text": "我的名字叫小林，记住了哈。",
+   "kind": "statement",
+   "fact_id": "f_name"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，小林，我记住你的名字啦～以后就这么称呼你。"
+  },
+  {
+   "role": "user",
+   "text": "今天天气不错",
+   "kind": "chitchat",
+   "fact_id": null
+  },
+  {
+   "role": "assistant",
+   "text": "是啊，今天天气真好，适合出去走走，晒晒太阳放松一下～"
+  },
+  {
+   "role": "user",
+   "text": "我很能吃辣，最爱重庆火锅吗，你知道吗？",
+   "kind": "question",
+   "fact_id": "f_spicy"
+  },
+  {
+   "role": "assistant",
+   "text": "知道啦，你超能吃辣，最爱重庆火锅～下次聊火锅我肯定不会记错！"
+  },
+  {
+   "role": "user",
+   "text": "周末愉快",
+   "kind": "chitchat",
+   "fact_id": null
+  },
+  {
+   "role": "assistant",
+   "text": "周末愉快呀，小林～好好放松，吃点好的犒劳自己！"
+  },
+  {
+   "role": "user",
+   "text": "今天天气不错",
+   "kind": "chitchat",
+   "fact_id": null
+  },
+  {
+   "role": "assistant",
+   "text": "是啊，今天天气真好，小林～适合出门晒晒太阳，心情也会跟着亮起来。"
+  },
+  {
+   "role": "user",
+   "text": "我女朋友叫小雨，是设计师，记住了哈。",
+   "kind": "statement",
+   "fact_id": "f_girlfriend"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，小雨，设计师，我记住啦～以后提到她不会弄错。"
+  },
+  {
+   "role": "user",
+   "text": "谢谢你呀",
+   "kind": "chitchat",
+   "fact_id": null
+  },
+  {
+   "role": "assistant",
+   "text": "不客气呀，小林～能帮到你我也很开心！"
+  },
+  {
+   "role": "user",
+   "text": "嗯嗯，我明白了",
+   "kind": "chitchat",
+   "fact_id": null
+  },
+  {
+   "role": "assistant",
+   "text": "好的，明白啦～有问题随时找我哦。"
+  },
+  {
+   "role": "user",
+   "text": "问你个问题，我们计划明年结婚吗？",
+   "kind": "question",
+   "fact_id": "f_plan_marry"
+  },
+  {
+   "role": "assistant",
+   "text": "哈哈，你们计划明年结婚吗？这个我可记不住，等你定好日子再告诉我啦～"
+  },
+  {
+   "role": "user",
+   "text": "对了你吃饭了吗",
+   "kind": "chitchat",
+   "fact_id": null
+  },
+  {
+   "role": "assistant",
+   "text": "还没吃呢，不过看你心情不错，我也开心～你有空记得带小雨去吃顿好的哦！"
+  },
+  {
+   "role": "user",
+   "text": "嗯嗯，我明白了",
+   "kind": "chitchat",
+   "fact_id": null
+  },
+  {
+   "role": "assistant",
+   "text": "好的，明白啦～有需要随时找我哦。"
+  },
+  {
+   "role": "user",
+   "text": "嗯，我在一家互联网公司做前端工程师。",
+   "kind": "statement",
+   "fact_id": "f_job"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，前端工程师，记下啦～有技术问题或者想聊点啥都可以找我哦。"
+  },
+  {
+   "role": "user",
+   "text": "顺便说下，我有个妹妹，在成都读研究生。",
+   "kind": "statement",
+   "fact_id": "f_sister"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，妹妹在成都读研究生，挺好的～有需要帮忙的随时说哦。"
+  },
+  {
+   "role": "user",
+   "text": "跟你说个事，我最近在循环听周杰伦的老歌。",
+   "kind": "statement",
+   "fact_id": "f_music"
+  },
+  {
+   "role": "assistant",
+   "text": "周杰伦的老歌确实经典，越听越有味道～你最喜欢哪一首呀？"
+  },
+  {
+   "role": "user",
+   "text": "不对不对，我之前说错了，其实我去年搬到上海了。",
+   "kind": "correction",
+   "fact_id": "f_city",
+   "new": "其实我去年搬到上海了"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，上海生活方便又热闹～记下啦，有需要随时找我哦。"
+  },
+  {
+   "role": "user",
+   "text": "我办了张健身卡，想每周去三次，记住了哈。",
+   "kind": "statement",
+   "fact_id": "f_plan_fitness"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，每周三次健身计划记下啦～坚持就是胜利，加油哦！"
+  },
+  {
+   "role": "user",
+   "text": "我办了张健身卡，想每周去三次。",
+   "kind": "statement",
+   "fact_id": "f_plan_fitness"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，已经记住啦～每周三次，加油坚持哦！"
+  },
+  {
+   "role": "user",
+   "text": "对了，我每天通勤路上听英语播客。",
+   "kind": "statement",
+   "fact_id": "f_study"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，通勤路上听英语播客很棒，既利用时间又能提升自己～加油哦！"
+  },
+  {
+   "role": "user",
+   "text": "跟你说个事，我最喜欢的电影是《星际穿越》。",
+   "kind": "statement",
+   "fact_id": "f_movie"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，《星际穿越》确实经典，配乐和主题都特别震撼～每次看都有新感触呢。"
+  },
+  {
+   "role": "user",
+   "text": "哦对，我最喜欢的电影是《星际穿越》。",
+   "kind": "statement",
+   "fact_id": "f_movie"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，已经记住啦～《星际穿越》确实值得反复回味。"
+  },
+  {
+   "role": "user",
+   "text": "对了你吃饭了吗",
+   "kind": "chitchat",
+   "fact_id": null
+  },
+  {
+   "role": "assistant",
+   "text": "还没吃呢，谢谢关心～需要我帮你查附近有什么好吃的吗？"
+  },
+  {
+   "role": "user",
+   "text": "更正一下，我现在改喝速溶的了，手冲太麻烦。",
+   "kind": "correction",
+   "fact_id": "f_coffee",
+   "new": "我现在改喝速溶的了，手冲太麻烦"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，已经更新啦～速溶确实方便，适合自己的节奏就好。"
+  },
+  {
+   "role": "user",
+   "text": "我很能吃辣，最爱重庆火锅。",
+   "kind": "statement",
+   "fact_id": "f_spicy"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，记住了～重庆火锅的麻辣劲儿确实过瘾，下次可以聊聊你爱点的配菜！"
+  },
+  {
+   "role": "user",
+   "text": "嗯，我最近在学 Rust。",
+   "kind": "statement",
+   "fact_id": "f_lang"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，Rust挺硬核的，加油～学起来有挑战但写出来会很爽！"
+  },
+  {
+   "role": "user",
+   "text": "哈哈，你反应真快",
+   "kind": "chitchat",
+   "fact_id": null
+  },
+  {
+   "role": "assistant",
+   "text": "哈哈，谢谢夸奖～随时等你来聊！"
+  },
+  {
+   "role": "user",
+   "text": "对了你吃饭了吗",
+   "kind": "chitchat",
+   "fact_id": null
+  },
+  {
+   "role": "assistant",
+   "text": "还没吃呢，不过随时可以为你推荐好吃的～你吃了吗？"
+  },
+  {
+   "role": "user",
+   "text": "不对不对，我之前说错了，我现在改成十二点睡，八点起。",
+   "kind": "correction",
+   "fact_id": "f_sleep",
+   "new": "我现在改成十二点睡，八点起"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，作息已更新为12点睡8点起～规律作息很棒，继续保持！"
+  },
+  {
+   "role": "user",
+   "text": "我爸妈住在宁波，记住了哈。",
+   "kind": "statement",
+   "fact_id": "f_parents"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，已记下～爸妈在宁波，有空多回去看看他们呀！"
+  },
+  {
+   "role": "user",
+   "text": "那我爸妈住在宁波吗？",
+   "kind": "question",
+   "fact_id": "f_parents"
+  },
+  {
+   "role": "assistant",
+   "text": "是的，你爸妈住在宁波，之前你告诉我了～随时可以再提醒我哦！"
+  },
+  {
+   "role": "user",
+   "text": "我中午一般在公司食堂吃吗，你知道吗？",
+   "kind": "question",
+   "fact_id": "f_lunch"
+  },
+  {
+   "role": "assistant",
+   "text": "是的，你之前提过中午一般在公司食堂吃，我记着呢～今天也去食堂吃吗？"
+  },
+  {
+   "role": "user",
+   "text": "跟你说个事，我最喜欢的电影是《星际穿越》。",
+   "kind": "statement",
+   "fact_id": "f_movie"
+  },
+  {
+   "role": "assistant",
+   "text": "记住了，你最喜欢的电影是《星际穿越》～有空可以再聊聊这部电影！"
+  },
+  {
+   "role": "user",
+   "text": "我办了张健身卡，想每周去三次，记住了哈。",
+   "kind": "statement",
+   "fact_id": "f_plan_fitness"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，健身计划已记下～每周三次，坚持就是胜利！"
+  },
+  {
+   "role": "user",
+   "text": "今天天气不错",
+   "kind": "chitchat",
+   "fact_id": null
+  },
+  {
+   "role": "assistant",
+   "text": "是啊，今天天气确实不错，适合出去走走或者晒晒太阳～"
+  },
+  {
+   "role": "user",
+   "text": "顺便说下，我讨厌梅雨天，衣服老是晾不干。",
+   "kind": "statement",
+   "fact_id": "f_weather"
+  },
+  {
+   "role": "assistant",
+   "text": "记住了，你不喜欢梅雨天，衣服晾不干很烦人～希望今年梅雨能短一点！"
+  },
+  {
+   "role": "user",
+   "text": "我小时候学过六年钢琴，记住了哈。",
+   "kind": "statement",
+   "fact_id": "f_piano"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，记住了～你小时候学过六年钢琴，这个技能很厉害呢！"
+  },
+  {
+   "role": "user",
+   "text": "我最近在学 Rust，记住了哈。",
+   "kind": "statement",
+   "fact_id": "f_lang"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，记住了～你最近在学 Rust，加油，期待你写出厉害的程序！"
+  },
+  {
+   "role": "user",
+   "text": "顺便说下，我很能吃辣，最爱重庆火锅。",
+   "kind": "statement",
+   "fact_id": "f_spicy"
+  },
+  {
+   "role": "assistant",
+   "text": "记住了～你超能吃辣，最爱重庆火锅，下次可以聊聊火锅店推荐！"
+  },
+  {
+   "role": "user",
+   "text": "我想起来了，我现在改成十二点睡，八点起。",
+   "kind": "correction",
+   "fact_id": "f_sleep",
+   "new": "我现在改成十二点睡，八点起"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，作息已更新为十二点睡、八点起～规律作息对身体好，加油！"
+  },
+  {
+   "role": "user",
+   "text": "今天天气不错",
+   "kind": "chitchat",
+   "fact_id": null
+  },
+  {
+   "role": "assistant",
+   "text": "是啊，今天天气确实不错，适合出去走走晒晒太阳～"
+  },
+  {
+   "role": "user",
+   "text": "对了，我最近在读《三体》第三部。",
+   "kind": "statement",
+   "fact_id": "f_read"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，记住了～你正在读《三体》第三部，这本书很精彩，读完可以一起聊聊感想！"
+  },
+  {
+   "role": "user",
+   "text": "谢谢你呀",
+   "kind": "chitchat",
+   "fact_id": null
+  },
+  {
+   "role": "assistant",
+   "text": "不客气呀，有什么想聊的随时找我～"
+  },
+  {
+   "role": "user",
+   "text": "哈哈，你反应真快",
+   "kind": "chitchat",
+   "fact_id": null
+  },
+  {
+   "role": "assistant",
+   "text": "哈哈，谢谢夸奖～你随时找我，我都在线呢！"
+  },
+  {
+   "role": "user",
+   "text": "我们前端组一共六个人，记住了哈。",
+   "kind": "statement",
+   "fact_id": "f_team"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，记住了～你们前端组一共六个人，团队不大，协作起来应该很默契！"
+  },
+  {
+   "role": "user",
+   "text": "好嘞",
+   "kind": "chitchat",
+   "fact_id": null
+  },
+  {
+   "role": "assistant",
+   "text": "好的，随时等你找我～"
+  },
+  {
+   "role": "user",
+   "text": "哦对，我们计划明年结婚。",
+   "kind": "statement",
+   "fact_id": "f_plan_marry"
+  },
+  {
+   "role": "assistant",
+   "text": "恭喜你们！祝你们一切顺利，幸福美满～"
+  },
+  {
+   "role": "user",
+   "text": "顺便说下，下个月我打算去日本玩一周。",
+   "kind": "statement",
+   "fact_id": "f_plan_japan"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，记住了～下个月去日本玩一周，祝你们旅途愉快！"
+  },
+  {
+   "role": "user",
+   "text": "对了，我最近在学 Rust。",
+   "kind": "statement",
+   "fact_id": "f_lang"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，记住了～学 Rust 挺有挑战的，加油！"
+  },
+  {
+   "role": "user",
+   "text": "不对不对，我之前说错了，其实我去年搬到上海了。",
+   "kind": "correction",
+   "fact_id": "f_city",
+   "new": "其实我去年搬到上海了"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，记住了～原来你去年就搬到上海了，之前没提过呢。"
+  },
+  {
+   "role": "user",
+   "text": "跟你说个事，我喜欢用胶片相机拍照。",
+   "kind": "statement",
+   "fact_id": "f_photo"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，记住了～胶片相机拍照很有味道，期待看到你的作品！"
+  },
+  {
+   "role": "user",
+   "text": "对了你吃饭了吗",
+   "kind": "chitchat",
+   "fact_id": null
+  },
+  {
+   "role": "assistant",
+   "text": "还没呢，谢谢你关心～你也记得按时吃饭哦。"
+  },
+  {
+   "role": "user",
+   "text": "我想起来了，其实我去年搬到上海了。",
+   "kind": "correction",
+   "fact_id": "f_city",
+   "new": "其实我去年搬到上海了"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，记住了～你去年搬到上海了，之前提过，我这边记牢啦。"
+  },
+  {
+   "role": "user",
+   "text": "嗯，我对花粉过敏，春天容易打喷嚏。",
+   "kind": "statement",
+   "fact_id": "f_allergy"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，记住了～春天花粉多，记得随身带口罩或药哦。"
+  },
+  {
+   "role": "user",
+   "text": "顺便说下，我一般十一点半睡觉，早上七点起。",
+   "kind": "statement",
+   "fact_id": "f_sleep"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，记住了～你的作息很规律，继续保持哦！"
+  },
+  {
+   "role": "user",
+   "text": "可乐怕打雷，每次打雷都要躲到床底下，这个我之前提过吗？",
+   "kind": "statement",
+   "fact_id": "f_cat"
+  },
+  {
+   "role": "assistant",
+   "text": "是的，你之前提过可乐怕打雷，我记着呢～它躲床底的样子肯定又可爱又让人心疼。"
+  },
+  {
+   "role": "user",
+   "text": "我主要用 Vue 和 TypeScript 写代码。",
+   "kind": "statement",
+   "fact_id": "f_stack"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，记住了～你主要用 Vue 和 TypeScript，技术栈很清晰！"
+  },
+  {
+   "role": "user",
+   "text": "嗯嗯，我明白了",
+   "kind": "chitchat",
+   "fact_id": null
+  },
+  {
+   "role": "assistant",
+   "text": "好的，没问题～有需要随时找我。"
+  },
+  {
+   "role": "user",
+   "text": "跟你说个事，我最喜欢的电影是《星际穿越》。",
+   "kind": "statement",
+   "fact_id": "f_movie"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，记住了～《星际穿越》确实经典，我也很喜欢。"
+  },
+  {
+   "role": "user",
+   "text": "我们前端组一共六个人。",
+   "kind": "statement",
+   "fact_id": "f_team"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，记住了～你们前端组六个人，团队规模挺合适的。"
+  },
+  {
+   "role": "user",
+   "text": "顺便说下，我小时候学过六年钢琴。",
+   "kind": "statement",
+   "fact_id": "f_piano"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，记住了～学过六年钢琴，难怪你气质里带着艺术感呢！"
+  },
+  {
+   "role": "user",
+   "text": "周末愉快",
+   "kind": "chitchat",
+   "fact_id": null
+  },
+  {
+   "role": "assistant",
+   "text": "周末愉快～记得给可乐备个小毯子，要是打雷它害怕，你也能陪陪它。"
+  },
+  {
+   "role": "user",
+   "text": "哦对，我近视三百度，平时戴眼镜。",
+   "kind": "statement",
+   "fact_id": "f_glasses"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，记住了～近视三百度，戴眼镜确实方便些。"
+  },
+  {
+   "role": "user",
+   "text": "哦对，我最喜欢的电影是《星际穿越》。",
+   "kind": "statement",
+   "fact_id": "f_movie"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，这个我记得～《星际穿越》确实是部好电影。"
+  },
+  {
+   "role": "user",
+   "text": "其实不是这样的，我现在改成十二点睡，八点起。",
+   "kind": "correction",
+   "fact_id": "f_sleep",
+   "new": "我现在改成十二点睡，八点起"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，记住了～作息调整到十二点睡八点起，规律起来对身体更好呢！"
+  },
+  {
+   "role": "user",
+   "text": "对了，我很能吃辣，最爱重庆火锅。",
+   "kind": "statement",
+   "fact_id": "f_spicy"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，记住了～爱吃辣的人性格都爽快，重庆火锅确实过瘾！"
+  },
+  {
+   "role": "user",
+   "text": "嗯，我近视三百度，平时戴眼镜。",
+   "kind": "statement",
+   "fact_id": "f_glasses"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，近视三百度戴眼镜这个我记得～如果哪天想换隐形眼镜，也可以试试看哦。"
+  },
+  {
+   "role": "user",
+   "text": "对了，我养了一只金毛，叫可乐。",
+   "kind": "statement",
+   "fact_id": "f_dog"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，可乐这名字真可爱～金毛性格温顺，和爱吃辣的爽快人特别搭！"
+  },
+  {
+   "role": "user",
+   "text": "对了你吃饭了吗",
+   "kind": "chitchat",
+   "fact_id": null
+  },
+  {
+   "role": "assistant",
+   "text": "还没呢，正等你请我吃重庆火锅呢～（笑）"
+  },
+  {
+   "role": "user",
+   "text": "我对花粉过敏，春天容易打喷嚏，记住了哈。",
+   "kind": "statement",
+   "fact_id": "f_allergy"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，花粉过敏春天打喷嚏这个记住了～出门可以戴个口罩，舒服不少呢。"
+  },
+  {
+   "role": "user",
+   "text": "更正一下，其实我去年搬到上海了。",
+   "kind": "correction",
+   "fact_id": "f_city",
+   "new": "其实我去年搬到上海了"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，上海这个信息我更新啦～以后聊起天气或出行，我就按上海来想咯！"
+  },
+  {
+   "role": "user",
+   "text": "今天天气不错",
+   "kind": "chitchat",
+   "fact_id": null
+  },
+  {
+   "role": "assistant",
+   "text": "是啊，上海今天阳光真好，适合出门走走～记得戴上口罩防花粉哦。"
+  },
+  {
+   "role": "user",
+   "text": "我喜欢喝手冲咖啡，不太喝速溶的。",
+   "kind": "statement",
+   "fact_id": "f_coffee"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，手冲咖啡爱好者记住了～下次聊咖啡，我就按精品豆和手冲壶来想咯！"
+  },
+  {
+   "role": "user",
+   "text": "我想起来了，我现在改成十二点睡，八点起。",
+   "kind": "correction",
+   "fact_id": "f_sleep",
+   "new": "我现在改成十二点睡，八点起"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，作息时间更新啦～早睡早起，精神一整天！"
+  },
+  {
+   "role": "user",
+   "text": "对了，我们计划明年结婚。",
+   "kind": "statement",
+   "fact_id": "f_plan_marry"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，恭喜你们！这真是一件大喜事，到时候婚礼有什么需要帮忙的，随时跟我说～"
+  },
+  {
+   "role": "user",
+   "text": "我想起来了，我现在改成十二点睡，八点起。",
+   "kind": "correction",
+   "fact_id": "f_sleep",
+   "new": "我现在改成十二点睡，八点起"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，作息时间还是十二点到八点，我记牢啦～"
+  },
+  {
+   "role": "user",
+   "text": "对了你吃饭了吗",
+   "kind": "chitchat",
+   "fact_id": null
+  },
+  {
+   "role": "assistant",
+   "text": "刚忙完手头的事，还没吃呢～你呢，记得按时吃饭呀！"
+  },
+  {
+   "role": "user",
+   "text": "谢谢你呀",
+   "kind": "chitchat",
+   "fact_id": null
+  },
+  {
+   "role": "assistant",
+   "text": "不客气～也谢谢你这么贴心！"
+  },
+  {
+   "role": "user",
+   "text": "我讨厌梅雨天，衣服老是晾不干吗，你知道吗？",
+   "kind": "question",
+   "fact_id": "f_weather"
+  },
+  {
+   "role": "assistant",
+   "text": "梅雨天确实烦人，衣服晾不干太难受了～可以试试烘干机，或者把衣服挂在通风好的地方。"
+  },
+  {
+   "role": "user",
+   "text": "我有一辆折叠自行车，周末骑。",
+   "kind": "statement",
+   "fact_id": "f_bike"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，折叠自行车周末骑很惬意呀～记得注意安全，玩得开心！"
+  },
+  {
+   "role": "user",
+   "text": "我在一家互联网公司做前端工程师，这个我之前提过吗？",
+   "kind": "statement",
+   "fact_id": "f_job"
+  },
+  {
+   "role": "assistant",
+   "text": "提过呢，你之前说过在前端领域很有热情～记得注意劳逸结合呀。"
+  },
+  {
+   "role": "user",
+   "text": "嗯嗯，我明白了",
+   "kind": "chitchat",
+   "fact_id": null
+  },
+  {
+   "role": "assistant",
+   "text": "好的，记住啦～有需要随时找我哦！"
+  },
+  {
+   "role": "user",
+   "text": "更正一下，可乐其实是只柯基。",
+   "kind": "correction",
+   "fact_id": "f_dog",
+   "new": "可乐其实是只柯基"
+  },
+  {
+   "role": "assistant",
+   "text": "哈哈，原来可乐是只柯基呀，记住了！"
+  },
+  {
+   "role": "user",
+   "text": "那我常去的那家书店在西湖边吗？",
+   "kind": "question",
+   "fact_id": "f_book_shop"
+  },
+  {
+   "role": "assistant",
+   "text": "是的，那家书店就在西湖边，你之前提过很喜欢那里的氛围～"
+  },
+  {
+   "role": "user",
+   "text": "嗯，我常去的那家书店在西湖边。",
+   "kind": "statement",
+   "fact_id": "f_book_shop"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，西湖边的书店确实很有氛围，雨天去坐坐也很舒服～"
+  },
+  {
+   "role": "user",
+   "text": "问你个问题，我周末经常和朋友打篮球吗？",
+   "kind": "question",
+   "fact_id": "f_basketball"
+  },
+  {
+   "role": "assistant",
+   "text": "是的，你周末常和朋友打篮球，打的还挺开心呢～"
+  },
+  {
+   "role": "user",
+   "text": "跟你说个事，我的名字叫小林。",
+   "kind": "statement",
+   "fact_id": "f_name"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，小林，我记住了！以后就这么称呼你～"
+  },
+  {
+   "role": "user",
+   "text": "我想起来了，其实我去年搬到上海了。",
+   "kind": "correction",
+   "fact_id": "f_city",
+   "new": "其实我去年搬到上海了"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，记住啦！你现在是在上海生活了～"
+  },
+  {
+   "role": "user",
+   "text": "对了你吃饭了吗",
+   "kind": "chitchat",
+   "fact_id": null
+  },
+  {
+   "role": "assistant",
+   "text": "哈哈，我不用吃饭啦，不过谢谢关心～你吃了吗？"
+  },
+  {
+   "role": "user",
+   "text": "顺便说下，我近视三百度，平时戴眼镜。",
+   "kind": "statement",
+   "fact_id": "f_glasses"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，小林，我记住你近视三百度啦，平时记得戴眼镜哦～"
+  },
+  {
+   "role": "user",
+   "text": "我喜欢喝手冲咖啡，不太喝速溶的吗，你知道吗？",
+   "kind": "question",
+   "fact_id": "f_coffee"
+  },
+  {
+   "role": "assistant",
+   "text": "知道啦，你喜欢手冲咖啡的香气和层次感，不太碰速溶的～"
+  },
+  {
+   "role": "user",
+   "text": "对了，我喜欢用胶片相机拍照。",
+   "kind": "statement",
+   "fact_id": "f_photo"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，小林，我记住你喜欢用胶片相机拍照啦，那感觉一定很有味道～"
+  },
+  {
+   "role": "user",
+   "text": "哦对，我近视三百度，平时戴眼镜。",
+   "kind": "statement",
+   "fact_id": "f_glasses"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，小林，我记住你近视三百度啦，眼镜记得常戴哦～"
+  },
+  {
+   "role": "user",
+   "text": "哦对，我近视三百度，平时戴眼镜。",
+   "kind": "statement",
+   "fact_id": "f_glasses"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，小林，我记住啦，你近视三百度，平时戴眼镜～"
+  },
+  {
+   "role": "user",
+   "text": "我有一辆折叠自行车，周末骑，记住了哈。",
+   "kind": "statement",
+   "fact_id": "f_bike"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，小林，我记住啦，你周末会骑折叠自行车～"
+  },
+  {
+   "role": "user",
+   "text": "工作好累啊今天",
+   "kind": "chitchat",
+   "fact_id": null
+  },
+  {
+   "role": "assistant",
+   "text": "辛苦啦，小林。今晚早点休息，周末骑折叠车出去透透气吧～"
+  },
+  {
+   "role": "user",
+   "text": "跟你说个事，我最近在学 Rust。",
+   "kind": "statement",
+   "fact_id": "f_lang"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，小林，学 Rust 很酷啊，祝你写得顺手～"
+  },
+  {
+   "role": "user",
+   "text": "跟你说个事，我养了一只金毛，叫可乐。",
+   "kind": "statement",
+   "fact_id": "f_dog"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，小林，我记住啦，你养了一只金毛叫可乐，听起来好可爱！"
+  },
+  {
+   "role": "user",
+   "text": "哦对，我坐地铁一号线通勤。",
+   "kind": "statement",
+   "fact_id": "f_metro"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，小林，我记住啦，你坐地铁一号线通勤，注意别坐过站哦～"
+  },
+  {
+   "role": "user",
+   "text": "可乐怕打雷，每次打雷都要躲到床底下。",
+   "kind": "statement",
+   "fact_id": "f_cat"
+  },
+  {
+   "role": "assistant",
+   "text": "记住了，可乐怕打雷会躲床底下，下次打雷记得安抚它哦～"
+  },
+  {
+   "role": "user",
+   "text": "问你个问题，我偶尔玩塞尔达传说吗？",
+   "kind": "question",
+   "fact_id": "f_game"
+  },
+  {
+   "role": "assistant",
+   "text": "偶尔玩的话，我会记住的～塞尔达传说很好玩，玩得开心！"
+  },
+  {
+   "role": "user",
+   "text": "对了，我住在杭州。",
+   "kind": "statement",
+   "fact_id": "f_city"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，小林，我记住啦，你住在杭州，西湖边骑车散步都很方便呢～"
+  },
+  {
+   "role": "user",
+   "text": "跟你说个事，我爸妈住在宁波。",
+   "kind": "statement",
+   "fact_id": "f_parents"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，小林，我记住啦，你爸妈住在宁波，离杭州也很近呢～"
+  },
+  {
+   "role": "user",
+   "text": "谢谢你呀",
+   "kind": "chitchat",
+   "fact_id": null
+  },
+  {
+   "role": "assistant",
+   "text": "不客气呀，小林～有需要随时找我，我一直都在！"
+  },
+  {
+   "role": "user",
+   "text": "好的好的",
+   "kind": "chitchat",
+   "fact_id": null
+  },
+  {
+   "role": "assistant",
+   "text": "好的，小林～有需要随时找我，我一直都在！"
+  },
+  {
+   "role": "user",
+   "text": "哦对，我很能吃辣，最爱重庆火锅。",
+   "kind": "statement",
+   "fact_id": "f_spicy"
+  },
+  {
+   "role": "assistant",
+   "text": "好嘞，小林～记住了，你超能吃辣，最爱重庆火锅，下次可以聊聊火锅话题哦！"
+  },
+  {
+   "role": "user",
+   "text": "更正一下，我现在改成十二点睡，八点起。",
+   "kind": "correction",
+   "fact_id": "f_sleep",
+   "new": "我现在改成十二点睡，八点起"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，小林～作息改好了，我记住啦，十二点睡八点起，规律生活很棒！"
+  },
+  {
+   "role": "user",
+   "text": "顺便说下，我最近在学 Rust。",
+   "kind": "statement",
+   "fact_id": "f_lang"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，小林～记住了，你最近在学 Rust，加油！有需要随时找我。"
+  },
+  {
+   "role": "user",
+   "text": "我讨厌梅雨天，衣服老是晾不干，记住了哈。",
+   "kind": "statement",
+   "fact_id": "f_weather"
+  },
+  {
+   "role": "assistant",
+   "text": "记住了，小林～你讨厌梅雨天，衣服晾不干很烦人，我会记着的。"
+  },
+  {
+   "role": "user",
+   "text": "好嘞",
+   "kind": "chitchat",
+   "fact_id": null
+  },
+  {
+   "role": "assistant",
+   "text": "好的，小林～都记下啦，随时找我聊火锅、Rust或者吐槽梅雨天！"
+  },
+  {
+   "role": "user",
+   "text": "谢谢你呀",
+   "kind": "chitchat",
+   "fact_id": null
+  },
+  {
+   "role": "assistant",
+   "text": "不客气，小林～随时找我，我都在！"
+  },
+  {
+   "role": "user",
+   "text": "那我最近在读《三体》第三部吗？",
+   "kind": "question",
+   "fact_id": "f_read"
+  },
+  {
+   "role": "assistant",
+   "text": "是的，小林～你在读《三体》第三部，我记下啦。"
+  },
+  {
+   "role": "user",
+   "text": "好的好的",
+   "kind": "chitchat",
+   "fact_id": null
+  },
+  {
+   "role": "assistant",
+   "text": "好的，小林～都记下啦，继续享受《三体》第三部吧！"
+  },
+  {
+   "role": "user",
+   "text": "嗯嗯，我明白了",
+   "kind": "chitchat",
+   "fact_id": null
+  },
+  {
+   "role": "assistant",
+   "text": "好的，小林～明白了就好，有事随时找我！"
+  },
+  {
+   "role": "user",
+   "text": "顺便说下，可乐怕打雷，每次打雷都要躲到床底下。",
+   "kind": "statement",
+   "fact_id": "f_cat"
+  },
+  {
+   "role": "assistant",
+   "text": "哈哈，可乐好可爱～我记下啦，打雷时它会躲床底下。"
+  },
+  {
+   "role": "user",
+   "text": "嗯，我每周四在家远程办公。",
+   "kind": "statement",
+   "fact_id": "f_remote"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，小林～每周四远程办公也记下啦，有事随时找我！"
+  },
+  {
+   "role": "user",
+   "text": "我最近在学 Rust，记住了哈。",
+   "kind": "statement",
+   "fact_id": "f_lang"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，小林～你最近在学 Rust，我记下啦，加油！"
+  },
+  {
+   "role": "user",
+   "text": "其实不是这样的，我现在改成十二点睡，八点起。",
+   "kind": "correction",
+   "fact_id": "f_sleep",
+   "new": "我现在改成十二点睡，八点起"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，小林～作息改成十二点睡、八点起，我更新记下啦。"
+  },
+  {
+   "role": "user",
+   "text": "顺便说下，我住在杭州。",
+   "kind": "statement",
+   "fact_id": "f_city"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，小林～你住在杭州，我也记下啦！"
+  },
+  {
+   "role": "user",
+   "text": "哦对，我很能吃辣，最爱重庆火锅。",
+   "kind": "statement",
+   "fact_id": "f_spicy"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，小林～爱吃辣和重庆火锅我也记下啦！下次聊火锅可以多说说～"
+  },
+  {
+   "role": "user",
+   "text": "不对不对，我之前说错了，我现在改喝速溶的了，手冲太麻烦。",
+   "kind": "correction",
+   "fact_id": "f_coffee",
+   "new": "我现在改喝速溶的了，手冲太麻烦"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，小林～那我把“手冲”改成“速溶咖啡”啦，已更新！"
+  },
+  {
+   "role": "user",
+   "text": "好嘞",
+   "kind": "chitchat",
+   "fact_id": null
+  },
+  {
+   "role": "assistant",
+   "text": "好的，小林～都记好啦，有需要随时找我！"
+  },
+  {
+   "role": "user",
+   "text": "哦对，我女朋友叫小雨，是设计师。",
+   "kind": "statement",
+   "fact_id": "f_girlfriend"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，小林～小雨，设计师，我记下啦！"
+  },
+  {
+   "role": "user",
+   "text": "问你个问题，我很能吃辣，最爱重庆火锅吗？",
+   "kind": "question",
+   "fact_id": "f_spicy"
+  },
+  {
+   "role": "assistant",
+   "text": "是的，小林～你很能吃辣，最爱重庆火锅，这个我记着呢！"
+  },
+  {
+   "role": "user",
+   "text": "我们计划明年结婚吗，你知道吗？",
+   "kind": "question",
+   "fact_id": "f_plan_marry"
+  },
+  {
+   "role": "assistant",
+   "text": "你还说过计划明年和小雨结婚，我记着呢～需要我帮你准备什么吗？"
+  },
+  {
+   "role": "user",
+   "text": "顺便说下，我最近在循环听周杰伦的老歌。",
+   "kind": "statement",
+   "fact_id": "f_music"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，小林～周杰伦的老歌我也记下啦！"
+  },
+  {
+   "role": "user",
+   "text": "跟你说个事，我的名字叫小林。",
+   "kind": "statement",
+   "fact_id": "f_name"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，小林～我记下啦，你的名字是小林！"
+  },
+  {
+   "role": "user",
+   "text": "那我有一辆折叠自行车，周末骑吗？",
+   "kind": "question",
+   "fact_id": "f_bike"
+  },
+  {
+   "role": "assistant",
+   "text": "是的，小林～你有辆折叠自行车，周末会骑出去逛逛，我记下啦！"
+  },
+  {
+   "role": "user",
+   "text": "哈哈，你反应真快",
+   "kind": "chitchat",
+   "fact_id": null
+  },
+  {
+   "role": "assistant",
+   "text": "哈哈，谢谢夸奖～你的事我都记着呢，随时等你吩咐。"
+  },
+  {
+   "role": "user",
+   "text": "我叫什么，你知道吗？",
+   "kind": "question",
+   "fact_id": "f_name"
+  },
+  {
+   "role": "assistant",
+   "text": "你叫小林呀～这个我可记得牢牢的！"
+  },
+  {
+   "role": "user",
+   "text": "周末愉快",
+   "kind": "chitchat",
+   "fact_id": null
+  },
+  {
+   "role": "assistant",
+   "text": "周末愉快，小林～记得骑车时注意安全哦！"
+  },
+  {
+   "role": "user",
+   "text": "更正一下，我最近不太能吃辣了，胃不太好。",
+   "kind": "correction",
+   "fact_id": "f_spicy",
+   "new": "我最近不太能吃辣了，胃不太好"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，小林～我记下啦，你最近胃不太好，要少吃辣，多注意饮食哦！"
+  },
+  {
+   "role": "user",
+   "text": "嗯，我常去的那家书店在西湖边。",
+   "kind": "statement",
+   "fact_id": "f_book_shop"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，小林～我记下啦，你常去西湖边那家书店，下次去可以顺便散散步放松一下。"
+  },
+  {
+   "role": "user",
+   "text": "跟你说个事，下个月我打算去日本玩一周。",
+   "kind": "statement",
+   "fact_id": "f_plan_japan"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，小林～我记下啦，下个月你要去日本玩一周，真期待！到时可以分享些旅途趣事呀。"
+  },
+  {
+   "role": "user",
+   "text": "顺便说下，我最近在学 Rust。",
+   "kind": "statement",
+   "fact_id": "f_lang"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，小林～我记下啦，你最近在学 Rust，加油！需要的话随时可以聊聊学习心得。"
+  },
+  {
+   "role": "user",
+   "text": "哦对，我周末经常和朋友打篮球。",
+   "kind": "statement",
+   "fact_id": "f_basketball"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，小林～我记下啦，你周末常和朋友打篮球，多运动对身体好，玩得开心哦！"
+  },
+  {
+   "role": "user",
+   "text": "好的好的",
+   "kind": "chitchat",
+   "fact_id": null
+  },
+  {
+   "role": "assistant",
+   "text": "好的，小林～那你有需要随时叫我，祝你周末愉快！"
+  },
+  {
+   "role": "user",
+   "text": "好的好的",
+   "kind": "chitchat",
+   "fact_id": null
+  },
+  {
+   "role": "assistant",
+   "text": "好的，小林～那我先不打扰你啦，有事随时叫我哦！"
+  },
+  {
+   "role": "user",
+   "text": "跟你说个事，我近视三百度，平时戴眼镜。",
+   "kind": "statement",
+   "fact_id": "f_glasses"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，小林～我记下啦，你近视三百度，平时戴眼镜，记得多让眼睛休息哦。"
+  },
+  {
+   "role": "user",
+   "text": "对了，我们前端组一共六个人。",
+   "kind": "statement",
+   "fact_id": "f_team"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，小林～我记下啦，你们前端组一共六个人。"
+  },
+  {
+   "role": "user",
+   "text": "对了，我爸妈住在宁波。",
+   "kind": "statement",
+   "fact_id": "f_parents"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，小林～我记下啦，你爸妈住在宁波。"
+  },
+  {
+   "role": "user",
+   "text": "我小时候学过六年钢琴，这个我之前提过吗？",
+   "kind": "statement",
+   "fact_id": "f_piano"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，小林～这个你没提过呢，我记下啦，学过六年钢琴很厉害哦！"
+  },
+  {
+   "role": "user",
+   "text": "我有一辆折叠自行车，周末骑吗，你知道吗？",
+   "kind": "question",
+   "fact_id": "f_bike"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，小林～这个你之前没提过，我记下啦，折叠自行车周末骑很方便呢！"
+  },
+  {
+   "role": "user",
+   "text": "嗯，我喜欢用胶片相机拍照。",
+   "kind": "statement",
+   "fact_id": "f_photo"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，小林～我记下啦，你喜欢用胶片相机拍照，这个爱好很特别呢！"
+  },
+  {
+   "role": "user",
+   "text": "问你个问题，我们前端组一共六个人吗？",
+   "kind": "question",
+   "fact_id": "f_team"
+  },
+  {
+   "role": "assistant",
+   "text": "是的，小林～你们前端组一共六个人，这个信息我之前记下了。"
+  },
+  {
+   "role": "user",
+   "text": "我最近在读《三体》第三部。",
+   "kind": "statement",
+   "fact_id": "f_read"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，小林～《三体》第三部很精彩呢，我记下啦，你最近在读这本书。"
+  },
+  {
+   "role": "user",
+   "text": "那我早餐一般吃全麦面包和鸡蛋吗？",
+   "kind": "question",
+   "fact_id": "f_breakfast"
+  },
+  {
+   "role": "assistant",
+   "text": "是的，小林～你早餐一般吃全麦面包和鸡蛋，这个我之前记下啦。"
+  },
+  {
+   "role": "user",
+   "text": "更正一下，我最近不太能吃辣了，胃不太好。",
+   "kind": "correction",
+   "fact_id": "f_spicy",
+   "new": "我最近不太能吃辣了，胃不太好"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，小林～我更新一下，你最近胃不太好，不太能吃辣，我会记住的。"
+  },
+  {
+   "role": "user",
+   "text": "其实不是这样的，我现在改成十二点睡，八点起。",
+   "kind": "correction",
+   "fact_id": "f_sleep",
+   "new": "我现在改成十二点睡，八点起"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，小林～我更新你的作息，现在是十二点睡、八点起。"
+  },
+  {
+   "role": "user",
+   "text": "更正一下，我现在改喝速溶的了，手冲太麻烦。",
+   "kind": "correction",
+   "fact_id": "f_coffee",
+   "new": "我现在改喝速溶的了，手冲太麻烦"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，小林～我更新一下，你现在改喝速溶咖啡了，手冲太麻烦，我记下啦。"
+  },
+  {
+   "role": "user",
+   "text": "对了，我中午一般在公司食堂吃。",
+   "kind": "statement",
+   "fact_id": "f_lunch"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，小林～我记下啦，你中午一般在公司食堂吃。"
+  },
+  {
+   "role": "user",
+   "text": "我有个妹妹，在成都读研究生吗，你知道吗？",
+   "kind": "question",
+   "fact_id": "f_sister"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，小林～我记下啦，你有个妹妹在成都读研究生。"
+  },
+  {
+   "role": "user",
+   "text": "顺便说下，我有一辆折叠自行车，周末骑。",
+   "kind": "statement",
+   "fact_id": "f_bike"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，小林～我记下啦，你有一辆折叠自行车，周末会骑。"
+  },
+  {
+   "role": "user",
+   "text": "哦对，我每天通勤路上听英语播客。",
+   "kind": "statement",
+   "fact_id": "f_study"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，小林～我记下啦，你每天通勤路上会听英语播客。"
+  },
+  {
+   "role": "user",
+   "text": "顺便说下，我喜欢喝手冲咖啡，不太喝速溶的。",
+   "kind": "statement",
+   "fact_id": "f_coffee"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，小林～我更新一下，你之前提到改喝速溶了，现在又说喜欢手冲，那我记下你更喜欢手冲咖啡。"
+  },
+  {
+   "role": "user",
+   "text": "顺便说下，我们计划明年结婚。",
+   "kind": "statement",
+   "fact_id": "f_plan_marry"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，小林～我记下啦，你们计划明年结婚，提前恭喜你们！"
+  },
+  {
+   "role": "user",
+   "text": "好嘞",
+   "kind": "chitchat",
+   "fact_id": null
+  },
+  {
+   "role": "assistant",
+   "text": "好的，小林～有其他想告诉我的随时说哦。"
+  },
+  {
+   "role": "user",
+   "text": "我每周四在家远程办公，记住了哈。",
+   "kind": "statement",
+   "fact_id": "f_remote"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，小林～我记下啦，你每周四在家远程办公。"
+  },
+  {
+   "role": "user",
+   "text": "顺便说下，我周末经常和朋友打篮球。",
+   "kind": "statement",
+   "fact_id": "f_basketball"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，小林～我记下啦，你周末经常和朋友打篮球。"
+  },
+  {
+   "role": "user",
+   "text": "顺便说下，下个月我打算去日本玩一周。",
+   "kind": "statement",
+   "fact_id": "f_plan_japan"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，小林～我记下啦，你下个月打算去日本玩一周。有其他想补充的随时告诉我哦。"
+  },
+  {
+   "role": "user",
+   "text": "好的好的",
+   "kind": "chitchat",
+   "fact_id": null
+  },
+  {
+   "role": "assistant",
+   "text": "好的，小林～有什么新消息随时告诉我哦。"
+  },
+  {
+   "role": "user",
+   "text": "我在一家互联网公司做前端工程师。",
+   "kind": "statement",
+   "fact_id": "f_job"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，小林～我记下啦，你在一家互联网公司做前端工程师。"
+  },
+  {
+   "role": "user",
+   "text": "哈哈，你反应真快",
+   "kind": "chitchat",
+   "fact_id": null
+  },
+  {
+   "role": "assistant",
+   "text": "哈哈，谢谢夸奖～你的事我都记着呢，放心！"
+  },
+  {
+   "role": "user",
+   "text": "顺便说下，我的名字叫小林。",
+   "kind": "statement",
+   "fact_id": "f_name"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，小林～你的名字我已经记住啦，以后有事随时叫我哦！"
+  },
+  {
+   "role": "user",
+   "text": "我想起来了，可乐其实是只柯基。",
+   "kind": "correction",
+   "fact_id": "f_dog",
+   "new": "可乐其实是只柯基"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，小林～我记下啦，可乐是只柯基。"
+  },
+  {
+   "role": "user",
+   "text": "那我每天通勤路上听英语播客吗？",
+   "kind": "question",
+   "fact_id": "f_study"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，小林～这个我记下啦，你每天通勤路上会听英语播客。"
+  },
+  {
+   "role": "user",
+   "text": "哈哈，你反应真快",
+   "kind": "chitchat",
+   "fact_id": null
+  },
+  {
+   "role": "assistant",
+   "text": "哈哈，谢谢夸奖～你的事我都记着呢，放心！"
+  },
+  {
+   "role": "user",
+   "text": "哈哈，你反应真快",
+   "kind": "chitchat",
+   "fact_id": null
+  },
+  {
+   "role": "assistant",
+   "text": "哈哈，你反应真快～不过你的事我都记着呢，放心！"
+  },
+  {
+   "role": "user",
+   "text": "更正一下，我最近不太能吃辣了，胃不太好。",
+   "kind": "correction",
+   "fact_id": "f_spicy",
+   "new": "我最近不太能吃辣了，胃不太好"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，小林～我记下啦，你最近胃不太好，不太能吃辣了。"
+  },
+  {
+   "role": "user",
+   "text": "顺便说下，我最近在读《三体》第三部。",
+   "kind": "statement",
+   "fact_id": "f_read"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，小林～我记下啦，你最近在读《三体》第三部。"
+  },
+  {
+   "role": "user",
+   "text": "顺便说下，我比较喜欢苹果，不喜欢香蕉。",
+   "kind": "statement",
+   "fact_id": "f_apple"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，小林～我记下啦，你喜欢苹果，不喜欢香蕉。"
+  },
+  {
+   "role": "user",
+   "text": "好嘞",
+   "kind": "chitchat",
+   "fact_id": null
+  },
+  {
+   "role": "assistant",
+   "text": "好的，小林～都记下啦，你慢慢说，我都在听。"
+  },
+  {
+   "role": "user",
+   "text": "更正一下，可乐其实是只柯基。",
+   "kind": "correction",
+   "fact_id": "f_dog",
+   "new": "可乐其实是只柯基"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，小林～我记下啦，可乐其实是只柯基。"
+  },
+  {
+   "role": "user",
+   "text": "我每天通勤路上听英语播客。",
+   "kind": "statement",
+   "fact_id": "f_study"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，小林～我记下啦，你每天通勤路上听英语播客。"
+  },
+  {
+   "role": "user",
+   "text": "我女朋友叫小雨，是设计师，记住了哈。",
+   "kind": "statement",
+   "fact_id": "f_girlfriend"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，小林～我记下啦，你女朋友叫小雨，是设计师。"
+  },
+  {
+   "role": "user",
+   "text": "我想起来了，我现在改成十二点睡，八点起。",
+   "kind": "correction",
+   "fact_id": "f_sleep",
+   "new": "我现在改成十二点睡，八点起"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，小林～我更新啦，你现在是十二点睡、八点起。"
+  },
+  {
+   "role": "user",
+   "text": "工作好累啊今天",
+   "kind": "chitchat",
+   "fact_id": null
+  },
+  {
+   "role": "assistant",
+   "text": "好的，小林～今天辛苦啦，早点休息，别太累着自己。"
+  },
+  {
+   "role": "user",
+   "text": "我住在杭州，这个我之前提过吗？",
+   "kind": "statement",
+   "fact_id": "f_city"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，小林～你提过住在杭州哦，我记着呢。"
+  },
+  {
+   "role": "user",
+   "text": "我最近在学 Rust吗，你知道吗？",
+   "kind": "question",
+   "fact_id": "f_lang"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，小林～你最近确实在学 Rust 哦，我记着这事呢。"
+  },
+  {
+   "role": "user",
+   "text": "谢谢你呀",
+   "kind": "chitchat",
+   "fact_id": null
+  },
+  {
+   "role": "assistant",
+   "text": "不客气，小林～有事随时找我，我一直都在。"
+  },
+  {
+   "role": "user",
+   "text": "嗯嗯，我明白了",
+   "kind": "chitchat",
+   "fact_id": null
+  },
+  {
+   "role": "assistant",
+   "text": "好的，小林～那我先去忙，你有需要随时叫我哦。"
+  },
+  {
+   "role": "user",
+   "text": "下个月我打算去日本玩一周，这个我之前提过吗？",
+   "kind": "statement",
+   "fact_id": "f_plan_japan"
+  },
+  {
+   "role": "assistant",
+   "text": "小林～这个你之前没提过哦，我记下啦，日本一周听起来很棒！"
+  },
+  {
+   "role": "user",
+   "text": "其实不是这样的，我最近不太能吃辣了，胃不太好。",
+   "kind": "correction",
+   "fact_id": "f_spicy",
+   "new": "我最近不太能吃辣了，胃不太好"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，小林～那我记下了，你胃不舒服要少吃辣，多注意饮食调理哦。"
+  },
+  {
+   "role": "user",
+   "text": "我小时候学过六年钢琴吗，你知道吗？",
+   "kind": "question",
+   "fact_id": "f_piano"
+  },
+  {
+   "role": "assistant",
+   "text": "小林～这个你之前提过哦，我记得你学过六年钢琴呢。"
+  },
+  {
+   "role": "user",
+   "text": "对了，我比较喜欢苹果，不喜欢香蕉。",
+   "kind": "statement",
+   "fact_id": "f_apple"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，小林～我记下啦，你喜欢苹果，不喜欢香蕉。"
+  },
+  {
+   "role": "user",
+   "text": "我有一辆折叠自行车，周末骑。",
+   "kind": "statement",
+   "fact_id": "f_bike"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，小林～我记下啦，你有一辆折叠自行车，周末会骑。"
+  },
+  {
+   "role": "user",
+   "text": "哦对，我最喜欢的电影是《星际穿越》。",
+   "kind": "statement",
+   "fact_id": "f_movie"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，小林～我记下啦，你最喜欢的电影是《星际穿越》。"
+  },
+  {
+   "role": "user",
+   "text": "嗯，我最近在循环听周杰伦的老歌。",
+   "kind": "statement",
+   "fact_id": "f_music"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，小林～我记下啦，你最近在循环听周杰伦的老歌。"
+  },
+  {
+   "role": "user",
+   "text": "跟你说个事，我最近在学 Rust。",
+   "kind": "statement",
+   "fact_id": "f_lang"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，小林～我记下啦，你最近在学 Rust，加油哦！"
+  },
+  {
+   "role": "user",
+   "text": "对了你吃饭了吗",
+   "kind": "chitchat",
+   "fact_id": null
+  },
+  {
+   "role": "assistant",
+   "text": "还没吃呢～不过能跟你聊天就很开心啦，你也记得按时吃饭哦。"
+  },
+  {
+   "role": "user",
+   "text": "嗯嗯，我明白了",
+   "kind": "chitchat",
+   "fact_id": null
+  },
+  {
+   "role": "assistant",
+   "text": "好的，小林～有什么想聊的随时找我哦。"
+  },
+  {
+   "role": "user",
+   "text": "好嘞",
+   "kind": "chitchat",
+   "fact_id": null
+  },
+  {
+   "role": "assistant",
+   "text": "好的，小林～随时等你来聊哦！"
+  },
+  {
+   "role": "user",
+   "text": "对了，我中午一般在公司食堂吃。",
+   "kind": "statement",
+   "fact_id": "f_lunch"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，小林～记下啦，你中午一般在公司食堂吃。"
+  },
+  {
+   "role": "user",
+   "text": "对了，我讨厌梅雨天，衣服老是晾不干。",
+   "kind": "statement",
+   "fact_id": "f_weather"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，小林～记下啦，你讨厌梅雨天，衣服晾不干确实挺烦人的。"
+  },
+  {
+   "role": "user",
+   "text": "对了，我最喜欢的电影是《星际穿越》。",
+   "kind": "statement",
+   "fact_id": "f_movie"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，小林～《星际穿越》我也觉得很经典哦，你喜欢它哪里呀？"
+  },
+  {
+   "role": "user",
+   "text": "周末愉快",
+   "kind": "chitchat",
+   "fact_id": null
+  },
+  {
+   "role": "assistant",
+   "text": "好的，小林～周末愉快，好好放松一下哦！"
+  },
+  {
+   "role": "user",
+   "text": "嗯，我不太吃甜食，奶茶只喝三分糖。",
+   "kind": "statement",
+   "fact_id": "f_sweet"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，小林～记下啦，奶茶三分糖，不太吃甜食。"
+  },
+  {
+   "role": "user",
+   "text": "工作好累啊今天",
+   "kind": "chitchat",
+   "fact_id": null
+  },
+  {
+   "role": "assistant",
+   "text": "辛苦啦小林～今天好好休息一下，泡杯茶放松放松吧。"
+  },
+  {
+   "role": "user",
+   "text": "可乐怕打雷，每次打雷都要躲到床底下，这个我之前提过吗？",
+   "kind": "statement",
+   "fact_id": "f_cat"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，小林～你提过可乐怕打雷，我会记住的，打雷时记得多安抚它哦。"
+  },
+  {
+   "role": "user",
+   "text": "我常去的那家书店在西湖边，这个我之前提过吗？",
+   "kind": "statement",
+   "fact_id": "f_book_shop"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，小林～你提过西湖边那家你常去的书店，我记着呢，那里环境应该很舒服吧。"
+  },
+  {
+   "role": "user",
+   "text": "顺便说下，我办了张健身卡，想每周去三次。",
+   "kind": "statement",
+   "fact_id": "f_plan_fitness"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，小林～健身计划很棒哦，坚持每周三次，相信你会越来越有活力的！"
+  },
+  {
+   "role": "user",
+   "text": "对了，我办了张健身卡，想每周去三次。",
+   "kind": "statement",
+   "fact_id": "f_plan_fitness"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，小林～健身计划记下啦，每周三次，我会帮你留意的。"
+  },
+  {
+   "role": "user",
+   "text": "我很能吃辣，最爱重庆火锅，记住了哈。",
+   "kind": "statement",
+   "fact_id": "f_spicy"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，小林～重庆火锅记下啦，无辣不欢的你都记住了！"
+  },
+  {
+   "role": "user",
+   "text": "哦对，我女朋友叫小雨，是设计师。",
+   "kind": "statement",
+   "fact_id": "f_girlfriend"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，小雨设计师记下啦～以后提到她我会更上心的。"
+  },
+  {
+   "role": "user",
+   "text": "好的好的",
+   "kind": "chitchat",
+   "fact_id": null
+  },
+  {
+   "role": "assistant",
+   "text": "好的，小林～都记下啦，有事随时叫我哦。"
+  },
+  {
+   "role": "user",
+   "text": "我最近在学 Rust，记住了哈。",
+   "kind": "statement",
+   "fact_id": "f_lang"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，小林～Rust学习记下啦，祝你编码顺利，有问题随时找我！"
+  },
+  {
+   "role": "user",
+   "text": "对了，我偶尔玩塞尔达传说。",
+   "kind": "statement",
+   "fact_id": "f_game"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，小林～塞尔达传说记下啦，偶尔玩玩放松一下挺好的！"
+  },
+  {
+   "role": "user",
+   "text": "更正一下，我现在改成十二点睡，八点起。",
+   "kind": "correction",
+   "fact_id": "f_sleep",
+   "new": "我现在改成十二点睡，八点起"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，小林～作息已更新为十二点睡、八点起，我会帮你留意的。"
+  },
+  {
+   "role": "user",
+   "text": "更正一下，我现在改喝速溶的了，手冲太麻烦。",
+   "kind": "correction",
+   "fact_id": "f_coffee",
+   "new": "我现在改喝速溶的了，手冲太麻烦"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，小林～咖啡偏好已更新为速溶，手冲确实省事多了！"
+  },
+  {
+   "role": "user",
+   "text": "问你个问题，我最喜欢？",
+   "kind": "question",
+   "fact_id": "f_movie"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，小林～你最喜欢的当然是小雨啦，对吧？"
+  },
+  {
+   "role": "user",
+   "text": "我爸妈住在宁波吗，你知道吗？",
+   "kind": "question",
+   "fact_id": "f_parents"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，小林～你爸妈住在宁波，这个信息我记下啦。"
+  },
+  {
+   "role": "user",
+   "text": "对了，我小时候学过六年钢琴。",
+   "kind": "statement",
+   "fact_id": "f_piano"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，小林～六年钢琴功底记下啦，真是多才多艺呢！"
+  },
+  {
+   "role": "user",
+   "text": "好嘞",
+   "kind": "chitchat",
+   "fact_id": null
+  },
+  {
+   "role": "assistant",
+   "text": "好的，小林～随时等你召唤，我都在呢！"
+  },
+  {
+   "role": "user",
+   "text": "嗯嗯，我明白了",
+   "kind": "chitchat",
+   "fact_id": null
+  },
+  {
+   "role": "assistant",
+   "text": "好的，小林～明白啦，随时等你召唤！"
+  },
+  {
+   "role": "user",
+   "text": "我最近在读《三体》第三部，记住了哈。",
+   "kind": "statement",
+   "fact_id": "f_read"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，小林～《三体》第三部记下啦，读完可以和我聊聊感想哦！"
+  },
+  {
+   "role": "user",
+   "text": "那我常去的那家书店在西湖边吗？",
+   "kind": "question",
+   "fact_id": "f_book_shop"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，小林～你常去的那家书店就在西湖边，我记下啦。"
+  },
+  {
+   "role": "user",
+   "text": "我们计划明年结婚，这个我之前提过吗？",
+   "kind": "statement",
+   "fact_id": "f_plan_marry"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，小林～你提过明年结婚的计划，我记着呢，恭喜你们呀！"
+  },
+  {
+   "role": "user",
+   "text": "不对不对，我之前说错了，我现在改成十二点睡，八点起。",
+   "kind": "correction",
+   "fact_id": "f_sleep",
+   "new": "我现在改成十二点睡，八点起"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，小林～作息改成十二点睡、八点起，我更新啦！"
+  },
+  {
+   "role": "user",
+   "text": "问你个问题，我近视三百度，平时戴眼镜吗？",
+   "kind": "question",
+   "fact_id": "f_glasses"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，小林～三百度建议平时戴着眼镜，看远更清晰，也能避免眼睛疲劳哦。"
+  },
+  {
+   "role": "user",
+   "text": "我喜欢喝手冲咖啡，不太喝速溶的。",
+   "kind": "statement",
+   "fact_id": "f_coffee"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，小林～手冲咖啡记下啦，下次可以聊聊你喜欢的豆子风味哦！"
+  },
+  {
+   "role": "user",
+   "text": "哦对，我喜欢用胶片相机拍照。",
+   "kind": "statement",
+   "fact_id": "f_photo"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，小林～胶片相机拍照记下啦，很有味道的选择呢！"
+  },
+  {
+   "role": "user",
+   "text": "问你个问题，我女朋友叫小雨，是设计师吗？",
+   "kind": "question",
+   "fact_id": "f_girlfriend"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，小林～小雨是设计师，这个我记着呢，你们很般配哦！"
+  },
+  {
+   "role": "user",
+   "text": "更正一下，可乐其实是只柯基。",
+   "kind": "correction",
+   "fact_id": "f_dog",
+   "new": "可乐其实是只柯基"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，小林～可乐是只柯基，我更新啦！"
+  },
+  {
+   "role": "user",
+   "text": "对了，我们计划明年结婚。",
+   "kind": "statement",
+   "fact_id": "f_plan_marry"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，小林～恭喜你们！我会记下这个重要计划，祝你们幸福美满！"
+  },
+  {
+   "role": "user",
+   "text": "我每天通勤路上听英语播客。",
+   "kind": "statement",
+   "fact_id": "f_study"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，小林～每天通勤听英语播客很棒，坚持下来会有收获的！"
+  },
+  {
+   "role": "user",
+   "text": "嗯，我办了张健身卡，想每周去三次。",
+   "kind": "statement",
+   "fact_id": "f_plan_fitness"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，小林～每周三次健身很棒，我会帮你记下这个目标，加油哦！"
+  },
+  {
+   "role": "user",
+   "text": "对了，我们计划明年结婚。",
+   "kind": "statement",
+   "fact_id": "f_plan_marry"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，小林～这个明年结婚的计划你已经告诉我啦，我记着呢！祝你们幸福美满！"
+  },
+  {
+   "role": "user",
+   "text": "哈哈，你反应真快",
+   "kind": "chitchat",
+   "fact_id": null
+  },
+  {
+   "role": "assistant",
+   "text": "哈哈，谢谢夸奖～你的事我都认真记着呢，随时找我聊！"
+  },
+  {
+   "role": "user",
+   "text": "对了，我很能吃辣，最爱重庆火锅。",
+   "kind": "statement",
+   "fact_id": "f_spicy"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，小林～爱吃辣和重庆火锅太配了，我也记下啦！"
+  },
+  {
+   "role": "user",
+   "text": "我最近在循环听周杰伦的老歌吗，你知道吗？",
+   "kind": "question",
+   "fact_id": "f_music"
+  },
+  {
+   "role": "assistant",
+   "text": "哈哈，当然知道～周杰伦的老歌首首经典，循环听超有味道！"
+  },
+  {
+   "role": "user",
+   "text": "问你个问题，我是 A 型血吗？",
+   "kind": "question",
+   "fact_id": "f_blood"
+  },
+  {
+   "role": "assistant",
+   "text": "哈哈，这个我可不知道呢～你的血型我还没记过，等你告诉我，我就记下来！"
+  },
+  {
+   "role": "user",
+   "text": "其实不是这样的，我现在改喝速溶的了，手冲太麻烦。",
+   "kind": "correction",
+   "fact_id": "f_coffee",
+   "new": "我现在改喝速溶的了，手冲太麻烦"
+  },
+  {
+   "role": "assistant",
+   "text": "哈哈，好的～那我也记下，你从手冲改喝速溶咖啡啦，方便省事也挺好！"
+  },
+  {
+   "role": "user",
+   "text": "今天天气不错",
+   "kind": "chitchat",
+   "fact_id": null
+  },
+  {
+   "role": "assistant",
+   "text": "哈哈，是啊，今天天气真不错，适合出去走走晒晒太阳～"
+  },
+  {
+   "role": "user",
+   "text": "嗯，我们计划明年结婚。",
+   "kind": "statement",
+   "fact_id": "f_plan_marry"
+  },
+  {
+   "role": "assistant",
+   "text": "哈哈，太好了，恭喜你们！🎉 到时候记得告诉我喜糖口味，我提前记下～"
+  },
+  {
+   "role": "user",
+   "text": "嗯嗯，我明白了",
+   "kind": "chitchat",
+   "fact_id": null
+  },
+  {
+   "role": "assistant",
+   "text": "好的，小林～你明白就好，有任何想法随时告诉我，我都记着呢！"
+  },
+  {
+   "role": "user",
+   "text": "跟你说个事，我一般十一点半睡觉，早上七点起。",
+   "kind": "statement",
+   "fact_id": "f_sleep"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，我记下啦～你一般十一点半睡、早上七点起，作息很规律呢。"
+  },
+  {
+   "role": "user",
+   "text": "我偶尔玩塞尔达传说，这个我之前提过吗？",
+   "kind": "statement",
+   "fact_id": "f_game"
+  },
+  {
+   "role": "assistant",
+   "text": "哈哈，你提过喜欢玩游戏，不过塞尔达传说好像是第一次说呢～我记下啦，你偶尔玩这个！"
+  },
+  {
+   "role": "user",
+   "text": "其实不是这样的，我最近不太能吃辣了，胃不太好。",
+   "kind": "correction",
+   "fact_id": "f_spicy",
+   "new": "我最近不太能吃辣了，胃不太好"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，我记下啦～你最近胃不太舒服，所以不太能吃辣了，我会留意的。"
+  },
+  {
+   "role": "user",
+   "text": "对了，我今年 28 岁。",
+   "kind": "statement",
+   "fact_id": "f_age"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，我记下啦～小林今年28岁，我记住啦！"
+  },
+  {
+   "role": "user",
+   "text": "问你个问题，我最喜欢？",
+   "kind": "question",
+   "fact_id": "f_movie"
+  },
+  {
+   "role": "assistant",
+   "text": "你最喜欢什么，我暂时还不知道呢～你告诉我，我马上记下来！"
+  },
+  {
+   "role": "user",
+   "text": "跟你说个事，我不太吃甜食，奶茶只喝三分糖。",
+   "kind": "statement",
+   "fact_id": "f_sweet"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，我记下啦～你不太吃甜食，奶茶只喝三分糖，我会留意的！"
+  },
+  {
+   "role": "user",
+   "text": "问你个问题，我最近在学 Rust吗？",
+   "kind": "question",
+   "fact_id": "f_lang"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，我记下啦～你最近在学 Rust。"
+  },
+  {
+   "role": "user",
+   "text": "我在一家互联网公司做前端工程师，这个我之前提过吗？",
+   "kind": "statement",
+   "fact_id": "f_job"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，我记下啦～你之前没提过，现在知道你是前端工程师了！"
+  },
+  {
+   "role": "user",
+   "text": "那我养了一只金毛，叫可乐吗？",
+   "kind": "question",
+   "fact_id": "f_dog"
+  },
+  {
+   "role": "assistant",
+   "text": "你之前没提过，我记下啦～你养了一只金毛叫可乐，真可爱！"
+  },
+  {
+   "role": "user",
+   "text": "问你个问题，我中午一般在公司食堂吃吗？",
+   "kind": "question",
+   "fact_id": "f_lunch"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，我记下啦～你中午一般在公司食堂吃。"
+  },
+  {
+   "role": "user",
+   "text": "对了，我今年 28 岁。",
+   "kind": "statement",
+   "fact_id": "f_age"
+  },
+  {
+   "role": "assistant",
+   "text": "记下啦～小林今年 28 岁，我会记住的！"
+  },
+  {
+   "role": "user",
+   "text": "我在一家互联网公司做前端工程师。",
+   "kind": "statement",
+   "fact_id": "f_job"
+  },
+  {
+   "role": "assistant",
+   "text": "好的，我记下啦～你在互联网公司做前端工程师，之前已经提过，我记住了！"
+  },
+  {
+   "role": "user",
+   "text": "今天天气不错",
+   "kind": "chitchat",
+   "fact_id": null
+  },
+  {
+   "role": "assistant",
+   "text": "是啊，天气好心情也好，适合出去走走晒晒太阳～"
+  }
+ ],
+ "llm": {
+  "calls": 300,
+  "total_tokens": 79331,
+  "prompt_tokens": 73954,
+  "completion_tokens": 5377,
+  "est_cost_yuan": 0.238,
+  "avg_latency_ms": 902.9
+ }
+}

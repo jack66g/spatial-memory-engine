@@ -1,0 +1,278 @@
+{
+ "persona": "小林，28 岁，在杭州做前端工程师",
+ "queries": [
+  {
+   "fact_id": "f_name",
+   "topic": "personal",
+   "q": "叫什么名字",
+   "expect": "我的名字叫小林",
+   "top_k": 5
+  },
+  {
+   "fact_id": "f_age",
+   "topic": "personal",
+   "q": "今年多大",
+   "expect": "我今年 28 岁",
+   "top_k": 5
+  },
+  {
+   "fact_id": "f_city",
+   "topic": "personal",
+   "q": "住在哪里",
+   "expect": "其实我去年搬到上海了",
+   "top_k": 5
+  },
+  {
+   "fact_id": "f_job",
+   "topic": "work",
+   "q": "在哪里",
+   "expect": "我在一家互联网公司做前端工程师",
+   "top_k": 5
+  },
+  {
+   "fact_id": "f_team",
+   "topic": "work",
+   "q": "我们前端组一共六个人吗",
+   "expect": "我们前端组一共六个人",
+   "top_k": 5
+  },
+  {
+   "fact_id": "f_remote",
+   "topic": "work",
+   "q": "我每周四在家远程办公吗",
+   "expect": "我每周四在家远程办公",
+   "top_k": 5
+  },
+  {
+   "fact_id": "f_stack",
+   "topic": "work",
+   "q": "我主要用 Vue 和 TypeScript 写代码吗",
+   "expect": "我主要用 Vue 和 TypeScript 写代码",
+   "top_k": 5
+  },
+  {
+   "fact_id": "f_lang",
+   "topic": "study",
+   "q": "最近在学什么",
+   "expect": "我最近在学 Rust",
+   "top_k": 5
+  },
+  {
+   "fact_id": "f_study",
+   "topic": "study",
+   "q": "我每天通勤路上听英语播客吗",
+   "expect": "我每天通勤路上听英语播客",
+   "top_k": 5
+  },
+  {
+   "fact_id": "f_coffee",
+   "topic": "food",
+   "q": "我喜欢喝手冲咖啡，不太喝速溶的吗",
+   "expect": "我现在改喝速溶的了，手冲太麻烦",
+   "top_k": 5
+  },
+  {
+   "fact_id": "f_sweet",
+   "topic": "food",
+   "q": "我不太吃甜食，奶茶只喝三分糖吗",
+   "expect": "我不太吃甜食，奶茶只喝三分糖",
+   "top_k": 5
+  },
+  {
+   "fact_id": "f_spicy",
+   "topic": "food",
+   "q": "我很能吃辣，最爱重庆火锅吗",
+   "expect": "我最近不太能吃辣了，胃不太好",
+   "top_k": 5
+  },
+  {
+   "fact_id": "f_breakfast",
+   "topic": "food",
+   "q": "我早餐一般吃全麦面包和鸡蛋吗",
+   "expect": "我早餐一般吃全麦面包和鸡蛋",
+   "top_k": 5
+  },
+  {
+   "fact_id": "f_basketball",
+   "topic": "hobby",
+   "q": "我周末经常和朋友打篮球吗",
+   "expect": "我周末经常和朋友打篮球",
+   "top_k": 5
+  },
+  {
+   "fact_id": "f_piano",
+   "topic": "hobby",
+   "q": "我小时候学过六年钢琴吗",
+   "expect": "我小时候学过六年钢琴",
+   "top_k": 5
+  },
+  {
+   "fact_id": "f_read",
+   "topic": "hobby",
+   "q": "最近在读什么书",
+   "expect": "我最近在读《三体》第三部",
+   "top_k": 5
+  },
+  {
+   "fact_id": "f_photo",
+   "topic": "hobby",
+   "q": "我喜欢用胶片相机拍照吗",
+   "expect": "我喜欢用胶片相机拍照",
+   "top_k": 5
+  },
+  {
+   "fact_id": "f_game",
+   "topic": "hobby",
+   "q": "我偶尔玩塞尔达传说吗",
+   "expect": "我偶尔玩塞尔达传说",
+   "top_k": 5
+  },
+  {
+   "fact_id": "f_dog",
+   "topic": "family",
+   "q": "养了什么宠物",
+   "expect": "可乐其实是只柯基",
+   "top_k": 5
+  },
+  {
+   "fact_id": "f_cat",
+   "topic": "family",
+   "q": "可乐怕打雷，每次打雷都要躲到床底下吗",
+   "expect": "可乐怕打雷，每次打雷都要躲到床底下",
+   "top_k": 5
+  },
+  {
+   "fact_id": "f_sister",
+   "topic": "family",
+   "q": "有没有妹妹",
+   "expect": "我有个妹妹，在成都读研究生",
+   "top_k": 5
+  },
+  {
+   "fact_id": "f_parents",
+   "topic": "family",
+   "q": "我爸妈住在宁波吗",
+   "expect": "我爸妈住在宁波",
+   "top_k": 5
+  },
+  {
+   "fact_id": "f_girlfriend",
+   "topic": "family",
+   "q": "女朋友叫什么",
+   "expect": "我女朋友叫小雨，是设计师",
+   "top_k": 5
+  },
+  {
+   "fact_id": "f_anniversary",
+   "topic": "family",
+   "q": "我们在一起三年了吗",
+   "expect": "我们在一起三年了",
+   "top_k": 5
+  },
+  {
+   "fact_id": "f_plan_marry",
+   "topic": "plan",
+   "q": "我们计划明年结婚吗",
+   "expect": "我们计划明年结婚",
+   "top_k": 5
+  },
+  {
+   "fact_id": "f_plan_japan",
+   "topic": "plan",
+   "q": "下个月我打算去日本玩一周吗",
+   "expect": "下个月我打算去日本玩一周",
+   "top_k": 5
+  },
+  {
+   "fact_id": "f_plan_fitness",
+   "topic": "plan",
+   "q": "我办了张健身卡，想每周去三次吗",
+   "expect": "我办了张健身卡，想每周去三次",
+   "top_k": 5
+  },
+  {
+   "fact_id": "f_sleep",
+   "topic": "health",
+   "q": "我一般十一点半睡觉，早上七点起吗",
+   "expect": "我现在改成十二点睡，八点起",
+   "top_k": 5
+  },
+  {
+   "fact_id": "f_glasses",
+   "topic": "health",
+   "q": "我近视三百度，平时戴眼镜吗",
+   "expect": "我近视三百度，平时戴眼镜",
+   "top_k": 5
+  },
+  {
+   "fact_id": "f_allergy",
+   "topic": "health",
+   "q": "我对花粉过敏，春天容易打喷嚏吗",
+   "expect": "我对花粉过敏，春天容易打喷嚏",
+   "top_k": 5
+  },
+  {
+   "fact_id": "f_blood",
+   "topic": "health",
+   "q": "我是 A 型血吗",
+   "expect": "我是 A 型血",
+   "top_k": 5
+  },
+  {
+   "fact_id": "f_apple",
+   "topic": "opinion",
+   "q": "我比较喜欢苹果，不喜欢香蕉吗",
+   "expect": "我比较喜欢苹果，不喜欢香蕉",
+   "top_k": 5
+  },
+  {
+   "fact_id": "f_movie",
+   "topic": "opinion",
+   "q": "最喜欢什么",
+   "expect": "我最喜欢的电影是《星际穿越》",
+   "top_k": 5
+  },
+  {
+   "fact_id": "f_music",
+   "topic": "opinion",
+   "q": "我最近在循环听周杰伦的老歌吗",
+   "expect": "我最近在循环听周杰伦的老歌",
+   "top_k": 5
+  },
+  {
+   "fact_id": "f_weather",
+   "topic": "opinion",
+   "q": "我讨厌梅雨天，衣服老是晾不干吗",
+   "expect": "我讨厌梅雨天，衣服老是晾不干",
+   "top_k": 5
+  },
+  {
+   "fact_id": "f_book_shop",
+   "topic": "daily",
+   "q": "我常去的那家书店在西湖边吗",
+   "expect": "我常去的那家书店在西湖边",
+   "top_k": 5
+  },
+  {
+   "fact_id": "f_metro",
+   "topic": "daily",
+   "q": "我坐地铁一号线通勤吗",
+   "expect": "我坐地铁一号线通勤",
+   "top_k": 5
+  },
+  {
+   "fact_id": "f_lunch",
+   "topic": "daily",
+   "q": "我中午一般在公司食堂吃吗",
+   "expect": "我中午一般在公司食堂吃",
+   "top_k": 5
+  },
+  {
+   "fact_id": "f_bike",
+   "topic": "daily",
+   "q": "我有一辆折叠自行车，周末骑吗",
+   "expect": "我有一辆折叠自行车，周末骑",
+   "top_k": 5
+  }
+ ]
+}

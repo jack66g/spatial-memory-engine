@@ -1,0 +1,33 @@
+{
+ "generated_at": 1786227171.5424004,
+ "dialogue": "data\\dialogue_300.json",
+ "quiz": "data\\quiz_300.json",
+ "embedding_model": "BAAI/bge-small-zh-v1.5",
+ "llm_gen_cost": {
+  "calls": 300,
+  "total_tokens": 76849,
+  "prompt_tokens": 71718,
+  "completion_tokens": 5131,
+  "est_cost_yuan": 0.2305,
+  "avg_latency_ms": 947.7
+ },
+ "results": [
+  {
+   "name": "mem0",
+   "hit@1": 0.0256,
+   "hit@3": 0.0256,
+   "hit@5": 0.0256,
+   "sem@1": 0.9487,
+   "sem@3": 0.9744,
+   "sem@5": 0.9744,
+   "replay_seconds": 1222.68,
+   "misses": [],
+   "store_count": 600,
+   "store_avg_ms": 2037.79,
+   "search_avg_ms": 24.67,
+   "memories": 300,
+   "embedder": "BAAI/bge-small-zh-v1.5",
+   "llm": "DeepSeekLLM"
+  }
+ ]
+}

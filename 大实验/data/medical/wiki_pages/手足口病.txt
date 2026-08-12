@@ -1,0 +1,173 @@
+手足口病（英語：Hand, foot, and mouth disease，縮寫：HFMD），又名發疹性水皰性口腔炎，是一種由多種腸病毒引起的常見傳染病，主要影響嬰幼兒及學齡前兒童。典型表現為發熱、全身不適，以及手、足、口腔黏膜和臀部出現水疱或皮疹。
+手足口病的多數病例屬於自限性疾病，病程約為7–10天，通常可自行痊癒。少數患者可能出現心肌炎、肺水腫或中樞神經系統併發症，如腦膜炎、腦炎等，嚴重時可危及生命。該病主要經密切接觸、糞口或呼吸道飛沫途徑傳播。目前尚無特效抗病毒藥物，但針對腸病毒71型的滅活疫苗已在中國大陸上市，且其應用已顯著改變了致病病毒的流行光譜。
+手足口病在世界各地均有發生，且通常會在育幼院或幼稚園等學前機構發生小規模的爆發。1997年在馬來西亞、1998年在臺灣、2008年在中國大陸都曾爆發過大規模疫情。與感染家畜的口蹄疫不同，手足口病只會感染人類。
+
+
+== 症狀 ==
+手足口病的典型症狀包括低度發熱、噁心、嘔吐、乏力、全身不適及食慾減退，嬰幼兒則常表現為煩躁不安。發病後1-2天，口腔內會出現疼痛性潰瘍或水疱，常見於舌、頰黏膜及軟腭。隨後，手掌、足底、臀部等部位出現皮膚病變，通常表現為不痛不癢的斑丘疹，部分可發展為水疱。皮疹在兒童中較少引起搔癢，但成人患者常感劇烈搔癢。部分非典型病例的皮疹可能累及軀幹、面部或生殖器。
+其病程多呈自限性，症狀通常在發病後3–6 天內達到高峰。皮疹及水疱多在約一週後開始消退，多數患者可於 7–10 天內自行痊癒，有機會出現脫皮，但通常不留疤痕。雖然大多數病例症狀輕微，但少數可能併發腦炎、腦膜炎或出現類似脊髓灰質炎神經症狀的癱瘓等嚴重併發症。
+
+
+== 病因 ==
+
+手足口病主要由微小核糖核酸病毒科的病毒引起，其中最常見的病原體是克沙奇病毒A16型（CVA16），其次是腸病毒71型（EV-A71）。近年來，克沙奇病毒A6（CVA6）和A10（CVA10）也成為全球範圍內重要的致病血清型，其中CVA6常導致皮疹更廣泛、症狀更嚴重的非典型手足口病，而CVA10則與部分重症病例相關。其他多種克沙奇病毒和腸病毒血清型也可引起本病。
+
+
+== 傳播 ==
+該病傳染性強，主要透過鼻咽分泌物（如唾液、鼻涕）、飛沫、疱疹液、密切接觸或糞口途徑傳播。患者在發病第一週傳染性最強，但即使症狀消退後，病毒仍可透過糞便持續排出達數週之久，因此仍具傳染性。部分感染者可無明顯臨床症狀，但仍可攜帶並傳播病毒。目前已知手足口病僅在人類之間傳播。
+學前機構是手足口病傳播的主要場所，這與幼兒的如廁訓練、更換尿布以及常將手放入口中的行為習慣密切相關。
+
+
+== 診斷 ==
+手足口病的臨床診斷主要根據流行病學史和典型的手、足、口、臀部皮疹。本病的常見潛伏期為3至6天。若臨床診斷困難或需鑑別病原體（尤其是懷疑重症相關病毒時），可採集咽喉拭子、疱疹液或糞便樣本進行PCR檢測，以確定病毒的血清型。血清學檢查也可用於輔助診斷。早期識別對防控兒童群體中的疫情傳播具有重要意義。
+
+
+== 預防 ==
+手足口病的預防措施主要包括避免與感染者直接接觸（如讓患病兒童居家隔離）、對共用物品進行規範清潔、消毒污染物以及保持良好手部衛生。這些措施能有效降低相關病毒的傳播風險。
+具體防護習慣包括勤洗手（尤其是在更換尿布或接觸糞便後、進食前）以及對兒童的活動區域表面進行定期消毒。母乳餵養已被證實能降低重症手足口病的發生率，但並不能減少感染該病的風險。
+
+
+=== 疫苗 ===
+疫苗接種是預防手足口病，特別是預防重症病例的有效手段。中國大陸自2015年12月起已批准多種腸病毒71型滅活疫苗上市，用於預防由EV-A71引起的重症手足口病。大規模真實世界研究證實，該疫苗的接種顯著降低了EV-A71相關手足口病的發病率及重症率。然而，由於疫苗僅針對單一血清型，而多種腸病毒均可致病，疫苗的廣泛使用也導致了致病病毒譜的變遷，克沙奇病毒A16、A6及A10等其他血清型的佔比明顯上升。因此，能夠覆蓋多種血清型的多價疫苗正在積極研發中，以應對當前複雜的流行態勢。
+
+
+== 治療 ==
+手足口病的治療以對症治療為主，重點在於緩解症狀和維持水分。該病為自限性疾病，目前尚無特效抗病毒療法。
+對症處理包括使用鎮痛藥以緩解口腔潰瘍導致的疼痛，在發燒時可酌情使用退燒藥，常用藥物包括對乙醯氨基酚或布洛芬。由於存在發生雷氏綜合症的風險，兒童應避免使用乙醯水楊酸。不建議對兒童使用含有利多卡因的漱口水或噴霧，因其效果有限且存在潛在風險。年齡較大的兒童、青少年及成人感染後病情通常較輕，病程約為1週，少數病例可能遷延。
+少數患者可能因併發症需住院治療，主要包括腦炎、腦膜炎、急性弛緩性麻痺等神經系統併發症，以及心肌炎、肺水腫、肺出血等非神經系統併發症。
+
+
+== 併發症 ==
+
+手足口病的併發症雖總體上罕見，但一旦出現需立即就醫。其中，由腸病毒71型引起的手足口病病情更重，發生神經系統或心臟併發症的風險顯著高於克沙奇病毒A16感染。
+最常見的併發症是因口腔潰瘍疼痛導致患兒吞嚥困難而引發的脫水，嚴重時需靜脈補充液體。神經系統併發症則包括病毒性及無菌性腦膜炎，表現為發燒、頭痛、頸部僵硬或背痛，或更嚴重的腦炎、急性弛緩性麻痺等；這些情況通常症狀輕微且可自癒，但有時需短暫住院治療。極少數重症病例可能併發心肌炎、肺水腫、肺出血等心肺併發症，是導致死亡的主要原因。
+此外，有報告指出，少數兒童在感染後4至8週可能出現指甲脫落（醫學上稱為甲脫離），此現象的關聯尚不完全明確，但通常為暫時性，指甲無需治療即可再生。
+
+
+== 流行病學 ==
+手足口病是一種全球性疾病，主要好發於10歲以下兒童，尤其是5歲以下的嬰幼兒，但成人也會感染。該病在亞洲地區的疾病負擔尤為沉重。流行病學數據顯示，超過90%的病例發生在5歲以下兒童中，病死率約為0.03%。例如，在馬來西亞沙巴州2015至2019年的監測中，平均年發病率為每10萬人94.3例，而在中國江蘇省江寧區2009至2023年間，10歲以下兒童的平均年發病率高達每10萬人3,136.01例，顯示出地區間疾病負擔的顯著差異。
+
+
+=== 季節性與週期性 ===
+該病具有明顯的季節性。在溫帶地區，疫情通常集中在夏季；在亞熱帶地區，如香港和華南地區，則常呈現雙峰模式，即春末夏初（約5至7月）出現主高峰，秋季（約9至11月）出現次高峰；而在熱帶地區，季節性特徵不甚明顯，全年均可發生。氣候因素被認為是影響季節性流行的重要原因。一項在香港進行的時間序列分析發現，手足口病住院率與日平均氣溫（特別是在8–20°C和25°C以上時）、相對濕度（超過80%時）以及中度降雨量呈正相關。除了季節性波動，手足口病的流行還表現出週期性特徵，部分地區觀察到每兩到三年出現一次高峰的週期性規律，這可能與易感人群的積累及優勢病毒株的交替循環有關。
+
+
+=== 人群特徵 ===
+從人群特徵來看，手足口病的發病存在顯著的年齡和性別差異。各國監測數據均顯示，1至3歲的幼兒發病率最高，此後隨年齡增長而迅速下降。男童的發病率通常高於女童，男女比例約為1.2–1.5:1。然而，血清流行病學研究並未發現感染率的性別差異，這可能意味著男童更易出現臨床症狀或更頻繁地被帶去就醫。學前機構是手足口病傳播和爆發的主要場所。中國的一項大規模研究顯示，87.95%的疫情發生在幼兒園，特別是城鄉結合部的幼兒園，其疫情規模更大、持續時間更長。
+
+
+=== 病原譜 ===
+近年來，手足口病的病原譜發生了顯著變化，這與EV-A71疫苗的廣泛應用密切相關。在疫苗問世前，EV-A71和克沙奇病毒A16（CVA16）是主要流行株。自2016年中國引入EV-A71疫苗後，由EV-A71引發的疫情比例大幅下降，而由CVA16、克沙奇病毒A6（CVA6）和克沙奇病毒A10（CVA10）等其他腸病毒引起的疫情佔比則相應增加，成為新的主要流行血清型。這一轉變不僅改變了疾病的流行特徵，也導致了疫情高發熱點地區在地理上的擴張，並對未來的疫苗研發策略提出了新的挑戰。
+
+
+=== 傳播動力學 ===
+在傳播動力學方面，一些關鍵的流行病學參數仍存在不確定性。基本再生數（ 
+  
+    
+      
+        
+          R
+          
+            0
+          
+        
+      
+    
+    {\displaystyle R_{0}}
+  
+）是衡量疾病傳播能力的重要指標，不同研究對手足口病的
+  
+    
+      
+        
+          R
+          
+            0
+          
+        
+      
+    
+    {\displaystyle R_{0}}
+  
+估算值差異較大，範圍從1.1到5.5不等。一項基於1998年台灣疫情的動態模型研究估算出
+  
+    
+      
+        
+          R
+          
+            0
+          
+        
+      
+    
+    {\displaystyle R_{0}}
+  
+值為1.37。此外，無症狀感染在手足口病傳播中扮演著重要角色。研究發現，EV-A71感染者中約有71%無臨床症狀，這些隱性感染者成為病毒在社區中持續傳播的重要傳染源。而疾病的潛伏期通常被認為是3至6天，但系統性回顧指出，此數據多源於專家意見，缺乏堅實的實證研究支持。
+
+
+== 疾病負擔 ==
+手足口病的疾病負擔，特別是在亞洲地區，已成為公共衛生領域關注的議題。根據一份於2018年發表在《英國醫學期刊全球健康》的建模研究，手足口病在東亞及東南亞八個高負擔國家每年估計造成約96,900個經年齡加權的失能調整生命年（DALY）損失。研究指出，這些損失絕大部分源於過早死亡導致的「生命損失年數」，凸顯了重症病例對公共衛生的衝擊。
+該研究進一步量化了疾病的嚴重程度。在出現症狀的病例中，住院率約為6%，其中18.7%的住院患者會發展出併發症。在出現併發症的病例中，致死率為5%，使得手足口病的總體病死率達到每十萬名症狀感染者中有52.3人死亡。然而，由腸病毒71型引起的病例負擔尤其嚴重，其病死率估計至少為每十萬名症狀感染者中有229.7人死亡，遠高於其他病毒株。此外，研究還發現腸病毒71型在1至4歲這個發病率最高的年齡組中，無症狀感染率高達71.4%，這解釋了病毒為何能在社區中廣泛且隱蔽地傳播。
+儘管手足口病的發病率極高，但與登革熱或上呼吸道感染等區域性地方病相比，其總體疾病負擔（以DALY計算）相對有限。研究結論強調，由於絕大多數的疾病負擔來自於可預防的死亡，因此擴大腸病毒71型疫苗的覆蓋率，是減輕手足口病所造成衝擊，特別是降低死亡人數的關鍵策略。
+
+
+== 社會與文化 ==
+大規模的手足口病疫情常會成為重要的公共衛生事件，引起媒體和公眾的高度關注。例如，2008年中國安徽省阜陽市爆發了由EV71引起的嚴重手足口病疫情，該次疫情導致數萬人感染，數十名兒童死亡，並直接促使中國將手足口病納入法定丙類傳染病進行管理。
+2022年5月6日，印度喀拉拉邦奎隆縣報告了一種被媒體稱為「番茄熱」或「番茄流感」的疫情。該疾病因會引起類似於番茄的紅色圓形水疱而得名，主要在五歲以下兒童中傳播。後續研究表明，該病實際上是由腸病毒（主要是克沙奇病毒A16）引起的手足口病，並非由新型病毒所致。其症狀、治療及預防措施均與手足口病相似，水疱外觀亦與猴痘有相似之處。需注意，「流感」這一名稱可能並不準確，因為它並非由流感病毒引起。
+
+
+== 歷史 ==
+手足口病的臨床病例於1957年首次在加拿大多倫多被描述，當時由克沙奇病毒引起。1959年，在英國伯明罕的一次疫情爆發後，湯瑪斯·亨利·費留特等人首次使用「手足口病」（Hand-foot-and-mouth disease）這一名稱來描述該疾病。
+
+
+== 參考資料 ==
+
+
+== 參考文獻 ==
+
+
+=== 書籍 ===
+Guerra, Amanda M.; Orille, Emily; Waseem, Muhammad. Hand, Foot, and Mouth Disease. Treasure Island (FL): StatPearls Publishing. 2023-03-04  [2026-01-31]. PMID 28613736. （原始内容存档于2026-01-16）. 
+李兰娟; 任红. 传染病学（第9版）. 北京: 人民卫生出版社. 2018. ISBN 978-7-117-26666-6. 
+
+
+=== 期刊 ===
+Alsop, J.; Flewett, T. H.; Foster, J. R. “Hand-Foot-and-Mouth Disease” in Birmingham in 1959. Br Med J. 1960-12-10, 2 (5214)  [2026-01-22]. ISSN 0007-1447. PMC 2098292 . PMID 13682692. doi:10.1136/bmj.2.5214.1708. （原始内容存档于2024-11-04） （英语）. 
+Chavda, Vivek P.; Patel, Kaushika; Apostolopoulos, Vasso. Tomato flu outbreak in India. The Lancet. Respiratory Medicine. 2022-08-19, 11 (1)  [2026-01-22]. ISSN 2213-2619. PMC 9385198 . PMID 35987204. doi:10.1016/S2213-2600(22)00300-9. （原始内容存档于2025-11-12）. 
+Flewett, T. H.; Warin, R. P.; Clarke, S. K. 'Hand, foot, and mouth disease' associated with Coxsackie A5 virus. Journal of Clinical Pathology. 1963-01, 16 (1)  [2026-01-22]. ISSN 0021-9746. PMC 480485 . PMID 13945538. doi:10.1136/jcp.16.1.53. （原始内容存档于2025-03-06）. 
+Fong, Siat Yee; Mori, Daisuke; Rundi, Christina; Yap, Jun Fai; Jikal, Muhammad; Latip, A. L. Liza Binti Abd; Johnny, Victor; Ahmed, Kamruddin. A five-year retrospective study on the epidemiology of hand, foot and mouth disease in Sabah, Malaysia. Scientific Reports. 2021-09-08, 11 (1): 17814  [2026-01-31]. PMC 8426189 . PMID 34497330. doi:10.1038/s41598-021-96083-3. （原始内容存档于2024-12-03）. 
+Hoy, NY; Leung, AK; Metelitsa, AI; Adams, S. New concepts in median nail dystrophy, onychomycosis, and hand, foot and mouth disease nail pathology. ISRN Dermatology. 2012, 2012 (680163): 680163. PMID 22462009. doi:10.5402/2012/680163. 
+Kaminska, K; Martinetti, G; Lucchini, R; Kaya, G; Mainetti, C. Coxsackievirus A6 and Hand, Foot, and Mouth Disease: Three Case Reports of Familial Child-to-Immunocompetent Adult Transmission and a Literature Review. Case Reports in Dermatology. 2013, 5 (2): 203–209. PMC 3764954 . PMID 24019771. doi:10.1159/000354533. （原始内容存档于2025-02-09）. 
+Koh, Wee Ming; Badaruddin, Hishamuddin; La, Hanh; Chen, Mark I-Cheng; Cook, Alex R. Severity and burden of hand, foot and mouth disease in Asia: a modelling study. BMJ Global Health. 2018-01-26, 3 (1): e000442  [2026-01-31]. PMC 5859810 . PMID 29564154. doi:10.1136/bmjgh-2017-000442. （原始内容存档于2024-11-26）. 
+Koh, Wee Ming; Bogich, Tiffany; Siegel, Karen; Jin, Jing; Chong, Elizabeth Y.; Tan, Chong Yew; Chen, Mark IC; Horby, Peter; Cook, Alex R. The Epidemiology of Hand, Foot and Mouth Disease in Asia: A Systematic Review and Analysis. The Pediatric Infectious Disease Journal. 2016-10, 35 (10): e285–e300  [2026-01-31]. ISSN 0891-3668. PMC 5130063 . PMID 27273688. doi:10.1097/INF.0000000000001242. （原始内容存档于2026-01-16） （英语）. 
+Lai, C-C; Jiang, D-S; Wu, H-M; Chen, H-H. A dynamic model for the outbreaks of hand, foot, and mouth disease in Taiwan. Epidemiology and Infection. 2015-11-16, 144 (7): 1500–1511  [2026-01-31]. PMC 4823833 . PMID 26567705. doi:10.1017/S0950268815002630. （原始内容存档于2024-05-24）. 
+Li, Y; Zhu, R; Qian, Y; Deng, J. The characteristics of blood glucose and WBC counts in peripheral blood of cases of hand foot and mouth disease in China: a systematic review. PLOS ONE. 2012, 7 (1): e29003. PMID 22235257. doi:10.1371/journal.pone.0029003. 
+Liu, Fengfeng; Yi, Yao; Song, Yang; Zhang, Xiyu; Xie, Tiancheng; Liu, Yanzhe; Chen, Yucun; Huang, Siping; Zhang, Jie; Zhang, Yanping; Chang, Zhaorui; Cui, Fuqiang. Epidemiology of hand, foot, and mouth disease outbreaks before and during availability of EV-A71 vaccine in China's mainland: analysis of outbreak surveillance data from 2011 to 2023. The Lancet Regional Health - Western Pacific. 2025-06-19, 59: 101603  [2026-01-31]. PMC 12219462 . PMID 40607075. doi:10.1016/j.lanwpc.2025.101603. 
+Omaña-Cepeda, Carlos; Martínez-Valverde, Andrea; del Mar Sabater-Recolons, María; Jané-Salas, Enric; Marí-Roig, Antonio; López-López, José. A literature review and case report of hand, foot and mouth disease in an immunocompetent adult. BMC research notes. 2016-03-15, 9  [2026-01-22]. ISSN 1756-0500. PMC 4791924 . PMID 26975350. doi:10.1186/s13104-016-1973-y. （原始内容存档于2025-11-12）. 
+Repass GL, Palmer WC, Stancampiano FF. Hand, foot, and mouth disease: Identifying and managing an acute viral syndrome. Cleve Clin J Med. September 2014, 81 (9): 537–43  [2018-01-12]. PMID 25183845. doi:10.3949/ccjm.81a.13132. （原始内容存档于2021-08-28）. 
+Saguil, Aaron; Kane, Shawn F.; Lauters, Rebecca; Mercado, Michael G. Hand-Foot-and-Mouth Disease: Rapid Evidence Review. American Family Physician. 2019-10-01, 100 (7): 408–414  [2026-01-31]. ISSN 0002-838X. PMID 31573162. （原始内容存档于2026-01-15）. 
+Wang, Pin; Goggins, William B.; Chan, Emily Y. Y. Hand, Foot and Mouth Disease in Hong Kong: A Time-Series Analysis on Its Relationship with Weather. PLOS ONE. 2016-08-17, 11 (8): e0161006  [2026-01-31]. PMC 4988675 . PMID 27532314. doi:10.1371/journal.pone.0161006. （原始内容存档于2024-07-29）. 
+Wu, Baiqun; Zhang, Xiangnan; Fu, Minhui; Ji, Xiaoming. Epidemiological trends of hand, foot, and mouth disease in children under age 10, Jiangning District, Jiangsu, China (2009–2023). BMC Infectious Diseases. 2025-07-02, 25 (1): 886  [2026-01-31]. doi:10.1186/s12879-025-11281-y. 
+Zhu, Peiyu; Ji, Wangquan; Li, Dong; Li, Zijie; Chen, Yu; Dai, Bowen; Han, Shujie; Chen, Shuaiyin; Jin, Yuefei; Duan, Guangcai. Current status of hand-foot-and-mouth disease. Journal of Biomedical Science. 2023-02-24, 30 (1): 15  [2026-01-31]. ISSN 1423-0127. PMC 9951172 . PMID 36829162. doi:10.1186/s12929-023-00908-4. （原始内容存档于2026-01-22）. 
+
+
+=== 新聞 ===
+Service, Express News. It's not tomato flu, fever caused by HFMD virus variant: Health Secy Radhakrishnan. The New Indian Express. 2022-05-13  [2026-01-22] （英语）. 
+Thiagarajan, Kamala. Reports of “tomato flu” outbreak in India are not due to new virus, say doctors. BMJ. 2022-08-26, 378  [2026-01-22]. ISSN 1756-1833. PMID 36028244. doi:10.1136/bmj.o2101 （英语）. 
+Tomato fever or HFMD virus in Kerala? Know causes and symptoms of Head, Foot and Mouth Disease. Zee News. 2022-05-13  [2026-01-22]. （原始内容存档于2025-04-28） （英语）. 
+
+
+=== 網站 ===
+Hand Foot and Mouth Disease. CDC. 2015-08-18  [2016-05-14]. （原始内容存档于2016-05-16）. 
+Outbreaks. CDC. 2015-08-18  [2016-05-15]. （原始内容存档于2016-05-17）. 
+Causes & Transmission. CDC. 2015-08-18  [2016-05-15]. （原始内容存档于2016-05-14）. 
+Hand, Foot & Mouth Disease Complications. Centers for Disease Control and Prevention. 2023-06-08  [2026-01-22]. （原始内容存档于2024-04-26） （美国英语）. 
+Prevention & Treatment. CDC. 2015-08-18  [2016-05-15]. （原始内容存档于2016-05-15）. 
+Foot and Mouth Disease update: further temporary control zone established in Surrey. Defra. 2007-08-14  [2007-08-14]. （原始内容存档于2007-09-27）. 
+Hand-foot-and-mouth disease-Hand-foot-and-mouth disease - Symptoms & causes. Mayo Clinic.   [2026-01-22]. （原始内容存档于2019-05-06） （英语）. 
+WPRO | Hand, Foot and Mouth Disease (HFMD). www.wpro.who.int.   [2026-01-22]. （原始内容存档于2012-04-23）. 
+
+
+== 外部連結 ==
+ 维基共享资源上的相關多媒體資源：手足口病

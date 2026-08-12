@@ -1,0 +1,367 @@
+{
+ "name": "paraphrase30",
+ "documents": [
+  {
+   "id": "sports-d0",
+   "text": "user plays basketball every weekend"
+  },
+  {
+   "id": "sports-d1",
+   "text": "user is a member of the local tennis club"
+  },
+  {
+   "id": "sports-d2",
+   "text": "user goes swimming twice a week"
+  },
+  {
+   "id": "sports-d3",
+   "text": "user runs a half marathon every spring"
+  },
+  {
+   "id": "sports-d4",
+   "text": "user coaches the neighborhood football team"
+  },
+  {
+   "id": "food-d0",
+   "text": "user is allergic to peanuts"
+  },
+  {
+   "id": "food-d1",
+   "text": "user drinks green tea every morning"
+  },
+  {
+   "id": "food-d2",
+   "text": "user prefers spicy food over mild food"
+  },
+  {
+   "id": "food-d3",
+   "text": "user is a vegetarian"
+  },
+  {
+   "id": "food-d4",
+   "text": "user loves baking sourdough bread"
+  },
+  {
+   "id": "work-d0",
+   "text": "user works at a software company in berlin"
+  },
+  {
+   "id": "work-d1",
+   "text": "user is the team lead of the frontend team"
+  },
+  {
+   "id": "work-d2",
+   "text": "user has been with the company for six years"
+  },
+  {
+   "id": "work-d3",
+   "text": "user works remotely on fridays"
+  },
+  {
+   "id": "work-d4",
+   "text": "user is learning korean for work"
+  },
+  {
+   "id": "travel-d0",
+   "text": "user plans to visit japan next autumn"
+  },
+  {
+   "id": "travel-d1",
+   "text": "user prefers window seats on flights"
+  },
+  {
+   "id": "travel-d2",
+   "text": "user keeps a travel journal for every trip"
+  },
+  {
+   "id": "travel-d3",
+   "text": "user visited iceland last winter"
+  },
+  {
+   "id": "travel-d4",
+   "text": "user is saving for a trip to new zealand"
+  },
+  {
+   "id": "family-d0",
+   "text": "user has a younger sister named emma"
+  },
+  {
+   "id": "family-d1",
+   "text": "user's father is a retired teacher"
+  },
+  {
+   "id": "family-d2",
+   "text": "user has two cats named milo and luna"
+  },
+  {
+   "id": "family-d3",
+   "text": "user is married since 2019"
+  },
+  {
+   "id": "family-d4",
+   "text": "user's family celebrates christmas at home"
+  },
+  {
+   "id": "hobbies-d0",
+   "text": "user plays the piano since childhood"
+  },
+  {
+   "id": "hobbies-d1",
+   "text": "user collects vintage postage stamps"
+  },
+  {
+   "id": "hobbies-d2",
+   "text": "user does pottery classes on saturdays"
+  },
+  {
+   "id": "hobbies-d3",
+   "text": "user reads science fiction novels"
+  },
+  {
+   "id": "hobbies-d4",
+   "text": "user practices photography with a film camera"
+  }
+ ],
+ "queries": [
+  {
+   "q": "0 - what sport does the user play on weekends",
+   "expect": [
+    "sports-d0"
+   ],
+   "top_k": 5,
+   "topic": "sports"
+  },
+  {
+   "q": "1 - which club does the user belong to",
+   "expect": [
+    "sports-d1"
+   ],
+   "top_k": 5,
+   "topic": "sports"
+  },
+  {
+   "q": "2 - how often does the user swim",
+   "expect": [
+    "sports-d2"
+   ],
+   "top_k": 5,
+   "topic": "sports"
+  },
+  {
+   "q": "3 - does the user run marathons",
+   "expect": [
+    "sports-d3"
+   ],
+   "top_k": 5,
+   "topic": "sports"
+  },
+  {
+   "q": "4 - what team does the user coach",
+   "expect": [
+    "sports-d4"
+   ],
+   "top_k": 5,
+   "topic": "sports"
+  },
+  {
+   "q": "5 - what is the user allergic to",
+   "expect": [
+    "food-d0"
+   ],
+   "top_k": 5,
+   "topic": "food"
+  },
+  {
+   "q": "6 - what does the user drink in the morning",
+   "expect": [
+    "food-d1"
+   ],
+   "top_k": 5,
+   "topic": "food"
+  },
+  {
+   "q": "7 - does the user like spicy food",
+   "expect": [
+    "food-d2"
+   ],
+   "top_k": 5,
+   "topic": "food"
+  },
+  {
+   "q": "8 - is the user a vegetarian",
+   "expect": [
+    "food-d3"
+   ],
+   "top_k": 5,
+   "topic": "food"
+  },
+  {
+   "q": "9 - what does the user love baking",
+   "expect": [
+    "food-d4"
+   ],
+   "top_k": 5,
+   "topic": "food"
+  },
+  {
+   "q": "10 - where does the user work",
+   "expect": [
+    "work-d0"
+   ],
+   "top_k": 5,
+   "topic": "work"
+  },
+  {
+   "q": "11 - what team does the user lead",
+   "expect": [
+    "work-d1"
+   ],
+   "top_k": 5,
+   "topic": "work"
+  },
+  {
+   "q": "12 - how long has the user been at the company",
+   "expect": [
+    "work-d2"
+   ],
+   "top_k": 5,
+   "topic": "work"
+  },
+  {
+   "q": "13 - which day does the user work remotely",
+   "expect": [
+    "work-d3"
+   ],
+   "top_k": 5,
+   "topic": "work"
+  },
+  {
+   "q": "14 - what language is the user learning",
+   "expect": [
+    "work-d4"
+   ],
+   "top_k": 5,
+   "topic": "work"
+  },
+  {
+   "q": "15 - where is the user planning to travel",
+   "expect": [
+    "travel-d0"
+   ],
+   "top_k": 5,
+   "topic": "travel"
+  },
+  {
+   "q": "16 - which seat does the user prefer",
+   "expect": [
+    "travel-d1"
+   ],
+   "top_k": 5,
+   "topic": "travel"
+  },
+  {
+   "q": "17 - what does the user keep for every trip",
+   "expect": [
+    "travel-d2"
+   ],
+   "top_k": 5,
+   "topic": "travel"
+  },
+  {
+   "q": "18 - where did the user go last winter",
+   "expect": [
+    "travel-d3"
+   ],
+   "top_k": 5,
+   "topic": "travel"
+  },
+  {
+   "q": "19 - what is the user saving up for",
+   "expect": [
+    "travel-d4"
+   ],
+   "top_k": 5,
+   "topic": "travel"
+  },
+  {
+   "q": "20 - who is emma to the user",
+   "expect": [
+    "family-d0"
+   ],
+   "top_k": 5,
+   "topic": "family"
+  },
+  {
+   "q": "21 - what did the user's father do before retiring",
+   "expect": [
+    "family-d1"
+   ],
+   "top_k": 5,
+   "topic": "family"
+  },
+  {
+   "q": "22 - what are the user's cats named",
+   "expect": [
+    "family-d2"
+   ],
+   "top_k": 5,
+   "topic": "family"
+  },
+  {
+   "q": "23 - since when is the user married",
+   "expect": [
+    "family-d3"
+   ],
+   "top_k": 5,
+   "topic": "family"
+  },
+  {
+   "q": "24 - where does the user's family celebrate christmas",
+   "expect": [
+    "family-d4"
+   ],
+   "top_k": 5,
+   "topic": "family"
+  },
+  {
+   "q": "25 - what instrument does the user play",
+   "expect": [
+    "hobbies-d0"
+   ],
+   "top_k": 5,
+   "topic": "hobbies"
+  },
+  {
+   "q": "26 - what does the user collect",
+   "expect": [
+    "hobbies-d1"
+   ],
+   "top_k": 5,
+   "topic": "hobbies"
+  },
+  {
+   "q": "27 - what does the user do on saturdays",
+   "expect": [
+    "hobbies-d2"
+   ],
+   "top_k": 5,
+   "topic": "hobbies"
+  },
+  {
+   "q": "28 - what genre of books does the user read",
+   "expect": [
+    "hobbies-d3"
+   ],
+   "top_k": 5,
+   "topic": "hobbies"
+  },
+  {
+   "q": "29 - what kind of camera does the user use",
+   "expect": [
+    "hobbies-d4"
+   ],
+   "top_k": 5,
+   "topic": "hobbies"
+  }
+ ]
+}

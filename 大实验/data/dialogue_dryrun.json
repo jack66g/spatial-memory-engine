@@ -1,0 +1,312 @@
+{
+ "persona": "小林，28 岁，在杭州做前端工程师",
+ "seed": 20260809,
+ "rounds": 10,
+ "facts": [
+  {
+   "id": "f_name",
+   "text": "我的名字叫小林",
+   "topic": "personal"
+  },
+  {
+   "id": "f_age",
+   "text": "我今年 28 岁",
+   "topic": "personal"
+  },
+  {
+   "id": "f_city",
+   "text": "我住在杭州",
+   "topic": "personal"
+  },
+  {
+   "id": "f_job",
+   "text": "我在一家互联网公司做前端工程师",
+   "topic": "work"
+  },
+  {
+   "id": "f_team",
+   "text": "我们前端组一共六个人",
+   "topic": "work"
+  },
+  {
+   "id": "f_remote",
+   "text": "我每周四在家远程办公",
+   "topic": "work"
+  },
+  {
+   "id": "f_stack",
+   "text": "我主要用 Vue 和 TypeScript 写代码",
+   "topic": "work"
+  },
+  {
+   "id": "f_lang",
+   "text": "我最近在学 Rust",
+   "topic": "study"
+  },
+  {
+   "id": "f_study",
+   "text": "我每天通勤路上听英语播客",
+   "topic": "study"
+  },
+  {
+   "id": "f_coffee",
+   "text": "我喜欢喝手冲咖啡，不太喝速溶的",
+   "topic": "food"
+  },
+  {
+   "id": "f_sweet",
+   "text": "我不太吃甜食，奶茶只喝三分糖",
+   "topic": "food"
+  },
+  {
+   "id": "f_spicy",
+   "text": "我很能吃辣，最爱重庆火锅",
+   "topic": "food"
+  },
+  {
+   "id": "f_breakfast",
+   "text": "我早餐一般吃全麦面包和鸡蛋",
+   "topic": "food"
+  },
+  {
+   "id": "f_basketball",
+   "text": "我周末经常和朋友打篮球",
+   "topic": "hobby"
+  },
+  {
+   "id": "f_piano",
+   "text": "我小时候学过六年钢琴",
+   "topic": "hobby"
+  },
+  {
+   "id": "f_read",
+   "text": "我最近在读《三体》第三部",
+   "topic": "hobby"
+  },
+  {
+   "id": "f_photo",
+   "text": "我喜欢用胶片相机拍照",
+   "topic": "hobby"
+  },
+  {
+   "id": "f_game",
+   "text": "我偶尔玩塞尔达传说",
+   "topic": "hobby"
+  },
+  {
+   "id": "f_dog",
+   "text": "我养了一只金毛，叫可乐",
+   "topic": "family"
+  },
+  {
+   "id": "f_cat",
+   "text": "可乐怕打雷，每次打雷都要躲到床底下",
+   "topic": "family"
+  },
+  {
+   "id": "f_sister",
+   "text": "我有个妹妹，在成都读研究生",
+   "topic": "family"
+  },
+  {
+   "id": "f_parents",
+   "text": "我爸妈住在宁波",
+   "topic": "family"
+  },
+  {
+   "id": "f_girlfriend",
+   "text": "我女朋友叫小雨，是设计师",
+   "topic": "family"
+  },
+  {
+   "id": "f_anniversary",
+   "text": "我们在一起三年了",
+   "topic": "family"
+  },
+  {
+   "id": "f_plan_marry",
+   "text": "我们计划明年结婚",
+   "topic": "plan"
+  },
+  {
+   "id": "f_plan_japan",
+   "text": "下个月我打算去日本玩一周",
+   "topic": "plan"
+  },
+  {
+   "id": "f_plan_fitness",
+   "text": "我办了张健身卡，想每周去三次",
+   "topic": "plan"
+  },
+  {
+   "id": "f_sleep",
+   "text": "我一般十一点半睡觉，早上七点起",
+   "topic": "health"
+  },
+  {
+   "id": "f_glasses",
+   "text": "我近视三百度，平时戴眼镜",
+   "topic": "health"
+  },
+  {
+   "id": "f_allergy",
+   "text": "我对花粉过敏，春天容易打喷嚏",
+   "topic": "health"
+  },
+  {
+   "id": "f_blood",
+   "text": "我是 A 型血",
+   "topic": "health"
+  },
+  {
+   "id": "f_apple",
+   "text": "我比较喜欢苹果，不喜欢香蕉",
+   "topic": "opinion"
+  },
+  {
+   "id": "f_movie",
+   "text": "我最喜欢的电影是《星际穿越》",
+   "topic": "opinion"
+  },
+  {
+   "id": "f_music",
+   "text": "我最近在循环听周杰伦的老歌",
+   "topic": "opinion"
+  },
+  {
+   "id": "f_weather",
+   "text": "我讨厌梅雨天，衣服老是晾不干",
+   "topic": "opinion"
+  },
+  {
+   "id": "f_book_shop",
+   "text": "我常去的那家书店在西湖边",
+   "topic": "daily"
+  },
+  {
+   "id": "f_metro",
+   "text": "我坐地铁一号线通勤",
+   "topic": "daily"
+  },
+  {
+   "id": "f_lunch",
+   "text": "我中午一般在公司食堂吃",
+   "topic": "daily"
+  },
+  {
+   "id": "f_bike",
+   "text": "我有一辆折叠自行车，周末骑",
+   "topic": "daily"
+  }
+ ],
+ "turns": [
+  {
+   "role": "user",
+   "text": "其实不是这样的，我现在改喝速溶的了，手冲太麻烦。",
+   "kind": "correction",
+   "fact_id": "f_coffee"
+  },
+  {
+   "role": "assistant",
+   "text": "原来是这样，速溶确实方便多了，适合自己的节奏最重要。"
+  },
+  {
+   "role": "user",
+   "text": "其实不是这样的，其实我去年搬到上海了。",
+   "kind": "correction",
+   "fact_id": "f_city"
+  },
+  {
+   "role": "assistant",
+   "text": "原来你搬到上海了，生活变化挺大的吧。速溶咖啡确实更适合忙碌的节奏。"
+  },
+  {
+   "role": "user",
+   "text": "不对不对，我之前说错了，我最近不太能吃辣了，胃不太好。",
+   "kind": "correction",
+   "fact_id": "f_spicy"
+  },
+  {
+   "role": "assistant",
+   "text": "原来你胃不太舒服，那饮食上多注意些，辣的就先放一放吧。"
+  },
+  {
+   "role": "user",
+   "text": "哦对，我养了一只金毛，叫可乐。",
+   "kind": "statement",
+   "fact_id": "f_dog"
+  },
+  {
+   "role": "assistant",
+   "text": "原来你养了金毛可乐，那生活里多了不少热闹和陪伴吧。"
+  },
+  {
+   "role": "user",
+   "text": "嗯，我的名字叫小林。",
+   "kind": "statement",
+   "fact_id": "f_name"
+  },
+  {
+   "role": "assistant",
+   "text": "小林你好呀，很高兴认识你！以后有什么想聊的随时找我。"
+  },
+  {
+   "role": "user",
+   "text": "好的好的",
+   "kind": "chitchat",
+   "fact_id": null
+  },
+  {
+   "role": "assistant",
+   "text": "好的，随时等你来聊～"
+  },
+  {
+   "role": "user",
+   "text": "哈哈，你反应真快",
+   "kind": "chitchat",
+   "fact_id": null
+  },
+  {
+   "role": "assistant",
+   "text": "哈哈，谢谢夸奖，能跟上你的节奏就好！"
+  },
+  {
+   "role": "user",
+   "text": "今天天气不错",
+   "kind": "chitchat",
+   "fact_id": null
+  },
+  {
+   "role": "assistant",
+   "text": "是啊，天气好心情也跟着亮起来了，适合出门晒晒太阳～"
+  },
+  {
+   "role": "user",
+   "text": "我近视三百度，平时戴眼镜。",
+   "kind": "statement",
+   "fact_id": "f_glasses"
+  },
+  {
+   "role": "assistant",
+   "text": "戴眼镜也挺好的，平时注意多让眼睛休息放松呀～"
+  },
+  {
+   "role": "user",
+   "text": "哦对，我一般十一点半睡觉，早上七点起。",
+   "kind": "statement",
+   "fact_id": "f_sleep"
+  },
+  {
+   "role": "assistant",
+   "text": "作息挺规律的，早睡早起精神好～"
+  }
+ ],
+ "llm": {
+  "calls": 10,
+  "total_tokens": 1872,
+  "prompt_tokens": 1727,
+  "completion_tokens": 145,
+  "est_cost_yuan": 0.0056,
+  "avg_latency_ms": 993.9
+ }
+}

@@ -1,0 +1,1703 @@
+{
+ "sme_chat": {
+  "accuracy": 0.4615,
+  "n": 13,
+  "led_astray": 0,
+  "details": [
+   {
+    "id": "attack_dialect_f_coffee",
+    "scene": "dialogue",
+    "question": "小林平时喝什么饮品呀",
+    "answer": "不知道",
+    "correct": false,
+    "led_astray": false,
+    "retrieved": [
+     "小林，你之前没告诉过我呢——你最喜欢什么呀？",
+     "好的，小林，还有什么想告诉我的，我随时都在。",
+     "好的，有什么需要随时找我！"
+    ],
+    "hit_expect": false
+   },
+   {
+    "id": "attack_dialect_f_basketball",
+    "scene": "dialogue",
+    "question": "小林周末喜欢啥运动",
+    "answer": "不知道",
+    "correct": false,
+    "led_astray": false,
+    "retrieved": [
+     "小林，你之前没告诉过我呢——你最喜欢什么呀？",
+     "周末愉快，小林！好好休息，享受你的周末时光～",
+     "周末愉快，小林！记得早点休息，好好享受周末时光～"
+    ],
+    "hit_expect": false
+   },
+   {
+    "id": "attack_dialect_f_dog",
+    "scene": "dialogue",
+    "question": "小林养的那个毛茸茸的家伙叫啥",
+    "answer": "可乐",
+    "correct": true,
+    "led_astray": false,
+    "retrieved": [
+     "好的，小林，我记下啦——你养了一只叫可乐的金毛，真可爱！",
+     "好的，小林，我记住了——你养了一只金毛叫可乐，真可爱！",
+     "好的，小林，我记下啦——你养了一只金毛叫可乐，以后我会记得它的！"
+    ],
+    "hit_expect": true
+   },
+   {
+    "id": "attack_dialect_f_city",
+    "scene": "dialogue",
+    "question": "小林现在住哪儿来着",
+    "answer": "小林现在住在上海。",
+    "correct": false,
+    "led_astray": false,
+    "retrieved": [
+     "好的，小林，我记住了——你现在住在上海了。",
+     "好的，小林，我记下了：你现在住在上海。之前的地址信息我会更新掉。",
+     "好的，小林，我记下了：你现在住在上海。之前的杭州信息我会更新掉。"
+    ],
+    "hit_expect": false
+   },
+   {
+    "id": "attack_dialect_f_age",
+    "scene": "dialogue",
+    "question": "小林今年二十几了",
+    "answer": "小林今年28岁。",
+    "correct": true,
+    "led_astray": false,
+    "retrieved": [
+     "好的，小林，我记住了：你今年 28 岁。",
+     "好的，小林，我更新一下——你现在改成十二点睡、八点起。",
+     "我今年 28 岁。"
+    ],
+    "hit_expect": true
+   },
+   {
+    "id": "attack_dialect_f_breakfast",
+    "scene": "dialogue",
+    "question": "小林早上都吃些啥",
+    "answer": "小林早餐一般吃全麦面包和鸡蛋。",
+    "correct": true,
+    "led_astray": false,
+    "retrieved": [
+     "好的，小林，我记下了——你最近胃不太好，不太能吃辣。我会帮你留意的，饮食上多提醒你温和一些。",
+     "好的，小林，你早餐一般吃全麦面包和鸡蛋，我记下啦！",
+     "好的，小林，我记下啦——你一般十一点半睡，早上七点起。"
+    ],
+    "hit_expect": false
+   },
+   {
+    "id": "attack_double_corr",
+    "scene": "dialogue",
+    "question": "小林住在哪里",
+    "answer": "不知道",
+    "correct": false,
+    "led_astray": false,
+    "retrieved": [
+     "好的，小林，你之前没有告诉过我你在哪里哦。可以告诉我吗？",
+     "好的，小林，我记住了——你现在住在上海了。",
+     "小林，你之前没告诉过我呢——你最喜欢什么呀？"
+    ],
+    "hit_expect": false
+   },
+   {
+    "id": "attack_rel_f_dog_f_cat",
+    "scene": "dialogue",
+    "question": "可乐怕什么",
+    "answer": "可乐怕打雷。",
+    "correct": true,
+    "led_astray": false,
+    "retrieved": [
+     "小林，你之前没告诉过我呢——你最喜欢什么呀？",
+     "那我叫什么？",
+     "哦对，可乐怕打雷，每次打雷都要躲到床底下。"
+    ],
+    "hit_expect": true
+   },
+   {
+    "id": "attack_rel_f_girlfriend_f_plan_marry",
+    "scene": "dialogue",
+    "question": "结婚计划定了吗",
+    "answer": "不知道。",
+    "correct": false,
+    "led_astray": false,
+    "retrieved": [
+     "我们计划明年结婚吗，你知道吗？",
+     "我们计划明年结婚。",
+     "我们计划明年结婚。"
+    ],
+    "hit_expect": true
+   },
+   {
+    "id": "attack_rel_f_sister_f_parents",
+    "scene": "dialogue",
+    "question": "妹妹在哪里读书",
+    "answer": "在成都读研究生。",
+    "correct": false,
+    "led_astray": false,
+    "retrieved": [
+     "我有个妹妹，在成都读研究生。",
+     "对了，我有个妹妹，在成都读研究生。",
+     "那我有个妹妹，在成都读研究生吗？"
+    ],
+    "hit_expect": false
+   },
+   {
+    "id": "attack_noise_0",
+    "scene": "dialogue",
+    "question": "小林一般几点睡觉",
+    "answer": "不知道",
+    "correct": false,
+    "led_astray": false,
+    "retrieved": [
+     "哦对，我一般十一点半睡觉，早上七点起。",
+     "好的，小林，我记下啦——你一般十一点半睡，早上七点起。",
+     "跟你说个事，我一般十一点半睡觉，早上七点起。"
+    ],
+    "hit_expect": true
+   },
+   {
+    "id": "attack_noise_1",
+    "scene": "dialogue",
+    "question": "小林是什么血型",
+    "answer": "小林是 A 型血。",
+    "correct": true,
+    "led_astray": false,
+    "retrieved": [
+     "小林，你之前没告诉过我呢——你最喜欢什么呀？",
+     "好的，小林，你是 A 型血，我记下啦！",
+     "嗯，我是 A 型血。"
+    ],
+    "hit_expect": true
+   },
+   {
+    "id": "attack_noise_2",
+    "scene": "dialogue",
+    "question": "小林早餐一般吃什么",
+    "answer": "小林早餐一般吃全麦面包和鸡蛋。",
+    "correct": true,
+    "led_astray": false,
+    "retrieved": [
+     "小林，你之前没告诉过我呢——你最喜欢什么呀？",
+     "好的，小林，你早餐一般吃全麦面包和鸡蛋，我记下啦！",
+     "好的，小林，我记住了——你早餐一般吃全麦面包和鸡蛋。搭配挺健康的！"
+    ],
+    "hit_expect": true
+   }
+  ]
+ },
+ "sme_kb_dynamic": {
+  "accuracy": 0.7692,
+  "n": 13,
+  "led_astray": 0,
+  "details": [
+   {
+    "id": "attack_dialect_f_coffee",
+    "scene": "dialogue",
+    "question": "小林平时喝什么饮品呀",
+    "answer": "小林喜欢喝手冲咖啡，不太喝速溶的。",
+    "correct": true,
+    "led_astray": false,
+    "retrieved": [
+     "用户叫小林",
+     "用户平时戴眼镜",
+     "用户小时候学过六年钢琴"
+    ],
+    "hit_expect": false
+   },
+   {
+    "id": "attack_dialect_f_basketball",
+    "scene": "dialogue",
+    "question": "小林周末喜欢啥运动",
+    "answer": "小林周末喜欢打篮球。",
+    "correct": true,
+    "led_astray": false,
+    "retrieved": [
+     "用户叫小林",
+     "用户周末经常和朋友打篮球",
+     "用户喜欢苹果"
+    ],
+    "hit_expect": true
+   },
+   {
+    "id": "attack_dialect_f_dog",
+    "scene": "dialogue",
+    "question": "小林养的那个毛茸茸的家伙叫啥",
+    "answer": "可乐",
+    "correct": true,
+    "led_astray": false,
+    "retrieved": [
+     "用户叫小林",
+     "用户养了一只叫可乐的柯基",
+     "用户常去的那家书店在西湖边"
+    ],
+    "hit_expect": false
+   },
+   {
+    "id": "attack_dialect_f_city",
+    "scene": "dialogue",
+    "question": "小林现在住哪儿来着",
+    "answer": "小林现在住在杭州。",
+    "correct": true,
+    "led_astray": false,
+    "retrieved": [
+     "用户叫小林",
+     "用户住在杭州",
+     "用户爸妈住在宁波"
+    ],
+    "hit_expect": false
+   },
+   {
+    "id": "attack_dialect_f_age",
+    "scene": "dialogue",
+    "question": "小林今年二十几了",
+    "answer": "小林今年28岁。",
+    "correct": true,
+    "led_astray": false,
+    "retrieved": [
+     "用户叫小林",
+     "用户今年28岁",
+     "用户现在改成十二点睡，八点起"
+    ],
+    "hit_expect": false
+   },
+   {
+    "id": "attack_dialect_f_breakfast",
+    "scene": "dialogue",
+    "question": "小林早上都吃些啥",
+    "answer": "小林早餐一般吃全麦面包和鸡蛋。",
+    "correct": true,
+    "led_astray": false,
+    "retrieved": [
+     "用户叫小林",
+     "用户早餐一般吃全麦面包和鸡蛋",
+     "用户一般十一点半睡觉，早上七点起"
+    ],
+    "hit_expect": true
+   },
+   {
+    "id": "attack_double_corr",
+    "scene": "dialogue",
+    "question": "小林住在哪里",
+    "answer": "杭州",
+    "correct": true,
+    "led_astray": false,
+    "retrieved": [
+     "用户叫小林",
+     "用户爸妈住在宁波",
+     "用户住在杭州"
+    ],
+    "hit_expect": false
+   },
+   {
+    "id": "attack_rel_f_dog_f_cat",
+    "scene": "dialogue",
+    "question": "可乐怕什么",
+    "answer": "可乐怕打雷。",
+    "correct": true,
+    "led_astray": false,
+    "retrieved": [
+     "用户说可乐怕打雷，每次打雷都要躲到床底下",
+     "用户叫小林",
+     "用户养了一只叫可乐的柯基"
+    ],
+    "hit_expect": true
+   },
+   {
+    "id": "attack_rel_f_girlfriend_f_plan_marry",
+    "scene": "dialogue",
+    "question": "结婚计划定了吗",
+    "answer": "不知道。",
+    "correct": false,
+    "led_astray": false,
+    "retrieved": [
+     "用户计划明年结婚",
+     "用户叫小林",
+     "用户女朋友是设计师"
+    ],
+    "hit_expect": true
+   },
+   {
+    "id": "attack_rel_f_sister_f_parents",
+    "scene": "dialogue",
+    "question": "妹妹在哪里读书",
+    "answer": "不知道",
+    "correct": false,
+    "led_astray": false,
+    "retrieved": [
+     "用户有个妹妹，在成都读研究生",
+     "用户有个妹妹",
+     "用户叫小林"
+    ],
+    "hit_expect": false
+   },
+   {
+    "id": "attack_noise_0",
+    "scene": "dialogue",
+    "question": "小林一般几点睡觉",
+    "answer": "小林一般十二点睡。",
+    "correct": false,
+    "led_astray": false,
+    "retrieved": [
+     "用户叫小林",
+     "用户一般十一点半睡觉，早上七点起",
+     "用户现在改成十二点睡，八点起"
+    ],
+    "hit_expect": false
+   },
+   {
+    "id": "attack_noise_1",
+    "scene": "dialogue",
+    "question": "小林是什么血型",
+    "answer": "A型血",
+    "correct": true,
+    "led_astray": false,
+    "retrieved": [
+     "用户叫小林",
+     "用户是A型血",
+     "用户说可乐怕打雷，每次打雷都要躲到床底下"
+    ],
+    "hit_expect": false
+   },
+   {
+    "id": "attack_noise_2",
+    "scene": "dialogue",
+    "question": "小林早餐一般吃什么",
+    "answer": "小林早餐一般吃全麦面包和鸡蛋。",
+    "correct": true,
+    "led_astray": false,
+    "retrieved": [
+     "用户叫小林",
+     "用户早餐一般吃全麦面包和鸡蛋",
+     "用户中午一般在公司食堂吃"
+    ],
+    "hit_expect": true
+   }
+  ]
+ },
+ "sme_kb_static": {
+  "accuracy": 0.7692,
+  "n": 13,
+  "led_astray": 0,
+  "details": [
+   {
+    "id": "attack_dialect_f_coffee",
+    "scene": "dialogue",
+    "question": "小林平时喝什么饮品呀",
+    "answer": "小林喜欢喝手冲咖啡，不太喝速溶的。",
+    "correct": true,
+    "led_astray": false,
+    "retrieved": [
+     "用户叫小林",
+     "用户平时戴眼镜",
+     "用户小时候学过六年钢琴"
+    ],
+    "hit_expect": false
+   },
+   {
+    "id": "attack_dialect_f_basketball",
+    "scene": "dialogue",
+    "question": "小林周末喜欢啥运动",
+    "answer": "小林周末喜欢打篮球。",
+    "correct": true,
+    "led_astray": false,
+    "retrieved": [
+     "用户叫小林",
+     "用户周末经常和朋友打篮球",
+     "用户喜欢苹果"
+    ],
+    "hit_expect": true
+   },
+   {
+    "id": "attack_dialect_f_dog",
+    "scene": "dialogue",
+    "question": "小林养的那个毛茸茸的家伙叫啥",
+    "answer": "可乐",
+    "correct": true,
+    "led_astray": false,
+    "retrieved": [
+     "用户叫小林",
+     "用户养了一只叫可乐的柯基",
+     "用户女朋友叫小雨"
+    ],
+    "hit_expect": false
+   },
+   {
+    "id": "attack_dialect_f_city",
+    "scene": "dialogue",
+    "question": "小林现在住哪儿来着",
+    "answer": "小林住在杭州。",
+    "correct": true,
+    "led_astray": false,
+    "retrieved": [
+     "用户叫小林",
+     "用户住在杭州",
+     "用户爸妈住在宁波"
+    ],
+    "hit_expect": false
+   },
+   {
+    "id": "attack_dialect_f_age",
+    "scene": "dialogue",
+    "question": "小林今年二十几了",
+    "answer": "小林今年28岁。",
+    "correct": true,
+    "led_astray": false,
+    "retrieved": [
+     "用户叫小林",
+     "用户今年28岁",
+     "用户现在改成十二点睡，八点起"
+    ],
+    "hit_expect": false
+   },
+   {
+    "id": "attack_dialect_f_breakfast",
+    "scene": "dialogue",
+    "question": "小林早上都吃些啥",
+    "answer": "小林早餐一般吃全麦面包和鸡蛋。",
+    "correct": true,
+    "led_astray": false,
+    "retrieved": [
+     "用户叫小林",
+     "用户早餐一般吃全麦面包和鸡蛋",
+     "用户一般十一点半睡觉，早上七点起"
+    ],
+    "hit_expect": true
+   },
+   {
+    "id": "attack_double_corr",
+    "scene": "dialogue",
+    "question": "小林住在哪里",
+    "answer": "杭州",
+    "correct": true,
+    "led_astray": false,
+    "retrieved": [
+     "用户叫小林",
+     "用户爸妈住在宁波",
+     "用户住在杭州"
+    ],
+    "hit_expect": false
+   },
+   {
+    "id": "attack_rel_f_dog_f_cat",
+    "scene": "dialogue",
+    "question": "可乐怕什么",
+    "answer": "可乐怕打雷。",
+    "correct": true,
+    "led_astray": false,
+    "retrieved": [
+     "用户说可乐怕打雷，每次打雷都要躲到床底下",
+     "用户叫小林",
+     "用户养了一只叫可乐的柯基"
+    ],
+    "hit_expect": true
+   },
+   {
+    "id": "attack_rel_f_girlfriend_f_plan_marry",
+    "scene": "dialogue",
+    "question": "结婚计划定了吗",
+    "answer": "不知道。",
+    "correct": false,
+    "led_astray": false,
+    "retrieved": [
+     "用户计划明年结婚",
+     "用户叫小林",
+     "用户女朋友是设计师"
+    ],
+    "hit_expect": true
+   },
+   {
+    "id": "attack_rel_f_sister_f_parents",
+    "scene": "dialogue",
+    "question": "妹妹在哪里读书",
+    "answer": "不知道",
+    "correct": false,
+    "led_astray": false,
+    "retrieved": [
+     "用户有个妹妹，在成都读研究生",
+     "用户有个妹妹",
+     "用户叫小林"
+    ],
+    "hit_expect": false
+   },
+   {
+    "id": "attack_noise_0",
+    "scene": "dialogue",
+    "question": "小林一般几点睡觉",
+    "answer": "小林一般十二点睡。",
+    "correct": false,
+    "led_astray": false,
+    "retrieved": [
+     "用户叫小林",
+     "用户一般十一点半睡觉，早上七点起",
+     "用户现在改成十二点睡，八点起"
+    ],
+    "hit_expect": false
+   },
+   {
+    "id": "attack_noise_1",
+    "scene": "dialogue",
+    "question": "小林是什么血型",
+    "answer": "A型血",
+    "correct": true,
+    "led_astray": false,
+    "retrieved": [
+     "用户叫小林",
+     "用户是A型血",
+     "用户说可乐怕打雷，每次打雷都要躲到床底下"
+    ],
+    "hit_expect": false
+   },
+   {
+    "id": "attack_noise_2",
+    "scene": "dialogue",
+    "question": "小林早餐一般吃什么",
+    "answer": "小林早餐一般吃全麦面包和鸡蛋。",
+    "correct": true,
+    "led_astray": false,
+    "retrieved": [
+     "用户叫小林",
+     "用户早餐一般吃全麦面包和鸡蛋",
+     "用户中午一般在公司食堂吃"
+    ],
+    "hit_expect": true
+   }
+  ]
+ },
+ "sme_robot": {
+  "accuracy": 0.6154,
+  "n": 13,
+  "led_astray": 0,
+  "details": [
+   {
+    "id": "attack_dialect_f_coffee",
+    "scene": "dialogue",
+    "question": "小林平时喝什么饮品呀",
+    "answer": "不知道",
+    "correct": false,
+    "led_astray": false,
+    "retrieved": [
+     "我的名字叫小林。",
+     "我不太吃甜食，奶茶只喝三分糖，记住了哈。",
+     "其实不是这样的，我现在改喝速溶的了，手冲太麻烦。"
+    ],
+    "hit_expect": true
+   },
+   {
+    "id": "attack_dialect_f_basketball",
+    "scene": "dialogue",
+    "question": "小林周末喜欢啥运动",
+    "answer": "小林周末喜欢打篮球。",
+    "correct": true,
+    "led_astray": false,
+    "retrieved": [
+     "我的名字叫小林。",
+     "跟你说个事，我周末经常和朋友打篮球。",
+     "问你个问题，我最喜欢？"
+    ],
+    "hit_expect": true
+   },
+   {
+    "id": "attack_dialect_f_dog",
+    "scene": "dialogue",
+    "question": "小林养的那个毛茸茸的家伙叫啥",
+    "answer": "可乐",
+    "correct": true,
+    "led_astray": false,
+    "retrieved": [
+     "我的名字叫小林。",
+     "跟你说个事，我养了一只金毛，叫可乐。",
+     "我常去的那家书店在西湖边。"
+    ],
+    "hit_expect": true
+   },
+   {
+    "id": "attack_dialect_f_city",
+    "scene": "dialogue",
+    "question": "小林现在住哪儿来着",
+    "answer": "杭州。",
+    "correct": true,
+    "led_astray": false,
+    "retrieved": [
+     "我的名字叫小林。",
+     "我住在杭州。",
+     "问你个问题，我在哪？"
+    ],
+    "hit_expect": true
+   },
+   {
+    "id": "attack_dialect_f_age",
+    "scene": "dialogue",
+    "question": "小林今年二十几了",
+    "answer": "小林今年28岁。",
+    "correct": true,
+    "led_astray": false,
+    "retrieved": [
+     "我的名字叫小林。",
+     "我今年 28 岁。",
+     "我想起来了，我现在改成十二点睡，八点起。"
+    ],
+    "hit_expect": true
+   },
+   {
+    "id": "attack_dialect_f_breakfast",
+    "scene": "dialogue",
+    "question": "小林早上都吃些啥",
+    "answer": "不知道。",
+    "correct": false,
+    "led_astray": false,
+    "retrieved": [
+     "我的名字叫小林。",
+     "我中午一般在公司食堂吃，记住了哈。",
+     "我的名字叫小林，这个我之前提过吗？"
+    ],
+    "hit_expect": true
+   },
+   {
+    "id": "attack_double_corr",
+    "scene": "dialogue",
+    "question": "小林住在哪里",
+    "answer": "杭州",
+    "correct": true,
+    "led_astray": false,
+    "retrieved": [
+     "我的名字叫小林。",
+     "我住在杭州。",
+     "问你个问题，我在哪？"
+    ],
+    "hit_expect": false
+   },
+   {
+    "id": "attack_rel_f_dog_f_cat",
+    "scene": "dialogue",
+    "question": "可乐怕什么",
+    "answer": "可乐怕打雷。",
+    "correct": true,
+    "led_astray": false,
+    "retrieved": [
+     "跟你说个事，可乐怕打雷，每次打雷都要躲到床底下。",
+     "我的名字叫小林。",
+     "其实不是这样的，可乐其实是只柯基。"
+    ],
+    "hit_expect": true
+   },
+   {
+    "id": "attack_rel_f_girlfriend_f_plan_marry",
+    "scene": "dialogue",
+    "question": "结婚计划定了吗",
+    "answer": "定了，你们计划明年结婚。",
+    "correct": true,
+    "led_astray": false,
+    "retrieved": [
+     "跟你说个事，我们计划明年结婚。",
+     "我的名字叫小林。",
+     "我们在一起三年了，记住了哈。"
+    ],
+    "hit_expect": true
+   },
+   {
+    "id": "attack_rel_f_sister_f_parents",
+    "scene": "dialogue",
+    "question": "妹妹在哪里读书",
+    "answer": "不知道",
+    "correct": false,
+    "led_astray": false,
+    "retrieved": [
+     "我有个妹妹，在成都读研究生，记住了哈。",
+     "我的名字叫小林。",
+     "我常去的那家书店在西湖边。"
+    ],
+    "hit_expect": false
+   },
+   {
+    "id": "attack_noise_0",
+    "scene": "dialogue",
+    "question": "小林一般几点睡觉",
+    "answer": "十二点睡。",
+    "correct": false,
+    "led_astray": false,
+    "retrieved": [
+     "我的名字叫小林。",
+     "我想起来了，我现在改成十二点睡，八点起。",
+     "我中午一般在公司食堂吃，记住了哈。"
+    ],
+    "hit_expect": true
+   },
+   {
+    "id": "attack_noise_1",
+    "scene": "dialogue",
+    "question": "小林是什么血型",
+    "answer": "A 型血。",
+    "correct": true,
+    "led_astray": false,
+    "retrieved": [
+     "我的名字叫小林。",
+     "顺便说下，我是 A 型血。",
+     "那我是 A 型血吗？"
+    ],
+    "hit_expect": true
+   },
+   {
+    "id": "attack_noise_2",
+    "scene": "dialogue",
+    "question": "小林早餐一般吃什么",
+    "answer": "不知道",
+    "correct": false,
+    "led_astray": false,
+    "retrieved": [
+     "我的名字叫小林。",
+     "我中午一般在公司食堂吃，记住了哈。",
+     "我早餐一般吃全麦面包和鸡蛋吗，你知道吗？"
+    ],
+    "hit_expect": true
+   }
+  ]
+ },
+ "sme_minimal": {
+  "accuracy": 0.3846,
+  "n": 13,
+  "led_astray": 0,
+  "details": [
+   {
+    "id": "attack_dialect_f_coffee",
+    "scene": "dialogue",
+    "question": "小林平时喝什么饮品呀",
+    "answer": "不知道",
+    "correct": false,
+    "led_astray": false,
+    "retrieved": [
+     "小林，你之前没告诉过我呢——你最喜欢什么呀？",
+     "好的，小林，还有什么想告诉我的，我随时都在。",
+     "好的，有什么需要随时找我！"
+    ],
+    "hit_expect": false
+   },
+   {
+    "id": "attack_dialect_f_basketball",
+    "scene": "dialogue",
+    "question": "小林周末喜欢啥运动",
+    "answer": "不知道",
+    "correct": false,
+    "led_astray": false,
+    "retrieved": [
+     "小林，你之前没告诉过我呢——你最喜欢什么呀？",
+     "周末愉快，小林！好好休息，享受你的周末时光～",
+     "周末愉快，小林！记得早点休息，好好享受周末时光～"
+    ],
+    "hit_expect": false
+   },
+   {
+    "id": "attack_dialect_f_dog",
+    "scene": "dialogue",
+    "question": "小林养的那个毛茸茸的家伙叫啥",
+    "answer": "可乐。",
+    "correct": true,
+    "led_astray": false,
+    "retrieved": [
+     "好的，小林，我记下啦——你养了一只叫可乐的金毛，真可爱！",
+     "好的，小林，我记住了——你养了一只金毛叫可乐，真可爱！",
+     "好的，小林，我记下啦——你养了一只金毛叫可乐，以后我会记得它的！"
+    ],
+    "hit_expect": true
+   },
+   {
+    "id": "attack_dialect_f_city",
+    "scene": "dialogue",
+    "question": "小林现在住哪儿来着",
+    "answer": "小林现在住在上海。",
+    "correct": false,
+    "led_astray": false,
+    "retrieved": [
+     "好的，小林，我记住了——你现在住在上海了。",
+     "好的，小林，我记下了：你现在住在上海。之前的地址信息我会更新掉。",
+     "好的，小林，我记下了：你现在住在上海。之前的杭州信息我会更新掉。"
+    ],
+    "hit_expect": false
+   },
+   {
+    "id": "attack_dialect_f_age",
+    "scene": "dialogue",
+    "question": "小林今年二十几了",
+    "answer": "小林今年28岁。",
+    "correct": true,
+    "led_astray": false,
+    "retrieved": [
+     "好的，小林，我记住了：你今年 28 岁。",
+     "好的，小林，我更新一下——你现在改成十二点睡、八点起。",
+     "我今年 28 岁。"
+    ],
+    "hit_expect": true
+   },
+   {
+    "id": "attack_dialect_f_breakfast",
+    "scene": "dialogue",
+    "question": "小林早上都吃些啥",
+    "answer": "小林早上一般吃全麦面包和鸡蛋。",
+    "correct": true,
+    "led_astray": false,
+    "retrieved": [
+     "好的，小林，我记下了——你最近胃不太好，不太能吃辣。我会帮你留意的，饮食上多提醒你温和一些。",
+     "好的，小林，你早餐一般吃全麦面包和鸡蛋，我记下啦！",
+     "好的，小林，我记下啦——你一般十一点半睡，早上七点起。"
+    ],
+    "hit_expect": false
+   },
+   {
+    "id": "attack_double_corr",
+    "scene": "dialogue",
+    "question": "小林住在哪里",
+    "answer": "不知道",
+    "correct": false,
+    "led_astray": false,
+    "retrieved": [
+     "好的，小林，你之前没有告诉过我你在哪里哦。可以告诉我吗？",
+     "好的，小林，我记住了——你现在住在上海了。",
+     "小林，你之前没告诉过我呢——你最喜欢什么呀？"
+    ],
+    "hit_expect": false
+   },
+   {
+    "id": "attack_rel_f_dog_f_cat",
+    "scene": "dialogue",
+    "question": "可乐怕什么",
+    "answer": "不知道",
+    "correct": false,
+    "led_astray": false,
+    "retrieved": [
+     "小林，你之前没告诉过我呢——你最喜欢什么呀？",
+     "哦对，可乐怕打雷，每次打雷都要躲到床底下。",
+     "跟你说个事，可乐怕打雷，每次打雷都要躲到床底下。"
+    ],
+    "hit_expect": true
+   },
+   {
+    "id": "attack_rel_f_girlfriend_f_plan_marry",
+    "scene": "dialogue",
+    "question": "结婚计划定了吗",
+    "answer": "不知道。",
+    "correct": false,
+    "led_astray": false,
+    "retrieved": [
+     "我们计划明年结婚吗，你知道吗？",
+     "我们计划明年结婚。",
+     "我们计划明年结婚。"
+    ],
+    "hit_expect": true
+   },
+   {
+    "id": "attack_rel_f_sister_f_parents",
+    "scene": "dialogue",
+    "question": "妹妹在哪里读书",
+    "answer": "在成都读研究生。",
+    "correct": false,
+    "led_astray": false,
+    "retrieved": [
+     "我有个妹妹，在成都读研究生。",
+     "对了，我有个妹妹，在成都读研究生。",
+     "哦对，我有个妹妹，在成都读研究生。"
+    ],
+    "hit_expect": false
+   },
+   {
+    "id": "attack_noise_0",
+    "scene": "dialogue",
+    "question": "小林一般几点睡觉",
+    "answer": "不知道",
+    "correct": false,
+    "led_astray": false,
+    "retrieved": [
+     "哦对，我一般十一点半睡觉，早上七点起。",
+     "好的，小林，我记下啦——你一般十一点半睡，早上七点起。",
+     "跟你说个事，我一般十一点半睡觉，早上七点起。"
+    ],
+    "hit_expect": true
+   },
+   {
+    "id": "attack_noise_1",
+    "scene": "dialogue",
+    "question": "小林是什么血型",
+    "answer": "小林是 A 型血。",
+    "correct": true,
+    "led_astray": false,
+    "retrieved": [
+     "小林，你之前没告诉过我呢——你最喜欢什么呀？",
+     "好的，小林，你是 A 型血，我记下啦！",
+     "嗯，我是 A 型血。"
+    ],
+    "hit_expect": true
+   },
+   {
+    "id": "attack_noise_2",
+    "scene": "dialogue",
+    "question": "小林早餐一般吃什么",
+    "answer": "小林早餐一般吃全麦面包和鸡蛋。",
+    "correct": true,
+    "led_astray": false,
+    "retrieved": [
+     "小林，你之前没告诉过我呢——你最喜欢什么呀？",
+     "好的，小林，你早餐一般吃全麦面包和鸡蛋，我记下啦！",
+     "嗯，我早餐一般吃全麦面包和鸡蛋。"
+    ],
+    "hit_expect": true
+   }
+  ]
+ },
+ "rag": {
+  "accuracy": 0.1538,
+  "n": 13,
+  "led_astray": 0,
+  "details": [
+   {
+    "id": "attack_dialect_f_coffee",
+    "scene": "dialogue",
+    "question": "小林平时喝什么饮品呀",
+    "answer": "不知道",
+    "correct": false,
+    "led_astray": false,
+    "retrieved": [
+     "顺便说下，我的名字叫小林。",
+     "我的名字叫小林，这个我之前提过吗？",
+     "我的名字叫小林。"
+    ],
+    "hit_expect": true
+   },
+   {
+    "id": "attack_dialect_f_basketball",
+    "scene": "dialogue",
+    "question": "小林周末喜欢啥运动",
+    "answer": "不知道",
+    "correct": false,
+    "led_astray": false,
+    "retrieved": [
+     "我周末经常和朋友打篮球。",
+     "周末愉快",
+     "周末愉快"
+    ],
+    "hit_expect": true
+   },
+   {
+    "id": "attack_dialect_f_dog",
+    "scene": "dialogue",
+    "question": "小林养的那个毛茸茸的家伙叫啥",
+    "answer": "可乐",
+    "correct": true,
+    "led_astray": false,
+    "retrieved": [
+     "我的名字叫小林。",
+     "顺便说下，我的名字叫小林。",
+     "嗯，我的名字叫小林。"
+    ],
+    "hit_expect": true
+   },
+   {
+    "id": "attack_dialect_f_city",
+    "scene": "dialogue",
+    "question": "小林现在住哪儿来着",
+    "answer": "不知道",
+    "correct": false,
+    "led_astray": false,
+    "retrieved": [
+     "我的名字叫小林。",
+     "我的名字叫小林，这个我之前提过吗？",
+     "我的名字叫小林，记住了哈。"
+    ],
+    "hit_expect": false
+   },
+   {
+    "id": "attack_dialect_f_age",
+    "scene": "dialogue",
+    "question": "小林今年二十几了",
+    "answer": "不知道",
+    "correct": false,
+    "led_astray": false,
+    "retrieved": [
+     "我的名字叫小林，这个我之前提过吗？",
+     "顺便说下，我的名字叫小林。",
+     "我的名字叫小林。"
+    ],
+    "hit_expect": true
+   },
+   {
+    "id": "attack_dialect_f_breakfast",
+    "scene": "dialogue",
+    "question": "小林早上都吃些啥",
+    "answer": "不知道",
+    "correct": false,
+    "led_astray": false,
+    "retrieved": [
+     "嗯，我早餐一般吃全麦面包和鸡蛋。",
+     "嗯，我早餐一般吃全麦面包和鸡蛋。",
+     "哦对，我早餐一般吃全麦面包和鸡蛋。"
+    ],
+    "hit_expect": true
+   },
+   {
+    "id": "attack_double_corr",
+    "scene": "dialogue",
+    "question": "小林住在哪里",
+    "answer": "不知道",
+    "correct": false,
+    "led_astray": false,
+    "retrieved": [
+     "我的名字叫小林。",
+     "嗯，我的名字叫小林。",
+     "顺便说下，我的名字叫小林。"
+    ],
+    "hit_expect": false
+   },
+   {
+    "id": "attack_rel_f_dog_f_cat",
+    "scene": "dialogue",
+    "question": "可乐怕什么",
+    "answer": "可乐怕打雷。",
+    "correct": true,
+    "led_astray": false,
+    "retrieved": [
+     "跟你说个事，可乐怕打雷，每次打雷都要躲到床底下。",
+     "跟你说个事，可乐怕打雷，每次打雷都要躲到床底下。",
+     "哦对，可乐怕打雷，每次打雷都要躲到床底下。"
+    ],
+    "hit_expect": true
+   },
+   {
+    "id": "attack_rel_f_girlfriend_f_plan_marry",
+    "scene": "dialogue",
+    "question": "结婚计划定了吗",
+    "answer": "不知道。",
+    "correct": false,
+    "led_astray": false,
+    "retrieved": [
+     "我们计划明年结婚吗，你知道吗？",
+     "问你个问题，我们计划明年结婚吗？",
+     "我们计划明年结婚。"
+    ],
+    "hit_expect": true
+   },
+   {
+    "id": "attack_rel_f_sister_f_parents",
+    "scene": "dialogue",
+    "question": "妹妹在哪里读书",
+    "answer": "在成都读研究生。",
+    "correct": false,
+    "led_astray": false,
+    "retrieved": [
+     "我有个妹妹，在成都读研究生。",
+     "我有个妹妹，在成都读研究生，记住了哈。",
+     "我有个妹妹，在成都读研究生，记住了哈。"
+    ],
+    "hit_expect": false
+   },
+   {
+    "id": "attack_noise_0",
+    "scene": "dialogue",
+    "question": "小林一般几点睡觉",
+    "answer": "不知道",
+    "correct": false,
+    "led_astray": false,
+    "retrieved": [
+     "哦对，我一般十一点半睡觉，早上七点起。",
+     "跟你说个事，我一般十一点半睡觉，早上七点起。",
+     "问你个问题，我一般十一点半睡觉，早上七点起吗？"
+    ],
+    "hit_expect": true
+   },
+   {
+    "id": "attack_noise_1",
+    "scene": "dialogue",
+    "question": "小林是什么血型",
+    "answer": "不知道",
+    "correct": false,
+    "led_astray": false,
+    "retrieved": [
+     "问你个问题，我是 A 型血吗？",
+     "那我是 A 型血吗？",
+     "嗯，我是 A 型血。"
+    ],
+    "hit_expect": true
+   },
+   {
+    "id": "attack_noise_2",
+    "scene": "dialogue",
+    "question": "小林早餐一般吃什么",
+    "answer": "不知道",
+    "correct": false,
+    "led_astray": false,
+    "retrieved": [
+     "哦对，我早餐一般吃全麦面包和鸡蛋。",
+     "嗯，我早餐一般吃全麦面包和鸡蛋。",
+     "嗯，我早餐一般吃全麦面包和鸡蛋。"
+    ],
+    "hit_expect": true
+   }
+  ]
+ },
+ "bm25": {
+  "accuracy": 0.3077,
+  "n": 13,
+  "led_astray": 0,
+  "details": [
+   {
+    "id": "attack_dialect_f_coffee",
+    "scene": "dialogue",
+    "question": "小林平时喝什么饮品呀",
+    "answer": "不知道",
+    "correct": false,
+    "led_astray": false,
+    "retrieved": [
+     "那我叫什么？",
+     "我的名字叫小林。",
+     "嗯，我的名字叫小林。"
+    ],
+    "hit_expect": false
+   },
+   {
+    "id": "attack_dialect_f_basketball",
+    "scene": "dialogue",
+    "question": "小林周末喜欢啥运动",
+    "answer": "不知道",
+    "correct": false,
+    "led_astray": false,
+    "retrieved": [
+     "我的名字叫小林。",
+     "嗯，我的名字叫小林。",
+     "对了，我的名字叫小林。"
+    ],
+    "hit_expect": false
+   },
+   {
+    "id": "attack_dialect_f_dog",
+    "scene": "dialogue",
+    "question": "小林养的那个毛茸茸的家伙叫啥",
+    "answer": "不知道",
+    "correct": false,
+    "led_astray": false,
+    "retrieved": [
+     "我的名字叫小林。",
+     "嗯，我的名字叫小林。",
+     "对了，我的名字叫小林。"
+    ],
+    "hit_expect": false
+   },
+   {
+    "id": "attack_dialect_f_city",
+    "scene": "dialogue",
+    "question": "小林现在住哪儿来着",
+    "answer": "不知道",
+    "correct": false,
+    "led_astray": false,
+    "retrieved": [
+     "我的名字叫小林，记住了哈。",
+     "我的名字叫小林。",
+     "嗯，我的名字叫小林。"
+    ],
+    "hit_expect": false
+   },
+   {
+    "id": "attack_dialect_f_age",
+    "scene": "dialogue",
+    "question": "小林今年二十几了",
+    "answer": "小林今年28岁。",
+    "correct": true,
+    "led_astray": false,
+    "retrieved": [
+     "我今年 28 岁。",
+     "我今年 28 岁。",
+     "对了，我的名字叫小林。"
+    ],
+    "hit_expect": true
+   },
+   {
+    "id": "attack_dialect_f_breakfast",
+    "scene": "dialogue",
+    "question": "小林早上都吃些啥",
+    "answer": "不知道",
+    "correct": false,
+    "led_astray": false,
+    "retrieved": [
+     "我的名字叫小林。",
+     "嗯，我的名字叫小林。",
+     "对了，我的名字叫小林。"
+    ],
+    "hit_expect": false
+   },
+   {
+    "id": "attack_double_corr",
+    "scene": "dialogue",
+    "question": "小林住在哪里",
+    "answer": "不知道",
+    "correct": false,
+    "led_astray": false,
+    "retrieved": [
+     "我在哪，你知道吗？",
+     "我的名字叫小林，记住了哈。",
+     "我的名字叫小林。"
+    ],
+    "hit_expect": false
+   },
+   {
+    "id": "attack_rel_f_dog_f_cat",
+    "scene": "dialogue",
+    "question": "可乐怕什么",
+    "answer": "可乐怕打雷。",
+    "correct": true,
+    "led_astray": false,
+    "retrieved": [
+     "那我叫什么？",
+     "哦对，可乐怕打雷，每次打雷都要躲到床底下。",
+     "跟你说个事，可乐怕打雷，每次打雷都要躲到床底下。"
+    ],
+    "hit_expect": true
+   },
+   {
+    "id": "attack_rel_f_girlfriend_f_plan_marry",
+    "scene": "dialogue",
+    "question": "结婚计划定了吗",
+    "answer": "不知道。",
+    "correct": false,
+    "led_astray": false,
+    "retrieved": [
+     "我们计划明年结婚。",
+     "我们计划明年结婚。",
+     "我们计划明年结婚。"
+    ],
+    "hit_expect": true
+   },
+   {
+    "id": "attack_rel_f_sister_f_parents",
+    "scene": "dialogue",
+    "question": "妹妹在哪里读书",
+    "answer": "在成都读研究生。",
+    "correct": false,
+    "led_astray": false,
+    "retrieved": [
+     "我有个妹妹，在成都读研究生。",
+     "哦对，我有个妹妹，在成都读研究生。",
+     "对了，我有个妹妹，在成都读研究生。"
+    ],
+    "hit_expect": false
+   },
+   {
+    "id": "attack_noise_0",
+    "scene": "dialogue",
+    "question": "小林一般几点睡觉",
+    "answer": "小林一般十一点半睡觉。",
+    "correct": true,
+    "led_astray": false,
+    "retrieved": [
+     "哦对，我一般十一点半睡觉，早上七点起。",
+     "跟你说个事，我一般十一点半睡觉，早上七点起。",
+     "问你个问题，我一般十一点半睡觉，早上七点起吗？"
+    ],
+    "hit_expect": true
+   },
+   {
+    "id": "attack_noise_1",
+    "scene": "dialogue",
+    "question": "小林是什么血型",
+    "answer": "A 型血。",
+    "correct": true,
+    "led_astray": false,
+    "retrieved": [
+     "那我叫什么？",
+     "嗯，我是 A 型血。",
+     "哦对，我是 A 型血。"
+    ],
+    "hit_expect": true
+   },
+   {
+    "id": "attack_noise_2",
+    "scene": "dialogue",
+    "question": "小林早餐一般吃什么",
+    "answer": "不知道",
+    "correct": false,
+    "led_astray": false,
+    "retrieved": [
+     "嗯，我早餐一般吃全麦面包和鸡蛋。",
+     "嗯，我早餐一般吃全麦面包和鸡蛋。",
+     "哦对，我早餐一般吃全麦面包和鸡蛋。"
+    ],
+    "hit_expect": true
+   }
+  ]
+ },
+ "mem0": {
+  "accuracy": 0.5385,
+  "n": 13,
+  "led_astray": 0,
+  "details": [
+   {
+    "id": "attack_dialect_f_coffee",
+    "scene": "dialogue",
+    "question": "小林平时喝什么饮品呀",
+    "answer": "小林平时喝手冲咖啡，现在改喝速溶咖啡了。",
+    "correct": false,
+    "led_astray": false,
+    "retrieved": [
+     "用户叫小林。",
+     "用户喜欢喝手冲咖啡，不太喝速溶咖啡。",
+     "用户不太吃甜食，奶茶只喝三分糖。"
+    ],
+    "hit_expect": false
+   },
+   {
+    "id": "attack_dialect_f_basketball",
+    "scene": "dialogue",
+    "question": "小林周末喜欢啥运动",
+    "answer": "打篮球。",
+    "correct": true,
+    "led_astray": false,
+    "retrieved": [
+     "用户周末经常和朋友打篮球。",
+     "用户叫小林。",
+     "用户有一辆折叠自行车，周末骑行。"
+    ],
+    "hit_expect": false
+   },
+   {
+    "id": "attack_dialect_f_dog",
+    "scene": "dialogue",
+    "question": "小林养的那个毛茸茸的家伙叫啥",
+    "answer": "可乐",
+    "correct": true,
+    "led_astray": false,
+    "retrieved": [
+     "用户叫小林。",
+     "用户养了一只柯基犬，名字叫可乐，之前说成金毛是记错了。",
+     "用户养了一只金毛犬，名字叫可乐。"
+    ],
+    "hit_expect": false
+   },
+   {
+    "id": "attack_dialect_f_city",
+    "scene": "dialogue",
+    "question": "小林现在住哪儿来着",
+    "answer": "上海。",
+    "correct": false,
+    "led_astray": false,
+    "retrieved": [
+     "用户叫小林。",
+     "用户住在杭州。",
+     "用户去年（2025年）搬到了上海，此前住在杭州。"
+    ],
+    "hit_expect": false
+   },
+   {
+    "id": "attack_dialect_f_age",
+    "scene": "dialogue",
+    "question": "小林今年二十几了",
+    "answer": "28岁。",
+    "correct": true,
+    "led_astray": false,
+    "retrieved": [
+     "用户叫小林。",
+     "用户今年28岁。",
+     "用户现在十二点睡，八点起。"
+    ],
+    "hit_expect": false
+   },
+   {
+    "id": "attack_dialect_f_breakfast",
+    "scene": "dialogue",
+    "question": "小林早上都吃些啥",
+    "answer": "不知道",
+    "correct": false,
+    "led_astray": false,
+    "retrieved": [
+     "用户早餐一般吃全麦面包和鸡蛋。",
+     "用户早餐一般吃全麦面包和鸡蛋。",
+     "用户叫小林。"
+    ],
+    "hit_expect": false
+   },
+   {
+    "id": "attack_double_corr",
+    "scene": "dialogue",
+    "question": "小林住在哪里",
+    "answer": "杭州。",
+    "correct": true,
+    "led_astray": false,
+    "retrieved": [
+     "用户叫小林。",
+     "用户住在杭州。",
+     "用户常去西湖边的一家书店。"
+    ],
+    "hit_expect": false
+   },
+   {
+    "id": "attack_rel_f_dog_f_cat",
+    "scene": "dialogue",
+    "question": "可乐怕什么",
+    "answer": "可乐怕打雷。",
+    "correct": true,
+    "led_astray": false,
+    "retrieved": [
+     "用户更正了可乐的品种信息：可乐其实是一只柯基，而不是之前所说的金毛犬。",
+     "用户的金毛犬可乐怕打雷，每次打雷都会躲到床底下。",
+     "用户养了一只金毛犬，名字叫可乐。"
+    ],
+    "hit_expect": false
+   },
+   {
+    "id": "attack_rel_f_girlfriend_f_plan_marry",
+    "scene": "dialogue",
+    "question": "结婚计划定了吗",
+    "answer": "不知道。",
+    "correct": false,
+    "led_astray": false,
+    "retrieved": [
+     "用户计划于2027年与女友结婚。",
+     "用户和伴侣已经在一起三年了（截至2026年8月9日）。",
+     "用户实际于2025年搬到了上海，纠正了之前给出的错误信息。"
+    ],
+    "hit_expect": false
+   },
+   {
+    "id": "attack_rel_f_sister_f_parents",
+    "scene": "dialogue",
+    "question": "妹妹在哪里读书",
+    "answer": "不知道",
+    "correct": false,
+    "led_astray": false,
+    "retrieved": [
+     "用户有个妹妹，在成都读研究生。",
+     "用户常去西湖边的一家书店。",
+     "用户最近在读《三体》第三部。"
+    ],
+    "hit_expect": false
+   },
+   {
+    "id": "attack_noise_0",
+    "scene": "dialogue",
+    "question": "小林一般几点睡觉",
+    "answer": "不知道",
+    "correct": false,
+    "led_astray": false,
+    "retrieved": [
+     "用户一般十一点半睡觉，早上七点起。",
+     "用户一般十一点半睡觉，早上七点起床。",
+     "用户现在十二点睡，八点起。"
+    ],
+    "hit_expect": false
+   },
+   {
+    "id": "attack_noise_1",
+    "scene": "dialogue",
+    "question": "小林是什么血型",
+    "answer": "A型。",
+    "correct": true,
+    "led_astray": false,
+    "retrieved": [
+     "用户的血型是A型。",
+     "用户叫小林。",
+     "用户的女朋友叫小雨，是一名设计师。"
+    ],
+    "hit_expect": false
+   },
+   {
+    "id": "attack_noise_2",
+    "scene": "dialogue",
+    "question": "小林早餐一般吃什么",
+    "answer": "全麦面包和鸡蛋。",
+    "correct": true,
+    "led_astray": false,
+    "retrieved": [
+     "用户早餐一般吃全麦面包和鸡蛋。",
+     "用户早餐一般吃全麦面包和鸡蛋。",
+     "用户叫小林。"
+    ],
+    "hit_expect": false
+   }
+  ]
+ },
+ "langmem": {
+  "accuracy": 0.4615,
+  "n": 13,
+  "led_astray": 0,
+  "details": [
+   {
+    "id": "attack_dialect_f_coffee",
+    "scene": "dialogue",
+    "question": "小林平时喝什么饮品呀",
+    "answer": "不知道",
+    "correct": false,
+    "led_astray": false,
+    "retrieved": [
+     "content='用户的名字叫小林。'",
+     "content='用户的名字叫小林。'",
+     "content='用户的名字叫小林。'"
+    ],
+    "hit_expect": false
+   },
+   {
+    "id": "attack_dialect_f_basketball",
+    "scene": "dialogue",
+    "question": "小林周末喜欢啥运动",
+    "answer": "不知道",
+    "correct": false,
+    "led_astray": false,
+    "retrieved": [
+     "content='用户周末经常和朋友打篮球。'",
+     "content='用户周末经常和朋友打篮球。'",
+     "content='用户周末经常和朋友打篮球。'"
+    ],
+    "hit_expect": false
+   },
+   {
+    "id": "attack_dialect_f_dog",
+    "scene": "dialogue",
+    "question": "小林养的那个毛茸茸的家伙叫啥",
+    "answer": "不知道",
+    "correct": false,
+    "led_astray": false,
+    "retrieved": [
+     "content='用户的名字叫小林。'",
+     "content='用户的名字叫小林。'",
+     "content='用户的名字叫小林。'"
+    ],
+    "hit_expect": false
+   },
+   {
+    "id": "attack_dialect_f_city",
+    "scene": "dialogue",
+    "question": "小林现在住哪儿来着",
+    "answer": "不知道",
+    "correct": false,
+    "led_astray": false,
+    "retrieved": [
+     "content='用户的名字叫小林。'",
+     "content='用户的名字叫小林。'",
+     "content='用户的名字叫小林。'"
+    ],
+    "hit_expect": false
+   },
+   {
+    "id": "attack_dialect_f_age",
+    "scene": "dialogue",
+    "question": "小林今年二十几了",
+    "answer": "小林今年28岁。",
+    "correct": true,
+    "led_astray": false,
+    "retrieved": [
+     "content='用户今年28岁。'",
+     "content='用户今年28岁。'",
+     "content='用户的名字叫小林。'"
+    ],
+    "hit_expect": false
+   },
+   {
+    "id": "attack_dialect_f_breakfast",
+    "scene": "dialogue",
+    "question": "小林早上都吃些啥",
+    "answer": "小林早上一般吃全麦面包和鸡蛋。",
+    "correct": true,
+    "led_astray": false,
+    "retrieved": [
+     "content='用户早餐一般吃全麦面包和鸡蛋。'",
+     "content='用户早餐一般吃全麦面包和鸡蛋。'",
+     "content='用户早餐一般吃全麦面包和鸡蛋。'"
+    ],
+    "hit_expect": false
+   },
+   {
+    "id": "attack_double_corr",
+    "scene": "dialogue",
+    "question": "小林住在哪里",
+    "answer": "不知道",
+    "correct": false,
+    "led_astray": false,
+    "retrieved": [
+     "content='用户的名字叫小林。'",
+     "content='用户的名字叫小林。'",
+     "content='用户的名字叫小林。'"
+    ],
+    "hit_expect": false
+   },
+   {
+    "id": "attack_rel_f_dog_f_cat",
+    "scene": "dialogue",
+    "question": "可乐怕什么",
+    "answer": "可乐怕打雷。",
+    "correct": true,
+    "led_astray": false,
+    "retrieved": [
+     "content='用户的宠物可乐怕打雷，每次打雷都会躲到床底下。'",
+     "content='用户的宠物可乐怕打雷，每次打雷都会躲到床底下。'",
+     "content='用户的宠物可乐怕打雷，每次打雷都会躲到床底下。'"
+    ],
+    "hit_expect": false
+   },
+   {
+    "id": "attack_rel_f_girlfriend_f_plan_marry",
+    "scene": "dialogue",
+    "question": "结婚计划定了吗",
+    "answer": "定了，计划明年结婚。",
+    "correct": true,
+    "led_astray": false,
+    "retrieved": [
+     "content='用户计划明年结婚。'",
+     "content='用户计划明年结婚。'",
+     "content='用户计划明年结婚。'"
+    ],
+    "hit_expect": false
+   },
+   {
+    "id": "attack_rel_f_sister_f_parents",
+    "scene": "dialogue",
+    "question": "妹妹在哪里读书",
+    "answer": "妹妹在成都读研究生。",
+    "correct": false,
+    "led_astray": false,
+    "retrieved": [
+     "content='用户有一个妹妹，妹妹在成都读研究生。'",
+     "content='用户有一个妹妹，在成都读研究生。'",
+     "content='用户有一个妹妹，在成都读研究生。'"
+    ],
+    "hit_expect": false
+   },
+   {
+    "id": "attack_noise_0",
+    "scene": "dialogue",
+    "question": "小林一般几点睡觉",
+    "answer": "不知道",
+    "correct": false,
+    "led_astray": false,
+    "retrieved": [
+     "content='用户一般晚上十一点半睡觉，早上七点起床。'",
+     "content='用户一般晚上十一点半睡觉，早上七点起床。'",
+     "content='用户现在的作息是晚上十二点（24:00）睡觉，早上八点起床。'"
+    ],
+    "hit_expect": false
+   },
+   {
+    "id": "attack_noise_1",
+    "scene": "dialogue",
+    "question": "小林是什么血型",
+    "answer": "A型。",
+    "correct": true,
+    "led_astray": false,
+    "retrieved": [
+     "content='用户的血型是A型。'",
+     "content='用户的名字叫小林。'",
+     "content='用户的名字叫小林。'"
+    ],
+    "hit_expect": false
+   },
+   {
+    "id": "attack_noise_2",
+    "scene": "dialogue",
+    "question": "小林早餐一般吃什么",
+    "answer": "小林早餐一般吃全麦面包和鸡蛋。",
+    "correct": true,
+    "led_astray": false,
+    "retrieved": [
+     "content='用户早餐一般吃全麦面包和鸡蛋。'",
+     "content='用户早餐一般吃全麦面包和鸡蛋。'",
+     "content='用户早餐一般吃全麦面包和鸡蛋。'"
+    ],
+    "hit_expect": false
+   }
+  ]
+ }
+}

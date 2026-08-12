@@ -1,0 +1,626 @@
+{
+ "name": "dialogue_tasks",
+ "tasks": [
+  {
+   "id": "recall_f_name",
+   "scene": "dialogue",
+   "question": "小林叫什么名字",
+   "answer_keywords": [
+    "我的名字叫小林"
+   ],
+   "expect_text": "我的名字叫小林",
+   "conflict_text": null,
+   "top_k": 5
+  },
+  {
+   "id": "recall_f_age",
+   "scene": "dialogue",
+   "question": "小林今年多大",
+   "answer_keywords": [
+    "28",
+    "我今年"
+   ],
+   "expect_text": "我今年 28 岁",
+   "conflict_text": null,
+   "top_k": 5
+  },
+  {
+   "id": "recall_f_city",
+   "scene": "dialogue",
+   "question": "小林住在哪里",
+   "answer_keywords": [
+    "其实我去年搬到上海了"
+   ],
+   "expect_text": "其实我去年搬到上海了",
+   "conflict_text": null,
+   "top_k": 5
+  },
+  {
+   "id": "recall_f_job",
+   "scene": "dialogue",
+   "question": "小林在哪里工作",
+   "answer_keywords": [
+    "我在一家互联网公司做前端工程师"
+   ],
+   "expect_text": "我在一家互联网公司做前端工程师",
+   "conflict_text": null,
+   "top_k": 5
+  },
+  {
+   "id": "recall_f_team",
+   "scene": "dialogue",
+   "question": "小林我们前端组一共六个人吗",
+   "answer_keywords": [
+    "我们前端组一共六个人"
+   ],
+   "expect_text": "我们前端组一共六个人",
+   "conflict_text": null,
+   "top_k": 5
+  },
+  {
+   "id": "recall_f_remote",
+   "scene": "dialogue",
+   "question": "小林每周四做什么",
+   "answer_keywords": [
+    "我每周四在家远程办公"
+   ],
+   "expect_text": "我每周四在家远程办公",
+   "conflict_text": null,
+   "top_k": 5
+  },
+  {
+   "id": "recall_f_stack",
+   "scene": "dialogue",
+   "question": "小林我主要用 Vue 和 TypeScript 写代码吗",
+   "answer_keywords": [
+    "我主要用",
+    "Vue",
+    "TypeScript"
+   ],
+   "expect_text": "我主要用 Vue 和 TypeScript 写代码",
+   "conflict_text": null,
+   "top_k": 5
+  },
+  {
+   "id": "recall_f_lang",
+   "scene": "dialogue",
+   "question": "小林最近在学什么",
+   "answer_keywords": [
+    "我最近在学",
+    "Rust"
+   ],
+   "expect_text": "我最近在学 Rust",
+   "conflict_text": null,
+   "top_k": 5
+  },
+  {
+   "id": "recall_f_study",
+   "scene": "dialogue",
+   "question": "小林我每天通勤路上听英语播客吗",
+   "answer_keywords": [
+    "我每天通勤路上听英语播客"
+   ],
+   "expect_text": "我每天通勤路上听英语播客",
+   "conflict_text": null,
+   "top_k": 5
+  },
+  {
+   "id": "recall_f_coffee",
+   "scene": "dialogue",
+   "question": "小林我喜欢喝手冲咖啡，不太喝速溶的吗",
+   "answer_keywords": [
+    "我现在改喝速溶的了",
+    "手冲太麻烦"
+   ],
+   "expect_text": "我现在改喝速溶的了，手冲太麻烦",
+   "conflict_text": null,
+   "top_k": 5
+  },
+  {
+   "id": "recall_f_sweet",
+   "scene": "dialogue",
+   "question": "小林我不太吃甜食，奶茶只喝三分糖吗",
+   "answer_keywords": [
+    "我不太吃甜食",
+    "奶茶只喝三分糖"
+   ],
+   "expect_text": "我不太吃甜食，奶茶只喝三分糖",
+   "conflict_text": null,
+   "top_k": 5
+  },
+  {
+   "id": "recall_f_spicy",
+   "scene": "dialogue",
+   "question": "小林我很能吃辣，最爱重庆火锅吗",
+   "answer_keywords": [
+    "我最近不太能吃辣了",
+    "胃不太好"
+   ],
+   "expect_text": "我最近不太能吃辣了，胃不太好",
+   "conflict_text": null,
+   "top_k": 5
+  },
+  {
+   "id": "recall_f_breakfast",
+   "scene": "dialogue",
+   "question": "小林早餐吃什么",
+   "answer_keywords": [
+    "我早餐一般吃全麦面包和鸡蛋"
+   ],
+   "expect_text": "我早餐一般吃全麦面包和鸡蛋",
+   "conflict_text": null,
+   "top_k": 5
+  },
+  {
+   "id": "recall_f_basketball",
+   "scene": "dialogue",
+   "question": "小林我周末经常和朋友打篮球吗",
+   "answer_keywords": [
+    "我周末经常和朋友打篮球"
+   ],
+   "expect_text": "我周末经常和朋友打篮球",
+   "conflict_text": null,
+   "top_k": 5
+  },
+  {
+   "id": "recall_f_piano",
+   "scene": "dialogue",
+   "question": "小林我小时候学过六年钢琴吗",
+   "answer_keywords": [
+    "我小时候学过六年钢琴"
+   ],
+   "expect_text": "我小时候学过六年钢琴",
+   "conflict_text": null,
+   "top_k": 5
+  },
+  {
+   "id": "longtail_f_coffee",
+   "scene": "dialogue",
+   "question": "小林我喜欢喝手冲咖啡，不太喝速溶的吗",
+   "answer_keywords": [
+    "我现在改喝速溶的了",
+    "手冲太麻烦"
+   ],
+   "expect_text": "我现在改喝速溶的了，手冲太麻烦",
+   "conflict_text": null,
+   "top_k": 5
+  },
+  {
+   "id": "longtail_f_city",
+   "scene": "dialogue",
+   "question": "小林住在哪里",
+   "answer_keywords": [
+    "其实我去年搬到上海了"
+   ],
+   "expect_text": "其实我去年搬到上海了",
+   "conflict_text": null,
+   "top_k": 5
+  },
+  {
+   "id": "longtail_f_spicy",
+   "scene": "dialogue",
+   "question": "小林我很能吃辣，最爱重庆火锅吗",
+   "answer_keywords": [
+    "我最近不太能吃辣了",
+    "胃不太好"
+   ],
+   "expect_text": "我最近不太能吃辣了，胃不太好",
+   "conflict_text": null,
+   "top_k": 5
+  },
+  {
+   "id": "longtail_f_dog",
+   "scene": "dialogue",
+   "question": "小林养了什么宠物",
+   "answer_keywords": [
+    "可乐其实是只柯基"
+   ],
+   "expect_text": "可乐其实是只柯基",
+   "conflict_text": null,
+   "top_k": 5
+  },
+  {
+   "id": "longtail_f_name",
+   "scene": "dialogue",
+   "question": "小林叫什么名字",
+   "answer_keywords": [
+    "我的名字叫小林"
+   ],
+   "expect_text": "我的名字叫小林",
+   "conflict_text": null,
+   "top_k": 5
+  },
+  {
+   "id": "longtail_f_glasses",
+   "scene": "dialogue",
+   "question": "小林我近视三百度，平时戴眼镜吗",
+   "answer_keywords": [
+    "我近视三百度",
+    "平时戴眼镜"
+   ],
+   "expect_text": "我近视三百度，平时戴眼镜",
+   "conflict_text": null,
+   "top_k": 5
+  },
+  {
+   "id": "longtail_f_sleep",
+   "scene": "dialogue",
+   "question": "小林一般几点睡觉",
+   "answer_keywords": [
+    "我现在改成十二点睡",
+    "八点起"
+   ],
+   "expect_text": "我现在改成十二点睡，八点起",
+   "conflict_text": null,
+   "top_k": 5
+  },
+  {
+   "id": "longtail_f_read",
+   "scene": "dialogue",
+   "question": "小林最近在读什么书",
+   "answer_keywords": [
+    "我最近在读",
+    "三体",
+    "第三部"
+   ],
+   "expect_text": "我最近在读《三体》第三部",
+   "conflict_text": null,
+   "top_k": 5
+  },
+  {
+   "id": "longtail_f_anniversary",
+   "scene": "dialogue",
+   "question": "小林我们在一起三年了吗",
+   "answer_keywords": [
+    "我们在一起三年了"
+   ],
+   "expect_text": "我们在一起三年了",
+   "conflict_text": null,
+   "top_k": 5
+  },
+  {
+   "id": "longtail_f_movie",
+   "scene": "dialogue",
+   "question": "小林最喜欢什么",
+   "answer_keywords": [
+    "我最喜欢的电影是",
+    "星际穿越"
+   ],
+   "expect_text": "我最喜欢的电影是《星际穿越》",
+   "conflict_text": null,
+   "top_k": 5
+  },
+  {
+   "id": "longtail_f_girlfriend",
+   "scene": "dialogue",
+   "question": "小林女朋友叫什么",
+   "answer_keywords": [
+    "我女朋友叫小雨",
+    "是设计师"
+   ],
+   "expect_text": "我女朋友叫小雨，是设计师",
+   "conflict_text": null,
+   "top_k": 5
+  },
+  {
+   "id": "longtail_f_cat",
+   "scene": "dialogue",
+   "question": "小林可乐怕打雷，每次打雷都要躲到床底下吗",
+   "answer_keywords": [
+    "可乐怕打雷",
+    "每次打雷都要躲到床底下"
+   ],
+   "expect_text": "可乐怕打雷，每次打雷都要躲到床底下",
+   "conflict_text": null,
+   "top_k": 5
+  },
+  {
+   "id": "longtail_f_plan_fitness",
+   "scene": "dialogue",
+   "question": "小林我办了张健身卡，想每周去三次吗",
+   "answer_keywords": [
+    "我办了张健身卡",
+    "想每周去三次"
+   ],
+   "expect_text": "我办了张健身卡，想每周去三次",
+   "conflict_text": null,
+   "top_k": 5
+  },
+  {
+   "id": "longtail_f_piano",
+   "scene": "dialogue",
+   "question": "小林我小时候学过六年钢琴吗",
+   "answer_keywords": [
+    "我小时候学过六年钢琴"
+   ],
+   "expect_text": "我小时候学过六年钢琴",
+   "conflict_text": null,
+   "top_k": 5
+  },
+  {
+   "id": "longtail_f_sister",
+   "scene": "dialogue",
+   "question": "小林有兄弟姐妹吗",
+   "answer_keywords": [
+    "我有个妹妹",
+    "在成都读研究生"
+   ],
+   "expect_text": "我有个妹妹，在成都读研究生",
+   "conflict_text": null,
+   "top_k": 5
+  },
+  {
+   "id": "corr_f_coffee",
+   "scene": "dialogue",
+   "question": "小林我喜欢喝手冲咖啡，不太喝速溶的吗",
+   "answer_keywords": [
+    "我现在改喝速溶的了",
+    "手冲太麻烦"
+   ],
+   "expect_text": "我现在改喝速溶的了，手冲太麻烦",
+   "conflict_text": "我喜欢喝手冲咖啡，不太喝速溶的",
+   "top_k": 5
+  },
+  {
+   "id": "corr_f_city",
+   "scene": "dialogue",
+   "question": "小林住在哪里",
+   "answer_keywords": [
+    "其实我去年搬到上海了"
+   ],
+   "expect_text": "其实我去年搬到上海了",
+   "conflict_text": "我住在杭州",
+   "top_k": 5
+  },
+  {
+   "id": "corr_f_spicy",
+   "scene": "dialogue",
+   "question": "小林我很能吃辣，最爱重庆火锅吗",
+   "answer_keywords": [
+    "我最近不太能吃辣了",
+    "胃不太好"
+   ],
+   "expect_text": "我最近不太能吃辣了，胃不太好",
+   "conflict_text": "我很能吃辣，最爱重庆火锅",
+   "top_k": 5
+  },
+  {
+   "id": "corr_f_coffee",
+   "scene": "dialogue",
+   "question": "小林我喜欢喝手冲咖啡，不太喝速溶的吗",
+   "answer_keywords": [
+    "我现在改喝速溶的了",
+    "手冲太麻烦"
+   ],
+   "expect_text": "我现在改喝速溶的了，手冲太麻烦",
+   "conflict_text": "我喜欢喝手冲咖啡，不太喝速溶的",
+   "top_k": 5
+  },
+  {
+   "id": "corr_f_sleep",
+   "scene": "dialogue",
+   "question": "小林一般几点睡觉",
+   "answer_keywords": [
+    "我现在改成十二点睡",
+    "八点起"
+   ],
+   "expect_text": "我现在改成十二点睡，八点起",
+   "conflict_text": "我一般十一点半睡觉，早上七点起",
+   "top_k": 5
+  },
+  {
+   "id": "corr_f_spicy",
+   "scene": "dialogue",
+   "question": "小林我很能吃辣，最爱重庆火锅吗",
+   "answer_keywords": [
+    "我最近不太能吃辣了",
+    "胃不太好"
+   ],
+   "expect_text": "我最近不太能吃辣了，胃不太好",
+   "conflict_text": "我很能吃辣，最爱重庆火锅",
+   "top_k": 5
+  },
+  {
+   "id": "corr_f_spicy",
+   "scene": "dialogue",
+   "question": "小林我很能吃辣，最爱重庆火锅吗",
+   "answer_keywords": [
+    "我最近不太能吃辣了",
+    "胃不太好"
+   ],
+   "expect_text": "我最近不太能吃辣了，胃不太好",
+   "conflict_text": "我很能吃辣，最爱重庆火锅",
+   "top_k": 5
+  },
+  {
+   "id": "corr_f_sleep",
+   "scene": "dialogue",
+   "question": "小林一般几点睡觉",
+   "answer_keywords": [
+    "我现在改成十二点睡",
+    "八点起"
+   ],
+   "expect_text": "我现在改成十二点睡，八点起",
+   "conflict_text": "我一般十一点半睡觉，早上七点起",
+   "top_k": 5
+  },
+  {
+   "id": "corr_f_dog",
+   "scene": "dialogue",
+   "question": "小林养了什么宠物",
+   "answer_keywords": [
+    "可乐其实是只柯基"
+   ],
+   "expect_text": "可乐其实是只柯基",
+   "conflict_text": "我养了一只金毛，叫可乐",
+   "top_k": 5
+  },
+  {
+   "id": "corr_f_coffee",
+   "scene": "dialogue",
+   "question": "小林我喜欢喝手冲咖啡，不太喝速溶的吗",
+   "answer_keywords": [
+    "我现在改喝速溶的了",
+    "手冲太麻烦"
+   ],
+   "expect_text": "我现在改喝速溶的了，手冲太麻烦",
+   "conflict_text": "我喜欢喝手冲咖啡，不太喝速溶的",
+   "top_k": 5
+  },
+  {
+   "id": "qa_40",
+   "scene": "dialogue",
+   "question": "问你个问题，我近视三百度，平时戴眼镜吗？",
+   "answer_keywords": [
+    "建议平时戴着眼镜",
+    "看远处更清楚",
+    "也避免眼睛疲劳哦"
+   ],
+   "expect_text": "建议平时戴着眼镜，看远处更清楚，也避免眼睛疲劳哦。",
+   "conflict_text": null,
+   "top_k": 5
+  },
+  {
+   "id": "qa_41",
+   "scene": "dialogue",
+   "question": "我喜欢喝手冲咖啡，不太喝速溶的吗，你知道吗？",
+   "answer_keywords": [
+    "好的",
+    "小林",
+    "我记下啦"
+   ],
+   "expect_text": "好的，小林，我记下啦——你喜欢手冲咖啡，不太喝速溶的，这个我之前不知道呢！",
+   "conflict_text": null,
+   "top_k": 5
+  },
+  {
+   "id": "qa_42",
+   "scene": "dialogue",
+   "question": "我每天通勤路上听英语播客吗，你知道吗？",
+   "answer_keywords": [
+    "好的",
+    "小林",
+    "我记下啦"
+   ],
+   "expect_text": "好的，小林，我记下啦——你每天通勤路上听英语播客，这个我之前不知道呢！",
+   "conflict_text": null,
+   "top_k": 5
+  },
+  {
+   "id": "qa_43",
+   "scene": "dialogue",
+   "question": "那我叫什么？",
+   "answer_keywords": [
+    "小林",
+    "你叫小林呀",
+    "这个我当然知道啦"
+   ],
+   "expect_text": "小林，你叫小林呀，这个我当然知道啦！",
+   "conflict_text": null,
+   "top_k": 5
+  },
+  {
+   "id": "qa_44",
+   "scene": "dialogue",
+   "question": "那我周末经常和朋友打篮球吗？",
+   "answer_keywords": [
+    "你周末经常和朋友打篮球",
+    "我记下啦"
+   ],
+   "expect_text": "是的，你周末经常和朋友打篮球——我记下啦！",
+   "conflict_text": null,
+   "top_k": 5
+  },
+  {
+   "id": "qa_45",
+   "scene": "dialogue",
+   "question": "问你个问题，我们计划明年结婚吗？",
+   "answer_keywords": [
+    "这个我可不清楚哦",
+    "毕竟我们还没聊过这个话题呢",
+    "不过有需要的话"
+   ],
+   "expect_text": "哈哈，这个我可不清楚哦，毕竟我们还没聊过这个话题呢！不过有需要的话，我很乐意陪你一起规划未来～",
+   "conflict_text": null,
+   "top_k": 5
+  },
+  {
+   "id": "qa_46",
+   "scene": "dialogue",
+   "question": "问你个问题，我偶尔玩塞尔达传说吗？",
+   "answer_keywords": [
+    "好的",
+    "小林",
+    "你偶尔会玩"
+   ],
+   "expect_text": "好的，小林——你偶尔会玩《塞尔达传说》。我记下啦。",
+   "conflict_text": null,
+   "top_k": 5
+  },
+  {
+   "id": "qa_47",
+   "scene": "dialogue",
+   "question": "问你个问题，我爸妈住在宁波吗？",
+   "answer_keywords": [
+    "你爸妈住在宁波",
+    "这个我记着呢"
+   ],
+   "expect_text": "是的，你爸妈住在宁波，这个我记着呢！",
+   "conflict_text": null,
+   "top_k": 5
+  },
+  {
+   "id": "qa_48",
+   "scene": "dialogue",
+   "question": "那我近视三百度，平时戴眼镜吗？",
+   "answer_keywords": [
+    "你近视三百度",
+    "平时记得戴眼镜哦",
+    "需要我提醒你注意用眼休息吗"
+   ],
+   "expect_text": "是的，你近视三百度，平时记得戴眼镜哦～ 需要我提醒你注意用眼休息吗？",
+   "conflict_text": null,
+   "top_k": 5
+  },
+  {
+   "id": "qa_49",
+   "scene": "dialogue",
+   "question": "问你个问题，我最近在读《三体》第三部吗？",
+   "answer_keywords": [
+    "你最近在读",
+    "三体",
+    "第三部呀"
+   ],
+   "expect_text": "你最近在读《三体》第三部呀，我记下啦～",
+   "conflict_text": null,
+   "top_k": 5
+  },
+  {
+   "id": "profile_0",
+   "scene": "dialogue",
+   "question": "小林平时有什么兴趣爱好",
+   "answer_keywords": [
+    "篮球",
+    "钢琴",
+    "摄影",
+    "塞尔达",
+    "胶片"
+   ],
+   "expect_text": null,
+   "conflict_text": null,
+   "top_k": 5
+  },
+  {
+   "id": "profile_1",
+   "scene": "dialogue",
+   "question": "小林早餐一般吃什么",
+   "answer_keywords": [
+    "全麦面包",
+    "鸡蛋"
+   ],
+   "expect_text": null,
+   "conflict_text": null,
+   "top_k": 5
+  }
+ ]
+}

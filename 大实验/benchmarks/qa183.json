@@ -1,0 +1,1804 @@
+{
+ "name": "qa183",
+ "documents": [
+  {
+   "id": "sports-d0",
+   "text": "user plays basketball every weekend"
+  },
+  {
+   "id": "sports-d1",
+   "text": "user is a member of the local tennis club"
+  },
+  {
+   "id": "sports-d2",
+   "text": "user goes swimming twice a week"
+  },
+  {
+   "id": "sports-d3",
+   "text": "user runs a half marathon every spring"
+  },
+  {
+   "id": "sports-d4",
+   "text": "user coaches the neighborhood football team"
+  },
+  {
+   "id": "food-d0",
+   "text": "user is allergic to peanuts"
+  },
+  {
+   "id": "food-d1",
+   "text": "user drinks green tea every morning"
+  },
+  {
+   "id": "food-d2",
+   "text": "user prefers spicy food over mild food"
+  },
+  {
+   "id": "food-d3",
+   "text": "user is a vegetarian"
+  },
+  {
+   "id": "food-d4",
+   "text": "user loves baking sourdough bread"
+  },
+  {
+   "id": "work-d0",
+   "text": "user works at a software company in berlin"
+  },
+  {
+   "id": "work-d1",
+   "text": "user is the team lead of the frontend team"
+  },
+  {
+   "id": "work-d2",
+   "text": "user has been with the company for six years"
+  },
+  {
+   "id": "work-d3",
+   "text": "user works remotely on fridays"
+  },
+  {
+   "id": "work-d4",
+   "text": "user is learning korean for work"
+  },
+  {
+   "id": "travel-d0",
+   "text": "user plans to visit japan next autumn"
+  },
+  {
+   "id": "travel-d1",
+   "text": "user prefers window seats on flights"
+  },
+  {
+   "id": "travel-d2",
+   "text": "user keeps a travel journal for every trip"
+  },
+  {
+   "id": "travel-d3",
+   "text": "user visited iceland last winter"
+  },
+  {
+   "id": "travel-d4",
+   "text": "user is saving for a trip to new zealand"
+  },
+  {
+   "id": "family-d0",
+   "text": "user has a younger sister named emma"
+  },
+  {
+   "id": "family-d1",
+   "text": "user's father is a retired teacher"
+  },
+  {
+   "id": "family-d2",
+   "text": "user has two cats named milo and luna"
+  },
+  {
+   "id": "family-d3",
+   "text": "user is married since 2019"
+  },
+  {
+   "id": "family-d4",
+   "text": "user's family celebrates christmas at home"
+  },
+  {
+   "id": "hobbies-d0",
+   "text": "user plays the piano since childhood"
+  },
+  {
+   "id": "hobbies-d1",
+   "text": "user collects vintage postage stamps"
+  },
+  {
+   "id": "hobbies-d2",
+   "text": "user does pottery classes on saturdays"
+  },
+  {
+   "id": "hobbies-d3",
+   "text": "user reads science fiction novels"
+  },
+  {
+   "id": "hobbies-d4",
+   "text": "user practices photography with a film camera"
+  },
+  {
+   "id": "health-d0",
+   "text": "user wears glasses since high school"
+  },
+  {
+   "id": "health-d1",
+   "text": "user gets eight hours of sleep every night"
+  },
+  {
+   "id": "health-d2",
+   "text": "user does yoga every morning"
+  },
+  {
+   "id": "health-d3",
+   "text": "user had surgery on their knee last year"
+  },
+  {
+   "id": "health-d4",
+   "text": "user avoids sugar for health reasons"
+  },
+  {
+   "id": "tech-d0",
+   "text": "user prefers linux over windows"
+  },
+  {
+   "id": "tech-d1",
+   "text": "user owns a mechanical keyboard with blue switches"
+  },
+  {
+   "id": "tech-d2",
+   "text": "user is learning rust programming language"
+  },
+  {
+   "id": "tech-d3",
+   "text": "user self-hosts a media server"
+  },
+  {
+   "id": "tech-d4",
+   "text": "user has a dual monitor setup at home"
+  },
+  {
+   "id": "pets-d0",
+   "text": "user has a golden retriever named buddy"
+  },
+  {
+   "id": "pets-d1",
+   "text": "user takes the dog for a walk twice a day"
+  },
+  {
+   "id": "pets-d2",
+   "text": "user's cat is afraid of thunder"
+  },
+  {
+   "id": "pets-d3",
+   "text": "user adopted a rescue parrot last year"
+  },
+  {
+   "id": "pets-d4",
+   "text": "user feeds the fish every morning"
+  },
+  {
+   "id": "study-d0",
+   "text": "user is studying for a master degree in economics"
+  },
+  {
+   "id": "study-d1",
+   "text": "user has classes on tuesdays and thursdays"
+  },
+  {
+   "id": "study-d2",
+   "text": "user is writing a thesis about urban planning"
+  },
+  {
+   "id": "study-d3",
+   "text": "user studies in the library every evening"
+  },
+  {
+   "id": "study-d4",
+   "text": "user has a study group with three friends"
+  }
+ ],
+ "queries": [
+  {
+   "q": "what sport does the user play on weekends",
+   "expect": [
+    "sports-d0"
+   ],
+   "top_k": 5,
+   "topic": "sports"
+  },
+  {
+   "q": "which club does the user belong to",
+   "expect": [
+    "sports-d1"
+   ],
+   "top_k": 5,
+   "topic": "sports"
+  },
+  {
+   "q": "how often does the user swim",
+   "expect": [
+    "sports-d2"
+   ],
+   "top_k": 5,
+   "topic": "sports"
+  },
+  {
+   "q": "does the user run marathons",
+   "expect": [
+    "sports-d3"
+   ],
+   "top_k": 5,
+   "topic": "sports"
+  },
+  {
+   "q": "what team does the user coach",
+   "expect": [
+    "sports-d4"
+   ],
+   "top_k": 5,
+   "topic": "sports"
+  },
+  {
+   "q": "what is the user allergic to",
+   "expect": [
+    "food-d0"
+   ],
+   "top_k": 5,
+   "topic": "food"
+  },
+  {
+   "q": "what does the user drink in the morning",
+   "expect": [
+    "food-d1"
+   ],
+   "top_k": 5,
+   "topic": "food"
+  },
+  {
+   "q": "does the user like spicy food",
+   "expect": [
+    "food-d2"
+   ],
+   "top_k": 5,
+   "topic": "food"
+  },
+  {
+   "q": "is the user a vegetarian",
+   "expect": [
+    "food-d3"
+   ],
+   "top_k": 5,
+   "topic": "food"
+  },
+  {
+   "q": "what does the user love baking",
+   "expect": [
+    "food-d4"
+   ],
+   "top_k": 5,
+   "topic": "food"
+  },
+  {
+   "q": "where does the user work",
+   "expect": [
+    "work-d0"
+   ],
+   "top_k": 5,
+   "topic": "work"
+  },
+  {
+   "q": "what team does the user lead",
+   "expect": [
+    "work-d1"
+   ],
+   "top_k": 5,
+   "topic": "work"
+  },
+  {
+   "q": "how long has the user been at the company",
+   "expect": [
+    "work-d2"
+   ],
+   "top_k": 5,
+   "topic": "work"
+  },
+  {
+   "q": "which day does the user work remotely",
+   "expect": [
+    "work-d3"
+   ],
+   "top_k": 5,
+   "topic": "work"
+  },
+  {
+   "q": "what language is the user learning",
+   "expect": [
+    "work-d4"
+   ],
+   "top_k": 5,
+   "topic": "work"
+  },
+  {
+   "q": "where is the user planning to travel",
+   "expect": [
+    "travel-d0"
+   ],
+   "top_k": 5,
+   "topic": "travel"
+  },
+  {
+   "q": "which seat does the user prefer",
+   "expect": [
+    "travel-d1"
+   ],
+   "top_k": 5,
+   "topic": "travel"
+  },
+  {
+   "q": "what does the user keep for every trip",
+   "expect": [
+    "travel-d2"
+   ],
+   "top_k": 5,
+   "topic": "travel"
+  },
+  {
+   "q": "where did the user go last winter",
+   "expect": [
+    "travel-d3"
+   ],
+   "top_k": 5,
+   "topic": "travel"
+  },
+  {
+   "q": "what is the user saving up for",
+   "expect": [
+    "travel-d4"
+   ],
+   "top_k": 5,
+   "topic": "travel"
+  },
+  {
+   "q": "who is emma to the user",
+   "expect": [
+    "family-d0"
+   ],
+   "top_k": 5,
+   "topic": "family"
+  },
+  {
+   "q": "what did the user's father do before retiring",
+   "expect": [
+    "family-d1"
+   ],
+   "top_k": 5,
+   "topic": "family"
+  },
+  {
+   "q": "what are the user's cats named",
+   "expect": [
+    "family-d2"
+   ],
+   "top_k": 5,
+   "topic": "family"
+  },
+  {
+   "q": "since when is the user married",
+   "expect": [
+    "family-d3"
+   ],
+   "top_k": 5,
+   "topic": "family"
+  },
+  {
+   "q": "where does the user's family celebrate christmas",
+   "expect": [
+    "family-d4"
+   ],
+   "top_k": 5,
+   "topic": "family"
+  },
+  {
+   "q": "what instrument does the user play",
+   "expect": [
+    "hobbies-d0"
+   ],
+   "top_k": 5,
+   "topic": "hobbies"
+  },
+  {
+   "q": "what does the user collect",
+   "expect": [
+    "hobbies-d1"
+   ],
+   "top_k": 5,
+   "topic": "hobbies"
+  },
+  {
+   "q": "what does the user do on saturdays",
+   "expect": [
+    "hobbies-d2"
+   ],
+   "top_k": 5,
+   "topic": "hobbies"
+  },
+  {
+   "q": "what genre of books does the user read",
+   "expect": [
+    "hobbies-d3"
+   ],
+   "top_k": 5,
+   "topic": "hobbies"
+  },
+  {
+   "q": "what kind of camera does the user use",
+   "expect": [
+    "hobbies-d4"
+   ],
+   "top_k": 5,
+   "topic": "hobbies"
+  },
+  {
+   "q": "since when does the user wear glasses",
+   "expect": [
+    "health-d0"
+   ],
+   "top_k": 5,
+   "topic": "health"
+  },
+  {
+   "q": "how much sleep does the user get",
+   "expect": [
+    "health-d1"
+   ],
+   "top_k": 5,
+   "topic": "health"
+  },
+  {
+   "q": "what exercise does the user do in the morning",
+   "expect": [
+    "health-d2"
+   ],
+   "top_k": 5,
+   "topic": "health"
+  },
+  {
+   "q": "what did the user have surgery on",
+   "expect": [
+    "health-d3"
+   ],
+   "top_k": 5,
+   "topic": "health"
+  },
+  {
+   "q": "why does the user avoid sugar",
+   "expect": [
+    "health-d4"
+   ],
+   "top_k": 5,
+   "topic": "health"
+  },
+  {
+   "q": "which operating system does the user prefer",
+   "expect": [
+    "tech-d0"
+   ],
+   "top_k": 5,
+   "topic": "tech"
+  },
+  {
+   "q": "what kind of keyboard does the user own",
+   "expect": [
+    "tech-d1"
+   ],
+   "top_k": 5,
+   "topic": "tech"
+  },
+  {
+   "q": "what programming language is the user learning",
+   "expect": [
+    "tech-d2"
+   ],
+   "top_k": 5,
+   "topic": "tech"
+  },
+  {
+   "q": "what does the user self-host",
+   "expect": [
+    "tech-d3"
+   ],
+   "top_k": 5,
+   "topic": "tech"
+  },
+  {
+   "q": "what is the user's setup at home",
+   "expect": [
+    "tech-d4"
+   ],
+   "top_k": 5,
+   "topic": "tech"
+  },
+  {
+   "q": "what dog does the user have",
+   "expect": [
+    "pets-d0"
+   ],
+   "top_k": 5,
+   "topic": "pets"
+  },
+  {
+   "q": "how often does the user walk the dog",
+   "expect": [
+    "pets-d1"
+   ],
+   "top_k": 5,
+   "topic": "pets"
+  },
+  {
+   "q": "what is the user's cat afraid of",
+   "expect": [
+    "pets-d2"
+   ],
+   "top_k": 5,
+   "topic": "pets"
+  },
+  {
+   "q": "what bird did the user adopt",
+   "expect": [
+    "pets-d3"
+   ],
+   "top_k": 5,
+   "topic": "pets"
+  },
+  {
+   "q": "when does the user feed the fish",
+   "expect": [
+    "pets-d4"
+   ],
+   "top_k": 5,
+   "topic": "pets"
+  },
+  {
+   "q": "what degree is the user studying for",
+   "expect": [
+    "study-d0"
+   ],
+   "top_k": 5,
+   "topic": "study"
+  },
+  {
+   "q": "on which days does the user have classes",
+   "expect": [
+    "study-d1"
+   ],
+   "top_k": 5,
+   "topic": "study"
+  },
+  {
+   "q": "what is the user's thesis about",
+   "expect": [
+    "study-d2"
+   ],
+   "top_k": 5,
+   "topic": "study"
+  },
+  {
+   "q": "where does the user study in the evening",
+   "expect": [
+    "study-d3"
+   ],
+   "top_k": 5,
+   "topic": "study"
+  },
+  {
+   "q": "how many friends are in the user's study group",
+   "expect": [
+    "study-d4"
+   ],
+   "top_k": 5,
+   "topic": "study"
+  },
+  {
+   "q": "what sport does the user play on weekends",
+   "expect": [
+    "sports-d0"
+   ],
+   "top_k": 5,
+   "topic": "sports",
+   "repeat": true
+  },
+  {
+   "q": "what does the user drink in the morning",
+   "expect": [
+    "food-d1"
+   ],
+   "top_k": 5,
+   "topic": "food",
+   "repeat": true
+  },
+  {
+   "q": "how long has the user been at the company",
+   "expect": [
+    "work-d2"
+   ],
+   "top_k": 5,
+   "topic": "work",
+   "repeat": true
+  },
+  {
+   "q": "where did the user go last winter",
+   "expect": [
+    "travel-d3"
+   ],
+   "top_k": 5,
+   "topic": "travel",
+   "repeat": true
+  },
+  {
+   "q": "where does the user's family celebrate christmas",
+   "expect": [
+    "family-d4"
+   ],
+   "top_k": 5,
+   "topic": "family",
+   "repeat": true
+  },
+  {
+   "q": "what instrument does the user play",
+   "expect": [
+    "hobbies-d0"
+   ],
+   "top_k": 5,
+   "topic": "hobbies",
+   "repeat": true
+  },
+  {
+   "q": "how much sleep does the user get",
+   "expect": [
+    "health-d1"
+   ],
+   "top_k": 5,
+   "topic": "health",
+   "repeat": true
+  },
+  {
+   "q": "what programming language is the user learning",
+   "expect": [
+    "tech-d2"
+   ],
+   "top_k": 5,
+   "topic": "tech",
+   "repeat": true
+  },
+  {
+   "q": "what bird did the user adopt",
+   "expect": [
+    "pets-d3"
+   ],
+   "top_k": 5,
+   "topic": "pets",
+   "repeat": true
+  },
+  {
+   "q": "how many friends are in the user's study group",
+   "expect": [
+    "study-d4"
+   ],
+   "top_k": 5,
+   "topic": "study",
+   "repeat": true
+  },
+  {
+   "q": "what sport does the user play on weekends",
+   "expect": [
+    "sports-d0"
+   ],
+   "top_k": 5,
+   "topic": "sports",
+   "repeat": true
+  },
+  {
+   "q": "what does the user drink in the morning",
+   "expect": [
+    "food-d1"
+   ],
+   "top_k": 5,
+   "topic": "food",
+   "repeat": true
+  },
+  {
+   "q": "how long has the user been at the company",
+   "expect": [
+    "work-d2"
+   ],
+   "top_k": 5,
+   "topic": "work",
+   "repeat": true
+  },
+  {
+   "q": "where did the user go last winter",
+   "expect": [
+    "travel-d3"
+   ],
+   "top_k": 5,
+   "topic": "travel",
+   "repeat": true
+  },
+  {
+   "q": "where does the user's family celebrate christmas",
+   "expect": [
+    "family-d4"
+   ],
+   "top_k": 5,
+   "topic": "family",
+   "repeat": true
+  },
+  {
+   "q": "what instrument does the user play",
+   "expect": [
+    "hobbies-d0"
+   ],
+   "top_k": 5,
+   "topic": "hobbies",
+   "repeat": true
+  },
+  {
+   "q": "how much sleep does the user get",
+   "expect": [
+    "health-d1"
+   ],
+   "top_k": 5,
+   "topic": "health",
+   "repeat": true
+  },
+  {
+   "q": "what programming language is the user learning",
+   "expect": [
+    "tech-d2"
+   ],
+   "top_k": 5,
+   "topic": "tech",
+   "repeat": true
+  },
+  {
+   "q": "what bird did the user adopt",
+   "expect": [
+    "pets-d3"
+   ],
+   "top_k": 5,
+   "topic": "pets",
+   "repeat": true
+  },
+  {
+   "q": "how many friends are in the user's study group",
+   "expect": [
+    "study-d4"
+   ],
+   "top_k": 5,
+   "topic": "study",
+   "repeat": true
+  },
+  {
+   "q": "what sport does the user play on weekends",
+   "expect": [
+    "sports-d0"
+   ],
+   "top_k": 5,
+   "topic": "sports",
+   "repeat": true
+  },
+  {
+   "q": "what does the user drink in the morning",
+   "expect": [
+    "food-d1"
+   ],
+   "top_k": 5,
+   "topic": "food",
+   "repeat": true
+  },
+  {
+   "q": "how long has the user been at the company",
+   "expect": [
+    "work-d2"
+   ],
+   "top_k": 5,
+   "topic": "work",
+   "repeat": true
+  },
+  {
+   "q": "where did the user go last winter",
+   "expect": [
+    "travel-d3"
+   ],
+   "top_k": 5,
+   "topic": "travel",
+   "repeat": true
+  },
+  {
+   "q": "where does the user's family celebrate christmas",
+   "expect": [
+    "family-d4"
+   ],
+   "top_k": 5,
+   "topic": "family",
+   "repeat": true
+  },
+  {
+   "q": "what instrument does the user play",
+   "expect": [
+    "hobbies-d0"
+   ],
+   "top_k": 5,
+   "topic": "hobbies",
+   "repeat": true
+  },
+  {
+   "q": "how much sleep does the user get",
+   "expect": [
+    "health-d1"
+   ],
+   "top_k": 5,
+   "topic": "health",
+   "repeat": true
+  },
+  {
+   "q": "what programming language is the user learning",
+   "expect": [
+    "tech-d2"
+   ],
+   "top_k": 5,
+   "topic": "tech",
+   "repeat": true
+  },
+  {
+   "q": "what bird did the user adopt",
+   "expect": [
+    "pets-d3"
+   ],
+   "top_k": 5,
+   "topic": "pets",
+   "repeat": true
+  },
+  {
+   "q": "how many friends are in the user's study group",
+   "expect": [
+    "study-d4"
+   ],
+   "top_k": 5,
+   "topic": "study",
+   "repeat": true
+  },
+  {
+   "q": "what sport does the user play on weekends",
+   "expect": [
+    "sports-d0"
+   ],
+   "top_k": 5,
+   "topic": "sports",
+   "repeat": true
+  },
+  {
+   "q": "what does the user drink in the morning",
+   "expect": [
+    "food-d1"
+   ],
+   "top_k": 5,
+   "topic": "food",
+   "repeat": true
+  },
+  {
+   "q": "how long has the user been at the company",
+   "expect": [
+    "work-d2"
+   ],
+   "top_k": 5,
+   "topic": "work",
+   "repeat": true
+  },
+  {
+   "q": "where did the user go last winter",
+   "expect": [
+    "travel-d3"
+   ],
+   "top_k": 5,
+   "topic": "travel",
+   "repeat": true
+  },
+  {
+   "q": "where does the user's family celebrate christmas",
+   "expect": [
+    "family-d4"
+   ],
+   "top_k": 5,
+   "topic": "family",
+   "repeat": true
+  },
+  {
+   "q": "what instrument does the user play",
+   "expect": [
+    "hobbies-d0"
+   ],
+   "top_k": 5,
+   "topic": "hobbies",
+   "repeat": true
+  },
+  {
+   "q": "how much sleep does the user get",
+   "expect": [
+    "health-d1"
+   ],
+   "top_k": 5,
+   "topic": "health",
+   "repeat": true
+  },
+  {
+   "q": "what programming language is the user learning",
+   "expect": [
+    "tech-d2"
+   ],
+   "top_k": 5,
+   "topic": "tech",
+   "repeat": true
+  },
+  {
+   "q": "what bird did the user adopt",
+   "expect": [
+    "pets-d3"
+   ],
+   "top_k": 5,
+   "topic": "pets",
+   "repeat": true
+  },
+  {
+   "q": "how many friends are in the user's study group",
+   "expect": [
+    "study-d4"
+   ],
+   "top_k": 5,
+   "topic": "study",
+   "repeat": true
+  },
+  {
+   "q": "what sport does the user play on weekends",
+   "expect": [
+    "sports-d0"
+   ],
+   "top_k": 5,
+   "topic": "sports",
+   "repeat": true
+  },
+  {
+   "q": "what does the user drink in the morning",
+   "expect": [
+    "food-d1"
+   ],
+   "top_k": 5,
+   "topic": "food",
+   "repeat": true
+  },
+  {
+   "q": "how long has the user been at the company",
+   "expect": [
+    "work-d2"
+   ],
+   "top_k": 5,
+   "topic": "work",
+   "repeat": true
+  },
+  {
+   "q": "where did the user go last winter",
+   "expect": [
+    "travel-d3"
+   ],
+   "top_k": 5,
+   "topic": "travel",
+   "repeat": true
+  },
+  {
+   "q": "where does the user's family celebrate christmas",
+   "expect": [
+    "family-d4"
+   ],
+   "top_k": 5,
+   "topic": "family",
+   "repeat": true
+  },
+  {
+   "q": "what instrument does the user play",
+   "expect": [
+    "hobbies-d0"
+   ],
+   "top_k": 5,
+   "topic": "hobbies",
+   "repeat": true
+  },
+  {
+   "q": "how much sleep does the user get",
+   "expect": [
+    "health-d1"
+   ],
+   "top_k": 5,
+   "topic": "health",
+   "repeat": true
+  },
+  {
+   "q": "what programming language is the user learning",
+   "expect": [
+    "tech-d2"
+   ],
+   "top_k": 5,
+   "topic": "tech",
+   "repeat": true
+  },
+  {
+   "q": "what bird did the user adopt",
+   "expect": [
+    "pets-d3"
+   ],
+   "top_k": 5,
+   "topic": "pets",
+   "repeat": true
+  },
+  {
+   "q": "how many friends are in the user's study group",
+   "expect": [
+    "study-d4"
+   ],
+   "top_k": 5,
+   "topic": "study",
+   "repeat": true
+  },
+  {
+   "q": "what sport does the user play on weekends",
+   "expect": [
+    "sports-d0"
+   ],
+   "top_k": 5,
+   "topic": "sports",
+   "repeat": true
+  },
+  {
+   "q": "what does the user drink in the morning",
+   "expect": [
+    "food-d1"
+   ],
+   "top_k": 5,
+   "topic": "food",
+   "repeat": true
+  },
+  {
+   "q": "how long has the user been at the company",
+   "expect": [
+    "work-d2"
+   ],
+   "top_k": 5,
+   "topic": "work",
+   "repeat": true
+  },
+  {
+   "q": "where did the user go last winter",
+   "expect": [
+    "travel-d3"
+   ],
+   "top_k": 5,
+   "topic": "travel",
+   "repeat": true
+  },
+  {
+   "q": "where does the user's family celebrate christmas",
+   "expect": [
+    "family-d4"
+   ],
+   "top_k": 5,
+   "topic": "family",
+   "repeat": true
+  },
+  {
+   "q": "what instrument does the user play",
+   "expect": [
+    "hobbies-d0"
+   ],
+   "top_k": 5,
+   "topic": "hobbies",
+   "repeat": true
+  },
+  {
+   "q": "how much sleep does the user get",
+   "expect": [
+    "health-d1"
+   ],
+   "top_k": 5,
+   "topic": "health",
+   "repeat": true
+  },
+  {
+   "q": "what programming language is the user learning",
+   "expect": [
+    "tech-d2"
+   ],
+   "top_k": 5,
+   "topic": "tech",
+   "repeat": true
+  },
+  {
+   "q": "what bird did the user adopt",
+   "expect": [
+    "pets-d3"
+   ],
+   "top_k": 5,
+   "topic": "pets",
+   "repeat": true
+  },
+  {
+   "q": "how many friends are in the user's study group",
+   "expect": [
+    "study-d4"
+   ],
+   "top_k": 5,
+   "topic": "study",
+   "repeat": true
+  },
+  {
+   "q": "what sport does the user play on weekends",
+   "expect": [
+    "sports-d0"
+   ],
+   "top_k": 5,
+   "topic": "sports",
+   "repeat": true
+  },
+  {
+   "q": "what does the user drink in the morning",
+   "expect": [
+    "food-d1"
+   ],
+   "top_k": 5,
+   "topic": "food",
+   "repeat": true
+  },
+  {
+   "q": "how long has the user been at the company",
+   "expect": [
+    "work-d2"
+   ],
+   "top_k": 5,
+   "topic": "work",
+   "repeat": true
+  },
+  {
+   "q": "where did the user go last winter",
+   "expect": [
+    "travel-d3"
+   ],
+   "top_k": 5,
+   "topic": "travel",
+   "repeat": true
+  },
+  {
+   "q": "where does the user's family celebrate christmas",
+   "expect": [
+    "family-d4"
+   ],
+   "top_k": 5,
+   "topic": "family",
+   "repeat": true
+  },
+  {
+   "q": "what instrument does the user play",
+   "expect": [
+    "hobbies-d0"
+   ],
+   "top_k": 5,
+   "topic": "hobbies",
+   "repeat": true
+  },
+  {
+   "q": "how much sleep does the user get",
+   "expect": [
+    "health-d1"
+   ],
+   "top_k": 5,
+   "topic": "health",
+   "repeat": true
+  },
+  {
+   "q": "what programming language is the user learning",
+   "expect": [
+    "tech-d2"
+   ],
+   "top_k": 5,
+   "topic": "tech",
+   "repeat": true
+  },
+  {
+   "q": "what bird did the user adopt",
+   "expect": [
+    "pets-d3"
+   ],
+   "top_k": 5,
+   "topic": "pets",
+   "repeat": true
+  },
+  {
+   "q": "how many friends are in the user's study group",
+   "expect": [
+    "study-d4"
+   ],
+   "top_k": 5,
+   "topic": "study",
+   "repeat": true
+  },
+  {
+   "q": "what sport does the user play on weekends",
+   "expect": [
+    "sports-d0"
+   ],
+   "top_k": 5,
+   "topic": "sports",
+   "repeat": true
+  },
+  {
+   "q": "what does the user drink in the morning",
+   "expect": [
+    "food-d1"
+   ],
+   "top_k": 5,
+   "topic": "food",
+   "repeat": true
+  },
+  {
+   "q": "how long has the user been at the company",
+   "expect": [
+    "work-d2"
+   ],
+   "top_k": 5,
+   "topic": "work",
+   "repeat": true
+  },
+  {
+   "q": "where did the user go last winter",
+   "expect": [
+    "travel-d3"
+   ],
+   "top_k": 5,
+   "topic": "travel",
+   "repeat": true
+  },
+  {
+   "q": "where does the user's family celebrate christmas",
+   "expect": [
+    "family-d4"
+   ],
+   "top_k": 5,
+   "topic": "family",
+   "repeat": true
+  },
+  {
+   "q": "what instrument does the user play",
+   "expect": [
+    "hobbies-d0"
+   ],
+   "top_k": 5,
+   "topic": "hobbies",
+   "repeat": true
+  },
+  {
+   "q": "how much sleep does the user get",
+   "expect": [
+    "health-d1"
+   ],
+   "top_k": 5,
+   "topic": "health",
+   "repeat": true
+  },
+  {
+   "q": "what programming language is the user learning",
+   "expect": [
+    "tech-d2"
+   ],
+   "top_k": 5,
+   "topic": "tech",
+   "repeat": true
+  },
+  {
+   "q": "what bird did the user adopt",
+   "expect": [
+    "pets-d3"
+   ],
+   "top_k": 5,
+   "topic": "pets",
+   "repeat": true
+  },
+  {
+   "q": "how many friends are in the user's study group",
+   "expect": [
+    "study-d4"
+   ],
+   "top_k": 5,
+   "topic": "study",
+   "repeat": true
+  },
+  {
+   "q": "what sport does the user play on weekends",
+   "expect": [
+    "sports-d0"
+   ],
+   "top_k": 5,
+   "topic": "sports",
+   "repeat": true
+  },
+  {
+   "q": "what does the user drink in the morning",
+   "expect": [
+    "food-d1"
+   ],
+   "top_k": 5,
+   "topic": "food",
+   "repeat": true
+  },
+  {
+   "q": "how long has the user been at the company",
+   "expect": [
+    "work-d2"
+   ],
+   "top_k": 5,
+   "topic": "work",
+   "repeat": true
+  },
+  {
+   "q": "where did the user go last winter",
+   "expect": [
+    "travel-d3"
+   ],
+   "top_k": 5,
+   "topic": "travel",
+   "repeat": true
+  },
+  {
+   "q": "where does the user's family celebrate christmas",
+   "expect": [
+    "family-d4"
+   ],
+   "top_k": 5,
+   "topic": "family",
+   "repeat": true
+  },
+  {
+   "q": "what instrument does the user play",
+   "expect": [
+    "hobbies-d0"
+   ],
+   "top_k": 5,
+   "topic": "hobbies",
+   "repeat": true
+  },
+  {
+   "q": "how much sleep does the user get",
+   "expect": [
+    "health-d1"
+   ],
+   "top_k": 5,
+   "topic": "health",
+   "repeat": true
+  },
+  {
+   "q": "what programming language is the user learning",
+   "expect": [
+    "tech-d2"
+   ],
+   "top_k": 5,
+   "topic": "tech",
+   "repeat": true
+  },
+  {
+   "q": "what bird did the user adopt",
+   "expect": [
+    "pets-d3"
+   ],
+   "top_k": 5,
+   "topic": "pets",
+   "repeat": true
+  },
+  {
+   "q": "how many friends are in the user's study group",
+   "expect": [
+    "study-d4"
+   ],
+   "top_k": 5,
+   "topic": "study",
+   "repeat": true
+  },
+  {
+   "q": "what sport does the user play on weekends",
+   "expect": [
+    "sports-d0"
+   ],
+   "top_k": 5,
+   "topic": "sports",
+   "repeat": true
+  },
+  {
+   "q": "what does the user drink in the morning",
+   "expect": [
+    "food-d1"
+   ],
+   "top_k": 5,
+   "topic": "food",
+   "repeat": true
+  },
+  {
+   "q": "how long has the user been at the company",
+   "expect": [
+    "work-d2"
+   ],
+   "top_k": 5,
+   "topic": "work",
+   "repeat": true
+  },
+  {
+   "q": "where did the user go last winter",
+   "expect": [
+    "travel-d3"
+   ],
+   "top_k": 5,
+   "topic": "travel",
+   "repeat": true
+  },
+  {
+   "q": "where does the user's family celebrate christmas",
+   "expect": [
+    "family-d4"
+   ],
+   "top_k": 5,
+   "topic": "family",
+   "repeat": true
+  },
+  {
+   "q": "what instrument does the user play",
+   "expect": [
+    "hobbies-d0"
+   ],
+   "top_k": 5,
+   "topic": "hobbies",
+   "repeat": true
+  },
+  {
+   "q": "how much sleep does the user get",
+   "expect": [
+    "health-d1"
+   ],
+   "top_k": 5,
+   "topic": "health",
+   "repeat": true
+  },
+  {
+   "q": "what programming language is the user learning",
+   "expect": [
+    "tech-d2"
+   ],
+   "top_k": 5,
+   "topic": "tech",
+   "repeat": true
+  },
+  {
+   "q": "what bird did the user adopt",
+   "expect": [
+    "pets-d3"
+   ],
+   "top_k": 5,
+   "topic": "pets",
+   "repeat": true
+  },
+  {
+   "q": "how many friends are in the user's study group",
+   "expect": [
+    "study-d4"
+   ],
+   "top_k": 5,
+   "topic": "study",
+   "repeat": true
+  },
+  {
+   "q": "what sport does the user play on weekends",
+   "expect": [
+    "sports-d0"
+   ],
+   "top_k": 5,
+   "topic": "sports",
+   "repeat": true
+  },
+  {
+   "q": "what does the user drink in the morning",
+   "expect": [
+    "food-d1"
+   ],
+   "top_k": 5,
+   "topic": "food",
+   "repeat": true
+  },
+  {
+   "q": "how long has the user been at the company",
+   "expect": [
+    "work-d2"
+   ],
+   "top_k": 5,
+   "topic": "work",
+   "repeat": true
+  },
+  {
+   "q": "where did the user go last winter",
+   "expect": [
+    "travel-d3"
+   ],
+   "top_k": 5,
+   "topic": "travel",
+   "repeat": true
+  },
+  {
+   "q": "where does the user's family celebrate christmas",
+   "expect": [
+    "family-d4"
+   ],
+   "top_k": 5,
+   "topic": "family",
+   "repeat": true
+  },
+  {
+   "q": "what instrument does the user play",
+   "expect": [
+    "hobbies-d0"
+   ],
+   "top_k": 5,
+   "topic": "hobbies",
+   "repeat": true
+  },
+  {
+   "q": "how much sleep does the user get",
+   "expect": [
+    "health-d1"
+   ],
+   "top_k": 5,
+   "topic": "health",
+   "repeat": true
+  },
+  {
+   "q": "what programming language is the user learning",
+   "expect": [
+    "tech-d2"
+   ],
+   "top_k": 5,
+   "topic": "tech",
+   "repeat": true
+  },
+  {
+   "q": "what bird did the user adopt",
+   "expect": [
+    "pets-d3"
+   ],
+   "top_k": 5,
+   "topic": "pets",
+   "repeat": true
+  },
+  {
+   "q": "how many friends are in the user's study group",
+   "expect": [
+    "study-d4"
+   ],
+   "top_k": 5,
+   "topic": "study",
+   "repeat": true
+  },
+  {
+   "q": "what sport does the user play on weekends",
+   "expect": [
+    "sports-d0"
+   ],
+   "top_k": 5,
+   "topic": "sports",
+   "repeat": true
+  },
+  {
+   "q": "what does the user drink in the morning",
+   "expect": [
+    "food-d1"
+   ],
+   "top_k": 5,
+   "topic": "food",
+   "repeat": true
+  },
+  {
+   "q": "how long has the user been at the company",
+   "expect": [
+    "work-d2"
+   ],
+   "top_k": 5,
+   "topic": "work",
+   "repeat": true
+  },
+  {
+   "q": "where did the user go last winter",
+   "expect": [
+    "travel-d3"
+   ],
+   "top_k": 5,
+   "topic": "travel",
+   "repeat": true
+  },
+  {
+   "q": "where does the user's family celebrate christmas",
+   "expect": [
+    "family-d4"
+   ],
+   "top_k": 5,
+   "topic": "family",
+   "repeat": true
+  },
+  {
+   "q": "what instrument does the user play",
+   "expect": [
+    "hobbies-d0"
+   ],
+   "top_k": 5,
+   "topic": "hobbies",
+   "repeat": true
+  },
+  {
+   "q": "how much sleep does the user get",
+   "expect": [
+    "health-d1"
+   ],
+   "top_k": 5,
+   "topic": "health",
+   "repeat": true
+  },
+  {
+   "q": "what programming language is the user learning",
+   "expect": [
+    "tech-d2"
+   ],
+   "top_k": 5,
+   "topic": "tech",
+   "repeat": true
+  },
+  {
+   "q": "what bird did the user adopt",
+   "expect": [
+    "pets-d3"
+   ],
+   "top_k": 5,
+   "topic": "pets",
+   "repeat": true
+  },
+  {
+   "q": "how many friends are in the user's study group",
+   "expect": [
+    "study-d4"
+   ],
+   "top_k": 5,
+   "topic": "study",
+   "repeat": true
+  },
+  {
+   "q": "what sport does the user play on weekends",
+   "expect": [
+    "sports-d0"
+   ],
+   "top_k": 5,
+   "topic": "sports",
+   "repeat": true
+  },
+  {
+   "q": "what does the user drink in the morning",
+   "expect": [
+    "food-d1"
+   ],
+   "top_k": 5,
+   "topic": "food",
+   "repeat": true
+  },
+  {
+   "q": "how long has the user been at the company",
+   "expect": [
+    "work-d2"
+   ],
+   "top_k": 5,
+   "topic": "work",
+   "repeat": true
+  },
+  {
+   "q": "where did the user go last winter",
+   "expect": [
+    "travel-d3"
+   ],
+   "top_k": 5,
+   "topic": "travel",
+   "repeat": true
+  },
+  {
+   "q": "where does the user's family celebrate christmas",
+   "expect": [
+    "family-d4"
+   ],
+   "top_k": 5,
+   "topic": "family",
+   "repeat": true
+  },
+  {
+   "q": "what instrument does the user play",
+   "expect": [
+    "hobbies-d0"
+   ],
+   "top_k": 5,
+   "topic": "hobbies",
+   "repeat": true
+  },
+  {
+   "q": "how much sleep does the user get",
+   "expect": [
+    "health-d1"
+   ],
+   "top_k": 5,
+   "topic": "health",
+   "repeat": true
+  },
+  {
+   "q": "what programming language is the user learning",
+   "expect": [
+    "tech-d2"
+   ],
+   "top_k": 5,
+   "topic": "tech",
+   "repeat": true
+  },
+  {
+   "q": "what bird did the user adopt",
+   "expect": [
+    "pets-d3"
+   ],
+   "top_k": 5,
+   "topic": "pets",
+   "repeat": true
+  },
+  {
+   "q": "how many friends are in the user's study group",
+   "expect": [
+    "study-d4"
+   ],
+   "top_k": 5,
+   "topic": "study",
+   "repeat": true
+  },
+  {
+   "q": "what sport does the user play on weekends",
+   "expect": [
+    "sports-d0"
+   ],
+   "top_k": 5,
+   "topic": "sports",
+   "repeat": true
+  },
+  {
+   "q": "what does the user drink in the morning",
+   "expect": [
+    "food-d1"
+   ],
+   "top_k": 5,
+   "topic": "food",
+   "repeat": true
+  },
+  {
+   "q": "how long has the user been at the company",
+   "expect": [
+    "work-d2"
+   ],
+   "top_k": 5,
+   "topic": "work",
+   "repeat": true
+  }
+ ]
+}
