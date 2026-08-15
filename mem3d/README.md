@@ -29,7 +29,7 @@
 你与 AI 聊天（DeepSeek Harness）
         │ 会话事件（自动捕获 user / assistant 消息，过滤 thinking）
         ▼
-host-plugin.js ──懒启动/复用──▶ bridge.py（127.0.0.1:8756）
+host-plugin.js ──启动预拉起/懒启动兜底/复用──▶ bridge.py（127.0.0.1:8756）
         ▲                            │ 多模式引擎（各自独立存储）
         │ Package 私有 RPC           ▼
 client-plugin.js ◀── 2.5s 轮询 ── PCA 三维投影场景 JSON
@@ -114,7 +114,7 @@ UI 和工具都会明确提示；切回旧模式则恢复原记忆。
 ```
 
 新会话在启动页选择「3D记忆模式」preset 后，记忆工具（sme3d_remember /
-sme3d_recall / sme3d_mode / sme3d_status）、对话自动写入、边车懒启动全部
+sme3d_recall / sme3d_mode / sme3d_status）、对话自动写入、边车启动预拉起全部
 随会话自动运行。注意该 preset 中 cordis 动态插件工具已禁用（其 Inspect
 provider 为进程全局注册，与其他 cordis 会话同时挂载会冲突）；需要动态
 插件能力时请开一个「创造模式」会话。
@@ -163,8 +163,9 @@ Slot id 时以动态插件优先（动态加载晚于 bundle）；若想只留�
 ## 6. 注意事项
 
 - **不碰 sme 源码**：本目录只 import `sme.engine` / `sme.config` 公开 API。
-- 边车懒启动：首次需要时自动拉起，若端口上已有健康实例则直接复用；
-  插件卸载/更新时其自行拉起的边车进程随 fiber 回收。
+- 边车启动预拉起：preset 挂载后约 3 秒自动拉起 bridge（打开 Harness 即见记忆，
+  无需先聊一句触发）；失败时首次工具调用/事件写入懒启动兜底；若端口上已有
+  健康实例则直接复用；插件卸载/更新时其自行拉起的边车进程随 fiber 回收。
 - 自动写入有去重与 thinking 过滤；文本最长截断 2000 字符。
 - hashing 离线向量对中文短句区分度有限（同类句式余弦约 0.2–0.4），
   故 chat/kb/minimal 模式把 Region 聚合门槛放宽到 0.30 以形成可见聚落；

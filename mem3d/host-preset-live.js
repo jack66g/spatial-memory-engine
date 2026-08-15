@@ -10,7 +10,7 @@
 // 普通插件环境没有动态沙箱的 `harness`/`styles`/`btoa` 等注入符号，因此：
 //   - 记忆工具改用 ctx.get('tools').register(...) 注册（标准 ToolDefinition）；
 //   - 不提供 Client RPC（浏览器侧 3D 浮窗直连 bridge HTTP，见 README §5）；
-//   - 其余（边车懒启动/健康复用、会话事件自动写入、thinking 过滤、去重、
+//   - 其余（边车启动预拉起/懒启动兜底、健康复用、会话事件自动写入、thinking 过滤、去重、
 //     workspace-write 受管 grant 沙箱策略）与动态版一致。
 // ============================================================================
 module.exports = {
@@ -383,6 +383,29 @@ module.exports = {
         },
       )
       tools.register(statusTool)
+    }
+
+    // ── 启动即拉起 bridge（预预热）─────────────────────────────────────
+    // DSH 主进程起来（preset 挂载）后自动拉起 Python 边车，打开 Harness
+    // 即可在 3D 浮窗看到记忆，无需先聊一句触发懒启动。
+    // - 延迟 3 秒等主进程/依赖服务先就绪；
+    // - ensureBridge 自带健康检查 + spawning 防重入，多会话并发只拉起一个；
+    // - timer 随本会话 fiber 自动清理，不残留定时器；
+    // - 失败不致命：工具调用/事件写入仍可随时懒启动兜底。
+    const prewarm = () => {
+      ensureBridge().catch((e) => {
+        state.stats.errors++
+        state.lastError = String((e && e.message) || e)
+      })
+    }
+    try {
+      if (timer && typeof timer.timeout === 'function') {
+        timer.timeout(prewarm, 3000)
+      } else if (typeof setTimeout === 'function') {
+        setTimeout(prewarm, 3000)
+      }
+    } catch (e) {
+      /* 预拉起失败不致命：仍可经工具/事件懒启动 */
     }
   },
 }

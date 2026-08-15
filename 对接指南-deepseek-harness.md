@@ -59,7 +59,8 @@ robot 具身机器人（多用户隔离）/ minimal 裸向量库 / project 项�
 - 当前会话临时恢复：用 cordis 动态插件机制重新激活 Host（host-only，无需浏览器批准）
 - 浏览器 UI 由 bundle 提供，重启后自动在（若不在，检查 web profile 的 cordis.patch.yml
   是否还有 mem3d-client entry 与 node_modules 里的 mem3d-plugin 链接）
-- bridge 是懒启动：第一次工具调用或事件写入会自动拉起；端口 8756 被占则复用已有实例
+- bridge 启动预拉起：preset 挂载后 3 秒内自动拉起边车（打开 Harness 即见记忆）；
+  若失败，第一次工具调用或事件写入仍会懒启动兜底；端口 8756 被占则复用已有实例
 - 若 sme3d_status 返回 alive:false，先调用一次任意 sme3d_* 工具触发 ensureBridge 重试
 
 【排障速查】
@@ -108,7 +109,7 @@ robot 具身机器人（多用户隔离）/ minimal 裸向量库 / project 项�
 │  │  mem3d-host 行 → mem3d/host-preset-live.js                   │   │
 │  │  ├─ sme3d_* 记忆工具（tools.register）                       │   │
 │  │  ├─ 会话事件自动写入（session/event + inbox/inserted）        │   │
-│  │  └─ 边车懒启动/复用（shell + seam 沙箱 grant）                │   │
+│  │  └─ 边车启动预拉起/懒启动兜底/复用（shell + seam 沙箱 grant）      │   │
 │  └────────────┼───────────────────────────────────────────────────┘   │
 └───────────────┼───────────────────────────────────────────────────────┘
                 ▼
