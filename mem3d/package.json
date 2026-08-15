@@ -1,0 +1,19 @@
+{
+  "name": "mem3d-plugin",
+  "version": "0.1.0",
+  "private": true,
+  "type": "commonjs",
+  "description": "mem3d 3D 空间记忆 —— DeepSeek Harness 持久化 Client 半区（dsh.client 双面包）",
+  "dsh": {
+    "client": {
+      "platform": "web",
+      "inject": [],
+      "immediately": false
+    }
+  },
+  "exports": {
+    ".": "./host-stub.js",
+    "./client": "./client-bundle.js",
+    "./package.json": "./package.json"
+  }
+}

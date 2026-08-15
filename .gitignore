@@ -32,3 +32,8 @@ Thumbs.db
 
 # 鍐椾綑鐨勬簮鐮佸帇缂╁寘
 婧愮爜.zip
+
+# mem3d 运行时数据（记忆隐私，不上传）
+/mem3d/data/
+/_viz_demo/
+
