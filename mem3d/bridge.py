@@ -122,6 +122,16 @@ MODES: dict[str, dict] = {
             setattr(cfg.region, "auto_evolve", False),
         ),
     },
+    "project": {
+        "name": "项目记忆",
+        "desc": "做项目专用：知识不衰减、事实提取+噪音抑制只沉淀干货、命中强化越查越重要。不同项目用【项目:xxx】前缀区分。",
+        "apply": lambda cfg: (
+            setattr(cfg.policy, "decay_enabled", False),
+            setattr(cfg.extraction, "enabled", True),
+            setattr(cfg.extraction, "mode", "rules"),
+            setattr(cfg.noise, "enabled", True),
+        ),
+    },
 }
 DEFAULT_MODE = "chat"
 
@@ -134,7 +144,12 @@ def _build_config(mode_id: str) -> SMEConfig:
     # 每个模式独占自己的存储目录 -> 不同模式绝不共享同一份记忆
     cfg.storage.path = os.path.join(base, "engine.json.gz")
     cfg.storage.autosave = True
-    cfg.storage.autosave_interval = 5
+    cfg.storage.autosave_interval = 1   # 每 1 次写入即落盘（最稳，代价是每次写全量快照）
+    # 模块07 WAL：每次写入立即追加一行落盘，重启后 load() 自动回放，
+    # 进程被杀/断电最多只丢「已写但未落盘」的瞬时状态，而不是整批丢失。
+    # （此前 autosave_interval=5 意味着写不满 5 条就不保存，重启即蒸发。）
+    cfg.persistence.enabled = True
+    cfg.persistence.checkpoint_every = 20   # 每 20 次写入做一次全量快照并清空 WAL
     # 演示/可视化友好：演化更频繁，中文短句 hashing 聚类门槛放宽
     cfg.region.evolve_interval = 10
     cfg.region.min_join_cosine = 0.30
@@ -173,6 +188,25 @@ class ModeRuntime:
                 self.engine.load(path)
             except Exception as exc:  # 损坏快照不致命
                 self.last_error = f"load failed: {exc}"
+        # engine.load() 会用快照里保存的旧配置覆盖运行配置（含 persistence），
+        # 导致上面 _build_config 开启的 WAL 被冲掉、重启后仍不落盘。
+        # 这里在加载完成后强制重新启用 WAL（checkpoint 阈值保持运行值）。
+        self.engine.config.persistence.enabled = True
+        self.engine.config.persistence.checkpoint_every = 20
+        self.engine.wal.config = self.engine.config.persistence
+        # 注意：engine.load() 内部做 WAL replay 时 wal.enabled 还是快照里的
+        # 旧值（False），replay 已被跳过；这里手动回放待处理操作，
+        # 否则「写入后未 checkpoint 就重启」的记忆仍然找不回来。
+        if self.engine.wal.enabled and os.path.exists(self.engine.wal.path):
+            try:
+                replayed = self.engine.wal.replay(self.engine)
+                if replayed:
+                    self.last_error = ""
+                    # replay 会清空 WAL，但此时记忆只存在于内存、快照未更新；
+                    # 立即保存一次快照，保证任意时刻崩溃都能从「快照+WAL」完整恢复。
+                    self.engine.save()
+            except Exception as exc:  # 损坏 WAL 不致命
+                self.last_error = f"wal replay failed: {exc}"
 
     @property
     def provider_name(self) -> str:

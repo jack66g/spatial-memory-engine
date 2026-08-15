@@ -14,13 +14,13 @@
 
 | 文件 | 作用 |
 |---|---|
-| `bridge.py` | Python 边车服务：托管 8 种独立模式 SME 引擎 + 3D 投影 + HTTP JSON API（纯标准库，含 CORS 与自动写入开关） |
+| `bridge.py` | Python 边车服务：托管 9 种独立模式 SME 引擎 + 3D 投影 + HTTP JSON API（纯标准库，含 CORS 与自动写入开关） |
 | `host-plugin.js` | 动态插件版 Host 半区（含 `harness` RPC/工具，随会话临时加载用） |
 | `host-preset-live.js` | 持久化版 Host 半区（普通 Cordis 插件：`ctx.tools.register` 注册记忆工具，agent preset 加载） |
 | `client-plugin.js` | 动态插件版 Client 半区（随会话临时加载用） |
 | `client-bundle.js` | **持久化版 Client 半区**（`__ModuleLoader__` factory bundle，直连 bridge，随 DSH 启动自动加载） |
 | `package.json` / `host-stub.js` | `dsh.client` 双面包声明（web profile loader 扫描用） |
-| `data/` | 运行时数据（每个模式一个独立子目录，互不共享；`modes.json` 当前模式；`auto.json` 自动写入开关） |
+| `data/` | 运行时数据（每个模式一个独立子目录，互不共享：`engine.json.gz` 快照 + `.wal` 写前日志；`modes.json` 当前模式；`auto.json` 自动写入开关） |
 | `README.md` | 本文档 |
 
 数据流：
@@ -55,8 +55,9 @@ UI 和工具都会明确提示；切回旧模式则恢复原记忆。
 | `v2` | 深度对话 | v2 全模块：事实提取+问答对+时序知识图谱+用户画像+事实纠错+噪音抑制 |
 | `kb_dynamic` | 知识库·动态 | 知识不衰减、越查越重要（命中强化） |
 | `kb_static` | 知识库·静态 | 纯只读：衰减/强化/演化全关，结果可复现 |
-| `robot` | 具身机器人 | WAL 崩溃安全（模块07）+ 多用户隔离（模块12）+ 强化全开 |
+| `robot` | 具身机器人 | 多用户隔离（模块12）+ 强化全开；WAL 崩溃安全（模块07）为全部模式统一开启 |
 | `minimal` | 裸向量库 | 全关：纯向量存取，当普通向量数据库用 |
+| `project` | 项目记忆 | 知识不衰减、事实提取+噪音抑制只沉淀干货、命中强化越查越重要；不同项目用【项目:xxx】前缀区分 |
 
 切换入口：设置 →「3D 记忆」分区（8 张模式卡片）、3D 浮窗右上角下拉框、
 右下角 🧠 悬浮球内的窗口，或工具 `sme3d_mode`（传 id 切换 / 不传列出）。

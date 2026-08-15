@@ -23,9 +23,9 @@
    （由 web profile 的 mem3d-plugin bundle 提供，随 DSH 启动自动加载，直连 bridge）
 3. 持久化 Host：agent preset「3D记忆模式」（~/.dsh/.agent-presets/sme3d/）里的
    mem3d-host 行加载 mem3d/host-preset-live.js —— 注册记忆工具、会话自动写入、边车管理
-4. 数据目录：mem3d/data/（每个模式一个独立子目录 engine.json.gz；modes.json 当前模式；
-   auto.json 自动写入开关）
-5. 全部对接代码在 mem3d/ 与 mem3d-host/；绝不修改 sme/ 源码（只调用其公开 SDK）
+4. 数据目录：mem3d/data/（每个模式一个独立子目录：engine.json.gz 快照 +
+   engine.json.gz.wal 写前日志；modes.json 当前模式；auto.json 自动写入开关）
+5. 全部对接代码在 mem3d/；绝不修改 sme/ 源码（只调用其公开 SDK）
 
 【你的记忆工具】
 - sme3d_status()：引擎状态（当前模式/记忆条数/Region 数/自动写入统计）
@@ -40,12 +40,19 @@
 - 需要记住的助手侧结论，用 sme3d_remember 显式写入
 - 自动写入可在设置「3D 记忆」分区用开关关闭（持久化到 bridge auto.json）
 
-【8 种记忆模式（存储完全独立，切换即换库）】
+【9 种记忆模式（存储完全独立，切换即换库）】
 chat 对话记忆（默认）/ semantic 语义记忆（本地 BGE 中文向量）/ focus 只记事实 /
 v2 深度对话（v2 全模块）/ kb_dynamic 知识库动态 / kb_static 知识库静态 /
-robot 具身机器人（WAL+多用户隔离）/ minimal 裸向量库
+robot 具身机器人（多用户隔离）/ minimal 裸向量库 / project 项目记忆（知识不衰减、
+只沉淀干货，不同项目用【项目:xxx】前缀区分）
 - 切换到从未写过的模式 = 空白记忆，UI 与 sme3d_mode 都会明确提示
 - 切回旧模式记忆仍在；当前模式持久化在 modes.json，重启不丢
+
+【持久化（所有模式统一，重启/崩溃不丢）】
+- WAL 写前日志全局开启：每次写入立即追加一行到 <mode>/engine.json.gz.wal，落盘后才算成功
+- 每 20 次写入做一次全量快照（engine.json.gz）并清空 WAL；autosave_interval=1 兜底
+- 启动时自动回放 WAL 并立即固化快照 —— 任何时刻崩溃，最多丢「写入瞬间」的数据
+- 若重启后发现记忆为空：检查 data/<mode>/ 下快照与 .wal 是否为空，先别重写覆盖
 
 【恢复流程（重启/换会话后）】
 - 新会话：让用户在启动页选择「3D记忆模式」preset —— 工具/自动写入/边车全部自动生效
@@ -79,7 +86,7 @@ robot 具身机器人（WAL+多用户隔离）/ minimal 裸向量库
 
 `mem3d/` 是把 **SME（Spatial Memory Engine）长期记忆引擎**对接进 **DeepSeek Harness**
 的完整实现：聊天对话自动沉淀为空间记忆，浏览器侧提供可拖拽的 3D 记忆空间
-（记忆点、Region 聚落、质心、邻居连线、新写入高亮），设置面板提供 8 种
+（记忆点、Region 聚落、质心、邻居连线、新写入高亮），设置面板提供 9 种
 独立记忆模式的切换与维护。
 
 **核心原则：不修改 `sme/` 一行源码** —— bridge 只调用 `sme.engine` / `sme.config` 的公开 SDK。
@@ -107,7 +114,7 @@ robot 具身机器人（WAL+多用户隔离）/ minimal 裸向量库
                 ▼
    ┌──────────────────────────────┐
    │  mem3d/bridge.py（127.0.0.1:8756）│
-   │  8 种模式引擎（各自独立存储）      │
+   │  9 种模式引擎（各自独立存储）      │
    │  PCA 三维投影 / recall / 模式切换  │
    │  /auto 自动写入开关（持久化）      │
    └──────────────────────────────┘
@@ -123,7 +130,7 @@ robot 具身机器人（WAL+多用户隔离）/ minimal 裸向量库
 | `mem3d/package.json` / `host-stub.js` | `dsh.client` 双面包声明（web profile 扫描用） |
 | `mem3d/host-plugin.js` / `client-plugin.js` | 动态插件版参考实现（会话内临时加载用） |
 | `mem3d-host/` | 曾尝试的 web profile Host 包（**已废弃**，见 §6 教训） |
-| `mem3d/data/` | 运行时数据：`<mode>/engine.json.gz`、`modes.json`、`auto.json` |
+| `mem3d/data/` | 运行时数据：`<mode>/engine.json.gz`（快照）+ `.wal`（写前日志）、`modes.json`、`auto.json` |
 | `~/.dsh/profiles/web/cordis.patch.yml` | web profile patch：`mem3d-client` entry（浏览器 bundle） |
 | `~/.dsh/.agent-presets/sme3d/agent.cordis.yml` | 用户 preset「3D记忆模式」：`mem3d-host` 行（Host 半区） |
 
@@ -154,7 +161,7 @@ dsh plugin --profile web add 路径你自己的
 |---|---|---|
 | GET | `/health` | 健康检查（含当前模式） |
 | GET/POST | `/auto` | 自动写入开关（POST `{on}`；持久化到 auto.json） |
-| GET | `/modes` | 8 种模式列表（名称/说明/条数/当前） |
+| GET | `/modes` | 9 种模式列表（名称/说明/条数/当前） |
 | GET | `/scene` | PCA 三维投影场景（nodes/centroids/edges/recent） |
 | GET | `/stats` | 当前模式引擎统计 |
 | GET | `/list` | 当前模式记忆列表 |
@@ -184,13 +191,20 @@ dsh plugin --profile web add 路径你自己的
 6. **semantic 模式强制 HF 离线**：模型未缓存则回退 hashing，绝不联网下载挂起。
 7. **自动写入开关在 bridge 层拦截**（`source=auto`），工具显式写入不受限；
    开关持久化，重启保持。
+8. **WAL 持久化两个坑**（已在 bridge.py 修复）：(a) `engine.load()` 会用快照里保存的
+   旧配置覆盖运行配置，把 `persistence.enabled` 又关回 False → 加载完成后必须
+   重新强制启用 WAL；(b) `load()` 内部做 WAL 回放时 `wal.enabled` 还是旧值，
+   replay 被静默跳过 → 需在启用 WAL 后手动 `wal.replay()`，且回放后立即 `save()`
+   固化快照（否则回放会清空 WAL、数据只剩内存，再次重启仍会丢）。
+9. **历史坑（已修复）**：`autosave_interval=5` 时写不满 5 条就不落盘，重启即蒸发；
+   现改为 `autosave_interval=1` + WAL 全局开启，任意时刻重启都可从「快照+WAL」恢复。
 
 ### 7. 使用流程（用户视角）
 
 1. 打开 DeepSeek Harness（悬浮球/侧栏按钮/设置分区随启动出现）
 2. 新会话选择「3D记忆模式」预设（获得记忆工具与自动写入）
 3. 正常聊天 —— 用户消息自动写入；打开悬浮球可实时观察记忆点生长
-4. 设置 →「3D 记忆」：切换 8 种模式（含空白提示）、自动写入开关、清空当前模式
+4. 设置 →「3D 记忆」：切换 9 种模式（含空白提示）、自动写入开关、清空当前模式
 5. 想让我"想起"什么：直接问，我调用 `sme3d_recall` 检索记忆
 
 ### 8. 权限与安全说明
