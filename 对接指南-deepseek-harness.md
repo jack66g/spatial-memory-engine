@@ -4,7 +4,7 @@
 > **第一章 · 对接提示词** —— 粘贴给任意 AI 会话，AI 即可接管/维护这套记忆系统；
 > **第二章 · 对接介绍** —— 面向人的完整架构、安装、使用与排障文档。
 >
-> 项目位置：`C:\Users\黄小乐\Desktop\mem`（`sme/` 为 SME 引擎本体，**禁止修改**；`mem3d/` 为对接层）
+> 项目位置：你自己的路径位置（`sme/` 为 SME 引擎本体，**禁止修改**；`mem3d/` 为对接层）
 
 ---
 
@@ -131,7 +131,7 @@ robot 具身机器人（WAL+多用户隔离）/ minimal 裸向量库
 
 **浏览器半区（web profile）**
 ```bash
-dsh plugin --profile web add C:/Users/黄小乐/Desktop/mem/mem3d
+dsh plugin --profile web add 路径你自己的
 # 在 ~/.dsh/profiles/web/cordis.patch.yml 中加入：
 # - insert:
 #     - id: mem3d-client
