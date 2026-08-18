@@ -1,8 +1,0 @@
-{
-  "name": "mem3d-host-plugin",
-  "version": "0.1.0",
-  "private": true,
-  "type": "commonjs",
-  "main": "index.js",
-  "description": "mem3d Host 半区（web profile 进程级）：sme3d_* 记忆工具 / 会话自动写入 / 边车懒启动管理"
-}
