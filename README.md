@@ -93,13 +93,14 @@ python -m sme.api          # 启动 REST 服务（默认 127.0.0.1:8000）
 
 | 功能 | 说明 |
 |---|---|
-| 分组展示 | 全部 89 项按功能分组：模型接入 / 向量 / 检索与排序 / 空间与Region / 记忆动力学 / 存储 / 服务 / 可视化 / 会话层约定 / 扩展模块 |
+| 分组展示 | 全部 89 项按功能分 9 组：模型接入 / 向量 / 检索与排序 / 空间与Region / 记忆动力学 / 存储 / 服务 / 会话层约定 / 扩展模块 |
 | 详情弹窗 | 每项"详情"显示：作用说明全文、当前值/默认值、类型与可选值 |
 | 逐项校验 | 输入非法值当场红字提示（类型/枚举/范围） |
+| 密钥掩码 | API 密钥类项只显示是否已设置（`******`），不回显明文 |
 | 预设一键套用 | 5 个预设：01 聊天助手 / 02 知识库·动态 / 03 知识库·静态 / 04 具身机器人 / 05 全关 |
 | 测试连接 | 配置校验 + 可选真实 ping LLM/embedding（含维度检查），等价原 `--check --ping` |
-| 保存即生效 | 保存后引擎立即以新配置**热重建**，现有记忆自动迁移（export/import 方式）；配置写入 `data/sme.config.json`，保存完关掉页面配置依然生效 |
-| 重置为默认 | 一键恢复代码内置默认值 |
+| 保存即生效 | 保存后引擎立即以新配置**热重建**，现有记忆自动迁移（export/import 方式）；配置写入 `data/sme.config.json`，保存完关掉页面配置依然生效；改 embedding provider/model/dim 且库内有记忆时会被拒绝（防向量维度错配） |
+| 重置为默认 | 一键恢复代码内置默认值（环境变量注入的配置保留） |
 
 配置中心对应的 REST 端点（也可程序化调用）：`GET /config`（全量配置+分组+预设）、
 `PUT /config`（校验+热重建+可选落盘）、`POST /config/preset`、`POST /config/check`、
@@ -200,7 +201,7 @@ LM Studio / vLLM 同理，只需把 `base_url` 换成对应端口（LM Studio `h
 | provider | 适用 | 说明 |
 |---|---|---|
 | `hashing` | 离线演示/零依赖 | 确定性伪向量，中文效果弱于真实模型 |
-| `openai` | 任意兼容 API | 需 `base_url` + `api_key` + `model`（如 BAAI/bge-m3, dim 1024） |
+| `openai` | 任意兼容 API | 需 `base_url` + `api_key` + `model`（如 BAAI/bge-m3, dim 1024）；`embedding.dim` 必须与模型实际维度一致，错配首次嵌入即报错 |
 | `sentence-transformers` | 本地 | 需 `pip install sentence-transformers`；`model` 如 `BAAI/bge-small-zh-v1.5`（dim 512） |
 
 ## 7. 实战：给你的 AI 接入记忆（记录 + 检索闭环）
@@ -394,6 +395,8 @@ curl -X POST http://127.0.0.1:8000/config/preset -H "Content-Type: application/j
 | 中文效果差？ | 换更强 embedding（BGE-m3）；BM25 中文 1-2 元切分默认开启；文档资料用 `engine.import_documents` 分条入库 |
 | 多用户隔离？ | 写入/检索传 `ns` 参数（`engine.add(..., ns="user_a")` / `engine.search(..., ns="user_a")`） |
 | 性能如何？ | 10k 条写入 ~4s、100k 条加载 ~3s、hashing 检索 p50 ~4ms（2k 条）/ ~22ms（10k 条，实测）；大库（≥256 Region）自动启用 ANN 加速 |
+| 报"embedding 维度不匹配"？ | openai embedding 的模型实际维度与 `embedding.dim` 不一致（如 bge-m3=1024 配了 64），按报错提示改 `embedding.dim` 或换匹配模型；不做静默补齐/截断，详见 [docs/接入使用.md](docs/接入使用.md) Q12 |
+| 改配置何时生效？ | Web 配置中心保存后引擎立即热重建（记忆自动迁移），关掉页面持续有效；改 embedding provider/model/dim 且库内有记忆时会被拒绝，需先导出清空 |
 
 ## 11. 评测
 
