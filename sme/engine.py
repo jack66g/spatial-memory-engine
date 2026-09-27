@@ -20,36 +20,36 @@ from typing import Any, Iterable, Optional
 
 import numpy as np
 
-from sme.archive import ArchiveManager
+from sme.dynamics.archive import ArchiveManager
 from sme.config import SMEConfig
-from sme.consolidation import ConsolidationEngine
-from sme.decay import MemoryDecay
+from sme.dynamics.consolidation import ConsolidationEngine
+from sme.dynamics.decay import MemoryDecay
 from sme.embedding import build_embedding_provider
-from sme.graph import MemoryGraph
+from sme.modules.memory_graph import MemoryGraph
 from sme.llm import LLMClient
 from sme.memory_manager import MemoryManager
 from sme.models import Memory, MemoryStats, RegionStats, SearchHit
-from sme.policy import MemoryPolicy
-from sme.ranking import MemoryRanker
-from sme.reinforcement import EbbinghausReinforcement
+from sme.dynamics.policy import MemoryPolicy
+from sme.retrieval.ranking import MemoryRanker
+from sme.dynamics.reinforcement import EbbinghausReinforcement
 from sme.retrieval import SearchQuery, TwoStageRetriever
 from sme.space import RegionManager, SpatialMemorySpace
-from sme.storage import EngineSnapshot
+from sme.storage.snapshot import EngineSnapshot
 from sme.utils import logger, now
 
 # v2 modules (v2 模块设计) - all disabled by default, no-op when off
-from sme.extraction import ExtractionEngine
-from sme.factversion import FactVersion
-from sme.noise import NoiseScorer
-from sme.qapair import QAPairStore
-from sme.factgraph import FactGraph, FactGraphExtractor
-from sme.profile import UserProfile
-from sme.persistence import WriteAheadLog
-from sme.observability import MemoryTelemetry
-from sme.context import ContextManager
-from sme.namespaces import Namespaces, NS_KEY
-from sme.storage_backends import build_storage_backend
-from sme.v2 import V2Bridge
+from sme.modules.extraction import ExtractionEngine
+from sme.modules.factversion import FactVersion
+from sme.modules.noise import NoiseScorer
+from sme.modules.qapair import QAPairStore
+from sme.modules.factgraph import FactGraph, FactGraphExtractor
+from sme.modules.profile import UserProfile
+from sme.storage.wal import WriteAheadLog
+from sme.modules.observability import MemoryTelemetry
+from sme.modules.context import ContextManager
+from sme.modules.namespaces import Namespaces, NS_KEY
+from sme.storage.backends import build_storage_backend
+from sme.modules.bridge import V2Bridge
 
 
 class SpatialMemoryEngine:
@@ -208,7 +208,7 @@ class SpatialMemoryEngine:
         threshold relaxes to 0.55 when the default was not overridden.
         """
         # only the untouched default is calibrated; an explicit 0.70 written
-        # by the user (config file / menu / code) is honored as-is
+        # by the user (config file / Web config UI / code) is honored as-is
         if "region.min_join_cosine" in self.config._explicit_keys:
             return
         if self.config.region.min_join_cosine != 0.70:
@@ -432,7 +432,7 @@ class SpatialMemoryEngine:
             hits = self._v2.search_post(query, hits)  # modules 03/04/05/06
             if self._rerank_enabled and hits:
                 # module 13: optional cross-encoder precision pass
-                from sme.rerank import Reranker
+                from sme.retrieval.rerank import Reranker
 
                 if self.reranker is None:
                     self.reranker = Reranker(self.config.rerank)
@@ -609,6 +609,11 @@ class SpatialMemoryEngine:
             self.factgraph_extractor.config = self.config.factgraph
             self.profile.config = self.config.profile
             self.wal.config = self.config.persistence
+            # 回绑 WAL 捕获的 StorageConfig 引用：WAL 构造时持有的是旧 config.storage
+            # 对象，快照可能带着不同的存储路径/后端；不同步的话 WAL 会继续写旧路径。
+            # 先关旧句柄（文件/sqlite），下次 append 时按新路径重新打开。
+            self.wal.close()
+            self.wal._storage = self.config.storage
             self.telemetry.config = self.config.observability
             self.context.config = self.config.context
             self.namespaces.config = self.config.namespaces
@@ -731,12 +736,22 @@ class SpatialMemoryEngine:
 
     def export_json(self, path: str) -> str:
         """Export all memories (with embeddings) as plain JSON."""
-        data = {
-            "exported_at": now(),
-            "memories": [m.to_dict() for m in self.memories.values()],
-            "graph": self.graph.to_dict(),
-            "stats": self.engine_stats(),
-        }
+        # 全程持引擎锁：迭代 memories.values() 与并发写互斥，
+        # 否则会 RuntimeError: dictionary changed size during iteration
+        with self._lock:
+            data = {
+                "exported_at": now(),
+                "memories": [m.to_dict() for m in self.memories.values()],
+                "graph": self.graph.to_dict(),
+                "stats": self.engine_stats(),
+                # 演化/融合/压缩计数器：热重建迁移后回填新引擎用
+                "counters": {
+                    "splits": self.region_manager.split_count,
+                    "merges": self.region_manager.merge_count,
+                    "consolidations": self.consolidation.consolidation_count,
+                    "compressions": self.compression.compression_count,
+                },
+            }
         with open(path, "w", encoding="utf-8") as fh:
             json.dump(data, fh, ensure_ascii=False, indent=2)
         return path
@@ -785,6 +800,13 @@ class SpatialMemoryEngine:
             return created
 
     def import_memories(self, items: list[dict]) -> int:
+        """Import memories from export-shaped dicts, losslessly.
+
+        用 ``Memory.from_dict`` 完整还原全部字段（version/weight/hit_count/
+        last_hit/created_at/summary/parent_id/children/archived...），导出携带
+        的向量原样恢复、绝不重新编码。archived 记忆不进空间索引与检索索引，
+        只登记进冷存档（与快照 load 的口径一致）——"导出-导入"无损。
+        """
         with self._lock:
             self.space.set_bulk(True)
             count = 0
@@ -792,19 +814,19 @@ class SpatialMemoryEngine:
                 for item in items:
                     if not item.get("text"):
                         continue
-                    emb = item.get("embedding")
-                    vector = None
-                    if emb is not None:
-                        vector = np.asarray(emb, dtype=np.float64)
-                    self.memory_manager.add_memory(
-                        text=item["text"],
-                        metadata=item.get("metadata", {}),
-                        tags=item.get("tags", []),
-                        importance=item.get("importance", 0.5),
-                        embedding=vector,
-                        source=item.get("source", "user"),
-                        memory_id=item.get("id"),  # keep ids (graph edges / refs)
-                    )
+                    memory = Memory.from_dict(item)
+                    if memory.embedding is None:
+                        # 旧格式导出 / 手写条目可能没有向量：才走当前 provider 兜底
+                        memory.embedding = self.embeddings.embed_one(memory.text)
+                    if memory.archived:
+                        # 归档记忆：不进空间索引 / 不进检索索引，只登记冷存档
+                        memory.region_id = None
+                        self.memory_manager.memories[memory.id] = memory
+                        self.archive_manager.archive(memory)
+                    else:
+                        # 活跃记忆：走 MemoryManager 的标准登记路径
+                        # （空间插入 + memories 注册 + 检索索引 upsert）
+                        self.memory_manager._register(memory)
                     count += 1
             finally:
                 self.space.set_bulk(False)
@@ -854,7 +876,7 @@ class CompressionEngineProxy:
 
     def _get(self):
         if self._engine is None:
-            from sme.compression import CompressionEngine
+            from sme.dynamics.compression import CompressionEngine
 
             self._engine = CompressionEngine(self._config.compression, self._llm)
         return self._engine

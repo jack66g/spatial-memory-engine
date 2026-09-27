@@ -28,7 +28,7 @@ import re
 import sys
 from typing import Any, Optional
 
-from sme.graph import KIND_SUMMARY
+from sme.modules.memory_graph import KIND_SUMMARY
 
 CLAUSE_RE = re.compile(r"第[〇零一二三四五六七八九十百千万0-9]+[条款章节目]")
 SENT_SPLIT_RE = re.compile(r"(?<=[。；;！？!?])")
@@ -176,9 +176,11 @@ def main(argv: Optional[list[str]] = None) -> int:
     path = args.save or cfg.storage.path
     if path:
         engine.save(path)
-    print(f"导入 {len(created) - 1} 条内容 + 1 条摘要 → {path or '（未保存）'}")
     if created:
+        print(f"导入 {len(created) - 1} 条内容 + 1 条摘要 → {path or '（未保存）'}")
         print(f"摘要: {created[0].text}")
+    else:
+        print("未导入任何内容（文档为空）")
     return 0
 
 

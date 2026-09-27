@@ -1,6 +1,5 @@
-"""Config item registry: the single source of truth between the public
-config file ``sme/config.json``, the interactive menu (``python -m sme.menu``)
-and ``SMEConfig``.
+"""Config item registry: the single source of truth between the user's
+config file (an explicit JSON path) and ``SMEConfig``.
 
 Pure engineering layer - it contains NO engine logic. It only defines:
 
@@ -9,7 +8,9 @@ Pure engineering layer - it contains NO engine logic. It only defines:
 - helpers to read, validate, complete and atomically write the JSON file,
 - the 5 built-in presets (apply => write back to the config file).
 
-The config file uses the exact same group/key layout as ``SMEConfig``
+No config file is packaged with the library: ``load_config`` and
+``save_config`` require the caller to pass an explicit path. The config
+file uses the exact same group/key layout as ``SMEConfig``
 (plus one session-level ``memory`` group consumed by chat programs, and a
 top-level ``_help`` mapping that is ignored by the engine).
 """
@@ -17,7 +18,9 @@ top-level ``_help`` mapping that is ignored by the engine).
 from __future__ import annotations
 
 import json
+import math
 import os
+import tempfile
 from dataclasses import dataclass
 from typing import Any
 
@@ -27,16 +30,12 @@ OFF_PERIOD = 10 ** 9
 
 HELP_KEY = "_help"  # in-file inline documentation, ignored by the engine
 
-DEFAULT_CONFIG_PATH = os.path.join(
-    os.path.dirname(os.path.abspath(__file__)), "config.json"
-)
-
 
 @dataclass
 class ConfigItem:
     path: str                  # dotted path into the JSON, e.g. "llm.model"
     name: str                  # short Chinese name
-    group: str                 # config group displayed by the menu
+    group: str                 # 所属分组（Web 配置中心展示用）
     desc: str                  # what it does (shown when editing)
     kind: str = "str"          # str | int | float | bool | enum | interval
     choices: tuple = ()        # enum options
@@ -291,9 +290,11 @@ ITEMS: list[ConfigItem] = [
         "每 N 次写入做一次全量快照", kind="int",
         minimum=1, maximum=100000, default=10),
     _it("api.host", "REST 监听地址", "v2 模块",
-        "127.0.0.1=仅本机；0.0.0.0=局域网可访问", required=True, default="127.0.0.1"),
+        "启动未传 --host 参数时生效；127.0.0.1=仅本机；0.0.0.0=局域网可访问",
+        required=True, default="127.0.0.1"),
     _it("api.port", "REST 端口", "v2 模块",
-        "监听端口", kind="int", minimum=1, maximum=65535, default=8000),
+        "启动未传 --port 参数时生效的监听端口", kind="int",
+        minimum=1, maximum=65535, default=8000),
     _it("api.auth_token", "REST 鉴权令牌", "v2 模块",
         "非空即启用 Bearer 鉴权（访问 /docs 与 /health 之外的接口需带 "
         "Authorization: Bearer <token>；留空=无鉴权）"),
@@ -414,6 +415,9 @@ def _parse_number(item: ConfigItem, raw: str, cast) -> Any:
         value = cast(raw)
     except (ValueError, TypeError) as exc:
         raise ValueError(f"{item.name} 必须是{'整数' if cast is int else '数字'}") from exc
+    if not math.isfinite(value):
+        # NaN/inf：float("nan") 能通过 cast，必须显式拦截
+        raise ValueError(f"{item.name} 必须是有限数字")
     if item.minimum is not None and value < item.minimum:
         raise ValueError(f"{item.name} 不能小于 {item.minimum:g}")
     if item.maximum is not None and value > item.maximum:
@@ -438,6 +442,9 @@ def validate_value(item: ConfigItem, value: Any) -> str | None:
     if item.kind == "float":
         if isinstance(value, bool) or not isinstance(value, (int, float)):
             return "应为数字"
+        if not math.isfinite(value):
+            # NaN/inf 绕过 min/max 比较与算术，必须显式拦截
+            return "必须是有限数字"
         if item.minimum is not None and value < item.minimum:
             return f"不能小于 {item.minimum:g}"
         if item.maximum is not None and value > item.maximum:
@@ -452,6 +459,59 @@ def validate_value(item: ConfigItem, value: Any) -> str | None:
     return None if isinstance(value, str) else "应为字符串"
 
 
+def _is_blank(value: Any) -> bool:
+    """字符串配置项的"未设置"判定（空白串视为未填）。"""
+    return value is None or (isinstance(value, str) and not value.strip())
+
+
+# 条件必填规则：前置项"已配置"时目标项必填。
+# 无条件 required 会破坏"零配置离线"承诺（默认配置对 LLM/embedding 均按未配置
+# 处理，llm.model 为空是合法的），因此 required 只在依赖项真实配置后才生效。
+_LLM_DEFAULT_BASE_URL = "https://api.openai.com/v1"
+
+
+def _is_blank(value: Any) -> bool:
+    """字符串配置项的"未设置"判定（空白串视为未填）。"""
+    return value is None or (isinstance(value, str) and not value.strip())
+
+
+def _llm_configured(cfg: dict) -> bool:
+    """LLM 是否算"已配置"——与 ``LLMClient.configured`` 同口径：
+    默认 OpenAI 地址且未填密钥视为未配置（离线兜底），其余 base_url 非空即已配置。"""
+    base_url = get_value(cfg, ITEM_BY_PATH["llm.base_url"])
+    if _is_blank(base_url):
+        return False
+    if base_url == _LLM_DEFAULT_BASE_URL and _is_blank(
+        get_value(cfg, ITEM_BY_PATH["llm.api_key"])
+    ):
+        return False
+    return True
+
+
+def _embedding_configured(cfg: dict) -> bool:
+    """embedding 是否算"已配置"：base_url 非空（openai 兼容端点）。"""
+    return not _is_blank(get_value(cfg, ITEM_BY_PATH["embedding.base_url"]))
+
+
+def _required_warnings(cfg: dict) -> list[str]:
+    """条件必填检查：返回告警行（依赖项已配置而目标项为空时）。"""
+    warnings: list[str] = []
+    if _llm_configured(cfg):
+        for target in ("llm.model", "llm.api_key"):
+            item = ITEM_BY_PATH[target]
+            if _is_blank(get_value(cfg, item)):
+                warnings.append(
+                    f"[{target}]：LLM 已配置（llm.base_url）时 {item.name} 必填"
+                )
+    if _embedding_configured(cfg):
+        item = ITEM_BY_PATH["embedding.api_key"]
+        if _is_blank(get_value(cfg, item)):
+            warnings.append(
+                f"[{item.path}]：已配置 embedding.base_url 时 {item.name} 必填"
+            )
+    return warnings
+
+
 def validate_config(cfg: dict) -> list[str]:
     """Check existing values in a loaded config; returns warning lines."""
     warnings: list[str] = []
@@ -461,6 +521,7 @@ def validate_config(cfg: dict) -> list[str]:
         error = validate_value(item, get_value(cfg, item))
         if error:
             warnings.append(f"[{item.path}] = {get_value(cfg, item)!r}：{error}")
+    warnings.extend(_required_warnings(cfg))
     return warnings
 
 
@@ -532,14 +593,24 @@ def save_config(path: str, cfg: dict) -> None:
     cfg[HELP_KEY] = build_help()
     directory = os.path.dirname(os.path.abspath(path))
     os.makedirs(directory, exist_ok=True)
-    tmp = path + ".tmp"
-    with open(tmp, "w", encoding="utf-8") as fh:
-        json.dump(cfg, fh, ensure_ascii=False, indent=2)
-    os.replace(tmp, path)
+    # 确定性 tmp 名（path + ".tmp"）在并发写同一配置时会互踩，改用 mkstemp
+    # 保证唯一；os.replace 仍保持同目录原子替换语义
+    fd, tmp = tempfile.mkstemp(dir=directory, prefix=".sme-config-", suffix=".tmp")
+    try:
+        with os.fdopen(fd, "w", encoding="utf-8") as fh:
+            json.dump(cfg, fh, ensure_ascii=False, indent=2)
+        os.replace(tmp, path)
+    finally:
+        # replace 成功后 tmp 已不存在；失败时清掉残留的 tmp 文件
+        if os.path.exists(tmp):
+            try:
+                os.unlink(tmp)
+            except OSError:  # pragma: no cover
+                pass
 
 
 # --------------------------------------------------------------------------- #
-# 预设场景（5 个）：应用后必须写回 config.json
+# 预设场景（5 个）：应用后必须写回配置文件
 # --------------------------------------------------------------------------- #
 PRESETS: list[dict] = [
     {

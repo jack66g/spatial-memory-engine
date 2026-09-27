@@ -69,6 +69,15 @@ class OpenAICompatibleEmbeddingProvider(EmbeddingProvider):
                 )
                 for item in ordered:
                     vectors.append(np.asarray(item["embedding"], dtype=np.float64))
+                # 严格维度校验：拒绝静默 pad/truncate（补零/截断会产生信息量尽失
+                # 的向量并掩盖配置错误），维度不一致直接报错让用户修正配置。
+                if self.dim and vectors and vectors[0].shape[0] != self.dim:
+                    raise ValueError(
+                        f"embedding 维度不匹配：模型 {self.model!r} 实际返回 "
+                        f"{vectors[0].shape[0]} 维向量，与配置的 embedding.dim="
+                        f"{self.dim} 不一致。请在 Web 配置中心把 embedding.dim 改为 "
+                        f"{vectors[0].shape[0]}，或更换与该维度匹配的 embedding 模型"
+                    )
         if self.dim == 0 and vectors:
             self.dim = vectors[0].shape[0]
         return self._post(vectors)

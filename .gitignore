@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.venv/
+venv/
+dist/
+build/
+
+# Engine runtime state (root only)
+/data/
+cold_archive.json
+*.state.json.gz
+*.embeddings.npz
+state.json.gz
+example_state.json.gz
+
+# IDE / OS
+.idea/
+.vscode/
+*.swp
+.DS_Store
+Thumbs.db
+
+# ZCode 会话产物
+.zcode/

@@ -3,9 +3,10 @@ numpy>=1.24
 httpx>=0.24
 fastapi>=0.100
 uvicorn>=0.23
-matplotlib>=3.7
 networkx>=3.0
 python-multipart>=0.0.9
+
+# 可选：matplotlib>=3.7（2D 可视化，pip install -e ".[viz]"）
 
 # Optional: ANN acceleration (falls back to exact scanning when absent)
 hnswlib>=0.8

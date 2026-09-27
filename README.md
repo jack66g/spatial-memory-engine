@@ -14,7 +14,7 @@ SME 是给 AI 应用用的"长期记忆插件"。它不像传统向量数据库�
 - 记忆之间另有六种语义边构成 **Memory Graph**（引用/因果/对话/摘要/父子/邻居）
 - 叠加**记忆动力学**：Ebbinghaus 强化、时间衰减（永不删除）、自动融合、长期压缩
 - **两阶段混合检索**：Region 主导召回 + 向量 / BM25（中文 bigram）/ metadata 混合 + 可选图增强 + 8 信号可解释排序
-- **v2 模块层（12 个，默认全关 = v1 行为）**：事实提取、问答对回放、时序知识图谱、用户画像、事实版本纠错、噪音抑制、WAL 增量持久化、存储后端、REST+SDK、可观测性、分层上下文、多用户隔离
+- **扩展模块层（12 个，默认全关 = 基础行为）**：事实提取、问答对回放、时序知识图谱、用户画像、事实版本纠错、噪音抑制、WAL 增量持久化、存储后端、REST+SDK、可观测性、分层上下文、多用户隔离
 
 一句话：**把你的 AI 从"聊完就忘"变成"越聊越懂你"**。可直接接入聊天机器人、知识库问答、具身机器人、Agent 等任意需要记忆的场景。
 
@@ -27,7 +27,7 @@ SME 是给 AI 应用用的"长期记忆插件"。它不像传统向量数据库�
 | 中文友好 | 中文 1-2 元 BM25 关键词通道（默认开）+ 文档分条导入（法律/医疗等知识库场景） |
 | 记忆生命周期 | 强化/衰减/融合/压缩可配可关，记忆永不因衰减被删除，归档可恢复 |
 | 全部可关 | 89 项配置 + 5 个预设（聊天助手/知识库动态/知识库静态/具身机器人/全关） |
-| 多种接入 | Python SDK、REST API（FastAPI）+ 官方 Client、`python -m sme.menu` 交互配置 |
+| 多种接入 | Python SDK、REST API（FastAPI）+ 官方 Client、Web 配置中心（`python -m sme.api` 启动后浏览器打开） |
 | 性能 | 写入路径 O(N²)→近线性（10k 写入 ~4s）、100k 加载 ~3s、hashing 检索 p50 ~4ms（2k 条）/ ~22ms（10k 条，实测） |
 
 ## 3. 快速开始（10 秒）
@@ -46,21 +46,24 @@ for h in hits:
     print(h.score, h.memory.text)       # 每条命中自带 8 信号打分分解 breakdown
 
 engine.reinforce(hits[0].memory.id)     # 命中强化（Ebbinghaus）
-engine.visualize("space.png")           # 2D 空间可视化
+engine.visualize("space.png")           # 2D 空间可视化（需可选 [viz] extra，见第 4 章）
 engine.save("memory_state.json.gz")     # 持久化
+
+engine2 = SpatialMemoryEngine()
+engine2.load("memory_state.json.gz")    # 重新加载（重启不丢记忆）
 ```
 
 ```bash
 pip install -r requirements.txt
-python 大实验/examples/quickstart.py     # 完整示例：离线记忆 / 知识库导入 / 持久化
 ```
 
 ## 4. 安装
 
 - Python ≥ 3.10，Windows / Linux 均可用
-- 核心依赖：`pip install -r requirements.txt`（numpy / httpx / fastapi / uvicorn / matplotlib / networkx / hnswlib / python-multipart）
+- 核心依赖：`pip install -r requirements.txt`（numpy / httpx / fastapi / uvicorn / networkx / python-multipart / hnswlib）
 - 或安装本包：`pip install -e .`（hnswlib 在 `[ann]` extra 中，按需 `pip install -e ".[ann]"`；Region 多时自动启用 ANN 加速，缺省回退精确扫描）
 - 可选本地 embedding：`pip install -e ".[local-embeddings]"`（sentence-transformers，如 `BAAI/bge-small-zh-v1.5`）
+- 可选可视化：`pip install -e ".[viz]"`（matplotlib）。核心依赖已不含 matplotlib；未安装时 `engine.visualize()` 与 REST `/visualize`（返回 501）会给出中文安装提示
 
 ## 5. 配置
 
@@ -68,24 +71,39 @@ python 大实验/examples/quickstart.py     # 完整示例：离线记忆 / 知�
 
 | 方式 | 说明 |
 |---|---|
-| **公共配置 `sme/config.json`** | 随包分发、默认零配置离线、无密钥；通过 `SpatialMemoryEngine(config_path="sme/config.json")` 显式传入（引擎不会自动读取该文件；环境变量 `SME_CONFIG_PATH` 仅 REST 服务端生效，见 5.5）；文件顶部 `_help` 是每项中文说明 |
-| **配置菜单 `python -m sme.menu`** | 交互式浏览/修改全部可调项（带说明与校验），**改动立即写回 config.json**；预设一键套用 |
-| **代码方式 `SMEConfig`** | 任意一项都可代码设置（见 5.4） |
+| **Web 配置中心（推荐）** | `python -m sme.api` 启动服务后浏览器打开 `http://127.0.0.1:8000/`；全部 89 项分组展示、逐项校验、预设一键套用、测试连接；**保存到 `data/sme.config.json`**，引擎热重建立即生效（详见 5.2） |
+| **显式 JSON 文件** | 自己写一个 JSON 配置文件：SDK 用 `SpatialMemoryEngine(config_path="路径")` 显式传入；REST 服务用环境变量 `SME_CONFIG_PATH` 或 `--config` 指定（见 5.4） |
+| **代码方式 `SMEConfig`** | 任意一项都可代码设置（见 5.3） |
 
+> 配置来源只有一套：**代码内置默认**（89 项注册表 `sme/config_items.py`，含每项中文说明）→
+> 你通过 Web 配置中心修改，保存到 `data/sme.config.json`（`data/` 已被 .gitignore 排除；
+> 需要其他位置时用环境变量 `SME_CONFIG_PATH` 或 `python -m sme.api --config 路径`）。
+> 项目**不再随包分发 `config.json`**，引擎从不自动读取任何打包配置；SDK 直连请用
+> `SpatialMemoryEngine(config_path="...")` 或代码构造 `SMEConfig`。
+>
 > 无参 `SpatialMemoryEngine()` 使用代码内置 dataclass 默认（如 `llm.base_url="https://api.openai.com/v1"`、
-> `llm.model="gpt-4o-mini"`、`llm.temperature=0.3`，与 config.json 的空默认不同）；无密钥时 LLM 保持未配置（纯离线）。
+> `llm.model="gpt-4o-mini"`、`llm.temperature=0.3`）；无密钥时 LLM 保持未配置（纯离线）。
 
-### 5.2 配置菜单（推荐）
+### 5.2 Web 配置中心（推荐）
 
 ```bash
-python -m sme.menu                       # 交互菜单（选组→选项→改值→自动写回）
-python -m sme.menu --list                # 列出全部 89 项（含说明）
-python -m sme.menu --show                # 查看当前配置内容
-python -m sme.menu --check [--ping]      # 验证配置 + LLM/embedding 连通性（含维度校验）
-python -m sme.menu --set llm.model=deepseek-v4-flash   # 非交互设置（可多次）
-python -m sme.menu --preset kb_static    # 非交互套用预设
-python -m sme.menu --config path.json    # 指定配置文件
+python -m sme.api          # 启动 REST 服务（默认 127.0.0.1:8000）
+# 浏览器打开 http://127.0.0.1:8000/ 即配置中心；API 文档在 /docs
 ```
+
+| 功能 | 说明 |
+|---|---|
+| 分组展示 | 全部 89 项按功能分组：模型接入 / 向量 / 检索与排序 / 空间与Region / 记忆动力学 / 存储 / 服务 / 可视化 / 会话层约定 / 扩展模块 |
+| 详情弹窗 | 每项"详情"显示：作用说明全文、当前值/默认值、类型与可选值 |
+| 逐项校验 | 输入非法值当场红字提示（类型/枚举/范围） |
+| 预设一键套用 | 5 个预设：01 聊天助手 / 02 知识库·动态 / 03 知识库·静态 / 04 具身机器人 / 05 全关 |
+| 测试连接 | 配置校验 + 可选真实 ping LLM/embedding（含维度检查），等价原 `--check --ping` |
+| 保存即生效 | 保存后引擎立即以新配置**热重建**，现有记忆自动迁移（export/import 方式）；配置写入 `data/sme.config.json`，保存完关掉页面配置依然生效 |
+| 重置为默认 | 一键恢复代码内置默认值 |
+
+配置中心对应的 REST 端点（也可程序化调用）：`GET /config`（全量配置+分组+预设）、
+`PUT /config`（校验+热重建+可选落盘）、`POST /config/preset`、`POST /config/check`、
+`POST /config/reset`、`GET /`（配置中心页面）。端点表见 [docs/接入使用.md](docs/接入使用.md) §6.3。
 
 ### 5.3 代码方式设置
 
@@ -97,7 +115,7 @@ config = SMEConfig()
 config.policy.decay_enabled = False          # 关闭衰减
 config.region.auto_evolve = False            # 关闭演化
 config.storage.path = "my_state.json.gz"
-engine = SpatialMemoryEngine(config)         # 或 SpatialMemoryEngine(config_path="sme/config.json")
+engine = SpatialMemoryEngine(config)         # 或 SpatialMemoryEngine(config_path="my_config.json")
 ```
 
 ### 5.4 环境变量（仅 REST 服务端生效）
@@ -107,7 +125,7 @@ engine = SpatialMemoryEngine(config)         # 或 SpatialMemoryEngine(config_pa
 
 | 变量 | 作用 |
 |---|---|
-| `SME_CONFIG_PATH` | REST 服务读取的配置文件路径（等价 `--config`） |
+| `SME_CONFIG_PATH` | REST 服务读取的配置文件路径（等价 `--config`）；未设置时默认尝试 `data/sme.config.json`（Web 配置中心的保存位置） |
 | `SME_LLM_BASE_URL` / `SME_LLM_MODEL` / `SME_LLM_API_KEY` | REST 服务端 LLM 配置（设了 BASE_URL 才读 KEY） |
 | `SME_EMBEDDING_PROVIDER` / `MODEL` / `DIM` / `BASE_URL` / `API_KEY` | REST 服务端 embedding 配置（设了 PROVIDER 才读 KEY） |
 | `SME_API_AUTH_TOKEN` | REST 服务 Bearer 鉴权（等价 `api.auth_token`） |
@@ -118,7 +136,9 @@ engine = SpatialMemoryEngine(config)         # 或 SpatialMemoryEngine(config_pa
 
 > LLM 用于生成融合/压缩摘要、事实提取、问答对回放等；基础写/查记忆**不需要 LLM**（离线 hashing 即可跑通）。
 
-### 6.1 最小配置（改 sme/config.json 或菜单）
+### 6.1 最小配置（Web 配置中心或代码方式）
+
+在 Web 配置中心（见 5.2）的"模型接入 / 向量"分组里把这几项改成：
 
 ```json
 {
@@ -136,7 +156,9 @@ engine = SpatialMemoryEngine(config)         # 或 SpatialMemoryEngine(config_pa
 }
 ```
 
-配置后验证：`python -m sme.menu --check --ping`（发真实请求测连通）。
+也可以把上面的 JSON 写进自己的配置文件用 `config_path` 传入，或代码构造 `SMEConfig`（见 5.3）。
+
+配置后验证：Web 配置中心的"测试连接"按钮（配置校验 + 可选真实 ping LLM/embedding，含维度检查）。
 
 ### 6.2 云端 LLM 服务商对照表（OpenAI 兼容 /chat/completions）
 
@@ -270,14 +292,13 @@ while True:
 ```
 
 > 更完整的提示词组装（用户画像常驻、token 预算、对话窗口）可参考
-> `sme/context.py` 的 `ContextManager.build`（模块 11 分层上下文）。
+> `sme/modules/context.py` 的 `ContextManager.build`（模块 11 分层上下文）。
 
 ### 7.3 配置项 → 调用映射（会话层语义落实）
 
-引擎本身不消费 `memory.*`，接入聊天程序时按此表手动落实
-（这也是 `大实验/scripts/baselines/sme_adapter.py` 的复刻方式）：
+引擎本身不消费 `memory.*`，接入聊天程序时按此表手动落实：
 
-| 配置项（sme/config.json） | 对应调用 |
+| 配置项（会话层约定，见 [docs/接入使用.md](docs/接入使用.md) §3.3） | 对应调用 |
 |---|---|
 | `memory.top_k`（6） | `engine.search(q, top_k=6)` —— 每次注入 prompt 的记忆条数 |
 | `memory.reinforce_on`（开） | 命中后调 `engine.reinforce(hit.memory.id)` |
@@ -311,7 +332,7 @@ Web 后端、其他语言（JS/Go/Java 等）的项目通过 HTTP 调用。
 ```bash
 python -m sme.api [--config path.json] [--host 127.0.0.1] [--port 8000]
 # 或：set SME_CONFIG_PATH=my_config.json 后 python -m sme.api
-# 文档（Swagger UI）: http://127.0.0.1:8000/docs
+# Web 配置中心: http://127.0.0.1:8000/ ；文档（Swagger UI）: http://127.0.0.1:8000/docs
 ```
 
 `--host 0.0.0.0` 可让局域网其他机器访问。`api.auth_token`（或 `SME_API_AUTH_TOKEN`）非空即启用 Bearer 鉴权。
@@ -345,15 +366,22 @@ sdk.close()
 
 ## 9. 预设场景（一键套用）
 
+在 Web 配置中心的预设下拉中选择即可一键套用；等价的 REST 调用（key 取下方预设键名）：
+
 ```bash
-python -m sme.menu --preset chat        # 01 聊天助手（默认）：强化/衰减/融合/压缩全开
-python -m sme.menu --preset kb_dynamic  # 02 知识库·动态：知识不衰减，越查越重要
-python -m sme.menu --preset kb_static   # 03 知识库·静态：纯只读，结果可复现
-python -m sme.menu --preset robot       # 04 具身机器人：WAL 崩溃安全 + 多用户隔离
-python -m sme.menu --preset minimal     # 05 全关：当普通向量库用
+curl -X POST http://127.0.0.1:8000/config/preset -H "Content-Type: application/json" \
+  -d '{"key": "chat"}'           # 01 聊天助手（默认）：强化/衰减/融合/压缩全开
+curl -X POST http://127.0.0.1:8000/config/preset -H "Content-Type: application/json" \
+  -d '{"key": "kb_dynamic"}'     # 02 知识库·动态：知识不衰减，越查越重要
+curl -X POST http://127.0.0.1:8000/config/preset -H "Content-Type: application/json" \
+  -d '{"key": "kb_static"}'      # 03 知识库·静态：纯只读，结果可复现
+curl -X POST http://127.0.0.1:8000/config/preset -H "Content-Type: application/json" \
+  -d '{"key": "robot"}'          # 04 具身机器人：WAL 崩溃安全 + 多用户隔离
+curl -X POST http://127.0.0.1:8000/config/preset -H "Content-Type: application/json" \
+  -d '{"key": "minimal"}'        # 05 全关：当普通向量库用
 ```
 
-> v2 模块（事实提取/问答对/纠错/图谱/画像/噪音抑制）默认全关 = v1 行为；
+> 扩展模块（事实提取/问答对/纠错/图谱/画像/噪音抑制）默认全关 = 基础行为；
 > 面向**中文对话**场景按需开启（`extraction.enabled` 等）。全开并非最优配置。
 
 ## 10. 常见问题（FAQ）
@@ -370,51 +398,44 @@ python -m sme.menu --preset minimal     # 05 全关：当普通向量库用
 ## 11. 评测
 
 ```bash
-cd 大实验
-python benchmarks/generate_assets.py            # 生成评测资产（seed 固定，可复现）
-cd ..
-python -m sme.benchmark --eval 大实验/benchmarks/qa183.json       # 183 题英语考问
-python -m sme.benchmark --eval 大实验/benchmarks/zh_law.json      # 中文法律考问
-python -m sme.benchmark --eval 大实验/benchmarks/zh_medical.json  # 中文医疗考问
 python -m sme.benchmark --n-memories 2000                 # 写入/检索压测
 ```
 
-## 12. 大实验（与主流记忆方案的擂台赛）
-
-`大实验/` 是独立实验工程（**不修改 sme/ 主体代码**）：与 mem0 / langmem / 裸 RAG / BM25
-在"同一对话流 + 同一 embedding + 同一 LLM + 同一考问集"的公平协议下对比。
-
-- [大实验/大实验全档_合并.md](大实验/大实验全档_合并.md) — 工程全档（四篇文档合并版）：
-  公平协议与跑法、实验原理与方法、标准评测资产、两轮擂台赛全量数据与逐题明细、
-  攻击题、消融矩阵、成本、优势分析与复现命令
-
-主要结论：对话记忆端到端 acc 0.421-0.441（3 seed 均值）仅次于 mem0 0.477（单 seed），
-是裸 RAG 0.123-0.128 的 3 倍以上；双重纠错/噪音霸榜等攻击题下版本管理与噪音抑制实锤有效。
-
-## 13. 目录结构
+## 12. 目录结构
 
 ```
-├── sme/                    # 插件本体（引擎/空间/检索/动力学/v2 模块/REST）
-├── docs/                   # 接入使用 / 原理解析 / 迭代计划 / 修改记录
-├── 大实验/                 # 独立实验工程：全档文档 + 脚本/数据/结果 + 评测资产 + 示例 + 回归测试
-│   ├── 大实验全档_合并.md   # 工程全档（合并自 README/EXPERIMENTS/REPORT/benchmarks 四篇）
-│   ├── benchmarks/         # 标准评测资产（qa183 / paraphrase30 / 法律 / 医疗）
-│   ├── examples/           # 可运行示例（quickstart.py）
-│   ├── tests/              # 回归测试（pytest，79 项）
-│   └── scripts/ results/   # 实验脚本与数据
+├── sme/                                # 插件本体
+│   ├── engine.py config.py config_items.py config_check.py
+│   │   models.py memory_manager.py utils.py     # 引擎 / 配置（内置默认注册表）/ 配置校验
+│   ├── import_docs.py benchmark.py visualization.py
+│   ├── space/  retrieval/（含 ranking、rerank）  embedding/  index/  llm/
+│   ├── api/                            # REST 服务（server / client / static 配置中心前端）
+│   ├── dynamics/                       # 记忆动力学：decay / reinforcement / consolidation /
+│   │                                   #   compression / archive / policy
+│   ├── modules/                        # 扩展模块：extraction / qapair / factversion / profile /
+│   │                                   #   context / namespaces / observability / noise /
+│   │                                   #   memory_graph / bridge / pipeline / factgraph
+│   └── storage/                        # snapshot / backends / wal
+├── docs/                               # 接入使用 / 原理解析 / 迭代计划 / 修改记录
 ├── requirements.txt / pyproject.toml
 └── README.md
 ```
 
-## 14. 密钥安全
+> 公开导入路径保持兼容：`from sme.engine import SpatialMemoryEngine`、
+> `from sme.config import SMEConfig`、`from sme.retrieval import SearchQuery`、
+> `from sme.storage import EngineSnapshot` 等照旧可用；
+> `sme.dynamics` / `sme.modules` / `sme.storage` 提供便捷 re-export。
 
-- 默认零密钥：`sme/config.json` 随包分发的配置中所有密钥字段为空，可安全入库
+## 13. 密钥安全
+
+- 默认零密钥：代码内置默认配置中所有密钥字段为空，可安全入库
+- **Web 配置中心**：保存的 `data/sme.config.json` 位于已被 .gitignore 排除的 `data/` 目录，不会入库
 - **REST 服务模式**：密钥走环境变量 `SME_LLM_API_KEY` / `SME_EMBEDDING_API_KEY` / `SME_API_AUTH_TOKEN`，不落盘（见 5.4）
 - **SDK 直连模式**：引擎不读环境变量，运行时从你自己的环境变量读入 `SMEConfig`（示例见 [docs/接入使用.md](docs/接入使用.md) §3.5），
-  或把含密钥的配置文件放在不入库的路径（如 `~/.sme/config.json`）用 `config_path` 加载
+  或把含密钥的配置文件放在不入库的路径（如 `~/.sme/` 下）用 `config_path` 加载
 - 引擎运行时状态文件（`data/`）已被 .gitignore 排除
 
-## 15. 文档导航
+## 14. 文档导航
 
 | 文档 | 内容 |
 |---|---|
@@ -422,8 +443,6 @@ python -m sme.benchmark --n-memories 2000                 # 写入/检索压测
 | [docs/原理解析.md](docs/原理解析.md) | 程序原理 + 每个文件/函数的作用（函数级解析） |
 | [docs/迭代计划.md](docs/迭代计划.md) | 对标第一梯队（Mem0/Zep/Graphiti/Letta）的迭代记录 |
 | [docs/修改记录.md](docs/修改记录.md) | 代码审查修复/完善/清理 + 修复前后对比数据 |
-| [大实验/examples/quickstart.py](大实验/examples/quickstart.py) | 可运行示例：离线记忆 / 知识库导入 / 持久化 |
-| [大实验/大实验全档_合并.md](大实验/大实验全档_合并.md) | 与 mem0/RAG/BM25 擂台赛全档（协议、数据、复现命令） |
 
 > 注：原 `快速接入指南.md`、`项目介绍.md` 已合并进本文档。
 

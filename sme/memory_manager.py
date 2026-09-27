@@ -14,11 +14,11 @@ from __future__ import annotations
 
 from typing import Any, Iterable, Optional
 
-from sme.archive import ArchiveManager
+from sme.dynamics.archive import ArchiveManager
 from sme.config import SMEConfig
-from sme.decay import MemoryDecay
+from sme.dynamics.decay import MemoryDecay
 from sme.embedding.base import EmbeddingProvider
-from sme.graph import (
+from sme.modules.memory_graph import (
     KIND_CAUSE,
     KIND_CONVERSATION,
     KIND_PARENT,
@@ -27,8 +27,8 @@ from sme.graph import (
     MemoryGraph,
 )
 from sme.models import Memory, MemoryStats
-from sme.policy import MemoryPolicy
-from sme.reinforcement import EbbinghausReinforcement
+from sme.dynamics.policy import MemoryPolicy
+from sme.dynamics.reinforcement import EbbinghausReinforcement
 from sme.space.space import SpatialMemorySpace
 from sme.utils import now
 

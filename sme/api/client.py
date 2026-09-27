@@ -79,7 +79,25 @@ class MemoryClient:
         resp = self._client.request(
             method, f"{self.base_url}{path}", headers=self._headers(), **kw
         )
-        resp.raise_for_status()
+        if resp.status_code >= 400:
+            # 非 2xx：解析响应体里的 detail（FastAPI 错误载荷）并包含进异常消息，
+            # 否则调用方只能看到一行裸状态码
+            detail = ""
+            try:
+                body = resp.json()
+            except ValueError:
+                body = None
+            if isinstance(body, dict):
+                detail = str(body.get("detail") or body.get("error") or "")
+            try:
+                resp.raise_for_status()
+            except httpx.HTTPStatusError as exc:
+                message = str(exc)
+                if detail:
+                    message = f"{message}：{detail}"
+                raise httpx.HTTPStatusError(
+                    message, request=exc.request, response=exc.response
+                ) from exc
         return resp.json()
 
     # ------------------------------------------------------------------ #

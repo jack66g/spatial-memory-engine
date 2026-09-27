@@ -28,7 +28,7 @@ import numpy as np
 
 from sme.config import RetrievalConfig
 from sme.models import RegionHit, SearchHit
-from sme.ranking import MemoryRanker
+from sme.retrieval.ranking import MemoryRanker
 from sme.utils import now, tokenize
 
 

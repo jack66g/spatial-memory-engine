@@ -9,6 +9,9 @@ Projects the high-dimensional embedding space to 2D and draws:
     - optional memory-graph edges
 
 Projection methods: pca (default), random. Saves a PNG file.
+
+matplotlib is an optional dependency: it is imported lazily inside
+:func:`visualize`, so the rest of the package works without it.
 """
 
 from __future__ import annotations
@@ -19,16 +22,6 @@ import numpy as np
 
 from sme.config import VisualizationConfig
 from sme.utils import to_array
-
-try:  # matplotlib is optional at import time
-    import matplotlib
-
-    matplotlib.use("Agg")
-    import matplotlib.pyplot as plt
-    from matplotlib.patches import Polygon as MplPolygon
-except ImportError:  # pragma: no cover
-    plt = None
-    MplPolygon = None
 
 
 # --------------------------------------------------------------------------- #
@@ -153,8 +146,17 @@ def visualize(
     show_graph: bool = True,
 ) -> str:
     """Render the whole memory space to a PNG file. Returns the file path."""
-    if plt is None:  # pragma: no cover
-        raise ImportError("matplotlib is required for visualization")
+    try:  # matplotlib is optional - imported lazily on first use
+        import matplotlib
+
+        matplotlib.use("Agg")
+        import matplotlib.pyplot as plt
+        from matplotlib.patches import Polygon as MplPolygon
+    except ImportError as exc:
+        raise RuntimeError(
+            '可视化需要 matplotlib：pip install -e ".[viz]"，'
+            "或使用 REST 服务 /visualize 前先安装"
+        ) from exc
     cfg = config or engine.config.visualization
 
     memories = [m for m in engine.memories.values() if not m.archived]

@@ -339,6 +339,15 @@ def main() -> None:
 
     from sme.engine import SpatialMemoryEngine
 
+    if args.preset:
+        # 未知名的预设给友好报错（列出可选值），而不是 KeyError 堆栈
+        from sme.config_items import PRESET_BY_KEY
+
+        if args.preset not in PRESET_BY_KEY:
+            parser.error(
+                f"未知预设：{args.preset}（可选：{'/'.join(PRESET_BY_KEY)}）"
+            )
+
     engine = SpatialMemoryEngine()
     runner = BenchmarkRunner(engine)
     if args.eval:

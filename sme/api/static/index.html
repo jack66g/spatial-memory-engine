@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SME 配置中心</title>
+  <link rel="stylesheet" href="/static/app.css">
+</head>
+<body>
+  <!-- 顶栏：标题 / 来源徽标 / 引擎摘要 / 操作按钮 -->
+  <header id="topbar">
+    <div class="brand">
+      <h1>SME 配置中心</h1>
+      <span id="source-badge" class="badge" title="">加载中…</span>
+    </div>
+    <div id="engine-summary" class="summary" title="来自 GET /stats">引擎状态加载中…</div>
+    <div class="actions">
+      <select id="preset-select" title="套用内置场景预设">
+        <option value="">套用预设…</option>
+      </select>
+      <button id="btn-check" type="button">测试连接</button>
+      <button id="btn-save" type="button" class="primary" disabled>保存</button>
+      <button id="btn-reset" type="button" class="danger">重置为默认</button>
+    </div>
+  </header>
+
+  <!-- 全局错误 / 提示横幅（如 _global 错误） -->
+  <div id="banner" class="banner error" hidden>
+    <span id="banner-text"></span>
+    <button id="banner-close" type="button" aria-label="关闭">×</button>
+  </div>
+
+  <main>
+    <!-- 左侧：分组导航（锚点滚动） -->
+    <nav id="group-nav" aria-label="配置分组"></nav>
+
+    <!-- 右侧：分组标题 + 配置卡片 -->
+    <section id="groups"></section>
+  </main>
+
+  <!-- 配置详情弹窗 -->
+  <div id="modal-backdrop" class="modal-backdrop" hidden>
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="detail-title">
+      <div class="modal-head">
+        <h2 id="detail-title">配置详情</h2>
+        <button id="detail-close" type="button" class="icon-btn" aria-label="关闭">×</button>
+      </div>
+      <div id="detail-body" class="modal-body"></div>
+    </div>
+  </div>
+
+  <!-- 测试连接面板 -->
+  <div id="check-backdrop" class="modal-backdrop" hidden>
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="check-title">
+      <div class="modal-head">
+        <h2 id="check-title">配置体检与连通性测试</h2>
+        <button id="check-close" type="button" class="icon-btn" aria-label="关闭">×</button>
+      </div>
+      <div class="modal-body">
+        <label class="check-ping">
+          <input id="check-ping" type="checkbox">
+          实际发请求 ping（对已配置的 LLM / embedding 发真实请求）
+        </label>
+        <div class="check-run">
+          <button id="check-run" type="button" class="primary">开始检测</button>
+        </div>
+        <div id="check-result" class="check-result">点击“开始检测”查看结果。</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 轻提示 toast -->
+  <div id="toast" hidden></div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
