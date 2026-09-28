@@ -936,14 +936,82 @@ def _apply_env_overrides(config: SMEConfig) -> bool:
     return from_env
 
 
+def _restore_snapshot(engine: SpatialMemoryEngine) -> bool:
+    """服务启动时恢复既有快照（含 WAL 重放），否则每次重启都是空库。
+
+    快照路径取 ``engine.config.storage.path``，兼容 gzip 后缀；
+    恢复失败（文件损坏等）不阻断启动，降级为空库并告警。
+    重放前 WAL 有积压时，恢复后立即 save() checkpoint——replay() 会清空
+    WAL，若不落盘，积压增量只存在于内存，服务在下次自动保存（默认每 30
+    次写入）之前被杀会丢失这些增量。
+    """
+    base = str(getattr(engine.config.storage, "path", "") or "")
+    if not base:
+        return False
+    import logging
+
+    for candidate in (base, base + ".gz"):
+        if os.path.exists(candidate):
+            wal_pending = False
+            try:
+                wal_path = engine.wal.path
+                wal_pending = os.path.exists(wal_path) and os.path.getsize(wal_path) > 0
+            except Exception:  # noqa: BLE001 - WAL 探测失败不阻断恢复
+                wal_pending = False
+            try:
+                restored = bool(engine.load(candidate))
+            except Exception as exc:  # noqa: BLE001 - 启动期降级
+                logging.getLogger("sme.api").warning(
+                    "快照恢复失败，以空库启动（%s）: %s", candidate, exc
+                )
+                return False
+            if restored and wal_pending:
+                try:
+                    engine.save()
+                except Exception as exc:  # noqa: BLE001 - checkpoint 失败不阻断服务
+                    logging.getLogger("sme.api").warning(
+                        "WAL 重放后 checkpoint 失败（增量仍在内存，下次保存会落盘）: %s", exc
+                    )
+            return restored
+    return False
+
+
+def _rebind_after_env(engine: SpatialMemoryEngine) -> None:
+    """快照恢复后重放环境变量覆盖（env 是本次启动的显式意图）。
+
+    LLM/鉴权总是重放；embedding 身份（provider/model/dim）仅在库为空时重放——
+    已有记忆的向量维度属于数据事实，env 覆盖会导致维度错配（与 PUT /config 的
+    embedding 身份闸门同一原则）。
+    """
+    cfg = engine.config
+    from_env = _apply_env_overrides(cfg)
+    if not from_env:
+        return
+    engine.llm = engine.llm.__class__(cfg.llm)
+    engine.consolidation.llm = engine.llm
+    engine.compression._llm = engine.llm
+    engine.extraction.llm = engine.llm
+    engine.factgraph_extractor.llm = engine.llm
+    if not engine.memories and (
+        engine.embeddings.name != cfg.embedding.provider
+        or engine.embeddings.model_name != cfg.embedding.model
+        or engine.embeddings.dim != cfg.embedding.dim
+    ):
+        from sme.embedding import build_embedding_provider
+
+        engine.embeddings = build_embedding_provider(cfg.embedding)
+
+
 def resolve_engine(
     explicit_config_path: str = "",
 ) -> tuple[SpatialMemoryEngine, str, str]:
-    """按优先级解析引擎配置并构建引擎。
+    """按优先级解析引擎配置并构建引擎，并恢复既有快照。
 
     优先级：``--config`` 参数 > ``SME_CONFIG_PATH`` 环境变量 >
     ``data/sme.config.json``（存在才用，相对 cwd）> 代码内置默认；
-    无配置文件时 ``SME_LLM_*`` / ``SME_EMBEDDING_*`` 环境变量仍会覆盖默认值。
+    无配置文件时 ``SME_LLM_*`` / ``SME_EMBEDDING_*`` 环境变量仍会覆盖默认值
+    （在快照恢复之后重放，env 意图优先于快照内配置；embedding 身份例外见
+    :func:`_rebind_after_env`）。
 
     Returns:
         (engine, config_file, source)；source ∈ {"file", "env", "defaults"}，
@@ -953,14 +1021,22 @@ def resolve_engine(
     default_file = DEFAULT_CONFIG_FILE if os.path.exists(DEFAULT_CONFIG_FILE) else ""
     path = explicit_config_path or env_path or default_file
     if path and os.path.exists(path):
-        return SpatialMemoryEngine(config_path=path), path, "file"
+        engine = SpatialMemoryEngine(config_path=path)
+        restored = _restore_snapshot(engine)
+        if restored:
+            _rebind_after_env(engine)
+        return engine, path, "file"
 
     config = SMEConfig()
     from_env = _apply_env_overrides(config)
     config_file = explicit_config_path or DEFAULT_CONFIG_FILE
     # build the engine from the fully-resolved config so the embedding
     # provider / dimension are created consistently from the env values
-    return SpatialMemoryEngine(config), config_file, ("env" if from_env else "defaults")
+    engine = SpatialMemoryEngine(config)
+    if _restore_snapshot(engine):
+        # 快照配置生效后需重放 env 覆盖（同上：embedding 身份在非空库上不覆盖）
+        _rebind_after_env(engine)
+    return engine, config_file, ("env" if from_env else "defaults")
 
 
 def build_engine_from_env() -> SpatialMemoryEngine:

@@ -14,3 +14,6 @@ hnswlib>=0.8
 # Optional: local embeddings (uncomment if you want SentenceTransformer-based embedding)
 # sentence-transformers>=2.2
 # torch>=2.0
+
+# Optional: MCP server (pip install -e ".[mcp]")
+# mcp>=2.0

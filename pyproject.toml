@@ -20,6 +20,7 @@ ann = ["hnswlib>=0.8"]
 local-embeddings = ["sentence-transformers>=2.2", "torch>=2.0"]
 multipart = ["python-multipart>=0.0.9"]
 viz = ["matplotlib>=3.7"]
+mcp = ["mcp>=2.0"]
 
 [tool.setuptools.packages.find]
 include = ["sme*"]

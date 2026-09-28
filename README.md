@@ -27,7 +27,7 @@ SME 是给 AI 应用用的"长期记忆插件"。它不像传统向量数据库�
 | 中文友好 | 中文 1-2 元 BM25 关键词通道（默认开）+ 文档分条导入（法律/医疗等知识库场景） |
 | 记忆生命周期 | 强化/衰减/融合/压缩可配可关，记忆永不因衰减被删除，归档可恢复 |
 | 全部可关 | 89 项配置 + 5 个预设（聊天助手/知识库动态/知识库静态/具身机器人/全关） |
-| 多种接入 | Python SDK、REST API（FastAPI）+ 官方 Client、Web 配置中心（`python -m sme.api` 启动后浏览器打开） |
+| 多种接入 | Python SDK、REST API（FastAPI）+ 官方 Client、**MCP（智能体原生，一行挂载）**、Web 配置中心（`python -m sme.api` 启动后浏览器打开） |
 | 性能 | 写入路径 O(N²)→近线性（10k 写入 ~4s）、100k 加载 ~3s、hashing 检索 p50 ~4ms（2k 条）/ ~22ms（10k 条，实测） |
 
 ## 3. 快速开始（10 秒）
@@ -364,6 +364,22 @@ sdk.close()
 4. **反馈**：回复发出后强化命中记忆 → `POST /memories/{id}/hit`（越聊越懂）
 
 > 完整端点表、鉴权细节、MemoryClient 全方法见 [docs/接入使用.md](docs/接入使用.md) §6。
+
+### 8.4 MCP 接入（智能体原生）
+
+支持 MCP（Model Context Protocol）的智能体宿主（ZCode / Claude Code / Cursor 等）可以一行配置挂载 SME 长期记忆：
+
+```json
+{"mcpServers": {"sme-memory": {
+    "command": "python",
+    "args": ["/path/to/sme/mcp_server.py"]
+}}}
+```
+
+- 提供 4 个工具：`remember`（写记忆）/ `recall`（语义检索）/ `reinforce`（命中强化）/ `memory_stats`
+- 服务未运行时自动拉起（默认 `127.0.0.1:8760`，`SME_MCP_PORT` 可改），重启自动恢复快照+WAL
+- 主会话与子智能体共享同一记忆库（REST 服务单写者，无并发写风险）
+- 依赖：`pip install -e ".[mcp]"`（mcp>=2.0）
 
 ## 9. 预设场景（一键套用）
 
