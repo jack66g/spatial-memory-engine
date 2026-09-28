@@ -25,3 +25,6 @@ Thumbs.db
 
 # ZCode 会话产物
 .zcode/
+
+# 智能体会话指令（本地）
+/AGENTS.md
