@@ -818,17 +818,61 @@ def create_app(
     # ------------------------- optional modules ------------------------ #
     @app.get("/facts")
     def facts() -> dict:
-        """Module 03 - knowledge-graph entities & relations (enabled only)."""
+        """Modules 03/05 - fact graph + bi-temporal fact versions (enabled only).
+
+        ``facts`` lists every stored fact version (oldest first), each entry
+        carrying the bi-temporal stamps ``valid_at`` / ``invalid_at``
+        (None = unknown start / currently valid; legacy-compatible read).
+        """
         eng = _snapshot()
         with eng._lock:
             fg = getattr(eng, "factgraph", None)
-            if fg is None or not fg.enabled:
-                return {"enabled": False, "entities": [], "relations": []}
+            fv = getattr(eng, "factversion", None)
+            fg_on = fg is not None and fg.enabled
+            fv_on = fv is not None and fv.enabled
+            if not fg_on and not fv_on:
+                return {"enabled": False, "entities": [], "relations": [], "facts": []}
+            result: dict[str, Any] = {
+                "enabled": True,
+                "entities": [e.to_dict() for e in fg.entities.values()] if fg_on else [],
+                "relations": [r.to_dict() for r in fg.relations] if fg_on else [],
+            }
+            if fg_on:
+                result["stats"] = fg.stats()
+            fact_mems = [
+                m for m in eng.memories.values()
+                if m is not None and m.metadata.get("fact_kind") == "fact"
+            ] if fv_on else []
+            fact_mems.sort(key=lambda m: m.created_at)
+            result["facts"] = [fv.fact_summary(m, eng) for m in fact_mems]
+            return result
+
+    @app.get("/facts/history")
+    def facts_history(text: str = "", memory_id: str = "") -> dict:
+        """Module 05 - bi-temporal version chain of one fact (oldest -> newest).
+
+        Query params: ``text`` (free text or a memory id) or ``memory_id``
+        (explicit id). 404 when no fact matches; 400 when neither param is
+        given; module off => ``{"enabled": false, "versions": []}``.
+        """
+        eng = _snapshot()
+        with eng._lock:
+            fv = getattr(eng, "factversion", None)
+            if fv is None or not fv.enabled:
+                return {"enabled": False, "versions": []}
+            key = (memory_id or text).strip()
+            if not key:
+                raise HTTPException(
+                    status_code=400, detail="text or memory_id query param required"
+                )
+            versions = fv.timeline(key, eng)
+            if not versions:
+                raise HTTPException(status_code=404, detail="no matching fact")
             return {
                 "enabled": True,
-                "stats": fg.stats(),
-                "entities": [e.to_dict() for e in fg.entities.values()],
-                "relations": [r.to_dict() for r in fg.relations],
+                "query": key,
+                "count": len(versions),
+                "versions": versions,
             }
 
     @app.post("/facts/multi_hop")
