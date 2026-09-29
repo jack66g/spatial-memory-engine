@@ -15,5 +15,9 @@ hnswlib>=0.8
 # sentence-transformers>=2.2
 # torch>=2.0
 
+# Optional: ONNX int8 embeddings, faster than torch fp32 on CPU
+# (pip install -e ".[onnx]"; default model Qdrant/Qwen3-Embedding-0.6B-onnx int8, ~1.1GB)
+# fastembed>=0.8
+
 # Optional: MCP server (pip install -e ".[mcp]")
 # mcp>=2.0

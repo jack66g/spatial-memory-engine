@@ -86,8 +86,11 @@ ITEMS: list[ConfigItem] = [
     # --------------------------- Embedding ---------------------------- #
     _it("embedding.provider", "向量引擎", "Embedding 向量",
         "hashing=离线零依赖（默认）/ openai=任意 OpenAI 兼容 embedding 接口 / "
-        "sentence-transformers=本地模型（需 pip install sentence-transformers）",
-        kind="enum", choices=("hashing", "openai", "sentence-transformers"),
+        "sentence-transformers=本地模型（需 pip install sentence-transformers）/ "
+        "fastembed=ONNX int8 本地推理（需 pip install fastembed，批量快 7x，"
+        "默认模型 Qwen/Qwen3-Embedding-0.6B-Q）",
+        kind="enum",
+        choices=("hashing", "openai", "sentence-transformers", "fastembed"),
         default="hashing"),
     _it("embedding.model", "向量模型", "Embedding 向量",
         "本地如 BAAI/bge-small-zh-v1.5，接口如 BAAI/bge-m3",

@@ -18,6 +18,10 @@ dependencies = [
 [project.optional-dependencies]
 ann = ["hnswlib>=0.8"]
 local-embeddings = ["sentence-transformers>=2.2", "torch>=2.0"]
+# int8 ONNX embeddings (fastembed 0.8+ bundles onnxruntime>=1.23, required by
+# the quantized Qwen3 export; the legacy "fastembed-onnx" package no longer
+# exists on PyPI)
+onnx = ["fastembed>=0.8"]
 multipart = ["python-multipart>=0.0.9"]
 viz = ["matplotlib>=3.7"]
 mcp = ["mcp>=2.0"]
