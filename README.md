@@ -68,15 +68,15 @@ pip install -r requirements.txt
 
 ## 5. 配置
 
-### 5.1 三种配置方式（同一套 89 项可调项）
+### 5.1 三种配置方式（同一套 97 项可调项）
 
 | 方式 | 说明 |
 |---|---|
-| **Web 配置中心（推荐）** | `python -m sme.api` 启动服务后浏览器打开 `http://127.0.0.1:8000/`；全部 89 项分组展示、逐项校验、预设一键套用、测试连接；**保存到 `data/sme.config.json`**，引擎热重建立即生效（详见 5.2） |
+| **Web 配置中心（推荐）** | `python -m sme.api` 启动服务后浏览器打开 `http://127.0.0.1:8000/`；全部 97 项分组展示、逐项校验、预设一键套用、测试连接；**保存到 `data/sme.config.json`**，引擎热重建立即生效（详见 5.2） |
 | **显式 JSON 文件** | 自己写一个 JSON 配置文件：SDK 用 `SpatialMemoryEngine(config_path="路径")` 显式传入；REST 服务用环境变量 `SME_CONFIG_PATH` 或 `--config` 指定（见 5.4） |
 | **代码方式 `SMEConfig`** | 任意一项都可代码设置（见 5.3） |
 
-> 配置来源只有一套：**代码内置默认**（89 项注册表 `sme/config_items.py`，含每项中文说明）→
+> 配置来源只有一套：**代码内置默认**（97 项注册表 `sme/config_items.py`，含每项中文说明）→
 > 你通过 Web 配置中心修改，保存到 `data/sme.config.json`（`data/` 已被 .gitignore 排除；
 > 需要其他位置时用环境变量 `SME_CONFIG_PATH` 或 `python -m sme.api --config 路径`）。
 > 项目**不再随包分发 `config.json`**，引擎从不自动读取任何打包配置；SDK 直连请用
@@ -94,7 +94,7 @@ python -m sme.api          # 启动 REST 服务（默认 127.0.0.1:8000）
 
 | 功能 | 说明 |
 |---|---|
-| 分组展示 | 全部 89 项按功能分 9 组：模型接入 / 向量 / 检索与排序 / 空间与Region / 记忆动力学 / 存储 / 服务 / 会话层约定 / 扩展模块 |
+| 分组展示 | 全部 97 项按功能分 9 组：模型接入 / 向量 / 检索与排序 / 空间与Region / 记忆动力学 / 存储 / 服务 / 会话层约定 / 扩展模块 |
 | 详情弹窗 | 每项"详情"显示：作用说明全文、当前值/默认值、类型与可选值 |
 | 逐项校验 | 输入非法值当场红字提示（类型/枚举/范围） |
 | 密钥掩码 | API 密钥类项只显示是否已设置（`******`），不回显明文 |
@@ -132,7 +132,7 @@ engine = SpatialMemoryEngine(config)         # 或 SpatialMemoryEngine(config_pa
 | `SME_EMBEDDING_PROVIDER` / `MODEL` / `DIM` / `BASE_URL` / `API_KEY` | REST 服务端 embedding 配置（设了 PROVIDER 才读 KEY） |
 | `SME_API_AUTH_TOKEN` | REST 服务 Bearer 鉴权（等价 `api.auth_token`） |
 
-> 89 项配置完整总览（分组、默认值、逐项说明）与 `memory.*` 会话层参数说明见 [docs/接入使用.md](docs/接入使用.md) §3.3。
+> 97 项配置完整总览（分组、默认值、逐项说明）与 `memory.*` 会话层参数说明见 [docs/接入使用.md](docs/接入使用.md) §3.3。
 
 ## 6. 接入 AI：LLM 与 Embedding
 
@@ -460,7 +460,7 @@ python -m sme.benchmark --n-memories 2000                 # 写入/检索压测
 
 | 文档 | 内容 |
 |---|---|
-| [docs/接入使用.md](docs/接入使用.md) | 完整接入参考：89 项配置、环境变量、Python SDK 全 API、REST 端点表、预设、FAQ |
+| [docs/接入使用.md](docs/接入使用.md) | 完整接入参考：97 项配置、环境变量、Python SDK 全 API、REST 端点表、预设、FAQ |
 | [docs/原理解析.md](docs/原理解析.md) | 程序原理 + 每个文件/函数的作用（函数级解析） |
 | [docs/迭代计划.md](docs/迭代计划.md) | 对标第一梯队（Mem0/Zep/Graphiti/Letta）的迭代记录 |
 | [docs/修改记录.md](docs/修改记录.md) | 代码审查修复/完善/清理 + 修复前后对比数据 |
