@@ -41,12 +41,14 @@ class HashingEmbeddingProvider(EmbeddingProvider):
         window: int = 3,
         normalize_output: bool = True,
         seed: int = 42,
+        mrl_dim: int = 0,
     ) -> None:
         self.dim = dim
         self.factors = factors
         self.window = max(1, window)
         self.normalize_output = normalize_output
         self._seed = seed
+        self.mrl_dim = mrl_dim
         self.model_name = f"hashing-d{dim}-w{self.window}"
 
     def embed(self, texts: Sequence[str]) -> list[np.ndarray]:

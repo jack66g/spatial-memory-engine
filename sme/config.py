@@ -21,6 +21,14 @@ class EmbeddingConfig:
     # for the hashing fallback provider
     hash_factors: int = 3
     hash_window: int = 3        # n-gram window for the hashing embedding
+    # 模型无关化（换 embedding = 换向量空间）：
+    # revision 由用户在换模型时手动更换（配置中心可编辑）；engine 持久化时
+    # 会把 provider/model/dim/mrl_dim 组合成 revision_stamp 一并写进快照，
+    # load 时不一致即告警提示重建（SDK 直连软防护；REST PUT /config 有硬闸门）
+    revision: str = ""          # 向量空间版本标记，换模型必须换 revision 并重建
+    mrl_dim: int = 0            # MRL 截断维度：0=不截断；>0 且 < 原生维度时截前 N 维再 L2 归一
+    hash_seed: int = 0          # hashing provider 种子（0=默认 42；测试/隔离空间用，未注册配置中心）
+    revision_stamp: str = ""    # 引擎 save() 写入的自动组合标记（provider|model|dim|...），勿手工编辑
 
 
 @dataclass

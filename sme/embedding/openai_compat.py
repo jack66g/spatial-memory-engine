@@ -34,6 +34,7 @@ class OpenAICompatibleEmbeddingProvider(EmbeddingProvider):
         timeout: float = 60.0,
         normalize_output: bool = True,
         extra_headers: dict[str, str] | None = None,
+        mrl_dim: int = 0,
     ) -> None:
         self.base_url = base_url.rstrip("/")
         self.api_key = api_key
@@ -43,6 +44,7 @@ class OpenAICompatibleEmbeddingProvider(EmbeddingProvider):
         self.timeout = timeout
         self.normalize_output = normalize_output
         self.extra_headers = extra_headers or {}
+        self.mrl_dim = mrl_dim
         self.model_name = model
 
     def _headers(self) -> dict[str, str]:

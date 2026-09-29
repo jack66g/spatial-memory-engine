@@ -46,6 +46,7 @@ class FastEmbedProvider(EmbeddingProvider):
         threads: int | None = None,
         batch_size: int = 32,
         normalize_output: bool = True,
+        mrl_dim: int = 0,
     ) -> None:
         try:
             from fastembed import TextEmbedding
@@ -63,6 +64,7 @@ class FastEmbedProvider(EmbeddingProvider):
         self.model = model
         self.batch_size = batch_size
         self.normalize_output = normalize_output
+        self.mrl_dim = mrl_dim
         self.model_name = model
         self.dim = int(self._model.embedding_size)
 

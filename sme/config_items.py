@@ -105,6 +105,15 @@ ITEMS: list[ConfigItem] = [
     _it("embedding.batch_size", "批量大小", "Embedding 向量",
         "每次编码的条数；本地模型可调小省内存", kind="int",
         minimum=1, maximum=512, default=32),
+    _it("embedding.revision", "向量空间版本", "Embedding 向量",
+        "模型向量空间版本标记，换模型必须换 revision 并重建"
+        "（python -m sme.rebuild_embeddings）；相同维度换模型不会报维度错，"
+        "只能靠 revision 区分新旧向量空间"),
+    _it("embedding.mrl_dim", "MRL 截断维度", "Embedding 向量",
+        "0=不截断用模型原生维度；512=截到前 512 维省一半向量存储（仅 MRL 模型"
+        "如 Qwen3-Embedding 有效）。截维改变向量空间，改后必须运行 "
+        "python -m sme.rebuild_embeddings 重建旧向量", kind="int",
+        minimum=0, maximum=8192, default=0),
 
     # ------------------------ 记忆会话（会话层） ---------------------- #
     _it("memory.top_k", "检索条数", "记忆会话",

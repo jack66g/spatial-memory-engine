@@ -52,6 +52,26 @@ from sme.storage.backends import build_storage_backend
 from sme.modules.bridge import V2Bridge
 
 
+def embedding_revision(config: SMEConfig) -> str:
+    """当前配置的向量空间 revision（换 embedding = 换向量空间的身份标记）。
+
+    由 provider/model/dim/mrl_dim/hash_seed + 用户手填的 revision 标签组成；
+    engine.save() 时随快照 config 落盘，load() 时与当前引擎对比——不一致
+    说明快照里的向量与当前 provider 不是同一空间（同维度换模型不会报维度
+    错，只能靠它发现），需要 ``python -m sme.rebuild_embeddings`` 重建。
+    """
+    emb = config.embedding
+    parts = [emb.provider or "hashing", emb.model or "", str(emb.dim)]
+    if emb.mrl_dim and emb.mrl_dim > 0:
+        parts.append(f"mrl{emb.mrl_dim}")
+    if emb.hash_seed:
+        parts.append(f"seed{emb.hash_seed}")
+    tag = (emb.revision or "").strip()
+    if tag:
+        parts.append(tag)
+    return "|".join(parts)
+
+
 class SpatialMemoryEngine:
     def __init__(
         self,
@@ -63,6 +83,10 @@ class SpatialMemoryEngine:
                 loaded = json.load(fh)
             config = SMEConfig.from_dict(loaded.get("sme", loaded))
         self.config = config or SMEConfig()
+        # 用户是否显式传过配置：load 的向量空间告警只对"显式配置与快照
+        # 不一致"生效（默认构造的引擎本就没有向量空间意图，load 后整体
+        # 采纳快照配置即自洽，不告警）
+        self._explicit_config = config is not None or bool(config_path)
 
         # --- subsystems -------------------------------------------------- #
         logger.info("engine init: provider=%s model=%s dim=%d",
@@ -71,7 +95,9 @@ class SpatialMemoryEngine:
         self.embeddings = build_embedding_provider(self.config.embedding)
         self._calibrate_region_threshold()
         self.llm = LLMClient(self.config.llm)
-        self.space = SpatialMemorySpace(self.config.region, self.config.embedding.dim)
+        # 空间维度取 provider 的 effective_dim：MRL 截维（mrl_dim>0 且小于
+        # 原生维度）时实际产出的向量是 mrl_dim 维，Region 几何必须与之对齐
+        self.space = SpatialMemorySpace(self.config.region, self.embeddings.effective_dim)
         self.region_manager: RegionManager = self.space.manager
         self.policy = MemoryPolicy(self.config.policy)
         self.reinforcement = EbbinghausReinforcement(self.config.reinforcement)
@@ -546,6 +572,9 @@ class SpatialMemoryEngine:
     def save(self, path: Optional[str] = None) -> str:
         path = path or self.config.storage.path
         self.space.sync_geometry()  # snapshot carries exact region geometry
+        # revision 标记随快照落盘：provider/model/dim/mrl_dim 的组合身份，
+        # load 时与当前引擎对比，不一致即提示重建（SDK 直连软防护）
+        self.config.embedding.revision_stamp = embedding_revision(self.config)
         # derive the backend live: engine.config.storage.backend may have
         # been changed after construction
         self.storage_backend = build_storage_backend(self.config.storage.backend)
@@ -587,6 +616,23 @@ class SpatialMemoryEngine:
             snapshot = self.storage_backend.load(path)
             if snapshot is None:
                 return False
+            # 向量空间身份检查（SDK 直连软防护；REST PUT /config 已有硬闸门）：
+            # 快照 revision 与当前引擎 revision 不一致且库非空 => 磁盘向量与
+            # 当前 provider 不是同一空间（同维度换模型不报维度错，静默垃圾
+            # 相似度），明确告警让用户跑官方重建工具
+            if snapshot.memories and self._explicit_config:
+                disk_revision = (
+                    snapshot.config.embedding.revision_stamp
+                    or embedding_revision(snapshot.config)
+                )
+                engine_revision = embedding_revision(self.config)
+                if disk_revision != engine_revision:
+                    logger.warning(
+                        "embedding 向量空间不匹配：快照 revision=%s，当前引擎 "
+                        "revision=%s，检索质量不可信，请运行 "
+                        "python -m sme.rebuild_embeddings 重建向量",
+                        disk_revision, engine_revision,
+                    )
             self.config = snapshot.config
             # re-bind EVERY subsystem config (v1 + v2) to the snapshot config
             # so the restored engine behaves exactly like the saved one
@@ -627,6 +673,7 @@ class SpatialMemoryEngine:
                 self.embeddings.name != self.config.embedding.provider
                 or self.embeddings.model_name != self.config.embedding.model
                 or self.embeddings.dim != self.config.embedding.dim
+                or self.embeddings.mrl_dim != self.config.embedding.mrl_dim
             ):
                 self.embeddings = build_embedding_provider(self.config.embedding)
                 self._calibrate_region_threshold()
@@ -649,9 +696,11 @@ class SpatialMemoryEngine:
                 snapshot.memories,
                 {"edges": [e.to_dict() for e in snapshot.memory_edges]},
             )
-            # rebuild the spatial index from the loaded memories
+            # rebuild the spatial index from the loaded memories; the space
+            # dim follows the (possibly rebuilt) provider's effective dim so
+            # MRL-truncated vectors load into geometry of the right size
             self.space.load_state(
-                {"dim": self.config.embedding.dim, "write_ops": 0, "membership": {}, "vectors": {}},
+                {"dim": self.embeddings.effective_dim, "write_ops": 0, "membership": {}, "vectors": {}},
                 snapshot.regions,
                 snapshot.region_edges,
             )

@@ -26,7 +26,9 @@ from sme.storage.wal import WriteAheadLog
 def test_config_items_registered_group_commit():
     # 91 -> 92：新增 retrieval.fusion（混合归一方式 weighted|minmax，见
     # tests/test_fusion_minmax.py；本测试原断言 91 为其加入前的注册数）
-    assert len(ci.ITEMS) == 92
+    # 92 -> 94：新增 embedding.revision / embedding.mrl_dim（向量空间版本
+    # 标记 + MRL 截维，见 tests/test_embedding_revision_rebuild.py）
+    assert len(ci.ITEMS) == 94
     sync = ci.ITEM_BY_PATH["persistence.sync_mode"]
     assert sync.kind == "enum"
     assert sync.choices == ("fsync", "grouped")

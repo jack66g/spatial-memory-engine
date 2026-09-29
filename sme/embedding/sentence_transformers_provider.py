@@ -25,6 +25,7 @@ class SentenceTransformersProvider(EmbeddingProvider):
         device: str = "cpu",
         batch_size: int = 32,
         normalize_output: bool = True,
+        mrl_dim: int = 0,
     ) -> None:
         try:
             from sentence_transformers import SentenceTransformer
@@ -37,6 +38,7 @@ class SentenceTransformersProvider(EmbeddingProvider):
         self.model = model
         self.batch_size = batch_size
         self.normalize_output = normalize_output
+        self.mrl_dim = mrl_dim
         self.model_name = model
         getter = getattr(
             self._model, "get_embedding_dimension",
@@ -53,4 +55,6 @@ class SentenceTransformersProvider(EmbeddingProvider):
         )
         if raw.ndim == 1:
             raw = raw.reshape(1, -1)
-        return [np.asarray(v, dtype=np.float64).reshape(-1) for v in raw]
+        # _post applies MRL truncation + re-normalization (先截再归一)；when
+        # mrl_dim is off it only re-normalizes an already-unit vector (no-op)
+        return self._post([np.asarray(v, dtype=np.float64).reshape(-1) for v in raw])
