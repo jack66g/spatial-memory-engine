@@ -234,8 +234,26 @@ class TwoStageRetriever:
         region_scores: dict[str, float] = {
             hit.region.id: hit.score for hit in region_hits
         }
+        # metadata/tags/ns 过滤必须前移到候选收集阶段（而不是只在最终
+        # 结果上过滤）：Region 是跨命名空间聚合的，top-N Region 可能全是
+        # 别人的记忆——若不在此过滤，candidate_ids 会被过滤后必然出局的
+        # 记忆填满，补全池不触发，多用户检索直接饿死为 0 命中。
+        has_filters = bool(query.metadata_filters) or bool(query.tags)
         for rhit in region_hits:
-            candidate_ids.update(engine.space.candidates_in_region(rhit.region.id))
+            if has_filters:
+                candidate_ids.update(
+                    mid
+                    for mid in engine.space.candidates_in_region(rhit.region.id)
+                    if mid in engine.memories
+                    and self._metadata_matches(
+                        engine.memories[mid], query.metadata_filters
+                    )
+                    and self._tags_match(engine.memories[mid], query.tags)
+                )
+            else:
+                candidate_ids.update(
+                    engine.space.candidates_in_region(rhit.region.id)
+                )
 
         # budgeted global supplement: always add the best globally-similar
         # memories so a strong memory inside a mediocre region is never
@@ -252,6 +270,15 @@ class TwoStageRetriever:
                 and (not m.archived or query.include_archived)
                 and (engine.policy.allows_retrieval(m) or query.include_archived)
                 and m.embedding is not None
+                # 补全池同样带过滤：否则预算被别人记忆吃光，自己的相关
+                # 记忆根本进不了候选集
+                and (
+                    not has_filters
+                    or (
+                        self._metadata_matches(m, query.metadata_filters)
+                        and self._tags_match(m, query.tags)
+                    )
+                )
             ]
             if pool:
                 pool_ids = [mid for mid, _ in pool]
@@ -480,8 +507,10 @@ class TwoStageRetriever:
         # reserve a few top-k slots for expanded memories: pure score-based
         # merging would starve graph-recovered nodes (their decayed scores
         # are far below vector hits), so at least `reserved` slots always
-        # surface related-but-far memories
+        # surface related-but-far memories. top_k < 5 时 reserved 会至少为 1，
+        # 但不能吃掉全部直接命中槽位（top_k=1 时曾把精确匹配整个挤掉）。
         reserved = max(1, query.top_k // 5)
+        reserved = min(reserved, max(0, query.top_k - 1))
         merged = scored[: max(0, query.top_k - reserved)] + hits[:reserved]
         merged.sort(key=lambda hit: hit.score, reverse=True)
         return merged[: query.top_k]

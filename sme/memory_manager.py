@@ -29,6 +29,7 @@ from sme.modules.memory_graph import (
 from sme.models import Memory, MemoryStats
 from sme.dynamics.policy import MemoryPolicy
 from sme.dynamics.reinforcement import EbbinghausReinforcement
+from sme.modules.namespaces import NS_KEY
 from sme.space.space import SpatialMemorySpace
 from sme.utils import now
 
@@ -99,7 +100,8 @@ class MemoryManager:
         for text, vector in zip(texts, vectors):
             memory = Memory(
                 text=text,
-                metadata=kwargs.get("metadata", {}) or {},
+                # 每条独立拷贝：共享同一 dict 对象会让改一条的 metadata 漏到全部
+                metadata=dict(kwargs.get("metadata", {}) or {}),
                 tags=list(kwargs.get("tags", []) or []),
                 importance=kwargs.get("importance", 0.5),
                 embedding=vector,
@@ -131,6 +133,7 @@ class MemoryManager:
     ) -> Memory:
         memory = self.require(memory_id)
         changed = False
+        index_change = False
         if text is not None and text.strip() != memory.text:
             memory.text = text
             memory.embedding = self.embeddings.embed_one(text)
@@ -139,8 +142,16 @@ class MemoryManager:
             memory.region_id = self.space.insert(memory.id, memory.embedding)
             changed = True
         if metadata is not None and metadata != memory.metadata:
-            memory.metadata = metadata
-            changed = True
+            # metadata PATCH 是整字典替换，但命名空间键是隔离语义的一部分：
+            # 不带 ns 的 PATCH 抹掉 ns 会让记忆脱离隔离、对无 ns 查询可见。
+            merged = dict(metadata)
+            if NS_KEY not in merged and NS_KEY in memory.metadata:
+                merged[NS_KEY] = memory.metadata[NS_KEY]
+            memory.metadata = merged
+            # metadata 变更不置 changed：只改 metadata 不重置 last_hit/
+            # freshness/version（兑现注释承诺的语义，旧实现误置 True）。
+            # 但检索索引依赖 metadata（filters），仍需标记刷新。
+            index_change = True
         if tags is not None and tags != memory.tags:
             memory.tags = tags
             changed = True
@@ -157,6 +168,10 @@ class MemoryManager:
             # only a substantive change is a "touch": a no-op update (or a
             # metadata-only patch) must not reset last_hit/freshness/version
             memory.touched()
+            if self.on_upsert is not None:
+                self.on_upsert(memory)
+        elif index_change:
+            # metadata-only 变更：不 touch，但刷新检索索引（filters 依赖）
             if self.on_upsert is not None:
                 self.on_upsert(memory)
         return memory

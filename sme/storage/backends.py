@@ -17,6 +17,7 @@ from __future__ import annotations
 import json
 import os
 import sqlite3
+import threading
 from typing import Protocol
 
 import numpy as np
@@ -50,16 +51,26 @@ class LocalJsonBackend:
 
 
 class SqliteBackend:
-    """SQLite storage: one DB file holding the snapshot + vectors."""
+    """SQLite storage: one DB file holding the snapshot + vectors.
+
+    线程安全（uvicorn 线程池多线程访问）：连接每次操作新建、即用即关，
+    ``check_same_thread=False`` 消除 sqlite 的线程亲和限制，类级锁串行化
+    同进程内的并发读写（锁必须挂类上——``build_storage_backend`` 和
+    ``engine.save`` 每次调用都会 new 一个 SqliteBackend 实例，实例锁挡
+    不住跨实例并发）；``busy_timeout`` 兜住跨进程的文件锁竞争。
+    """
 
     name = "sqlite"
+
+    _class_lock = threading.Lock()
 
     # ------------------------------------------------------------------ #
     @staticmethod
     def _connect(path: str):
         directory = os.path.dirname(os.path.abspath(path))
         os.makedirs(directory, exist_ok=True)
-        conn = sqlite3.connect(path)
+        conn = sqlite3.connect(path, check_same_thread=False)
+        conn.execute("PRAGMA busy_timeout = 5000")
         conn.execute(
             "CREATE TABLE IF NOT EXISTS snapshots ("
             " id INTEGER PRIMARY KEY, payload TEXT, saved_at REAL)"
@@ -74,52 +85,54 @@ class SqliteBackend:
     def save(self, path: str, snapshot: EngineSnapshot, compress: bool = True) -> str:
         data = snapshot.to_dict(include_embeddings=False)
         payload = json.dumps(data, ensure_ascii=False)
-        conn = self._connect(path)
-        try:
-            with conn:  # transaction: snapshot + vectors commit atomically
-                conn.execute("DELETE FROM snapshots")
-                conn.execute(
-                    "INSERT INTO snapshots (payload, saved_at) VALUES (?, ?)",
-                    (payload, __import__("time").time()),
-                )
-                conn.execute("DELETE FROM vectors")
-                ids, blobs = [], []
-                for m in snapshot.memories:
-                    if m.embedding is not None:
-                        ids.append(m.id)
-                        blobs.append(
-                            np.asarray(m.embedding, dtype=np.float64).tobytes()
-                        )
-                if ids:
-                    conn.executemany(
-                        "INSERT OR REPLACE INTO vectors (memory_id, blob) VALUES (?, ?)",
-                        list(zip(ids, blobs)),
+        with self._class_lock:
+            conn = self._connect(path)
+            try:
+                with conn:  # transaction: snapshot + vectors commit atomically
+                    conn.execute("DELETE FROM snapshots")
+                    conn.execute(
+                        "INSERT INTO snapshots (payload, saved_at) VALUES (?, ?)",
+                        (payload, __import__("time").time()),
                     )
-        finally:
-            conn.close()
+                    conn.execute("DELETE FROM vectors")
+                    ids, blobs = [], []
+                    for m in snapshot.memories:
+                        if m.embedding is not None:
+                            ids.append(m.id)
+                            blobs.append(
+                                np.asarray(m.embedding, dtype=np.float64).tobytes()
+                            )
+                    if ids:
+                        conn.executemany(
+                            "INSERT OR REPLACE INTO vectors (memory_id, blob) VALUES (?, ?)",
+                            list(zip(ids, blobs)),
+                        )
+            finally:
+                conn.close()
         return path
 
     def load(self, path: str) -> EngineSnapshot | None:
         if not os.path.exists(path):
             return None
-        conn = self._connect(path)
-        try:
-            row = conn.execute(
-                "SELECT payload FROM snapshots ORDER BY id DESC LIMIT 1"
-            ).fetchone()
-            if row is None:
-                return None
-            data = json.loads(row[0])
-            snapshot = EngineSnapshot.from_dict(data)
-            rows = conn.execute("SELECT memory_id, blob FROM vectors").fetchall()
-            by_id = {m.id: m for m in snapshot.memories}
-            for mid, blob in rows:
-                mem = by_id.get(mid)
-                if mem is not None:
-                    mem.embedding = np.frombuffer(blob, dtype=np.float64)
-            return snapshot
-        finally:
-            conn.close()
+        with self._class_lock:
+            conn = self._connect(path)
+            try:
+                row = conn.execute(
+                    "SELECT payload FROM snapshots ORDER BY id DESC LIMIT 1"
+                ).fetchone()
+                if row is None:
+                    return None
+                data = json.loads(row[0])
+                snapshot = EngineSnapshot.from_dict(data)
+                rows = conn.execute("SELECT memory_id, blob FROM vectors").fetchall()
+            finally:
+                conn.close()
+        by_id = {m.id: m for m in snapshot.memories}
+        for mid, blob in rows:
+            mem = by_id.get(mid)
+            if mem is not None:
+                mem.embedding = np.frombuffer(blob, dtype=np.float64)
+        return snapshot
 
     def query_vectors(self, path: str, vector, top_k: int = 10) -> list:
         """Brute-force cosine search over the stored vectors (iteration 3.3).
@@ -129,11 +142,12 @@ class SqliteBackend:
         """
         if not os.path.exists(path):
             return []
-        conn = self._connect(path)
-        try:
-            rows = conn.execute("SELECT memory_id, blob FROM vectors").fetchall()
-        finally:
-            conn.close()
+        with self._class_lock:
+            conn = self._connect(path)
+            try:
+                rows = conn.execute("SELECT memory_id, blob FROM vectors").fetchall()
+            finally:
+                conn.close()
         if not rows:
             return []
         q = np.asarray(vector, dtype=np.float64)

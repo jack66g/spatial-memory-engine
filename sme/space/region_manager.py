@@ -356,6 +356,24 @@ class RegionManager:
                 continue
             neighbor = self._closest_region(space, rid)
             if neighbor and neighbor.id != rid:
+                # 距离门槛：微小 Region 只并入语义相近的邻居（质心余弦达到
+                # min_join_cosine）。旧实现无条件并"最近"，把远离所有 Region
+                # 而自立的新话题（稀疏话题/新用户前几条记忆）强行吞进语义
+                # 无关的 Region，架空了加入门槛。
+                if (
+                    region.centroid is None
+                    or neighbor.centroid is None
+                    or float(
+                        np.dot(region.centroid, neighbor.centroid)
+                        / (
+                            np.linalg.norm(region.centroid)
+                            * np.linalg.norm(neighbor.centroid)
+                            + 1e-12
+                        )
+                    )
+                    < cfg.min_join_cosine
+                ):
+                    continue
                 outcome = self.merge_regions(space, rid, neighbor.id)
                 if outcome is not None:
                     merges += 1

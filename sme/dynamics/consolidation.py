@@ -19,6 +19,7 @@ from typing import Optional
 
 from sme.config import ConsolidationConfig
 from sme.llm import LLMClient
+from sme.modules.namespaces import NS_KEY
 from sme.utils import cosine_similarity, now
 
 
@@ -47,38 +48,53 @@ class ConsolidationEngine:
         threshold = self.config.similarity_threshold
         groups: list[list] = []
         for region in engine.space.regions.values():
-            members = [
+            members_all = [
                 engine.memories[mid]
                 for mid in region.member_ids
                 if mid in engine.memories
                 and not engine.memories[mid].archived
                 and engine.memories[mid].source != "summary"
             ]
-            if len(members) < self.config.min_group_size:
+            if len(members_all) < self.config.min_group_size:
                 continue
-            members.sort(key=lambda m: m.importance, reverse=True)
-
-            # 1) fine-grained clustering
-            clusters = self._greedy_clusters(members, threshold)
-            covered: set[str] = set()
-            for cluster in clusters:
-                if len(cluster) >= self.config.min_group_size:
-                    group = cluster[: self.config.max_group_size]
-                    covered.update(m.id for m in group)
-                    groups.append(group)
-                    if len(groups) >= max_groups:
-                        return groups
-
-            # 2) whole-region coherence fallback
-            if len(members) <= self.config.max_group_size:
-                coverage = len(covered) / len(members)
-                if coverage >= 0.6:
-                    continue  # already covered by fine-grained clusters
-                if self._region_coherent(members, threshold):
-                    groups.append(members)
-                    if len(groups) >= max_groups:
-                        return groups
+            # 按命名空间分桶：Region 是跨 ns 聚合的，直接聚类会生成混装两个
+            # 用户记忆的摘要——带 ns 查询看不到（缺 ns 键被过滤）、无 ns 查询
+            # 反而泄漏双方内容。分桶后每个摘要只覆盖单一 ns。
+            buckets: dict[str, list] = {}
+            for m in members_all:
+                buckets.setdefault(str(m.metadata.get(NS_KEY, "")), []).append(m)
+            for members in buckets.values():
+                if len(members) < self.config.min_group_size:
+                    continue
+                self._find_groups_in_members(members, threshold, groups, max_groups)
+                if len(groups) >= max_groups:
+                    return groups
         return groups
+
+    def _find_groups_in_members(
+        self, members: list, threshold: float, groups: list, max_groups: int
+    ) -> None:
+        """单个 ns 桶内的聚类与整体融合（原 find_groups 的桶内逻辑）。"""
+        members.sort(key=lambda m: m.importance, reverse=True)
+
+        # 1) fine-grained clustering
+        clusters = self._greedy_clusters(members, threshold)
+        covered: set[str] = set()
+        for cluster in clusters:
+            if len(cluster) >= self.config.min_group_size:
+                group = cluster[: self.config.max_group_size]
+                covered.update(m.id for m in group)
+                groups.append(group)
+                if len(groups) >= max_groups:
+                    return
+
+        # 2) whole-region coherence fallback
+        if len(members) <= self.config.max_group_size:
+            coverage = len(covered) / len(members)
+            if coverage >= 0.6:
+                return  # already covered by fine-grained clusters
+            if self._region_coherent(members, threshold):
+                groups.append(members)
 
     @staticmethod
     def _greedy_clusters(members: list, threshold: float) -> list[list]:
@@ -144,6 +160,11 @@ class ConsolidationEngine:
             )
             summary.metadata["covers"] = sorted(ids)
             summary.metadata["consolidated_at"] = now()
+            ns_values = {
+                m.metadata.get(NS_KEY) for m in group if m.metadata.get(NS_KEY)
+            }
+            if len(ns_values) == 1:
+                summary.metadata[NS_KEY] = ns_values.pop()
             created.append(summary)
             self.consolidation_count += 1
         self.last_run_at = now()

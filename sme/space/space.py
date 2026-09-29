@@ -177,8 +177,23 @@ class SpatialMemorySpace:
     # insert / remove
     # ------------------------------------------------------------------ #
     def insert(self, memory_id: str, vector: np.ndarray) -> str:
-        """Add a memory node to the space. Returns its region id."""
+        """Add a memory node to the space. Returns its region id.
+
+        幂等：同一 ``memory_id`` 已是空间成员时只刷新向量、保留原 Region
+        归属，不再走 ``absorb_member``——对已有成员重复吸收会对质心再执行
+        一次 ``(n*c+v)/(n+1)`` 累加，把 Region 几何推偏（WAL 重放 add、
+        ``import_memories`` 重复导入都会走到这里）。孤儿（向量在但归属已
+        丢失/指向已删 Region）仍走完整吸收路径。
+        """
         arr = np.asarray(vector, dtype=np.float64).reshape(-1)
+        existing = self._membership.get(memory_id)
+        if (
+            memory_id in self.vectors
+            and existing is not None
+            and existing in self.regions
+        ):
+            self.vectors[memory_id] = arr
+            return existing
         self.vectors[memory_id] = arr
         region_id = self.manager.absorb_member(self, memory_id, arr)
         self._set_membership(memory_id, region_id)

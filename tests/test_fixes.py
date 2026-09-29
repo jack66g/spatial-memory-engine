@@ -298,7 +298,7 @@ def test_d9_sentence_transformer_dim_detected():
     from sme.config import EmbeddingConfig
 
     cfg = EmbeddingConfig(provider="sentence-transformers",
-                          model="sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+                          model="BAAI/bge-small-zh-v1.5",  # 本地缓存模型（原 MiniLM 未缓存且离线不可拉取）
                           dim=64)
     try:
         prov = build_embedding_provider(cfg)

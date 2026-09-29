@@ -14,6 +14,7 @@ from typing import Optional
 
 from sme.config import CompressionConfig
 from sme.llm import LLMClient
+from sme.modules.namespaces import NS_KEY
 from sme.utils import age_days, now
 
 
@@ -36,7 +37,7 @@ class CompressionEngine:
                 continue
             if self._region_compressed(engine, region.id):
                 continue
-            candidates = [
+            region_candidates = [
                 engine.memories[mid]
                 for mid in region.member_ids
                 if mid in engine.memories
@@ -44,8 +45,13 @@ class CompressionEngine:
                 and engine.memories[mid].source != "summary"
                 and age_days(engine.memories[mid].last_hit) >= self.config.age_days_threshold
             ]
-            if len(candidates) >= self.config.min_region_compact:
-                out.append(candidates)
+            # 按命名空间分桶：压缩摘要不得跨 ns 混装（同融合的理由）
+            buckets: dict[str, list] = {}
+            for m in region_candidates:
+                buckets.setdefault(str(m.metadata.get(NS_KEY, "")), []).append(m)
+            for candidates in buckets.values():
+                if len(candidates) >= self.config.min_region_compact:
+                    out.append(candidates)
             if len(out) >= max_regions:
                 break
         return out
@@ -66,6 +72,11 @@ class CompressionEngine:
             summary.metadata["compresses_region"] = region_id
             summary.metadata["compressed_at"] = now()
             summary.metadata["cover_count"] = len(candidates)
+            ns_values = {
+                m.metadata.get(NS_KEY) for m in candidates if m.metadata.get(NS_KEY)
+            }
+            if len(ns_values) == 1:
+                summary.metadata[NS_KEY] = ns_values.pop()
             created.append(summary)
             self.compression_count += 1
         return created

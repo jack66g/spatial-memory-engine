@@ -5,7 +5,7 @@ from __future__ import annotations
 import sys
 from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).resolve().parents[2]))  # SME 插件根
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))  # SME 插件根
 
 import pytest
 

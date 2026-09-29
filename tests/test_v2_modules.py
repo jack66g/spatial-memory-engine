@@ -262,7 +262,7 @@ def test_sqlite_backend_roundtrip(fresh_engine, tmp_path):
 
 def test_sqlite_backend_query_vectors(fresh_engine, tmp_path):
     """SqliteBackend.query_vectors runs a cosine search over the stored DB."""
-    from sme.storage_backends import SqliteBackend
+    from sme.storage.backends import SqliteBackend
 
     e = fresh_engine
     e.config.storage.backend = "sqlite"

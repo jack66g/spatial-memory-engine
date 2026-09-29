@@ -28,6 +28,7 @@ import os
 import subprocess
 import sys
 import tempfile
+import threading
 import time
 
 import httpx
@@ -60,38 +61,59 @@ def _service_up(timeout: float = 3.0) -> bool:
         return False
 
 
+# 拉起服务的单飞锁：同一 MCP 进程内并发的工具调用（宿主多线程派发）
+# 只允许一个线程进入 spawn 窗口，避免 N 路同时加载本地 embedding 模型
+# 造成内存尖峰；等待就绪的轮询在锁外进行，不互相阻塞。
+_SPAWN_LOCK = threading.Lock()
+
+
 def _ensure_service(wait_seconds: float = 90.0) -> None:
     """服务不在就后台拉起（分离进程，不随 MCP 退出），并等它就绪。
 
     就绪等待给足模型加载时间（本地 Qwen3 embedding 首载约 10-30s）；
     服务日志写到系统临时目录 sme_service.log 便于排查拉起失败。
+    超时不静默返回：裸 ConnectError 栈对用户毫无信息量，显式抛
+    RuntimeError 指向日志路径。
     """
     if _service_up():
         return
-    flags = 0
-    child_env = {**os.environ, "HF_HUB_OFFLINE": "1"}
-    if os.name == "nt":
-        flags = subprocess.DETACHED_PROCESS | subprocess.CREATE_NEW_PROCESS_GROUP
     log_path = os.path.join(tempfile.gettempdir(), "sme_service.log")
-    log_fh = open(log_path, "ab")
-    try:
-        subprocess.Popen(
-            [sys.executable, "-m", "sme.api", "--port", str(_PORT)],
-            cwd=REPO_ROOT,
-            creationflags=flags,
-            env=child_env,
-            stdout=log_fh,
-            stderr=subprocess.STDOUT,
-            close_fds=True,
-        )
-    finally:
-        # 句柄已被子进程继承，父端可安全关闭
-        log_fh.close()
+    with _SPAWN_LOCK:
+        if _service_up():
+            # 双检：排队等锁期间，前面的线程已经把服务拉起来了
+            return
+        flags = 0
+        popen_kwargs: dict = {}
+        child_env = {**os.environ, "HF_HUB_OFFLINE": "1"}
+        if os.name == "nt":
+            flags = subprocess.DETACHED_PROCESS | subprocess.CREATE_NEW_PROCESS_GROUP
+        else:
+            # POSIX 侧脱离会话（setsid）：MCP 进程退出/终端关闭不带走服务
+            popen_kwargs["start_new_session"] = True
+        log_fh = open(log_path, "ab")
+        try:
+            subprocess.Popen(
+                [sys.executable, "-m", "sme.api", "--port", str(_PORT)],
+                cwd=REPO_ROOT,
+                creationflags=flags,
+                env=child_env,
+                stdout=log_fh,
+                stderr=subprocess.STDOUT,
+                close_fds=True,
+                **popen_kwargs,
+            )
+        finally:
+            # 句柄已被子进程继承，父端可安全关闭
+            log_fh.close()
+    # 等待段在锁外：并发调用各自轮询就绪，不占着 spawn 锁
     deadline = time.monotonic() + wait_seconds
     while time.monotonic() < deadline:
         if _service_up():
             return
         time.sleep(1.5)
+    raise RuntimeError(
+        f"记忆服务 {wait_seconds:.0f} 秒内未就绪，请查看 {log_path}"
+    )
 
 
 def _api(method: str, path: str, payload: dict | None = None) -> dict:

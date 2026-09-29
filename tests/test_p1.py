@@ -87,7 +87,7 @@ def test_rerank_mock_scorer(fresh_engine, monkeypatch):
             return [1.0 if "coffee" in doc else 0.1 for _, doc in pairs]
 
     monkeypatch.setattr(
-        "sme.rerank.Reranker._get_model", lambda self: _FakeModel()
+        "sme.retrieval.rerank.Reranker._get_model", lambda self: _FakeModel()
     )
     hits = e.search("coffee", top_k=10)
     assert hits
@@ -102,7 +102,7 @@ def test_rerank_fallback_on_model_error(fresh_engine, monkeypatch):
     def boom(self):
         raise RuntimeError("model load failed")
 
-    monkeypatch.setattr("sme.rerank.Reranker._get_model", boom)
+    monkeypatch.setattr("sme.retrieval.rerank.Reranker._get_model", boom)
     hits = e.search("tea", top_k=3)  # must not raise
     assert hits
 
@@ -132,7 +132,7 @@ def test_chat_preset_ranking_untouched():
 
 # ------------------------- 2.5 rules particles ----------------------------- #
 def test_rules_strip_trailing_particles(fresh_engine, zh):
-    from sme.extraction import _rules_extract, _strip_particles
+    from sme.modules.extraction import _rules_extract, _strip_particles
 
     assert _strip_particles("用户不喜欢喝咖啡了") == "用户不喜欢喝咖啡"
     assert _strip_particles("用户喜欢喝咖啡呢") == "用户喜欢喝咖啡"

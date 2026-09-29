@@ -96,7 +96,10 @@ def ebbinghaus_retention(
 ) -> float:
     """Retention probability following an Ebbinghaus-like forgetting curve.
 
-    retention = 1 / (1 + (age / half_life)) ** power
+    retention = 1 / (1 + (age / half_life) ** power)
+
+    注意运算符优先级：幂只作用于 (age/half_life)，即 1/(1 + x^p) 而非
+    1/(1+x)^p——任何 power 下 age == half_life 时 retention 恰为 0.5。
     """
     if age_d <= 0.0:
         return 1.0

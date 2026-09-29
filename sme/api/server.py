@@ -40,6 +40,7 @@ from __future__ import annotations
 import json
 import os
 import tempfile
+import time
 import threading
 from typing import Any, Optional
 
@@ -717,7 +718,11 @@ def create_app(
     def evolve_regions() -> dict:
         with engine_lock:
             eng = engine
-            events = eng.region_manager.evolution_pass(eng.space)
+            # evolution_pass 会 split/merge Region 并改写成员归属，必须与
+            # engine 写路径/检索路径互斥（engine._lock 是 RLock，内部
+            # _maybe_evolve 重入安全）
+            with eng._lock:
+                events = eng.region_manager.evolution_pass(eng.space)
         return {"events": [e.__dict__ for e in events]}
 
     # ------------------------- stats ----------------------------------- #
@@ -892,10 +897,14 @@ def create_app(
             tele = getattr(eng, "telemetry", None)
             if tele is None or not tele.enabled:
                 raise HTTPException(status_code=404, detail="telemetry disabled")
-            path = os.path.join(tempfile.gettempdir(), "sme_report.json")
+            # per-request 唯一临时文件：固定共享路径在并发请求下互相覆写、
+            # 流式发送期间被改写会产出撕裂 JSON（旧实现）
+            fd, path = tempfile.mkstemp(prefix="sme_report_", suffix=".json")
+            os.close(fd)
             tele.export_json(path, eng)
         return FileResponse(path, media_type="application/json",
-                            filename="sme_report.json")
+                            filename="sme_report.json",
+                            background=BackgroundTask(os.remove, path))
 
     # ------------------------- config UI ------------------------------- #
     static_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "static")
@@ -922,7 +931,12 @@ def _apply_env_overrides(config: SMEConfig) -> bool:
         config.llm.api_key = os.environ.get("SME_LLM_API_KEY", "")
         config.llm.model = os.environ.get("SME_LLM_MODEL", "gpt-4o-mini")
         from_env = True
-    config.api.auth_token = os.environ.get("SME_API_AUTH_TOKEN", "")
+    # 只有环境变量真实存在时才覆盖：无条件覆盖会在 env 未设置时把
+    # 配置文件（或文件重放）设置的 token 清空——鉴权意外失效
+    _tok = os.environ.get("SME_API_AUTH_TOKEN")
+    if _tok:
+        config.api.auth_token = _tok
+        from_env = True
     provider = os.environ.get("SME_EMBEDDING_PROVIDER")
     if provider:
         config.embedding.provider = provider
@@ -952,10 +966,8 @@ def _restore_snapshot(engine: SpatialMemoryEngine) -> bool:
 
     for candidate in (base, base + ".gz"):
         if os.path.exists(candidate):
-            wal_pending = False
             try:
-                wal_path = engine.wal.path
-                wal_pending = os.path.exists(wal_path) and os.path.getsize(wal_path) > 0
+                wal_pending = engine.wal.has_pending()
             except Exception:  # noqa: BLE001 - WAL 探测失败不阻断恢复
                 wal_pending = False
             try:
@@ -964,6 +976,16 @@ def _restore_snapshot(engine: SpatialMemoryEngine) -> bool:
                 logging.getLogger("sme.api").warning(
                     "快照恢复失败，以空库启动（%s）: %s", candidate, exc
                 )
+                # 坏快照改名保留：否则空库启动后的自动保存会把它覆盖掉，
+                # 把"部分损坏"放大成"全量丢失"（无任何现场可查）
+                try:
+                    backup = candidate + ".corrupt-" + time.strftime("%Y%m%d%H%M%S")
+                    os.replace(candidate, backup)
+                    logging.getLogger("sme.api").warning(
+                        "已将坏快照备份为 %s", backup
+                    )
+                except OSError:
+                    pass
                 return False
             if restored and wal_pending:
                 try:
@@ -974,6 +996,46 @@ def _restore_snapshot(engine: SpatialMemoryEngine) -> bool:
                     )
             return restored
     return False
+
+
+def _apply_file_overrides(engine: SpatialMemoryEngine, path: str) -> None:
+    """快照恢复后重放配置文件的"显式键"（与内置默认不同的键）。
+
+    快照内嵌的配置整体覆盖会吞掉用户在两次启动之间手改的
+    ``data/sme.config.json``——尤其 ``api.auth_token``（重启后 token 清空
+    → API 无鉴权裸奔）。这里把文件里相对内置默认的显式修改重放上去；
+    embedding 身份（provider/model/dim）沿用空库闸门：非空库的向量维度
+    是数据事实，文件值不覆盖（与 :func:`_rebind_after_env` 同一原则）。
+    """
+    if not path or not os.path.exists(path):
+        return
+    from sme.config_items import ITEMS, defaults_config, get_value, load_config
+
+    file_cfg = load_config(path)
+    if not isinstance(file_cfg, dict) or not file_cfg:
+        return
+    defaults = defaults_config()
+    empty_library = not engine.memories
+    for item in ITEMS:
+        try:
+            fval = get_value(file_cfg, item)
+            dval = get_value(defaults, item)
+        except Exception:  # noqa: BLE001 - 单项失败不阻断其余重放
+            continue
+        if fval == dval:
+            continue
+        if not empty_library and item.path.startswith("embedding.") and item.path.split(
+            "."
+        )[-1] in ("provider", "model", "dim"):
+            continue  # 非空库不改 embedding 身份
+        parts = item.path.split(".")
+        try:
+            obj = engine.config
+            for p in parts[:-1]:
+                obj = getattr(obj, p)
+            setattr(obj, parts[-1], fval)
+        except AttributeError:
+            continue
 
 
 def _rebind_after_env(engine: SpatialMemoryEngine) -> None:
@@ -1024,6 +1086,9 @@ def resolve_engine(
         engine = SpatialMemoryEngine(config_path=path)
         restored = _restore_snapshot(engine)
         if restored:
+            # 恢复顺序：配置文件显式键（用户手改的意图，如加 auth_token）
+            # → env 覆盖（env 最高）。快照内嵌配置只作底，不再压过手改文件。
+            _apply_file_overrides(engine, path)
             _rebind_after_env(engine)
         return engine, path, "file"
 
@@ -1034,7 +1099,9 @@ def resolve_engine(
     # provider / dimension are created consistently from the env values
     engine = SpatialMemoryEngine(config)
     if _restore_snapshot(engine):
-        # 快照配置生效后需重放 env 覆盖（同上：embedding 身份在非空库上不覆盖）
+        # 快照配置生效后重放配置文件显式键与 env 覆盖
+        # （embedding 身份在非空库上不覆盖）
+        _apply_file_overrides(engine, config_file)
         _rebind_after_env(engine)
     return engine, config_file, ("env" if from_env else "defaults")
 
