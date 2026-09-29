@@ -222,7 +222,12 @@ class PersistenceConfig:
     enabled: bool = False
     wal_path: str = ""              # empty => <storage.path>.wal
     checkpoint_every: int = 10      # full snapshot every N write ops
-    sync_mode: str = "fsync"        # fsync | off
+    # fsync（默认）= 每 append 一次 write+flush+fsync（现行为不变）；
+    # grouped = 组提交：append 只进内存攒批，后台线程按 group_window_ms
+    # 窗口合并落盘（文件模式合并 write+fsync；sqlite 攒批事务 +
+    # PRAGMA synchronous=NORMAL）。其他值保持旧行为（write+flush 不 fsync）。
+    sync_mode: str = "fsync"
+    group_window_ms: int = 15       # grouped 攒批窗口（毫秒，1-200）
 
 
 @dataclass

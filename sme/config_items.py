@@ -289,6 +289,14 @@ ITEMS: list[ConfigItem] = [
     _it("persistence.checkpoint_every", "WAL 快照间隔", "v2 模块",
         "每 N 次写入做一次全量快照", kind="int",
         minimum=1, maximum=100000, default=10),
+    _it("persistence.sync_mode", "WAL 落盘方式", "v2 模块",
+        "fsync=每条写入立即刷盘（最安全，默认）/ grouped=组提交：后台按攒批窗口"
+        "合并落盘，写吞吐大幅提升，崩溃最多丢窗口内的少量写入",
+        kind="enum", choices=("fsync", "grouped"), default="fsync"),
+    _it("persistence.group_window_ms", "组提交攒批窗口", "v2 模块",
+        "grouped 模式后台攒批落盘的时间窗口（毫秒）；窗口越大吞吐越高、"
+        "崩溃丢失窗口越大，仅在落盘方式=grouped 时生效",
+        kind="int", minimum=1, maximum=200, default=15),
     _it("api.host", "REST 监听地址", "v2 模块",
         "启动未传 --host 参数时生效；127.0.0.1=仅本机；0.0.0.0=局域网可访问",
         required=True, default="127.0.0.1"),

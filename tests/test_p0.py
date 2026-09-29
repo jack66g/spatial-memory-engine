@@ -171,14 +171,24 @@ def test_import_documents_retrieval_and_expansion(fresh_engine):
 
 
 def test_import_documents_cli(fresh_engine, tmp_path, capsys):
+    import json
+
     import sme.import_docs as mod
 
     doc = str(tmp_path / "law.txt")
     with open(doc, "w", encoding="utf-8") as fh:
         fh.write(LAW_TEXT)
     out = str(tmp_path / "law_state.json")
+    # 隔离到临时目录：不带 --config 时 CLI 用默认 data/engine.json，
+    # save() 的 WAL reset/ sidecar 会写真实服务正在用的 data/ 文件
+    # （服务进程持有 .wal 句柄时 os.remove 直接 PermissionError）。
+    cfg_path = tmp_path / "cli_config.json"
+    cfg_path.write_text(json.dumps({
+        "storage": {"path": str(tmp_path / "cli_engine.json")},
+        "persistence": {"enabled": False},
+    }), encoding="utf-8")
     rc = mod.main(["--file", doc, "--title", "民法典", "--source", "法律",
-                   "--save", out])
+                   "--save", out, "--config", str(cfg_path)])
     assert rc == 0
     captured = capsys.readouterr()
     assert "导入" in captured.out
