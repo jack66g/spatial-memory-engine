@@ -184,8 +184,21 @@ def main() -> None:
     env = load_env()
     results: dict = {"contestants": {}}
     t_all = time.time()
+
+    # 增量落盘：每选手跑完立即写盘（防止"跑完全程、写盘一步失败全丢"重演——
+    # 2026-09-29 seed1 曾因 --out 路径错误整轮白跑）。最终写盘仍保留。
+    def _incremental_write() -> None:
+        try:
+            _p = RESULTS / f"{args.out}.partial"
+            _p.write_text(json.dumps(
+                {**results, "meta": {"note": "partial（battle 进行中增量落盘）"}},
+                ensure_ascii=False, indent=1), encoding="utf-8")
+        except OSError as _e:  # noqa: BLE001
+            print(u8(f"[battle] 增量落盘失败（不影响比赛继续）: {_e}"), flush=True)
+
     for name in order:
         results["contestants"][name] = run_contestant(name, FACTORIES[name], rounds, questions)
+        _incremental_write()
 
     results["meta"] = {
         "ts": datetime.now(timezone.utc).isoformat(timespec="seconds"),
@@ -206,6 +219,10 @@ def main() -> None:
 
     out_path = RESULTS / args.out
     out_path.write_text(json.dumps(results, ensure_ascii=False, indent=2), encoding="utf-8")
+    # 最终结果落盘成功，清理增量 partial 文件
+    _partial = RESULTS / f"{args.out}.partial"
+    if _partial.exists():
+        _partial.unlink()
 
     # ------------------ 排名表 ------------------ #
     print(u8("\n") + u8("=" * 88), flush=True)
