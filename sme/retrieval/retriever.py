@@ -30,6 +30,14 @@ Normalization modes (``retrieval.fusion``):
     weighted (legacy compatibility): BM25 scores are divided by the pool
         peak, vector uses the linear (cos+1)/2 map, metadata adds a
         constant shift. Kept byte-identical for compatibility.
+
+Graph expansion (optional ``graph_expand`` hops): the memory graph is
+walked from the final top-k with a Personalized PageRank (HippoRAG 2
+route) - teleport mass returns to the vector hits proportionally to
+their hybrid scores, so a node linked from MANY relevant memories
+surfaces even several hops out, where the depth-penalized BFS buries it
+under shallow noisy edges. The legacy BFS survives as the control path
+(``_graph_expand_bfs``) and as the tiny-graph fallback.
 """
 
 from __future__ import annotations
@@ -47,6 +55,14 @@ from sme.utils import now, tokenize
 
 WEIGHTED = "weighted"
 MINMAX = "minmax"
+
+# --- Personalized PageRank expansion (HippoRAG 2 route) ------------------- #
+_PPR_DAMPING = 0.85   # walk-vs-teleport balance (HippoRAG 2 default)
+_PPR_MAX_ITERS = 20   # power-iteration step cap (d^20 ~= BFS depth-20 decay)
+_PPR_TOL = 1e-6       # L1 convergence threshold (early exit)
+_PPR_NODE_CAP = 500   # subgraph node cap: large-graph explosion guard
+_PPR_MIN_EDGES = 5    # below this edge count the stationary distribution is
+                      # statistically meaningless -> degenerate to the BFS
 
 
 @dataclass
@@ -430,12 +446,37 @@ class TwoStageRetriever:
         region_scores: dict[str, float],
         ref: float,
     ) -> list[SearchHit]:
+        """Route the graph expansion.
+
+        Personalized PageRank (HippoRAG 2 route) is the main path; the
+        legacy BFS survives in ``_graph_expand_bfs`` as the control path
+        for A/B comparison and as the tiny-graph fallback.
+        """
+        if query.graph_expand <= 0:
+            return top
+        return self._graph_expand_ppr(
+            engine, query, top, scored, query_vec, region_scores, ref
+        )
+
+    # ------------------------------------------------------------------ #
+    def _graph_expand_bfs(
+        self,
+        engine: object,
+        query: SearchQuery,
+        top: list[SearchHit],
+        scored: list[SearchHit],
+        query_vec: np.ndarray,
+        region_scores: dict[str, float],
+        ref: float,
+    ) -> list[SearchHit]:
         """BFS the memory graph from the current hits (depth-gated).
 
         Expanded memories are scored with the same hybrid pipeline but their
         final score is decayed by 0.5**depth so related-but-far memories
         surface without drowning the vector-similar ones. The expansion is
         capped so a dense neighbor graph cannot explode the candidate pool.
+        Control path for ``_graph_expand_ppr``; kept as the tiny-graph
+        fallback (< ``_PPR_MIN_EDGES`` edges in the walkable subgraph).
         """
         if query.graph_expand <= 0:
             return top
@@ -531,6 +572,242 @@ class TwoStageRetriever:
         merged = scored[: max(0, query.top_k - reserved)] + hits[:reserved]
         merged.sort(key=lambda hit: hit.score, reverse=True)
         return merged[: query.top_k]
+
+    # ------------------------------------------------------------------ #
+    def _graph_expand_ppr(
+        self,
+        engine: object,
+        query: SearchQuery,
+        top: list[SearchHit],
+        scored: list[SearchHit],
+        query_vec: np.ndarray,
+        region_scores: dict[str, float],
+        ref: float,
+    ) -> list[SearchHit]:
+        """Personalized-PageRank graph expansion (HippoRAG 2 route).
+
+        The final top-k hits personalize the walk: teleport mass returns to
+        the seeds proportionally to their hybrid scores and edge weights
+        normalize into transition probabilities, so a node linked from MANY
+        relevant memories accumulates mass even several hops out - exactly
+        the signal the BFS 0.5**depth penalty buries under shallow noisy
+        edges. Output contract matches the BFS path: same hybrid + ranker
+        pipeline, same top_k//5 reserved-slot merge. Only the decay factor
+        differs - the strongest PPR expansion decays exactly like a BFS
+        depth-1 node (x0.5 anchor) and the rest scale by relative PPR mass,
+        so both paths' multipliers live on the same [0, 0.5] scale.
+        """
+        if query.graph_expand <= 0:
+            return top
+
+        # seeds: personalization weights = hybrid scores of the direct hits
+        seed_w: dict[str, float] = {}
+        for hit in top:
+            hybrid = self._hybrid(
+                hit.vector_score,
+                hit.keyword_score,
+                1.0 if hit.metadata_match else 0.0,
+            )
+            seed_w[hit.memory.id] = (
+                seed_w.get(hit.memory.id, 0.0) + max(hybrid, 0.0)
+            )
+        if not seed_w:
+            return top
+        total = sum(seed_w.values())
+        if total <= 0.0:
+            # all-zero hybrids: uniform personalization over the seeds
+            seed_w = {mid: 1.0 for mid in seed_w}
+            total = float(len(seed_w))
+
+        # walkable subgraph: BFS collection within the graph_expand hop
+        # budget; the frontier starts at the BEST seed, so hitting the node
+        # cap starves the LOW-score seeds' neighborhoods first
+        nodes = self._ppr_subgraph(
+            engine, query, sorted(seed_w, key=lambda m: seed_w[m], reverse=True)
+        )
+
+        # weighted undirected adjacency over the subgraph (parallel edges of
+        # any kind aggregate; the walk treats every edge type as a relay)
+        node_set = set(nodes)
+        adj: dict[str, dict[str, float]] = {mid: {} for mid in nodes}
+        n_edges = 0
+        for edge in engine.graph.edges:
+            src, dst = edge.source, edge.target
+            if src not in node_set or dst not in node_set:
+                continue
+            w = max(float(edge.weight), 0.0)
+            adj[src][dst] = adj[src].get(dst, 0.0) + w
+            adj[dst][src] = adj[dst].get(src, 0.0) + w
+            n_edges += 1
+        if n_edges < _PPR_MIN_EDGES:
+            # too little structure for a stable stationary distribution -
+            # degenerate to the BFS control path (byte-identical behavior)
+            return self._graph_expand_bfs(
+                engine, query, top, scored, query_vec, region_scores, ref
+            )
+
+        ppr = self._ppr_rank(nodes, adj, seed_w, total)
+
+        # score the expansion candidates through the BFS-path pipeline
+        included: set[str] = {h.memory.id for h in top}
+        cand = [
+            mid
+            for mid in nodes
+            if mid not in included and ppr.get(mid, 0.0) > 0.0
+        ]
+        new_mems = [engine.memories[mid] for mid in cand]
+        new_mems = [
+            m
+            for m in new_mems
+            if (not m.archived or query.include_archived)
+            and (engine.policy.allows_retrieval(m) or query.include_archived)
+            and self._metadata_matches(m, query.metadata_filters)
+            and self._tags_match(m, query.tags)
+        ]
+        if not new_mems:
+            return top
+
+        # decay anchor: the highest-mass expansion decays exactly like a
+        # BFS depth-1 node; weaker mass scales it down on the same scale
+        peak = max(ppr[m.id] for m in new_mems)
+
+        vector_scores = self._vector_scores(query_vec, new_mems)
+        keyword_scores = self._keyword_scores(query.text, new_mems)
+        hits: list[SearchHit] = []
+        for memory in new_mems:
+            rid = engine.space.region_for(memory.id) or ""
+            region_score = region_scores.get(rid, self.config.region_dampening)
+            vector_score = vector_scores.get(memory.id, 0.0)
+            keyword_score = keyword_scores.get(memory.id, 0.0)
+            meta_score = 1.0 if self._metadata_matches(memory, query.metadata_filters) else 0.0
+            hybrid = self._hybrid(vector_score, keyword_score, meta_score)
+            final, _ = self.ranker.score(
+                memory,
+                query_vec,
+                region_score,
+                engine,
+                reference=ref,
+                semantic=hybrid,
+                detailed=False,
+            )
+            final *= 0.5 * ppr[memory.id] / peak
+            if memory.source == "summary":
+                # summary penalty applies to graph-recovered nodes too
+                final *= self.config.summary_penalty
+            hits.append(
+                SearchHit(
+                    memory=memory,
+                    score=final,
+                    region_id=rid,
+                    region_score=region_score,
+                    keyword_score=round(keyword_score, 4),
+                    vector_score=round(vector_score, 4),
+                    metadata_match=meta_score > 0,
+                )
+            )
+        if not hits:
+            return scored[: query.top_k]
+        hits.sort(key=lambda hit: hit.score, reverse=True)
+        # same reserved-slot merge as the BFS path: at least `reserved`
+        # slots always surface related-but-far memories (top_k < 5 keeps
+        # >= 1 direct-hit slot)
+        reserved = max(1, query.top_k // 5)
+        reserved = min(reserved, max(0, query.top_k - 1))
+        merged = scored[: max(0, query.top_k - reserved)] + hits[:reserved]
+        merged.sort(key=lambda hit: hit.score, reverse=True)
+        return merged[: query.top_k]
+
+    # ------------------------------------------------------------------ #
+    @staticmethod
+    def _ppr_subgraph(
+        engine: object, query: SearchQuery, seeds: list[str]
+    ) -> list[str]:
+        """Collect the PPR subgraph: every node within ``graph_expand``
+        hops of a seed (archived nodes neither surface nor relay), capped
+        at ``_PPR_NODE_CAP``. ``seeds`` arrive pre-sorted by weight so the
+        cap truncates the low-score seeds' neighborhoods first."""
+        seen: set[str] = set(seeds)
+        nodes: list[str] = list(seeds)
+        frontier = list(seeds)
+        for _depth in range(1, query.graph_expand + 1):
+            nxt: list[str] = []
+            for mid in frontier:
+                for nb in sorted(engine.graph.neighbors_of(mid)):
+                    if nb in seen or nb not in engine.memories:
+                        continue
+                    if len(nodes) >= _PPR_NODE_CAP:
+                        break
+                    nb_memory = engine.memories[nb]
+                    if nb_memory.archived and not query.include_archived:
+                        # archived nodes neither surface nor relay the walk
+                        seen.add(nb)
+                        continue
+                    seen.add(nb)
+                    nodes.append(nb)
+                    nxt.append(nb)
+                if len(nodes) >= _PPR_NODE_CAP:
+                    break
+            frontier = nxt
+            if not frontier:
+                break
+        return nodes
+
+    # ------------------------------------------------------------------ #
+    @staticmethod
+    def _ppr_rank(
+        nodes: list[str],
+        adj: dict[str, dict[str, float]],
+        seed_w: dict[str, float],
+        total: float,
+    ) -> dict[str, float]:
+        """Power iteration for the personalized PageRank vector.
+
+        v <- d * (M^T v + dangling * p) + (1 - d) * p with the
+        personalization p proportional to the seed hybrid scores; M rows
+        are the edge-weight-normalized transition distributions and the
+        dangling mass is routed back to the seeds (topic-sensitive
+        PageRank), keeping the walk anchored on retrieval evidence.
+        """
+        n = len(nodes)
+        index = {mid: i for i, mid in enumerate(nodes)}
+        p = np.zeros(n, dtype=np.float64)
+        for mid, w in seed_w.items():
+            i = index.get(mid)
+            if i is not None:
+                p[i] += w / total
+
+        src_list: list[int] = []
+        dst_list: list[int] = []
+        prob_list: list[float] = []
+        for i, mid in enumerate(nodes):
+            nbrs = adj[mid]
+            if not nbrs:
+                continue  # dangling node: its mass returns to the seeds
+            wsum = sum(nbrs.values())
+            for nb, w in nbrs.items():
+                src_list.append(i)
+                dst_list.append(index[nb])
+                prob_list.append(w / wsum if wsum > 0.0 else 1.0 / len(nbrs))
+        src = np.asarray(src_list, dtype=np.int64)
+        dst = np.asarray(dst_list, dtype=np.int64)
+        prob = np.asarray(prob_list, dtype=np.float64)
+        dangling_mask = np.ones(n, dtype=bool)
+        dangling_mask[src] = False
+
+        v = p.copy()
+        for _ in range(_PPR_MAX_ITERS):
+            nxt = (1.0 - _PPR_DAMPING) * p
+            dangling = float(v[dangling_mask].sum())
+            if dangling > 0.0:
+                nxt = nxt + (_PPR_DAMPING * dangling) * p
+            nxt = nxt + np.bincount(
+                dst, weights=_PPR_DAMPING * v[src] * prob, minlength=n
+            )
+            err = float(np.abs(nxt - v).sum())
+            v = nxt
+            if err < _PPR_TOL:
+                break
+        return {mid: float(v[i]) for mid, i in index.items()}
 
     # ------------------------------------------------------------------ #
     def search_regions(self, engine: object, text: str, top_k: int) -> list[RegionHit]:
