@@ -1039,6 +1039,27 @@ def _restore_snapshot(engine: SpatialMemoryEngine) -> bool:
                         "WAL 重放后 checkpoint 失败（增量仍在内存，下次保存会落盘）: %s", exc
                     )
             return restored
+    # 快照尚不存在（首启后、第一个 checkpoint 窗口内崩溃）但 WAL 有积压：
+    # 直接重放 WAL。否则 WAL 模式下前 checkpoint_every 次已确认（fsync
+    # 过）的写入会在重启时静默丢失，违背"返回 200 = 已持久化"的承诺。
+    try:
+        wal_pending = engine.wal.has_pending()
+    except Exception:  # noqa: BLE001 - WAL 探测失败不阻断恢复
+        wal_pending = False
+    if wal_pending:
+        try:
+            replayed = engine.wal.replay(engine)
+        except Exception as exc:  # noqa: BLE001 - 启动期降级
+            logging.getLogger("sme.api").warning("WAL-only 重放失败（快照缺失）: %s", exc)
+            return False
+        if replayed:
+            try:
+                engine.save()
+            except Exception as exc:  # noqa: BLE001
+                logging.getLogger("sme.api").warning(
+                    "WAL-only 重放后 checkpoint 失败（增量仍在内存）: %s", exc
+                )
+            return True
     return False
 
 
