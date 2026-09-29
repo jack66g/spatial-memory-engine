@@ -30,6 +30,39 @@ KIND_NEIGHBOR = "neighbor"
 class MemoryGraph:
     def __init__(self) -> None:
         self.edges: list[MemoryEdge] = []
+        # Adjacency index: node -> {id(edge): edge} covering every edge
+        # incident to the node (each edge is indexed under BOTH endpoints).
+        # Buckets are keyed by object identity because MemoryEdge is a plain
+        # (unhashable) dataclass. Maintained by add_edge / remove_edges_for /
+        # load_dict, it turns find / neighbors_of from O(E) linear scans of
+        # `edges` into O(degree) bucket scans. `self.edges` remains the
+        # canonical insertion-ordered store (snapshot/export order unchanged).
+        self._adj: dict[str, dict[int, MemoryEdge]] = {}
+
+    def _index_edge(self, edge: MemoryEdge) -> None:
+        """Register `edge` under both endpoints in the adjacency index."""
+        self._adj.setdefault(edge.source, {})[id(edge)] = edge
+        self._adj.setdefault(edge.target, {})[id(edge)] = edge
+
+    def _check_invariants(self) -> None:
+        """Test-only: reconcile the adjacency index against ``self.edges``."""
+        expected: dict[str, dict[int, MemoryEdge]] = {}
+        for edge in self.edges:
+            assert edge.source != edge.target, "self-loop leaked into edges"
+            for node in (edge.source, edge.target):
+                expected.setdefault(node, {})[id(edge)] = edge
+        assert set(self._adj) == set(expected), (
+            f"adjacency node set mismatch: {set(self._adj) ^ set(expected)}"
+        )
+        for node, bucket in expected.items():
+            actual = self._adj[node]
+            assert set(actual) == set(bucket), (
+                f"adjacency bucket mismatch at node {node!r}"
+            )
+            for key, edge in bucket.items():
+                assert actual[key] is edge, (
+                    f"stale edge reference at node {node!r}"
+                )
 
     # ------------------------------------------------------------------ #
     def add_edge(
@@ -51,10 +84,16 @@ class MemoryGraph:
             source=source, target=target, kind=kind, weight=weight, note=note
         )
         self.edges.append(edge)
+        self._index_edge(edge)
         return edge
 
     def find(self, source: str, target: str, kind: str) -> Optional[MemoryEdge]:
-        for edge in self.edges:
+        # Any edge matching (source, target, kind) — including the symmetric
+        # neighbor/conversation form — is incident to `source`, so scanning
+        # its bucket covers every candidate. Bucket order is insertion order,
+        # i.e. the global add order restricted to incident edges, so this
+        # returns the exact same (first-match) edge as the old linear scan.
+        for edge in self._adj.get(source, {}).values():
             if (
                 edge.source == source
                 and edge.target == target
@@ -69,13 +108,19 @@ class MemoryGraph:
         return None
 
     def remove_edges_for(self, memory_id: str) -> int:
-        before = len(self.edges)
-        self.edges = [
-            e
-            for e in self.edges
-            if e.source != memory_id and e.target != memory_id
-        ]
-        return before - len(self.edges)
+        incident = self._adj.pop(memory_id, None)
+        if not incident:
+            return 0
+        removed_ids = {id(e) for e in incident.values()}
+        for edge in incident.values():
+            other = edge.target if edge.source == memory_id else edge.source
+            bucket = self._adj.get(other)
+            if bucket is not None:
+                bucket.pop(id(edge), None)
+                if not bucket:
+                    del self._adj[other]
+        self.edges = [e for e in self.edges if id(e) not in removed_ids]
+        return len(removed_ids)
 
     # ------------------------------------------------------------------ #
     def neighbors_of(
@@ -85,7 +130,7 @@ class MemoryGraph:
     ) -> set[str]:
         kinds = set(kinds) if kinds else None
         result: set[str] = set()
-        for edge in self.edges:
+        for edge in self._adj.get(memory_id, {}).values():
             if kinds and edge.kind not in kinds:
                 continue
             if edge.source == memory_id:
@@ -164,6 +209,9 @@ class MemoryGraph:
 
     def load_dict(self, data: dict) -> None:
         self.edges = [MemoryEdge.from_dict(e) for e in data.get("edges", [])]
+        self._adj = {}
+        for edge in self.edges:
+            self._index_edge(edge)
 
     def __len__(self) -> int:
         return len(self.edges)
