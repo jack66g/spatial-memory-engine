@@ -15,6 +15,7 @@ SME 是给 AI 应用用的"长期记忆插件"。它不像传统向量数据库�
 - 叠加**记忆动力学**：Ebbinghaus 强化、时间衰减（永不删除）、自动融合、长期压缩
 - **两阶段混合检索**：Region 主导召回 + 向量 / BM25（中文 bigram）/ metadata 混合 + 可选图增强 + 8 信号可解释排序
 - **扩展模块层（12 个，默认全关 = 基础行为）**：事实提取、问答对回放、时序知识图谱、用户画像、事实版本纠错、噪音抑制、WAL 增量持久化、存储后端、REST+SDK、可观测性、分层上下文、多用户隔离
+- **检索 1.3**：min-max 混合融合（3 seed A/B 实测 acc +2.5~4.2pp、带偏减半）+ Personalized PageRank 图扩展（HippoRAG 2 路线，桥接关联自动浮出）；可选空闲期自动整理（sleep-time compute）与 ONNX int8 嵌入（`[onnx]` extra）
 
 一句话：**把你的 AI 从"聊完就忘"变成"越聊越懂你"**。可直接接入聊天机器人、知识库问答、具身机器人、Agent 等任意需要记忆的场景。
 
@@ -26,9 +27,9 @@ SME 是给 AI 应用用的"长期记忆插件"。它不像传统向量数据库�
 | 可解释检索 | 每条命中带 `breakdown`（semantic/importance/freshness/weight/decay/hit_count/recency/region 八信号） |
 | 中文友好 | 中文 1-2 元 BM25 关键词通道（默认开）+ 文档分条导入（法律/医疗等知识库场景） |
 | 记忆生命周期 | 强化/衰减/融合/压缩可配可关，记忆永不因衰减被删除，归档可恢复 |
-| 全部可关 | 89 项配置 + 5 个预设（聊天助手/知识库动态/知识库静态/具身机器人/全关） |
+| 全部可关 | 97 项配置 + 5 个预设（聊天助手/知识库动态/知识库静态/具身机器人/全关） |
 | 多种接入 | Python SDK、REST API（FastAPI）+ 官方 Client、**MCP（智能体原生，一行挂载）**、Web 配置中心（`python -m sme.api` 启动后浏览器打开） |
-| 性能 | 写入路径 O(N²)→近线性（10k 写入 ~4s）、100k 加载 ~3s、hashing 检索 p50 ~4ms（2k 条）/ ~22ms（10k 条，实测） |
+| 性能 | WAL 组提交 2557 写/s（1.79x）；ONNX int8 批量嵌入 7.4x；记忆图热路径 O(E)→O(deg) 实测 127-159x；hashing 检索 p50 ~4ms（2k 条） |
 
 ## 3. 快速开始（10 秒）
 
@@ -203,6 +204,7 @@ LM Studio / vLLM 同理，只需把 `base_url` 换成对应端口（LM Studio `h
 | `hashing` | 离线演示/零依赖 | 确定性伪向量，中文效果弱于真实模型 |
 | `openai` | 任意兼容 API | 需 `base_url` + `api_key` + `model`（如 BAAI/bge-m3, dim 1024）；`embedding.dim` 必须与模型实际维度一致，错配首次嵌入即报错 |
 | `sentence-transformers` | 本地 | 需 `pip install sentence-transformers`；`model` 如 `BAAI/bge-small-zh-v1.5`（dim 512） |
+| `fastembed` | 本地 ONNX int8 | 需 `pip install -e ".[onnx]"`；默认 `Qwen/Qwen3-Embedding-0.6B-Q`，质量与 fp32 持平、批量快 7x；支持 MRL 截维省一半存储 |
 
 ## 7. 实战：给你的 AI 接入记忆（记录 + 检索闭环）
 
@@ -467,4 +469,4 @@ python -m sme.benchmark --n-memories 2000                 # 写入/检索压测
 
 ## License
 
-待定（发布前补充）。
+Apache-2.0（见 [LICENSE](LICENSE)）。
