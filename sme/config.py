@@ -249,6 +249,22 @@ class PersistenceConfig:
 
 
 @dataclass
+class MaintenanceConfig:
+    """空闲期后台整理（sleep-time compute，Letta/Anthropic 路线）。
+
+    background=True 时引擎构造即启动 daemon 维护线程：写活动静默
+    idle_after_s 秒后，每 every_s 秒在引擎锁内依次执行 apply_decay /
+    consolidate / compress，把记忆维护从写路径挪到空闲后台——长时间
+    运行的服务不会在用户请求里卡顿做重活。默认 False = 零漂移
+    （不启线程，一切照旧）。间隔实时读配置，改配置后下次唤醒生效。
+    """
+
+    background: bool = False      # 空闲整理开关（默认关 = 零行为变化）
+    idle_after_s: float = 30.0    # 写活动静默多少秒才算空闲
+    every_s: float = 300.0        # 空闲整理的执行周期（秒）
+
+
+@dataclass
 class ApiConfig:
     """Module 09 - REST server + SDK.
 
@@ -320,6 +336,7 @@ class SMEConfig:
     compression: CompressionConfig = field(default_factory=CompressionConfig)
     llm: LLMConfig = field(default_factory=LLMConfig)
     storage: StorageConfig = field(default_factory=StorageConfig)
+    maintenance: MaintenanceConfig = field(default_factory=MaintenanceConfig)
     visualization: VisualizationConfig = field(default_factory=VisualizationConfig)
     # v2 modules (v2 模块设计) - all disabled by default
     extraction: ExtractionConfig = field(default_factory=ExtractionConfig)
@@ -356,6 +373,7 @@ class SMEConfig:
             "compression": CompressionConfig,
             "llm": LLMConfig,
             "storage": StorageConfig,
+            "maintenance": MaintenanceConfig,
             "visualization": VisualizationConfig,
             "extraction": ExtractionConfig,
             "factversion": FactVersionConfig,
@@ -395,6 +413,7 @@ class SMEConfig:
             "compression",
             "llm",
             "storage",
+            "maintenance",
             "visualization",
             "extraction",
             "factversion",

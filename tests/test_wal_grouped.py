@@ -28,7 +28,9 @@ def test_config_items_registered_group_commit():
     # tests/test_fusion_minmax.py；本测试原断言 91 为其加入前的注册数）
     # 92 -> 94：新增 embedding.revision / embedding.mrl_dim（向量空间版本
     # 标记 + MRL 截维，见 tests/test_embedding_revision_rebuild.py）
-    assert len(ci.ITEMS) == 94
+    # 94 -> 97：新增 maintenance.background/idle_after_s/every_s（空闲期
+    # 整理 sleep-time compute，见 tests/test_sleep_maintenance.py）
+    assert len(ci.ITEMS) == 97
     sync = ci.ITEM_BY_PATH["persistence.sync_mode"]
     assert sync.kind == "enum"
     assert sync.choices == ("fsync", "grouped")

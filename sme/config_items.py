@@ -267,6 +267,20 @@ ITEMS: list[ConfigItem] = [
         "json=默认 / sqlite=一体库（切换后建议重启生效）", kind="enum",
         choices=("json", "sqlite"), default="json"),
 
+    # ----------------------------- 空闲整理 ---------------------------- #
+    _it("maintenance.background", "空闲整理", "空闲整理",
+        "开 = 引擎启动后台线程，在写活动静默期自动做衰减/融合/压缩（sleep-time "
+        "compute：记忆维护挪到空闲后台，长跑服务不在用户请求里卡顿做重活）；"
+        "关 = 完全不启线程，零行为变化（默认）",
+        kind="bool", default=False),
+    _it("maintenance.idle_after_s", "空闲判定（秒）", "空闲整理",
+        "写活动静默多少秒才算空闲，空闲期才允许后台整理", kind="float",
+        minimum=0, maximum=86400, default=30.0),
+    _it("maintenance.every_s", "整理周期（秒）", "空闲整理",
+        "空闲状态下后台整理的执行周期（秒）；周期实时读配置，"
+        "改配置后下次唤醒生效", kind="float",
+        minimum=1, maximum=86400, default=300.0),
+
     # --------------------------- v2 模块开关 -------------------------- #
     _it("extraction.enabled", "事实提取", "v2 模块",
         "写入前做事实提取，只存干净事实（问题/闲聊/AI 回答默认不入库）", kind="bool", default=False),

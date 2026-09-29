@@ -16,6 +16,8 @@ from __future__ import annotations
 import json
 import os
 import threading
+import time
+import weakref
 from typing import Any, Iterable, Optional
 
 import numpy as np
@@ -133,6 +135,18 @@ class SpatialMemoryEngine:
         self.space.set_membership_hook(self._sync_memory_region)
         self._autosave_counter = 0
         self._lock = threading.RLock()
+        # --- sleep-time compute：空闲期后台整理（maintenance.background） --
+        # 写活动时间戳（空闲判定基准）；维护线程状态；观测量。
+        # background=False（默认）时只有这几个轻量属性，零行为变化。
+        self._last_write_ts = now()
+        self._maint_lock = threading.Lock()   # 只保护线程的启停，不跨任何 IO
+        self._maint_stop = threading.Event()
+        self._maint_thread: Optional[threading.Thread] = None
+        self._maint_finalizer = None
+        self._maint_runs = 0
+        self._maint_last_run_at: Optional[float] = None
+        self._maint_last_duration_s: Optional[float] = None
+        self._maint_last_error: Optional[str] = None
 
         # --- v2 modules (v2 模块设计); all disabled => v1 behavior ---- #
         self.extraction = ExtractionEngine(self.config.extraction, llm=self.llm)
@@ -155,6 +169,9 @@ class SpatialMemoryEngine:
         # module 13 (optional): cross-encoder re-ranking, lazy-loaded
         self.reranker = None
         self._rerank_enabled = self.config.rerank.enabled
+        # sleep-time compute：全部子系统就绪后才启动维护线程（线程绝不能
+        # 看到半初始化的引擎）；background=False 时是 no-op（零漂移）
+        self._ensure_maintenance_thread()
 
     # ------------------------------------------------------------------ #
     # v2 sidecar files (module state lives outside the v1 snapshot so the
@@ -266,6 +283,7 @@ class SpatialMemoryEngine:
         ns: Optional[str] = None,
     ) -> Memory:
         with self._lock:
+            self._touch_write()
             metadata = dict(metadata or {})
             if ns is not None:
                 metadata[NS_KEY] = ns
@@ -315,6 +333,7 @@ class SpatialMemoryEngine:
 
     def add_many(self, texts: list[str], **kwargs) -> list[Memory]:
         with self._lock:
+            self._touch_write()
             if self._v2.active():
                 # pipeline mode: route each text individually (extraction is
                 # per-message; the bulk optimization would bypass it)
@@ -347,6 +366,7 @@ class SpatialMemoryEngine:
         summary: Optional[str] = None,
     ) -> Memory:
         with self._lock:
+            self._touch_write()
             memory = self.memory_manager.update_memory(
                 memory_id, text, metadata, tags, importance, weight, summary
             )
@@ -360,6 +380,7 @@ class SpatialMemoryEngine:
 
     def delete(self, memory_id: str) -> bool:
         with self._lock:
+            self._touch_write()
             ok = self.memory_manager.delete_memory(memory_id)
             if ok:
                 self._record_write({"op": "delete", "mid": memory_id})
@@ -384,6 +405,7 @@ class SpatialMemoryEngine:
     # ------------------------------------------------------------------ #
     def archive(self, memory_id: str) -> bool:
         with self._lock:
+            self._touch_write()
             ok = self.memory_manager.archive_memory(memory_id)
             if ok:
                 self._record_write({"op": "archive", "mid": memory_id})
@@ -392,6 +414,7 @@ class SpatialMemoryEngine:
 
     def restore(self, memory_id: str) -> bool:
         with self._lock:
+            self._touch_write()
             ok = self.memory_manager.restore_memory(memory_id)
             if ok:
                 self._record_write({"op": "restore", "mid": memory_id})
@@ -552,6 +575,20 @@ class SpatialMemoryEngine:
             stats["profile"] = self.profile.stats()
         if self.wal.enabled:
             stats["wal"] = self.wal.stats()
+        # sleep-time compute：仅 background=True 时展示（关 = 无 v1 diff）
+        if self.config.maintenance.background:
+            stats["maintenance"] = {
+                "enabled": True,
+                "thread_alive": bool(
+                    self._maint_thread and self._maint_thread.is_alive()
+                ),
+                "idle_after_s": self.config.maintenance.idle_after_s,
+                "every_s": self.config.maintenance.every_s,
+                "last_run_at": self._maint_last_run_at,
+                "runs": self._maint_runs,
+                "last_duration_s": self._maint_last_duration_s,
+                "last_error": self._maint_last_error,
+            }
         if self.telemetry.enabled:
             stats["telemetry"] = self.telemetry.summary()
         if self.namespaces.enabled:
@@ -780,6 +817,11 @@ class SpatialMemoryEngine:
             self._load_sidecars()
             if self.wal.enabled and os.path.exists(self.wal.path):
                 self.wal.replay(self)
+            # sleep-time compute：load 重绑快照配置后线程读新配置（间隔
+            # 实时读）；快照翻开后台整理则（重）启线程，翻关由线程下跳自退。
+            # load/replay 本身视为一次写活动：空闲计时从现在开始。
+            self._touch_write()
+            self._ensure_maintenance_thread()
             logger.info("engine loaded: %s (%d memories)", path, len(self.memories))
             return True
 
@@ -836,6 +878,7 @@ class SpatialMemoryEngine:
         from sme.import_docs import import_documents as _import_documents
 
         with self._lock:
+            self._touch_write()
             created = _import_documents(
                 self, text_or_path, title=title, source=source,
                 summary_text=summary_text,
@@ -857,6 +900,7 @@ class SpatialMemoryEngine:
         只登记进冷存档（与快照 load 的口径一致）——"导出-导入"无损。
         """
         with self._lock:
+            self._touch_write()
             self.space.set_bulk(True)
             count = 0
             try:
@@ -906,6 +950,156 @@ class SpatialMemoryEngine:
         self._autosave_counter += 1
         if self._autosave_counter >= self.config.storage.autosave_interval:
             self.save()
+
+    # ------------------------------------------------------------------ #
+    # sleep-time compute: idle-period background maintenance
+    # (空闲期整理，Letta/Anthropic 路线——维护挪出写路径，空闲后台做)
+    # ------------------------------------------------------------------ #
+    def _touch_write(self) -> None:
+        """刷新写活动时间戳（空闲判定的基准）。
+
+        所有会改库的引擎入口（add/update/delete/archive/restore/import）
+        与 load/replay 都会调用；维护线程自己触发的 autosave 不算写活动，
+        否则每轮整理都会把空闲窗口推开、饿死下一轮。
+        """
+        self._last_write_ts = now()
+
+    @staticmethod
+    def _maintenance_stop_finalizer(stop: threading.Event) -> None:
+        """引擎被 GC / 热重建丢弃时停掉维护线程（weakref.finalize 回调）。"""
+        stop.set()
+
+    def _ensure_maintenance_thread(self) -> None:
+        """（重新）启动空闲维护线程；background=False 时是 no-op。
+
+        线程目标只持 ``weakref.ref(self)`` + 共享 stop Event——绝不持引擎
+        强引用，否则线程活着引擎就永远不可达，GC 收尾永不触发（同 WAL
+        flusher 的约束）。engine.load 重绑快照配置后再次调用：配置翻开则
+        重启线程，翻关由线程下一跳读配置后自行退出。finalizer 每次重启
+        前先 detach 旧的，避免重复触发。
+        """
+        if not self.config.maintenance.background:
+            return
+        with self._maint_lock:
+            thread = self._maint_thread
+            if thread is not None and thread.is_alive():
+                return
+            if self._maint_finalizer is not None:
+                self._maint_finalizer.detach()
+            self._maint_stop.clear()
+            self._maint_finalizer = weakref.finalize(
+                self,
+                SpatialMemoryEngine._maintenance_stop_finalizer,
+                self._maint_stop,
+            )
+            self._maint_thread = threading.Thread(
+                target=SpatialMemoryEngine._maintenance_main,
+                args=(weakref.ref(self), self._maint_stop),
+                name="sme-maintenance",
+                daemon=True,
+            )
+            self._maint_thread.start()
+
+    @staticmethod
+    def _maintenance_main(
+        engine_ref: "weakref.ReferenceType[SpatialMemoryEngine]",
+        stop: threading.Event,
+    ) -> None:
+        """空闲维护循环（daemon 线程）。
+
+        每 every_s 整理一次（周期实时读配置：分片等待 ≤1s，热调 every_s /
+        翻关 / 停线程都在下一分片生效，无需重启）。阻塞等待期间必须不持
+        任何引擎强引用（局部 ``engine`` 读完配置即删）——否则等待中的局部
+        变量会把引擎钉在内存里，GC 收尾永不触发。单轮异常只记日志不杀
+        线程，按整周期退避后重试。
+        """
+        last_tick = time.monotonic()
+        while not stop.is_set():
+            engine = engine_ref()
+            if engine is None:
+                return
+            try:
+                cfg = engine.config.maintenance
+                if not cfg.background:
+                    return  # 配置翻关：线程退出（load 翻开由 _ensure 重启）
+                due = last_tick + max(0.05, float(cfg.every_s))
+                del engine, cfg  # 关键：阻塞等待期间允许引擎被 GC
+                now_m = time.monotonic()
+                if now_m < due:
+                    if stop.wait(min(1.0, due - now_m)):
+                        return
+                    continue  # 醒来重读配置再算 due（热调生效）
+                engine = engine_ref()
+                if engine is None:
+                    return
+                engine._maintenance_tick()
+                last_tick = time.monotonic()
+                del engine
+            except Exception:  # noqa: BLE001 - 维护线程不能被静默杀死
+                logger.warning("空闲整理线程单轮失败（下一周期重试）", exc_info=True)
+                last_tick = time.monotonic()  # 整周期退避，失败不刷屏
+                time.sleep(0.5)
+
+    def _maintenance_steps(self) -> dict[str, bool]:
+        """各维护步骤是否使能；全 False 时本轮不进锁、不空转。"""
+        active = sum(
+            1 for m in self.memories.values()
+            if not m.archived and m.source != "summary"
+        )
+        return {
+            "decay": bool(self.policy.decay_enabled and self.decay.enabled),
+            "consolidate": active >= self.config.consolidation.min_group_size,
+            "compress": active >= self.config.compression.min_region_compact,
+        }
+
+    def _maintenance_tick(self) -> None:
+        """一轮空闲整理：decay -> consolidate -> compress（锁内、逐步容错）。
+
+        拿锁前做两道闸：写活动静默不足 idle_after_s 直接跳过；维护项全关
+        不空转。拿锁后再确认一次（等锁期间可能有新写入 / 配置翻转）。
+        每步独立 try/except：单步失败记日志与 last_error，不中断其他步骤。
+        """
+        cfg = self.config.maintenance
+        if not cfg.background:
+            return
+        if now() - self._last_write_ts < cfg.idle_after_s:
+            return  # 写活动尚未静默：本轮跳过，不推迟下一轮
+        if not any(self._maintenance_steps().values()):
+            return  # 维护项全关：不进锁不空转，也不计入 runs
+        t0 = now()
+        data: dict[str, Any] = {}
+        errors: list[str] = []
+        with self._lock:
+            cfg = self.config.maintenance  # 等锁期间配置可能已被 load 重绑
+            if (not cfg.background
+                    or now() - self._last_write_ts < cfg.idle_after_s):
+                return
+            if self.policy.decay_enabled and self.decay.enabled:
+                try:
+                    data["decayed"] = self.apply_decay()
+                except Exception as exc:  # noqa: BLE001
+                    errors.append(f"decay: {exc}")
+                    logger.warning("空闲整理 apply_decay 失败", exc_info=True)
+            try:
+                data["consolidated"] = len(self.consolidate())
+            except Exception as exc:  # noqa: BLE001
+                errors.append(f"consolidate: {exc}")
+                logger.warning("空闲整理 consolidate 失败", exc_info=True)
+            try:
+                data["compressed"] = len(self.compress())
+            except Exception as exc:  # noqa: BLE001
+                errors.append(f"compress: {exc}")
+                logger.warning("空闲整理 compress 失败", exc_info=True)
+        self._maint_runs += 1
+        self._maint_last_run_at = now()
+        self._maint_last_duration_s = now() - t0
+        self._maint_last_error = "; ".join(errors) if errors else None
+        # telemetry.record 在 observability.enabled=False 时是 no-op（零开销）
+        self.telemetry.record(
+            "maintenance", runs=self._maint_runs,
+            duration_s=round(self._maint_last_duration_s, 4),
+            errors=len(errors), **data,
+        )
 
     def __repr__(self) -> str:
         return (
