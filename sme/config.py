@@ -55,6 +55,16 @@ class RetrievalConfig:
     # minimum candidate pool for hybrid scoring (iteration 2.2); the pool is
     # max(top_k * 2, candidate_window), so the default keeps top_k=10 behavior
     candidate_window: int = 20
+    # hybrid channel normalization mode:
+    #   minmax   = per-channel candidate-set min-max normalization; the dead
+    #              metadata constant is dropped and its weight is folded
+    #              proportionally into vector/keyword (0.6->2/3, 0.3->1/3).
+    #              Default since the fusion A/B (3 seeds x 40 questions:
+    #              sme_chat +2.5pp / sme_minimal +4.2pp, misled halved)
+    #   weighted = legacy peak normalization (BM25 divides by the pool peak,
+    #              vector uses (cos+1)/2, metadata adds a constant 0.1 shift),
+    #              kept as the byte-identical compatibility tier
+    fusion: str = "minmax"  # weighted | minmax
 
 
 @dataclass

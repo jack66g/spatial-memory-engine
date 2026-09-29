@@ -1,0 +1,1270 @@
+{
+  "contestants": {
+    "sme_chat": {
+      "status": "ok",
+      "error": null,
+      "reinit_s": 9.0,
+      "add_total_s": 82.9,
+      "add_p50_ms": 637.1,
+      "score": 38.0,
+      "acc": 0.95,
+      "misled": 1,
+      "storage": 83,
+      "retrieval_p50_ms": 294.1,
+      "quiz_total_s": 48.4,
+      "total_s": 140.3,
+      "details": [
+        {
+          "qid": 1,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆明确提到玉林路老码头火锅及中辣牛油锅底、脑花贡菜",
+          "hits_n": 5,
+          "top1": "今晚又想去玉林路那家老码头火锅了，中辣牛油锅底，两份脑花一份贡菜，想想都流口水。",
+          "judge_failed": false
+        },
+        {
+          "qid": 2,
+          "type": "normal",
+          "correct": 0,
+          "misled": 0,
+          "reason": "记忆无周三战绳课信息，也未提周三安排",
+          "hits_n": 5,
+          "top1": "我妈每周日晚上八点准时视频，昨天又催我回绵阳，我说等我软考过了再说，她说软考能当饭吃吗。",
+          "judge_failed": false
+        },
+        {
+          "qid": 3,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出38平、3200元、阳台朝南，与标准一致。",
+          "hits_n": 5,
+          "top1": "我住高新区那个38平的小公寓，月租3200，阳台朝南还行，但楼下地铁1号线早上七点半报站声真的吵到崩溃。",
+          "judge_failed": false
+        },
+        {
+          "qid": 4,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确年糕是室友的猫，自己养柯基煤球，与标准答案一致",
+          "hits_n": 5,
+          "top1": "我养了一只布偶猫叫年糕，特别黏人，每天晚上都趴我键盘上。真的，我一敲代码它就过来，跟监工似的。",
+          "judge_failed": false
+        },
+        {
+          "qid": 5,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确最新说法：调去维护React前端改按钮。",
+          "hits_n": 5,
+          "top1": "我现在在公司负责一个用Go重写订单服务的项目，下个月15号上线。天天面对祖传代码，真的像在屎山里考古。",
+          "judge_failed": false
+        },
+        {
+          "qid": 6,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确机票已退改去重庆，最新说法清晰。",
+          "hits_n": 5,
+          "top1": "我国庆打算去大理，机票都订好了，10月1号早上从成都天府机场飞。还准备租车环洱海，想想就爽。",
+          "judge_failed": false
+        },
+        {
+          "qid": 7,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]含799元霍格沃茨城堡、拼到第三包，与答案一致",
+          "hits_n": 5,
+          "top1": "啊啊啊刚拼乐高拼到第三包，霍格沃茨城堡那套799买的，茶几已经快放不下了，我是不是该换个大房子。",
+          "judge_failed": false
+        },
+        {
+          "qid": 8,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][2]均明确窦性心律不齐、十一点前睡",
+          "hits_n": 5,
+          "top1": "今晚又熬夜刷B站到两点，上周体检说我窦性心律不齐，医生让我十一点前睡，我只坚持了三天。",
+          "judge_failed": false
+        },
+        {
+          "qid": 9,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确妈妈绵阳小学老师、爸爸货车司机、周日八点视频",
+          "hits_n": 5,
+          "top1": "我妈每周日晚上八点准时视频，昨天又催我回绵阳，我说等我软考过了再说，她说软考能当饭吃吗。",
+          "judge_failed": false
+        },
+        {
+          "qid": 10,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确报名12月软考中级软件设计师，买清华出版社教材",
+          "hits_n": 5,
+          "top1": "软考中级软件设计师我报名了12月的，买了清华出版社那本教材，计划每天学一小时，结果今天加班只看了十分钟就困了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 11,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确说柯基叫煤球，无冲突信息。",
+          "hits_n": 5,
+          "top1": "跟你说个事，其实年糕是我合租室友的猫，我上个月自己买了只柯基叫‘煤球’，现在天天在家拆家。真的，我快疯了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 12,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确提到维护官网React前端、改按钮样式，与答案一致。",
+          "hits_n": 5,
+          "top1": "之前说的那个Go订单项目其实交给新来的同事了，我现在被调去维护公司官网的React前端，天天改按钮样式。",
+          "judge_failed": false
+        },
+        {
+          "qid": 13,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "多条记忆明确提到珮姐老火锅，信息一致无冲突",
+          "hits_n": 5,
+          "top1": "国庆去重庆的票买好了，室友说珮姐老火锅她已经排上号了，我负责带胃去就行。",
+          "judge_failed": false
+        },
+        {
+          "qid": 14,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][2]均明确提到地铁1号线，信息一致无冲突。",
+          "hits_n": 5,
+          "top1": "我住高新区那个38平的小公寓，月租3200，阳台朝南还行，但楼下地铁1号线早上七点半报站声真的吵到崩溃。",
+          "judge_failed": false
+        },
+        {
+          "qid": 15,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "多条记忆均含'像条死狗'，语义一致",
+          "hits_n": 5,
+          "top1": "周三晚上八点我又去超级猩猩上战绳课了，坚持快两个月了，但每次下课都觉得自己像条死狗。",
+          "judge_failed": false
+        },
+        {
+          "qid": 16,
+          "type": "normal",
+          "correct": 0,
+          "misled": 1,
+          "reason": "记忆显示最新为第五包，与标准第三包冲突，无法辨认最新。",
+          "hits_n": 5,
+          "top1": "啊啊啊刚拼乐高拼到第三包，霍格沃茨城堡那套799买的，茶几已经快放不下了，我是不是该换个大房子。",
+          "judge_failed": false
+        },
+        {
+          "qid": 17,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确提到熬夜到两点、体检窦性心律不齐，与答案一致。",
+          "hits_n": 5,
+          "top1": "今晚又熬夜刷B站到两点，上周体检说我窦性心律不齐，医生让我十一点前睡，我只坚持了三天。",
+          "judge_failed": false
+        },
+        {
+          "qid": 18,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[3]明确提到催回绵阳考公务员，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "我妈今晚视频又催我回绵阳，我说我12月要考软考，她说考完就回来。我没答应，但也没拒绝，唉。",
+          "judge_failed": false
+        },
+        {
+          "qid": 19,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆明确计划每天学一小时，加班只看了十分钟就困",
+          "hits_n": 5,
+          "top1": "软考还有不到一个月，我教材才看了三分之一，每天下班学一小时的计划，实际是每天十分钟。",
+          "judge_failed": false
+        },
+        {
+          "qid": 20,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确说年糕是合租室友的猫，与答案一致。",
+          "hits_n": 5,
+          "top1": "跟你说个事，其实年糕是我合租室友的猫，我上个月自己买了只柯基叫‘煤球’，现在天天在家拆家。真的，我快疯了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 21,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确说项目交给新同事，与答案一致。",
+          "hits_n": 5,
+          "top1": "我现在那个Go订单项目下个月15号上线，最近天天加班，祖传代码真的看一眼少活一年。",
+          "judge_failed": false
+        },
+        {
+          "qid": 22,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2][3][4]均明确去重庆找大学室友玩三天",
+          "hits_n": 5,
+          "top1": "重庆国庆三天应该很爽，室友说带我去吃珮姐，还要坐长江索道。希望别下雨，成都最近雨太多了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 23,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][4]均明确住高新区，信息一致无冲突",
+          "hits_n": 5,
+          "top1": "我住高新区那个38平的小公寓，月租3200，阳台朝南还行，但楼下地铁1号线早上七点半报站声真的吵到崩溃。",
+          "judge_failed": false
+        },
+        {
+          "qid": 24,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "多条记忆均提到坚持快两个月，信息一致",
+          "hits_n": 5,
+          "top1": "周三战绳课我又去了，教练今天加量，我下课腿都在抖，但还是坚持了快两个月，给自己点个赞。",
+          "judge_failed": false
+        },
+        {
+          "qid": 25,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆明确提到柯基，无冲突信息",
+          "hits_n": 5,
+          "top1": "跟你说个事，其实年糕是我合租室友的猫，我上个月自己买了只柯基叫‘煤球’，现在天天在家拆家。真的，我快疯了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 26,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[3]明确说加班太狠导致看十分钟就困，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "软考中级软件设计师我报名了12月的，买了清华出版社那本教材，计划每天学一小时，结果今天加班只看了十分钟就困了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 27,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][2]明确给出老码头、中辣牛油、两份脑花一份贡菜",
+          "hits_n": 5,
+          "top1": "玉林路老码头火锅我上周又去了，中辣牛油锅底加两份脑花一份贡菜，吃完第二天嗓子疼但值得。",
+          "judge_failed": false
+        },
+        {
+          "qid": 28,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[4]明确周三晚八点超级猩猩战绳课，信息一致无冲突",
+          "hits_n": 5,
+          "top1": "我妈每周日晚上八点准时视频，昨天又催我回绵阳，我说等我软考过了再说，她说软考能当饭吃吗。",
+          "judge_failed": false
+        },
+        {
+          "qid": 29,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][5]明确38平公寓、月租3200，信息一致无冲突",
+          "hits_n": 5,
+          "top1": "我住高新区那个38平的小公寓，月租3200，阳台朝南还行，但楼下地铁1号线早上七点半报站声真的吵到崩溃。",
+          "judge_failed": false
+        },
+        {
+          "qid": 30,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确提到上月买柯基叫煤球，最新说法清晰在场。",
+          "hits_n": 5,
+          "top1": "跟你说个事，其实年糕是我合租室友的猫，我上个月自己买了只柯基叫‘煤球’，现在天天在家拆家。真的，我快疯了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 31,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[3]明确给出最新工作内容，与标准答案一致",
+          "hits_n": 5,
+          "top1": "我现在那个Go订单项目下个月15号上线，最近天天加班，祖传代码真的看一眼少活一年。",
+          "judge_failed": false
+        },
+        {
+          "qid": 32,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确退大理机票改去重庆，与标准答案一致",
+          "hits_n": 5,
+          "top1": "我国庆打算去大理，机票都订好了，10月1号早上从成都天府机场飞。还准备租车环洱海，想想就爽。",
+          "judge_failed": false
+        },
+        {
+          "qid": 33,
+          "type": "correction",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确年糕是室友的猫，自己养柯基煤球，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "跟你说个事，其实年糕是我合租室友的猫，我上个月自己买了只柯基叫‘煤球’，现在天天在家拆家。真的，我快疯了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 34,
+          "type": "correction",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[3]明确说明已转React前端，与标准答案一致",
+          "hits_n": 5,
+          "top1": "我现在在公司负责一个用Go重写订单服务的项目，下个月15号上线。天天面对祖传代码，真的像在屎山里考古。",
+          "judge_failed": false
+        },
+        {
+          "qid": 35,
+          "type": "correction",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2][4][5]明确退大理机票改去重庆吃珮姐，最新说法清晰。",
+          "hits_n": 5,
+          "top1": "我国庆打算去大理，机票都订好了，10月1号早上从成都天府机场飞。还准备租车环洱海，想想就爽。",
+          "judge_failed": false
+        },
+        {
+          "qid": 36,
+          "type": "correction",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确更正年糕为室友的猫，并说明自己养柯基煤球",
+          "hits_n": 5,
+          "top1": "跟你说个事，其实年糕是我合租室友的猫，我上个月自己买了只柯基叫‘煤球’，现在天天在家拆家。真的，我快疯了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 37,
+          "type": "noise",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确年糕是室友的猫，自己养柯基煤球，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "跟你说个事，其实年糕是我合租室友的猫，我上个月自己买了只柯基叫‘煤球’，现在天天在家拆家。真的，我快疯了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 38,
+          "type": "noise",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确给出最新说法，与标准答案一致",
+          "hits_n": 5,
+          "top1": "我现在那个Go订单项目下个月15号上线，最近天天加班，祖传代码真的看一眼少活一年。",
+          "judge_failed": false
+        },
+        {
+          "qid": 39,
+          "type": "noise",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确退票改去重庆找室友吃珮姐，与标准答案一致",
+          "hits_n": 5,
+          "top1": "大理的机票我退了，国庆改成去重庆找大学室友玩三天，准备去吃那家‘珮姐老火锅’。想想也挺好，不用赶飞机了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 40,
+          "type": "noise",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确煤球上个月买、年糕是室友的猫",
+          "hits_n": 5,
+          "top1": "跟你说个事，其实年糕是我合租室友的猫，我上个月自己买了只柯基叫‘煤球’，现在天天在家拆家。真的，我快疯了。",
+          "judge_failed": false
+        }
+      ]
+    },
+    "sme_kb_dynamic": {
+      "status": "ok",
+      "error": null,
+      "reinit_s": 0.3,
+      "add_total_s": 245.4,
+      "add_p50_ms": 4235.4,
+      "score": 36.0,
+      "acc": 0.9,
+      "misled": 2,
+      "storage": 229,
+      "retrieval_p50_ms": 284.0,
+      "quiz_total_s": 43.2,
+      "total_s": 288.9,
+      "details": [
+        {
+          "qid": 1,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆含老码头、中辣牛油锅底及脑花贡菜，与答案一致",
+          "hits_n": 5,
+          "top1": "用户喜欢老码头火锅的中辣牛油锅底",
+          "judge_failed": false
+        },
+        {
+          "qid": 2,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确周三晚八点去超级猩猩上战绳课，与答案一致",
+          "hits_n": 5,
+          "top1": "用户的妈妈每周日晚上八点准时和用户视频",
+          "judge_failed": false
+        },
+        {
+          "qid": 3,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆含38平、3200元、阳台朝南，信息一致无冲突",
+          "hits_n": 5,
+          "top1": "用户有一个38平的公寓，阳台朝南",
+          "judge_failed": false
+        },
+        {
+          "qid": 4,
+          "type": "normal",
+          "correct": 0,
+          "misled": 1,
+          "reason": "记忆称猫是用户的年糕，与标准答案冲突且无柯基煤球信息",
+          "hits_n": 5,
+          "top1": "用户上个月自己买了一只柯基，名叫“煤球”",
+          "judge_failed": false
+        },
+        {
+          "qid": 5,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[3]明确最新负责React前端，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户负责的项目下个月15号上线",
+          "judge_failed": false
+        },
+        {
+          "qid": 6,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[5]明确说明退大理机票改去重庆，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户退了大理的机票",
+          "judge_failed": false
+        },
+        {
+          "qid": 7,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆含乐高799元城堡及第三包，与答案一致",
+          "hits_n": 5,
+          "top1": "用户上个月自己买了一只柯基，名叫“煤球”",
+          "judge_failed": false
+        },
+        {
+          "qid": 8,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[4]明确含窦性心律不齐和十一点前睡，信息一致",
+          "hits_n": 5,
+          "top1": "医生让用户十一点前睡觉",
+          "judge_failed": false
+        },
+        {
+          "qid": 9,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆明确含妈妈绵阳小学老师、爸爸货车、周日八点视频",
+          "hits_n": 5,
+          "top1": "用户的妈妈每周日晚上八点准时和用户视频",
+          "judge_failed": false
+        },
+        {
+          "qid": 10,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆明确含12月软考中级软件设计师和清华出版社教材",
+          "hits_n": 5,
+          "top1": "用户报名了12月的软考中级软件设计师",
+          "judge_failed": false
+        },
+        {
+          "qid": 11,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确煤球是用户柯基名字，无冲突信息",
+          "hits_n": 5,
+          "top1": "用户上个月自己买了一只柯基，名叫“煤球”",
+          "judge_failed": false
+        },
+        {
+          "qid": 12,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]和[5]直接对应标准答案，无冲突信息",
+          "hits_n": 5,
+          "top1": "用户现在被调去维护公司官网的React前端",
+          "judge_failed": false
+        },
+        {
+          "qid": 13,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2][4]明确提到珮姐老火锅，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户国庆去重庆的票已经买好了",
+          "judge_failed": false
+        },
+        {
+          "qid": 14,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][2]均明确提到地铁1号线，信息一致无冲突",
+          "hits_n": 5,
+          "top1": "用户楼下是地铁1号线，早上七点半报站声很吵",
+          "judge_failed": false
+        },
+        {
+          "qid": 15,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[4]明确提到像条死狗，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户上战绳课坚持快两个月了",
+          "judge_failed": false
+        },
+        {
+          "qid": 16,
+          "type": "normal",
+          "correct": 0,
+          "misled": 1,
+          "reason": "记忆说拼到第四包，与标准第三包冲突，且无第三包说法",
+          "hits_n": 5,
+          "top1": "用户刚拼乐高拼到第三包",
+          "judge_failed": false
+        },
+        {
+          "qid": 17,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆含两点睡、窦性心律不齐，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户今晚熬夜刷B站到两点",
+          "judge_failed": false
+        },
+        {
+          "qid": 18,
+          "type": "normal",
+          "correct": 0,
+          "misled": 0,
+          "reason": "记忆只提催回绵阳，未提考公务员，信息不完整",
+          "hits_n": 5,
+          "top1": "我妈每周日晚上八点准时视频，昨天又催我回绵阳，我说等我软考过了再说，她说软考能当饭吃吗。",
+          "judge_failed": false
+        },
+        {
+          "qid": 19,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆含计划学一小时、加班只学十分钟就困，与标准一致",
+          "hits_n": 5,
+          "top1": "软考中级软件设计师我报名了12月的，买了清华出版社那本教材，计划每天学一小时，结果今天加班只看了十分钟就困了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 20,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确年糕是室友的猫，与答案一致",
+          "hits_n": 5,
+          "top1": "用户是合租居住，年糕是用户合租室友的猫",
+          "judge_failed": false
+        },
+        {
+          "qid": 21,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][3]明确说项目已交给新同事，与答案一致",
+          "hits_n": 5,
+          "top1": "用户之前提到的Go订单项目已交给新来的同事",
+          "judge_failed": false
+        },
+        {
+          "qid": 22,
+          "type": "normal",
+          "correct": 0,
+          "misled": 0,
+          "reason": "记忆只提三天，未提找大学室友玩",
+          "hits_n": 5,
+          "top1": "用户国庆计划去重庆玩三天",
+          "judge_failed": false
+        },
+        {
+          "qid": 23,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确提到住高新区，与答案一致",
+          "hits_n": 5,
+          "top1": "用户住在成都",
+          "judge_failed": false
+        },
+        {
+          "qid": 24,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确说坚持快两个月，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "用户上战绳课坚持快两个月了",
+          "judge_failed": false
+        },
+        {
+          "qid": 25,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确用户上月买的柯基，品种信息在场",
+          "hits_n": 5,
+          "top1": "用户上个月自己买了一只柯基，名叫“煤球”",
+          "judge_failed": false
+        },
+        {
+          "qid": 26,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确提到因加班只学十分钟，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "软考中级软件设计师我报名了12月的，买了清华出版社那本教材，计划每天学一小时，结果今天加班只看了十分钟就困了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 27,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆含中辣牛油锅底、两份脑花和贡菜，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户喜欢老码头火锅的中辣牛油锅底",
+          "judge_failed": false
+        },
+        {
+          "qid": 28,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[5]明确给出周三晚八点超级猩猩战绳课，与答案一致",
+          "hits_n": 5,
+          "top1": "用户的妈妈每周日晚上八点准时和用户视频",
+          "judge_failed": false
+        },
+        {
+          "qid": 29,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆含38平、3200元、成都高新区，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户的房租是3200",
+          "judge_failed": false
+        },
+        {
+          "qid": 30,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出柯基叫煤球，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户上个月自己买了一只柯基，名叫“煤球”",
+          "judge_failed": false
+        },
+        {
+          "qid": 31,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[5]明确给出最新工作内容，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户开始怀念写Go的日子",
+          "judge_failed": false
+        },
+        {
+          "qid": 32,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆显示退大理机票、改去重庆，与答案一致",
+          "hits_n": 5,
+          "top1": "用户国庆计划去重庆玩三天",
+          "judge_failed": false
+        },
+        {
+          "qid": 33,
+          "type": "correction",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆含年糕是室友猫、自己买柯基叫煤球，信息一致",
+          "hits_n": 5,
+          "top1": "用户上个月自己买了一只柯基，名叫“煤球”",
+          "judge_failed": false
+        },
+        {
+          "qid": 34,
+          "type": "correction",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[3]明确给出最新说法，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户之前提到的Go订单项目已交给新来的同事",
+          "judge_failed": false
+        },
+        {
+          "qid": 35,
+          "type": "correction",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[5]明确说明退大理机票、改去重庆，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户国庆去大理，机票已订好，10月1号早上从天府机场飞",
+          "judge_failed": false
+        },
+        {
+          "qid": 36,
+          "type": "correction",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确年糕是室友的猫，[1]用户买了柯基煤球，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "用户上个月自己买了一只柯基，名叫“煤球”",
+          "judge_failed": false
+        },
+        {
+          "qid": 37,
+          "type": "noise",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆明确年糕是室友的猫，煤球是自己买的柯基",
+          "hits_n": 5,
+          "top1": "用户上个月自己买了一只柯基，名叫“煤球”",
+          "judge_failed": false
+        },
+        {
+          "qid": 38,
+          "type": "noise",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[3]明确给出最新说法，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户之前提到的Go订单项目已交给新来的同事",
+          "judge_failed": false
+        },
+        {
+          "qid": 39,
+          "type": "noise",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[4]明确退大理机票、改去重庆找室友吃珮姐老火锅",
+          "hits_n": 5,
+          "top1": "用户退了大理的机票",
+          "judge_failed": false
+        },
+        {
+          "qid": 40,
+          "type": "noise",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆含煤球上个月自购、年糕为室友猫，信息一致",
+          "hits_n": 5,
+          "top1": "被煤球追的那只柯基是公的",
+          "judge_failed": false
+        }
+      ]
+    },
+    "sme_minimal": {
+      "status": "ok",
+      "error": null,
+      "reinit_s": 0.3,
+      "add_total_s": 31.7,
+      "add_p50_ms": 526.0,
+      "score": 40.0,
+      "acc": 1.0,
+      "misled": 0,
+      "storage": 60,
+      "retrieval_p50_ms": 278.1,
+      "quiz_total_s": 40.0,
+      "total_s": 72.0,
+      "details": [
+        {
+          "qid": 1,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆明确提到玉林路老码头火锅及中辣牛油锅底、脑花贡菜",
+          "hits_n": 5,
+          "top1": "今晚又想去玉林路那家老码头火锅了，中辣牛油锅底，两份脑花一份贡菜，想想都流口水。",
+          "judge_failed": false
+        },
+        {
+          "qid": 2,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确提到周三晚八点去超级猩猩上战绳课，与答案一致。",
+          "hits_n": 5,
+          "top1": "我妈每周日晚上八点准时视频，昨天又催我回绵阳，我说等我软考过了再说，她说软考能当饭吃吗。",
+          "judge_failed": false
+        },
+        {
+          "qid": 3,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出38平、3200元、阳台朝南，与标准一致。",
+          "hits_n": 5,
+          "top1": "我住高新区那个38平的小公寓，月租3200，阳台朝南还行，但楼下地铁1号线早上七点半报站声真的吵到崩溃。",
+          "judge_failed": false
+        },
+        {
+          "qid": 4,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[3]明确说明年糕是室友的猫，自己买了柯基煤球，与标准答案一致",
+          "hits_n": 5,
+          "top1": "我养了一只布偶猫叫年糕，特别黏人，每天晚上都趴我键盘上。真的，我一敲代码它就过来，跟监工似的。",
+          "judge_failed": false
+        },
+        {
+          "qid": 5,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确最新说法：调去维护React前端改按钮。",
+          "hits_n": 5,
+          "top1": "我现在在公司负责一个用Go重写订单服务的项目，下个月15号上线。天天面对祖传代码，真的像在屎山里考古。",
+          "judge_failed": false
+        },
+        {
+          "qid": 6,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确机票退了改去重庆，与标准答案一致",
+          "hits_n": 5,
+          "top1": "我国庆打算去大理，机票都订好了，10月1号早上从成都天府机场飞。还准备租车环洱海，想想就爽。",
+          "judge_failed": false
+        },
+        {
+          "qid": 7,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确含799元霍格沃茨城堡、拼到第三包，与答案一致",
+          "hits_n": 5,
+          "top1": "啊啊啊刚拼乐高拼到第三包，霍格沃茨城堡那套799买的，茶几已经快放不下了，我是不是该换个大房子。",
+          "judge_failed": false
+        },
+        {
+          "qid": 8,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][2]均含窦性心律不齐和十一点前睡，信息一致",
+          "hits_n": 5,
+          "top1": "今晚又熬夜刷B站到两点，上周体检说我窦性心律不齐，医生让我十一点前睡，我只坚持了三天。",
+          "judge_failed": false
+        },
+        {
+          "qid": 9,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确妈妈在绵阳当小学老师、爸爸开货车，[1]提到周日八点视频",
+          "hits_n": 5,
+          "top1": "我妈每周日晚上八点准时视频，昨天又催我回绵阳，我说等我软考过了再说，她说软考能当饭吃吗。",
+          "judge_failed": false
+        },
+        {
+          "qid": 10,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确报名12月软考中级软件设计师，买清华出版社教材。",
+          "hits_n": 5,
+          "top1": "软考中级软件设计师我报名了12月的，买了清华出版社那本教材，计划每天学一小时，结果今天加班只看了十分钟就困了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 11,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确说柯基叫煤球，无冲突信息。",
+          "hits_n": 5,
+          "top1": "跟你说个事，其实年糕是我合租室友的猫，我上个月自己买了只柯基叫‘煤球’，现在天天在家拆家。真的，我快疯了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 12,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][5]明确提到维护React前端、改按钮样式，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "之前说的那个Go订单项目其实交给新来的同事了，我现在被调去维护公司官网的React前端，天天改按钮样式。",
+          "judge_failed": false
+        },
+        {
+          "qid": 13,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "多条记忆明确提到珮姐老火锅，信息一致无冲突",
+          "hits_n": 5,
+          "top1": "国庆去重庆的票买好了，室友说珮姐老火锅她已经排上号了，我负责带胃去就行。",
+          "judge_failed": false
+        },
+        {
+          "qid": 14,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][2]均明确提到地铁1号线早上七点半报站声吵。",
+          "hits_n": 5,
+          "top1": "成都地铁1号线早上七点半报站声真的绝了，我住高新区这边，每天被吵醒，比闹钟还准。",
+          "judge_failed": false
+        },
+        {
+          "qid": 15,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "多条记忆均含'像条死狗'，与标准答案一致",
+          "hits_n": 5,
+          "top1": "周三晚上八点我又去超级猩猩上战绳课了，坚持快两个月了，但每次下课都觉得自己像条死狗。",
+          "judge_failed": false
+        },
+        {
+          "qid": 16,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确第三包、茶几放不下，与标准一致",
+          "hits_n": 5,
+          "top1": "啊啊啊刚拼乐高拼到第三包，霍格沃茨城堡那套799买的，茶几已经快放不下了，我是不是该换个大房子。",
+          "judge_failed": false
+        },
+        {
+          "qid": 17,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][2]均含两点睡和窦性心律不齐，信息一致",
+          "hits_n": 5,
+          "top1": "今晚又熬夜刷B站到两点，上周体检说我窦性心律不齐，医生让我十一点前睡，我只坚持了三天。",
+          "judge_failed": false
+        },
+        {
+          "qid": 18,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[3]明确提到催回绵阳考公务员，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "我妈今晚视频又催我回绵阳，我说我12月要考软考，她说考完就回来。我没答应，但也没拒绝，唉。",
+          "judge_failed": false
+        },
+        {
+          "qid": 19,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆明确提到计划每天学一小时，加班只看了十分钟就困。",
+          "hits_n": 5,
+          "top1": "软考还有不到一个月，我教材才看了三分之一，每天下班学一小时的计划，实际是每天十分钟。",
+          "judge_failed": false
+        },
+        {
+          "qid": 20,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确说年糕是合租室友的猫，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "跟你说个事，其实年糕是我合租室友的猫，我上个月自己买了只柯基叫‘煤球’，现在天天在家拆家。真的，我快疯了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 21,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确说交给新同事，最新说法清晰在场",
+          "hits_n": 5,
+          "top1": "我现在那个Go订单项目下个月15号上线，最近天天加班，祖传代码真的看一眼少活一年。",
+          "judge_failed": false
+        },
+        {
+          "qid": 22,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[3]明确说去重庆找大学室友玩三天，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "重庆国庆三天应该很爽，室友说带我去吃珮姐，还要坐长江索道。希望别下雨，成都最近雨太多了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 23,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][3]均明确住高新区，无冲突信息",
+          "hits_n": 5,
+          "top1": "我住高新区那个38平的小公寓，月租3200，阳台朝南还行，但楼下地铁1号线早上七点半报站声真的吵到崩溃。",
+          "judge_failed": false
+        },
+        {
+          "qid": 24,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][2]均明确提到坚持快两个月，信息一致。",
+          "hits_n": 5,
+          "top1": "周三晚上八点我又去超级猩猩上战绳课了，坚持快两个月了，但每次下课都觉得自己像条死狗。",
+          "judge_failed": false
+        },
+        {
+          "qid": 25,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆明确提到柯基，与标准答案一致",
+          "hits_n": 5,
+          "top1": "跟你说个事，其实年糕是我合租室友的猫，我上个月自己买了只柯基叫‘煤球’，现在天天在家拆家。真的，我快疯了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 26,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][2]均明确提到加班导致只学十分钟就困。",
+          "hits_n": 5,
+          "top1": "软考教材看了十分钟就困，我怀疑不是书的问题，是我加班太狠了。前端改按钮真的消耗灵魂。",
+          "judge_failed": false
+        },
+        {
+          "qid": 27,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][2]明确给出老码头、中辣牛油、两份脑花一份贡菜",
+          "hits_n": 5,
+          "top1": "玉林路老码头火锅我上周又去了，中辣牛油锅底加两份脑花一份贡菜，吃完第二天嗓子疼但值得。",
+          "judge_failed": false
+        },
+        {
+          "qid": 28,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[3]明确周三晚八点超级猩猩战绳课，信息一致",
+          "hits_n": 5,
+          "top1": "我妈每周日晚上八点准时视频，昨天又催我回绵阳，我说等我软考过了再说，她说软考能当饭吃吗。",
+          "judge_failed": false
+        },
+        {
+          "qid": 29,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2][5]明确38平、月租3200，信息一致无冲突",
+          "hits_n": 5,
+          "top1": "乐高城堡我终于拼到第五包了，餐桌也快满了，我是不是该考虑换个大点的房子，但房租3200已经够贵了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 30,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确提到上个月买了柯基叫煤球，最新说法清晰。",
+          "hits_n": 5,
+          "top1": "我养了一只布偶猫叫年糕，特别黏人，每天晚上都趴我键盘上。真的，我一敲代码它就过来，跟监工似的。",
+          "judge_failed": false
+        },
+        {
+          "qid": 31,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[3]明确最新工作为维护React前端改按钮样式",
+          "hits_n": 5,
+          "top1": "我现在在公司负责一个用Go重写订单服务的项目，下个月15号上线。天天面对祖传代码，真的像在屎山里考古。",
+          "judge_failed": false
+        },
+        {
+          "qid": 32,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[3]明确退大理机票改去重庆，最新说法清晰。",
+          "hits_n": 5,
+          "top1": "我国庆打算去大理，机票都订好了，10月1号早上从成都天府机场飞。还准备租车环洱海，想想就爽。",
+          "judge_failed": false
+        },
+        {
+          "qid": 33,
+          "type": "correction",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确年糕是室友的猫，自己买了柯基煤球，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "跟你说个事，其实年糕是我合租室友的猫，我上个月自己买了只柯基叫‘煤球’，现在天天在家拆家。真的，我快疯了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 34,
+          "type": "correction",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确说明已转React前端，最新说法清晰在场",
+          "hits_n": 5,
+          "top1": "我现在在公司负责一个用Go重写订单服务的项目，下个月15号上线。天天面对祖传代码，真的像在屎山里考古。",
+          "judge_failed": false
+        },
+        {
+          "qid": 35,
+          "type": "correction",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确退大理机票改去重庆，与标准答案一致",
+          "hits_n": 5,
+          "top1": "我国庆打算去大理，机票都订好了，10月1号早上从成都天府机场飞。还准备租车环洱海，想想就爽。",
+          "judge_failed": false
+        },
+        {
+          "qid": 36,
+          "type": "correction",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确说明年糕是室友的猫，自己买了柯基煤球，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "我养了一只布偶猫叫年糕，特别黏人，每天晚上都趴我键盘上。真的，我一敲代码它就过来，跟监工似的。",
+          "judge_failed": false
+        },
+        {
+          "qid": 37,
+          "type": "noise",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确年糕是室友的猫，自己买了柯基煤球，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "跟你说个事，其实年糕是我合租室友的猫，我上个月自己买了只柯基叫‘煤球’，现在天天在家拆家。真的，我快疯了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 38,
+          "type": "noise",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[3]明确项目已交同事，现改React按钮样式",
+          "hits_n": 5,
+          "top1": "我现在那个Go订单项目下个月15号上线，最近天天加班，祖传代码真的看一眼少活一年。",
+          "judge_failed": false
+        },
+        {
+          "qid": 39,
+          "type": "noise",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确说退大理机票改去重庆找室友吃珮姐，与答案一致",
+          "hits_n": 5,
+          "top1": "大理的机票我退了，国庆改成去重庆找大学室友玩三天，准备去吃那家‘珮姐老火锅’。想想也挺好，不用赶飞机了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 40,
+          "type": "noise",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确煤球上个月买、年糕是室友猫，无冲突",
+          "hits_n": 5,
+          "top1": "跟你说个事，其实年糕是我合租室友的猫，我上个月自己买了只柯基叫‘煤球’，现在天天在家拆家。真的，我快疯了。",
+          "judge_failed": false
+        }
+      ]
+    }
+  },
+  "meta": {
+    "ts": "2026-09-29T04:22:12+00:00",
+    "seed": 2,
+    "llm_model": "deepseek-flash",
+    "embed": "Qwen/Qwen3-Embedding-0.6B (1024d, local CPU)",
+    "dialogue_rounds": 60,
+    "quiz_questions": 40,
+    "absent": {
+      "langmem": "全系 0.0.11-0.0.30 使用 Python 3.11+ 语法（typing.Literal[*x]），本机仅 3.10.6，无法 import",
+      "zep": "社区版服务端依赖 docker，本机无 docker（按约定不装）"
+    },
+    "wall_total_s": 501.8
+  },
+  "ranking": [
+    "sme_minimal",
+    "sme_chat",
+    "sme_kb_dynamic"
+  ]
+}

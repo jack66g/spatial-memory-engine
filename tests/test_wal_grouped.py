@@ -24,7 +24,9 @@ from sme.storage.wal import WriteAheadLog
 
 # --------------------------- 配置项注册 ----------------------------------- #
 def test_config_items_registered_group_commit():
-    assert len(ci.ITEMS) == 91
+    # 91 -> 92：新增 retrieval.fusion（混合归一方式 weighted|minmax，见
+    # tests/test_fusion_minmax.py；本测试原断言 91 为其加入前的注册数）
+    assert len(ci.ITEMS) == 92
     sync = ci.ITEM_BY_PATH["persistence.sync_mode"]
     assert sync.kind == "enum"
     assert sync.choices == ("fsync", "grouped")

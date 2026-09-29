@@ -1,0 +1,1270 @@
+{
+  "contestants": {
+    "sme_chat": {
+      "status": "ok",
+      "error": null,
+      "reinit_s": 8.7,
+      "add_total_s": 102.9,
+      "add_p50_ms": 711.5,
+      "score": 40.0,
+      "acc": 1.0,
+      "misled": 0,
+      "storage": 86,
+      "retrieval_p50_ms": 295.2,
+      "quiz_total_s": 36.4,
+      "total_s": 148.0,
+      "details": [
+        {
+          "qid": 1,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2][3]明确最新项目为青柠会员积分系统",
+          "hits_n": 5,
+          "top1": "我刚下班，脑子已经转不动了。最近在做一个叫“星栈”的后端项目，给成都一家做火锅底料的B端客户写订单拆单服务，这周在联调一个满199减30的优惠券接口，测试环境是",
+          "judge_failed": false
+        },
+        {
+          "qid": 2,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确罗技MX Master 3S，到手549，与答案一致",
+          "hits_n": 5,
+          "top1": "双十一预售我昨晚在京东付了罗技MX Master 3S鼠标的定金，到手价549，还顺手买了一个绿联100W氮化镓充电头，129。钱包已经开始哭了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 3,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆明确提到绿联100W氮化镓充电头129元，与答案一致",
+          "hits_n": 5,
+          "top1": "双十一预售我昨晚在京东付了罗技MX Master 3S鼠标的定金，到手价549，还顺手买了一个绿联100W氮化镓充电头，129。钱包已经开始哭了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 4,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "多条记忆均明确每周二、周四晚8点跳绳，无冲突",
+          "hits_n": 5,
+          "top1": "我从上个月开始每周二、周四晚上8点去小区楼下跳绳，用Keep计数，现在一次能跳1800个，差不多25分钟。今天差点被广场舞大妈挤到花坛里。",
+          "judge_failed": false
+        },
+        {
+          "qid": 5,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][3]均明确1800个、25分钟，无冲突信息",
+          "hits_n": 5,
+          "top1": "我从上个月开始每周二、周四晚上8点去小区楼下跳绳，用Keep计数，现在一次能跳1800个，差不多25分钟。今天差点被广场舞大妈挤到花坛里。",
+          "judge_failed": false
+        },
+        {
+          "qid": 6,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆明确提到表姐林悦下周六结婚，信息一致。",
+          "hits_n": 5,
+          "top1": "我表姐林悦下周六结婚，在成都金牛区的迎宾一号办酒，我妈让我提前一天回去帮忙布置婚房。我已经能预见自己被使唤成婚庆临时工。",
+          "judge_failed": false
+        },
+        {
+          "qid": 7,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "多条记忆明确提到成都金牛区迎宾一号，信息一致",
+          "hits_n": 5,
+          "top1": "我表姐婚礼前一天我得回金牛区帮忙布置婚房，想想就累。但迎宾一号那家菜听说还可以，我准备主要出力在吃席环节。",
+          "judge_failed": false
+        },
+        {
+          "qid": 8,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "多条记忆均明确提到提前一天回去帮忙布置婚房",
+          "hits_n": 5,
+          "top1": "我表姐林悦下周六结婚，在成都金牛区的迎宾一号办酒，我妈让我提前一天回去帮忙布置婚房。我已经能预见自己被使唤成婚庆临时工。",
+          "judge_failed": false
+        },
+        {
+          "qid": 9,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确更正为誉峰遇见2栋1单元1102，最新说法清晰",
+          "hits_n": 5,
+          "top1": "还有个事我得更正一下，我之前说我住神仙树那边，其实我上个月底搬到成都高新区天府三街的誉峰遇见了，现在租的是2栋1单元1102，月租3200。搬家把我搬没了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 10,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确更正为月租3200，最新说法清晰在场",
+          "hits_n": 5,
+          "top1": "还有个事我得更正一下，我之前说我住神仙树那边，其实我上个月底搬到成都高新区天府三街的誉峰遇见了，现在租的是2栋1单元1102，月租3200。搬家把我搬没了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 11,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆明确给出课程名和12月10号开课，无冲突信息",
+          "hits_n": 5,
+          "top1": "我报了12月10号开课的极客时间《Redis核心技术与实战》，计划每天晚上10点半学一节，周末再补一次实战作业。希望别又变成收藏夹吃灰。",
+          "judge_failed": false
+        },
+        {
+          "qid": 12,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确含每晚10点半一节、周末补实战作业",
+          "hits_n": 5,
+          "top1": "极客时间那个Redis课12月10号开课，我计划晚上10点半学一节。现在项目换成“青柠”后，感觉更得补补缓存了，不然天天被需求追着跑。",
+          "judge_failed": false
+        },
+        {
+          "qid": 13,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][2][3]均明确去重庆、请两天年假，信息一致",
+          "hits_n": 5,
+          "top1": "我打算明年3月请两天年假去重庆，已经看好3月15号早上8点20从成都东出发的G8501，想去洪崖洞和鹅岭二厂。现在先靠想象旅游续命。",
+          "judge_failed": false
+        },
+        {
+          "qid": 14,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "多条记忆一致给出3月15日8:20成都东G8501，无冲突",
+          "hits_n": 5,
+          "top1": "我打算明年3月请两天年假去重庆，已经看好3月15号早上8点20从成都东出发的G8501，想去洪崖洞和鹅岭二厂。现在先靠想象旅游续命。",
+          "judge_failed": false
+        },
+        {
+          "qid": 15,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "多条记忆均明确提到洪崖洞和鹅岭二厂",
+          "hits_n": 5,
+          "top1": "我打算明年3月请两天年假去重庆，已经看好3月15号早上8点20从成都东出发的G8501，想去洪崖洞和鹅岭二厂。现在先靠想象旅游续命。",
+          "judge_failed": false
+        },
+        {
+          "qid": 16,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出柯基、煤球、5个月大，与标准答案一致",
+          "hits_n": 5,
+          "top1": "哎我想起来，之前跟你说七喜是我养的，其实不太准确。七喜是我合租室友的猫，我自己后来接回家的是只柯基，叫“煤球”，现在5个月大。",
+          "judge_failed": false
+        },
+        {
+          "qid": 17,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确说明七喜是合租室友的猫，最新说法清晰。",
+          "hits_n": 5,
+          "top1": "哎我想起来，之前跟你说七喜是我养的，其实不太准确。七喜是我合租室友的猫，我自己后来接回家的是只柯基，叫“煤球”，现在5个月大。",
+          "judge_failed": false
+        },
+        {
+          "qid": 18,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确提到太古里购买21341迪士尼女巫也疯狂",
+          "hits_n": 5,
+          "top1": "我最近迷上了拼乐高，上周在太古里乐高店买了21341迪士尼女巫也疯狂那套，一共2316块零件，现在拼到第三包。桌子已经不够放了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 19,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确2316块、第三包，与标准答案一致",
+          "hits_n": 5,
+          "top1": "我最近迷上了拼乐高，上周在太古里乐高店买了21341迪士尼女巫也疯狂那套，一共2316块零件，现在拼到第三包。桌子已经不够放了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 20,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "多条记忆一致：必点脑花和贡菜，不吃香菜",
+          "hits_n": 5,
+          "top1": "我吃火锅必点脑花和贡菜，但完全不吃香菜。上周三在玉林路那家“老码头”点了中辣，结果辣到喝了三瓶唯怡，回家还嘴硬说下次继续。",
+          "judge_failed": false
+        },
+        {
+          "qid": 21,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确老码头中辣，与答案一致",
+          "hits_n": 5,
+          "top1": "我吃火锅必点脑花和贡菜，但完全不吃香菜。上周三在玉林路那家“老码头”点了中辣，结果辣到喝了三瓶唯怡，回家还嘴硬说下次继续。",
+          "judge_failed": false
+        },
+        {
+          "qid": 22,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确上周三喝三瓶唯怡，与标准答案一致",
+          "hits_n": 5,
+          "top1": "我吃火锅必点脑花和贡菜，但完全不吃香菜。上周三在玉林路那家“老码头”点了中辣，结果辣到喝了三瓶唯怡，回家还嘴硬说下次继续。",
+          "judge_failed": false
+        },
+        {
+          "qid": 23,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确给出成都火锅底料B端客户做订单拆单服务",
+          "hits_n": 5,
+          "top1": "那个“星栈”项目其实上周已经交付了，我现在手上换成了给一家连锁奶茶品牌做“青柠”会员积分系统。之前那个满199减30优惠券接口总算翻篇了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 24,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出满199减30及IP 10.12.3.47，无冲突",
+          "hits_n": 5,
+          "top1": "我刚下班，脑子已经转不动了。最近在做一个叫“星栈”的后端项目，给成都一家做火锅底料的B端客户写订单拆单服务，这周在联调一个满199减30的优惠券接口，测试环境是",
+          "judge_failed": false
+        },
+        {
+          "qid": 25,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确阳台朝南，与标准答案一致",
+          "hits_n": 5,
+          "top1": "我住在成都武侯区神仙树旁边的蓝光雍锦世家，1栋2单元1603，月租2600。阳台朝南，下午晒得猫都躲床底，我也快躲床底了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 26,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出2岁、瑞鹏、180元，与标准答案一致",
+          "hits_n": 5,
+          "top1": "我养了一只橘猫叫“七喜”，今年2岁，上个月刚在瑞鹏打了猫三联加强针，花了180。它今天又把我键盘踩出一串乱码，我真服了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 27,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确给出每周二、周四晚8点跳绳，与标准答案一致",
+          "hits_n": 5,
+          "top1": "我周四晚上还是去跳绳了，Keep跳到1800个的时候感觉自己很行，回家爬楼又觉得自己不行。",
+          "judge_failed": false
+        },
+        {
+          "qid": 28,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆明确给出鼠标549、充电头129，合计678元",
+          "hits_n": 5,
+          "top1": "双十一预售我昨晚在京东付了罗技MX Master 3S鼠标的定金，到手价549，还顺手买了一个绿联100W氮化镓充电头，129。钱包已经开始哭了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 29,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆明确含Redis课、晚10点半一节、周末补作业",
+          "hits_n": 5,
+          "top1": "我报了12月10号开课的极客时间《Redis核心技术与实战》，计划每天晚上10点半学一节，周末再补一次实战作业。希望别又变成收藏夹吃灰。",
+          "judge_failed": false
+        },
+        {
+          "qid": 30,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆明确提到去重庆及G8501车次，信息一致",
+          "hits_n": 5,
+          "top1": "重庆计划还没变，明年3月15号早上8点20成都东G8501，去洪崖洞和鹅岭二厂。等“青柠”上线我一定得请两天年假跑路。",
+          "judge_failed": false
+        },
+        {
+          "qid": 31,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[3]明确给出乐高套装、零件数和进度，与答案一致",
+          "hits_n": 5,
+          "top1": "周四跳绳我又去了，1800个，25分钟，感觉自己还能再活五百年。回家看到煤球把纸巾撕了一地，瞬间老十岁。",
+          "judge_failed": false
+        },
+        {
+          "qid": 32,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "多条记忆一致：必点脑花贡菜，不吃香菜",
+          "hits_n": 5,
+          "top1": "我吃火锅必点脑花和贡菜，但完全不吃香菜。上周三在玉林路那家“老码头”点了中辣，结果辣到喝了三瓶唯怡，回家还嘴硬说下次继续。",
+          "judge_failed": false
+        },
+        {
+          "qid": 33,
+          "type": "correction",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确说明七喜是室友的猫，自己养的是柯基煤球",
+          "hits_n": 5,
+          "top1": "哎我想起来，之前跟你说七喜是我养的，其实不太准确。七喜是我合租室友的猫，我自己后来接回家的是只柯基，叫“煤球”，现在5个月大。",
+          "judge_failed": false
+        },
+        {
+          "qid": 34,
+          "type": "correction",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确更正为最新住址，与标准答案一致",
+          "hits_n": 5,
+          "top1": "还有个事我得更正一下，我之前说我住神仙树那边，其实我上个月底搬到成都高新区天府三街的誉峰遇见了，现在租的是2栋1单元1102，月租3200。搬家把我搬没了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 35,
+          "type": "correction",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][3]明确当前项目为青柠会员积分系统",
+          "hits_n": 5,
+          "top1": "那个“星栈”项目其实上周已经交付了，我现在手上换成了给一家连锁奶茶品牌做“青柠”会员积分系统。之前那个满199减30优惠券接口总算翻篇了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 36,
+          "type": "correction",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][2]明确星栈已交付，现做青柠系统，最新说法清晰。",
+          "hits_n": 5,
+          "top1": "那个“星栈”项目其实上周已经交付了，我现在手上换成了给一家连锁奶茶品牌做“青柠”会员积分系统。之前那个满199减30优惠券接口总算翻篇了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 37,
+          "type": "noise",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[4]明确更正为月租3200，最新说法清晰在场",
+          "hits_n": 5,
+          "top1": "哎我想起来，之前跟你说七喜是我养的，其实不太准确。七喜是我合租室友的猫，我自己后来接回家的是只柯基，叫“煤球”，现在5个月大。",
+          "judge_failed": false
+        },
+        {
+          "qid": 38,
+          "type": "noise",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[4]明确更正为2栋1单元1102，最新说法清晰在场",
+          "hits_n": 5,
+          "top1": "那个“星栈”项目其实上周已经交付了，我现在手上换成了给一家连锁奶茶品牌做“青柠”会员积分系统。之前那个满199减30优惠券接口总算翻篇了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 39,
+          "type": "noise",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[4]明确旧住址阳台朝南，与标准答案一致",
+          "hits_n": 5,
+          "top1": "哎我想起来，之前跟你说七喜是我养的，其实不太准确。七喜是我合租室友的猫，我自己后来接回家的是只柯基，叫“煤球”，现在5个月大。",
+          "judge_failed": false
+        },
+        {
+          "qid": 40,
+          "type": "noise",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[4]明确表姐婚礼在成都金牛区迎宾一号",
+          "hits_n": 5,
+          "top1": "我报了12月10号开课的极客时间《Redis核心技术与实战》，计划每天晚上10点半学一节，周末再补一次实战作业。希望别又变成收藏夹吃灰。",
+          "judge_failed": false
+        }
+      ]
+    },
+    "sme_kb_dynamic": {
+      "status": "ok",
+      "error": null,
+      "reinit_s": 0.3,
+      "add_total_s": 287.9,
+      "add_p50_ms": 4708.8,
+      "score": 34.0,
+      "acc": 0.85,
+      "misled": 3,
+      "storage": 251,
+      "retrieval_p50_ms": 293.6,
+      "quiz_total_s": 38.1,
+      "total_s": 326.3,
+      "details": [
+        {
+          "qid": 1,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][3][5]明确最新项目为青柠，星栈已交付为旧信息",
+          "hits_n": 5,
+          "top1": "用户所在的项目是“青柠”会员积分系统",
+          "judge_failed": false
+        },
+        {
+          "qid": 2,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出型号和到手价，与标准答案一致",
+          "hits_n": 5,
+          "top1": "双十一预售我昨晚在京东付了罗技MX Master 3S鼠标的定金，到手价549，还顺手买了一个绿联100W氮化镓充电头，129。钱包已经开始哭了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 3,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆明确给出绿联100W氮化镓充电头129元，无冲突",
+          "hits_n": 5,
+          "top1": "用户在双十一以129元买了绿联充电头",
+          "judge_failed": false
+        },
+        {
+          "qid": 4,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][2]均明确周二、周四晚8点跳绳，无冲突",
+          "hits_n": 5,
+          "top1": "用户每周二、周四晚上8点下楼跳绳",
+          "judge_failed": false
+        },
+        {
+          "qid": 5,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][2]均含1800个、25分钟，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户现在一次能跳1800个，差不多25分钟",
+          "judge_failed": false
+        },
+        {
+          "qid": 6,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆明确表姐林悦下周六结婚，信息一致无冲突",
+          "hits_n": 5,
+          "top1": "用户的表姐叫林悦",
+          "judge_failed": false
+        },
+        {
+          "qid": 7,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆明确提到成都金牛区迎宾一号，与答案一致",
+          "hits_n": 5,
+          "top1": "表姐的婚礼在成都金牛区的迎宾一号办酒",
+          "judge_failed": false
+        },
+        {
+          "qid": 8,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "多条记忆均明确提到提前一天回去帮忙布置婚房",
+          "hits_n": 5,
+          "top1": "用户妈妈让用户提前一天回去帮忙布置婚房",
+          "judge_failed": false
+        },
+        {
+          "qid": 9,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[4]明确给出最新小区和房号，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户现在租的是2栋1单元1102",
+          "judge_failed": false
+        },
+        {
+          "qid": 10,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确月租3200，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户月租3200",
+          "judge_failed": false
+        },
+        {
+          "qid": 11,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出课程名和开课时间，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户报了12月10号开课的极客时间《Redis核心技术与实战》",
+          "judge_failed": false
+        },
+        {
+          "qid": 12,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确每晚10点半学一节，[3]提到周末补实战作业，与标准一致",
+          "hits_n": 5,
+          "top1": "用户计划在12月10日开课的极客时间Redis课中，晚上10点半学一节",
+          "judge_failed": false
+        },
+        {
+          "qid": 13,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确提到明年3月去重庆、请两天年假",
+          "hits_n": 5,
+          "top1": "我打算明年3月请两天年假去重庆，已经看好3月15号早上8点20从成都东出发的G8501，想去洪崖洞和鹅岭二厂。现在先靠想象旅游续命。",
+          "judge_failed": false
+        },
+        {
+          "qid": 14,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][2]均含等价正确信息，无冲突过期说法",
+          "hits_n": 5,
+          "top1": "用户计划明年3月15号早上8点20从成都东乘坐G8501去重庆，去洪崖洞和鹅岭二厂",
+          "judge_failed": false
+        },
+        {
+          "qid": 15,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[3][4]均明确提到洪崖洞和鹅岭二厂",
+          "hits_n": 5,
+          "top1": "用户期待重庆行程",
+          "judge_failed": false
+        },
+        {
+          "qid": 16,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆明确给出柯基、煤球、5个月大，信息一致",
+          "hits_n": 5,
+          "top1": "用户后来接回家的是一只柯基，叫“煤球”",
+          "judge_failed": false
+        },
+        {
+          "qid": 17,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确说七喜是合租室友的猫，最新说法清晰在场",
+          "hits_n": 5,
+          "top1": "哎我想起来，之前跟你说七喜是我养的，其实不太准确。七喜是我合租室友的猫，我自己后来接回家的是只柯基，叫“煤球”，现在5个月大。",
+          "judge_failed": false
+        },
+        {
+          "qid": 18,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确包含21341迪士尼女巫也疯狂套装信息",
+          "hits_n": 5,
+          "top1": "我最近迷上了拼乐高，上周在太古里乐高店买了21341迪士尼女巫也疯狂那套，一共2316块零件，现在拼到第三包。桌子已经不够放了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 19,
+          "type": "normal",
+          "correct": 0,
+          "misled": 1,
+          "reason": "零件数正确，但拼到第五包与标准第三包冲突，无最新说法",
+          "hits_n": 5,
+          "top1": "用户买的乐高套装一共2316块零件",
+          "judge_failed": false
+        },
+        {
+          "qid": 20,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][4]明确必点脑花贡菜、不吃香菜，无冲突",
+          "hits_n": 5,
+          "top1": "用户吃火锅必点脑花和贡菜",
+          "judge_failed": false
+        },
+        {
+          "qid": 21,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆明确提到老码头和中辣，信息一致",
+          "hits_n": 5,
+          "top1": "用户上周三在玉林路那家“老码头”点了中辣",
+          "judge_failed": false
+        },
+        {
+          "qid": 22,
+          "type": "normal",
+          "correct": 0,
+          "misled": 1,
+          "reason": "记忆只提中辣和唯怡，未提三瓶，无法答出数量",
+          "hits_n": 5,
+          "top1": "用户上周吃火锅点了中辣并喝了唯怡",
+          "judge_failed": false
+        },
+        {
+          "qid": 23,
+          "type": "normal",
+          "correct": 0,
+          "misled": 0,
+          "reason": "记忆未提及星栈客户信息，无法回答",
+          "hits_n": 5,
+          "top1": "用户之前交付过“星栈”项目",
+          "judge_failed": false
+        },
+        {
+          "qid": 24,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[5]明确给出满199减30和IP 10.12.3.47，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户之前交付过“星栈”项目",
+          "judge_failed": false
+        },
+        {
+          "qid": 25,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确阳台朝南，与标准答案一致",
+          "hits_n": 5,
+          "top1": "我住在成都武侯区神仙树旁边的蓝光雍锦世家，1栋2单元1603，月租2600。阳台朝南，下午晒得猫都躲床底，我也快躲床底了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 26,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆含2岁、瑞鹏、180元，且最新说法澄清七喜是室友的猫",
+          "hits_n": 5,
+          "top1": "用户之前说七喜是自己养的，其实不太准确",
+          "judge_failed": false
+        },
+        {
+          "qid": 27,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][2]明确给出每周二、周四晚8点跳绳，与标准一致",
+          "hits_n": 5,
+          "top1": "我从上个月开始每周二、周四晚上8点去小区楼下跳绳，用Keep计数，现在一次能跳1800个，差不多25分钟。今天差点被广场舞大妈挤到花坛里。",
+          "judge_failed": false
+        },
+        {
+          "qid": 28,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆明确鼠标549元、充电头129元，合计678元",
+          "hits_n": 5,
+          "top1": "用户在双十一买了罗技MX Master 3S鼠标，549元那款",
+          "judge_failed": false
+        },
+        {
+          "qid": 29,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆含课程名、每晚10点半一节、周末补作业，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户正在听极客时间的Redis课程，课程讲到持久化部分",
+          "judge_failed": false
+        },
+        {
+          "qid": 30,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆明确提到去重庆及G8501车次，与答案一致",
+          "hits_n": 5,
+          "top1": "我打算明年3月请两天年假去重庆，已经看好3月15号早上8点20从成都东出发的G8501，想去洪崖洞和鹅岭二厂。现在先靠想象旅游续命。",
+          "judge_failed": false
+        },
+        {
+          "qid": 31,
+          "type": "paraphrase",
+          "correct": 0,
+          "misled": 0,
+          "reason": "记忆仅提拼乐高，无零件数及进度信息",
+          "hits_n": 5,
+          "top1": "用户最近迷上了拼乐高",
+          "judge_failed": false
+        },
+        {
+          "qid": 32,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆明确含必点脑花贡菜、不要香菜，无冲突",
+          "hits_n": 5,
+          "top1": "用户吃火锅必点脑花和贡菜",
+          "judge_failed": false
+        },
+        {
+          "qid": 33,
+          "type": "correction",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2][3]明确说明猫是室友的，自己养的是柯基煤球",
+          "hits_n": 5,
+          "top1": "用户的猫煤球现在5个月大",
+          "judge_failed": false
+        },
+        {
+          "qid": 34,
+          "type": "correction",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[5]明确给出最新住址、房号和月租，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户现在租的是2栋1单元1102",
+          "judge_failed": false
+        },
+        {
+          "qid": 35,
+          "type": "correction",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆明确用户项目是青柠会员积分系统，与答案一致",
+          "hits_n": 5,
+          "top1": "用户所在的项目是“青柠”会员积分系统",
+          "judge_failed": false
+        },
+        {
+          "qid": 36,
+          "type": "correction",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确说星栈已交付，现换青柠项目，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户之前交付过“星栈”项目",
+          "judge_failed": false
+        },
+        {
+          "qid": 37,
+          "type": "noise",
+          "correct": 0,
+          "misled": 1,
+          "reason": "七喜非用户养的猫，且记忆无月租与地址完整信息",
+          "hits_n": 5,
+          "top1": "哎我想起来，之前跟你说七喜是我养的，其实不太准确。七喜是我合租室友的猫，我自己后来接回家的是只柯基，叫“煤球”，现在5个月大。",
+          "judge_failed": false
+        },
+        {
+          "qid": 38,
+          "type": "noise",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确给出最新房号2栋1单元1102，无冲突",
+          "hits_n": 5,
+          "top1": "用户之前交付过“星栈”项目",
+          "judge_failed": false
+        },
+        {
+          "qid": 39,
+          "type": "noise",
+          "correct": 0,
+          "misled": 0,
+          "reason": "记忆仅说阳台朝南，无蓝光雍锦世家及猫躲床底信息",
+          "hits_n": 5,
+          "top1": "用户住处阳台朝南",
+          "judge_failed": false
+        },
+        {
+          "qid": 40,
+          "type": "noise",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[5]明确表姐婚礼在成都金牛区迎宾一号",
+          "hits_n": 5,
+          "top1": "用户计划在12月10日开课的极客时间Redis课中，晚上10点半学一节",
+          "judge_failed": false
+        }
+      ]
+    },
+    "sme_minimal": {
+      "status": "ok",
+      "error": null,
+      "reinit_s": 0.3,
+      "add_total_s": 48.5,
+      "add_p50_ms": 800.1,
+      "score": 39.0,
+      "acc": 0.975,
+      "misled": 0,
+      "storage": 60,
+      "retrieval_p50_ms": 320.7,
+      "quiz_total_s": 41.5,
+      "total_s": 90.3,
+      "details": [
+        {
+          "qid": 1,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2][3]明确最新项目为青柠会员积分系统，星栈已交付过期",
+          "hits_n": 5,
+          "top1": "我刚下班，脑子已经转不动了。最近在做一个叫“星栈”的后端项目，给成都一家做火锅底料的B端客户写订单拆单服务，这周在联调一个满199减30的优惠券接口，测试环境是",
+          "judge_failed": false
+        },
+        {
+          "qid": 2,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确京东定金、罗技MX Master 3S、549元",
+          "hits_n": 5,
+          "top1": "双十一预售我昨晚在京东付了罗技MX Master 3S鼠标的定金，到手价549，还顺手买了一个绿联100W氮化镓充电头，129。钱包已经开始哭了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 3,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆明确提到绿联100W氮化镓充电头129元，与答案一致",
+          "hits_n": 5,
+          "top1": "双十一预售我昨晚在京东付了罗技MX Master 3S鼠标的定金，到手价549，还顺手买了一个绿联100W氮化镓充电头，129。钱包已经开始哭了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 4,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "多条记忆明确提到每周二、周四晚8点跳绳，信息一致。",
+          "hits_n": 5,
+          "top1": "我从上个月开始每周二、周四晚上8点去小区楼下跳绳，用Keep计数，现在一次能跳1800个，差不多25分钟。今天差点被广场舞大妈挤到花坛里。",
+          "judge_failed": false
+        },
+        {
+          "qid": 5,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][2][3]均明确1800个、25分钟，无冲突信息",
+          "hits_n": 5,
+          "top1": "我从上个月开始每周二、周四晚上8点去小区楼下跳绳，用Keep计数，现在一次能跳1800个，差不多25分钟。今天差点被广场舞大妈挤到花坛里。",
+          "judge_failed": false
+        },
+        {
+          "qid": 6,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][3]明确表姐林悦下周六结婚，信息一致无冲突",
+          "hits_n": 5,
+          "top1": "我表姐林悦下周六结婚，在成都金牛区的迎宾一号办酒，我妈让我提前一天回去帮忙布置婚房。我已经能预见自己被使唤成婚庆临时工。",
+          "judge_failed": false
+        },
+        {
+          "qid": 7,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "多条记忆均明确婚礼在金牛区迎宾一号办",
+          "hits_n": 5,
+          "top1": "我表姐林悦下周六结婚，在成都金牛区的迎宾一号办酒，我妈让我提前一天回去帮忙布置婚房。我已经能预见自己被使唤成婚庆临时工。",
+          "judge_failed": false
+        },
+        {
+          "qid": 8,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "多条记忆均明确提到提前一天回去帮忙布置婚房",
+          "hits_n": 5,
+          "top1": "我表姐林悦下周六结婚，在成都金牛区的迎宾一号办酒，我妈让我提前一天回去帮忙布置婚房。我已经能预见自己被使唤成婚庆临时工。",
+          "judge_failed": false
+        },
+        {
+          "qid": 9,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确更正为誉峰遇见2栋1单元1102，最新说法清晰",
+          "hits_n": 5,
+          "top1": "还有个事我得更正一下，我之前说我住神仙树那边，其实我上个月底搬到成都高新区天府三街的誉峰遇见了，现在租的是2栋1单元1102，月租3200。搬家把我搬没了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 10,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确最新月租3200，旧说法2600已更正",
+          "hits_n": 5,
+          "top1": "还有个事我得更正一下，我之前说我住神仙树那边，其实我上个月底搬到成都高新区天府三街的誉峰遇见了，现在租的是2栋1单元1102，月租3200。搬家把我搬没了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 11,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆明确给出课程名和开课日期，与标准答案一致",
+          "hits_n": 5,
+          "top1": "我报了12月10号开课的极客时间《Redis核心技术与实战》，计划每天晚上10点半学一节，周末再补一次实战作业。希望别又变成收藏夹吃灰。",
+          "judge_failed": false
+        },
+        {
+          "qid": 12,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确含每晚10点半一节、周末补实战作业",
+          "hits_n": 5,
+          "top1": "极客时间那个Redis课12月10号开课，我计划晚上10点半学一节。现在项目换成“青柠”后，感觉更得补补缓存了，不然天天被需求追着跑。",
+          "judge_failed": false
+        },
+        {
+          "qid": 13,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "多条记忆一致显示明年3月去重庆、请两天年假",
+          "hits_n": 5,
+          "top1": "我打算明年3月请两天年假去重庆，已经看好3月15号早上8点20从成都东出发的G8501，想去洪崖洞和鹅岭二厂。现在先靠想象旅游续命。",
+          "judge_failed": false
+        },
+        {
+          "qid": 14,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "多条记忆一致给出G8501、3月15日8:20成都东出发",
+          "hits_n": 5,
+          "top1": "我打算明年3月请两天年假去重庆，已经看好3月15号早上8点20从成都东出发的G8501，想去洪崖洞和鹅岭二厂。现在先靠想象旅游续命。",
+          "judge_failed": false
+        },
+        {
+          "qid": 15,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "多条记忆均明确提到洪崖洞和鹅岭二厂",
+          "hits_n": 5,
+          "top1": "我打算明年3月请两天年假去重庆，已经看好3月15号早上8点20从成都东出发的G8501，想去洪崖洞和鹅岭二厂。现在先靠想象旅游续命。",
+          "judge_failed": false
+        },
+        {
+          "qid": 16,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][2][5]明确柯基煤球5个月大，旧说法已更正",
+          "hits_n": 5,
+          "top1": "哎我想起来，之前跟你说七喜是我养的，其实不太准确。七喜是我合租室友的猫，我自己后来接回家的是只柯基，叫“煤球”，现在5个月大。",
+          "judge_failed": false
+        },
+        {
+          "qid": 17,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确说明七喜是合租室友的猫，最新说法清晰。",
+          "hits_n": 5,
+          "top1": "哎我想起来，之前跟你说七喜是我养的，其实不太准确。七喜是我合租室友的猫，我自己后来接回家的是只柯基，叫“煤球”，现在5个月大。",
+          "judge_failed": false
+        },
+        {
+          "qid": 18,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确提到太古里买的是21341迪士尼女巫也疯狂那套",
+          "hits_n": 5,
+          "top1": "我最近迷上了拼乐高，上周在太古里乐高店买了21341迪士尼女巫也疯狂那套，一共2316块零件，现在拼到第三包。桌子已经不够放了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 19,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确2316块、拼到第三包，与标准答案一致",
+          "hits_n": 5,
+          "top1": "我最近迷上了拼乐高，上周在太古里乐高店买了21341迪士尼女巫也疯狂那套，一共2316块零件，现在拼到第三包。桌子已经不够放了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 20,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][2][3]均明确必点脑花贡菜、不吃香菜，无冲突",
+          "hits_n": 5,
+          "top1": "我吃火锅必点脑花和贡菜，但完全不吃香菜。上周三在玉林路那家“老码头”点了中辣，结果辣到喝了三瓶唯怡，回家还嘴硬说下次继续。",
+          "judge_failed": false
+        },
+        {
+          "qid": 21,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确老码头中辣，与标准答案一致",
+          "hits_n": 5,
+          "top1": "我吃火锅必点脑花和贡菜，但完全不吃香菜。上周三在玉林路那家“老码头”点了中辣，结果辣到喝了三瓶唯怡，回家还嘴硬说下次继续。",
+          "judge_failed": false
+        },
+        {
+          "qid": 22,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确提到上周三喝三瓶唯怡，与答案一致",
+          "hits_n": 5,
+          "top1": "我吃火锅必点脑花和贡菜，但完全不吃香菜。上周三在玉林路那家“老码头”点了中辣，结果辣到喝了三瓶唯怡，回家还嘴硬说下次继续。",
+          "judge_failed": false
+        },
+        {
+          "qid": 23,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确给出星栈客户为成都火锅底料B端客户",
+          "hits_n": 5,
+          "top1": "那个“星栈”项目其实上周已经交付了，我现在手上换成了给一家连锁奶茶品牌做“青柠”会员积分系统。之前那个满199减30优惠券接口总算翻篇了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 24,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出满199减30及IP 10.12.3.47，无冲突",
+          "hits_n": 5,
+          "top1": "我刚下班，脑子已经转不动了。最近在做一个叫“星栈”的后端项目，给成都一家做火锅底料的B端客户写订单拆单服务，这周在联调一个满199减30的优惠券接口，测试环境是",
+          "judge_failed": false
+        },
+        {
+          "qid": 25,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确阳台朝南，与标准答案一致",
+          "hits_n": 5,
+          "top1": "我住在成都武侯区神仙树旁边的蓝光雍锦世家，1栋2单元1603，月租2600。阳台朝南，下午晒得猫都躲床底，我也快躲床底了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 26,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出2岁、瑞鹏、180元，与标准答案一致",
+          "hits_n": 5,
+          "top1": "我养了一只橘猫叫“七喜”，今年2岁，上个月刚在瑞鹏打了猫三联加强针，花了180。它今天又把我键盘踩出一串乱码，我真服了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 27,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[3]明确给出每周二、周四晚8点跳绳，与标准答案一致",
+          "hits_n": 5,
+          "top1": "我周四晚上还是去跳绳了，Keep跳到1800个的时候感觉自己很行，回家爬楼又觉得自己不行。",
+          "judge_failed": false
+        },
+        {
+          "qid": 28,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆明确给出鼠标549、充电头129，合计678，无冲突",
+          "hits_n": 5,
+          "top1": "双十一预售我昨晚在京东付了罗技MX Master 3S鼠标的定金，到手价549，还顺手买了一个绿联100W氮化镓充电头，129。钱包已经开始哭了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 29,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆明确含Redis课、每晚10点半、周末补作业",
+          "hits_n": 5,
+          "top1": "我报了12月10号开课的极客时间《Redis核心技术与实战》，计划每天晚上10点半学一节，周末再补一次实战作业。希望别又变成收藏夹吃灰。",
+          "judge_failed": false
+        },
+        {
+          "qid": 30,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "多条记忆一致指向重庆及G8501，无冲突过期信息",
+          "hits_n": 5,
+          "top1": "重庆计划还没变，明年3月15号早上8点20成都东G8501，去洪崖洞和鹅岭二厂。等“青柠”上线我一定得请两天年假跑路。",
+          "judge_failed": false
+        },
+        {
+          "qid": 31,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[4]明确给出拼乐高及进度，与标准答案一致",
+          "hits_n": 5,
+          "top1": "唉，周一怎么这么长啊，我人都麻了。今天“青柠”又加需求，会员等级从三档变五档，我脑子里全是if else在跳舞。",
+          "judge_failed": false
+        },
+        {
+          "qid": 32,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "多条记忆一致：必点脑花贡菜，不吃香菜",
+          "hits_n": 5,
+          "top1": "我吃火锅必点脑花和贡菜，但完全不吃香菜。上周三在玉林路那家“老码头”点了中辣，结果辣到喝了三瓶唯怡，回家还嘴硬说下次继续。",
+          "judge_failed": false
+        },
+        {
+          "qid": 33,
+          "type": "correction",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确纠正七喜是室友的猫，最新说法清晰在场",
+          "hits_n": 5,
+          "top1": "哎我想起来，之前跟你说七喜是我养的，其实不太准确。七喜是我合租室友的猫，我自己后来接回家的是只柯基，叫“煤球”，现在5个月大。",
+          "judge_failed": false
+        },
+        {
+          "qid": 34,
+          "type": "correction",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出最新住址房号月租，与标准答案一致",
+          "hits_n": 5,
+          "top1": "还有个事我得更正一下，我之前说我住神仙树那边，其实我上个月底搬到成都高新区天府三街的誉峰遇见了，现在租的是2栋1单元1102，月租3200。搬家把我搬没了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 35,
+          "type": "correction",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][3]明确当前项目为青柠会员积分系统，星栈已交付",
+          "hits_n": 5,
+          "top1": "那个“星栈”项目其实上周已经交付了，我现在手上换成了给一家连锁奶茶品牌做“青柠”会员积分系统。之前那个满199减30优惠券接口总算翻篇了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 36,
+          "type": "correction",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确星栈已交付，现做青柠会员积分系统，与标准答案一致",
+          "hits_n": 5,
+          "top1": "那个“星栈”项目其实上周已经交付了，我现在手上换成了给一家连锁奶茶品牌做“青柠”会员积分系统。之前那个满199减30优惠券接口总算翻篇了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 37,
+          "type": "noise",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[4]明确更正为月租3200，最新说法清晰在场",
+          "hits_n": 5,
+          "top1": "哎我想起来，之前跟你说七喜是我养的，其实不太准确。七喜是我合租室友的猫，我自己后来接回家的是只柯基，叫“煤球”，现在5个月大。",
+          "judge_failed": false
+        },
+        {
+          "qid": 38,
+          "type": "noise",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[4]明确更正为2栋1单元1102，最新说法清晰在场",
+          "hits_n": 5,
+          "top1": "那个“星栈”项目其实上周已经交付了，我现在手上换成了给一家连锁奶茶品牌做“青柠”会员积分系统。之前那个满199减30优惠券接口总算翻篇了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 39,
+          "type": "noise",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[4]明确给出蓝光雍锦世家阳台朝南，与标准答案一致",
+          "hits_n": 5,
+          "top1": "新房子阳台小一点，但离公司近些。煤球现在5个月大，天天在客厅冲刺，我怀疑它把这里当跑道。",
+          "judge_failed": false
+        },
+        {
+          "qid": 40,
+          "type": "noise",
+          "correct": 0,
+          "misled": 0,
+          "reason": "记忆均未提及表姐婚礼地点，无法作答",
+          "hits_n": 5,
+          "top1": "我报了12月10号开课的极客时间《Redis核心技术与实战》，计划每天晚上10点半学一节，周末再补一次实战作业。希望别又变成收藏夹吃灰。",
+          "judge_failed": false
+        }
+      ]
+    }
+  },
+  "meta": {
+    "ts": "2026-09-29T04:13:19+00:00",
+    "seed": 1,
+    "llm_model": "deepseek-flash",
+    "embed": "Qwen/Qwen3-Embedding-0.6B (1024d, local CPU)",
+    "dialogue_rounds": 60,
+    "quiz_questions": 40,
+    "absent": {
+      "langmem": "全系 0.0.11-0.0.30 使用 Python 3.11+ 语法（typing.Literal[*x]），本机仅 3.10.6，无法 import",
+      "zep": "社区版服务端依赖 docker，本机无 docker（按约定不装）"
+    },
+    "wall_total_s": 565.3
+  },
+  "ranking": [
+    "sme_chat",
+    "sme_minimal",
+    "sme_kb_dynamic"
+  ]
+}

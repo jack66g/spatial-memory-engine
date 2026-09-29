@@ -16,6 +16,20 @@ Hybrid scoring inside a region:
     hybrid = vector_weight * vector_score
            + keyword_weight * keyword_score
            + metadata_weight * metadata_match
+
+Normalization modes (``retrieval.fusion``):
+    minmax (default): each channel is min-max normalized inside the current
+        candidate pool ((s-min)/(max-min), all-equal pool -> 0.5). This
+        removes the absolute peak anchoring (the pool's weakest keyword
+        match no longer ties the strongest at 1.0 whenever it happens to
+        top the pool) and the (cos+1)/2 compression that hands orthogonal
+        documents a free 0.5 vector score. The metadata channel is dropped
+        (it is a constant 1.0 offset after pre-filtering - a dead signal
+        for ordering) and its weight is folded proportionally into
+        vector/keyword.
+    weighted (legacy compatibility): BM25 scores are divided by the pool
+        peak, vector uses the linear (cos+1)/2 map, metadata adds a
+        constant shift. Kept byte-identical for compatibility.
 """
 
 from __future__ import annotations
@@ -30,6 +44,9 @@ from sme.config import RetrievalConfig
 from sme.models import RegionHit, SearchHit
 from sme.retrieval.ranking import MemoryRanker
 from sme.utils import now, tokenize
+
+WEIGHTED = "weighted"
+MINMAX = "minmax"
 
 
 @dataclass
@@ -126,7 +143,15 @@ class BM25Index:
     def _avg_len(self) -> float:
         return self._sum_len / max(1, self._n_docs)
 
-    def scores(self, query_tokens: list[str], memory_ids: list[str]) -> dict[str, float]:
+    def scores(self, query_tokens: list[str], memory_ids: list[str],
+               normalize: bool = True) -> dict[str, float]:
+        """Score the given memories against the query tokens.
+
+        ``normalize=True`` (default) divides by the pool peak - the legacy
+        weighted-fusion behavior, kept byte-identical. ``normalize=False``
+        returns raw BM25 scores so the caller can apply its own (min-max)
+        normalization under the ``minmax`` fusion mode.
+        """
         out: dict[str, float] = {mid: 0.0 for mid in memory_ids}
         if not query_tokens or not memory_ids:
             return out
@@ -171,7 +196,7 @@ class BM25Index:
                 denom = f + self.k1 * (1 - self.b + self.b * doc_len / max(avg_len, 1))
                 score += idf[qt] * (f * (self.k1 + 1)) / max(denom, 1e-9)
             out[mid] = score
-        if max(out.values()) > 0:
+        if normalize and max(out.values()) > 0:
             peak = max(out.values())
             out = {k: v / peak for k, v in out.items()}
         return out
@@ -339,11 +364,7 @@ class TwoStageRetriever:
             region_score = region_scores.get(region_id, 0.0)
             meta_score = 1.0 if metadata_matches.get(memory.id) else 0.0
 
-            hybrid = (
-                self.config.vector_weight * vector_score
-                + self.config.keyword_weight * keyword_score
-                + self.config.metadata_weight * meta_score
-            )
+            hybrid = self._hybrid(vector_score, keyword_score, meta_score)
             final, _ = self.ranker.score(
                 memory,
                 query_vec,
@@ -385,10 +406,10 @@ class TwoStageRetriever:
                 hit.region_score,
                 engine,
                 reference=ref,
-                semantic=(
-                    self.config.vector_weight * hit.vector_score
-                    + self.config.keyword_weight * hit.keyword_score
-                    + self.config.metadata_weight * (1.0 if hit.metadata_match else 0.0)
+                semantic=self._hybrid(
+                    hit.vector_score,
+                    hit.keyword_score,
+                    1.0 if hit.metadata_match else 0.0,
                 ),
                 detailed=True,
             )
@@ -472,11 +493,7 @@ class TwoStageRetriever:
             vector_score = vector_scores.get(memory.id, 0.0)
             keyword_score = keyword_scores.get(memory.id, 0.0)
             meta_score = 1.0 if self._metadata_matches(memory, query.metadata_filters) else 0.0
-            hybrid = (
-                self.config.vector_weight * vector_score
-                + self.config.keyword_weight * keyword_score
-                + self.config.metadata_weight * meta_score
-            )
+            hybrid = self._hybrid(vector_score, keyword_score, meta_score)
             final, _ = self.ranker.score(
                 memory,
                 query_vec,
@@ -522,6 +539,63 @@ class TwoStageRetriever:
         return engine.space.query_regions(query_vec, top_k)
 
     # ------------------------------------------------------------------ #
+    def _channel_weights(self) -> tuple[float, float, float]:
+        """(vector, keyword, metadata) channel weights under the fusion mode.
+
+        weighted: the three configured weights verbatim.
+        minmax: metadata is a dead signal here (candidates are already
+            pre-filtered by ``_metadata_matches``, so its score is a constant
+            1.0 offset that cannot change ordering) - the channel is dropped
+            and its weight folded proportionally into vector/keyword so the
+            hybrid keeps the same [0, 1] scale the Ranker's ``semantic``
+            weight was calibrated against (0.6/0.9 = 2/3, 0.3/0.9 = 1/3).
+        """
+        if self.config.fusion == MINMAX:
+            total = self.config.vector_weight + self.config.keyword_weight
+            if total > 0.0:
+                return (
+                    self.config.vector_weight / total,
+                    self.config.keyword_weight / total,
+                    0.0,
+                )
+            return (1.0, 0.0, 0.0)
+        return (
+            self.config.vector_weight,
+            self.config.keyword_weight,
+            self.config.metadata_weight,
+        )
+
+    def _hybrid(
+        self, vector_score: float, keyword_score: float, meta_score: float
+    ) -> float:
+        vw, kw, mw = self._channel_weights()
+        return vw * vector_score + kw * keyword_score + mw * meta_score
+
+    @staticmethod
+    def _minmax_apply(
+        out: dict[str, float], ids: list[str], raw: np.ndarray
+    ) -> dict[str, float]:
+        """Overwrite ``ids`` entries in ``out`` with in-pool min-max values.
+
+        For the keyword channel ``ids``/``raw`` cover only the candidates with
+        a non-zero raw BM25 score: the full-pool min would be a structural 0
+        (most candidates share no query term), which degenerates min-max into
+        exactly the legacy peak normalization. Anchoring the min at the weakest
+        actually-matched candidate removes the peak-only anchoring and lets
+        weak matches keep stable sub-1.0 scores. Entries not in ``ids`` keep
+        their existing (0.0) score.
+        """
+        lo = float(raw.min())
+        hi = float(raw.max())
+        if hi <= lo:
+            for mid in ids:
+                out[mid] = 0.5
+            return out
+        span = hi - lo
+        for mid, s in zip(ids, raw):
+            out[mid] = (float(s) - lo) / span
+        return out
+
     def _vector_scores(
         self, query_vec: np.ndarray, candidates: list
     ) -> dict[str, float]:
@@ -537,6 +611,12 @@ class TwoStageRetriever:
         mat = mat / np.clip(np.linalg.norm(mat, axis=1, keepdims=True), 1e-12, None)
         q = q / np.clip(np.linalg.norm(q), 1e-12, None)
         sims = (mat @ q.T).reshape(-1)
+        if self.config.fusion == MINMAX:
+            # candidate-pool min-max: restores the discrimination the
+            # (cos+1)/2 linear map squeezed out of Qwen3-style embeddings
+            # (real cosines cluster in ~[0.3, 0.9]) and stops orthogonal
+            # documents from collecting a free 0.5
+            return self._minmax_apply(out, ids, sims)
         sims = np.clip((sims + 1.0) / 2.0, 0.0, 1.0)
         for mid, sim in zip(ids, sims):
             out[mid] = float(sim)
@@ -549,6 +629,13 @@ class TwoStageRetriever:
         if not tokens:
             return {m.id: 0.0 for m in candidates}
         ids = [m.id for m in candidates]
+        if self.config.fusion == MINMAX:
+            raw = self.bm25.scores(tokens, ids, normalize=False)
+            matched = {k: v for k, v in raw.items() if v > 0.0}
+            if not matched:
+                return raw
+            mids = list(matched)
+            return self._minmax_apply(raw, mids, np.array([matched[m] for m in mids]))
         return self.bm25.scores(tokens, ids)
 
     @staticmethod

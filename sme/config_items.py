@@ -213,6 +213,12 @@ ITEMS: list[ConfigItem] = [
     _it("retrieval.candidate_window", "候选窗口", "检索与排序",
         "混合打分的最小候选池（实际取 max(top_k×2, 此值)）；模板句霸榜时调大可救回真实记忆",
         kind="int", minimum=4, maximum=1000, default=20),
+    _it("retrieval.fusion", "混合归一方式", "检索与排序",
+        "混合打分两通道的归一化：minmax=各通道在候选集内做 min-max 归一化（默认，"
+        "消除 BM25 峰值锚定漂移与向量通道对无关文档的 0.5 白送分，元数据通道为死信号"
+        "直接删除，其权重按比例并入向量/关键词两通道）；weighted=旧版峰值归一"
+        "（兼容档：BM25 除以池内峰值、向量用 (cos+1)/2 线性映射、元数据加常数偏移）",
+        kind="enum", choices=("weighted", "minmax"), default="minmax"),
     _it("ranking.semantic", "排序·语义", "检索与排序",
         "最终分排序权重（八项建议总和 = 1）；语义=检索相似度", kind="float",
         minimum=0, maximum=1, default=0.40),
