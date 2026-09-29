@@ -1,0 +1,436 @@
+{
+  "contestants": {
+    "sme_kb_dynamic": {
+      "status": "ok",
+      "error": null,
+      "reinit_s": 10.2,
+      "add_total_s": 383.5,
+      "add_p50_ms": 6322.2,
+      "score": 32.0,
+      "acc": 0.8,
+      "misled": 7,
+      "storage": 239,
+      "retrieval_p50_ms": 308.6,
+      "quiz_total_s": 42.0,
+      "total_s": 435.7,
+      "details": [
+        {
+          "qid": 1,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][5]均明确提到299元，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户花了 299 元买 Rust 网课",
+          "judge_failed": false
+        },
+        {
+          "qid": 2,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][2]明确给出每周二和周四晚8点跟直播",
+          "hits_n": 5,
+          "top1": "用户购买的 Rust 网课每周二周四晚上 8 点上课",
+          "judge_failed": false
+        },
+        {
+          "qid": 3,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[3]明确计划3个月内学完，无冲突信息",
+          "hits_n": 5,
+          "top1": "用户花了 299 元买 Rust 网课",
+          "judge_failed": false
+        },
+        {
+          "qid": 4,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][3]明确给出型号和价格，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户上个月在京东花1299买了一台米家扫拖机器人2",
+          "judge_failed": false
+        },
+        {
+          "qid": 5,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[5]明确提到回南天不想拖地，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户有一台扫拖机器人",
+          "judge_failed": false
+        },
+        {
+          "qid": 6,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[3]明确给出42161兰博基尼Countach，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户拼完了兰博基尼乐高",
+          "judge_failed": false
+        },
+        {
+          "qid": 7,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][4]明确提到想买21348龙与地下城，与答案一致",
+          "hits_n": 5,
+          "top1": "用户正在攒钱想买 21348 龙与地下城",
+          "judge_failed": false
+        },
+        {
+          "qid": 8,
+          "type": "normal",
+          "correct": 0,
+          "misled": 1,
+          "reason": "记忆无Java和支付对账信息，仅提海鸥7月15日上线",
+          "hits_n": 5,
+          "top1": "海鸥项目上线时间是7月15日，不是6月",
+          "judge_failed": false
+        },
+        {
+          "qid": 9,
+          "type": "normal",
+          "correct": 0,
+          "misled": 1,
+          "reason": "记忆只提猫叫芝麻，未提年龄，且无2岁信息",
+          "hits_n": 5,
+          "top1": "用户自己真正买的是一只布偶猫叫“芝麻”",
+          "judge_failed": false
+        },
+        {
+          "qid": 10,
+          "type": "normal",
+          "correct": 0,
+          "misled": 1,
+          "reason": "记忆未提室友，仅说用户养狗，与标准答案冲突",
+          "hits_n": 5,
+          "top1": "用户养了一只柯基叫豆豆，1岁半",
+          "judge_failed": false
+        },
+        {
+          "qid": 11,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆含妹妹叫小满、即将高考，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户的妹妹叫小满",
+          "judge_failed": false
+        },
+        {
+          "qid": 12,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确提到答应买iPad Air，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户答应妹妹考完给她买一台iPad Air",
+          "judge_failed": false
+        },
+        {
+          "qid": 13,
+          "type": "normal",
+          "correct": 0,
+          "misled": 0,
+          "reason": "记忆仅提阿哲，无深圳做测试信息",
+          "hits_n": 5,
+          "top1": "用户最好的大学室友叫阿哲",
+          "judge_failed": false
+        },
+        {
+          "qid": 14,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][4][5]均明确每月最后周六晚10点，信息一致无冲突",
+          "hits_n": 5,
+          "top1": "用户和阿哲约好每月最后一个周六晚上10点一起打《王者荣耀》",
+          "judge_failed": false
+        },
+        {
+          "qid": 15,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[4]明确给出最新计划，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户计划10月1日国庆去西安玩4天",
+          "judge_failed": false
+        },
+        {
+          "qid": 16,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出9月29日下午3点成都东到重庆北，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "用户的高铁票换成9月29日下午3点成都东到重庆北",
+          "judge_failed": false
+        },
+        {
+          "qid": 17,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆明确含必点脑花贡菜、讨厌香菜，无冲突",
+          "hits_n": 5,
+          "top1": "用户吃火锅必点脑花和贡菜",
+          "judge_failed": false
+        },
+        {
+          "qid": 18,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[4]蜀大侠、[1]微辣锅底与答案一致",
+          "hits_n": 5,
+          "top1": "用户想吃火锅，偏好微辣锅底、脑花、贡菜",
+          "judge_failed": false
+        },
+        {
+          "qid": 19,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆含38平一居室和月租2600元，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户租的房子月租2600元",
+          "judge_failed": false
+        },
+        {
+          "qid": 20,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][2]明确给出阳台朝南、楼下地铁1号线",
+          "hits_n": 5,
+          "top1": "用户租的房子阳台朝南",
+          "judge_failed": false
+        },
+        {
+          "qid": 21,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[3][5]明确提到成都高新区，与答案一致",
+          "hits_n": 5,
+          "top1": "用户租的房子楼下就是地铁1号线",
+          "judge_failed": false
+        },
+        {
+          "qid": 22,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确蜂鸟交给阿凯，无冲突信息",
+          "hits_n": 5,
+          "top1": "“蜂鸟”项目在5月底已交给同事阿凯接手",
+          "judge_failed": false
+        },
+        {
+          "qid": 23,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[4]明确提到成都回南天，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户有一台扫拖机器人",
+          "judge_failed": false
+        },
+        {
+          "qid": 24,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确提到用户最近迷上拼乐高，与答案一致",
+          "hits_n": 5,
+          "top1": "用户最近迷上拼乐高",
+          "judge_failed": false
+        },
+        {
+          "qid": 25,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确给出6月7日高考，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户的妹妹即将高考",
+          "judge_failed": false
+        },
+        {
+          "qid": 26,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆明确提到每月最后一个周六晚10点一起打王者",
+          "hits_n": 5,
+          "top1": "用户昨晚和阿哲打王者，阿哲表现很差坑了用户",
+          "judge_failed": false
+        },
+        {
+          "qid": 27,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][2]均明确周二周四晚8点，信息一致无冲突",
+          "hits_n": 5,
+          "top1": "用户每周二和周四晚上8点跟直播",
+          "judge_failed": false
+        },
+        {
+          "qid": 28,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆明确给出米家扫拖机器人2，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户有一台扫拖机器人",
+          "judge_failed": false
+        },
+        {
+          "qid": 29,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确拼完兰博基尼乐高，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户最近迷上拼乐高",
+          "judge_failed": false
+        },
+        {
+          "qid": 30,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确海鸥支付对账服务用Java，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户所在的海鸥支付对账服务使用 Java",
+          "judge_failed": false
+        },
+        {
+          "qid": 31,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确布偶猫叫芝麻，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户养了两只宠物，分别叫豆豆和芝麻",
+          "judge_failed": false
+        },
+        {
+          "qid": 32,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆明确显示行程改为重庆，且9月29日到、10月1日回共3天。",
+          "hits_n": 5,
+          "top1": "用户的高铁票换成9月29日下午3点成都东到重庆北",
+          "judge_failed": false
+        },
+        {
+          "qid": 33,
+          "type": "correction",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆明确猫叫芝麻，是布偶猫，无冲突信息",
+          "hits_n": 5,
+          "top1": "用户养了两只宠物，分别叫豆豆和芝麻",
+          "judge_failed": false
+        },
+        {
+          "qid": 34,
+          "type": "correction",
+          "correct": 0,
+          "misled": 1,
+          "reason": "记忆只说过期蜂鸟交阿凯，无海鸥Java信息，无法答对",
+          "hits_n": 5,
+          "top1": "用户有名为海鸥的项目即将上线",
+          "judge_failed": false
+        },
+        {
+          "qid": 35,
+          "type": "correction",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆明确最新计划去重庆，票改9月29日下午3点，与标准一致",
+          "hits_n": 5,
+          "top1": "用户国庆不去西安了",
+          "judge_failed": false
+        },
+        {
+          "qid": 36,
+          "type": "correction",
+          "correct": 0,
+          "misled": 1,
+          "reason": "记忆称用户养柯基豆豆，与标准答案冲突，且无室友留下信息",
+          "hits_n": 5,
+          "top1": "用户每周三带豆豆去楼下宠物店洗澡",
+          "judge_failed": false
+        },
+        {
+          "qid": 37,
+          "type": "noise",
+          "correct": 0,
+          "misled": 1,
+          "reason": "记忆仅提布偶猫叫芝麻，无年龄2岁，且柯基豆豆归属冲突",
+          "hits_n": 5,
+          "top1": "用户养了一只柯基叫豆豆，1岁半",
+          "judge_failed": false
+        },
+        {
+          "qid": 38,
+          "type": "noise",
+          "correct": 0,
+          "misled": 1,
+          "reason": "记忆无海鸥支付对账及Java信息，蜂鸟上线时间过期干扰",
+          "hits_n": 5,
+          "top1": "用户有名为海鸥的项目即将上线",
+          "judge_failed": false
+        },
+        {
+          "qid": 39,
+          "type": "noise",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出9月29日下午3点成都东到重庆北，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "用户的高铁票换成9月29日下午3点成都东到重庆北",
+          "judge_failed": false
+        },
+        {
+          "qid": 40,
+          "type": "noise",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确布偶猫叫芝麻，无冲突信息",
+          "hits_n": 5,
+          "top1": "用户自己真正买的是一只布偶猫叫“芝麻”",
+          "judge_failed": false
+        }
+      ]
+    }
+  },
+  "meta": {
+    "ts": "2026-09-29T02:57:54+00:00",
+    "seed": 3,
+    "llm_model": "deepseek-flash",
+    "embed": "Qwen/Qwen3-Embedding-0.6B (1024d, local CPU)",
+    "dialogue_rounds": 60,
+    "quiz_questions": 40,
+    "absent": {
+      "langmem": "全系 0.0.11-0.0.30 使用 Python 3.11+ 语法（typing.Literal[*x]），本机仅 3.10.6，无法 import",
+      "zep": "社区版服务端依赖 docker，本机无 docker（按约定不装）"
+    },
+    "wall_total_s": 435.8
+  },
+  "ranking": [
+    "sme_kb_dynamic"
+  ]
+}

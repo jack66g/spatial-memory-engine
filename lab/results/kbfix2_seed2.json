@@ -1,0 +1,436 @@
+{
+  "contestants": {
+    "sme_kb_dynamic": {
+      "status": "ok",
+      "error": null,
+      "reinit_s": 10.0,
+      "add_total_s": 339.8,
+      "add_p50_ms": 5341.1,
+      "score": 34.0,
+      "acc": 0.85,
+      "misled": 3,
+      "storage": 247,
+      "retrieval_p50_ms": 287.9,
+      "quiz_total_s": 39.3,
+      "total_s": 389.1,
+      "details": [
+        {
+          "qid": 1,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆含川大望江校区南门曹氏鸭脖微辣配冰唯怡，虽13周说法冲突但正确信息在场",
+          "hits_n": 5,
+          "top1": "用户周三有固定节目（点曹氏鸭脖）",
+          "judge_failed": false
+        },
+        {
+          "qid": 2,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][5]明确11周，[2]13周为过期干扰但正确信息在场",
+          "hits_n": 5,
+          "top1": "用户已经连点11周曹氏鸭脖的微辣鸭脖配冰唯怡",
+          "judge_failed": false
+        },
+        {
+          "qid": 3,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确提到周四7点半慢跑，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户今天周四7点半在锦江边绿道慢跑3公里，配速6分40秒左右",
+          "judge_failed": false
+        },
+        {
+          "qid": 4,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确3公里，[1]明确Keep记录，信息一致",
+          "hits_n": 5,
+          "top1": "用户慢跑用Keep记录，配速6分40秒",
+          "judge_failed": false
+        },
+        {
+          "qid": 5,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "多条记忆均明确配速约6分40秒，无冲突信息",
+          "hits_n": 5,
+          "top1": "用户慢跑配速大概6分40秒",
+          "judge_failed": false
+        },
+        {
+          "qid": 6,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2][5]明确给出银泰城·悦坊12楼，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户住在12楼",
+          "judge_failed": false
+        },
+        {
+          "qid": 7,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[4]明确月租2800，[1][2]明确阳台朝北，无冲突",
+          "hits_n": 5,
+          "top1": "用户住在银泰城·悦坊12楼，阳台朝北",
+          "judge_failed": false
+        },
+        {
+          "qid": 8,
+          "type": "normal",
+          "correct": 0,
+          "misled": 1,
+          "reason": "记忆称锅巴是用户的猫，且煤球是猫，与标准答案冲突",
+          "hits_n": 5,
+          "top1": "锅巴现在主要由用户喂养",
+          "judge_failed": false
+        },
+        {
+          "qid": 9,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确狗叫煤球，无冲突信息",
+          "hits_n": 5,
+          "top1": "用户跑完看到一只小狗，差点想煤球了",
+          "judge_failed": false
+        },
+        {
+          "qid": 10,
+          "type": "normal",
+          "correct": 0,
+          "misled": 0,
+          "reason": "记忆只有体重5.2公斤，无年龄信息，无法答全",
+          "hits_n": 5,
+          "top1": "用户养的猫叫锅巴，体重5.2公斤",
+          "judge_failed": false
+        },
+        {
+          "qid": 11,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确提到去楼下宠物店洗澡，与答案一致",
+          "hits_n": 5,
+          "top1": "今天周六，带锅巴去楼下宠物店洗澡。它 5.2 公斤，洗的时候叫得像我要卖它。煤球在家估计偷着乐。",
+          "judge_failed": false
+        },
+        {
+          "qid": 12,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆明确给出订单中心重构及Java和MySQL技术栈",
+          "hits_n": 5,
+          "top1": "用户最近在做的项目是订单中心重构",
+          "judge_failed": false
+        },
+        {
+          "qid": 13,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][5]均明确9月30日上线，无冲突信息",
+          "hits_n": 5,
+          "top1": "用户的订单中心重构项目预计 9 月 30 日上线",
+          "judge_failed": false
+        },
+        {
+          "qid": 14,
+          "type": "normal",
+          "correct": 0,
+          "misled": 0,
+          "reason": "记忆无公司地点和业务信息，无法回答",
+          "hits_n": 5,
+          "top1": "用户最近在做的项目是订单中心重构",
+          "judge_failed": false
+        },
+        {
+          "qid": 15,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[3]明确给出两盒型号，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户最近迷上拼乐高",
+          "judge_failed": false
+        },
+        {
+          "qid": 16,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出21341迪士尼女巫，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户下一盒想买 21341 迪士尼女巫",
+          "judge_failed": false
+        },
+        {
+          "qid": 17,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆明确给出10月1-5日去西安，无冲突过期信息",
+          "hits_n": 5,
+          "top1": "我后来改计划了，国庆不去重庆了，改成 10 月 1 日到 5 日去西安，高铁票已经买好了。10 月 1 日成都东到西安北的 G2204 次，我连闹钟都设好了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 18,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确给出G2204次及日期区间，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户已买好去西安的高铁票",
+          "judge_failed": false
+        },
+        {
+          "qid": 19,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]完整包含睡前规矩，[5]仅更新坚持天数，无冲突",
+          "hits_n": 5,
+          "top1": "我最近给自己定规矩：晚上 12 点半前必须放下手机，睡前喝一杯温牛奶，已经坚持 6 天了。虽然现在跟你聊天有点危险，快到点了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 20,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确6天，与标准答案一致；[2]虽10天但[1]最新正确在场",
+          "hits_n": 5,
+          "top1": "用户已经坚持晚上12点半前放下手机、睡前喝温牛奶6天了",
+          "judge_failed": false
+        },
+        {
+          "qid": 21,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出绵阳中学物理老师，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户的爸爸在绵阳做中学物理老师",
+          "judge_failed": false
+        },
+        {
+          "qid": 22,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确提到妈妈退休后学跳广场舞，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户的妈妈去年退休后开始学跳广场舞",
+          "judge_failed": false
+        },
+        {
+          "qid": 23,
+          "type": "normal",
+          "correct": 0,
+          "misled": 0,
+          "reason": "记忆只提弟弟叫小宇，无年级信息",
+          "hits_n": 5,
+          "top1": "用户的弟弟叫小宇",
+          "judge_failed": false
+        },
+        {
+          "qid": 24,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆明确含9月15日开课、每周3讲、12月前刷完",
+          "hits_n": 5,
+          "top1": "极客时间那个课快开课了，9 月 15 日，我打算每周 3 讲。希望这次别像以前一样，买了等于学了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 25,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[3][5]均含冰唯怡，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户周三有固定节目（点曹氏鸭脖）",
+          "judge_failed": false
+        },
+        {
+          "qid": 26,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确提到锦江边绿道慢跑，与答案一致",
+          "hits_n": 5,
+          "top1": "用户今天周四7点半在锦江边绿道慢跑3公里，配速6分40秒左右",
+          "judge_failed": false
+        },
+        {
+          "qid": 27,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆明确阳台朝北，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户觉得阳台朝北很伤，衣服不干，心情也不干",
+          "judge_failed": false
+        },
+        {
+          "qid": 28,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确周六带锅巴洗澡，与标准答案一致",
+          "hits_n": 5,
+          "top1": "今天周六，带锅巴去楼下宠物店洗澡。它 5.2 公斤，洗的时候叫得像我要卖它。煤球在家估计偷着乐。",
+          "judge_failed": false
+        },
+        {
+          "qid": 29,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确给出21341，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户最近迷上拼乐高",
+          "judge_failed": false
+        },
+        {
+          "qid": 30,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][2]明确提到睡前喝温牛奶，与标准答案一致",
+          "hits_n": 5,
+          "top1": "我最近给自己定规矩：晚上 12 点半前必须放下手机，睡前喝一杯温牛奶，已经坚持 6 天了。虽然现在跟你聊天有点危险，快到点了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 31,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2][4]明确弟弟小宇，高中男孩即小宇",
+          "hits_n": 5,
+          "top1": "用户最近迷上拼乐高",
+          "judge_failed": false
+        },
+        {
+          "qid": 32,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][2][3]均明确每周学3讲，无冲突信息",
+          "hits_n": 5,
+          "top1": "极客时间那个 MySQL 复习班 9 月 15 日开课，我打算每周学 3 讲。现在项目用 MySQL，感觉不补一下真的心里没底。",
+          "judge_failed": false
+        },
+        {
+          "qid": 33,
+          "type": "correction",
+          "correct": 0,
+          "misled": 1,
+          "reason": "记忆称猫叫锅巴/煤球，无室友留下或小狗信息，与答案冲突",
+          "hits_n": 5,
+          "top1": "用户养的猫叫锅巴，体重5.2公斤",
+          "judge_failed": false
+        },
+        {
+          "qid": 34,
+          "type": "correction",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆明确给出订单中心重构及Java和MySQL技术栈",
+          "hits_n": 5,
+          "top1": "用户最近在做的项目是订单中心重构",
+          "judge_failed": false
+        },
+        {
+          "qid": 35,
+          "type": "correction",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆明确给出改去西安及日期，无冲突过期信息",
+          "hits_n": 5,
+          "top1": "我后来改计划了，国庆不去重庆了，改成 10 月 1 日到 5 日去西安，高铁票已经买好了。10 月 1 日成都东到西安北的 G2204 次，我连闹钟都设好了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 36,
+          "type": "correction",
+          "correct": 0,
+          "misled": 1,
+          "reason": "记忆无更正说法，仅有过期信息，会误导",
+          "hits_n": 5,
+          "top1": "锅巴现在主要由用户喂养",
+          "judge_failed": false
+        },
+        {
+          "qid": 37,
+          "type": "noise",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2][3]明确提到川大望江校区南门，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户已经连点11周曹氏鸭脖的微辣鸭脖配冰唯怡",
+          "judge_failed": false
+        },
+        {
+          "qid": 38,
+          "type": "noise",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆明确给出锅巴体重5.2公斤，无冲突信息",
+          "hits_n": 5,
+          "top1": "用户养的猫叫锅巴，体重5.2公斤",
+          "judge_failed": false
+        },
+        {
+          "qid": 39,
+          "type": "noise",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确成都东出发，信息一致无冲突",
+          "hits_n": 5,
+          "top1": "用户的高铁票是10月1日成都东到西安北的G2204次",
+          "judge_failed": false
+        },
+        {
+          "qid": 40,
+          "type": "noise",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][3]均明确9月15日开课，无冲突信息",
+          "hits_n": 5,
+          "top1": "用户报了一个9月15日开课的极客时间《MySQL 实战 45 讲》复习班",
+          "judge_failed": false
+        }
+      ]
+    }
+  },
+  "meta": {
+    "ts": "2026-09-29T03:11:55+00:00",
+    "seed": 2,
+    "llm_model": "deepseek-flash",
+    "embed": "Qwen/Qwen3-Embedding-0.6B (1024d, local CPU)",
+    "dialogue_rounds": 60,
+    "quiz_questions": 40,
+    "absent": {
+      "langmem": "全系 0.0.11-0.0.30 使用 Python 3.11+ 语法（typing.Literal[*x]），本机仅 3.10.6，无法 import",
+      "zep": "社区版服务端依赖 docker，本机无 docker（按约定不装）"
+    },
+    "wall_total_s": 389.3
+  },
+  "ranking": [
+    "sme_kb_dynamic"
+  ]
+}

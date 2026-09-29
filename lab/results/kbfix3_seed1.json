@@ -1,0 +1,436 @@
+{
+  "contestants": {
+    "sme_kb_dynamic": {
+      "status": "ok",
+      "error": null,
+      "reinit_s": 8.5,
+      "add_total_s": 272.1,
+      "add_p50_ms": 4364.7,
+      "score": 25.0,
+      "acc": 0.625,
+      "misled": 4,
+      "storage": 188,
+      "retrieval_p50_ms": 285.2,
+      "quiz_total_s": 39.4,
+      "total_s": 320.0,
+      "details": [
+        {
+          "qid": 1,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆明确提到项目叫星轨，无冲突信息",
+          "hits_n": 5,
+          "top1": "用户的新项目叫“星轨”",
+          "judge_failed": false
+        },
+        {
+          "qid": 2,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确提到用Go语言，无冲突信息",
+          "hits_n": 5,
+          "top1": "用户参与的项目有四个微服务，现在写完三个了",
+          "judge_failed": false
+        },
+        {
+          "qid": 3,
+          "type": "normal",
+          "correct": 0,
+          "misled": 1,
+          "reason": "记忆只提四个微服务，未提用户鉴权服务，且有过期说法",
+          "hits_n": 5,
+          "top1": "用户参与的项目有四个微服务，现在写完三个了",
+          "judge_failed": false
+        },
+        {
+          "qid": 4,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确给出约1200行代码，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "用户参与的项目有四个微服务，现在写完三个了",
+          "judge_failed": false
+        },
+        {
+          "qid": 5,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出型号M30 Pro，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户上个月在京东花3299块买了一台米家扫拖机器人，型号是M30 Pro",
+          "judge_failed": false
+        },
+        {
+          "qid": 6,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2][3]均明确提到3299块，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户的扫拖机器人每天定时出来扫",
+          "judge_failed": false
+        },
+        {
+          "qid": 7,
+          "type": "normal",
+          "correct": 0,
+          "misled": 0,
+          "reason": "记忆只提卡门槛已解决，未提用一周就卡，无等价信息",
+          "hits_n": 5,
+          "top1": "用户的扫拖机器人每天定时出来扫",
+          "judge_failed": false
+        },
+        {
+          "qid": 8,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][2]明确给出每周二四六晚8点跳绳，无冲突",
+          "hits_n": 5,
+          "top1": "我现在每周二、四、六晚上 8 点会去小区楼下跳绳，每次跳 2000 个，用的是 Loop 的无绳跳绳，今天周二刚跳完，腿有点软。",
+          "judge_failed": false
+        },
+        {
+          "qid": 9,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆明确给出每次2000个、Loop无绳跳绳，无冲突",
+          "hits_n": 5,
+          "top1": "我现在每周二、四、六晚上 8 点会去小区楼下跳绳，每次跳 2000 个，用的是 Loop 的无绳跳绳，今天周二刚跳完，腿有点软。",
+          "judge_failed": false
+        },
+        {
+          "qid": 10,
+          "type": "normal",
+          "correct": 0,
+          "misled": 0,
+          "reason": "记忆未提及坚持时长，无法判断三周",
+          "hits_n": 5,
+          "top1": "我现在每周二、四、六晚上 8 点会去小区楼下跳绳，每次跳 2000 个，用的是 Loop 的无绳跳绳，今天周二刚跳完，腿有点软。",
+          "judge_failed": false
+        },
+        {
+          "qid": 11,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确提到表妹叫林悦，与答案一致。",
+          "hits_n": 5,
+          "top1": "用户的表妹林悦高考578分刚好压线",
+          "judge_failed": false
+        },
+        {
+          "qid": 12,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆明确给出578分和西南财经大学，无冲突信息",
+          "hits_n": 5,
+          "top1": "用户的表妹高考分数是578",
+          "judge_failed": false
+        },
+        {
+          "qid": 13,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[3]明确给出万科钻石广场公寓，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "我现在每周二、四、六晚上 8 点会去小区楼下跳绳，每次跳 2000 个，用的是 Loop 的无绳跳绳，今天周二刚跳完，腿有点软。",
+          "judge_failed": false
+        },
+        {
+          "qid": 14,
+          "type": "normal",
+          "correct": 0,
+          "misled": 0,
+          "reason": "记忆有地铁站但无月租信息，无法完整回答",
+          "hits_n": 5,
+          "top1": "用户住处附近还是1号线，最近的地铁站变成红星桥站",
+          "judge_failed": false
+        },
+        {
+          "qid": 15,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[5]明确原租房阳台朝北，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "我现在每周二、四、六晚上 8 点会去小区楼下跳绳，每次跳 2000 个，用的是 Loop 的无绳跳绳，今天周二刚跳完，腿有点软。",
+          "judge_failed": false
+        },
+        {
+          "qid": 16,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确包含刷《代码随想录》第二版及二叉树、动态规划两章",
+          "hits_n": 5,
+          "top1": "我打算从下个月开始刷《代码随想录》第二版，先把二叉树和动态规划这两章过完，计划每天晚上 10 点到 11 点学一小时，但今天已经 10 点半了我还在跟你聊天，废",
+          "judge_failed": false
+        },
+        {
+          "qid": 17,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2][5]均明确每晚10点到11点学一小时",
+          "hits_n": 5,
+          "top1": "我现在每周二、四、六晚上 8 点会去小区楼下跳绳，每次跳 2000 个，用的是 Loop 的无绳跳绳，今天周二刚跳完，腿有点软。",
+          "judge_failed": false
+        },
+        {
+          "qid": 18,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出10月1到5号去西安，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "用户准备10月1号到5号去西安玩",
+          "judge_failed": false
+        },
+        {
+          "qid": 19,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确给出10月1日早8点成都东出发，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "我现在每周二、四、六晚上 8 点会去小区楼下跳绳，每次跳 2000 个，用的是 Loop 的无绳跳绳，今天周二刚跳完，腿有点软。",
+          "judge_failed": false
+        },
+        {
+          "qid": 20,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确给出酒店名，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "我现在每周二、四、六晚上 8 点会去小区楼下跳绳，每次跳 2000 个，用的是 Loop 的无绳跳绳，今天周二刚跳完，腿有点软。",
+          "judge_failed": false
+        },
+        {
+          "qid": 21,
+          "type": "normal",
+          "correct": 0,
+          "misled": 0,
+          "reason": "记忆无狗品种和名字信息，无法回答",
+          "hits_n": 5,
+          "top1": "我现在每周二、四、六晚上 8 点会去小区楼下跳绳，每次跳 2000 个，用的是 Loop 的无绳跳绳，今天周二刚跳完，腿有点软。",
+          "judge_failed": false
+        },
+        {
+          "qid": 22,
+          "type": "normal",
+          "correct": 0,
+          "misled": 0,
+          "reason": "记忆只提狗粮，未提年龄，无法答全",
+          "hits_n": 5,
+          "top1": "我现在每周二、四、六晚上 8 点会去小区楼下跳绳，每次跳 2000 个，用的是 Loop 的无绳跳绳，今天周二刚跳完，腿有点软。",
+          "judge_failed": false
+        },
+        {
+          "qid": 23,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[5]含等价信息：21348小蜜蜂，3个多小时",
+          "hits_n": 5,
+          "top1": "我现在每周二、四、六晚上 8 点会去小区楼下跳绳，每次跳 2000 个，用的是 Loop 的无绳跳绳，今天周二刚跳完，腿有点软。",
+          "judge_failed": false
+        },
+        {
+          "qid": 24,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确给出5个乐高小套装，与答案一致。",
+          "hits_n": 5,
+          "top1": "我现在每周二、四、六晚上 8 点会去小区楼下跳绳，每次跳 2000 个，用的是 Loop 的无绳跳绳，今天周二刚跳完，腿有点软。",
+          "judge_failed": false
+        },
+        {
+          "qid": 25,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆含冒椒火辣及必点牛肉贡菜宽粉，无冲突",
+          "hits_n": 5,
+          "top1": "我现在每周二、四、六晚上 8 点会去小区楼下跳绳，每次跳 2000 个，用的是 Loop 的无绳跳绳，今天周二刚跳完，腿有点软。",
+          "judge_failed": false
+        },
+        {
+          "qid": 26,
+          "type": "normal",
+          "correct": 0,
+          "misled": 0,
+          "reason": "记忆只提爱吃辣，未提吃不了太麻",
+          "hits_n": 5,
+          "top1": "我现在每周二、四、六晚上 8 点会去小区楼下跳绳，每次跳 2000 个，用的是 Loop 的无绳跳绳，今天周二刚跳完，腿有点软。",
+          "judge_failed": false
+        },
+        {
+          "qid": 27,
+          "type": "paraphrase",
+          "correct": 0,
+          "misled": 0,
+          "reason": "记忆无狗粮信息，无法回答",
+          "hits_n": 5,
+          "top1": "我现在每周二、四、六晚上 8 点会去小区楼下跳绳，每次跳 2000 个，用的是 Loop 的无绳跳绳，今天周二刚跳完，腿有点软。",
+          "judge_failed": false
+        },
+        {
+          "qid": 28,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][2]含周二四六晚8点跳绳等核心信息，无冲突干扰",
+          "hits_n": 5,
+          "top1": "我现在每周二、四、六晚上 8 点会去小区楼下跳绳，每次跳 2000 个，用的是 Loop 的无绳跳绳，今天周二刚跳完，腿有点软。",
+          "judge_failed": false
+        },
+        {
+          "qid": 29,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出米家扫拖机器人M30 Pro，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户上个月在京东花3299块买了一台米家扫拖机器人，型号是M30 Pro",
+          "judge_failed": false
+        },
+        {
+          "qid": 30,
+          "type": "paraphrase",
+          "correct": 0,
+          "misled": 0,
+          "reason": "记忆仅提到每晚10-11点学一小时，无《代码随想录》等具体计划",
+          "hits_n": 5,
+          "top1": "我现在每周二、四、六晚上 8 点会去小区楼下跳绳，每次跳 2000 个，用的是 Loop 的无绳跳绳，今天周二刚跳完，腿有点软。",
+          "judge_failed": false
+        },
+        {
+          "qid": 31,
+          "type": "paraphrase",
+          "correct": 0,
+          "misled": 0,
+          "reason": "记忆仅有西安旅游日期，缺高铁和酒店信息",
+          "hits_n": 5,
+          "top1": "我现在每周二、四、六晚上 8 点会去小区楼下跳绳，每次跳 2000 个，用的是 Loop 的无绳跳绳，今天周二刚跳完，腿有点软。",
+          "judge_failed": false
+        },
+        {
+          "qid": 32,
+          "type": "paraphrase",
+          "correct": 0,
+          "misled": 0,
+          "reason": "记忆仅提爱吃辣和冒菜，缺麻、菜品、辣度等细节",
+          "hits_n": 5,
+          "top1": "我现在每周二、四、六晚上 8 点会去小区楼下跳绳，每次跳 2000 个，用的是 Loop 的无绳跳绳，今天周二刚跳完，腿有点软。",
+          "judge_failed": false
+        },
+        {
+          "qid": 33,
+          "type": "correction",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[3]明确澄清年糕是室友的猫，自己养柯基豆豆吃爱肯拿鸭肉梨",
+          "hits_n": 5,
+          "top1": "我现在每周二、四、六晚上 8 点会去小区楼下跳绳，每次跳 2000 个，用的是 Loop 的无绳跳绳，今天周二刚跳完，腿有点软。",
+          "judge_failed": false
+        },
+        {
+          "qid": 34,
+          "type": "correction",
+          "correct": 0,
+          "misled": 1,
+          "reason": "记忆只提四个微服务，未提用户鉴权，且项目名易混为星河",
+          "hits_n": 5,
+          "top1": "用户参与的项目有四个微服务，现在写完三个了",
+          "judge_failed": false
+        },
+        {
+          "qid": 35,
+          "type": "correction",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[4]明确给出最新住址，与标准答案一致",
+          "hits_n": 5,
+          "top1": "我现在每周二、四、六晚上 8 点会去小区楼下跳绳，每次跳 2000 个，用的是 Loop 的无绳跳绳，今天周二刚跳完，腿有点软。",
+          "judge_failed": false
+        },
+        {
+          "qid": 36,
+          "type": "correction",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确说明年糕是室友的猫，自己养柯基豆豆，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "我现在每周二、四、六晚上 8 点会去小区楼下跳绳，每次跳 2000 个，用的是 Loop 的无绳跳绳，今天周二刚跳完，腿有点软。",
+          "judge_failed": false
+        },
+        {
+          "qid": 37,
+          "type": "noise",
+          "correct": 0,
+          "misled": 1,
+          "reason": "记忆称年糕是室友的猫，且无喂冻干信息，问题前提被推翻。",
+          "hits_n": 5,
+          "top1": "我现在每周二、四、六晚上 8 点会去小区楼下跳绳，每次跳 2000 个，用的是 Loop 的无绳跳绳，今天周二刚跳完，腿有点软。",
+          "judge_failed": false
+        },
+        {
+          "qid": 38,
+          "type": "noise",
+          "correct": 0,
+          "misled": 0,
+          "reason": "记忆未提及星轨项目所用语言，无法判断",
+          "hits_n": 5,
+          "top1": "用户的新项目叫“星轨”",
+          "judge_failed": false
+        },
+        {
+          "qid": 39,
+          "type": "noise",
+          "correct": 0,
+          "misled": 1,
+          "reason": "记忆[3]称阳台朝南，与标准答案冲突，且无朝北正确信息在场",
+          "hits_n": 5,
+          "top1": "用户现在住成华区建设路那边的“万科钻石广场”公寓",
+          "judge_failed": false
+        },
+        {
+          "qid": 40,
+          "type": "noise",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确豆豆吃爱肯拿鸭肉梨狗粮，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "用户的柯基“豆豆”吃的是爱肯拿鸭肉梨狗粮",
+          "judge_failed": false
+        }
+      ]
+    }
+  },
+  "meta": {
+    "ts": "2026-09-29T03:36:56+00:00",
+    "seed": 1,
+    "llm_model": "deepseek-flash",
+    "embed": "Qwen/Qwen3-Embedding-0.6B (1024d, local CPU)",
+    "dialogue_rounds": 60,
+    "quiz_questions": 40,
+    "absent": {
+      "langmem": "全系 0.0.11-0.0.30 使用 Python 3.11+ 语法（typing.Literal[*x]），本机仅 3.10.6，无法 import",
+      "zep": "社区版服务端依赖 docker，本机无 docker（按约定不装）"
+    },
+    "wall_total_s": 320.1
+  },
+  "ranking": [
+    "sme_kb_dynamic"
+  ]
+}

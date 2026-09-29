@@ -1,0 +1,436 @@
+{
+  "contestants": {
+    "sme_kb_dynamic": {
+      "status": "ok",
+      "error": null,
+      "reinit_s": 8.7,
+      "add_total_s": 214.5,
+      "add_p50_ms": 3473.2,
+      "score": 29.0,
+      "acc": 0.725,
+      "misled": 2,
+      "storage": 216,
+      "retrieval_p50_ms": 245.3,
+      "quiz_total_s": 34.3,
+      "total_s": 257.5,
+      "details": [
+        {
+          "qid": 1,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确给出标准答案，无冲突信息",
+          "hits_n": 5,
+          "top1": "用户下次还想去吃那家火锅",
+          "judge_failed": false
+        },
+        {
+          "qid": 2,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2][3]含毛肚鸭肠和脑花，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户下次还想去吃那家火锅",
+          "judge_failed": false
+        },
+        {
+          "qid": 3,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2][3]均明确微辣锅底，无冲突信息",
+          "hits_n": 5,
+          "top1": "用户下次还想去吃那家火锅",
+          "judge_failed": false
+        },
+        {
+          "qid": 4,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆含周三和周六晚上八点，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户不去上动感单车课会觉得亏",
+          "judge_failed": false
+        },
+        {
+          "qid": 5,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确提到天府三街乐刻运动，与答案一致",
+          "hits_n": 5,
+          "top1": "用户不去上动感单车课会觉得亏",
+          "judge_failed": false
+        },
+        {
+          "qid": 6,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确教练是阿凯，无冲突信息",
+          "hits_n": 5,
+          "top1": "用户的动感单车课教练是阿凯",
+          "judge_failed": false
+        },
+        {
+          "qid": 7,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[5]含完整正确住址，无冲突信息",
+          "hits_n": 5,
+          "top1": "用户现在已经开始困了",
+          "judge_failed": false
+        },
+        {
+          "qid": 8,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出房租2600，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户的房租月租2600",
+          "judge_failed": false
+        },
+        {
+          "qid": 9,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确朝南带小阳台，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户的住处朝南带个小阳台",
+          "judge_failed": false
+        },
+        {
+          "qid": 10,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][2]明确用户养的猫叫煤球，团子已纠正为室友的猫",
+          "hits_n": 5,
+          "top1": "用户自己养的猫是英短蓝猫，叫煤球",
+          "judge_failed": false
+        },
+        {
+          "qid": 11,
+          "type": "normal",
+          "correct": 0,
+          "misled": 1,
+          "reason": "记忆只提英短蓝猫，无年龄信息，且有团子干扰",
+          "hits_n": 5,
+          "top1": "用户自己养的猫是英短蓝猫，叫煤球",
+          "judge_failed": false
+        },
+        {
+          "qid": 12,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[4]明确给出最新正确信息，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户自己养的猫是英短蓝猫，叫煤球",
+          "judge_failed": false
+        },
+        {
+          "qid": 13,
+          "type": "normal",
+          "correct": 0,
+          "misled": 0,
+          "reason": "记忆仅提天府五街，无公司名云脉科技",
+          "hits_n": 5,
+          "top1": "用户公司在天府五街",
+          "judge_failed": false
+        },
+        {
+          "qid": 14,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确含订单中台项目，无冲突信息",
+          "hits_n": 5,
+          "top1": "用户公司在天府五街",
+          "judge_failed": false
+        },
+        {
+          "qid": 15,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出Java和Spring Boot，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户所在订单中台主要用Java和Spring Boot",
+          "judge_failed": false
+        },
+        {
+          "qid": 16,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确提到支付回调接口，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户在云脉科技做的是“订单中台”项目",
+          "judge_failed": false
+        },
+        {
+          "qid": 17,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确含标准答案等价信息，无冲突干扰",
+          "hits_n": 5,
+          "top1": "用户拼乐高“哈利波特霍格沃茨城堡”71043花了3个周末",
+          "judge_failed": false
+        },
+        {
+          "qid": 18,
+          "type": "normal",
+          "correct": 0,
+          "misled": 0,
+          "reason": "记忆只提3个周末，无摆放位置信息",
+          "hits_n": 5,
+          "top1": "用户拼乐高“哈利波特霍格沃茨城堡”71043花了3个周末",
+          "judge_failed": false
+        },
+        {
+          "qid": 19,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2][3]明确10月1到5日去西安，无冲突信息",
+          "hits_n": 5,
+          "top1": "用户国庆最后订的是去西安",
+          "judge_failed": false
+        },
+        {
+          "qid": 20,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[4]明确提到10月1日早8点高铁票，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户国庆最后订的是去西安",
+          "judge_failed": false
+        },
+        {
+          "qid": 21,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[3]明确提到兵马俑和大唐不夜城",
+          "hits_n": 5,
+          "top1": "用户国庆最后订的是去西安",
+          "judge_failed": false
+        },
+        {
+          "qid": 22,
+          "type": "normal",
+          "correct": 0,
+          "misled": 0,
+          "reason": "记忆仅含12点半放下手机，缺8点10分起床和温牛奶",
+          "hits_n": 5,
+          "top1": "用户最近给自己定了规矩，晚上12点半前必须放下手机",
+          "judge_failed": false
+        },
+        {
+          "qid": 23,
+          "type": "normal",
+          "correct": 0,
+          "misled": 0,
+          "reason": "记忆只提开超市，无父母姓名，信息缺失",
+          "hits_n": 5,
+          "top1": "用户的父母在绵阳开超市",
+          "judge_failed": false
+        },
+        {
+          "qid": 24,
+          "type": "normal",
+          "correct": 0,
+          "misled": 0,
+          "reason": "记忆仅提弟弟读高三，无名字夏宇",
+          "hits_n": 5,
+          "top1": "用户弟弟读高三",
+          "judge_failed": false
+        },
+        {
+          "qid": 25,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出软考中级软件设计师及11月目标，无冲突",
+          "hits_n": 5,
+          "top1": "我打算从7月开始备考软考中级“软件设计师”，每周二、周四晚上9点到10点刷真题，目标11月一次过。",
+          "judge_failed": false
+        },
+        {
+          "qid": 26,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出每周二、周四晚9-10点刷真题，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户计划每周二、周四晚上9点到10点刷真题",
+          "judge_failed": false
+        },
+        {
+          "qid": 27,
+          "type": "paraphrase",
+          "correct": 0,
+          "misled": 0,
+          "reason": "记忆无健身时间信息，无法回答",
+          "hits_n": 5,
+          "top1": "用户国庆最后订的是去西安",
+          "judge_failed": false
+        },
+        {
+          "qid": 28,
+          "type": "paraphrase",
+          "correct": 0,
+          "misled": 0,
+          "reason": "记忆无小区名和门牌号信息",
+          "hits_n": 5,
+          "top1": "用户住在成都",
+          "judge_failed": false
+        },
+        {
+          "qid": 29,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]含等价信息：去年6月双流宠物市场800元",
+          "hits_n": 5,
+          "top1": "用户自己养的猫是英短蓝猫，叫煤球",
+          "judge_failed": false
+        },
+        {
+          "qid": 30,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确提到Java和Spring Boot，与答案一致",
+          "hits_n": 5,
+          "top1": "用户第二天要上班",
+          "judge_failed": false
+        },
+        {
+          "qid": 31,
+          "type": "paraphrase",
+          "correct": 0,
+          "misled": 1,
+          "reason": "记忆仅提乐高城堡积灰，无哈利波特71043信息，易被误导",
+          "hits_n": 5,
+          "top1": "用户自己养的猫是英短蓝猫，叫煤球",
+          "judge_failed": false
+        },
+        {
+          "qid": 32,
+          "type": "paraphrase",
+          "correct": 0,
+          "misled": 0,
+          "reason": "记忆无弟弟信息，无法回答，但无冲突干扰",
+          "hits_n": 5,
+          "top1": "用户自己养的猫是英短蓝猫，叫煤球",
+          "judge_failed": false
+        },
+        {
+          "qid": 33,
+          "type": "correction",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确猫叫煤球，[4]团子为干扰但正确信息在场",
+          "hits_n": 5,
+          "top1": "用户自己养的猫是英短蓝猫，叫煤球",
+          "judge_failed": false
+        },
+        {
+          "qid": 34,
+          "type": "correction",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确含订单中台项目，无冲突信息",
+          "hits_n": 5,
+          "top1": "用户在云脉科技做的是“订单中台”项目",
+          "judge_failed": false
+        },
+        {
+          "qid": 35,
+          "type": "correction",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确说订的是去西安，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户国庆最后订的是去西安",
+          "judge_failed": false
+        },
+        {
+          "qid": 36,
+          "type": "correction",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出英短蓝猫叫煤球，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户自己养的猫是英短蓝猫，叫煤球",
+          "judge_failed": false
+        },
+        {
+          "qid": 37,
+          "type": "noise",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确猫是英短蓝猫，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户自己养的猫是英短蓝猫，叫煤球",
+          "judge_failed": false
+        },
+        {
+          "qid": 38,
+          "type": "noise",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确Java和Spring Boot，与答案一致",
+          "hits_n": 5,
+          "top1": "用户在云脉科技做的是“订单中台”项目",
+          "judge_failed": false
+        },
+        {
+          "qid": 39,
+          "type": "noise",
+          "correct": 0,
+          "misled": 0,
+          "reason": "记忆只提到8点班次到西安北，未说出发站成都东",
+          "hits_n": 5,
+          "top1": "用户国庆最后订的是去西安",
+          "judge_failed": false
+        },
+        {
+          "qid": 40,
+          "type": "noise",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确父母在绵阳开超市，与答案一致",
+          "hits_n": 5,
+          "top1": "用户国庆最后订的是去西安",
+          "judge_failed": false
+        }
+      ]
+    }
+  },
+  "meta": {
+    "ts": "2026-09-29T03:41:46+00:00",
+    "seed": 2,
+    "llm_model": "deepseek-flash",
+    "embed": "Qwen/Qwen3-Embedding-0.6B (1024d, local CPU)",
+    "dialogue_rounds": 60,
+    "quiz_questions": 40,
+    "absent": {
+      "langmem": "全系 0.0.11-0.0.30 使用 Python 3.11+ 语法（typing.Literal[*x]），本机仅 3.10.6，无法 import",
+      "zep": "社区版服务端依赖 docker，本机无 docker（按约定不装）"
+    },
+    "wall_total_s": 257.6
+  },
+  "ranking": [
+    "sme_kb_dynamic"
+  ]
+}

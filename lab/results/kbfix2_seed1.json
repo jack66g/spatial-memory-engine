@@ -1,0 +1,436 @@
+{
+  "contestants": {
+    "sme_kb_dynamic": {
+      "status": "ok",
+      "error": null,
+      "reinit_s": 9.8,
+      "add_total_s": 357.6,
+      "add_p50_ms": 5925.6,
+      "score": 29.0,
+      "acc": 0.725,
+      "misled": 5,
+      "storage": 246,
+      "retrieval_p50_ms": 490.2,
+      "quiz_total_s": 50.2,
+      "total_s": 417.6,
+      "details": [
+        {
+          "qid": 1,
+          "type": "normal",
+          "correct": 0,
+          "misled": 0,
+          "reason": "记忆无天府三街信息，也未出现冲突说法",
+          "hits_n": 5,
+          "top1": "用户在成都",
+          "judge_failed": false
+        },
+        {
+          "qid": 2,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确云帆库存服务，星轨已澄清为同事项目",
+          "hits_n": 5,
+          "top1": "我之前说“星轨”其实记混了，那是同事的项目。我真正在维护的是公司6月上线的一个叫“云帆”的库存服务，7月14日改的是库存扣减接口，用Go和Redis。",
+          "judge_failed": false
+        },
+        {
+          "qid": 3,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][2]明确库存扣减接口，[4]为干扰但正确信息在场",
+          "hits_n": 5,
+          "top1": "用户7月14日改的是库存扣减接口",
+          "judge_failed": false
+        },
+        {
+          "qid": 4,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确提到云帆用Go和Redis，与标准答案一致",
+          "hits_n": 5,
+          "top1": "我之前说“星轨”其实记混了，那是同事的项目。我真正在维护的是公司6月上线的一个叫“云帆”的库存服务，7月14日改的是库存扣减接口，用Go和Redis。",
+          "judge_failed": false
+        },
+        {
+          "qid": 5,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确含购买物品和金额，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户在8月2日在京东花499买了小米米家智能猫砂盆",
+          "judge_failed": false
+        },
+        {
+          "qid": 6,
+          "type": "normal",
+          "correct": 0,
+          "misled": 1,
+          "reason": "记忆无猫刨砂原因，仅提给年糕用及成狗窝，会带偏",
+          "hits_n": 5,
+          "top1": "用户在8月2日在京东花499买了小米米家智能猫砂盆",
+          "judge_failed": false
+        },
+        {
+          "qid": 7,
+          "type": "normal",
+          "correct": 0,
+          "misled": 1,
+          "reason": "记忆仅提周四，无周二信息，无法推出每周二、周四",
+          "hits_n": 5,
+          "top1": "今天周四，晚上8点去乐刻练了40分钟椭圆机，最近一次是8月6日，练完还买了一杯冰美式。今天没买，因为教练看了我一眼，我心虚。",
+          "judge_failed": false
+        },
+        {
+          "qid": 8,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确提到练40分钟椭圆机，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户今天在公司楼下排队买咖啡排了十分钟，最后没喝上",
+          "judge_failed": false
+        },
+        {
+          "qid": 9,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确8月6日练完买冰美式，与标准答案一致",
+          "hits_n": 5,
+          "top1": "今天周四，晚上8点去乐刻练了40分钟椭圆机，最近一次是8月6日，练完还买了一杯冰美式。今天没买，因为教练看了我一眼，我心虚。",
+          "judge_failed": false
+        },
+        {
+          "qid": 10,
+          "type": "normal",
+          "correct": 0,
+          "misled": 0,
+          "reason": "记忆只提到姐姐叫小秋，无年龄信息",
+          "hits_n": 5,
+          "top1": "用户的姐姐叫小秋",
+          "judge_failed": false
+        },
+        {
+          "qid": 11,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确姐姐在重庆做小学老师",
+          "hits_n": 5,
+          "top1": "用户的姐姐小秋在重庆做小学老师",
+          "judge_failed": false
+        },
+        {
+          "qid": 12,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确含9月1日开学前来成都玩两天，与答案一致",
+          "hits_n": 5,
+          "top1": "用户的姐姐小秋9月1日开学前会来成都找用户玩两天",
+          "judge_failed": false
+        },
+        {
+          "qid": 13,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][5]含38平，[2]含月租2300，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户住在高新区中和街道一个38平的一居室",
+          "judge_failed": false
+        },
+        {
+          "qid": 14,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]含中和街道，[2]含阳台朝南，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户住在高新区中和街道一个38平的一居室",
+          "judge_failed": false
+        },
+        {
+          "qid": 15,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确提到旧海尔洗衣机，与答案一致",
+          "hits_n": 5,
+          "top1": "房东留了一台旧海尔洗衣机",
+          "judge_failed": false
+        },
+        {
+          "qid": 16,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确8月10日开始学Rust，与标准答案一致",
+          "hits_n": 5,
+          "top1": "我打算从8月10日开始学Rust，买了极客时间上的《Rust实战课》，计划每天下班后看30分钟，周末写一个小命令行工具。目前进度：看了12分钟，睡着了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 17,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确含课程名和每天30分钟，无冲突",
+          "hits_n": 5,
+          "top1": "我打算从8月10日开始学Rust，买了极客时间上的《Rust实战课》，计划每天下班后看30分钟，周末写一个小命令行工具。目前进度：看了12分钟，睡着了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 18,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][2][3]均含周末写命令行工具，信息一致",
+          "hits_n": 5,
+          "top1": "我打算从8月10日开始学Rust，买了极客时间上的《Rust实战课》，计划每天下班后看30分钟，周末写一个小命令行工具。目前进度：看了12分钟，睡着了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 19,
+          "type": "normal",
+          "correct": 0,
+          "misled": 1,
+          "reason": "记忆只提重庆，无2-5日及姐姐小秋信息",
+          "hits_n": 5,
+          "top1": "用户国庆打算10月1日到10月4日去西安",
+          "judge_failed": false
+        },
+        {
+          "qid": 20,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2][5]明确给出等价高铁信息，无冲突过期说法",
+          "hits_n": 5,
+          "top1": "用户国庆原计划去西安，现改成去重庆",
+          "judge_failed": false
+        },
+        {
+          "qid": 21,
+          "type": "normal",
+          "correct": 0,
+          "misled": 1,
+          "reason": "记忆只提狗叫煤球，未提品种，且猫也叫煤球易混淆",
+          "hits_n": 5,
+          "top1": "用户自己真正养的是一只6月20日从成都双流一个救助站领回来的狗",
+          "judge_failed": false
+        },
+        {
+          "qid": 22,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出6月20日成都双流救助站领回，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户自己真正养的是一只6月20日从成都双流一个救助站领回来的狗",
+          "judge_failed": false
+        },
+        {
+          "qid": 23,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[5]明确给出42161兰博基尼乐高放电视柜左边",
+          "hits_n": 5,
+          "top1": "用户之前说“星轨”记混了，那是同事的项目",
+          "judge_failed": false
+        },
+        {
+          "qid": 24,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确提到想买10300回到未来时光机",
+          "hits_n": 5,
+          "top1": "我最近迷上拼乐高，拼完42161之后想买10300回到未来时光机。但一看价格又犹豫了，毕竟煤球的狗粮和年糕的猫砂盆都不便宜。",
+          "judge_failed": false
+        },
+        {
+          "qid": 25,
+          "type": "normal",
+          "correct": 0,
+          "misled": 0,
+          "reason": "记忆仅提冒椒火辣，未提必点兔头和脑花",
+          "hits_n": 5,
+          "top1": "用户之前说“星轨”记混了，那是同事的项目",
+          "judge_failed": false
+        },
+        {
+          "qid": 26,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确用户喝奶茶只喝三分糖，无冲突信息",
+          "hits_n": 5,
+          "top1": "用户喝奶茶只喝三分糖",
+          "judge_failed": false
+        },
+        {
+          "qid": 27,
+          "type": "paraphrase",
+          "correct": 0,
+          "misled": 0,
+          "reason": "记忆无锻炼安排信息，无法回答",
+          "hits_n": 5,
+          "top1": "用户今天在公司楼下排队买咖啡排了十分钟，最后没喝上",
+          "judge_failed": false
+        },
+        {
+          "qid": 28,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆含阳台朝南和旧海尔洗衣机，与答案一致",
+          "hits_n": 5,
+          "top1": "用户住的房子是38平",
+          "judge_failed": false
+        },
+        {
+          "qid": 29,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[3]完整包含Rust学习节奏，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户今天在公司楼下排队买咖啡排了十分钟，最后没喝上",
+          "judge_failed": false
+        },
+        {
+          "qid": 30,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确狗是6月20日成都双流救助站领回，与答案一致",
+          "hits_n": 5,
+          "top1": "用户自己真正养的是一只6月20日从成都双流一个救助站领回来的狗",
+          "judge_failed": false
+        },
+        {
+          "qid": 31,
+          "type": "paraphrase",
+          "correct": 0,
+          "misled": 0,
+          "reason": "记忆仅提冒椒火辣外卖，缺辣味偏好、兔头脑花等关键信息",
+          "hits_n": 5,
+          "top1": "用户今天在公司楼下排队买咖啡排了十分钟，最后没喝上",
+          "judge_failed": false
+        },
+        {
+          "qid": 32,
+          "type": "paraphrase",
+          "correct": 0,
+          "misled": 0,
+          "reason": "记忆仅提拼乐高，无积木型号和摆放位置信息",
+          "hits_n": 5,
+          "top1": "用户之前说“星轨”记混了，那是同事的项目",
+          "judge_failed": false
+        },
+        {
+          "qid": 33,
+          "type": "correction",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[4]明确更正并给出最新正确信息，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户之前说“星轨”记混了，那是同事的项目",
+          "judge_failed": false
+        },
+        {
+          "qid": 34,
+          "type": "correction",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[3]明确给出云帆库存服务等正确信息，新旧说法并存但正确清晰",
+          "hits_n": 5,
+          "top1": "用户之前说“星轨”记混了，那是同事的项目",
+          "judge_failed": false
+        },
+        {
+          "qid": 35,
+          "type": "correction",
+          "correct": 0,
+          "misled": 1,
+          "reason": "记忆只知改去重庆，无具体日期车次，且旧西安信息干扰",
+          "hits_n": 5,
+          "top1": "用户国庆原计划去西安，现改成去重庆",
+          "judge_failed": false
+        },
+        {
+          "qid": 36,
+          "type": "correction",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确说明年糕是室友的猫，与标准答案一致",
+          "hits_n": 5,
+          "top1": "对了更正一下，年糕其实是我合租室友的猫，只是室友搬走后留给我照顾了。我自己真正养的是6月20日从成都双流一个救助站领回来的狗，叫煤球，是只黑色中华田园犬。",
+          "judge_failed": false
+        },
+        {
+          "qid": 37,
+          "type": "noise",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[5]明确给出6月20日成都双流救助站领回，信息一致",
+          "hits_n": 5,
+          "top1": "用户自己真正养的是一只6月20日从成都双流一个救助站领回来的狗",
+          "judge_failed": false
+        },
+        {
+          "qid": 38,
+          "type": "noise",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确说明真正维护的是云帆库存服务",
+          "hits_n": 5,
+          "top1": "用户之前说“星轨”记混了，那是同事的项目",
+          "judge_failed": false
+        },
+        {
+          "qid": 39,
+          "type": "noise",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确给出10月2日下午3点10分成都东到重庆北高铁",
+          "hits_n": 5,
+          "top1": "用户国庆原计划去西安，现改成去重庆",
+          "judge_failed": false
+        },
+        {
+          "qid": 40,
+          "type": "noise",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出499元，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户在8月2日在京东花499买了小米米家智能猫砂盆",
+          "judge_failed": false
+        }
+      ]
+    }
+  },
+  "meta": {
+    "ts": "2026-09-29T03:04:52+00:00",
+    "seed": 1,
+    "llm_model": "deepseek-flash",
+    "embed": "Qwen/Qwen3-Embedding-0.6B (1024d, local CPU)",
+    "dialogue_rounds": 60,
+    "quiz_questions": 40,
+    "absent": {
+      "langmem": "全系 0.0.11-0.0.30 使用 Python 3.11+ 语法（typing.Literal[*x]），本机仅 3.10.6，无法 import",
+      "zep": "社区版服务端依赖 docker，本机无 docker（按约定不装）"
+    },
+    "wall_total_s": 417.8
+  },
+  "ranking": [
+    "sme_kb_dynamic"
+  ]
+}

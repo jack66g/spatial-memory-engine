@@ -75,6 +75,12 @@ class SmeContestant(Contestant):
                 session[path] = value  # 会话层，见模块 docstring
                 continue
             _set_path(cfg, path, value)
+        if self.preset_key == "kb_dynamic":
+            # 擂台归因修复（3 seed 22 次被带偏）：LLM 抽取把场景上下文
+            # （"为了对付成都春天的雾霾"）从事实里剥掉，paraphrase 提问
+            # 就再也够不到完整事实——原文双写把这句桥接补回来。
+            # getattr 读取，引擎默认关 = 零漂移。
+            cfg.extraction.keep_raw = True
         self._session = session
         self._add_count = 0
         return SpatialMemoryEngine(config=cfg)
@@ -100,6 +106,11 @@ class SmeContestant(Contestant):
         out = [(h.memory.text, float(h.score)) for h in hits]
         if self._session.get("memory.reinforce_on") and hits:
             for h in hits[:3]:
+                # 已被改口压制的过期说法不做命中强化（擂台归因：quiz 阶段
+                # 反复强化 top3 让旧说法/泛化碎片固结在榜首，把完整事实
+                # 挤出 top5 —— kb_dynamic 22 次被带偏的主放大器）
+                if h.memory.metadata.get("superseded_by"):
+                    continue
                 self.engine.reinforce(h.memory.id)
         return out
 

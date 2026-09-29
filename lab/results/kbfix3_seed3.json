@@ -1,0 +1,436 @@
+{
+  "contestants": {
+    "sme_kb_dynamic": {
+      "status": "ok",
+      "error": null,
+      "reinit_s": 9.0,
+      "add_total_s": 208.4,
+      "add_p50_ms": 3534.1,
+      "score": 33.0,
+      "acc": 0.825,
+      "misled": 3,
+      "storage": 183,
+      "retrieval_p50_ms": 369.3,
+      "quiz_total_s": 38.6,
+      "total_s": 256.0,
+      "details": [
+        {
+          "qid": 1,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确说每天下班后刷一小时，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "跟你说个正事，我最近打算从7月1号开始每天下班后刷一小时LeetCode，目标9月底前把《剑指Offer》第二版那68道题刷完。",
+          "judge_failed": false
+        },
+        {
+          "qid": 2,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[4]明确给出9月底前刷完剑指Offer第二版68题",
+          "hits_n": 5,
+          "top1": "用户今天只刷了一道LeetCode题，且是简单题",
+          "judge_failed": false
+        },
+        {
+          "qid": 3,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][2]明确给出2499元极米Z6X，信息一致无冲突",
+          "hits_n": 5,
+          "top1": "6月18号那天下单的极米Z6X投影仪到了，2499块，放卧室天花板上投白墙看番，氛围感直接拉满。",
+          "judge_failed": false
+        },
+        {
+          "qid": 4,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确提到放卧室天花板投白墙看番",
+          "hits_n": 5,
+          "top1": "用户昨晚试了投影仪，投在白墙上看番很爽",
+          "judge_failed": false
+        },
+        {
+          "qid": 5,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确含编号10281盆栽积木，与答案一致",
+          "hits_n": 5,
+          "top1": "对了，我6月10号刚拼完乐高编号10281那个盆栽积木，现在又盯上21342昆虫系列了，手痒得不行。",
+          "judge_failed": false
+        },
+        {
+          "qid": 6,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆明确提到想买21342昆虫系列，无冲突信息",
+          "hits_n": 5,
+          "top1": "用户想买新的乐高积木",
+          "judge_failed": false
+        },
+        {
+          "qid": 7,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确说明订单模块叫猎豹，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "用户的订单模块叫“猎豹”，不叫“蜂鸟”",
+          "judge_failed": false
+        },
+        {
+          "qid": 8,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2][3]明确给出7月2日和v1.4，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户的订单模块叫“猎豹”，不叫“蜂鸟”",
+          "judge_failed": false
+        },
+        {
+          "qid": 9,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆明确柯基叫火锅，无冲突信息",
+          "hits_n": 5,
+          "top1": "用户养的狗叫火锅",
+          "judge_failed": false
+        },
+        {
+          "qid": 10,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]完整包含时间、地点、价格，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户的柯基“火锅”是今年3月15日在成都双流宠物市场花3000块买的",
+          "judge_failed": false
+        },
+        {
+          "qid": 11,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确妈妈是成都郫都区小学语文老师",
+          "hits_n": 5,
+          "top1": "用户的妈妈是成都郫都区的小学语文老师",
+          "judge_failed": false
+        },
+        {
+          "qid": 12,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[3]明确给出送周大福金项链，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户的妈妈生日是5月20日",
+          "judge_failed": false
+        },
+        {
+          "qid": 13,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出林一凡在深圳做产品经理",
+          "hits_n": 5,
+          "top1": "用户的大学室友兼好朋友林一凡在深圳做产品经理",
+          "judge_failed": false
+        },
+        {
+          "qid": 14,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出7月12日晚8点看欧洲杯决赛，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "用户和林一凡约好7月12号晚上8点一起连麦看欧洲杯决赛",
+          "judge_failed": false
+        },
+        {
+          "qid": 15,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出最新计划，与标准答案一致",
+          "hits_n": 5,
+          "top1": "大理那个计划也改了，改成10月2日到10月6日去云南丽江，航班换成10月2日成都飞丽江的东航MU5843。",
+          "judge_failed": false
+        },
+        {
+          "qid": 16,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]直接给出等价航班信息，无冲突干扰",
+          "hits_n": 5,
+          "top1": "用户的航班换成10月2日成都飞丽江的东航MU5843",
+          "judge_failed": false
+        },
+        {
+          "qid": 17,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确等价于标准答案，无冲突信息",
+          "hits_n": 5,
+          "top1": "用户吃火锅必点脑花和贡菜",
+          "judge_failed": false
+        },
+        {
+          "qid": 18,
+          "type": "normal",
+          "correct": 0,
+          "misled": 0,
+          "reason": "记忆无香菜退散信息，无法回答",
+          "hits_n": 5,
+          "top1": "小龙坎的服务员都记住用户了",
+          "judge_failed": false
+        },
+        {
+          "qid": 19,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出35平、月租2800，与标准答案一致",
+          "hits_n": 5,
+          "top1": "我在成都高新区租了个35平的单身公寓，月租2800，6月1号刚续签了一年，房东人还行，就是热水器有点抽风。",
+          "judge_failed": false
+        },
+        {
+          "qid": 20,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][3]均明确6月1日续签一年，信息一致无冲突",
+          "hits_n": 5,
+          "top1": "用户6月1号刚续签了一年租约",
+          "judge_failed": false
+        },
+        {
+          "qid": 21,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确说煤球是合租室友的猫，与答案一致。",
+          "hits_n": 5,
+          "top1": "哦对了纠正一下，煤球其实是我合租室友的猫，我后来自己养了一只柯基叫“火锅”，是今年3月15日在成都双流宠物市场花3000块买的。",
+          "judge_failed": false
+        },
+        {
+          "qid": 22,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[3]明确含退款回调幂等校验，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户的订单模块叫“猎豹”，不叫“蜂鸟”",
+          "judge_failed": false
+        },
+        {
+          "qid": 23,
+          "type": "normal",
+          "correct": 0,
+          "misled": 0,
+          "reason": "记忆只提6月18日下单，未提京东平台",
+          "hits_n": 5,
+          "top1": "6月18号那天下单的极米Z6X投影仪到了，2499块，放卧室天花板上投白墙看番，氛围感直接拉满。",
+          "judge_failed": false
+        },
+        {
+          "qid": 24,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确含6月10日拼完10281盆栽积木，与答案一致",
+          "hits_n": 5,
+          "top1": "对了，我6月10号刚拼完乐高编号10281那个盆栽积木，现在又盯上21342昆虫系列了，手痒得不行。",
+          "judge_failed": false
+        },
+        {
+          "qid": 25,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确给出妈妈生日5月20日，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户今天只刷了一道LeetCode题，且是简单题",
+          "judge_failed": false
+        },
+        {
+          "qid": 26,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确提到晚上8点，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "用户和林一凡约好7月12号晚上8点一起连麦看欧洲杯决赛",
+          "judge_failed": false
+        },
+        {
+          "qid": 27,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[4]完整包含标准答案的节奏与目标信息",
+          "hits_n": 5,
+          "top1": "用户今天只刷了一道LeetCode题，且是简单题",
+          "judge_failed": false
+        },
+        {
+          "qid": 28,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆含极米Z6X、2499元、卧室天花板投白墙看番，与答案一致",
+          "hits_n": 5,
+          "top1": "用户的柯基“火锅”是今年3月15日在成都双流宠物市场花3000块买的",
+          "judge_failed": false
+        },
+        {
+          "qid": 29,
+          "type": "paraphrase",
+          "correct": 0,
+          "misled": 1,
+          "reason": "记忆无盆栽积木信息，仅乐高昆虫等干扰，无法答出正确款",
+          "hits_n": 5,
+          "top1": "用户最近越来越喜欢乐高昆虫系列",
+          "judge_failed": false
+        },
+        {
+          "qid": 30,
+          "type": "paraphrase",
+          "correct": 0,
+          "misled": 0,
+          "reason": "记忆仅有版本号v1.4，缺模块名、日期、功能，无法答全",
+          "hits_n": 5,
+          "top1": "版本号是v1.4",
+          "judge_failed": false
+        },
+        {
+          "qid": 31,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]完整给出柯基火锅的购买信息，与答案一致",
+          "hits_n": 5,
+          "top1": "用户养的狗叫火锅",
+          "judge_failed": false
+        },
+        {
+          "qid": 32,
+          "type": "paraphrase",
+          "correct": 0,
+          "misled": 0,
+          "reason": "记忆无房租面积信息，无法回答",
+          "hits_n": 5,
+          "top1": "用户的柯基“火锅”是今年3月15日在成都双流宠物市场花3000块买的",
+          "judge_failed": false
+        },
+        {
+          "qid": 33,
+          "type": "correction",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[3]明确纠正煤球是室友的猫，用户养的是柯基火锅",
+          "hits_n": 5,
+          "top1": "用户的柯基“火锅”是今年3月15日在成都双流宠物市场花3000块买的",
+          "judge_failed": false
+        },
+        {
+          "qid": 34,
+          "type": "correction",
+          "correct": 0,
+          "misled": 1,
+          "reason": "记忆只纠正名称，缺7月2日v1.4最新信息，且有过期v1.3说法",
+          "hits_n": 5,
+          "top1": "用户的订单模块叫“猎豹”，不叫“蜂鸟”",
+          "judge_failed": false
+        },
+        {
+          "qid": 35,
+          "type": "correction",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][2]明确给出最新丽江行程和航班，与标准答案一致",
+          "hits_n": 5,
+          "top1": "大理那个计划也改了，改成10月2日到10月6日去云南丽江，航班换成10月2日成都飞丽江的东航MU5843。",
+          "judge_failed": false
+        },
+        {
+          "qid": 36,
+          "type": "correction",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[3]明确煤球是室友的猫，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户的柯基“火锅”是今年3月15日在成都双流宠物市场花3000块买的",
+          "judge_failed": false
+        },
+        {
+          "qid": 37,
+          "type": "noise",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[3]明确煤球是室友的猫，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户的柯基“火锅”是今年3月15日在成都双流宠物市场花3000块买的",
+          "judge_failed": false
+        },
+        {
+          "qid": 38,
+          "type": "noise",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆含正确名称、时间、版本，新旧并存但最新清晰",
+          "hits_n": 5,
+          "top1": "用户的订单模块叫“猎豹”，不叫“蜂鸟”",
+          "judge_failed": false
+        },
+        {
+          "qid": 39,
+          "type": "noise",
+          "correct": 0,
+          "misled": 1,
+          "reason": "记忆只有旧航班信息，无改期后新说法，会答错",
+          "hits_n": 5,
+          "top1": "用户的航班换成10月2日成都飞丽江的东航MU5843",
+          "judge_failed": false
+        },
+        {
+          "qid": 40,
+          "type": "noise",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[5]明确纠正煤球是室友的猫，并给出最新正确说法",
+          "hits_n": 5,
+          "top1": "用户的柯基“火锅”是今年3月15日在成都双流宠物市场花3000块买的",
+          "judge_failed": false
+        }
+      ]
+    }
+  },
+  "meta": {
+    "ts": "2026-09-29T03:46:37+00:00",
+    "seed": 3,
+    "llm_model": "deepseek-flash",
+    "embed": "Qwen/Qwen3-Embedding-0.6B (1024d, local CPU)",
+    "dialogue_rounds": 60,
+    "quiz_questions": 40,
+    "absent": {
+      "langmem": "全系 0.0.11-0.0.30 使用 Python 3.11+ 语法（typing.Literal[*x]），本机仅 3.10.6，无法 import",
+      "zep": "社区版服务端依赖 docker，本机无 docker（按约定不装）"
+    },
+    "wall_total_s": 256.1
+  },
+  "ranking": [
+    "sme_kb_dynamic"
+  ]
+}

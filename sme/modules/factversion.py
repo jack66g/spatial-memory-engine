@@ -19,6 +19,31 @@ from sme.models import Fact
 
 STALE_TAG = "superseded_by"
 SUPERSEDE_TAG = "supersedes"
+ADD_BATCH_KEY = "add_batch"   # write-batch id: all memories from one add() call
+
+# stale propagation radii (iteration 2.6 - battle misled attribution):
+# a correction retires the *whole old statement*, not just the single best
+# matching fragment. Measured on Qwen3-Embedding (battle seeds):
+#   correction-raw vs old-raw           0.64-0.79
+#   old-round sibling fragments         >= 0.55 (same add batch)
+#   cross-batch restatement variants    >= 0.80 (0.85 missed "养的猫叫团子,
+#   2岁"-style variants carrying the same old claim, battle round 2)
+#   different claims, same entities     <= 0.71
+#   unrelated memories                  0.34-0.40
+# The hashing signature scores softer (siblings 0.33-0.59, verbatim variants
+# 0.73-0.90, unrelated <= 0.345), so the radii adapt like _threshold() does.
+# Over-marking is safe-ish: search_post exempts stale memories carrying
+# digits no live hit has (unique values stay findable).
+BATCH_SIBLING_COS = 0.55
+VARIANT_COS = 0.80
+BATCH_SIBLING_COS_HASHING = 0.30
+VARIANT_COS_HASHING = 0.70
+
+
+def _current_batch(engine: Any) -> str | None:
+    """Write-batch id set by V2Bridge.add for the running add() call."""
+    bridge = getattr(engine, "_v2", None)
+    return getattr(bridge, "_current_batch", None) if bridge is not None else None
 
 
 class FactVersion:
@@ -116,14 +141,60 @@ class FactVersion:
                     "confidence": fact.confidence,
                     SUPERSEDE_TAG: old.id,
                     "corrects": old.id,
+                    ADD_BATCH_KEY: _current_batch(engine),
                 },
                 tags=["fact", "extracted", "corrected"],
                 importance=0.65,  # corrected facts are deliberately fresh
                 source="user",
             )
+            self._mark_stale_siblings(engine, old, new)
             old.metadata[STALE_TAG] = new.id
             return new, True
         return None, True  # correction without a clear target => plain fact
+
+    # ------------------------------------------------------------------ #
+    def _mark_stale_siblings(self, engine: Any, old: Any, new: Any) -> int:
+        """Propagate the stale mark across the whole old statement.
+
+        A correction supersedes not just the best-matching fragment but every
+        memory that restates the same old claim: the sibling fragments of the
+        same write batch (one add() call often yields 3-4 fragments plus the
+        raw text) and close cross-batch paraphrase variants. Without this,
+        the old statement survives piecemeal at full score and misleads
+        retrieval ("新旧并存但辨认不出最新" -> battle misled).
+        """
+        old_vec = old.embedding
+        if old_vec is None:
+            return 0
+        n = float(np.linalg.norm(old_vec))
+        if n < 1e-12:
+            return 0
+        old_vec = old_vec / n
+        old_batch = old.metadata.get(ADD_BATCH_KEY)
+        hashing = getattr(engine.embeddings, "name", "") == "hashing"
+        sibling_cos = BATCH_SIBLING_COS_HASHING if hashing else BATCH_SIBLING_COS
+        variant_cos = VARIANT_COS_HASHING if hashing else VARIANT_COS
+        marked = 0
+        for mid, mem in list(engine.memories.items()):
+            if mid in (old.id, new.id) or mem is None or mem.archived:
+                continue
+            if mem.metadata.get(STALE_TAG):
+                continue
+            emb = mem.embedding
+            if emb is None:
+                continue
+            denom = float(np.linalg.norm(emb))
+            if denom < 1e-12:
+                continue
+            cos = float(np.dot(old_vec, emb / denom))
+            same_batch = (
+                old_batch is not None
+                and mem.metadata.get(ADD_BATCH_KEY) == old_batch
+            )
+            if cos >= variant_cos or (same_batch and cos >= sibling_cos):
+                mem.metadata[STALE_TAG] = new.id
+                marked += 1
+        return marked
 
     def _dedup(self, fact: Fact, engine: Any):
         """Repeat statements collapse onto the existing canonical memory."""

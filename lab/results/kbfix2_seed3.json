@@ -1,0 +1,436 @@
+{
+  "contestants": {
+    "sme_kb_dynamic": {
+      "status": "ok",
+      "error": null,
+      "reinit_s": 8.7,
+      "add_total_s": 266.3,
+      "add_p50_ms": 4481.9,
+      "score": 36.0,
+      "acc": 0.9,
+      "misled": 1,
+      "storage": 244,
+      "retrieval_p50_ms": 256.1,
+      "quiz_total_s": 39.5,
+      "total_s": 314.5,
+      "details": [
+        {
+          "qid": 1,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确提到每晚9点到10点刷LeetCode，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "我准备从下周一开始每晚9点到10点刷LeetCode，目标10月底前刷完150道Hot 100。说得很有气势，但我现在连两数之和都快忘了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 2,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "多条记忆均明确目标为10月底前刷完150道Hot 100",
+          "hits_n": 5,
+          "top1": "用户的目标是10月底前刷完150道Hot 100",
+          "judge_failed": false
+        },
+        {
+          "qid": 3,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][2]均明确提到899元，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户上个月买显示器花了899",
+          "judge_failed": false
+        },
+        {
+          "qid": 4,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][3][4]均明确型号Q27G2S，无冲突信息",
+          "hits_n": 5,
+          "top1": "上个月在京东花899买了个27英寸的AOC显示器，型号Q27G2S。到货那天我抱着箱子上12楼，感觉胳膊都不是自己的了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 5,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[3]明确拼完21318树屋，与答案一致",
+          "hits_n": 5,
+          "top1": "用户觉得拼乐高很解压",
+          "judge_failed": false
+        },
+        {
+          "qid": 6,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[4]明确用户现在拼10281盆栽，与答案一致",
+          "hits_n": 5,
+          "top1": "用户觉得拼乐高很解压",
+          "judge_failed": false
+        },
+        {
+          "qid": 7,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确Java，虽[3]说过Go但已过期，最新说法清晰",
+          "hits_n": 5,
+          "top1": "订单导出服务改Java之后接口变成/api/v3/order/export",
+          "judge_failed": false
+        },
+        {
+          "qid": 8,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确给出最新接口/api/v3/order/export，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户的订单导出服务接口叫/api/v2/order/export",
+          "judge_failed": false
+        },
+        {
+          "qid": 9,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确提到上线推迟到下周二，与答案一致。",
+          "hits_n": 5,
+          "top1": "那个订单导出服务后来改成用Java写了，接口也换成了/api/v3/order/export，上线时间推迟到下周二。我白慌了一场，但又多了几天折磨。",
+          "judge_failed": false
+        },
+        {
+          "qid": 10,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确提到宠物叫煤球，与标准答案一致",
+          "hits_n": 5,
+          "top1": "跟你说个事，我在成都自己租的房子里养了一只橘猫叫团子，今年2岁，去年3月从楼下捡回来的。当时瘦得跟条抹布似的，现在胖成球了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 11,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确煤球1岁，与标准答案一致",
+          "hits_n": 5,
+          "top1": "煤球今年1岁",
+          "judge_failed": false
+        },
+        {
+          "qid": 12,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确更正为合租室友的猫，最新说法在场",
+          "hits_n": 5,
+          "top1": "等一下我前面说错了，团子其实是我合租室友的猫，我自己养的是狗，叫煤球，是一只柯基，今年1岁。平时团子在家称王，煤球来了就怂。",
+          "judge_failed": false
+        },
+        {
+          "qid": 13,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出妹妹叫小雨，无冲突信息",
+          "hits_n": 5,
+          "top1": "用户的妹妹小雨今年18岁",
+          "judge_failed": false
+        },
+        {
+          "qid": 14,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确妹妹18岁，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户的妹妹小雨今年18岁",
+          "judge_failed": false
+        },
+        {
+          "qid": 15,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确妹妹考上西南大学，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户的妹妹小雨刚考上西南大学",
+          "judge_failed": false
+        },
+        {
+          "qid": 16,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出9月6号报到，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户的妹妹小雨9月6号要去重庆报到",
+          "judge_failed": false
+        },
+        {
+          "qid": 17,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出最好朋友是阿哲，无冲突信息",
+          "hits_n": 5,
+          "top1": "用户最好的朋友叫阿哲",
+          "judge_failed": false
+        },
+        {
+          "qid": 18,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确阿哲在深圳做前端，与答案一致",
+          "hits_n": 5,
+          "top1": "阿哲在深圳做前端",
+          "judge_failed": false
+        },
+        {
+          "qid": 19,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确等价于标准答案，无冲突信息",
+          "hits_n": 5,
+          "top1": "用户和阿哲约好每个月最后一个周六晚上8点一起打《无畏契约》",
+          "judge_failed": false
+        },
+        {
+          "qid": 20,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][2]均明确9月30号晚上飞西安，与答案一致",
+          "hits_n": 5,
+          "top1": "用户国庆行程改为9月30号晚上飞西安，10月3号回",
+          "judge_failed": false
+        },
+        {
+          "qid": 21,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][2]均明确10月3号回成都，无冲突",
+          "hits_n": 5,
+          "top1": "用户国庆行程改为9月30号晚上飞西安，10月3号回",
+          "judge_failed": false
+        },
+        {
+          "qid": 22,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确说换到大雁塔附近，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户的西安民宿换到了大雁塔附近",
+          "judge_failed": false
+        },
+        {
+          "qid": 23,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出毛肚和脑花，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户吃火锅必点毛肚和脑花",
+          "judge_failed": false
+        },
+        {
+          "qid": 24,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆明确含生椰拿铁，无冲突过期信息",
+          "hits_n": 5,
+          "top1": "用户只喝瑞幸的生椰拿铁",
+          "judge_failed": false
+        },
+        {
+          "qid": 25,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[3]明确月租2600，与标准答案一致",
+          "hits_n": 5,
+          "top1": "跟你说个事，我在成都自己租的房子里养了一只橘猫叫团子，今年2岁，去年3月从楼下捡回来的。当时瘦得跟条抹布似的，现在胖成球了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 26,
+          "type": "normal",
+          "correct": 0,
+          "misled": 0,
+          "reason": "记忆无楼层信息，无法回答，不构成误导",
+          "hits_n": 5,
+          "top1": "用户住38平的一居室",
+          "judge_failed": false
+        },
+        {
+          "qid": 27,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[3]明确提到AOC Q27G2S，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户买了新显示器Q27G2S",
+          "judge_failed": false
+        },
+        {
+          "qid": 28,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆含只喝生椰拿铁、不喝美式，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户最好的朋友叫阿哲",
+          "judge_failed": false
+        },
+        {
+          "qid": 29,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出38平，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户住38平的一居室",
+          "judge_failed": false
+        },
+        {
+          "qid": 30,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][2]明确阳台朝南，无冲突信息",
+          "hits_n": 5,
+          "top1": "用户住12楼，阳台朝南",
+          "judge_failed": false
+        },
+        {
+          "qid": 31,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[4]提到拼乐高，与标准答案乐高一致",
+          "hits_n": 5,
+          "top1": "用户打算回来后跟AI汇报煤球今天又干了什么",
+          "judge_failed": false
+        },
+        {
+          "qid": 32,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[3]明确妹妹去重庆报到，与答案一致",
+          "hits_n": 5,
+          "top1": "用户的妹妹说她也想去",
+          "judge_failed": false
+        },
+        {
+          "qid": 33,
+          "type": "correction",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确更正团子是室友的猫，自己养狗煤球，与标准答案一致",
+          "hits_n": 5,
+          "top1": "等一下我前面说错了，团子其实是我合租室友的猫，我自己养的是狗，叫煤球，是一只柯基，今年1岁。平时团子在家称王，煤球来了就怂。",
+          "judge_failed": false
+        },
+        {
+          "qid": 34,
+          "type": "correction",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆含Java和v3最新说法，可纠正Go/v2",
+          "hits_n": 5,
+          "top1": "用户的订单导出服务接口叫/api/v2/order/export",
+          "judge_failed": false
+        },
+        {
+          "qid": 35,
+          "type": "correction",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆含9月30飞西安、10月3回、大雁塔民宿，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户国庆行程改为9月30号晚上飞西安，10月3号回",
+          "judge_failed": false
+        },
+        {
+          "qid": 36,
+          "type": "correction",
+          "correct": 0,
+          "misled": 1,
+          "reason": "记忆仅提团子2岁，无室友猫或煤球信息，会误认",
+          "hits_n": 5,
+          "top1": "用户的妹妹说她也想去",
+          "judge_failed": false
+        },
+        {
+          "qid": 37,
+          "type": "noise",
+          "correct": 0,
+          "misled": 0,
+          "reason": "记忆未提团子身份，无法判断是否同一，但无冲突信息",
+          "hits_n": 5,
+          "top1": "用户和阿哲约好每个月最后一个周六晚上8点一起打《无畏契约》",
+          "judge_failed": false
+        },
+        {
+          "qid": 38,
+          "type": "noise",
+          "correct": 0,
+          "misled": 0,
+          "reason": "记忆未提成都住房与重庆报到关系，无法推出否定答案",
+          "hits_n": 5,
+          "top1": "用户的妹妹小雨9月6号要去重庆报到",
+          "judge_failed": false
+        },
+        {
+          "qid": 39,
+          "type": "noise",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆含v3接口、下周二上线及乐高盆栽，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户的订单导出服务接口叫/api/v2/order/export",
+          "judge_failed": false
+        },
+        {
+          "qid": 40,
+          "type": "noise",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆含9月30飞西安、10月3回及小雨9月6去重庆报到，与答案一致",
+          "hits_n": 5,
+          "top1": "用户的西安民宿换到了大雁塔附近",
+          "judge_failed": false
+        }
+      ]
+    }
+  },
+  "meta": {
+    "ts": "2026-09-29T03:17:41+00:00",
+    "seed": 3,
+    "llm_model": "deepseek-flash",
+    "embed": "Qwen/Qwen3-Embedding-0.6B (1024d, local CPU)",
+    "dialogue_rounds": 60,
+    "quiz_questions": 40,
+    "absent": {
+      "langmem": "全系 0.0.11-0.0.30 使用 Python 3.11+ 语法（typing.Literal[*x]），本机仅 3.10.6，无法 import",
+      "zep": "社区版服务端依赖 docker，本机无 docker（按约定不装）"
+    },
+    "wall_total_s": 314.7
+  },
+  "ranking": [
+    "sme_kb_dynamic"
+  ]
+}

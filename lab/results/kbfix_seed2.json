@@ -1,0 +1,436 @@
+{
+  "contestants": {
+    "sme_kb_dynamic": {
+      "status": "ok",
+      "error": null,
+      "reinit_s": 19.1,
+      "add_total_s": 357.7,
+      "add_p50_ms": 5718.6,
+      "score": 37.0,
+      "acc": 0.925,
+      "misled": 2,
+      "storage": 217,
+      "retrieval_p50_ms": 278.9,
+      "quiz_total_s": 36.0,
+      "total_s": 412.8,
+      "details": [
+        {
+          "qid": 1,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2][4]明确提到冒椒火辣，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户住在成都",
+          "judge_failed": false
+        },
+        {
+          "qid": 2,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确兔头和脑花，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户点冒椒火辣外卖必点兔头和脑花",
+          "judge_failed": false
+        },
+        {
+          "qid": 3,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出小区楼下乐刻健身，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户每周二和周四晚上八点都会去小区楼下乐刻健身上团课",
+          "judge_failed": false
+        },
+        {
+          "qid": 4,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][3]明确提到搏击操，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户健身团课主要练搏击操",
+          "judge_failed": false
+        },
+        {
+          "qid": 5,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确提到租在领馆国际城，与答案一致",
+          "hits_n": 5,
+          "top1": "用户住在成都",
+          "judge_failed": false
+        },
+        {
+          "qid": 6,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确月租2300，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户租的是一室一厅，月租2300",
+          "judge_failed": false
+        },
+        {
+          "qid": 7,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][3]均明确阳台朝北，无冲突信息",
+          "hits_n": 5,
+          "top1": "用户租的房子阳台朝北，下午三点后就晒不到太阳",
+          "judge_failed": false
+        },
+        {
+          "qid": 8,
+          "type": "normal",
+          "correct": 0,
+          "misled": 1,
+          "reason": "记忆只提猫狗和土豆，无橘猫名字，且土豆易误导",
+          "hits_n": 5,
+          "top1": "用户的妈妈上次来还嫌猫掉毛",
+          "judge_failed": false
+        },
+        {
+          "qid": 9,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆明确提到柯基叫土豆，无冲突信息",
+          "hits_n": 5,
+          "top1": "土豆是用户养的柯基",
+          "judge_failed": false
+        },
+        {
+          "qid": 10,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确说在美团，[2]为过期但最新说法在场",
+          "hits_n": 5,
+          "top1": "用户现在在美团成都做后端",
+          "judge_failed": false
+        },
+        {
+          "qid": 11,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确用户负责外卖骑手调度系统，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户负责外卖骑手调度系统",
+          "judge_failed": false
+        },
+        {
+          "qid": 12,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确提到用户迷上拼乐高，与答案一致",
+          "hits_n": 5,
+          "top1": "用户最近迷上了拼乐高",
+          "judge_failed": false
+        },
+        {
+          "qid": 13,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出保时捷911和哈利波特城堡，与答案一致",
+          "hits_n": 5,
+          "top1": "用户已经拼完了保时捷911和哈利波特城堡两套乐高",
+          "judge_failed": false
+        },
+        {
+          "qid": 14,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][5]均明确指向兰博基尼，无冲突信息",
+          "hits_n": 5,
+          "top1": "用户下一个想买兰博基尼那款乐高",
+          "judge_failed": false
+        },
+        {
+          "qid": 15,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确最新说法为去三亚，与答案一致",
+          "hits_n": 5,
+          "top1": "用户国庆改成去三亚玩4天",
+          "judge_failed": false
+        },
+        {
+          "qid": 16,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确说去三亚4天，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户国庆改成去三亚玩4天",
+          "judge_failed": false
+        },
+        {
+          "qid": 17,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确重新买的航班为3U8756，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户的三亚机票航班号是3U8756",
+          "judge_failed": false
+        },
+        {
+          "qid": 18,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出晚上11点半，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户定了晚上11点半的闹钟提醒睡觉",
+          "judge_failed": false
+        },
+        {
+          "qid": 19,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确提到两杯瑞幸冰美式，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户早上靠两杯瑞幸冰美式续命",
+          "judge_failed": false
+        },
+        {
+          "qid": 20,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确爸妈在绵阳，无冲突信息",
+          "hits_n": 5,
+          "top1": "用户的爸妈在老家绵阳",
+          "judge_failed": false
+        },
+        {
+          "qid": 21,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确用户爸爸在长虹上班，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户的爸爸在长虹上班",
+          "judge_failed": false
+        },
+        {
+          "qid": 22,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][5]明确弟弟叫小宇，无冲突信息",
+          "hits_n": 5,
+          "top1": "用户有个读高三的弟弟叫小宇",
+          "judge_failed": false
+        },
+        {
+          "qid": 23,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出课程花费1999，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户报了一个极客时间的《Go进阶训练营》，花了1999",
+          "judge_failed": false
+        },
+        {
+          "qid": 24,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[3][4]明确提到极客时间，与答案一致",
+          "hits_n": 5,
+          "top1": "用户上团课只坚持前25分钟",
+          "judge_failed": false
+        },
+        {
+          "qid": 25,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[5]明确提到新瑞鹏，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户上团课只坚持前25分钟",
+          "judge_failed": false
+        },
+        {
+          "qid": 26,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确为一室一厅，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户租的是一室一厅，月租2300",
+          "judge_failed": false
+        },
+        {
+          "qid": 27,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确提到喝了两瓶冰唯怡，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "用户觉得冒椒火辣的微辣还是很辣，辣得灌了两瓶冰唯怡",
+          "judge_failed": false
+        },
+        {
+          "qid": 28,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][5]均明确用户只坚持前25分钟，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户上团课只坚持前25分钟",
+          "judge_failed": false
+        },
+        {
+          "qid": 29,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确阳台朝北下午三点后晒不到太阳，与答案一致",
+          "hits_n": 5,
+          "top1": "用户租的房子阳台朝北，下午三点后就晒不到太阳",
+          "judge_failed": false
+        },
+        {
+          "qid": 30,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][5]均明确用户刷手机到凌晨1点多才睡",
+          "hits_n": 5,
+          "top1": "用户通常要刷手机到凌晨1点多才睡",
+          "judge_failed": false
+        },
+        {
+          "qid": 31,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确弟弟明年高考，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户的弟弟小宇明年要高考",
+          "judge_failed": false
+        },
+        {
+          "qid": 32,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[3]明确提到囤了3周没看的课，与答案一致",
+          "hits_n": 5,
+          "top1": "用户上团课只坚持前25分钟",
+          "judge_failed": false
+        },
+        {
+          "qid": 33,
+          "type": "correction",
+          "correct": 0,
+          "misled": 1,
+          "reason": "记忆无橘猫年糕来源，且称土豆是柯基，与橘猫冲突",
+          "hits_n": 5,
+          "top1": "用户有一只叫土豆的宠物",
+          "judge_failed": false
+        },
+        {
+          "qid": 34,
+          "type": "correction",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确说现在在美团成都做后端，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户的新公司周二和周四有团课",
+          "judge_failed": false
+        },
+        {
+          "qid": 35,
+          "type": "correction",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确最新说法去三亚，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户国庆改成去三亚玩4天",
+          "judge_failed": false
+        },
+        {
+          "qid": 36,
+          "type": "correction",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆含柯基土豆，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户有一只叫土豆的宠物",
+          "judge_failed": false
+        },
+        {
+          "qid": 37,
+          "type": "noise",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][4]明确外卖骑手调度系统，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户负责外卖骑手调度系统",
+          "judge_failed": false
+        },
+        {
+          "qid": 38,
+          "type": "noise",
+          "correct": 0,
+          "misled": 0,
+          "reason": "记忆无宠物医院信息，无法回答",
+          "hits_n": 5,
+          "top1": "用户有一只叫土豆的宠物",
+          "judge_failed": false
+        },
+        {
+          "qid": 39,
+          "type": "noise",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确提到下一个想买兰博基尼乐高",
+          "hits_n": 5,
+          "top1": "用户已经拼完了保时捷911和哈利波特城堡两套乐高",
+          "judge_failed": false
+        },
+        {
+          "qid": 40,
+          "type": "noise",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[3]明确爸爸在长虹上班，与答案一致",
+          "hits_n": 5,
+          "top1": "用户的弟弟小宇明年要高考",
+          "judge_failed": false
+        }
+      ]
+    }
+  },
+  "meta": {
+    "ts": "2026-09-29T02:49:28+00:00",
+    "seed": 2,
+    "llm_model": "deepseek-flash",
+    "embed": "Qwen/Qwen3-Embedding-0.6B (1024d, local CPU)",
+    "dialogue_rounds": 60,
+    "quiz_questions": 40,
+    "absent": {
+      "langmem": "全系 0.0.11-0.0.30 使用 Python 3.11+ 语法（typing.Literal[*x]），本机仅 3.10.6，无法 import",
+      "zep": "社区版服务端依赖 docker，本机无 docker（按约定不装）"
+    },
+    "wall_total_s": 412.9
+  },
+  "ranking": [
+    "sme_kb_dynamic"
+  ]
+}

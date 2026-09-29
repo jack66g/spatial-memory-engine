@@ -1,0 +1,436 @@
+{
+  "contestants": {
+    "sme_kb_dynamic": {
+      "status": "ok",
+      "error": null,
+      "reinit_s": 21.8,
+      "add_total_s": 347.2,
+      "add_p50_ms": 5638.3,
+      "score": 30.0,
+      "acc": 0.75,
+      "misled": 3,
+      "storage": 225,
+      "retrieval_p50_ms": 431.5,
+      "quiz_total_s": 43.9,
+      "total_s": 412.9,
+      "details": [
+        {
+          "qid": 1,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确提到青桔CRM模块，与答案一致",
+          "hits_n": 5,
+          "top1": "用户的青桔 CRM 模块最近稳定了一些",
+          "judge_failed": false
+        },
+        {
+          "qid": 2,
+          "type": "normal",
+          "correct": 0,
+          "misled": 0,
+          "reason": "记忆无QPS目标信息，无法回答",
+          "hits_n": 5,
+          "top1": "用户因青桔 CRM 主接口优化被组长夸了一句",
+          "judge_failed": false
+        },
+        {
+          "qid": 3,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出380ms压到210ms，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户把青桔CRM的主接口响应时间从380ms压到210ms",
+          "judge_failed": false
+        },
+        {
+          "qid": 4,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][3]均明确给出1899元，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户上个月在京东花1899买了一台27英寸2K显示器",
+          "judge_failed": false
+        },
+        {
+          "qid": 5,
+          "type": "normal",
+          "correct": 0,
+          "misled": 0,
+          "reason": "记忆无品牌型号信息，无法回答",
+          "hits_n": 5,
+          "top1": "用户认为AOC那台显示器买值了",
+          "judge_failed": false
+        },
+        {
+          "qid": 6,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][2]均明确提到分6期，与答案一致",
+          "hits_n": 5,
+          "top1": "用户买显示器用白条分了6期",
+          "judge_failed": false
+        },
+        {
+          "qid": 7,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确给出每周二、四晚上8点跑步，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户晚上去跑了3.5公里",
+          "judge_failed": false
+        },
+        {
+          "qid": 8,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][3]均明确用户一般跑3.5公里，无冲突信息",
+          "hits_n": 5,
+          "top1": "用户慢跑一般跑3.5公里",
+          "judge_failed": false
+        },
+        {
+          "qid": 9,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确给出Keep配速6分40秒，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户昨天跑步时Keep配速直接崩了",
+          "judge_failed": false
+        },
+        {
+          "qid": 10,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出绵阳水电工、48岁，与答案一致",
+          "hits_n": 5,
+          "top1": "用户的爸爸在绵阳做水电工，今年48岁",
+          "judge_failed": false
+        },
+        {
+          "qid": 11,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确妈妈在三台县小学食堂上班，与答案一致",
+          "hits_n": 5,
+          "top1": "用户的妈妈在老家三台县的小学食堂上班",
+          "judge_failed": false
+        },
+        {
+          "qid": 12,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确弟弟叫小宇读高二，与答案一致",
+          "hits_n": 5,
+          "top1": "用户家里有个读高二的弟弟叫小宇",
+          "judge_failed": false
+        },
+        {
+          "qid": 13,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[3]有38平米，[1]有月租2300，信息一致",
+          "hits_n": 5,
+          "top1": "用户租的房子月租2300，押一付三",
+          "judge_failed": false
+        },
+        {
+          "qid": 14,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确押一付三，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户租的房子月租2300，押一付三",
+          "judge_failed": false
+        },
+        {
+          "qid": 15,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]与标准答案一致，无冲突信息",
+          "hits_n": 5,
+          "top1": "用户租的房子离公司地铁1号线加共享单车大概35分钟",
+          "judge_failed": false
+        },
+        {
+          "qid": 16,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确提到用户打算下个月学Rust",
+          "hits_n": 5,
+          "top1": "用户打算从下个月开始学Rust",
+          "judge_failed": false
+        },
+        {
+          "qid": 17,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出《Rust 程序设计语言》前10章，与答案一致",
+          "hits_n": 5,
+          "top1": "用户计划先刷完《Rust 程序设计语言》前10章",
+          "judge_failed": false
+        },
+        {
+          "qid": 18,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确每周至少5小时，与答案一致",
+          "hits_n": 5,
+          "top1": "用户计划每周至少投入5小时学Rust",
+          "judge_failed": false
+        },
+        {
+          "qid": 19,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[3]明确豆豆8个月，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户自己养了一只柯基叫豆豆",
+          "judge_failed": false
+        },
+        {
+          "qid": 20,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确说主要用Gin框架写接口，与答案一致",
+          "hits_n": 5,
+          "top1": "用户现在主要用Gin框架写接口",
+          "judge_failed": false
+        },
+        {
+          "qid": 21,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确10月2日去西安，与答案一致",
+          "hits_n": 5,
+          "top1": "用户国庆去重庆的计划取消了",
+          "judge_failed": false
+        },
+        {
+          "qid": 22,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[5]明确给出42161兰博基尼Countach，与答案一致",
+          "hits_n": 5,
+          "top1": "用户拼这套乐高花了大概6个小时",
+          "judge_failed": false
+        },
+        {
+          "qid": 23,
+          "type": "normal",
+          "correct": 0,
+          "misled": 0,
+          "reason": "记忆只提到花6小时，未提放电视柜左边",
+          "hits_n": 5,
+          "top1": "用户拼这套乐高花了大概6个小时",
+          "judge_failed": false
+        },
+        {
+          "qid": 24,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确提到冒椒火辣，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户特别爱吃成都玉林路那家冒椒火辣的串串",
+          "judge_failed": false
+        },
+        {
+          "qid": 25,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆含必点牛肉脑花及备注不要香菜，与答案一致",
+          "hits_n": 5,
+          "top1": "用户吃冒椒火辣串串必点牛肉和脑花",
+          "judge_failed": false
+        },
+        {
+          "qid": 26,
+          "type": "normal",
+          "correct": 0,
+          "misled": 1,
+          "reason": "记忆只提府河绿道，未提小区楼下，信息不完整",
+          "hits_n": 5,
+          "top1": "用户慢跑一般跑3.5公里",
+          "judge_failed": false
+        },
+        {
+          "qid": 27,
+          "type": "paraphrase",
+          "correct": 0,
+          "misled": 0,
+          "reason": "记忆无通勤时间信息，无法回答",
+          "hits_n": 5,
+          "top1": "用户把青桔CRM的主接口响应时间从380ms压到210ms",
+          "judge_failed": false
+        },
+        {
+          "qid": 28,
+          "type": "paraphrase",
+          "correct": 0,
+          "misled": 0,
+          "reason": "记忆无待办工具信息，仅学习计划相关，不构成冲突",
+          "hits_n": 5,
+          "top1": "用户的青桔 CRM 模块最近稳定了一些",
+          "judge_failed": false
+        },
+        {
+          "qid": 29,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆明确柯基、8个月，信息一致无冲突",
+          "hits_n": 5,
+          "top1": "用户有一只叫豆豆的宠物，上周刚满8个月",
+          "judge_failed": false
+        },
+        {
+          "qid": 30,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出27英寸2K，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户上个月在京东花1899买了一台27英寸2K显示器",
+          "judge_failed": false
+        },
+        {
+          "qid": 31,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆含每周二四晚8点慢跑3.5公里，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户晚上去跑了3.5公里",
+          "judge_failed": false
+        },
+        {
+          "qid": 32,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确弟弟小宇读高二，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户家里有个读高二的弟弟叫小宇",
+          "judge_failed": false
+        },
+        {
+          "qid": 33,
+          "type": "correction",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[3]明确给出柯基豆豆8个月，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户自己养了一只柯基叫豆豆",
+          "judge_failed": false
+        },
+        {
+          "qid": 34,
+          "type": "correction",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确现用Gin，[4]说明Spring Boot是旧情况",
+          "hits_n": 5,
+          "top1": "用户现在主要用Gin框架写接口",
+          "judge_failed": false
+        },
+        {
+          "qid": 35,
+          "type": "correction",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆含取消重庆、改10月2日去西安，与答案一致",
+          "hits_n": 5,
+          "top1": "用户国庆去重庆的计划取消了",
+          "judge_failed": false
+        },
+        {
+          "qid": 36,
+          "type": "correction",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确年糕是室友的猫，[4]有豆豆8个月，信息一致",
+          "hits_n": 5,
+          "top1": "年糕是用户的合租室友的猫",
+          "judge_failed": false
+        },
+        {
+          "qid": 37,
+          "type": "noise",
+          "correct": 0,
+          "misled": 1,
+          "reason": "记忆称年糕是室友的猫，但未提供猫粮信息，且用户实际养柯基",
+          "hits_n": 5,
+          "top1": "用户的猫年糕特别能吃",
+          "judge_failed": false
+        },
+        {
+          "qid": 38,
+          "type": "noise",
+          "correct": 0,
+          "misled": 0,
+          "reason": "记忆无型号Q27G2S，且问题问高铁票，答非所问",
+          "hits_n": 5,
+          "top1": "用户国庆去重庆的计划取消了",
+          "judge_failed": false
+        },
+        {
+          "qid": 39,
+          "type": "noise",
+          "correct": 0,
+          "misled": 0,
+          "reason": "记忆未提豆豆年龄，无法答出上周满8个月",
+          "hits_n": 5,
+          "top1": "用户跑步时差点冲上去问那只柯基是不是豆豆失散兄弟",
+          "judge_failed": false
+        },
+        {
+          "qid": 40,
+          "type": "noise",
+          "correct": 0,
+          "misled": 1,
+          "reason": "记忆无Rust学习计划，仅显示器分期信息，易误导",
+          "hits_n": 5,
+          "top1": "用户买显示器用白条分了6期",
+          "judge_failed": false
+        }
+      ]
+    }
+  },
+  "meta": {
+    "ts": "2026-09-29T02:39:51+00:00",
+    "seed": 1,
+    "llm_model": "deepseek-flash",
+    "embed": "Qwen/Qwen3-Embedding-0.6B (1024d, local CPU)",
+    "dialogue_rounds": 60,
+    "quiz_questions": 40,
+    "absent": {
+      "langmem": "全系 0.0.11-0.0.30 使用 Python 3.11+ 语法（typing.Literal[*x]），本机仅 3.10.6，无法 import",
+      "zep": "社区版服务端依赖 docker，本机无 docker（按约定不装）"
+    },
+    "wall_total_s": 413.1
+  },
+  "ranking": [
+    "sme_kb_dynamic"
+  ]
+}
