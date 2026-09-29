@@ -416,7 +416,14 @@ curl -X POST http://127.0.0.1:8000/config/preset -H "Content-Type: application/j
 | 报"embedding 维度不匹配"？ | openai embedding 的模型实际维度与 `embedding.dim` 不一致（如 bge-m3=1024 配了 64），按报错提示改 `embedding.dim` 或换匹配模型；不做静默补齐/截断，详见 [docs/接入使用.md](docs/接入使用.md) Q12 |
 | 改配置何时生效？ | Web 配置中心保存后引擎立即热重建（记忆自动迁移），关掉页面持续有效；改 embedding provider/model/dim 且库内有记忆时会被拒绝，需先导出清空 |
 
-## 11. 评测
+## 11. 评测与实测战绩
+
+**擂台赛**（3 seed × 60 轮 × 40 题，LLM 盲判，对手 mem0 / 裸 RAG / BM25 / Graphiti）：
+
+- SME·chat **96.7%** 居首（v1.3 优化后），**被带偏 2 次全场最少**——不仅最准，还最不被过期信息误导
+- 规模干扰赛：2000 条无关记忆下 SME 90% 走平，BM25 持续退化至 82.5%
+- 长程赛（同一对话回放 3 遍）：SME 92.5→95% **越用越准**，裸 RAG 92.5→87.5% **越用越糟**——记忆动力学 vs 裸存取的 7.5pp 结构性差异
+- 完整判读（三幕剧）与逐题明细：[lab/战报.md](lab/战报.md)（复现一键可跑）
 
 ```bash
 python -m sme.benchmark --n-memories 2000                 # 写入/检索压测
@@ -438,6 +445,7 @@ python -m sme.benchmark --n-memories 2000                 # 写入/检索压测
 │   │                                   #   memory_graph / bridge / pipeline / factgraph
 │   └── storage/                        # snapshot / backends / wal
 ├── docs/                               # 接入使用 / 原理解析 / 迭代计划 / 修改记录
+├── lab/                                # 实验 2.0：对战/压测/补充赛脚本与数据 + 战报.md
 ├── requirements.txt / pyproject.toml
 └── README.md
 ```
