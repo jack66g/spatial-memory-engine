@@ -1,0 +1,1785 @@
+{
+ "meta": {
+  "seed": 1,
+  "scales_run": [
+   500,
+   2000
+  ],
+  "llm": "deepseek-flash",
+  "absent": {
+   "mem0/kb_dynamic": "逐条 LLM 抽取消耗过大",
+   "graphiti": "实体抽取过慢（~20s/条）"
+  },
+  "note": "scale=0 档复用 battle_seed1.json"
+ },
+ "runs": [
+  {
+   "scale": 500,
+   "results": {
+    "sme_chat": {
+     "status": "ok",
+     "dialogue_add_s": 103.5,
+     "distractor_add_s": 264.6,
+     "distractor_add_ms_p50": 529.2,
+     "acc": 0.9,
+     "misled": 2,
+     "storage": 668,
+     "retrieval_p50_ms": 312.6,
+     "retrieval_p95_ms": 491.5,
+     "details": [
+      {
+       "qid": 1,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1]明确提到3月10日开始每天下班刷一小时LeetCode"
+      },
+      {
+       "qid": 2,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1]明确给出6月底300道、动态规划和图论目标"
+      },
+      {
+       "qid": 3,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1]明确给出米家空气净化器4 Pro和899元，与标准答案一致。"
+      },
+      {
+       "qid": 4,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1]明确提到凑单买温湿度计69元，与答案一致。"
+      },
+      {
+       "qid": 5,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[2]明确给出Hario V60陶瓷滤杯268元，与标准答案一致。"
+      },
+      {
+       "qid": 6,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1]明确提到云南保山小粒咖啡豆半磅，与答案一致。"
+      },
+      {
+       "qid": 7,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[2][3]明确纠正项目名为星链，最新说法清晰在场"
+      },
+      {
+       "qid": 8,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1]明确支付回调接口QPS从80到320，与标准答案一致。"
+      },
+      {
+       "qid": 9,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1][3]明确纠正：自己养的是3岁柯基煤球，猫是室友的。"
+      },
+      {
+       "qid": 10,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1]明确纠正为煤球打狂犬疫苗，正确信息在场"
+      },
+      {
+       "qid": 11,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[2][5]明确小满18岁在绵阳读高三，无冲突"
+      },
+      {
+       "qid": 12,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1]明确说带她去重庆玩三天，无冲突信息。"
+      },
+      {
+       "qid": 13,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1]明确给出3月15日来成都、16日晚玉林路老码头火锅"
+      },
+      {
+       "qid": 14,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[2]明确最新行程为都江堰青城山隐庐民宿2晚"
+      },
+      {
+       "qid": 15,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[2]明确说必点脑花和贡菜，最讨厌香菜。"
+      },
+      {
+       "qid": 16,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1]明确含多放小米辣不要香菜，与答案一致"
+      },
+      {
+       "qid": 17,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1]明确给出40平一居室、月租2600元，与标准答案一致。"
+      },
+      {
+       "qid": 18,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1]明确房东同意换小米滚筒洗衣机，与答案一致。"
+      },
+      {
+       "qid": 19,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1]明确提到成都春天雾霾重，与答案一致。"
+      },
+      {
+       "qid": 20,
+       "type": "normal",
+       "correct": 0,
+       "misled": 0,
+       "reason": "记忆无手冲咖啡和滤杯信息，无法回答"
+      },
+      {
+       "qid": 21,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1]明确提到妹妹3月8日参加高考百日誓师"
+      },
+      {
+       "qid": 22,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[2]明确阿哲是大学室友，从深圳来成都出差。"
+      },
+      {
+       "qid": 23,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[3]明确原计划四姑娘山空山民宿，[1]为更新后行程"
+      },
+      {
+       "qid": 24,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[2]明确提到每天下班后刷一小时LeetCode。"
+      },
+      {
+       "qid": 25,
+       "type": "normal",
+       "correct": 0,
+       "misled": 0,
+       "reason": "记忆只提年糕是室友的猫，未提年龄，缺1岁半信息"
+      },
+      {
+       "qid": 26,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1]明确说续签了一年，信息一致。"
+      },
+      {
+       "qid": 27,
+       "type": "paraphrase",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1]明确给出6月底前300道，重点DP和图论。"
+      },
+      {
+       "qid": 28,
+       "type": "paraphrase",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1]明确提到米家空气净化器4 Pro，899元，与标准答案一致。"
+      },
+      {
+       "qid": 29,
+       "type": "paraphrase",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[2]明确提到Hario V60滤杯和云南保山豆，信息一致。"
+      },
+      {
+       "qid": 30,
+       "type": "paraphrase",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1]明确支付回调接口QPS80到320，最新说法在场"
+      },
+      {
+       "qid": 31,
+       "type": "paraphrase",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1][2]明确柯基煤球，2月20日打狂犬疫苗，最新说法在场"
+      },
+      {
+       "qid": 32,
+       "type": "paraphrase",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆明确提到考完带小满去重庆玩三天，无冲突信息。"
+      },
+      {
+       "qid": 33,
+       "type": "correction",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1][2]明确纠正：年糕是室友的猫，自己养3岁柯基煤球。"
+      },
+      {
+       "qid": 34,
+       "type": "correction",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1][2][4]明确项目叫星链，3月1日迁支付回调接口"
+      },
+      {
+       "qid": 35,
+       "type": "correction",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1]明确最新行程为都江堰青城山，住隐庐2晚，旧说法已被纠正。"
+      },
+      {
+       "qid": 36,
+       "type": "correction",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1]明确纠正为狂犬疫苗，正确信息在场"
+      },
+      {
+       "qid": 37,
+       "type": "noise",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1][2]明确年糕是室友的猫，打狂犬疫苗的是煤球"
+      },
+      {
+       "qid": 38,
+       "type": "noise",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1]明确纠正：3月1日迁支付回调，QPS80到320。"
+      },
+      {
+       "qid": 39,
+       "type": "noise",
+       "correct": 0,
+       "misled": 1,
+       "reason": "记忆[3]称住四姑娘山空山民宿3晚，与标准答案冲突，且[1][2]虽纠正但问题问的是隐庐3晚，易被误导。"
+      },
+      {
+       "qid": 40,
+       "type": "noise",
+       "correct": 0,
+       "misled": 1,
+       "reason": "记忆明确Hario V60是2月14日268元，3月2日899元是净化器，问题前提错误。"
+      }
+     ]
+    },
+    "rag_qwen3": {
+     "status": "ok",
+     "dialogue_add_s": 42.5,
+     "distractor_add_s": 164.2,
+     "distractor_add_ms_p50": 328.4,
+     "acc": 0.875,
+     "misled": 4,
+     "storage": 560,
+     "retrieval_p50_ms": 304.5,
+     "retrieval_p95_ms": 476.6,
+     "details": [
+      {
+       "qid": 1,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1]明确提到3月10日开始每天下班刷一小时LeetCode"
+      },
+      {
+       "qid": 2,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1]明确6月底前300道，重点动态规划和图论"
+      },
+      {
+       "qid": 3,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1]明确给出米家空气净化器4 Pro和899元，与标准答案一致。"
+      },
+      {
+       "qid": 4,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1]明确提到凑单买温湿度计69元，与答案一致。"
+      },
+      {
+       "qid": 5,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1]明确给出Hario V60陶瓷滤杯268元，与标准答案一致。"
+      },
+      {
+       "qid": 6,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[2]明确提到云南保山小粒咖啡豆半磅"
+      },
+      {
+       "qid": 7,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆明确项目叫星链，并纠正过星轨旧说法"
+      },
+      {
+       "qid": 8,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1]明确支付回调接口QPS从80到320，最新说法在场"
+      },
+      {
+       "qid": 9,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1][4]明确煤球是3岁柯基，正确信息在场"
+      },
+      {
+       "qid": 10,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1]明确纠正为狂犬疫苗，信息清晰在场。"
+      },
+      {
+       "qid": 11,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1]明确小满18岁在绵阳读高三，信息一致。"
+      },
+      {
+       "qid": 12,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1]明确说考完带她去重庆玩三天，与标准答案一致。"
+      },
+      {
+       "qid": 13,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[2]明确给出3月15日来成都、16日晚玉林路老码头火锅"
+      },
+      {
+       "qid": 14,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1][5]明确最新行程为都江堰青城山、隐庐民宿2晚"
+      },
+      {
+       "qid": 15,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1][2]明确提到必点脑花和贡菜，最讨厌香菜。"
+      },
+      {
+       "qid": 16,
+       "type": "normal",
+       "correct": 0,
+       "misled": 1,
+       "reason": "记忆仅提不要香菜，无小米辣，且日期不符"
+      },
+      {
+       "qid": 17,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1]明确给出40平一居室、月租2600，与标准答案一致。"
+      },
+      {
+       "qid": 18,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1]明确提到房东同意换小米滚筒洗衣机"
+      },
+      {
+       "qid": 19,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1]明确提到成都春天雾霾顶不住，与答案一致。"
+      },
+      {
+       "qid": 20,
+       "type": "normal",
+       "correct": 0,
+       "misled": 1,
+       "reason": "记忆无手冲咖啡和V60滤杯信息，仅有加湿器、豆子等干扰"
+      },
+      {
+       "qid": 21,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1]明确提到3月8日参加高考百日誓师，与答案一致。"
+      },
+      {
+       "qid": 22,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[4]明确说大学室友阿哲从深圳来成都出差，信息一致。"
+      },
+      {
+       "qid": 23,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[3]明确原计划四姑娘山、空山民宿，且[1]说明已改"
+      },
+      {
+       "qid": 24,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1]明确说每天下班后刷一小时"
+      },
+      {
+       "qid": 25,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[2]明确年糕是1岁半橘猫，[3]确认是室友的猫"
+      },
+      {
+       "qid": 26,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1]明确说续签了一年，与答案一致。"
+      },
+      {
+       "qid": 27,
+       "type": "paraphrase",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1]明确给出6月底前300道，重点DP和图论。"
+      },
+      {
+       "qid": 28,
+       "type": "paraphrase",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1]明确提到米家空气净化器4 Pro和899元，与标准答案一致。"
+      },
+      {
+       "qid": 29,
+       "type": "paraphrase",
+       "correct": 0,
+       "misled": 0,
+       "reason": "记忆未提V60或保山豆，仅云南豆相关"
+      },
+      {
+       "qid": 30,
+       "type": "paraphrase",
+       "correct": 0,
+       "misled": 1,
+       "reason": "记忆全是数据库调优，无支付回调QPS信息"
+      },
+      {
+       "qid": 31,
+       "type": "paraphrase",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1][4]明确煤球是3岁柯基，2月20日打狂犬疫苗，最新说法清晰。"
+      },
+      {
+       "qid": 32,
+       "type": "paraphrase",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆明确提到考完带小满去重庆玩三天，信息一致。"
+      },
+      {
+       "qid": 33,
+       "type": "correction",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1][3]明确年糕是室友的猫，自己养3岁柯基煤球"
+      },
+      {
+       "qid": 34,
+       "type": "correction",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1]明确纠正为星链，3月1日迁支付回调接口，QPS80到320。"
+      },
+      {
+       "qid": 35,
+       "type": "correction",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1]明确最新行程为都江堰青城山，住隐庐民宿2晚，旧说法已被覆盖。"
+      },
+      {
+       "qid": 36,
+       "type": "correction",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1]明确纠正为狂犬疫苗，正确信息在场"
+      },
+      {
+       "qid": 37,
+       "type": "noise",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1][3]明确年糕是室友的猫，打狂犬疫苗的是煤球"
+      },
+      {
+       "qid": 38,
+       "type": "noise",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1]明确纠正为支付回调接口，QPS 80到320，与标准一致"
+      },
+      {
+       "qid": 39,
+       "type": "noise",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆明确改去青城山住隐庐2晚，旧四姑娘山说法已过期"
+      },
+      {
+       "qid": 40,
+       "type": "noise",
+       "correct": 0,
+       "misled": 1,
+       "reason": "记忆明确区分：滤杯2月14日268元，3月2日899元是净化器，问题前提错误。"
+      }
+     ]
+    },
+    "bm25_bigram": {
+     "status": "ok",
+     "dialogue_add_s": 0.0,
+     "distractor_add_s": 0.0,
+     "distractor_add_ms_p50": 0.0,
+     "acc": 0.85,
+     "misled": 2,
+     "storage": 560,
+     "retrieval_p50_ms": 2.0,
+     "retrieval_p95_ms": 2.8,
+     "details": [
+      {
+       "qid": 1,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1]明确给出3月10日开始、每天1小时、6月底300道"
+      },
+      {
+       "qid": 2,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1]明确给出6月底300道、动态规划和图论目标"
+      },
+      {
+       "qid": 3,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1]明确给出米家空气净化器4 Pro和899元，与标准答案一致。"
+      },
+      {
+       "qid": 4,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1]明确提到凑单买温湿度计69元，与答案一致。"
+      },
+      {
+       "qid": 5,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[3]明确给出Hario V60陶瓷滤杯268元，与标准答案一致。"
+      },
+      {
+       "qid": 6,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1]明确提到云南保山小粒咖啡豆半磅，与答案一致。"
+      },
+      {
+       "qid": 7,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[2][3]明确最新项目名为星链，[5]星轨为旧误称，正确信息在场"
+      },
+      {
+       "qid": 8,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1]明确支付回调接口QPS从80到320，与标准一致"
+      },
+      {
+       "qid": 9,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1][3]明确煤球是3岁柯基，信息一致"
+      },
+      {
+       "qid": 10,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1]明确纠正为煤球打狂犬疫苗，正确信息在场"
+      },
+      {
+       "qid": 11,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1]明确给出小满、18岁、绵阳读高三，与标准一致。"
+      },
+      {
+       "qid": 12,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1]明确提到考完带她去重庆玩三天，与标准答案一致。"
+      },
+      {
+       "qid": 13,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1]明确给出3月15日来成都、16日晚玉林路老码头火锅"
+      },
+      {
+       "qid": 14,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1][5]明确最新行程为都江堰青城山隐庐民宿2晚"
+      },
+      {
+       "qid": 15,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1]明确说必点脑花和贡菜，香菜是一生之敌。"
+      },
+      {
+       "qid": 16,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1]明确含等价备注，无冲突信息"
+      },
+      {
+       "qid": 17,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1]明确给出40平一居室、月租2600，与标准答案一致。"
+      },
+      {
+       "qid": 18,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1]明确房东同意换小米滚筒洗衣机。"
+      },
+      {
+       "qid": 19,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1]明确提到成都春天雾霾重，与答案一致。"
+      },
+      {
+       "qid": 20,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1]明确含手冲咖啡和Hario V60滤杯信息"
+      },
+      {
+       "qid": 21,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1]明确提到妹妹3月8日参加高考百日誓师，与答案一致。"
+      },
+      {
+       "qid": 22,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[2]明确阿哲是大学室友，从深圳来成都出差。"
+      },
+      {
+       "qid": 23,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[2]明确原计划四姑娘山、空山民宿，新旧并存但原计划清晰。"
+      },
+      {
+       "qid": 24,
+       "type": "normal",
+       "correct": 0,
+       "misled": 0,
+       "reason": "记忆未提及每天花1小时，无相关信息"
+      },
+      {
+       "qid": 25,
+       "type": "normal",
+       "correct": 0,
+       "misled": 0,
+       "reason": "记忆只提年糕是室友的猫，未提年龄，缺关键信息"
+      },
+      {
+       "qid": 26,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1]明确说续签了一年，与答案一致。"
+      },
+      {
+       "qid": 27,
+       "type": "paraphrase",
+       "correct": 0,
+       "misled": 0,
+       "reason": "记忆无deadline和题量信息，无法回答"
+      },
+      {
+       "qid": 28,
+       "type": "paraphrase",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[2]明确提到米家空气净化器4 Pro，899元，与答案一致。"
+      },
+      {
+       "qid": 29,
+       "type": "paraphrase",
+       "correct": 0,
+       "misled": 0,
+       "reason": "记忆未提及V60或云南豆，仅加湿器和咖啡豆无关信息"
+      },
+      {
+       "qid": 30,
+       "type": "paraphrase",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[2]明确更正为支付回调接口，QPS 80到320，最新说法在场"
+      },
+      {
+       "qid": 31,
+       "type": "paraphrase",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[4]明确柯基叫煤球，2月20日打狂犬疫苗，纠正了旧说法。"
+      },
+      {
+       "qid": 32,
+       "type": "paraphrase",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆明确提到考完带小满去重庆玩三天，信息一致。"
+      },
+      {
+       "qid": 33,
+       "type": "correction",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1][3]明确年糕是室友的猫，自己养3岁柯基煤球"
+      },
+      {
+       "qid": 34,
+       "type": "correction",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1][4]明确项目叫星链，3月1日迁支付回调接口，QPS80到320"
+      },
+      {
+       "qid": 35,
+       "type": "correction",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1][4]明确最新行程为都江堰青城山、隐庐2晚，旧四姑娘山说法已被更正。"
+      },
+      {
+       "qid": 36,
+       "type": "correction",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1]明确纠正为狂犬疫苗，最新正确说法在场"
+      },
+      {
+       "qid": 37,
+       "type": "noise",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1]明确纠正：年糕是室友的猫，2月20日打狂犬疫苗的是柯基煤球"
+      },
+      {
+       "qid": 38,
+       "type": "noise",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1]明确纠正为支付回调接口，QPS 80到320"
+      },
+      {
+       "qid": 39,
+       "type": "noise",
+       "correct": 0,
+       "misled": 1,
+       "reason": "记忆[2]称住四姑娘山空山民宿3晚，与标准答案冲突且易误导"
+      },
+      {
+       "qid": 40,
+       "type": "noise",
+       "correct": 0,
+       "misled": 1,
+       "reason": "记忆[2]将899元归于空气净化器，滤杯价格268元在[1]，但问题混淆两者，易被带偏。"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "scale": 2000,
+   "results": {
+    "sme_chat": {
+     "status": "ok",
+     "dialogue_add_s": 104.7,
+     "distractor_add_s": 844.5,
+     "distractor_add_ms_p50": 422.2,
+     "acc": 0.9,
+     "misled": 2,
+     "storage": 2264,
+     "retrieval_p50_ms": 327.4,
+     "retrieval_p95_ms": 520.0,
+     "details": [
+      {
+       "qid": 1,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1]明确给出3月10日开始，信息一致无冲突"
+      },
+      {
+       "qid": 2,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1]明确给出6月底300道、动态规划和图论目标"
+      },
+      {
+       "qid": 3,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1]明确给出米家空气净化器4 Pro和899元，与标准答案一致。"
+      },
+      {
+       "qid": 4,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1]明确提到凑单买温湿度计69元，与答案一致。"
+      },
+      {
+       "qid": 5,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1]明确给出Hario V60陶瓷滤杯268元，与标准答案一致。"
+      },
+      {
+       "qid": 6,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1]明确提到云南保山小粒咖啡豆半磅"
+      },
+      {
+       "qid": 7,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[2]明确纠正项目名为星链，最新正确说法在场"
+      },
+      {
+       "qid": 8,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1]明确支付回调接口QPS从80到320，最新说法清晰"
+      },
+      {
+       "qid": 9,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1][3]明确纠正：自己养的是3岁柯基煤球，年糕是室友的猫。"
+      },
+      {
+       "qid": 10,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1]明确纠正为狂犬疫苗，最新说法在场"
+      },
+      {
+       "qid": 11,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1]明确给出小满、18岁、绵阳读高三，无冲突。"
+      },
+      {
+       "qid": 12,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1]明确说考完带她去重庆玩三天，与答案一致。"
+      },
+      {
+       "qid": 13,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1]明确给出3月15日来成都、16日晚玉林路老码头火锅"
+      },
+      {
+       "qid": 14,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1]明确最新行程为都江堰青城山、隐庐民宿2晚，旧说法已被更正。"
+      },
+      {
+       "qid": 15,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[2]明确说必点脑花和贡菜，最讨厌香菜。"
+      },
+      {
+       "qid": 16,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1]明确含相同备注，无冲突信息"
+      },
+      {
+       "qid": 17,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1]明确给出40平一居室、月租2600元，与标准答案一致。"
+      },
+      {
+       "qid": 18,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1]明确提到房东同意换小米滚筒洗衣机。"
+      },
+      {
+       "qid": 19,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1]明确提到成都春天雾霾重，与答案一致。"
+      },
+      {
+       "qid": 20,
+       "type": "normal",
+       "correct": 0,
+       "misled": 0,
+       "reason": "记忆无手冲咖啡和V60滤杯信息"
+      },
+      {
+       "qid": 21,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1]明确提到妹妹3月8日参加高考百日誓师，与答案一致。"
+      },
+      {
+       "qid": 22,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[2]明确阿哲是大学室友，从深圳来成都出差。"
+      },
+      {
+       "qid": 23,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[3]明确原计划四姑娘山、空山民宿，[1]为更新但原计划仍可辨"
+      },
+      {
+       "qid": 24,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[2]明确提到每天下班后刷一小时LeetCode。"
+      },
+      {
+       "qid": 25,
+       "type": "normal",
+       "correct": 0,
+       "misled": 0,
+       "reason": "记忆只提年糕是室友的猫，未提年龄，缺1岁半信息"
+      },
+      {
+       "qid": 26,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[2]明确说续签了一年，信息一致。"
+      },
+      {
+       "qid": 27,
+       "type": "paraphrase",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1]明确给出6月底前300道、重点DP和图论，无冲突。"
+      },
+      {
+       "qid": 28,
+       "type": "paraphrase",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1]明确提到买米家空气净化器4 Pro花899元"
+      },
+      {
+       "qid": 29,
+       "type": "paraphrase",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[2]明确提到Hario V60滤杯和云南保山豆"
+      },
+      {
+       "qid": 30,
+       "type": "paraphrase",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[2]明确纠正为支付回调接口，QPS从80到320，最新说法清晰。"
+      },
+      {
+       "qid": 31,
+       "type": "paraphrase",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1][2]明确柯基煤球、2月20日狂犬疫苗，最新说法在场"
+      },
+      {
+       "qid": 32,
+       "type": "paraphrase",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1][3]明确提到考完带小满去重庆，信息一致。"
+      },
+      {
+       "qid": 33,
+       "type": "correction",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1][2]明确年糕是室友的猫，自己养3岁柯基煤球"
+      },
+      {
+       "qid": 34,
+       "type": "correction",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1]明确纠正为星链，3月1日迁支付回调，QPS80到320"
+      },
+      {
+       "qid": 35,
+       "type": "correction",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1]明确最新行程为都江堰青城山，住隐庐民宿2晚"
+      },
+      {
+       "qid": 36,
+       "type": "correction",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1]明确纠正为狂犬疫苗，最新说法清晰在场"
+      },
+      {
+       "qid": 37,
+       "type": "noise",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1][2]明确纠正：年糕是室友的猫，2月20日打狂犬疫苗的是煤球"
+      },
+      {
+       "qid": 38,
+       "type": "noise",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1]明确纠正为星链、支付回调、QPS 80到320"
+      },
+      {
+       "qid": 39,
+       "type": "noise",
+       "correct": 0,
+       "misled": 1,
+       "reason": "记忆[3]称住四姑娘山空山民宿3晚，与标准答案冲突，且[1][2]虽纠正但问题问隐庐3晚易被误导"
+      },
+      {
+       "qid": 40,
+       "type": "noise",
+       "correct": 0,
+       "misled": 1,
+       "reason": "记忆[1]将899元归于空气净化器，滤杯实为268元，问题前提错误易被带偏"
+      }
+     ]
+    },
+    "rag_qwen3": {
+     "status": "ok",
+     "dialogue_add_s": 45.0,
+     "distractor_add_s": 645.5,
+     "distractor_add_ms_p50": 322.8,
+     "acc": 0.875,
+     "misled": 3,
+     "storage": 2047,
+     "retrieval_p50_ms": 322.6,
+     "retrieval_p95_ms": 506.2,
+     "details": [
+      {
+       "qid": 1,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1]明确提到3月10日开始每天下班刷一小时LeetCode"
+      },
+      {
+       "qid": 2,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1]明确6月底前300道，重点动态规划和图论"
+      },
+      {
+       "qid": 3,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1]明确给出米家空气净化器4 Pro和899元，与标准答案一致。"
+      },
+      {
+       "qid": 4,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1]明确提到凑单买温湿度计69元，与标准答案一致。"
+      },
+      {
+       "qid": 5,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1]明确给出Hario V60陶瓷滤杯和268元，与标准答案一致。"
+      },
+      {
+       "qid": 6,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[2]明确提到云南保山小粒咖啡豆半磅"
+      },
+      {
+       "qid": 7,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆明确项目叫星链，并纠正曾误称星轨，最新说法清晰。"
+      },
+      {
+       "qid": 8,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1]明确支付回调接口QPS从80到320，最新说法清晰"
+      },
+      {
+       "qid": 9,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1][4]明确煤球是3岁柯基，正确信息在场"
+      },
+      {
+       "qid": 10,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1]明确纠正为狂犬疫苗，信息一致。"
+      },
+      {
+       "qid": 11,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1]明确小满18岁在绵阳读高三，信息一致。"
+      },
+      {
+       "qid": 12,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1]明确说去重庆玩三天，与标准答案一致。"
+      },
+      {
+       "qid": 13,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[2]明确给出3月15日来成都、16日晚玉林路老码头火锅"
+      },
+      {
+       "qid": 14,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1][5]明确最新行程为都江堰青城山、隐庐民宿2晚"
+      },
+      {
+       "qid": 15,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆明确提到必点脑花和贡菜，最讨厌香菜"
+      },
+      {
+       "qid": 16,
+       "type": "normal",
+       "correct": 0,
+       "misled": 1,
+       "reason": "记忆仅提不要香菜，无小米辣，且日期不符"
+      },
+      {
+       "qid": 17,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1]明确给出40平一居室、月租2600，与标准答案一致。"
+      },
+      {
+       "qid": 18,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1]明确提到房东同意换小米滚筒。"
+      },
+      {
+       "qid": 19,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1]明确提到成都春天雾霾顶不住，与答案一致。"
+      },
+      {
+       "qid": 20,
+       "type": "normal",
+       "correct": 0,
+       "misled": 0,
+       "reason": "记忆无手冲咖啡和V60滤杯信息"
+      },
+      {
+       "qid": 21,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1]明确提到3月8日参加高考百日誓师，与答案一致。"
+      },
+      {
+       "qid": 22,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[4]明确说大学室友阿哲从深圳来成都出差，信息一致。"
+      },
+      {
+       "qid": 23,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[3]明确原计划四姑娘山、空山民宿3晚，新旧并存但正确信息在场"
+      },
+      {
+       "qid": 24,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1]明确说每天下班后刷一小时"
+      },
+      {
+       "qid": 25,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[2]明确年糕是1岁半橘猫，[3]确认是室友的猫"
+      },
+      {
+       "qid": 26,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[4]明确说续签了一年，信息一致且无冲突。"
+      },
+      {
+       "qid": 27,
+       "type": "paraphrase",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1]明确给出6月底前300道，重点DP和图论，与标准一致。"
+      },
+      {
+       "qid": 28,
+       "type": "paraphrase",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1]明确提到米家空气净化器4 Pro和899元，与标准答案一致。"
+      },
+      {
+       "qid": 29,
+       "type": "paraphrase",
+       "correct": 0,
+       "misled": 0,
+       "reason": "记忆未提及器具和豆子产地"
+      },
+      {
+       "qid": 30,
+       "type": "paraphrase",
+       "correct": 0,
+       "misled": 1,
+       "reason": "记忆均为数据库调优，无支付回调接口QPS信息"
+      },
+      {
+       "qid": 31,
+       "type": "paraphrase",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1][4]明确煤球是柯基，2月20日打狂犬疫苗"
+      },
+      {
+       "qid": 32,
+       "type": "paraphrase",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆明确提到考完带小满去重庆玩三天，信息一致。"
+      },
+      {
+       "qid": 33,
+       "type": "correction",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1][3]明确年糕是室友的猫，自己养3岁柯基煤球"
+      },
+      {
+       "qid": 34,
+       "type": "correction",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1]明确项目叫星链，3月1日迁支付回调接口，QPS80到320"
+      },
+      {
+       "qid": 35,
+       "type": "correction",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1]明确最新行程为都江堰青城山，住隐庐民宿2晚，旧说法已被覆盖。"
+      },
+      {
+       "qid": 36,
+       "type": "correction",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1]明确纠正为狂犬疫苗，最新说法清晰在场"
+      },
+      {
+       "qid": 37,
+       "type": "noise",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1][3]明确年糕是室友的猫，打狂犬疫苗的是煤球"
+      },
+      {
+       "qid": 38,
+       "type": "noise",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1]明确纠正为支付回调接口，QPS 80到320"
+      },
+      {
+       "qid": 39,
+       "type": "noise",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆明确改去青城山隐庐住2晚，旧四姑娘山说法已过期"
+      },
+      {
+       "qid": 40,
+       "type": "noise",
+       "correct": 0,
+       "misled": 1,
+       "reason": "记忆明确显示滤杯2月14日268元，3月2日899元是净化器，问题前提错误。"
+      }
+     ]
+    },
+    "bm25_bigram": {
+     "status": "ok",
+     "dialogue_add_s": 0.0,
+     "distractor_add_s": 0.0,
+     "distractor_add_ms_p50": 0.0,
+     "acc": 0.825,
+     "misled": 2,
+     "storage": 2047,
+     "retrieval_p50_ms": 7.1,
+     "retrieval_p95_ms": 10.0,
+     "details": [
+      {
+       "qid": 1,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1]明确含3月10日开始、每天1小时、6月底300道等信息"
+      },
+      {
+       "qid": 2,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1]明确给出6月底300道、动态规划和图论目标"
+      },
+      {
+       "qid": 3,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1]明确给出米家空气净化器4 Pro和899元，与标准答案一致。"
+      },
+      {
+       "qid": 4,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1]明确提到凑单买温湿度计69元，与答案一致。"
+      },
+      {
+       "qid": 5,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[3]明确给出Hario V60陶瓷滤杯268元，与标准答案一致。"
+      },
+      {
+       "qid": 6,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1]明确提到云南保山小粒咖啡豆半磅，与答案一致。"
+      },
+      {
+       "qid": 7,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[2][3]明确最新项目名为星链，[4]星轨为旧错说法已被纠正"
+      },
+      {
+       "qid": 8,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1]明确支付回调接口QPS从80到320，与标准答案一致"
+      },
+      {
+       "qid": 9,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1][4]明确煤球是3岁柯基，正确信息在场"
+      },
+      {
+       "qid": 10,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1]明确纠正为煤球打狂犬疫苗，正确信息在场"
+      },
+      {
+       "qid": 11,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1]明确给出小满、18岁、绵阳读高三，与答案一致。"
+      },
+      {
+       "qid": 12,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1]明确说考完带她去重庆玩三天"
+      },
+      {
+       "qid": 13,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1]明确给出3月15日来成都、16日晚玉林路老码头火锅"
+      },
+      {
+       "qid": 14,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1]明确最新行程为都江堰青城山、隐庐民宿2晚，与答案一致"
+      },
+      {
+       "qid": 15,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1]明确说必点脑花和贡菜，香菜是一生之敌。"
+      },
+      {
+       "qid": 16,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1]明确含等价备注，无冲突信息"
+      },
+      {
+       "qid": 17,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1]明确给出40平一居室、月租2600元，与标准答案一致。"
+      },
+      {
+       "qid": 18,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1]明确房东同意换小米滚筒洗衣机"
+      },
+      {
+       "qid": 19,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1]明确提到成都春天雾霾重，与答案一致。"
+      },
+      {
+       "qid": 20,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1]明确含手冲咖啡和Hario V60滤杯信息"
+      },
+      {
+       "qid": 21,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1]明确提到妹妹3月8日参加高考百日誓师，与答案一致。"
+      },
+      {
+       "qid": 22,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[2]明确阿哲是大学室友，从深圳来成都出差。"
+      },
+      {
+       "qid": 23,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[2]明确原计划四姑娘山、空山民宿，与标准答案一致"
+      },
+      {
+       "qid": 24,
+       "type": "normal",
+       "correct": 0,
+       "misled": 0,
+       "reason": "记忆未提及每天花1小时，无相关信息"
+      },
+      {
+       "qid": 25,
+       "type": "normal",
+       "correct": 0,
+       "misled": 0,
+       "reason": "记忆只提年糕是室友的猫，未提年龄，无冲突信息"
+      },
+      {
+       "qid": 26,
+       "type": "normal",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[2]明确说续签了一年，与答案一致。"
+      },
+      {
+       "qid": 27,
+       "type": "paraphrase",
+       "correct": 0,
+       "misled": 0,
+       "reason": "记忆未提及deadline和300题目标"
+      },
+      {
+       "qid": 28,
+       "type": "paraphrase",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[2]明确提到米家空气净化器4 Pro，899元，与答案一致。"
+      },
+      {
+       "qid": 29,
+       "type": "paraphrase",
+       "correct": 0,
+       "misled": 0,
+       "reason": "记忆未提及滤杯或咖啡豆产地，无法作答"
+      },
+      {
+       "qid": 30,
+       "type": "paraphrase",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[3]明确更正为支付回调接口，QPS 80到320，最新说法清晰。"
+      },
+      {
+       "qid": 31,
+       "type": "paraphrase",
+       "correct": 0,
+       "misled": 0,
+       "reason": "记忆无柯基、煤球或打针信息，无法回答"
+      },
+      {
+       "qid": 32,
+       "type": "paraphrase",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆明确提到考完带小满去重庆玩三天，信息一致。"
+      },
+      {
+       "qid": 33,
+       "type": "correction",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1][3]明确年糕是室友的猫，自己养3岁柯基煤球"
+      },
+      {
+       "qid": 34,
+       "type": "correction",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1][4]明确项目叫星链，3月1日迁支付回调接口，QPS80到320"
+      },
+      {
+       "qid": 35,
+       "type": "correction",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1][4]明确最新行程为都江堰青城山、隐庐住2晚，旧四姑娘山说法已被覆盖。"
+      },
+      {
+       "qid": 36,
+       "type": "correction",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1]明确纠正为狂犬疫苗，最新说法清晰在场。"
+      },
+      {
+       "qid": 37,
+       "type": "noise",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1]明确纠正：年糕是室友的猫，2月20日打狂犬疫苗的是柯基煤球。"
+      },
+      {
+       "qid": 38,
+       "type": "noise",
+       "correct": 1,
+       "misled": 0,
+       "reason": "记忆[1]明确纠正为支付回调，QPS 80到320，与标准一致"
+      },
+      {
+       "qid": 39,
+       "type": "noise",
+       "correct": 0,
+       "misled": 1,
+       "reason": "记忆[2]称住四姑娘山空山民宿3晚，与标准答案冲突且易误导。"
+      },
+      {
+       "qid": 40,
+       "type": "noise",
+       "correct": 0,
+       "misled": 1,
+       "reason": "记忆[2]显示899元是空气净化器，滤杯信息在[1]为268元，问题前提错误。"
+      }
+     ]
+    }
+   }
+  }
+ ]
+}

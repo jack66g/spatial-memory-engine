@@ -1,0 +1,2938 @@
+{
+  "contestants": {
+    "sme_chat": {
+      "status": "ok",
+      "error": null,
+      "reinit_s": 9.4,
+      "add_total_s": 111.2,
+      "add_p50_ms": 759.1,
+      "score": 38.0,
+      "acc": 0.95,
+      "misled": 1,
+      "storage": 87,
+      "retrieval_p50_ms": 335.6,
+      "quiz_total_s": 51.6,
+      "total_s": 172.2,
+      "details": [
+        {
+          "qid": 1,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确提到3月10日开始每天下班刷一小时LeetCode",
+          "hits_n": 5,
+          "top1": "我打算从3月10号开始每天下班后刷一小时LeetCode，目标6月底前刷完300道，重点补动态规划和图论。今天刚做了两道DP，感觉自己脑子像生锈了一样。",
+          "judge_failed": false
+        },
+        {
+          "qid": 2,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出6月底前300道、重点动态规划和图论。",
+          "hits_n": 5,
+          "top1": "我打算从3月10号开始每天下班后刷一小时LeetCode，目标6月底前刷完300道，重点补动态规划和图论。今天刚做了两道DP，感觉自己脑子像生锈了一样。",
+          "judge_failed": false
+        },
+        {
+          "qid": 3,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出米家空气净化器4 Pro和899元，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "说到花钱，我3月2号在京东下单了一台米家空气净化器4 Pro，899块。成都春天这雾霾真的顶不住，顺便凑单买了个69块的温湿度计，感觉自己越来越像个养生中年人了",
+          "judge_failed": false
+        },
+        {
+          "qid": 4,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确提到凑单买温湿度计69元，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "说到花钱，我3月2号在京东下单了一台米家空气净化器4 Pro，899块。成都春天这雾霾真的顶不住，顺便凑单买了个69块的温湿度计，感觉自己越来越像个养生中年人了",
+          "judge_failed": false
+        },
+        {
+          "qid": 5,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确给出Hario V60陶瓷滤杯268元，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "我那个加湿器终于下单了，顺便又买了一包新豆子，这个月工资已经提前阵亡。独居青年的钱就是这么没的。",
+          "judge_failed": false
+        },
+        {
+          "qid": 6,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确提到云南保山小粒咖啡豆，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "我最近迷上了做手冲咖啡，2月14号花268买了个Hario V60陶瓷滤杯，还囤了半磅云南保山小粒咖啡豆。今天冲了一杯，酸质还挺明亮的，就是手抖水温没控好。",
+          "judge_failed": false
+        },
+        {
+          "qid": 7,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2][3]明确项目叫星链，[5]星轨为旧错说法，最新正确清晰",
+          "hits_n": 5,
+          "top1": "公司今天开季度会，说“星链”项目进度不错，我表面点头，内心想的是我那段支付回调的坑还没填完，别夸太早。",
+          "judge_failed": false
+        },
+        {
+          "qid": 8,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确支付回调接口QPS从80到320，最新说法在场",
+          "hits_n": 5,
+          "top1": "我那个项目我再说一遍哈，叫“星链”，不是“星轨”，我之前一直说错了。3月1号迁的其实是支付回调接口，QPS从80提到320，订单查询那个是另一回事。脑子最近真的",
+          "judge_failed": false
+        },
+        {
+          "qid": 9,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][3]明确纠正为3岁柯基煤球，最新正确说法在场",
+          "hits_n": 5,
+          "top1": "哎我纠正一下，年糕其实是我合租室友的猫，我自己养的是狗，一只3岁的柯基叫煤球。2月20号打的是狂犬疫苗，不是猫三联，我前面记混了，服了我自己。",
+          "judge_failed": false
+        },
+        {
+          "qid": 10,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确纠正为煤球打狂犬疫苗，最新说法清晰。",
+          "hits_n": 5,
+          "top1": "哎我纠正一下，年糕其实是我合租室友的猫，我自己养的是狗，一只3岁的柯基叫煤球。2月20号打的是狂犬疫苗，不是猫三联，我前面记混了，服了我自己。",
+          "judge_failed": false
+        },
+        {
+          "qid": 11,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确小满18岁在绵阳读高三，信息一致。",
+          "hits_n": 5,
+          "top1": "我妹小满3月8号刚参加完高考百日誓师，她在绵阳读高三，今年18。我答应她等考完带她去重庆玩三天，现在想想我钱包已经开始疼了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 12,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确答应带妹妹去重庆玩三天，信息一致。",
+          "hits_n": 5,
+          "top1": "我妹小满3月8号刚参加完高考百日誓师，她在绵阳读高三，今年18。我答应她等考完带她去重庆玩三天，现在想想我钱包已经开始疼了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 13,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出3月15日来成都、16日晚玉林路老码头火锅",
+          "hits_n": 5,
+          "top1": "对了，我大学室友阿哲3月15号要从深圳来成都出差，我们约了16号晚上去玉林路那家“老码头火锅”吃饭。好久没见了，有点期待又有点怕他喝多。",
+          "judge_failed": false
+        },
+        {
+          "qid": 14,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确最新行程为都江堰青城山、隐庐民宿2晚",
+          "hits_n": 5,
+          "top1": "我清明节行程改了，不去四姑娘山了，改成4月4号到5号去都江堰和青城山，订的是青城山脚下的“隐庐民宿”，住2晚。空山民宿那边我退了，扣了点手续费，心疼。",
+          "judge_failed": false
+        },
+        {
+          "qid": 15,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确说必点脑花和贡菜，最讨厌香菜。",
+          "hits_n": 5,
+          "top1": "我今天点外卖又备注了“多放小米辣，不要香菜，谢谢”，结果还是给我撒了一把香菜，气死。吃火锅我必点脑花和贡菜，但香菜真的是我一生之敌。",
+          "judge_failed": false
+        },
+        {
+          "qid": 16,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]含等价备注信息，无冲突干扰",
+          "hits_n": 5,
+          "top1": "我今天点外卖又备注了“多放小米辣，不要香菜，谢谢”，结果还是给我撒了一把香菜，气死。吃火锅我必点脑花和贡菜，但香菜真的是我一生之敌。",
+          "judge_failed": false
+        },
+        {
+          "qid": 17,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出40平一居室、月租2600元，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "我租房这边2月25号刚续签了一年，还是高新区那个40平的一居室，月租2600。房东人还行，同意把旧洗衣机换成小米滚筒，总算不用手洗衣服了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 18,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确房东同意换小米滚筒洗衣机，与答案一致。",
+          "hits_n": 5,
+          "top1": "我租房这边2月25号刚续签了一年，还是高新区那个40平的一居室，月租2600。房东人还行，同意把旧洗衣机换成小米滚筒，总算不用手洗衣服了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 19,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确提到成都春天雾霾顶不住，与答案一致。",
+          "hits_n": 5,
+          "top1": "说到花钱，我3月2号在京东下单了一台米家空气净化器4 Pro，899块。成都春天这雾霾真的顶不住，顺便凑单买了个69块的温湿度计，感觉自己越来越像个养生中年人了",
+          "judge_failed": false
+        },
+        {
+          "qid": 20,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确提到迷上手冲咖啡并2月14日买Hario V60滤杯",
+          "hits_n": 5,
+          "top1": "我最近迷上了做手冲咖啡，2月14号花268买了个Hario V60陶瓷滤杯，还囤了半磅云南保山小粒咖啡豆。今天冲了一杯，酸质还挺明亮的，就是手抖水温没控好。",
+          "judge_failed": false
+        },
+        {
+          "qid": 21,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确提到小满3月8日参加高考百日誓师，与答案一致。",
+          "hits_n": 5,
+          "top1": "我妹小满3月8号刚参加完高考百日誓师，她在绵阳读高三，今年18。我答应她等考完带她去重庆玩三天，现在想想我钱包已经开始疼了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 22,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确阿哲是大学室友，从深圳来成都出差",
+          "hits_n": 5,
+          "top1": "对了，我大学室友阿哲3月15号要从深圳来成都出差，我们约了16号晚上去玉林路那家“老码头火锅”吃饭。好久没见了，有点期待又有点怕他喝多。",
+          "judge_failed": false
+        },
+        {
+          "qid": 23,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[4]明确原计划四姑娘山、空山民宿，[1]仅更新为改去青城山",
+          "hits_n": 5,
+          "top1": "我清明节行程改了，不去四姑娘山了，改成4月4号到5号去都江堰和青城山，订的是青城山脚下的“隐庐民宿”，住2晚。空山民宿那边我退了，扣了点手续费，心疼。",
+          "judge_failed": false
+        },
+        {
+          "qid": 24,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确说每天下班后刷一小时LeetCode。",
+          "hits_n": 5,
+          "top1": "我打算从3月10号开始每天下班后刷一小时LeetCode，目标6月底前刷完300道，重点补动态规划和图论。今天刚做了两道DP，感觉自己脑子像生锈了一样。",
+          "judge_failed": false
+        },
+        {
+          "qid": 25,
+          "type": "normal",
+          "correct": 0,
+          "misled": 0,
+          "reason": "记忆只提年糕是室友的猫，未提年龄，无法答出1岁半",
+          "hits_n": 5,
+          "top1": "哎我纠正一下，年糕其实是我合租室友的猫，我自己养的是狗，一只3岁的柯基叫煤球。2月20号打的是狂犬疫苗，不是猫三联，我前面记混了，服了我自己。",
+          "judge_failed": false
+        },
+        {
+          "qid": 26,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确说续签了一年，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "我租房这边2月25号刚续签了一年，还是高新区那个40平的一居室，月租2600。房东人还行，同意把旧洗衣机换成小米滚筒，总算不用手洗衣服了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 27,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出6月底前300道，重点DP和图论，无冲突。",
+          "hits_n": 5,
+          "top1": "我打算从3月10号开始每天下班后刷一小时LeetCode，目标6月底前刷完300道，重点补动态规划和图论。今天刚做了两道DP，感觉自己脑子像生锈了一样。",
+          "judge_failed": false
+        },
+        {
+          "qid": 28,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确提到米家空气净化器4 Pro，899元，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "说到花钱，我3月2号在京东下单了一台米家空气净化器4 Pro，899块。成都春天这雾霾真的顶不住，顺便凑单买了个69块的温湿度计，感觉自己越来越像个养生中年人了",
+          "judge_failed": false
+        },
+        {
+          "qid": 29,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确提到Hario V60滤杯和云南保山豆，无冲突。",
+          "hits_n": 5,
+          "top1": "我那个加湿器终于下单了，顺便又买了一包新豆子，这个月工资已经提前阵亡。独居青年的钱就是这么没的。",
+          "judge_failed": false
+        },
+        {
+          "qid": 30,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确支付回调接口QPS80到320，最新说法在场",
+          "hits_n": 5,
+          "top1": "我那个项目我再说一遍哈，叫“星链”，不是“星轨”，我之前一直说错了。3月1号迁的其实是支付回调接口，QPS从80提到320，订单查询那个是另一回事。脑子最近真的",
+          "judge_failed": false
+        },
+        {
+          "qid": 31,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确柯基煤球2月20日打狂犬疫苗，与答案一致",
+          "hits_n": 5,
+          "top1": "我确认一下我现在没记错：项目叫“星链”，狗叫煤球3岁柯基，猫年糕是室友的，清明去青城山住“隐庐”2晚。嗯，这回应该对了，再错我请自己喝一周白开水。",
+          "judge_failed": false
+        },
+        {
+          "qid": 32,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆明确提到考完带小满去重庆玩三天，信息一致。",
+          "hits_n": 5,
+          "top1": "我妹小满3月8号刚参加完高考百日誓师，她在绵阳读高三，今年18。我答应她等考完带她去重庆玩三天，现在想想我钱包已经开始疼了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 33,
+          "type": "correction",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][2]明确年糕是室友的猫，自己养3岁柯基煤球",
+          "hits_n": 5,
+          "top1": "哎我纠正一下，年糕其实是我合租室友的猫，我自己养的是狗，一只3岁的柯基叫煤球。2月20号打的是狂犬疫苗，不是猫三联，我前面记混了，服了我自己。",
+          "judge_failed": false
+        },
+        {
+          "qid": 34,
+          "type": "correction",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][2]明确纠正为星链，3月1日迁支付回调接口",
+          "hits_n": 5,
+          "top1": "我那个项目我再说一遍哈，叫“星链”，不是“星轨”，我之前一直说错了。3月1号迁的其实是支付回调接口，QPS从80提到320，订单查询那个是另一回事。脑子最近真的",
+          "judge_failed": false
+        },
+        {
+          "qid": 35,
+          "type": "correction",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][2]明确最新行程为都江堰青城山、隐庐2晚，旧四姑娘山说法已过期",
+          "hits_n": 5,
+          "top1": "我清明节行程改了，不去四姑娘山了，改成4月4号到5号去都江堰和青城山，订的是青城山脚下的“隐庐民宿”，住2晚。空山民宿那边我退了，扣了点手续费，心疼。",
+          "judge_failed": false
+        },
+        {
+          "qid": 36,
+          "type": "correction",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确纠正为狂犬疫苗，最新说法在场",
+          "hits_n": 5,
+          "top1": "哎我纠正一下，年糕其实是我合租室友的猫，我自己养的是狗，一只3岁的柯基叫煤球。2月20号打的是狂犬疫苗，不是猫三联，我前面记混了，服了我自己。",
+          "judge_failed": false
+        },
+        {
+          "qid": 37,
+          "type": "noise",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][2]明确年糕是室友的猫，打狂犬疫苗的是柯基煤球",
+          "hits_n": 5,
+          "top1": "哎我纠正一下，年糕其实是我合租室友的猫，我自己养的是狗，一只3岁的柯基叫煤球。2月20号打的是狂犬疫苗，不是猫三联，我前面记混了，服了我自己。",
+          "judge_failed": false
+        },
+        {
+          "qid": 38,
+          "type": "noise",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确纠正：3月1日迁支付回调，QPS80到320。",
+          "hits_n": 5,
+          "top1": "我那个项目我再说一遍哈，叫“星链”，不是“星轨”，我之前一直说错了。3月1号迁的其实是支付回调接口，QPS从80提到320，订单查询那个是另一回事。脑子最近真的",
+          "judge_failed": false
+        },
+        {
+          "qid": 39,
+          "type": "noise",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确改去青城山隐庐住2晚，最新说法清晰",
+          "hits_n": 5,
+          "top1": "我清明节行程改了，不去四姑娘山了，改成4月4号到5号去都江堰和青城山，订的是青城山脚下的“隐庐民宿”，住2晚。空山民宿那边我退了，扣了点手续费，心疼。",
+          "judge_failed": false
+        },
+        {
+          "qid": 40,
+          "type": "noise",
+          "correct": 0,
+          "misled": 1,
+          "reason": "记忆明确滤杯2月14日268元，净化器3月2日899元，问题混淆两者。",
+          "hits_n": 5,
+          "top1": "我最近迷上了做手冲咖啡，2月14号花268买了个Hario V60陶瓷滤杯，还囤了半磅云南保山小粒咖啡豆。今天冲了一杯，酸质还挺明亮的，就是手抖水温没控好。",
+          "judge_failed": false
+        }
+      ]
+    },
+    "sme_kb_dynamic": {
+      "status": "ok",
+      "error": null,
+      "reinit_s": 0.3,
+      "add_total_s": 213.0,
+      "add_p50_ms": 3635.9,
+      "score": 32.0,
+      "acc": 0.8,
+      "misled": 6,
+      "storage": 189,
+      "retrieval_p50_ms": 331.9,
+      "quiz_total_s": 50.8,
+      "total_s": 264.1,
+      "details": [
+        {
+          "qid": 1,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出3月10日开始，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户打算从3月10号开始每天下班后刷一小时LeetCode",
+          "judge_failed": false
+        },
+        {
+          "qid": 2,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]和[5]直接给出目标与重点，无冲突信息",
+          "hits_n": 5,
+          "top1": "用户的目标是6月底前刷完300道LeetCode题",
+          "judge_failed": false
+        },
+        {
+          "qid": 3,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出品牌型号和价格，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户在3月2号在京东下单了一台米家空气净化器4 Pro，价格899块",
+          "judge_failed": false
+        },
+        {
+          "qid": 4,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确提到凑单买69元温湿度计，与答案一致。",
+          "hits_n": 5,
+          "top1": "用户凑单买了一个69块的温湿度计",
+          "judge_failed": false
+        },
+        {
+          "qid": 5,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出Hario V60陶瓷滤杯及268元，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "用户在2月14号花268元买了个Hario V60陶瓷滤杯",
+          "judge_failed": false
+        },
+        {
+          "qid": 6,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确提到云南保山小粒咖啡豆，与答案一致",
+          "hits_n": 5,
+          "top1": "用户囤了半磅云南保山小粒咖啡豆",
+          "judge_failed": false
+        },
+        {
+          "qid": 7,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[5]明确项目叫星链，非星轨，最新正确说法在场",
+          "hits_n": 5,
+          "top1": "用户的项目叫“星链”",
+          "judge_failed": false
+        },
+        {
+          "qid": 8,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出支付回调接口QPS从80到320，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户3月1号迁移的是支付回调接口，QPS从80提到320",
+          "judge_failed": false
+        },
+        {
+          "qid": 9,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[3][4]明确给出3岁柯基叫煤球，无冲突干扰",
+          "hits_n": 5,
+          "top1": "煤球是用户养的宠物",
+          "judge_failed": false
+        },
+        {
+          "qid": 10,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确说明打的是狂犬疫苗，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "用户2月20号打的是狂犬疫苗，不是猫三联",
+          "judge_failed": false
+        },
+        {
+          "qid": 11,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆明确给出小满、18岁、绵阳读高三，无冲突",
+          "hits_n": 5,
+          "top1": "用户的妹妹叫小满",
+          "judge_failed": false
+        },
+        {
+          "qid": 12,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确提到去重庆玩三天，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "用户答应妹妹等考完带她去重庆玩三天",
+          "judge_failed": false
+        },
+        {
+          "qid": 13,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2][3]明确给出3月15日来、16日晚老码头火锅",
+          "hits_n": 5,
+          "top1": "阿哲走之前说下次来成都让用户带他去吃串串",
+          "judge_failed": false
+        },
+        {
+          "qid": 14,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆含青城山隐庐住2晚，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户清明节行程改了，不去四姑娘山了",
+          "judge_failed": false
+        },
+        {
+          "qid": 15,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]和[4]直接给出必点脑花贡菜、讨厌香菜",
+          "hits_n": 5,
+          "top1": "用户吃火锅必点脑花和贡菜",
+          "judge_failed": false
+        },
+        {
+          "qid": 16,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确含等价备注信息，无冲突干扰",
+          "hits_n": 5,
+          "top1": "用户点外卖会备注“多放小米辣，不要香菜，谢谢”",
+          "judge_failed": false
+        },
+        {
+          "qid": 17,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][2]直接给出40平一居室和月租2600，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户租的房子在高新区，是40平的一居室",
+          "judge_failed": false
+        },
+        {
+          "qid": 18,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[3]明确房东同意换小米滚筒，与答案一致",
+          "hits_n": 5,
+          "top1": "用户租房在2月25号刚续签了一年",
+          "judge_failed": false
+        },
+        {
+          "qid": 19,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确提到成都春天雾霾严重，与答案一致",
+          "hits_n": 5,
+          "top1": "用户的空气净化器今天到了",
+          "judge_failed": false
+        },
+        {
+          "qid": 20,
+          "type": "normal",
+          "correct": 0,
+          "misled": 0,
+          "reason": "咖啡信息在，但2月14日买滤杯信息缺失",
+          "hits_n": 5,
+          "top1": "用户最近迷上了做手冲咖啡",
+          "judge_failed": false
+        },
+        {
+          "qid": 21,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确提到高考百日誓师，与答案一致。",
+          "hits_n": 5,
+          "top1": "用户的妹妹小满3月8号刚参加完高考百日誓师",
+          "judge_failed": false
+        },
+        {
+          "qid": 22,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确大学室友、从深圳来成都出差",
+          "hits_n": 5,
+          "top1": "阿哲走之前说下次来成都让用户带他去吃串串",
+          "judge_failed": false
+        },
+        {
+          "qid": 23,
+          "type": "normal",
+          "correct": 0,
+          "misled": 1,
+          "reason": "记忆只提青城山隐庐，无四姑娘山空山民宿，且有过期说法",
+          "hits_n": 5,
+          "top1": "用户计划清明去青城山隐庐民宿",
+          "judge_failed": false
+        },
+        {
+          "qid": 24,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[3]明确每天下班后刷一小时，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "用户算过到6月底每天需要刷3道多LeetCode题才够300道",
+          "judge_failed": false
+        },
+        {
+          "qid": 25,
+          "type": "normal",
+          "correct": 0,
+          "misled": 1,
+          "reason": "记忆只提猫名年糕，无年龄信息，且无1岁半说法",
+          "hits_n": 5,
+          "top1": "用户的猫叫年糕，是室友的",
+          "judge_failed": false
+        },
+        {
+          "qid": 26,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确说续签了一年，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "用户租房在2月25号刚续签了一年",
+          "judge_failed": false
+        },
+        {
+          "qid": 27,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[3]明确6月底前300道，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户算过到6月底每天需要刷3道多LeetCode题才够300道",
+          "judge_failed": false
+        },
+        {
+          "qid": 28,
+          "type": "paraphrase",
+          "correct": 0,
+          "misled": 1,
+          "reason": "记忆只提到空气净化器到货，无品牌价格，且温湿度计干扰",
+          "hits_n": 5,
+          "top1": "用户觉得成都春天的雾霾很严重",
+          "judge_failed": false
+        },
+        {
+          "qid": 29,
+          "type": "paraphrase",
+          "correct": 0,
+          "misled": 1,
+          "reason": "记忆只提手冲咖啡和云南豆，无V60滤杯及保山小粒信息",
+          "hits_n": 5,
+          "top1": "用户最近迷上了做手冲咖啡",
+          "judge_failed": false
+        },
+        {
+          "qid": 30,
+          "type": "paraphrase",
+          "correct": 0,
+          "misled": 0,
+          "reason": "记忆无支付回调或性能优化信息",
+          "hits_n": 5,
+          "top1": "用户最近迷上了做手冲咖啡",
+          "judge_failed": false
+        },
+        {
+          "qid": 31,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆含煤球柯基及2月20日狂犬疫苗，与答案一致",
+          "hits_n": 5,
+          "top1": "用户养的狗叫煤球，3岁，是柯基",
+          "judge_failed": false
+        },
+        {
+          "qid": 32,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确提到带妹妹考完去重庆玩三天，与答案一致。",
+          "hits_n": 5,
+          "top1": "用户答应妹妹等考完带她去重庆玩三天",
+          "judge_failed": false
+        },
+        {
+          "qid": 33,
+          "type": "correction",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆明确年糕是室友的，自己养3岁柯基煤球",
+          "hits_n": 5,
+          "top1": "用户的猫叫年糕，是室友的",
+          "judge_failed": false
+        },
+        {
+          "qid": 34,
+          "type": "correction",
+          "correct": 0,
+          "misled": 1,
+          "reason": "记忆无支付回调接口及QPS信息，且项目名有冲突干扰",
+          "hits_n": 5,
+          "top1": "用户的项目叫“星链”",
+          "judge_failed": false
+        },
+        {
+          "qid": 35,
+          "type": "correction",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆明确最新去青城山隐庐住2晚，旧四姑娘山说法已过期",
+          "hits_n": 5,
+          "top1": "用户清明节行程改了，不去四姑娘山了",
+          "judge_failed": false
+        },
+        {
+          "qid": 36,
+          "type": "correction",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确说打的是狂犬疫苗，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "用户2月20号打的是狂犬疫苗，不是猫三联",
+          "judge_failed": false
+        },
+        {
+          "qid": 37,
+          "type": "noise",
+          "correct": 0,
+          "misled": 1,
+          "reason": "记忆误将年糕与狂犬疫苗关联，正确信息缺失",
+          "hits_n": 5,
+          "top1": "用户2月20号打的是狂犬疫苗，不是猫三联",
+          "judge_failed": false
+        },
+        {
+          "qid": 38,
+          "type": "noise",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确支付回调接口QPS80到320，与标准一致",
+          "hits_n": 5,
+          "top1": "用户的项目叫“星链”",
+          "judge_failed": false
+        },
+        {
+          "qid": 39,
+          "type": "noise",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆明确改去青城山隐庐住2晚，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户清明节行程改了，不去四姑娘山了",
+          "judge_failed": false
+        },
+        {
+          "qid": 40,
+          "type": "noise",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆明确区分滤杯268元与净化器899元，无冲突",
+          "hits_n": 5,
+          "top1": "用户在2月14号花268元买了个Hario V60陶瓷滤杯",
+          "judge_failed": false
+        }
+      ]
+    },
+    "sme_minimal": {
+      "status": "ok",
+      "error": null,
+      "reinit_s": 0.3,
+      "add_total_s": 44.6,
+      "add_p50_ms": 721.1,
+      "score": 38.0,
+      "acc": 0.95,
+      "misled": 1,
+      "storage": 60,
+      "retrieval_p50_ms": 326.5,
+      "quiz_total_s": 51.6,
+      "total_s": 96.5,
+      "details": [
+        {
+          "qid": 1,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确含3月10日开始、每天下班1小时、6月底300道等信息",
+          "hits_n": 5,
+          "top1": "我打算从3月10号开始每天下班后刷一小时LeetCode，目标6月底前刷完300道，重点补动态规划和图论。今天刚做了两道DP，感觉自己脑子像生锈了一样。",
+          "judge_failed": false
+        },
+        {
+          "qid": 2,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出6月底前300道、重点动态规划和图论，无冲突。",
+          "hits_n": 5,
+          "top1": "我打算从3月10号开始每天下班后刷一小时LeetCode，目标6月底前刷完300道，重点补动态规划和图论。今天刚做了两道DP，感觉自己脑子像生锈了一样。",
+          "judge_failed": false
+        },
+        {
+          "qid": 3,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出米家空气净化器4 Pro和899元，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "说到花钱，我3月2号在京东下单了一台米家空气净化器4 Pro，899块。成都春天这雾霾真的顶不住，顺便凑单买了个69块的温湿度计，感觉自己越来越像个养生中年人了",
+          "judge_failed": false
+        },
+        {
+          "qid": 4,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确提到凑单买温湿度计69元，与答案一致。",
+          "hits_n": 5,
+          "top1": "说到花钱，我3月2号在京东下单了一台米家空气净化器4 Pro，899块。成都春天这雾霾真的顶不住，顺便凑单买了个69块的温湿度计，感觉自己越来越像个养生中年人了",
+          "judge_failed": false
+        },
+        {
+          "qid": 5,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出Hario V60陶瓷滤杯和268元，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "我最近迷上了做手冲咖啡，2月14号花268买了个Hario V60陶瓷滤杯，还囤了半磅云南保山小粒咖啡豆。今天冲了一杯，酸质还挺明亮的，就是手抖水温没控好。",
+          "judge_failed": false
+        },
+        {
+          "qid": 6,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确提到云南保山小粒咖啡豆半磅，与答案一致。",
+          "hits_n": 5,
+          "top1": "我最近迷上了做手冲咖啡，2月14号花268买了个Hario V60陶瓷滤杯，还囤了半磅云南保山小粒咖啡豆。今天冲了一杯，酸质还挺明亮的，就是手抖水温没控好。",
+          "judge_failed": false
+        },
+        {
+          "qid": 7,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2][3]明确纠正项目名为星链，最新说法清晰在场",
+          "hits_n": 5,
+          "top1": "公司今天开季度会，说“星链”项目进度不错，我表面点头，内心想的是我那段支付回调的坑还没填完，别夸太早。",
+          "judge_failed": false
+        },
+        {
+          "qid": 8,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确支付回调接口QPS从80到320，最新说法清晰",
+          "hits_n": 5,
+          "top1": "我那个项目我再说一遍哈，叫“星链”，不是“星轨”，我之前一直说错了。3月1号迁的其实是支付回调接口，QPS从80提到320，订单查询那个是另一回事。脑子最近真的",
+          "judge_failed": false
+        },
+        {
+          "qid": 9,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][2]明确煤球是3岁柯基，年糕为室友猫，正确信息在场",
+          "hits_n": 5,
+          "top1": "哎我纠正一下，年糕其实是我合租室友的猫，我自己养的是狗，一只3岁的柯基叫煤球。2月20号打的是狂犬疫苗，不是猫三联，我前面记混了，服了我自己。",
+          "judge_failed": false
+        },
+        {
+          "qid": 10,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确纠正为狂犬疫苗，最新正确说法在场。",
+          "hits_n": 5,
+          "top1": "哎我纠正一下，年糕其实是我合租室友的猫，我自己养的是狗，一只3岁的柯基叫煤球。2月20号打的是狂犬疫苗，不是猫三联，我前面记混了，服了我自己。",
+          "judge_failed": false
+        },
+        {
+          "qid": 11,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确小满18岁在绵阳读高三，信息一致",
+          "hits_n": 5,
+          "top1": "我妹小满3月8号刚参加完高考百日誓师，她在绵阳读高三，今年18。我答应她等考完带她去重庆玩三天，现在想想我钱包已经开始疼了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 12,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确说考完带她去重庆玩三天，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "我妹小满3月8号刚参加完高考百日誓师，她在绵阳读高三，今年18。我答应她等考完带她去重庆玩三天，现在想想我钱包已经开始疼了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 13,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出3月15日来成都、16日晚玉林路老码头火锅",
+          "hits_n": 5,
+          "top1": "对了，我大学室友阿哲3月15号要从深圳来成都出差，我们约了16号晚上去玉林路那家“老码头火锅”吃饭。好久没见了，有点期待又有点怕他喝多。",
+          "judge_failed": false
+        },
+        {
+          "qid": 14,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出最新行程：都江堰青城山、隐庐民宿、2晚",
+          "hits_n": 5,
+          "top1": "我清明节行程改了，不去四姑娘山了，改成4月4号到5号去都江堰和青城山，订的是青城山脚下的“隐庐民宿”，住2晚。空山民宿那边我退了，扣了点手续费，心疼。",
+          "judge_failed": false
+        },
+        {
+          "qid": 15,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][2]明确提到必点脑花和贡菜，最讨厌香菜。",
+          "hits_n": 5,
+          "top1": "我今天点外卖又备注了“多放小米辣，不要香菜，谢谢”，结果还是给我撒了一把香菜，气死。吃火锅我必点脑花和贡菜，但香菜真的是我一生之敌。",
+          "judge_failed": false
+        },
+        {
+          "qid": 16,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]含等价备注，无冲突信息",
+          "hits_n": 5,
+          "top1": "今天点外卖终于没踩雷，一家新开的冒菜，我备注不要香菜，这次真的没放，感动得想给老板写感谢信。",
+          "judge_failed": false
+        },
+        {
+          "qid": 17,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出40平一居室、月租2600，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "我租房这边2月25号刚续签了一年，还是高新区那个40平的一居室，月租2600。房东人还行，同意把旧洗衣机换成小米滚筒，总算不用手洗衣服了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 18,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确房东同意换小米滚筒洗衣机，与答案一致。",
+          "hits_n": 5,
+          "top1": "我租房这边2月25号刚续签了一年，还是高新区那个40平的一居室，月租2600。房东人还行，同意把旧洗衣机换成小米滚筒，总算不用手洗衣服了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 19,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确提到成都春天雾霾顶不住，与答案一致。",
+          "hits_n": 5,
+          "top1": "说到花钱，我3月2号在京东下单了一台米家空气净化器4 Pro，899块。成都春天这雾霾真的顶不住，顺便凑单买了个69块的温湿度计，感觉自己越来越像个养生中年人了",
+          "judge_failed": false
+        },
+        {
+          "qid": 20,
+          "type": "normal",
+          "correct": 0,
+          "misled": 0,
+          "reason": "记忆无手冲咖啡滤杯及2月14日购买信息",
+          "hits_n": 5,
+          "top1": "我那个加湿器终于下单了，顺便又买了一包新豆子，这个月工资已经提前阵亡。独居青年的钱就是这么没的。",
+          "judge_failed": false
+        },
+        {
+          "qid": 21,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确提到3月8日参加高考百日誓师，与答案一致。",
+          "hits_n": 5,
+          "top1": "我妹小满3月8号刚参加完高考百日誓师，她在绵阳读高三，今年18。我答应她等考完带她去重庆玩三天，现在想想我钱包已经开始疼了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 22,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确阿哲是大学室友，从深圳来成都出差。",
+          "hits_n": 5,
+          "top1": "阿哲回深圳了，走之前说下次来成都让我带他去吃串串。我说你先练练吃辣，别到时候又抱着唯怡豆奶不撒手。",
+          "judge_failed": false
+        },
+        {
+          "qid": 23,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确原计划四姑娘山、空山民宿，新旧并存且正确信息在场",
+          "hits_n": 5,
+          "top1": "我清明节行程改了，不去四姑娘山了，改成4月4号到5号去都江堰和青城山，订的是青城山脚下的“隐庐民宿”，住2晚。空山民宿那边我退了，扣了点手续费，心疼。",
+          "judge_failed": false
+        },
+        {
+          "qid": 24,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确提到每天下班后刷一小时LeetCode，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "LeetCode进度有点落后，我算了下到6月底每天得刷3道多才够300，压力上来了。今晚先刷两道图论，BFS和DFS我还能扛。",
+          "judge_failed": false
+        },
+        {
+          "qid": 25,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[3]明确年糕是1岁半橘猫，与答案一致",
+          "hits_n": 5,
+          "top1": "哎我纠正一下，年糕其实是我合租室友的猫，我自己养的是狗，一只3岁的柯基叫煤球。2月20号打的是狂犬疫苗，不是猫三联，我前面记混了，服了我自己。",
+          "judge_failed": false
+        },
+        {
+          "qid": 26,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确说续签了一年，与答案一致。",
+          "hits_n": 5,
+          "top1": "我租房这边2月25号刚续签了一年，还是高新区那个40平的一居室，月租2600。房东人还行，同意把旧洗衣机换成小米滚筒，总算不用手洗衣服了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 27,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确给出6月底前刷完300道，重点补动态规划和图论。",
+          "hits_n": 5,
+          "top1": "LeetCode今天刷了三道，其中一道背包问题居然自己写出来了，我激动得差点把咖啡洒键盘上。动态规划好像也没那么可怕？",
+          "judge_failed": false
+        },
+        {
+          "qid": 28,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确提到买米家空气净化器4 Pro，899元，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "说到花钱，我3月2号在京东下单了一台米家空气净化器4 Pro，899块。成都春天这雾霾真的顶不住，顺便凑单买了个69块的温湿度计，感觉自己越来越像个养生中年人了",
+          "judge_failed": false
+        },
+        {
+          "qid": 29,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确提到Hario V60滤杯和云南保山豆，信息一致。",
+          "hits_n": 5,
+          "top1": "我那个加湿器终于下单了，顺便又买了一包新豆子，这个月工资已经提前阵亡。独居青年的钱就是这么没的。",
+          "judge_failed": false
+        },
+        {
+          "qid": 30,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确更正为星链支付回调，QPS80到320，最新说法清晰。",
+          "hits_n": 5,
+          "top1": "救命，我今天终于把那个订单查询接口从Django ORM迁到原生SQL了！QPS从120直接干到450，爽是爽，但写SQL写得我眼睛都快瞎了。我们那个项目叫“星",
+          "judge_failed": false
+        },
+        {
+          "qid": 31,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2][5]明确煤球是柯基，2月20日打狂犬疫苗",
+          "hits_n": 5,
+          "top1": "我家年糕今天又在我键盘上踩来踩去，一只1岁半的橘猫，胖得跟个煤气罐一样。2月20号刚带它去成都心仪动物医院打了猫三联加强针，花了180，它记仇记到现在不肯理我。",
+          "judge_failed": false
+        },
+        {
+          "qid": 32,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆明确提到考完带小满去重庆玩三天，信息一致。",
+          "hits_n": 5,
+          "top1": "我妹小满3月8号刚参加完高考百日誓师，她在绵阳读高三，今年18。我答应她等考完带她去重庆玩三天，现在想想我钱包已经开始疼了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 33,
+          "type": "correction",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][2]明确纠正：年糕是室友的猫，自己养3岁柯基煤球。",
+          "hits_n": 5,
+          "top1": "哎我纠正一下，年糕其实是我合租室友的猫，我自己养的是狗，一只3岁的柯基叫煤球。2月20号打的是狂犬疫苗，不是猫三联，我前面记混了，服了我自己。",
+          "judge_failed": false
+        },
+        {
+          "qid": 34,
+          "type": "correction",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][4]明确项目叫星链，3月1日迁支付回调接口，QPS80到320。",
+          "hits_n": 5,
+          "top1": "我那个项目我再说一遍哈，叫“星链”，不是“星轨”，我之前一直说错了。3月1号迁的其实是支付回调接口，QPS从80提到320，订单查询那个是另一回事。脑子最近真的",
+          "judge_failed": false
+        },
+        {
+          "qid": 35,
+          "type": "correction",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确最新行程为都江堰青城山，住隐庐民宿2晚",
+          "hits_n": 5,
+          "top1": "我清明节行程改了，不去四姑娘山了，改成4月4号到5号去都江堰和青城山，订的是青城山脚下的“隐庐民宿”，住2晚。空山民宿那边我退了，扣了点手续费，心疼。",
+          "judge_failed": false
+        },
+        {
+          "qid": 36,
+          "type": "correction",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确纠正为狂犬疫苗，最新说法清晰在场",
+          "hits_n": 5,
+          "top1": "哎我纠正一下，年糕其实是我合租室友的猫，我自己养的是狗，一只3岁的柯基叫煤球。2月20号打的是狂犬疫苗，不是猫三联，我前面记混了，服了我自己。",
+          "judge_failed": false
+        },
+        {
+          "qid": 37,
+          "type": "noise",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][3]明确年糕是室友的猫，2月20日打疫苗的是煤球",
+          "hits_n": 5,
+          "top1": "哎我纠正一下，年糕其实是我合租室友的猫，我自己养的是狗，一只3岁的柯基叫煤球。2月20号打的是狂犬疫苗，不是猫三联，我前面记混了，服了我自己。",
+          "judge_failed": false
+        },
+        {
+          "qid": 38,
+          "type": "noise",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确纠正为支付回调接口，QPS 80到320，与标准一致",
+          "hits_n": 5,
+          "top1": "我那个项目我再说一遍哈，叫“星链”，不是“星轨”，我之前一直说错了。3月1号迁的其实是支付回调接口，QPS从80提到320，订单查询那个是另一回事。脑子最近真的",
+          "judge_failed": false
+        },
+        {
+          "qid": 39,
+          "type": "noise",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆明确改去青城山隐庐住2晚，旧四姑娘山说法已过期",
+          "hits_n": 5,
+          "top1": "我清明节行程改了，不去四姑娘山了，改成4月4号到5号去都江堰和青城山，订的是青城山脚下的“隐庐民宿”，住2晚。空山民宿那边我退了，扣了点手续费，心疼。",
+          "judge_failed": false
+        },
+        {
+          "qid": 40,
+          "type": "noise",
+          "correct": 0,
+          "misled": 1,
+          "reason": "记忆[2]显示899元是空气净化器，滤杯信息在[1]，问题混淆两者。",
+          "hits_n": 5,
+          "top1": "我最近迷上了做手冲咖啡，2月14号花268买了个Hario V60陶瓷滤杯，还囤了半磅云南保山小粒咖啡豆。今天冲了一杯，酸质还挺明亮的，就是手抖水温没控好。",
+          "judge_failed": false
+        }
+      ]
+    },
+    "mem0": {
+      "status": "ok",
+      "error": null,
+      "reinit_s": 1.6,
+      "add_total_s": 323.2,
+      "add_p50_ms": 5637.9,
+      "score": 29.0,
+      "acc": 0.725,
+      "misled": 9,
+      "storage": 20,
+      "retrieval_p50_ms": 343.5,
+      "quiz_total_s": 48.1,
+      "total_s": 372.9,
+      "details": [
+        {
+          "qid": 1,
+          "type": "normal",
+          "correct": 0,
+          "misled": 1,
+          "reason": "记忆无3月10日开始信息，仅有过期9月28日计划，会误导",
+          "hits_n": 5,
+          "top1": "On the night of September 28, 2026, user planned to continue working (\"搬砖\") and ",
+          "judge_failed": false
+        },
+        {
+          "qid": 2,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆含6月底前300题及动态规划、图论重点，与标准答案一致",
+          "hits_n": 5,
+          "top1": "On September 28, 2026, user calculated that to reach their goal of 300 LeetCode ",
+          "judge_failed": false
+        },
+        {
+          "qid": 3,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出米家空气净化器4 Pro及899元，与标准答案一致",
+          "hits_n": 5,
+          "top1": "User ordered a Mijia Air Purifier 4 Pro (米家空气净化器4 Pro) on JD.com on March 2, 202",
+          "judge_failed": false
+        },
+        {
+          "qid": 4,
+          "type": "normal",
+          "correct": 0,
+          "misled": 1,
+          "reason": "记忆无温湿度计信息，仅有咖啡滤杯等干扰项",
+          "hits_n": 5,
+          "top1": "User ordered a Mijia Air Purifier 4 Pro (米家空气净化器4 Pro) on JD.com on March 2, 202",
+          "judge_failed": false
+        },
+        {
+          "qid": 5,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出Hario V60陶瓷滤杯及268元，与标准答案一致",
+          "hits_n": 5,
+          "top1": "User recently got into pour-over coffee (手冲咖啡) and bought a Hario V60 ceramic dr",
+          "judge_failed": false
+        },
+        {
+          "qid": 6,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确提到云南保山小粒咖啡豆半磅，与答案一致",
+          "hits_n": 5,
+          "top1": "User stocked half a pound (半磅) of Yunnan Baoshan small-bean coffee beans (云南保山小粒",
+          "judge_failed": false
+        },
+        {
+          "qid": 7,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确更正项目名为星链，最新正确说法在场",
+          "hits_n": 5,
+          "top1": "User corrected that their project is actually called \"星链\" (Starlink), not \"星轨\" (",
+          "judge_failed": false
+        },
+        {
+          "qid": 8,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确3月1日迁支付回调接口，QPS从80到320",
+          "hits_n": 5,
+          "top1": "User clarified that what they migrated on March 1 (2026) was the payment callbac",
+          "judge_failed": false
+        },
+        {
+          "qid": 9,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出3岁柯基煤球，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "User has their own dog, a 3-year-old corgi named 煤球 (Meiqiu).",
+          "judge_failed": false
+        },
+        {
+          "qid": 10,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确纠正为狂犬疫苗，正确信息在场",
+          "hits_n": 5,
+          "top1": "User corrected that the vaccine 年糕 received on February 20 was a 狂犬疫苗 (rabies va",
+          "judge_failed": false
+        },
+        {
+          "qid": 11,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出小满、18岁、绵阳高三，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "User has a younger sister named 小满 (Xiaoman), who is 18 years old and in her sen",
+          "judge_failed": false
+        },
+        {
+          "qid": 12,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确提到去重庆三天，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "User promised to take their younger sister 小满 on a three-day trip to Chongqing a",
+          "judge_failed": false
+        },
+        {
+          "qid": 13,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出3月15日来成都、3月16日晚玉林路老码头火锅",
+          "hits_n": 5,
+          "top1": "User's college roommate 阿哲 is coming from Shenzhen to Chengdu on March 15 for a ",
+          "judge_failed": false
+        },
+        {
+          "qid": 14,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出都江堰青城山、隐庐民宿、2晚，最新说法清晰",
+          "hits_n": 5,
+          "top1": "User changed their Qingming Festival 2027 trip plans: instead of going to 四姑娘山 (",
+          "judge_failed": false
+        },
+        {
+          "qid": 15,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确必点脑花和贡菜，[3]讨厌香菜丸子即讨厌香菜",
+          "hits_n": 5,
+          "top1": "When eating hotpot, User always orders 脑花 (pork brain) and 贡菜",
+          "judge_failed": false
+        },
+        {
+          "qid": 16,
+          "type": "normal",
+          "correct": 0,
+          "misled": 1,
+          "reason": "记忆仅提9月28日不要香菜，无2月28日多放小米辣信息",
+          "hits_n": 5,
+          "top1": "On September 28, 2026, User ordered takeout from a newly opened 冒菜 (maocai) rest",
+          "judge_failed": false
+        },
+        {
+          "qid": 17,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确40平一居室、月租2600元，与标准答案一致",
+          "hits_n": 5,
+          "top1": "User renewed their apartment lease for one year on February 25, 2026 — the same ",
+          "judge_failed": false
+        },
+        {
+          "qid": 18,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确房东同意换小米滚筒洗衣机，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "User renewed their apartment lease for one year on February 25, 2026 — the same ",
+          "judge_failed": false
+        },
+        {
+          "qid": 19,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确提到成都春天雾霾重，与答案一致",
+          "hits_n": 5,
+          "top1": "User ordered a Mijia Air Purifier 4 Pro (米家空气净化器4 Pro) on JD.com on March 2, 202",
+          "judge_failed": false
+        },
+        {
+          "qid": 20,
+          "type": "normal",
+          "correct": 0,
+          "misled": 0,
+          "reason": "记忆无手冲咖啡和滤杯信息，无法回答",
+          "hits_n": 5,
+          "top1": "On September 28, 2026, user finally placed the order for the humidifier they had",
+          "judge_failed": false
+        },
+        {
+          "qid": 21,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确提到3月8日参加高考百日誓师，与答案一致。",
+          "hits_n": 5,
+          "top1": "User's younger sister 小满 participated in the 高考百日誓师 (100-day countdown to the co",
+          "judge_failed": false
+        },
+        {
+          "qid": 22,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确阿哲是大学室友，从深圳来成都出差",
+          "hits_n": 5,
+          "top1": "阿哲 returned to Shenzhen after his Chengdu trip; before leaving, he told the user",
+          "judge_failed": false
+        },
+        {
+          "qid": 23,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[3]明确原计划四姑娘山、空山民宿3晚，虽有过期取消信息但正确信息在场",
+          "hits_n": 5,
+          "top1": "User changed their Qingming Festival 2027 trip plans: instead of going to 四姑娘山 (",
+          "judge_failed": false
+        },
+        {
+          "qid": 24,
+          "type": "normal",
+          "correct": 0,
+          "misled": 0,
+          "reason": "记忆未提及每天刷题时长，无相关信息",
+          "hits_n": 5,
+          "top1": "On September 28, 2026, user calculated that to reach their goal of 300 LeetCode ",
+          "judge_failed": false
+        },
+        {
+          "qid": 25,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]确认年糕是室友的猫，[2]给出1岁半橘猫信息",
+          "hits_n": 5,
+          "top1": "User corrected that 年糕 is actually their roommate's cat (合租室友的猫), not their own ",
+          "judge_failed": false
+        },
+        {
+          "qid": 26,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确续签一年，信息一致无冲突",
+          "hits_n": 5,
+          "top1": "User renewed their apartment lease for one year on February 25, 2026 — the same ",
+          "judge_failed": false
+        },
+        {
+          "qid": 27,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确300题、2027年6月底目标，与答案一致",
+          "hits_n": 5,
+          "top1": "On September 28, 2026, user calculated that to reach their goal of 300 LeetCode ",
+          "judge_failed": false
+        },
+        {
+          "qid": 28,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[3]明确含净化器型号与价格，无冲突信息",
+          "hits_n": 5,
+          "top1": "On September 28, 2026, the temperature dropped in Chengdu; user went out wearing",
+          "judge_failed": false
+        },
+        {
+          "qid": 29,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆明确含Hario V60陶瓷滤杯和云南保山小粒咖啡豆",
+          "hits_n": 5,
+          "top1": "User recently got into pour-over coffee (手冲咖啡) and bought a Hario V60 ceramic dr",
+          "judge_failed": false
+        },
+        {
+          "qid": 30,
+          "type": "paraphrase",
+          "correct": 0,
+          "misled": 1,
+          "reason": "记忆[3]称订单查询接口迁移，与标准答案支付回调接口冲突，且最新正确说法缺失",
+          "hits_n": 5,
+          "top1": "User finds native SQL's performance good but its debugging process genuinely tor",
+          "judge_failed": false
+        },
+        {
+          "qid": 31,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆明确柯基叫煤球，2月20日打狂犬疫苗，与答案一致",
+          "hits_n": 5,
+          "top1": "On September 28, 2026, user's 3-year-old corgi 煤球 made a new friend in their res",
+          "judge_failed": false
+        },
+        {
+          "qid": 32,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2][3]明确考后带小满去重庆玩三天",
+          "hits_n": 5,
+          "top1": "小满's emotional state improved considerably after the 高考百日誓师, and she now says sh",
+          "judge_failed": false
+        },
+        {
+          "qid": 33,
+          "type": "correction",
+          "correct": 0,
+          "misled": 1,
+          "reason": "记忆只纠正年糕是室友的猫，未提柯基煤球，无法答出自己养啥",
+          "hits_n": 5,
+          "top1": "User corrected that 年糕 is actually their roommate's cat (合租室友的猫), not their own ",
+          "judge_failed": false
+        },
+        {
+          "qid": 34,
+          "type": "correction",
+          "correct": 0,
+          "misled": 1,
+          "reason": "记忆只纠正名称，无3月1日支付回调及QPS信息",
+          "hits_n": 5,
+          "top1": "User corrected that their project is actually called \"星链\" (Starlink), not \"星轨\" (",
+          "judge_failed": false
+        },
+        {
+          "qid": 35,
+          "type": "correction",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确最新计划为都江堰青城山、隐庐民宿2晚，旧说法被更新",
+          "hits_n": 5,
+          "top1": "User changed their Qingming Festival 2027 trip plans: instead of going to 四姑娘山 (",
+          "judge_failed": false
+        },
+        {
+          "qid": 36,
+          "type": "correction",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确纠正为狂犬疫苗，正确信息在场",
+          "hits_n": 5,
+          "top1": "User corrected that the vaccine 年糕 received on February 20 was a 狂犬疫苗 (rabies va",
+          "judge_failed": false
+        },
+        {
+          "qid": 37,
+          "type": "noise",
+          "correct": 0,
+          "misled": 1,
+          "reason": "记忆称年糕是用户的猫且2月20日打狂犬疫苗，与标准答案冲突",
+          "hits_n": 5,
+          "top1": "User corrected that the vaccine 年糕 received on February 20 was a 狂犬疫苗 (rabies va",
+          "judge_failed": false
+        },
+        {
+          "qid": 38,
+          "type": "noise",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确支付回调接口QPS 80到320，与标准答案一致",
+          "hits_n": 5,
+          "top1": "As of September 28, 2026, user privately felt the praise for the \"星链\" project wa",
+          "judge_failed": false
+        },
+        {
+          "qid": 39,
+          "type": "noise",
+          "correct": 0,
+          "misled": 1,
+          "reason": "记忆显示改去青城山隐庐住2晚，但问题前提错误，易被旧四姑娘山信息带偏",
+          "hits_n": 5,
+          "top1": "User changed their Qingming Festival 2027 trip plans: instead of going to 四姑娘山 (",
+          "judge_failed": false
+        },
+        {
+          "qid": 40,
+          "type": "noise",
+          "correct": 0,
+          "misled": 1,
+          "reason": "记忆明确区分：滤杯2月14日268元，3月2日899元是净化器，不会误导",
+          "hits_n": 5,
+          "top1": "User recently got into pour-over coffee (手冲咖啡) and bought a Hario V60 ceramic dr",
+          "judge_failed": false
+        }
+      ]
+    },
+    "rag_qwen3": {
+      "status": "ok",
+      "error": null,
+      "reinit_s": 0.3,
+      "add_total_s": 45.2,
+      "add_p50_ms": 735.1,
+      "score": 37.0,
+      "acc": 0.925,
+      "misled": 1,
+      "storage": 60,
+      "retrieval_p50_ms": 328.2,
+      "quiz_total_s": 46.5,
+      "total_s": 92.0,
+      "details": [
+        {
+          "qid": 1,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确提到3月10日开始每天下班刷一小时LeetCode",
+          "hits_n": 5,
+          "top1": "我打算从3月10号开始每天下班后刷一小时LeetCode，目标6月底前刷完300道，重点补动态规划和图论。今天刚做了两道DP，感觉自己脑子像生锈了一样。",
+          "judge_failed": false
+        },
+        {
+          "qid": 2,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出6月底300道、动态规划和图论目标。",
+          "hits_n": 5,
+          "top1": "我打算从3月10号开始每天下班后刷一小时LeetCode，目标6月底前刷完300道，重点补动态规划和图论。今天刚做了两道DP，感觉自己脑子像生锈了一样。",
+          "judge_failed": false
+        },
+        {
+          "qid": 3,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出米家空气净化器4 Pro和899元，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "说到花钱，我3月2号在京东下单了一台米家空气净化器4 Pro，899块。成都春天这雾霾真的顶不住，顺便凑单买了个69块的温湿度计，感觉自己越来越像个养生中年人了",
+          "judge_failed": false
+        },
+        {
+          "qid": 4,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确提到凑单买温湿度计69元，与答案一致。",
+          "hits_n": 5,
+          "top1": "说到花钱，我3月2号在京东下单了一台米家空气净化器4 Pro，899块。成都春天这雾霾真的顶不住，顺便凑单买了个69块的温湿度计，感觉自己越来越像个养生中年人了",
+          "judge_failed": false
+        },
+        {
+          "qid": 5,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出Hario V60陶瓷滤杯268元，与标准答案一致",
+          "hits_n": 5,
+          "top1": "我最近迷上了做手冲咖啡，2月14号花268买了个Hario V60陶瓷滤杯，还囤了半磅云南保山小粒咖啡豆。今天冲了一杯，酸质还挺明亮的，就是手抖水温没控好。",
+          "judge_failed": false
+        },
+        {
+          "qid": 6,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确提到云南保山小粒咖啡豆，与答案一致。",
+          "hits_n": 5,
+          "top1": "今天冲咖啡终于没翻车，云南豆子闷蒸的时候鼓得特别漂亮，我差点给自己鼓掌。煤球在旁边一脸“你又在搞什么”的表情。",
+          "judge_failed": false
+        },
+        {
+          "qid": 7,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆明确项目叫星链，并纠正过星轨旧说法",
+          "hits_n": 5,
+          "top1": "公司今天开季度会，说“星链”项目进度不错，我表面点头，内心想的是我那段支付回调的坑还没填完，别夸太早。",
+          "judge_failed": false
+        },
+        {
+          "qid": 8,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确支付回调接口QPS从80到320，最新说法清晰",
+          "hits_n": 5,
+          "top1": "我那个项目我再说一遍哈，叫“星链”，不是“星轨”，我之前一直说错了。3月1号迁的其实是支付回调接口，QPS从80提到320，订单查询那个是另一回事。脑子最近真的",
+          "judge_failed": false
+        },
+        {
+          "qid": 9,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][4]明确煤球是3岁柯基，年糕是室友的猫，无冲突",
+          "hits_n": 5,
+          "top1": "哎我纠正一下，年糕其实是我合租室友的猫，我自己养的是狗，一只3岁的柯基叫煤球。2月20号打的是狂犬疫苗，不是猫三联，我前面记混了，服了我自己。",
+          "judge_failed": false
+        },
+        {
+          "qid": 10,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确纠正为狂犬疫苗，信息在场且无冲突。",
+          "hits_n": 5,
+          "top1": "哎我纠正一下，年糕其实是我合租室友的猫，我自己养的是狗，一只3岁的柯基叫煤球。2月20号打的是狂犬疫苗，不是猫三联，我前面记混了，服了我自己。",
+          "judge_failed": false
+        },
+        {
+          "qid": 11,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确小满18岁在绵阳读高三，信息一致。",
+          "hits_n": 5,
+          "top1": "我妹小满3月8号刚参加完高考百日誓师，她在绵阳读高三，今年18。我答应她等考完带她去重庆玩三天，现在想想我钱包已经开始疼了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 12,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确说考完带她去重庆玩三天，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "我妹小满3月8号刚参加完高考百日誓师，她在绵阳读高三，今年18。我答应她等考完带她去重庆玩三天，现在想想我钱包已经开始疼了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 13,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确给出3月15日来成都、16日晚玉林路老码头火锅",
+          "hits_n": 5,
+          "top1": "阿哲回深圳了，走之前说下次来成都让我带他去吃串串。我说你先练练吃辣，别到时候又抱着唯怡豆奶不撒手。",
+          "judge_failed": false
+        },
+        {
+          "qid": 14,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][5]明确最新行程为都江堰青城山、隐庐民宿2晚",
+          "hits_n": 5,
+          "top1": "我清明节行程改了，不去四姑娘山了，改成4月4号到5号去都江堰和青城山，订的是青城山脚下的“隐庐民宿”，住2晚。空山民宿那边我退了，扣了点手续费，心疼。",
+          "judge_failed": false
+        },
+        {
+          "qid": 15,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][2]明确提到必点脑花和贡菜，最讨厌香菜",
+          "hits_n": 5,
+          "top1": "我今天点外卖又备注了“多放小米辣，不要香菜，谢谢”，结果还是给我撒了一把香菜，气死。吃火锅我必点脑花和贡菜，但香菜真的是我一生之敌。",
+          "judge_failed": false
+        },
+        {
+          "qid": 16,
+          "type": "normal",
+          "correct": 0,
+          "misled": 0,
+          "reason": "记忆无2月28日外卖备注信息，仅提不要香菜",
+          "hits_n": 5,
+          "top1": "今天点外卖终于没踩雷，一家新开的冒菜，我备注不要香菜，这次真的没放，感动得想给老板写感谢信。",
+          "judge_failed": false
+        },
+        {
+          "qid": 17,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出40平一居室、月租2600，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "我租房这边2月25号刚续签了一年，还是高新区那个40平的一居室，月租2600。房东人还行，同意把旧洗衣机换成小米滚筒，总算不用手洗衣服了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 18,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确房东同意换小米滚筒洗衣机",
+          "hits_n": 5,
+          "top1": "我租房这边2月25号刚续签了一年，还是高新区那个40平的一居室，月租2600。房东人还行，同意把旧洗衣机换成小米滚筒，总算不用手洗衣服了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 19,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确提到成都春天雾霾顶不住，与答案一致。",
+          "hits_n": 5,
+          "top1": "说到花钱，我3月2号在京东下单了一台米家空气净化器4 Pro，899块。成都春天这雾霾真的顶不住，顺便凑单买了个69块的温湿度计，感觉自己越来越像个养生中年人了",
+          "judge_failed": false
+        },
+        {
+          "qid": 20,
+          "type": "normal",
+          "correct": 0,
+          "misled": 0,
+          "reason": "记忆无手冲咖啡和滤杯信息，无法回答",
+          "hits_n": 5,
+          "top1": "我确认一下我现在没记错：项目叫“星链”，狗叫煤球3岁柯基，猫年糕是室友的，清明去青城山住“隐庐”2晚。嗯，这回应该对了，再错我请自己喝一周白开水。",
+          "judge_failed": false
+        },
+        {
+          "qid": 21,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确提到3月8日参加高考百日誓师，与答案一致。",
+          "hits_n": 5,
+          "top1": "我妹小满3月8号刚参加完高考百日誓师，她在绵阳读高三，今年18。我答应她等考完带她去重庆玩三天，现在想想我钱包已经开始疼了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 22,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[4]明确说大学室友阿哲从深圳来成都出差",
+          "hits_n": 5,
+          "top1": "阿哲回深圳了，走之前说下次来成都让我带他去吃串串。我说你先练练吃辣，别到时候又抱着唯怡豆奶不撒手。",
+          "judge_failed": false
+        },
+        {
+          "qid": 23,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[3]明确原计划四姑娘山、空山民宿，新旧并存但正确信息在场",
+          "hits_n": 5,
+          "top1": "我清明节行程改了，不去四姑娘山了，改成4月4号到5号去都江堰和青城山，订的是青城山脚下的“隐庐民宿”，住2晚。空山民宿那边我退了，扣了点手续费，心疼。",
+          "judge_failed": false
+        },
+        {
+          "qid": 24,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确说每天下班后刷一小时",
+          "hits_n": 5,
+          "top1": "我打算从3月10号开始每天下班后刷一小时LeetCode，目标6月底前刷完300道，重点补动态规划和图论。今天刚做了两道DP，感觉自己脑子像生锈了一样。",
+          "judge_failed": false
+        },
+        {
+          "qid": 25,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][3]明确年糕是室友的猫，[2]说1岁半橘猫，信息一致。",
+          "hits_n": 5,
+          "top1": "哎我纠正一下，年糕其实是我合租室友的猫，我自己养的是狗，一只3岁的柯基叫煤球。2月20号打的是狂犬疫苗，不是猫三联，我前面记混了，服了我自己。",
+          "judge_failed": false
+        },
+        {
+          "qid": 26,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确说续签了一年，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "我租房这边2月25号刚续签了一年，还是高新区那个40平的一居室，月租2600。房东人还行，同意把旧洗衣机换成小米滚筒，总算不用手洗衣服了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 27,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出6月底前300道，重点DP和图论",
+          "hits_n": 5,
+          "top1": "我打算从3月10号开始每天下班后刷一小时LeetCode，目标6月底前刷完300道，重点补动态规划和图论。今天刚做了两道DP，感觉自己脑子像生锈了一样。",
+          "judge_failed": false
+        },
+        {
+          "qid": 28,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确提到米家空气净化器4 Pro和899元，与答案一致。",
+          "hits_n": 5,
+          "top1": "说到花钱，我3月2号在京东下单了一台米家空气净化器4 Pro，899块。成都春天这雾霾真的顶不住，顺便凑单买了个69块的温湿度计，感觉自己越来越像个养生中年人了",
+          "judge_failed": false
+        },
+        {
+          "qid": 29,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确提到Hario V60滤杯和云南保山豆，信息一致。",
+          "hits_n": 5,
+          "top1": "今天冲咖啡终于没翻车，云南豆子闷蒸的时候鼓得特别漂亮，我差点给自己鼓掌。煤球在旁边一脸“你又在搞什么”的表情。",
+          "judge_failed": false
+        },
+        {
+          "qid": 30,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确支付回调QPS 80→320，为最新更正说法",
+          "hits_n": 5,
+          "top1": "今天写SQL写到一个窗口函数，调了半天发现是分区字段写错了，想把自己发射到外太空。原生SQL性能是好，但调试真的折磨。",
+          "judge_failed": false
+        },
+        {
+          "qid": 31,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][4]明确柯基煤球，2月20日打狂犬疫苗，最新说法在场",
+          "hits_n": 5,
+          "top1": "哎我纠正一下，年糕其实是我合租室友的猫，我自己养的是狗，一只3岁的柯基叫煤球。2月20号打的是狂犬疫苗，不是猫三联，我前面记混了，服了我自己。",
+          "judge_failed": false
+        },
+        {
+          "qid": 32,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆明确提到考完带小满去重庆玩三天，信息一致。",
+          "hits_n": 5,
+          "top1": "我妹小满3月8号刚参加完高考百日誓师，她在绵阳读高三，今年18。我答应她等考完带她去重庆玩三天，现在想想我钱包已经开始疼了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 33,
+          "type": "correction",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][3]明确年糕是室友的猫，自己养3岁柯基煤球",
+          "hits_n": 5,
+          "top1": "哎我纠正一下，年糕其实是我合租室友的猫，我自己养的是狗，一只3岁的柯基叫煤球。2月20号打的是狂犬疫苗，不是猫三联，我前面记混了，服了我自己。",
+          "judge_failed": false
+        },
+        {
+          "qid": 34,
+          "type": "correction",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][3]明确项目叫星链，3月1日迁支付回调接口",
+          "hits_n": 5,
+          "top1": "我那个项目我再说一遍哈，叫“星链”，不是“星轨”，我之前一直说错了。3月1号迁的其实是支付回调接口，QPS从80提到320，订单查询那个是另一回事。脑子最近真的",
+          "judge_failed": false
+        },
+        {
+          "qid": 35,
+          "type": "correction",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确最新行程为都江堰青城山，住隐庐民宿2晚，旧说法已被覆盖。",
+          "hits_n": 5,
+          "top1": "我清明节行程改了，不去四姑娘山了，改成4月4号到5号去都江堰和青城山，订的是青城山脚下的“隐庐民宿”，住2晚。空山民宿那边我退了，扣了点手续费，心疼。",
+          "judge_failed": false
+        },
+        {
+          "qid": 36,
+          "type": "correction",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确纠正为狂犬疫苗，最新说法清晰在场",
+          "hits_n": 5,
+          "top1": "哎我纠正一下，年糕其实是我合租室友的猫，我自己养的是狗，一只3岁的柯基叫煤球。2月20号打的是狂犬疫苗，不是猫三联，我前面记混了，服了我自己。",
+          "judge_failed": false
+        },
+        {
+          "qid": 37,
+          "type": "noise",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][3]明确年糕是室友的猫，打狂犬疫苗的是煤球",
+          "hits_n": 5,
+          "top1": "哎我纠正一下，年糕其实是我合租室友的猫，我自己养的是狗，一只3岁的柯基叫煤球。2月20号打的是狂犬疫苗，不是猫三联，我前面记混了，服了我自己。",
+          "judge_failed": false
+        },
+        {
+          "qid": 38,
+          "type": "noise",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确纠正为支付回调接口，QPS 80到320，与标准一致。",
+          "hits_n": 5,
+          "top1": "我那个项目我再说一遍哈，叫“星链”，不是“星轨”，我之前一直说错了。3月1号迁的其实是支付回调接口，QPS从80提到320，订单查询那个是另一回事。脑子最近真的",
+          "judge_failed": false
+        },
+        {
+          "qid": 39,
+          "type": "noise",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆明确改去青城山隐庐住2晚，非四姑娘山3晚",
+          "hits_n": 5,
+          "top1": "我清明节行程改了，不去四姑娘山了，改成4月4号到5号去都江堰和青城山，订的是青城山脚下的“隐庐民宿”，住2晚。空山民宿那边我退了，扣了点手续费，心疼。",
+          "judge_failed": false
+        },
+        {
+          "qid": 40,
+          "type": "noise",
+          "correct": 0,
+          "misled": 1,
+          "reason": "记忆明确滤杯是2月14日268元，净化器才是3月2日899元，问题前提错误。",
+          "hits_n": 5,
+          "top1": "我最近迷上了做手冲咖啡，2月14号花268买了个Hario V60陶瓷滤杯，还囤了半磅云南保山小粒咖啡豆。今天冲了一杯，酸质还挺明亮的，就是手抖水温没控好。",
+          "judge_failed": false
+        }
+      ]
+    },
+    "bm25_bigram": {
+      "status": "ok",
+      "error": null,
+      "reinit_s": 0.0,
+      "add_total_s": 0.0,
+      "add_p50_ms": 0.0,
+      "score": 37.0,
+      "acc": 0.925,
+      "misled": 2,
+      "storage": 60,
+      "retrieval_p50_ms": 0.5,
+      "quiz_total_s": 32.6,
+      "total_s": 32.6,
+      "details": [
+        {
+          "qid": 1,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确提到3月10日开始每天下班刷LeetCode，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "我打算从3月10号开始每天下班后刷一小时LeetCode，目标6月底前刷完300道，重点补动态规划和图论。今天刚做了两道DP，感觉自己脑子像生锈了一样。",
+          "judge_failed": false
+        },
+        {
+          "qid": 2,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出6月底300道、动态规划和图论，无冲突。",
+          "hits_n": 5,
+          "top1": "我打算从3月10号开始每天下班后刷一小时LeetCode，目标6月底前刷完300道，重点补动态规划和图论。今天刚做了两道DP，感觉自己脑子像生锈了一样。",
+          "judge_failed": false
+        },
+        {
+          "qid": 3,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出米家空气净化器4 Pro和899元，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "说到花钱，我3月2号在京东下单了一台米家空气净化器4 Pro，899块。成都春天这雾霾真的顶不住，顺便凑单买了个69块的温湿度计，感觉自己越来越像个养生中年人了",
+          "judge_failed": false
+        },
+        {
+          "qid": 4,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确提到凑单买温湿度计69元，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "说到花钱，我3月2号在京东下单了一台米家空气净化器4 Pro，899块。成都春天这雾霾真的顶不住，顺便凑单买了个69块的温湿度计，感觉自己越来越像个养生中年人了",
+          "judge_failed": false
+        },
+        {
+          "qid": 5,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确给出Hario V60陶瓷滤杯和268元，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "今天冲咖啡终于没翻车，云南豆子闷蒸的时候鼓得特别漂亮，我差点给自己鼓掌。煤球在旁边一脸“你又在搞什么”的表情。",
+          "judge_failed": false
+        },
+        {
+          "qid": 6,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确提到云南保山小粒咖啡豆半磅，与答案一致。",
+          "hits_n": 5,
+          "top1": "我最近迷上了做手冲咖啡，2月14号花268买了个Hario V60陶瓷滤杯，还囤了半磅云南保山小粒咖啡豆。今天冲了一杯，酸质还挺明亮的，就是手抖水温没控好。",
+          "judge_failed": false
+        },
+        {
+          "qid": 7,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[4]明确更正项目名为星链，最新说法清晰在场。",
+          "hits_n": 5,
+          "top1": "公司今天开季度会，说“星链”项目进度不错，我表面点头，内心想的是我那段支付回调的坑还没填完，别夸太早。",
+          "judge_failed": false
+        },
+        {
+          "qid": 8,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确支付回调接口QPS从80到320，最新说法清晰",
+          "hits_n": 5,
+          "top1": "我那个项目我再说一遍哈，叫“星链”，不是“星轨”，我之前一直说错了。3月1号迁的其实是支付回调接口，QPS从80提到320，订单查询那个是另一回事。脑子最近真的",
+          "judge_failed": false
+        },
+        {
+          "qid": 9,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆明确煤球是3岁柯基，年糕为室友猫，信息一致",
+          "hits_n": 5,
+          "top1": "哎我纠正一下，年糕其实是我合租室友的猫，我自己养的是狗，一只3岁的柯基叫煤球。2月20号打的是狂犬疫苗，不是猫三联，我前面记混了，服了我自己。",
+          "judge_failed": false
+        },
+        {
+          "qid": 10,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确纠正为煤球打狂犬疫苗，正确信息在场",
+          "hits_n": 5,
+          "top1": "哎我纠正一下，年糕其实是我合租室友的猫，我自己养的是狗，一只3岁的柯基叫煤球。2月20号打的是狂犬疫苗，不是猫三联，我前面记混了，服了我自己。",
+          "judge_failed": false
+        },
+        {
+          "qid": 11,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确小满18岁在绵阳读高三，信息一致",
+          "hits_n": 5,
+          "top1": "我妹小满3月8号刚参加完高考百日誓师，她在绵阳读高三，今年18。我答应她等考完带她去重庆玩三天，现在想想我钱包已经开始疼了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 12,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确说考完带她去重庆玩三天",
+          "hits_n": 5,
+          "top1": "我妹小满3月8号刚参加完高考百日誓师，她在绵阳读高三，今年18。我答应她等考完带她去重庆玩三天，现在想想我钱包已经开始疼了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 13,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出3月15日来成都、16日晚玉林路老码头火锅",
+          "hits_n": 5,
+          "top1": "对了，我大学室友阿哲3月15号要从深圳来成都出差，我们约了16号晚上去玉林路那家“老码头火锅”吃饭。好久没见了，有点期待又有点怕他喝多。",
+          "judge_failed": false
+        },
+        {
+          "qid": 14,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][5]明确最新行程为都江堰青城山、隐庐民宿2晚",
+          "hits_n": 5,
+          "top1": "我清明节行程改了，不去四姑娘山了，改成4月4号到5号去都江堰和青城山，订的是青城山脚下的“隐庐民宿”，住2晚。空山民宿那边我退了，扣了点手续费，心疼。",
+          "judge_failed": false
+        },
+        {
+          "qid": 15,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][2]明确提到必点脑花和贡菜，讨厌香菜。",
+          "hits_n": 5,
+          "top1": "我今天点外卖又备注了“多放小米辣，不要香菜，谢谢”，结果还是给我撒了一把香菜，气死。吃火锅我必点脑花和贡菜，但香菜真的是我一生之敌。",
+          "judge_failed": false
+        },
+        {
+          "qid": 16,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确含等价备注信息，无冲突干扰",
+          "hits_n": 5,
+          "top1": "我今天点外卖又备注了“多放小米辣，不要香菜，谢谢”，结果还是给我撒了一把香菜，气死。吃火锅我必点脑花和贡菜，但香菜真的是我一生之敌。",
+          "judge_failed": false
+        },
+        {
+          "qid": 17,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出40平一居室、月租2600，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "我租房这边2月25号刚续签了一年，还是高新区那个40平的一居室，月租2600。房东人还行，同意把旧洗衣机换成小米滚筒，总算不用手洗衣服了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 18,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确房东同意换小米滚筒洗衣机，与答案一致。",
+          "hits_n": 5,
+          "top1": "我租房这边2月25号刚续签了一年，还是高新区那个40平的一居室，月租2600。房东人还行，同意把旧洗衣机换成小米滚筒，总算不用手洗衣服了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 19,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确提到成都春天雾霾顶不住，与答案一致。",
+          "hits_n": 5,
+          "top1": "说到花钱，我3月2号在京东下单了一台米家空气净化器4 Pro，899块。成都春天这雾霾真的顶不住，顺便凑单买了个69块的温湿度计，感觉自己越来越像个养生中年人了",
+          "judge_failed": false
+        },
+        {
+          "qid": 20,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确含手冲咖啡和Hario V60滤杯信息",
+          "hits_n": 5,
+          "top1": "我最近迷上了做手冲咖啡，2月14号花268买了个Hario V60陶瓷滤杯，还囤了半磅云南保山小粒咖啡豆。今天冲了一杯，酸质还挺明亮的，就是手抖水温没控好。",
+          "judge_failed": false
+        },
+        {
+          "qid": 21,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确提到妹妹3月8日参加高考百日誓师，与答案一致。",
+          "hits_n": 5,
+          "top1": "我妹小满3月8号刚参加完高考百日誓师，她在绵阳读高三，今年18。我答应她等考完带她去重庆玩三天，现在想想我钱包已经开始疼了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 22,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确阿哲是大学室友，从深圳来成都出差。",
+          "hits_n": 5,
+          "top1": "阿哲回深圳了，走之前说下次来成都让我带他去吃串串。我说你先练练吃辣，别到时候又抱着唯怡豆奶不撒手。",
+          "judge_failed": false
+        },
+        {
+          "qid": 23,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确原计划四姑娘山、空山民宿，[1]仅更新行程",
+          "hits_n": 5,
+          "top1": "我清明节行程改了，不去四姑娘山了，改成4月4号到5号去都江堰和青城山，订的是青城山脚下的“隐庐民宿”，住2晚。空山民宿那边我退了，扣了点手续费，心疼。",
+          "judge_failed": false
+        },
+        {
+          "qid": 24,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[3]明确每天下班后刷一小时，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "LeetCode进度有点落后，我算了下到6月底每天得刷3道多才够300，压力上来了。今晚先刷两道图论，BFS和DFS我还能扛。",
+          "judge_failed": false
+        },
+        {
+          "qid": 25,
+          "type": "normal",
+          "correct": 0,
+          "misled": 0,
+          "reason": "记忆只提年糕是室友的猫，未提年龄，缺1岁半信息",
+          "hits_n": 5,
+          "top1": "哎我纠正一下，年糕其实是我合租室友的猫，我自己养的是狗，一只3岁的柯基叫煤球。2月20号打的是狂犬疫苗，不是猫三联，我前面记混了，服了我自己。",
+          "judge_failed": false
+        },
+        {
+          "qid": 26,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确说续签了一年，与答案一致。",
+          "hits_n": 5,
+          "top1": "我租房这边2月25号刚续签了一年，还是高新区那个40平的一居室，月租2600。房东人还行，同意把旧洗衣机换成小米滚筒，总算不用手洗衣服了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 27,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[4]明确给出6月底前刷完300道，重点补动态规划和图论。",
+          "hits_n": 5,
+          "top1": "LeetCode今天刷了三道，其中一道背包问题居然自己写出来了，我激动得差点把咖啡洒键盘上。动态规划好像也没那么可怕？",
+          "judge_failed": false
+        },
+        {
+          "qid": 28,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确提到米家空气净化器4 Pro，899元，与答案一致。",
+          "hits_n": 5,
+          "top1": "说到花钱，我3月2号在京东下单了一台米家空气净化器4 Pro，899块。成都春天这雾霾真的顶不住，顺便凑单买了个69块的温湿度计，感觉自己越来越像个养生中年人了",
+          "judge_failed": false
+        },
+        {
+          "qid": 29,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[3]明确提到Hario V60滤杯和云南保山豆，无冲突。",
+          "hits_n": 5,
+          "top1": "我那个加湿器终于下单了，顺便又买了一包新豆子，这个月工资已经提前阵亡。独居青年的钱就是这么没的。",
+          "judge_failed": false
+        },
+        {
+          "qid": 30,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确更正为星链支付回调接口，QPS 80到320，最新说法清晰。",
+          "hits_n": 5,
+          "top1": "救命，我今天终于把那个订单查询接口从Django ORM迁到原生SQL了！QPS从120直接干到450，爽是爽，但写SQL写得我眼睛都快瞎了。我们那个项目叫“星",
+          "judge_failed": false
+        },
+        {
+          "qid": 31,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[3]明确纠正为柯基煤球、2月20日打狂犬疫苗",
+          "hits_n": 5,
+          "top1": "我家年糕今天又在我键盘上踩来踩去，一只1岁半的橘猫，胖得跟个煤气罐一样。2月20号刚带它去成都心仪动物医院打了猫三联加强针，花了180，它记仇记到现在不肯理我。",
+          "judge_failed": false
+        },
+        {
+          "qid": 32,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆明确提到考完带小满去重庆，信息一致。",
+          "hits_n": 5,
+          "top1": "我妹小满3月8号刚参加完高考百日誓师，她在绵阳读高三，今年18。我答应她等考完带她去重庆玩三天，现在想想我钱包已经开始疼了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 33,
+          "type": "correction",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][3]明确纠正：年糕是室友的猫，自己养3岁柯基煤球。",
+          "hits_n": 5,
+          "top1": "哎我纠正一下，年糕其实是我合租室友的猫，我自己养的是狗，一只3岁的柯基叫煤球。2月20号打的是狂犬疫苗，不是猫三联，我前面记混了，服了我自己。",
+          "judge_failed": false
+        },
+        {
+          "qid": 34,
+          "type": "correction",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][4]明确项目叫星链，3月1日迁支付回调接口，QPS80到320",
+          "hits_n": 5,
+          "top1": "我那个项目我再说一遍哈，叫“星链”，不是“星轨”，我之前一直说错了。3月1号迁的其实是支付回调接口，QPS从80提到320，订单查询那个是另一回事。脑子最近真的",
+          "judge_failed": false
+        },
+        {
+          "qid": 35,
+          "type": "correction",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][4]明确最新行程为都江堰青城山、隐庐住2晚，旧四姑娘山说法已过期",
+          "hits_n": 5,
+          "top1": "我清明节行程改了，不去四姑娘山了，改成4月4号到5号去都江堰和青城山，订的是青城山脚下的“隐庐民宿”，住2晚。空山民宿那边我退了，扣了点手续费，心疼。",
+          "judge_failed": false
+        },
+        {
+          "qid": 36,
+          "type": "correction",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确纠正为狂犬疫苗，最新正确说法在场",
+          "hits_n": 5,
+          "top1": "哎我纠正一下，年糕其实是我合租室友的猫，我自己养的是狗，一只3岁的柯基叫煤球。2月20号打的是狂犬疫苗，不是猫三联，我前面记混了，服了我自己。",
+          "judge_failed": false
+        },
+        {
+          "qid": 37,
+          "type": "noise",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][3]明确年糕是室友的猫，打狂犬疫苗的是煤球",
+          "hits_n": 5,
+          "top1": "哎我纠正一下，年糕其实是我合租室友的猫，我自己养的是狗，一只3岁的柯基叫煤球。2月20号打的是狂犬疫苗，不是猫三联，我前面记混了，服了我自己。",
+          "judge_failed": false
+        },
+        {
+          "qid": 38,
+          "type": "noise",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确纠正为支付回调，QPS 80到320，与标准一致",
+          "hits_n": 5,
+          "top1": "我那个项目我再说一遍哈，叫“星链”，不是“星轨”，我之前一直说错了。3月1号迁的其实是支付回调接口，QPS从80提到320，订单查询那个是另一回事。脑子最近真的",
+          "judge_failed": false
+        },
+        {
+          "qid": 39,
+          "type": "noise",
+          "correct": 0,
+          "misled": 1,
+          "reason": "记忆[1][3]明确更正为青城山隐庐住2晚，但问题前提错误，AI可能被旧说法误导。",
+          "hits_n": 5,
+          "top1": "我清明节行程改了，不去四姑娘山了，改成4月4号到5号去都江堰和青城山，订的是青城山脚下的“隐庐民宿”，住2晚。空山民宿那边我退了，扣了点手续费，心疼。",
+          "judge_failed": false
+        },
+        {
+          "qid": 40,
+          "type": "noise",
+          "correct": 0,
+          "misled": 1,
+          "reason": "记忆明确Hario滤杯是2月14日268元，3月2日899元是净化器，问题前提错误。",
+          "hits_n": 5,
+          "top1": "我最近迷上了做手冲咖啡，2月14号花268买了个Hario V60陶瓷滤杯，还囤了半磅云南保山小粒咖啡豆。今天冲了一杯，酸质还挺明亮的，就是手抖水温没控好。",
+          "judge_failed": false
+        }
+      ]
+    },
+    "graphiti_kuzu": {
+      "status": "ok",
+      "error": null,
+      "reinit_s": 2.1,
+      "add_total_s": 1415.3,
+      "add_p50_ms": 20270.4,
+      "score": 22.0,
+      "acc": 0.55,
+      "misled": 8,
+      "storage": 60,
+      "retrieval_p50_ms": 378.0,
+      "quiz_total_s": 48.9,
+      "total_s": 1466.3,
+      "details": [
+        {
+          "qid": 1,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确3月10日开始每天下班刷一小时，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户打算从3月10号开始每天下班后在LeetCode上刷一小时题",
+          "judge_failed": false
+        },
+        {
+          "qid": 2,
+          "type": "normal",
+          "correct": 0,
+          "misled": 0,
+          "reason": "记忆只提到300道和6月底，未提动态规划和图论",
+          "hits_n": 5,
+          "top1": "用户的目标是在6月底前刷完LeetCode上的300道题",
+          "judge_failed": false
+        },
+        {
+          "qid": 3,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确给出米家空气净化器4 Pro和899元",
+          "hits_n": 5,
+          "top1": "用户2月20号带年糕去了成都心仪动物医院",
+          "judge_failed": false
+        },
+        {
+          "qid": 4,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆含温湿度计69元，与标准答案一致",
+          "hits_n": 2,
+          "top1": "用户于3月2号在京东下单购买了一台米家空气净化器4 Pro，价格为899元。",
+          "judge_failed": false
+        },
+        {
+          "qid": 5,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出Hario V60陶瓷滤杯和268元，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "用户在2月14号花268元买了一个Hario V60陶瓷滤杯",
+          "judge_failed": false
+        },
+        {
+          "qid": 6,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确提到云南保山小粒咖啡豆，与答案一致。",
+          "hits_n": 4,
+          "top1": "用户囤了半磅云南保山小粒咖啡豆",
+          "judge_failed": false
+        },
+        {
+          "qid": 7,
+          "type": "normal",
+          "correct": 0,
+          "misled": 0,
+          "reason": "选手未检索到任何记忆",
+          "hits_n": 0,
+          "top1": "",
+          "judge_failed": false
+        },
+        {
+          "qid": 8,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确给出支付回调接口及QPS 80到320",
+          "hits_n": 5,
+          "top1": "用户2月20号带年糕去了成都心仪动物医院",
+          "judge_failed": false
+        },
+        {
+          "qid": 9,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆明确给出3岁柯基叫煤球，与标准答案一致",
+          "hits_n": 2,
+          "top1": "用户自己养的是一只3岁的柯基，叫煤球",
+          "judge_failed": false
+        },
+        {
+          "qid": 10,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确纠正为狂犬疫苗，与答案一致",
+          "hits_n": 5,
+          "top1": "用户纠正之前关于年糕在2月20号接种疫苗的说法，实际打的是狂犬疫苗，不是猫三联",
+          "judge_failed": false
+        },
+        {
+          "qid": 11,
+          "type": "normal",
+          "correct": 0,
+          "misled": 0,
+          "reason": "记忆仅含姓名，缺年龄和学校信息",
+          "hits_n": 1,
+          "top1": "用户有一个妹妹叫小满",
+          "judge_failed": false
+        },
+        {
+          "qid": 12,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确提到去重庆玩三天，与标准答案一致。",
+          "hits_n": 2,
+          "top1": "用户计划带妹妹小满在高考考完后去重庆玩三天",
+          "judge_failed": false
+        },
+        {
+          "qid": 13,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆明确含3月15日来成都及16日晚玉林路老码头火锅",
+          "hits_n": 5,
+          "top1": "阿哲3月15号来成都出差",
+          "judge_failed": false
+        },
+        {
+          "qid": 14,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆含都江堰、青城山、隐庐民宿2晚，与答案一致",
+          "hits_n": 5,
+          "top1": "用户清明节住“隐庐”2晚",
+          "judge_failed": false
+        },
+        {
+          "qid": 15,
+          "type": "normal",
+          "correct": 0,
+          "misled": 0,
+          "reason": "记忆只提到必点脑花和贡菜，无最讨厌香菜信息",
+          "hits_n": 5,
+          "top1": "用户吃火锅时必点贡菜",
+          "judge_failed": false
+        },
+        {
+          "qid": 16,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆含多放小米辣和不要香菜，与答案一致",
+          "hits_n": 5,
+          "top1": "用户2月20号带年糕去了成都心仪动物医院",
+          "judge_failed": false
+        },
+        {
+          "qid": 17,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆含40平一居室和月租2600，与标准答案一致",
+          "hits_n": 2,
+          "top1": "用户租房住在高新区那个40平的一居室，2月25号刚续签了一年租约，月租2600。",
+          "judge_failed": false
+        },
+        {
+          "qid": 18,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[4]明确房东同意换小米滚筒洗衣机",
+          "hits_n": 5,
+          "top1": "用户2月20号带年糕去了成都心仪动物医院",
+          "judge_failed": false
+        },
+        {
+          "qid": 19,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆明确提到成都春天雾霾严重，与答案一致。",
+          "hits_n": 1,
+          "top1": "用户在成都生活，因成都春天的雾霾严重而购买空气净化器。",
+          "judge_failed": false
+        },
+        {
+          "qid": 20,
+          "type": "normal",
+          "correct": 0,
+          "misled": 0,
+          "reason": "记忆无手冲咖啡和滤杯信息，无法回答",
+          "hits_n": 5,
+          "top1": "用户2月20号带年糕去了成都心仪动物医院",
+          "judge_failed": false
+        },
+        {
+          "qid": 21,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确含高考百日誓师，与答案一致",
+          "hits_n": 5,
+          "top1": "用户2月20号带年糕去了成都心仪动物医院",
+          "judge_failed": false
+        },
+        {
+          "qid": 22,
+          "type": "normal",
+          "correct": 0,
+          "misled": 0,
+          "reason": "记忆未提大学室友，仅能确认从深圳来成都",
+          "hits_n": 5,
+          "top1": "阿哲3月15号来成都出差",
+          "judge_failed": false
+        },
+        {
+          "qid": 23,
+          "type": "normal",
+          "correct": 0,
+          "misled": 1,
+          "reason": "记忆无四姑娘山和空山民宿，只有青城山隐庐等干扰信息",
+          "hits_n": 5,
+          "top1": "用户预订了青城山脚下的“隐庐民宿”，住2晚",
+          "judge_failed": false
+        },
+        {
+          "qid": 24,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确每天下班后刷一小时，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "用户打算从3月10号开始每天下班后在LeetCode上刷一小时题",
+          "judge_failed": false
+        },
+        {
+          "qid": 25,
+          "type": "normal",
+          "correct": 0,
+          "misled": 0,
+          "reason": "记忆只提猫名年糕，无年龄信息，缺答案部分",
+          "hits_n": 2,
+          "top1": "年糕是用户的合租室友养的猫，不是用户养的",
+          "judge_failed": false
+        },
+        {
+          "qid": 26,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆明确提到续签了一年租约，与答案一致",
+          "hits_n": 1,
+          "top1": "用户租房住在高新区那个40平的一居室，2月25号刚续签了一年租约，月租2600。",
+          "judge_failed": false
+        },
+        {
+          "qid": 27,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出6月底前刷完300道题，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "用户的目标是在6月底前刷完LeetCode上的300道题",
+          "judge_failed": false
+        },
+        {
+          "qid": 28,
+          "type": "paraphrase",
+          "correct": 0,
+          "misled": 1,
+          "reason": "记忆仅提空气净化器，无型号价格，且含天气干扰",
+          "hits_n": 5,
+          "top1": "用户在成都生活，因成都春天的雾霾严重而购买空气净化器。",
+          "judge_failed": false
+        },
+        {
+          "qid": 29,
+          "type": "paraphrase",
+          "correct": 0,
+          "misled": 1,
+          "reason": "记忆只提云南豆和手冲，无V60滤杯及保山小粒信息",
+          "hits_n": 3,
+          "top1": "用户顺便买了一包新豆子",
+          "judge_failed": false
+        },
+        {
+          "qid": 30,
+          "type": "paraphrase",
+          "correct": 0,
+          "misled": 0,
+          "reason": "记忆未含支付回调、QPS等标准答案信息",
+          "hits_n": 1,
+          "top1": "用户认为原生SQL性能是好，但调试真的折磨",
+          "judge_failed": false
+        },
+        {
+          "qid": 31,
+          "type": "paraphrase",
+          "correct": 0,
+          "misled": 0,
+          "reason": "记忆只提柯基叫煤球，无打针日期信息",
+          "hits_n": 2,
+          "top1": "用户养的是一只3岁的柯基，名叫煤球，精力非常旺盛",
+          "judge_failed": false
+        },
+        {
+          "qid": 32,
+          "type": "paraphrase",
+          "correct": 0,
+          "misled": 0,
+          "reason": "选手未检索到任何记忆",
+          "hits_n": 0,
+          "top1": "",
+          "judge_failed": false
+        },
+        {
+          "qid": 33,
+          "type": "correction",
+          "correct": 0,
+          "misled": 1,
+          "reason": "记忆称年糕是用户养的猫，与标准答案冲突，且无柯基煤球信息",
+          "hits_n": 5,
+          "top1": "猫年糕是用户室友的猫",
+          "judge_failed": false
+        },
+        {
+          "qid": 34,
+          "type": "correction",
+          "correct": 0,
+          "misled": 1,
+          "reason": "记忆仅纠正项目名为星链，无接口迁移信息，且星轨旧说法并存易误导",
+          "hits_n": 5,
+          "top1": "用户2月20号带年糕去了成都心仪动物医院",
+          "judge_failed": false
+        },
+        {
+          "qid": 35,
+          "type": "correction",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆含都江堰青城山及隐庐民宿2晚，最新说法清晰",
+          "hits_n": 5,
+          "top1": "用户计划清明节4月4号到5号去都江堰",
+          "judge_failed": false
+        },
+        {
+          "qid": 36,
+          "type": "correction",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确纠正为狂犬疫苗，最新正确说法在场",
+          "hits_n": 5,
+          "top1": "用户纠正之前关于年糕在2月20号接种疫苗的说法，实际打的是狂犬疫苗，不是猫三联",
+          "judge_failed": false
+        },
+        {
+          "qid": 37,
+          "type": "noise",
+          "correct": 0,
+          "misled": 1,
+          "reason": "记忆称年糕打狂犬疫苗，与标准答案冲突且无正确信息",
+          "hits_n": 5,
+          "top1": "用户纠正之前关于年糕在2月20号接种疫苗的说法，实际打的是狂犬疫苗，不是猫三联",
+          "judge_failed": false
+        },
+        {
+          "qid": 38,
+          "type": "noise",
+          "correct": 0,
+          "misled": 1,
+          "reason": "记忆只提订单查询接口QPS 120→450，无支付回调及80→320，会误导",
+          "hits_n": 5,
+          "top1": "用户2月20号带年糕去了成都心仪动物医院",
+          "judge_failed": false
+        },
+        {
+          "qid": 39,
+          "type": "noise",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆明确青城山隐庐住2晚，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户预订了青城山脚下的“隐庐民宿”，住2晚",
+          "judge_failed": false
+        },
+        {
+          "qid": 40,
+          "type": "noise",
+          "correct": 0,
+          "misled": 1,
+          "reason": "记忆仅提2月14日268元滤杯，无3月2日京东899元信息，易被误导",
+          "hits_n": 5,
+          "top1": "用户2月20号带年糕去了成都心仪动物医院",
+          "judge_failed": false
+        }
+      ]
+    }
+  },
+  "meta": {
+    "ts": "2026-09-28T18:11:32+00:00",
+    "seed": 3,
+    "llm_model": "deepseek-flash",
+    "embed": "Qwen/Qwen3-Embedding-0.6B (1024d, local CPU)",
+    "dialogue_rounds": 60,
+    "quiz_questions": 40,
+    "absent": {
+      "langmem": "全系 0.0.11-0.0.30 使用 Python 3.11+ 语法（typing.Literal[*x]），本机仅 3.10.6，无法 import",
+      "zep": "社区版服务端依赖 docker，本机无 docker（按约定不装）"
+    },
+    "wall_total_s": 2497.5
+  },
+  "ranking": [
+    "sme_minimal",
+    "sme_chat",
+    "rag_qwen3",
+    "bm25_bigram",
+    "sme_kb_dynamic",
+    "mem0",
+    "graphiti_kuzu"
+  ]
+}

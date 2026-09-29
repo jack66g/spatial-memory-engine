@@ -1,0 +1,2938 @@
+{
+  "contestants": {
+    "sme_chat": {
+      "status": "ok",
+      "error": null,
+      "reinit_s": 9.6,
+      "add_total_s": 111.5,
+      "add_p50_ms": 885.2,
+      "score": 39.0,
+      "acc": 0.975,
+      "misled": 1,
+      "storage": 85,
+      "retrieval_p50_ms": 347.3,
+      "quiz_total_s": 40.8,
+      "total_s": 161.9,
+      "details": [
+        {
+          "qid": 1,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][2]均明确提到周三点冒椒火辣冒菜外卖",
+          "hits_n": 5,
+          "top1": "周三了，又到了我固定点春熙路那家“冒椒火辣”冒菜外卖的日子。必点千层肚和脑花，备注永远写“多放小米辣，不要香菜”。",
+          "judge_failed": false
+        },
+        {
+          "qid": 2,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "多条记忆均明确提到必点千层肚和脑花，无冲突。",
+          "hits_n": 5,
+          "top1": "周三了，又到了我固定点春熙路那家“冒椒火辣”冒菜外卖的日子。必点千层肚和脑花，备注永远写“多放小米辣，不要香菜”。",
+          "judge_failed": false
+        },
+        {
+          "qid": 3,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "多条记忆均明确备注多放小米辣不要香菜",
+          "hits_n": 5,
+          "top1": "周三了，又到了我固定点春熙路那家“冒椒火辣”冒菜外卖的日子。必点千层肚和脑花，备注永远写“多放小米辣，不要香菜”。",
+          "judge_failed": false
+        },
+        {
+          "qid": 4,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆明确提到周二和周四晚8点跳绳，信息一致",
+          "hits_n": 5,
+          "top1": "今晚周二，8 点我又要去小区楼下跳绳了。迪卡侬买的计数跳绳，目标一次 2000 个，但每次跳到 1200 个就开始摸鱼。",
+          "judge_failed": false
+        },
+        {
+          "qid": 5,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确提到迪卡侬计数跳绳和目标2000个",
+          "hits_n": 5,
+          "top1": "今晚周二，8 点我又要去小区楼下跳绳了。迪卡侬买的计数跳绳，目标一次 2000 个，但每次跳到 1200 个就开始摸鱼。",
+          "judge_failed": false
+        },
+        {
+          "qid": 6,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "多条记忆明确提到跳到1200个开始摸鱼，信息一致",
+          "hits_n": 5,
+          "top1": "今晚周二，8 点我又要去小区楼下跳绳了。迪卡侬买的计数跳绳，目标一次 2000 个，但每次跳到 1200 个就开始摸鱼。",
+          "judge_failed": false
+        },
+        {
+          "qid": 7,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出武侯区桐梓林地铁站附近，与标准答案一致",
+          "hits_n": 5,
+          "top1": "我住在成都武侯区桐梓林地铁站附近的老小区，7 楼没电梯，月租 2300。每天下班爬楼都像在打副本，爬到 5 楼就开始思考人生。",
+          "judge_failed": false
+        },
+        {
+          "qid": 8,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][2]均明确7楼无电梯月租2300，无冲突",
+          "hits_n": 5,
+          "top1": "我住在成都武侯区桐梓林地铁站附近的老小区，7 楼没电梯，月租 2300。每天下班爬楼都像在打副本，爬到 5 楼就开始思考人生。",
+          "judge_failed": false
+        },
+        {
+          "qid": 9,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确阳台朝北、下午4点后有太阳",
+          "hits_n": 5,
+          "top1": "阳台朝北，下午 4 点后才有太阳晒进来。我周末就靠那一点点夕阳晒衣服，感觉衣服都晒出了一股“珍惜”的味道。",
+          "judge_failed": false
+        },
+        {
+          "qid": 10,
+          "type": "normal",
+          "correct": 0,
+          "misled": 1,
+          "reason": "记忆仅称宽粉是室友的猫，未提年龄颜色，且[3]误称自己养宽粉",
+          "hits_n": 5,
+          "top1": "对了跟你说个事，其实宽粉是我合租室友的猫，我自己养的是那只黑猫叫煤球，2 岁，胆子特别小，一有快递员敲门就躲床底。",
+          "judge_failed": false
+        },
+        {
+          "qid": 11,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确提到周六去楼下宠物店洗澡，用麦德氏猫条哄进航空箱",
+          "hits_n": 5,
+          "top1": "我养了一只橘猫叫宽粉，11 斤，每周六都带它去楼下宠物店洗澡。它真的巨重，航空箱一提起来我手臂都在抖。",
+          "judge_failed": false
+        },
+        {
+          "qid": 12,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出煤球、2岁、胆小躲床底，与标准答案一致",
+          "hits_n": 5,
+          "top1": "对了跟你说个事，其实宽粉是我合租室友的猫，我自己养的是那只黑猫叫煤球，2 岁，胆子特别小，一有快递员敲门就躲床底。",
+          "judge_failed": false
+        },
+        {
+          "qid": 13,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确说明项目改为会员积分模块，最新说法清晰在场。",
+          "hits_n": 5,
+          "top1": "我之前说的那个 6 月 15 日上线优惠券核销的项目，其实被砍了，现在改成做会员积分模块，上线时间也推到 7 月 20 日了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 14,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][4]均明确最新上线时间为7月20日",
+          "hits_n": 5,
+          "top1": "我之前说的那个 6 月 15 日上线优惠券核销的项目，其实被砍了，现在改成做会员积分模块，上线时间也推到 7 月 20 日了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 15,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出哈利波特城堡71043和保时捷911",
+          "hits_n": 5,
+          "top1": "我最近沉迷拼乐高，上个月刚拼完哈利波特城堡 71043，现在在拼保时捷 911，已经拼到第 4 包，桌上还差两个轮胎没装。",
+          "judge_failed": false
+        },
+        {
+          "qid": 16,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][2]明确第4包、差两个轮胎，信息一致",
+          "hits_n": 5,
+          "top1": "我最近沉迷拼乐高，上个月刚拼完哈利波特城堡 71043，现在在拼保时捷 911，已经拼到第 4 包，桌上还差两个轮胎没装。",
+          "judge_failed": false
+        },
+        {
+          "qid": 17,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出改去西安及10月2日至6日，最新说法清晰。",
+          "hits_n": 5,
+          "top1": "重庆计划改了，我不去重庆了，改成 10 月 2 日到 10 月 6 日去西安，高铁票也重新买了，是 10 月 2 日下午 2 点 40 分那趟。",
+          "judge_failed": false
+        },
+        {
+          "qid": 18,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][5]均明确最新票为10月2日下午2点40分",
+          "hits_n": 5,
+          "top1": "重庆计划改了，我不去重庆了，改成 10 月 2 日到 10 月 6 日去西安，高铁票也重新买了，是 10 月 2 日下午 2 点 40 分那趟。",
+          "judge_failed": false
+        },
+        {
+          "qid": 19,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][2]均明确目标为12点半放手机、8点10分起床",
+          "hits_n": 5,
+          "top1": "我最近在调作息，给自己定的目标是晚上 12 点半前放下手机，早上 8 点 10 分起床。结果昨晚刷 B 站刷到凌晨 1 点半，今天靠瑞幸生椰拿铁续命，人已经飘了",
+          "judge_failed": false
+        },
+        {
+          "qid": 20,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确提到刷B站到凌晨1点半，靠瑞幸生椰拿铁续命",
+          "hits_n": 5,
+          "top1": "我最近在调作息，给自己定的目标是晚上 12 点半前放下手机，早上 8 点 10 分起床。结果昨晚刷 B 站刷到凌晨 1 点半，今天靠瑞幸生椰拿铁续命，人已经飘了",
+          "judge_failed": false
+        },
+        {
+          "qid": 21,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确给出成都本地小学老师、49岁",
+          "hits_n": 5,
+          "top1": "周末我妈又问我吃饭没，我说吃了。她说“你别老点外卖”，我说“我自己做”，她说“你那个厨房能开火吗”，好吧不能。",
+          "judge_failed": false
+        },
+        {
+          "qid": 22,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确17岁、高二、打王者荣耀",
+          "hits_n": 5,
+          "top1": "我弟今年 17 岁，读高二，天天打《王者荣耀》，我妈管不住他就来让我管。我一个后端程序员，远程指挥弟弟戒游戏，笑死。",
+          "judge_failed": false
+        },
+        {
+          "qid": 23,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出7月开始学及所购课程，与标准答案一致",
+          "hits_n": 5,
+          "top1": "我打算从 7 月开始学 Redis 和消息队列，买了一个极客时间的《Redis 核心技术与实战》课程，计划每周学 3 节，争取 9 月前把笔记整理到自己的 Gi",
+          "judge_failed": false
+        },
+        {
+          "qid": 24,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确每周3节、9月前整理笔记，与标准答案一致",
+          "hits_n": 5,
+          "top1": "我打算从 7 月开始学 Redis 和消息队列，买了一个极客时间的《Redis 核心技术与实战》课程，计划每周学 3 节，争取 9 月前把笔记整理到自己的 Gi",
+          "judge_failed": false
+        },
+        {
+          "qid": 25,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确说妈问有没有好好吃饭，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "周末我妈又问我吃饭没，我说吃了。她说“你别老点外卖”，我说“我自己做”，她说“你那个厨房能开火吗”，好吧不能。",
+          "judge_failed": false
+        },
+        {
+          "qid": 26,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确阳台朝北，与标准答案一致",
+          "hits_n": 5,
+          "top1": "阳台朝北，下午 4 点后才有太阳晒进来。我周末就靠那一点点夕阳晒衣服，感觉衣服都晒出了一股“珍惜”的味道。",
+          "judge_failed": false
+        },
+        {
+          "qid": 27,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆明确周二和周四晚8点跳绳，信息一致",
+          "hits_n": 5,
+          "top1": "今晚周二，8 点我又要去小区楼下跳绳了。迪卡侬买的计数跳绳，目标一次 2000 个，但每次跳到 1200 个就开始摸鱼。",
+          "judge_failed": false
+        },
+        {
+          "qid": 28,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆明确提到住7楼没电梯，爬楼累，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "我住在成都武侯区桐梓林地铁站附近的老小区，7 楼没电梯，月租 2300。每天下班爬楼都像在打副本，爬到 5 楼就开始思考人生。",
+          "judge_failed": false
+        },
+        {
+          "qid": 29,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][5]均明确拼到第4包、差两轮胎，信息一致",
+          "hits_n": 5,
+          "top1": "我最近沉迷拼乐高，上个月刚拼完哈利波特城堡 71043，现在在拼保时捷 911，已经拼到第 4 包，桌上还差两个轮胎没装。",
+          "judge_failed": false
+        },
+        {
+          "qid": 30,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][2]均提到靠生椰拿铁续命，信息一致",
+          "hits_n": 5,
+          "top1": "我最近在调作息，昨晚 12 点半放下手机，结果翻来覆去到 1 点才睡着。今天早上 8 点 10 分起床，靠生椰拿铁续命。",
+          "judge_failed": false
+        },
+        {
+          "qid": 31,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确提到弟弟玩《王者荣耀》，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "我弟今年 17 岁，读高二，天天打《王者荣耀》，我妈管不住他就来让我管。我一个后端程序员，远程指挥弟弟戒游戏，笑死。",
+          "judge_failed": false
+        },
+        {
+          "qid": 32,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]含每周3节、9月前GitHub笔记，与标准答案一致",
+          "hits_n": 5,
+          "top1": "我打算从 7 月开始学 Redis 和消息队列，买了一个极客时间的《Redis 核心技术与实战》课程，计划每周学 3 节，争取 9 月前把笔记整理到自己的 Gi",
+          "judge_failed": false
+        },
+        {
+          "qid": 33,
+          "type": "correction",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确煤球是黑猫，宽粉是室友的猫，正确信息在场",
+          "hits_n": 5,
+          "top1": "对了跟你说个事，其实宽粉是我合租室友的猫，我自己养的是那只黑猫叫煤球，2 岁，胆子特别小，一有快递员敲门就躲床底。",
+          "judge_failed": false
+        },
+        {
+          "qid": 34,
+          "type": "correction",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出最新说法：会员积分模块，7月20日上线",
+          "hits_n": 5,
+          "top1": "我之前说的那个 6 月 15 日上线优惠券核销的项目，其实被砍了，现在改成做会员积分模块，上线时间也推到 7 月 20 日了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 35,
+          "type": "correction",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确最新改为10月2日去西安，旧说法被覆盖",
+          "hits_n": 5,
+          "top1": "我国庆打算 10 月 1 日到 10 月 5 日去重庆，高铁票都买好了，早上 8 点 15 分那趟。现在已经开始盘算一天吃几顿火锅了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 36,
+          "type": "correction",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出最新高铁时间，与标准答案一致",
+          "hits_n": 5,
+          "top1": "重庆计划改了，我不去重庆了，改成 10 月 2 日到 10 月 6 日去西安，高铁票也重新买了，是 10 月 2 日下午 2 点 40 分那趟。",
+          "judge_failed": false
+        },
+        {
+          "qid": 37,
+          "type": "noise",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][2][3]均明确提到必点千层肚和脑花",
+          "hits_n": 5,
+          "top1": "周三了，又到了我固定点春熙路那家“冒椒火辣”冒菜外卖的日子。必点千层肚和脑花，备注永远写“多放小米辣，不要香菜”。",
+          "judge_failed": false
+        },
+        {
+          "qid": 38,
+          "type": "noise",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[3]明确煤球是黑猫，宽粉才是每周六洗澡的猫",
+          "hits_n": 5,
+          "top1": "我养了一只橘猫叫宽粉，11 斤，每周六都带它去楼下宠物店洗澡。它真的巨重，航空箱一提起来我手臂都在抖。",
+          "judge_failed": false
+        },
+        {
+          "qid": 39,
+          "type": "noise",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确最新为10月2日下午2点40分，旧说法被覆盖",
+          "hits_n": 5,
+          "top1": "重庆计划改了，我不去重庆了，改成 10 月 2 日到 10 月 6 日去西安，高铁票也重新买了，是 10 月 2 日下午 2 点 40 分那趟。",
+          "judge_failed": false
+        },
+        {
+          "qid": 40,
+          "type": "noise",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][2]明确提到已拼到第4包、还差两个轮胎未装",
+          "hits_n": 5,
+          "top1": "我最近沉迷拼乐高，上个月刚拼完哈利波特城堡 71043，现在在拼保时捷 911，已经拼到第 4 包，桌上还差两个轮胎没装。",
+          "judge_failed": false
+        }
+      ]
+    },
+    "sme_kb_dynamic": {
+      "status": "ok",
+      "error": null,
+      "reinit_s": 0.3,
+      "add_total_s": 183.6,
+      "add_p50_ms": 3105.9,
+      "score": 27.0,
+      "acc": 0.675,
+      "misled": 7,
+      "storage": 189,
+      "retrieval_p50_ms": 340.2,
+      "quiz_total_s": 39.2,
+      "total_s": 223.1,
+      "details": [
+        {
+          "qid": 1,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确给出等价答案，无冲突信息",
+          "hits_n": 5,
+          "top1": "用户每周三固定在这家店消费",
+          "judge_failed": false
+        },
+        {
+          "qid": 2,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出千层肚和脑花，无冲突信息",
+          "hits_n": 5,
+          "top1": "用户点冒菜必点千层肚和脑花",
+          "judge_failed": false
+        },
+        {
+          "qid": 3,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确给出备注内容，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户妈妈让用户别老点外卖",
+          "judge_failed": false
+        },
+        {
+          "qid": 4,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][2]明确周二和周四晚8点跳绳，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户今晚周二8点要去小区楼下跳绳",
+          "judge_failed": false
+        },
+        {
+          "qid": 5,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[5]和[1]直接给出迪卡侬计数跳绳及2000个目标",
+          "hits_n": 5,
+          "top1": "用户跳绳的目标是一次2000个",
+          "judge_failed": false
+        },
+        {
+          "qid": 6,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][2]均明确跳到1200个开始摸鱼，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户跳绳跳到1200个时开始摸鱼",
+          "judge_failed": false
+        },
+        {
+          "qid": 7,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确包含武侯区桐梓林地铁站附近老小区",
+          "hits_n": 5,
+          "top1": "用户住在成都武侯区桐梓林地铁站附近的老小区",
+          "judge_failed": false
+        },
+        {
+          "qid": 8,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆含7楼无电梯、月租2300，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户住7楼，没有电梯",
+          "judge_failed": false
+        },
+        {
+          "qid": 9,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆含朝北及下午4点后太阳，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户家阳台下午4点后才有太阳晒进来",
+          "judge_failed": false
+        },
+        {
+          "qid": 10,
+          "type": "normal",
+          "correct": 0,
+          "misled": 1,
+          "reason": "记忆仅说宽粉是室友的猫，无年龄体重颜色，且与用户养猫信息冲突",
+          "hits_n": 5,
+          "top1": "宽粉是用户的合租室友的猫",
+          "judge_failed": false
+        },
+        {
+          "qid": 11,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]和[1]直接给出周六去宠物店洗澡及麦德氏猫条哄进航空箱",
+          "hits_n": 5,
+          "top1": "用户用麦德氏的猫条哄蓝粉才肯进航空箱",
+          "judge_failed": false
+        },
+        {
+          "qid": 12,
+          "type": "normal",
+          "correct": 0,
+          "misled": 1,
+          "reason": "记忆仅确认猫叫煤球，无年龄性格，且宽粉干扰",
+          "hits_n": 5,
+          "top1": "用户养的猫叫宽粉",
+          "judge_failed": false
+        },
+        {
+          "qid": 13,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[5]明确给出最新说法：改成做会员积分模块",
+          "hits_n": 5,
+          "top1": "用户最近在做的项目是给餐饮商家用的订单中台",
+          "judge_failed": false
+        },
+        {
+          "qid": 14,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出上线推迟到7月20日，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户的项目上线时间推迟到7月20日",
+          "judge_failed": false
+        },
+        {
+          "qid": 15,
+          "type": "normal",
+          "correct": 0,
+          "misled": 1,
+          "reason": "记忆无哈利波特城堡，且无上个月拼完信息",
+          "hits_n": 5,
+          "top1": "用户最近沉迷拼乐高",
+          "judge_failed": false
+        },
+        {
+          "qid": 16,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆明确提到第4包和轮胎部分，与答案一致",
+          "hits_n": 5,
+          "top1": "用户拼保时捷 911 已经拼到第 4 包",
+          "judge_failed": false
+        },
+        {
+          "qid": 17,
+          "type": "normal",
+          "correct": 0,
+          "misled": 1,
+          "reason": "记忆只提到去西安，无日期，且无最新说法",
+          "hits_n": 5,
+          "top1": "用户国庆计划去西安",
+          "judge_failed": false
+        },
+        {
+          "qid": 18,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][4]明确给出10月2日下午2点40分，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户重新买了高铁票，是10月2日下午2点40分那趟",
+          "judge_failed": false
+        },
+        {
+          "qid": 19,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出目标，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户给自己定的目标是晚上12点半前放下手机，早上8点10分起床",
+          "judge_failed": false
+        },
+        {
+          "qid": 20,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[3]和[2]含等价信息，无冲突过期说法",
+          "hits_n": 5,
+          "top1": "用户今天周四晚上8点要跳绳",
+          "judge_failed": false
+        },
+        {
+          "qid": 21,
+          "type": "normal",
+          "correct": 0,
+          "misled": 0,
+          "reason": "记忆仅知妈妈49岁，无职业信息，不冲突",
+          "hits_n": 5,
+          "top1": "用户的妈妈今年49岁",
+          "judge_failed": false
+        },
+        {
+          "qid": 22,
+          "type": "normal",
+          "correct": 0,
+          "misled": 0,
+          "reason": "记忆有年龄和高二，但缺喜欢玩什么",
+          "hits_n": 5,
+          "top1": "用户有个弟弟，今年17岁，读高二",
+          "judge_failed": false
+        },
+        {
+          "qid": 23,
+          "type": "normal",
+          "correct": 0,
+          "misled": 0,
+          "reason": "记忆仅提到7月学Redis，未提买了什么课",
+          "hits_n": 5,
+          "top1": "用户打算从7月开始学Redis和消息队列",
+          "judge_failed": false
+        },
+        {
+          "qid": 24,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆含每周3节和9月前整理，虽有过期推迟说法但正确信息在场",
+          "hits_n": 5,
+          "top1": "用户计划每周学3节",
+          "judge_failed": false
+        },
+        {
+          "qid": 25,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[3]明确说妈妈问有没有好好吃饭，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户的妈妈周末给用户发微信问煤球的情况",
+          "judge_failed": false
+        },
+        {
+          "qid": 26,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[3]明确阳台朝北，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户家阳台下午4点后才有太阳晒进来",
+          "judge_failed": false
+        },
+        {
+          "qid": 27,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][2]分别给出周四和周二晚8点跳绳，与答案一致",
+          "hits_n": 5,
+          "top1": "用户今天周四晚上8点要跳绳",
+          "judge_failed": false
+        },
+        {
+          "qid": 28,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确住7楼无电梯，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户住7楼，没有电梯",
+          "judge_failed": false
+        },
+        {
+          "qid": 29,
+          "type": "paraphrase",
+          "correct": 0,
+          "misled": 1,
+          "reason": "记忆只提到拼到轮胎，未提第4包及差两个轮胎，信息不全",
+          "hits_n": 5,
+          "top1": "用户最近沉迷拼乐高",
+          "judge_failed": false
+        },
+        {
+          "qid": 30,
+          "type": "paraphrase",
+          "correct": 0,
+          "misled": 0,
+          "reason": "记忆无提神相关信息，不构成误导",
+          "hits_n": 5,
+          "top1": "用户今天周四晚上8点要跳绳",
+          "judge_failed": false
+        },
+        {
+          "qid": 31,
+          "type": "paraphrase",
+          "correct": 0,
+          "misled": 0,
+          "reason": "记忆无弟弟玩王者荣耀信息，仅提用户自己打游戏",
+          "hits_n": 5,
+          "top1": "用户有个弟弟，今年17岁，读高二",
+          "judge_failed": false
+        },
+        {
+          "qid": 32,
+          "type": "paraphrase",
+          "correct": 0,
+          "misled": 0,
+          "reason": "记忆仅提7月学Redis，无进度和GitHub成果信息",
+          "hits_n": 5,
+          "top1": "用户给自己定的目标是晚上12点半前放下手机，早上8点10分起床",
+          "judge_failed": false
+        },
+        {
+          "qid": 33,
+          "type": "correction",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[3]明确用户自己的黑猫叫煤球，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户养的猫叫宽粉",
+          "judge_failed": false
+        },
+        {
+          "qid": 34,
+          "type": "correction",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆含会员积分模块和7月20日上线，与答案一致",
+          "hits_n": 5,
+          "top1": "用户的项目上线时间推迟到7月20日",
+          "judge_failed": false
+        },
+        {
+          "qid": 35,
+          "type": "correction",
+          "correct": 0,
+          "misled": 1,
+          "reason": "记忆只提西安无日期，且有重庆冲突信息，无法得标准答案",
+          "hits_n": 5,
+          "top1": "用户国庆计划去西安",
+          "judge_failed": false
+        },
+        {
+          "qid": 36,
+          "type": "correction",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出10月2日下午2点40分，与答案一致",
+          "hits_n": 5,
+          "top1": "用户重新买了高铁票，是10月2日下午2点40分那趟",
+          "judge_failed": false
+        },
+        {
+          "qid": 37,
+          "type": "noise",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确必点千层肚和脑花，含脑花，无冲突",
+          "hits_n": 5,
+          "top1": "用户点冒菜必点千层肚和脑花",
+          "judge_failed": false
+        },
+        {
+          "qid": 38,
+          "type": "noise",
+          "correct": 0,
+          "misled": 1,
+          "reason": "记忆误将煤球与周六洗澡关联，且缺宽粉是室友橘猫的正确信息",
+          "hits_n": 5,
+          "top1": "用户每周六都带宽粉去楼下宠物店洗澡",
+          "judge_failed": false
+        },
+        {
+          "qid": 39,
+          "type": "noise",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确最新为10月2日下午2点40分，与标准一致",
+          "hits_n": 5,
+          "top1": "用户已经买好了去重庆的高铁票，是早上8点15分那趟",
+          "judge_failed": false
+        },
+        {
+          "qid": 40,
+          "type": "noise",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][5]明确第4包，[2]提到轮胎部分，与答案一致",
+          "hits_n": 5,
+          "top1": "用户拼保时捷 911 已经拼到第 4 包",
+          "judge_failed": false
+        }
+      ]
+    },
+    "sme_minimal": {
+      "status": "ok",
+      "error": null,
+      "reinit_s": 0.3,
+      "add_total_s": 54.3,
+      "add_p50_ms": 865.3,
+      "score": 39.0,
+      "acc": 0.975,
+      "misled": 1,
+      "storage": 60,
+      "retrieval_p50_ms": 342.7,
+      "quiz_total_s": 38.8,
+      "total_s": 93.4,
+      "details": [
+        {
+          "qid": 1,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][2]均明确提到周三点冒椒火辣冒菜外卖",
+          "hits_n": 5,
+          "top1": "周三了，又到了我固定点春熙路那家“冒椒火辣”冒菜外卖的日子。必点千层肚和脑花，备注永远写“多放小米辣，不要香菜”。",
+          "judge_failed": false
+        },
+        {
+          "qid": 2,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "多条记忆均明确提到必点千层肚和脑花，信息一致无冲突。",
+          "hits_n": 5,
+          "top1": "周三了，又到了我固定点春熙路那家“冒椒火辣”冒菜外卖的日子。必点千层肚和脑花，备注永远写“多放小米辣，不要香菜”。",
+          "judge_failed": false
+        },
+        {
+          "qid": 3,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确写备注多放小米辣不要香菜，与答案一致",
+          "hits_n": 5,
+          "top1": "周三了，又到了我固定点春熙路那家“冒椒火辣”冒菜外卖的日子。必点千层肚和脑花，备注永远写“多放小米辣，不要香菜”。",
+          "judge_failed": false
+        },
+        {
+          "qid": 4,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆明确提到周二和周四晚8点跳绳，信息一致。",
+          "hits_n": 5,
+          "top1": "今晚周二，8 点我又要去小区楼下跳绳了。迪卡侬买的计数跳绳，目标一次 2000 个，但每次跳到 1200 个就开始摸鱼。",
+          "judge_failed": false
+        },
+        {
+          "qid": 5,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确提到迪卡侬计数跳绳、目标2000个",
+          "hits_n": 5,
+          "top1": "今晚周二，8 点我又要去小区楼下跳绳了。迪卡侬买的计数跳绳，目标一次 2000 个，但每次跳到 1200 个就开始摸鱼。",
+          "judge_failed": false
+        },
+        {
+          "qid": 6,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "多条记忆均明确提到跳到1200个开始摸鱼，信息一致",
+          "hits_n": 5,
+          "top1": "今晚周二，8 点我又要去小区楼下跳绳了。迪卡侬买的计数跳绳，目标一次 2000 个，但每次跳到 1200 个就开始摸鱼。",
+          "judge_failed": false
+        },
+        {
+          "qid": 7,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出武侯区桐梓林地铁站附近，信息一致。",
+          "hits_n": 5,
+          "top1": "我住在成都武侯区桐梓林地铁站附近的老小区，7 楼没电梯，月租 2300。每天下班爬楼都像在打副本，爬到 5 楼就开始思考人生。",
+          "judge_failed": false
+        },
+        {
+          "qid": 8,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][2]均明确7楼无电梯、月租2300，无冲突信息",
+          "hits_n": 5,
+          "top1": "我住这 7 楼没电梯，每次带宽粉洗澡回来，我都要在楼下歇五分钟。月租 2300 的代价就是腿力训练。",
+          "judge_failed": false
+        },
+        {
+          "qid": 9,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确阳台朝北、下午4点后有太阳",
+          "hits_n": 5,
+          "top1": "阳台朝北，下午 4 点后才有太阳晒进来。我周末就靠那一点点夕阳晒衣服，感觉衣服都晒出了一股“珍惜”的味道。",
+          "judge_failed": false
+        },
+        {
+          "qid": 10,
+          "type": "normal",
+          "correct": 0,
+          "misled": 1,
+          "reason": "记忆称宽粉是室友的猫，但无年龄颜色，且与自养猫信息冲突",
+          "hits_n": 5,
+          "top1": "对了跟你说个事，其实宽粉是我合租室友的猫，我自己养的是那只黑猫叫煤球，2 岁，胆子特别小，一有快递员敲门就躲床底。",
+          "judge_failed": false
+        },
+        {
+          "qid": 11,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][2]明确提到周六去楼下宠物店洗澡、用麦德氏猫条哄进航空箱",
+          "hits_n": 5,
+          "top1": "周六带宽粉去楼下宠物店洗澡，用麦德氏的猫条哄着才肯进航空箱。它 11 斤，我提它下楼像提一袋米。",
+          "judge_failed": false
+        },
+        {
+          "qid": 12,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确煤球是自养黑猫，2岁胆小躲床底，与答案一致",
+          "hits_n": 5,
+          "top1": "对了跟你说个事，其实宽粉是我合租室友的猫，我自己养的是那只黑猫叫煤球，2 岁，胆子特别小，一有快递员敲门就躲床底。",
+          "judge_failed": false
+        },
+        {
+          "qid": 13,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][4][5]均明确项目已改为会员积分模块",
+          "hits_n": 5,
+          "top1": "我之前说的那个 6 月 15 日上线优惠券核销的项目，其实被砍了，现在改成做会员积分模块，上线时间也推到 7 月 20 日了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 14,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][4]均明确最新上线时间为7月20日",
+          "hits_n": 5,
+          "top1": "我之前说的那个 6 月 15 日上线优惠券核销的项目，其实被砍了，现在改成做会员积分模块，上线时间也推到 7 月 20 日了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 15,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出哈利波特城堡71043和保时捷911，与答案一致",
+          "hits_n": 5,
+          "top1": "我最近沉迷拼乐高，上个月刚拼完哈利波特城堡 71043，现在在拼保时捷 911，已经拼到第 4 包，桌上还差两个轮胎没装。",
+          "judge_failed": false
+        },
+        {
+          "qid": 16,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][2]明确拼到第4包、差两个轮胎，信息一致",
+          "hits_n": 5,
+          "top1": "我最近沉迷拼乐高，上个月刚拼完哈利波特城堡 71043，现在在拼保时捷 911，已经拼到第 4 包，桌上还差两个轮胎没装。",
+          "judge_failed": false
+        },
+        {
+          "qid": 17,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出改去西安及10月2日至6日，最新说法清晰。",
+          "hits_n": 5,
+          "top1": "重庆计划改了，我不去重庆了，改成 10 月 2 日到 10 月 6 日去西安，高铁票也重新买了，是 10 月 2 日下午 2 点 40 分那趟。",
+          "judge_failed": false
+        },
+        {
+          "qid": 18,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][3]明确最新票为10月2日下午2点40分，无冲突",
+          "hits_n": 5,
+          "top1": "重庆计划改了，我不去重庆了，改成 10 月 2 日到 10 月 6 日去西安，高铁票也重新买了，是 10 月 2 日下午 2 点 40 分那趟。",
+          "judge_failed": false
+        },
+        {
+          "qid": 19,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出目标：12点半前放下手机，8点10分起床",
+          "hits_n": 5,
+          "top1": "我最近在调作息，给自己定的目标是晚上 12 点半前放下手机，早上 8 点 10 分起床。结果昨晚刷 B 站刷到凌晨 1 点半，今天靠瑞幸生椰拿铁续命，人已经飘了",
+          "judge_failed": false
+        },
+        {
+          "qid": 20,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确提到刷B站到凌晨1点半，靠瑞幸生椰拿铁续命",
+          "hits_n": 5,
+          "top1": "我最近在调作息，给自己定的目标是晚上 12 点半前放下手机，早上 8 点 10 分起床。结果昨晚刷 B 站刷到凌晨 1 点半，今天靠瑞幸生椰拿铁续命，人已经飘了",
+          "judge_failed": false
+        },
+        {
+          "qid": 21,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确含成都小学老师、49岁，与标准一致",
+          "hits_n": 5,
+          "top1": "我妈今天又发微信问我有没有好好吃饭，我说吃了，她说“你那个外卖少点，不健康”。我妈是成都本地小学老师，今年 49 岁，操心命。",
+          "judge_failed": false
+        },
+        {
+          "qid": 22,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出17岁、高二、打王者荣耀",
+          "hits_n": 5,
+          "top1": "我弟今年 17 岁，读高二，天天打《王者荣耀》，我妈管不住他就来让我管。我一个后端程序员，远程指挥弟弟戒游戏，笑死。",
+          "judge_failed": false
+        },
+        {
+          "qid": 23,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确含7月开始、极客时间Redis课程，无冲突",
+          "hits_n": 5,
+          "top1": "我打算从 7 月开始学 Redis 和消息队列，买了一个极客时间的《Redis 核心技术与实战》课程，计划每周学 3 节，争取 9 月前把笔记整理到自己的 Gi",
+          "judge_failed": false
+        },
+        {
+          "qid": 24,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确每周3节、9月前整理笔记，与标准答案一致",
+          "hits_n": 5,
+          "top1": "我打算从 7 月开始学 Redis 和消息队列，买了一个极客时间的《Redis 核心技术与实战》课程，计划每周学 3 节，争取 9 月前把笔记整理到自己的 Gi",
+          "judge_failed": false
+        },
+        {
+          "qid": 25,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确问有没有好好吃饭，与标准答案一致",
+          "hits_n": 5,
+          "top1": "我妈周末又给我发微信，问我煤球最近怎么样。我说挺好的，就是胆子小。我妈说“跟你小时候一样”，我？？？",
+          "judge_failed": false
+        },
+        {
+          "qid": 26,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确阳台朝北，与标准答案一致",
+          "hits_n": 5,
+          "top1": "阳台朝北，下午 4 点后才有太阳晒进来。我周末就靠那一点点夕阳晒衣服，感觉衣服都晒出了一股“珍惜”的味道。",
+          "judge_failed": false
+        },
+        {
+          "qid": 27,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆明确周二、周四晚8点楼下跳绳，信息一致无冲突",
+          "hits_n": 5,
+          "top1": "今天周四，晚上 8 点又要跳绳。我给自己定了个规矩：跳完 2000 个才能点奶茶。结果我现在已经开始祈祷下雨了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 28,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆明确提到住7楼没电梯，爬楼累，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "我住在成都武侯区桐梓林地铁站附近的老小区，7 楼没电梯，月租 2300。每天下班爬楼都像在打副本，爬到 5 楼就开始思考人生。",
+          "judge_failed": false
+        },
+        {
+          "qid": 29,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][5]明确说拼到第4包、轮胎未装，与标准答案一致",
+          "hits_n": 5,
+          "top1": "我最近沉迷拼乐高，上个月刚拼完哈利波特城堡 71043，现在在拼保时捷 911，已经拼到第 4 包，桌上还差两个轮胎没装。",
+          "judge_failed": false
+        },
+        {
+          "qid": 30,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][2]均提到靠生椰拿铁续命，与标准答案一致",
+          "hits_n": 5,
+          "top1": "我最近在调作息，昨晚 12 点半放下手机，结果翻来覆去到 1 点才睡着。今天早上 8 点 10 分起床，靠生椰拿铁续命。",
+          "judge_failed": false
+        },
+        {
+          "qid": 31,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][2][3]均明确提到弟弟打《王者荣耀》",
+          "hits_n": 5,
+          "top1": "我弟今年 17 岁，读高二，天天打《王者荣耀》，我妈管不住他就来让我管。我一个后端程序员，远程指挥弟弟戒游戏，笑死。",
+          "judge_failed": false
+        },
+        {
+          "qid": 32,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]含每周3节、9月前GitHub笔记，与标准答案一致",
+          "hits_n": 5,
+          "top1": "我打算从 7 月开始学 Redis 和消息队列，买了一个极客时间的《Redis 核心技术与实战》课程，计划每周学 3 节，争取 9 月前把笔记整理到自己的 Gi",
+          "judge_failed": false
+        },
+        {
+          "qid": 33,
+          "type": "correction",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确黑猫叫煤球，2岁胆小，与标准一致",
+          "hits_n": 5,
+          "top1": "对了跟你说个事，其实宽粉是我合租室友的猫，我自己养的是那只黑猫叫煤球，2 岁，胆子特别小，一有快递员敲门就躲床底。",
+          "judge_failed": false
+        },
+        {
+          "qid": 34,
+          "type": "correction",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][3]明确会员积分模块7月20日上线，最新说法清晰",
+          "hits_n": 5,
+          "top1": "我之前说的那个 6 月 15 日上线优惠券核销的项目，其实被砍了，现在改成做会员积分模块，上线时间也推到 7 月 20 日了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 35,
+          "type": "correction",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[3]明确最新计划为10月2日到6日去西安",
+          "hits_n": 5,
+          "top1": "我国庆打算 10 月 1 日到 10 月 5 日去重庆，高铁票都买好了，早上 8 点 15 分那趟。现在已经开始盘算一天吃几顿火锅了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 36,
+          "type": "correction",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][3]均明确最新高铁为10月2日下午2点40分",
+          "hits_n": 5,
+          "top1": "重庆计划改了，我不去重庆了，改成 10 月 2 日到 10 月 6 日去西安，高铁票也重新买了，是 10 月 2 日下午 2 点 40 分那趟。",
+          "judge_failed": false
+        },
+        {
+          "qid": 37,
+          "type": "noise",
+          "correct": 1,
+          "misled": 0,
+          "reason": "多条记忆均明确必点千层肚和脑花，无冲突",
+          "hits_n": 5,
+          "top1": "周三了，冒椒火辣的冒菜我又点了。千层肚和脑花，多放小米辣，不要香菜。这家店我真的是每周三固定贡献营业额。",
+          "judge_failed": false
+        },
+        {
+          "qid": 38,
+          "type": "noise",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[3]明确煤球是自养黑猫，宽粉才是每周洗澡的猫",
+          "hits_n": 5,
+          "top1": "我养了一只橘猫叫宽粉，11 斤，每周六都带它去楼下宠物店洗澡。它真的巨重，航空箱一提起来我手臂都在抖。",
+          "judge_failed": false
+        },
+        {
+          "qid": 39,
+          "type": "noise",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][3]明确最新为10月2日下午2点40分，旧说法被更新",
+          "hits_n": 5,
+          "top1": "重庆计划改了，我不去重庆了，改成 10 月 2 日到 10 月 6 日去西安，高铁票也重新买了，是 10 月 2 日下午 2 点 40 分那趟。",
+          "judge_failed": false
+        },
+        {
+          "qid": 40,
+          "type": "noise",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][2]明确提到拼到第4包、差两个轮胎未装，与答案一致。",
+          "hits_n": 5,
+          "top1": "我最近沉迷拼乐高，上个月刚拼完哈利波特城堡 71043，现在在拼保时捷 911，已经拼到第 4 包，桌上还差两个轮胎没装。",
+          "judge_failed": false
+        }
+      ]
+    },
+    "mem0": {
+      "status": "ok",
+      "error": null,
+      "reinit_s": 1.6,
+      "add_total_s": 347.0,
+      "add_p50_ms": 5618.0,
+      "score": 37.0,
+      "acc": 0.925,
+      "misled": 2,
+      "storage": 20,
+      "retrieval_p50_ms": 314.0,
+      "quiz_total_s": 51.3,
+      "total_s": 399.9,
+      "details": [
+        {
+          "qid": 1,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出每周三冒椒火辣冒菜外卖，与答案一致",
+          "hits_n": 5,
+          "top1": "User has a fixed weekly routine of ordering 冒菜 (maocai) takeout every Wednesday ",
+          "judge_failed": false
+        },
+        {
+          "qid": 2,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[3]明确提到必点千层肚和脑花，与标准答案一致",
+          "hits_n": 5,
+          "top1": "The user jokes self-deprecatingly that if they keep eating at 冒椒火辣 (Maojiao Huol",
+          "judge_failed": false
+        },
+        {
+          "qid": 3,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[5]明确备注为多放小米辣不要香菜，与答案一致",
+          "hits_n": 5,
+          "top1": "On September 28, 2026, user's mother sent a WeChat message asking whether the us",
+          "judge_failed": false
+        },
+        {
+          "qid": 4,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]周二、[3]周四晚8点跳绳，信息一致",
+          "hits_n": 5,
+          "top1": "User has a Tuesday evening jump rope routine, going downstairs to their resident",
+          "judge_failed": false
+        },
+        {
+          "qid": 5,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确迪卡侬计数跳绳、目标2000个，无冲突",
+          "hits_n": 5,
+          "top1": "User has a Tuesday evening jump rope routine, going downstairs to their resident",
+          "judge_failed": false
+        },
+        {
+          "qid": 6,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][2]均明确提到1200个开始摸鱼，信息一致",
+          "hits_n": 5,
+          "top1": "User has a Tuesday evening jump rope routine, going downstairs to their resident",
+          "judge_failed": false
+        },
+        {
+          "qid": 7,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确提到武侯区桐梓林地铁站附近，与标准答案一致",
+          "hits_n": 5,
+          "top1": "User lives in an old residential compound near 桐梓林 (Tongzilin) metro station in ",
+          "judge_failed": false
+        },
+        {
+          "qid": 8,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][2]均明确7楼无电梯、月租2300，信息一致",
+          "hits_n": 5,
+          "top1": "User lives on the 7th floor of a building with no elevator, and every time they ",
+          "judge_failed": false
+        },
+        {
+          "qid": 9,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确阳台朝北，下午4点后才有阳光",
+          "hits_n": 5,
+          "top1": "User's apartment has a north-facing balcony (阳台朝北) that only gets sunlight after",
+          "judge_failed": false
+        },
+        {
+          "qid": 10,
+          "type": "normal",
+          "correct": 0,
+          "misled": 0,
+          "reason": "记忆只提宽粉是室友的猫，无年龄颜色体重信息",
+          "hits_n": 5,
+          "top1": "User's own cat is a black cat named 煤球 (Meiqiu), 2 years old and very timid — wh",
+          "judge_failed": false
+        },
+        {
+          "qid": 11,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]含楼下宠物店洗澡及麦德氏猫条哄进航空箱信息",
+          "hits_n": 5,
+          "top1": "User has a pet named 宽粉 (Kuanfen) who waits at the door for them when they come ",
+          "judge_failed": false
+        },
+        {
+          "qid": 12,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确煤球是自家黑猫、2岁、胆小躲床底，与答案一致",
+          "hits_n": 5,
+          "top1": "User's own cat is a black cat named 煤球 (Meiqiu), 2 years old and very timid — wh",
+          "judge_failed": false
+        },
+        {
+          "qid": 13,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确项目改为会员积分模块，最新说法清晰",
+          "hits_n": 5,
+          "top1": "On September 28, 2026, User spent the entire workday writing the membership poin",
+          "judge_failed": false
+        },
+        {
+          "qid": 14,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[4]明确上线时间推到7月20日，与标准答案一致",
+          "hits_n": 5,
+          "top1": "On September 28, 2026, User reported that their membership points module (会员积分模块",
+          "judge_failed": false
+        },
+        {
+          "qid": 15,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆明确含哈利波特城堡和保时捷911信息",
+          "hits_n": 5,
+          "top1": "User has recently gotten into building LEGO and completed the Harry Potter Hogwa",
+          "judge_failed": false
+        },
+        {
+          "qid": 16,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][2]明确第4包、差两个轮胎，[4]虽已装但最新说法清晰",
+          "hits_n": 5,
+          "top1": "As of late September 2026, the user is building the LEGO Porsche 911 set and has",
+          "judge_failed": false
+        },
+        {
+          "qid": 17,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出改去西安、10月2日至6日，最新说法清晰",
+          "hits_n": 5,
+          "top1": "User cancelled their Chongqing (重庆) trip for National Day 2026 and instead will ",
+          "judge_failed": false
+        },
+        {
+          "qid": 18,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确最新票为10月2日14:40，旧票信息已被取代",
+          "hits_n": 5,
+          "top1": "User cancelled their Chongqing (重庆) trip for National Day 2026 and instead will ",
+          "judge_failed": false
+        },
+        {
+          "qid": 19,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出12:30前放下手机、8:10起床，与答案一致",
+          "hits_n": 5,
+          "top1": "As of late September 2026, the user is trying to adjust their sleep schedule, wi",
+          "judge_failed": false
+        },
+        {
+          "qid": 20,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确含凌晨1点半和瑞幸生椰拿铁信息",
+          "hits_n": 5,
+          "top1": "On the night of September 27, 2026, the user broke their sleep goal by scrolling",
+          "judge_failed": false
+        },
+        {
+          "qid": 21,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确母亲是成都小学老师，49岁，与答案一致",
+          "hits_n": 5,
+          "top1": "User's mother is a primary school teacher in Chengdu, is 49 years old (as of 202",
+          "judge_failed": false
+        },
+        {
+          "qid": 22,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出17岁、高二、玩王者荣耀，与标准答案一致",
+          "hits_n": 5,
+          "top1": "User has a younger brother who is 17 years old (as of 2026) and in his second ye",
+          "judge_failed": false
+        },
+        {
+          "qid": 23,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确7月开始学Redis和消息队列，买了极客时间课程",
+          "hits_n": 5,
+          "top1": "User plans to start learning Redis and message queues beginning July 2026, havin",
+          "judge_failed": false
+        },
+        {
+          "qid": 24,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确每周3节、9月前整理笔记到GitHub",
+          "hits_n": 5,
+          "top1": "User plans to start learning Redis and message queues beginning July 2026, havin",
+          "judge_failed": false
+        },
+        {
+          "qid": 25,
+          "type": "normal",
+          "correct": 0,
+          "misled": 1,
+          "reason": "记忆无每周末问吃饭，仅一次问吃饭，且多为其他话题",
+          "hits_n": 5,
+          "top1": "Over the weekend around September 26-27, 2026, the user's mother sent a WeChat m",
+          "judge_failed": false
+        },
+        {
+          "qid": 26,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确阳台朝北，与标准答案一致",
+          "hits_n": 5,
+          "top1": "User's apartment has a north-facing balcony (阳台朝北) that only gets sunlight after",
+          "judge_failed": false
+        },
+        {
+          "qid": 27,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]和[5]明确周二、周四晚8点楼下跳绳",
+          "hits_n": 5,
+          "top1": "User lives on the 7th floor of a building with no elevator, and every time they ",
+          "judge_failed": false
+        },
+        {
+          "qid": 28,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆明确提到住7楼无电梯需爬楼梯，信息一致",
+          "hits_n": 5,
+          "top1": "User lives on the 7th floor of a building with no elevator, and every time they ",
+          "judge_failed": false
+        },
+        {
+          "qid": 29,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆一致显示拼到第4包，还差两个轮胎未装",
+          "hits_n": 5,
+          "top1": "User has recently gotten into building LEGO and completed the Harry Potter Hogwa",
+          "judge_failed": false
+        },
+        {
+          "qid": 30,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确提到靠瑞幸生椰拿铁提神，与标准答案一致",
+          "hits_n": 5,
+          "top1": "On the night of September 27, 2026, the user broke their sleep goal by scrolling",
+          "judge_failed": false
+        },
+        {
+          "qid": 31,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆明确提到弟弟玩《王者荣耀》，与标准答案一致",
+          "hits_n": 5,
+          "top1": "User has a younger brother who is 17 years old (as of 2026) and in his second ye",
+          "judge_failed": false
+        },
+        {
+          "qid": 32,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]含每周3节、9月前整理到GitHub，与标准答案一致",
+          "hits_n": 5,
+          "top1": "User believes their plan to organize their Redis course notes onto their own Git",
+          "judge_failed": false
+        },
+        {
+          "qid": 33,
+          "type": "correction",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆明确黑猫叫煤球，2岁胆小，与标准一致",
+          "hits_n": 5,
+          "top1": "User's own cat is a black cat named 煤球 (Meiqiu), 2 years old and very timid — wh",
+          "judge_failed": false
+        },
+        {
+          "qid": 34,
+          "type": "correction",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[3]明确会员积分模块，上线推至7月20日，与标准答案一致",
+          "hits_n": 5,
+          "top1": "On September 28, 2026, User reported that their membership points module (会员积分模块",
+          "judge_failed": false
+        },
+        {
+          "qid": 35,
+          "type": "correction",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[4]明确最新行程为10月2日至6日去西安",
+          "hits_n": 5,
+          "top1": "On September 28, 2026, User's mother asked whether the user would come home for ",
+          "judge_failed": false
+        },
+        {
+          "qid": 36,
+          "type": "correction",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确最新高铁为10月2日下午2:40，旧信息虽在但最新清晰",
+          "hits_n": 5,
+          "top1": "User cancelled their Chongqing (重庆) trip for National Day 2026 and instead will ",
+          "judge_failed": false
+        },
+        {
+          "qid": 37,
+          "type": "noise",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确必点千层肚和脑花，与答案一致",
+          "hits_n": 5,
+          "top1": "On the evening of September 28, 2026, the user's 冒菜 (maocai) takeout arrived; th",
+          "judge_failed": false
+        },
+        {
+          "qid": 38,
+          "type": "noise",
+          "correct": 0,
+          "misled": 1,
+          "reason": "记忆只提宽粉每周六洗澡，未说明是室友的猫，易误认为煤球",
+          "hits_n": 5,
+          "top1": "User takes their cat 宽粉 to the pet store downstairs for a bath every Saturday",
+          "judge_failed": false
+        },
+        {
+          "qid": 39,
+          "type": "noise",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确最新为10月2日14:40出发，旧信息[3]已被取代",
+          "hits_n": 5,
+          "top1": "User cancelled their Chongqing (重庆) trip for National Day 2026 and instead will ",
+          "judge_failed": false
+        },
+        {
+          "qid": 40,
+          "type": "noise",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][2]明确支持已拼到第4包、还差两轮胎未装",
+          "hits_n": 5,
+          "top1": "As of late September 2026, the user is building the LEGO Porsche 911 set and has",
+          "judge_failed": false
+        }
+      ]
+    },
+    "rag_qwen3": {
+      "status": "ok",
+      "error": null,
+      "reinit_s": 0.3,
+      "add_total_s": 46.8,
+      "add_p50_ms": 747.3,
+      "score": 39.0,
+      "acc": 0.975,
+      "misled": 1,
+      "storage": 60,
+      "retrieval_p50_ms": 301.8,
+      "quiz_total_s": 47.5,
+      "total_s": 94.6,
+      "details": [
+        {
+          "qid": 1,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][2]均明确提到周三点冒椒火辣冒菜外卖",
+          "hits_n": 5,
+          "top1": "周三了，又到了我固定点春熙路那家“冒椒火辣”冒菜外卖的日子。必点千层肚和脑花，备注永远写“多放小米辣，不要香菜”。",
+          "judge_failed": false
+        },
+        {
+          "qid": 2,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "多条记忆均明确提到必点千层肚和脑花，信息一致无冲突",
+          "hits_n": 5,
+          "top1": "周三冒菜又点了，千层肚和脑花，多放小米辣，不要香菜。这家店再吃下去，我可能要变成冒菜形状了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 3,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[3][5]均明确备注多放小米辣不要香菜",
+          "hits_n": 5,
+          "top1": "周末我妈又问我吃饭没，我说吃了。她说“你别老点外卖”，我说“我自己做”，她说“你那个厨房能开火吗”，好吧不能。",
+          "judge_failed": false
+        },
+        {
+          "qid": 4,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆明确提到周二和周四晚8点跳绳，信息一致无冲突",
+          "hits_n": 5,
+          "top1": "今天周四，晚上 8 点跳绳。我跳了 1500 个，比上次好一点，但离 2000 还是差。摸鱼是人类的本质。",
+          "judge_failed": false
+        },
+        {
+          "qid": 5,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确提到迪卡侬计数跳绳和目标2000个，信息一致。",
+          "hits_n": 5,
+          "top1": "今晚周二，8 点我又要去小区楼下跳绳了。迪卡侬买的计数跳绳，目标一次 2000 个，但每次跳到 1200 个就开始摸鱼。",
+          "judge_failed": false
+        },
+        {
+          "qid": 6,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "多条记忆均明确提到跳到1200个开始摸鱼",
+          "hits_n": 5,
+          "top1": "今天周四，晚上 8 点跳绳。我跳了 1500 个，比上次好一点，但离 2000 还是差。摸鱼是人类的本质。",
+          "judge_failed": false
+        },
+        {
+          "qid": 7,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确包含武侯区桐梓林地铁站附近，与标准答案一致",
+          "hits_n": 5,
+          "top1": "我住在成都武侯区桐梓林地铁站附近的老小区，7 楼没电梯，月租 2300。每天下班爬楼都像在打副本，爬到 5 楼就开始思考人生。",
+          "judge_failed": false
+        },
+        {
+          "qid": 8,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][2]均明确7楼无电梯月租2300，无冲突",
+          "hits_n": 5,
+          "top1": "我住这 7 楼没电梯，每次带宽粉洗澡回来，我都要在楼下歇五分钟。月租 2300 的代价就是腿力训练。",
+          "judge_failed": false
+        },
+        {
+          "qid": 9,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确阳台朝北、下午4点后有太阳",
+          "hits_n": 5,
+          "top1": "阳台朝北，下午 4 点后才有太阳晒进来。我周末就靠那一点点夕阳晒衣服，感觉衣服都晒出了一股“珍惜”的味道。",
+          "judge_failed": false
+        },
+        {
+          "qid": 10,
+          "type": "normal",
+          "correct": 0,
+          "misled": 1,
+          "reason": "记忆称宽粉是室友的猫，但无年龄颜色，且[5]误称自己养宽粉",
+          "hits_n": 5,
+          "top1": "对了跟你说个事，其实宽粉是我合租室友的猫，我自己养的是那只黑猫叫煤球，2 岁，胆子特别小，一有快递员敲门就躲床底。",
+          "judge_failed": false
+        },
+        {
+          "qid": 11,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[3]明确提到周六去楼下宠物店洗澡，用麦德氏猫条哄进航空箱",
+          "hits_n": 5,
+          "top1": "我养了一只橘猫叫宽粉，11 斤，每周六都带它去楼下宠物店洗澡。它真的巨重，航空箱一提起来我手臂都在抖。",
+          "judge_failed": false
+        },
+        {
+          "qid": 12,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出黑猫煤球、2岁、胆小躲床底，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "对了跟你说个事，其实宽粉是我合租室友的猫，我自己养的是那只黑猫叫煤球，2 岁，胆子特别小，一有快递员敲门就躲床底。",
+          "judge_failed": false
+        },
+        {
+          "qid": 13,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][3]明确提到改成会员积分模块，信息一致",
+          "hits_n": 5,
+          "top1": "我之前说的那个 6 月 15 日上线优惠券核销的项目，其实被砍了，现在改成做会员积分模块，上线时间也推到 7 月 20 日了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 14,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][2]明确最新上线时间为7月20日，旧说法被更新覆盖。",
+          "hits_n": 5,
+          "top1": "我之前说的那个 6 月 15 日上线优惠券核销的项目，其实被砍了，现在改成做会员积分模块，上线时间也推到 7 月 20 日了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 15,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出上个月拼完哈利波特城堡71043，现在拼保时捷911",
+          "hits_n": 5,
+          "top1": "我最近沉迷拼乐高，上个月刚拼完哈利波特城堡 71043，现在在拼保时捷 911，已经拼到第 4 包，桌上还差两个轮胎没装。",
+          "judge_failed": false
+        },
+        {
+          "qid": 16,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[4]明确说拼到第4包，还差两个轮胎没装",
+          "hits_n": 5,
+          "top1": "保时捷 911 又拼了一点，第 4 包快结束了。那两个轮胎我还没装，感觉装上去这车就真的能跑了，虽然它只是个乐高。",
+          "judge_failed": false
+        },
+        {
+          "qid": 17,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确给出改去西安及10月2日至6日，最新说法清晰。",
+          "hits_n": 5,
+          "top1": "我国庆打算 10 月 1 日到 10 月 5 日去重庆，高铁票都买好了，早上 8 点 15 分那趟。现在已经开始盘算一天吃几顿火锅了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 18,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确最新票为10月2日下午2点40分，与标准一致。",
+          "hits_n": 5,
+          "top1": "重庆计划改了，我不去重庆了，改成 10 月 2 日到 10 月 6 日去西安，高铁票也重新买了，是 10 月 2 日下午 2 点 40 分那趟。",
+          "judge_failed": false
+        },
+        {
+          "qid": 19,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确给出目标：12点半前放下手机、8点10分起床",
+          "hits_n": 5,
+          "top1": "我最近在调作息，昨晚 12 点半放下手机，结果翻来覆去到 1 点才睡着。今天早上 8 点 10 分起床，靠生椰拿铁续命。",
+          "judge_failed": false
+        },
+        {
+          "qid": 20,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确提到刷B站到凌晨1点半、靠瑞幸生椰拿铁续命",
+          "hits_n": 5,
+          "top1": "我最近在调作息，给自己定的目标是晚上 12 点半前放下手机，早上 8 点 10 分起床。结果昨晚刷 B 站刷到凌晨 1 点半，今天靠瑞幸生椰拿铁续命，人已经飘了",
+          "judge_failed": false
+        },
+        {
+          "qid": 21,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确提到成都本地小学老师、49岁",
+          "hits_n": 5,
+          "top1": "我妈今天又发微信问我有没有好好吃饭，我说吃了，她说“你那个外卖少点，不健康”。我妈是成都本地小学老师，今年 49 岁，操心命。",
+          "judge_failed": false
+        },
+        {
+          "qid": 22,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出17岁、高二、打王者荣耀，与标准一致",
+          "hits_n": 5,
+          "top1": "我弟今年 17 岁，读高二，天天打《王者荣耀》，我妈管不住他就来让我管。我一个后端程序员，远程指挥弟弟戒游戏，笑死。",
+          "judge_failed": false
+        },
+        {
+          "qid": 23,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确提到7月开始学、买了极客时间Redis课，与标准答案一致",
+          "hits_n": 5,
+          "top1": "我打算从 7 月开始学 Redis 和消息队列，买了一个极客时间的《Redis 核心技术与实战》课程，计划每周学 3 节，争取 9 月前把笔记整理到自己的 Gi",
+          "judge_failed": false
+        },
+        {
+          "qid": 24,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确每周3节、9月前整理笔记，后续仅进度延迟未改计划。",
+          "hits_n": 5,
+          "top1": "我打算从 7 月开始学 Redis 和消息队列，买了一个极客时间的《Redis 核心技术与实战》课程，计划每周学 3 节，争取 9 月前把笔记整理到自己的 Gi",
+          "judge_failed": false
+        },
+        {
+          "qid": 25,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][4]均含问吃饭，等价标准答案",
+          "hits_n": 5,
+          "top1": "我妈今天又发微信问我有没有好好吃饭，我说吃了，她说“你那个外卖少点，不健康”。我妈是成都本地小学老师，今年 49 岁，操心命。",
+          "judge_failed": false
+        },
+        {
+          "qid": 26,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确阳台朝北，与标准答案一致",
+          "hits_n": 5,
+          "top1": "阳台朝北，下午 4 点后才有太阳晒进来。我周末就靠那一点点夕阳晒衣服，感觉衣服都晒出了一股“珍惜”的味道。",
+          "judge_failed": false
+        },
+        {
+          "qid": 27,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆明确周二和周四晚8点楼下跳绳，信息一致无冲突",
+          "hits_n": 5,
+          "top1": "今天周四，晚上 8 点跳绳。我跳了 1500 个，比上次好一点，但离 2000 还是差。摸鱼是人类的本质。",
+          "judge_failed": false
+        },
+        {
+          "qid": 28,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆明确提到住7楼没电梯，爬楼累，与标准答案一致",
+          "hits_n": 5,
+          "top1": "我住这 7 楼没电梯，每次带宽粉洗澡回来，我都要在楼下歇五分钟。月租 2300 的代价就是腿力训练。",
+          "judge_failed": false
+        },
+        {
+          "qid": 29,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆明确显示拼到第4包、差两个轮胎，与标准答案一致",
+          "hits_n": 5,
+          "top1": "我最近沉迷拼乐高，上个月刚拼完哈利波特城堡 71043，现在在拼保时捷 911，已经拼到第 4 包，桌上还差两个轮胎没装。",
+          "judge_failed": false
+        },
+        {
+          "qid": 30,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][2]均提到靠生椰拿铁续命，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "我最近在调作息，昨晚 12 点半放下手机，结果翻来覆去到 1 点才睡着。今天早上 8 点 10 分起床，靠生椰拿铁续命。",
+          "judge_failed": false
+        },
+        {
+          "qid": 31,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][2][3]均明确提到弟弟打《王者荣耀》",
+          "hits_n": 5,
+          "top1": "我弟今年 17 岁，读高二，天天打《王者荣耀》，我妈管不住他就来让我管。我一个后端程序员，远程指挥弟弟戒游戏，笑死。",
+          "judge_failed": false
+        },
+        {
+          "qid": 32,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]含每周3节、9月前整理到GitHub的完整计划",
+          "hits_n": 5,
+          "top1": "我打算从 7 月开始学 Redis 和消息队列，买了一个极客时间的《Redis 核心技术与实战》课程，计划每周学 3 节，争取 9 月前把笔记整理到自己的 Gi",
+          "judge_failed": false
+        },
+        {
+          "qid": 33,
+          "type": "correction",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确说黑猫叫煤球，与标准答案一致",
+          "hits_n": 5,
+          "top1": "对了跟你说个事，其实宽粉是我合租室友的猫，我自己养的是那只黑猫叫煤球，2 岁，胆子特别小，一有快递员敲门就躲床底。",
+          "judge_failed": false
+        },
+        {
+          "qid": 34,
+          "type": "correction",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][2]明确会员积分模块7月20日上线，旧说法被更新",
+          "hits_n": 5,
+          "top1": "我之前说的那个 6 月 15 日上线优惠券核销的项目，其实被砍了，现在改成做会员积分模块，上线时间也推到 7 月 20 日了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 35,
+          "type": "correction",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[3]明确最新计划为10月2-6日去西安，与标准一致",
+          "hits_n": 5,
+          "top1": "我国庆打算 10 月 1 日到 10 月 5 日去重庆，高铁票都买好了，早上 8 点 15 分那趟。现在已经开始盘算一天吃几顿火锅了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 36,
+          "type": "correction",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确最新高铁为10月2日下午2点40分，与答案一致。",
+          "hits_n": 5,
+          "top1": "重庆计划改了，我不去重庆了，改成 10 月 2 日到 10 月 6 日去西安，高铁票也重新买了，是 10 月 2 日下午 2 点 40 分那趟。",
+          "judge_failed": false
+        },
+        {
+          "qid": 37,
+          "type": "noise",
+          "correct": 1,
+          "misled": 0,
+          "reason": "多条记忆均明确必点千层肚和脑花，无冲突",
+          "hits_n": 5,
+          "top1": "周三冒菜又点了，千层肚和脑花，多放小米辣，不要香菜。这家店再吃下去，我可能要变成冒菜形状了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 38,
+          "type": "noise",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[3]明确煤球是黑猫，宽粉才是每周六洗澡的猫",
+          "hits_n": 5,
+          "top1": "周六带宽粉去楼下宠物店洗澡，用麦德氏的猫条哄着才肯进航空箱。它 11 斤，我提它下楼像提一袋米。",
+          "judge_failed": false
+        },
+        {
+          "qid": 39,
+          "type": "noise",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][2]明确10月2日下午2点40分出发，旧说法被更新",
+          "hits_n": 5,
+          "top1": "重庆计划改了，我不去重庆了，改成 10 月 2 日到 10 月 6 日去西安，高铁票也重新买了，是 10 月 2 日下午 2 点 40 分那趟。",
+          "judge_failed": false
+        },
+        {
+          "qid": 40,
+          "type": "noise",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确说拼到第4包、差两个轮胎未装，与答案一致。",
+          "hits_n": 5,
+          "top1": "保时捷 911 又拼了一点，第 4 包快结束了。那两个轮胎我还没装，感觉装上去这车就真的能跑了，虽然它只是个乐高。",
+          "judge_failed": false
+        }
+      ]
+    },
+    "bm25_bigram": {
+      "status": "ok",
+      "error": null,
+      "reinit_s": 0.0,
+      "add_total_s": 0.0,
+      "add_p50_ms": 0.0,
+      "score": 39.0,
+      "acc": 0.975,
+      "misled": 1,
+      "storage": 60,
+      "retrieval_p50_ms": 0.0,
+      "quiz_total_s": 33.3,
+      "total_s": 33.3,
+      "details": [
+        {
+          "qid": 1,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "多条记忆一致指向冒椒火辣冒菜，无冲突信息",
+          "hits_n": 5,
+          "top1": "周三了，又到了我固定点春熙路那家“冒椒火辣”冒菜外卖的日子。必点千层肚和脑花，备注永远写“多放小米辣，不要香菜”。",
+          "judge_failed": false
+        },
+        {
+          "qid": 2,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "多条记忆均明确提到必点千层肚和脑花，信息一致无冲突",
+          "hits_n": 5,
+          "top1": "周三了，又到了我固定点春熙路那家“冒椒火辣”冒菜外卖的日子。必点千层肚和脑花，备注永远写“多放小米辣，不要香菜”。",
+          "judge_failed": false
+        },
+        {
+          "qid": 3,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确写备注多放小米辣不要香菜",
+          "hits_n": 5,
+          "top1": "周三了，又到了我固定点春熙路那家“冒椒火辣”冒菜外卖的日子。必点千层肚和脑花，备注永远写“多放小米辣，不要香菜”。",
+          "judge_failed": false
+        },
+        {
+          "qid": 4,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆明确提到周二和周四晚8点跳绳，信息一致",
+          "hits_n": 5,
+          "top1": "今晚周二，8 点我又要去小区楼下跳绳了。迪卡侬买的计数跳绳，目标一次 2000 个，但每次跳到 1200 个就开始摸鱼。",
+          "judge_failed": false
+        },
+        {
+          "qid": 5,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确提到迪卡侬计数跳绳和目标2000个",
+          "hits_n": 5,
+          "top1": "今晚周二，8 点我又要去小区楼下跳绳了。迪卡侬买的计数跳绳，目标一次 2000 个，但每次跳到 1200 个就开始摸鱼。",
+          "judge_failed": false
+        },
+        {
+          "qid": 6,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "多条记忆均明确提到跳到1200个开始摸鱼，信息一致",
+          "hits_n": 5,
+          "top1": "今晚周二，8 点我又要去小区楼下跳绳了。迪卡侬买的计数跳绳，目标一次 2000 个，但每次跳到 1200 个就开始摸鱼。",
+          "judge_failed": false
+        },
+        {
+          "qid": 7,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出武侯区桐梓林地铁站附近，与标准答案一致",
+          "hits_n": 5,
+          "top1": "我住在成都武侯区桐梓林地铁站附近的老小区，7 楼没电梯，月租 2300。每天下班爬楼都像在打副本，爬到 5 楼就开始思考人生。",
+          "judge_failed": false
+        },
+        {
+          "qid": 8,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][2]均明确7楼无电梯月租2300，信息一致",
+          "hits_n": 5,
+          "top1": "我住这 7 楼没电梯，每次带宽粉洗澡回来，我都要在楼下歇五分钟。月租 2300 的代价就是腿力训练。",
+          "judge_failed": false
+        },
+        {
+          "qid": 9,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确阳台朝北、下午4点后有太阳",
+          "hits_n": 5,
+          "top1": "阳台朝北，下午 4 点后才有太阳晒进来。我周末就靠那一点点夕阳晒衣服，感觉衣服都晒出了一股“珍惜”的味道。",
+          "judge_failed": false
+        },
+        {
+          "qid": 10,
+          "type": "normal",
+          "correct": 0,
+          "misled": 1,
+          "reason": "记忆称宽粉是室友的猫，但无年龄颜色，且与自养橘猫信息冲突",
+          "hits_n": 5,
+          "top1": "对了跟你说个事，其实宽粉是我合租室友的猫，我自己养的是那只黑猫叫煤球，2 岁，胆子特别小，一有快递员敲门就躲床底。",
+          "judge_failed": false
+        },
+        {
+          "qid": 11,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确提到楼下宠物店洗澡、麦德氏猫条哄进航空箱",
+          "hits_n": 5,
+          "top1": "周六带宽粉去楼下宠物店洗澡，用麦德氏的猫条哄着才肯进航空箱。它 11 斤，我提它下楼像提一袋米。",
+          "judge_failed": false
+        },
+        {
+          "qid": 12,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][3]明确煤球是黑猫、2岁、胆小躲床底",
+          "hits_n": 5,
+          "top1": "对了跟你说个事，其实宽粉是我合租室友的猫，我自己养的是那只黑猫叫煤球，2 岁，胆子特别小，一有快递员敲门就躲床底。",
+          "judge_failed": false
+        },
+        {
+          "qid": 13,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确说明项目改成会员积分模块，最新说法清晰在场。",
+          "hits_n": 5,
+          "top1": "我之前说的那个 6 月 15 日上线优惠券核销的项目，其实被砍了，现在改成做会员积分模块，上线时间也推到 7 月 20 日了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 14,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确最新上线时间为7月20日，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "我之前说的那个 6 月 15 日上线优惠券核销的项目，其实被砍了，现在改成做会员积分模块，上线时间也推到 7 月 20 日了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 15,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确含哈利波特城堡和保时捷911，信息一致",
+          "hits_n": 5,
+          "top1": "我最近沉迷拼乐高，上个月刚拼完哈利波特城堡 71043，现在在拼保时捷 911，已经拼到第 4 包，桌上还差两个轮胎没装。",
+          "judge_failed": false
+        },
+        {
+          "qid": 16,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][2]明确拼到第4包，还差两个轮胎未装",
+          "hits_n": 5,
+          "top1": "我最近沉迷拼乐高，上个月刚拼完哈利波特城堡 71043，现在在拼保时捷 911，已经拼到第 4 包，桌上还差两个轮胎没装。",
+          "judge_failed": false
+        },
+        {
+          "qid": 17,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出改去西安及10月2日至6日",
+          "hits_n": 5,
+          "top1": "重庆计划改了，我不去重庆了，改成 10 月 2 日到 10 月 6 日去西安，高铁票也重新买了，是 10 月 2 日下午 2 点 40 分那趟。",
+          "judge_failed": false
+        },
+        {
+          "qid": 18,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][3]均明确最新票为10月2日下午2点40分，无冲突",
+          "hits_n": 5,
+          "top1": "重庆计划改了，我不去重庆了，改成 10 月 2 日到 10 月 6 日去西安，高铁票也重新买了，是 10 月 2 日下午 2 点 40 分那趟。",
+          "judge_failed": false
+        },
+        {
+          "qid": 19,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][2]均明确给出12点半放下手机、8点10分起床",
+          "hits_n": 5,
+          "top1": "我最近在调作息，给自己定的目标是晚上 12 点半前放下手机，早上 8 点 10 分起床。结果昨晚刷 B 站刷到凌晨 1 点半，今天靠瑞幸生椰拿铁续命，人已经飘了",
+          "judge_failed": false
+        },
+        {
+          "qid": 20,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确提到刷B站到凌晨1点半，靠瑞幸生椰拿铁续命",
+          "hits_n": 5,
+          "top1": "我最近在调作息，给自己定的目标是晚上 12 点半前放下手机，早上 8 点 10 分起床。结果昨晚刷 B 站刷到凌晨 1 点半，今天靠瑞幸生椰拿铁续命，人已经飘了",
+          "judge_failed": false
+        },
+        {
+          "qid": 21,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确含成都小学老师、49岁",
+          "hits_n": 5,
+          "top1": "我妈今天又发微信问我有没有好好吃饭，我说吃了，她说“你那个外卖少点，不健康”。我妈是成都本地小学老师，今年 49 岁，操心命。",
+          "judge_failed": false
+        },
+        {
+          "qid": 22,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出17岁、高二、打王者荣耀",
+          "hits_n": 5,
+          "top1": "我弟今年 17 岁，读高二，天天打《王者荣耀》，我妈管不住他就来让我管。我一个后端程序员，远程指挥弟弟戒游戏，笑死。",
+          "judge_failed": false
+        },
+        {
+          "qid": 23,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出7月开始及课程名称，无冲突",
+          "hits_n": 5,
+          "top1": "我打算从 7 月开始学 Redis 和消息队列，买了一个极客时间的《Redis 核心技术与实战》课程，计划每周学 3 节，争取 9 月前把笔记整理到自己的 Gi",
+          "judge_failed": false
+        },
+        {
+          "qid": 24,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确每周3节、9月前整理笔记，与标准答案一致",
+          "hits_n": 5,
+          "top1": "我打算从 7 月开始学 Redis 和消息队列，买了一个极客时间的《Redis 核心技术与实战》课程，计划每周学 3 节，争取 9 月前把笔记整理到自己的 Gi",
+          "judge_failed": false
+        },
+        {
+          "qid": 25,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2][3]均明确提到我妈问吃饭，与标准答案一致",
+          "hits_n": 5,
+          "top1": "我妈周末又给我发微信，问我煤球最近怎么样。我说挺好的，就是胆子小。我妈说“跟你小时候一样”，我？？？",
+          "judge_failed": false
+        },
+        {
+          "qid": 26,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确阳台朝北，与标准答案一致",
+          "hits_n": 5,
+          "top1": "阳台朝北，下午 4 点后才有太阳晒进来。我周末就靠那一点点夕阳晒衣服，感觉衣服都晒出了一股“珍惜”的味道。",
+          "judge_failed": false
+        },
+        {
+          "qid": 27,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆明确周二和周四晚8点楼下跳绳，信息一致",
+          "hits_n": 5,
+          "top1": "今天周二，晚上 8 点跳绳。我目标 2000 个，结果跳到 1200 个又开始摸鱼，最后 800 个是边听播客边跳完的。",
+          "judge_failed": false
+        },
+        {
+          "qid": 28,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆明确提到住7楼没电梯，爬楼累，与标准答案一致",
+          "hits_n": 5,
+          "top1": "我住在成都武侯区桐梓林地铁站附近的老小区，7 楼没电梯，月租 2300。每天下班爬楼都像在打副本，爬到 5 楼就开始思考人生。",
+          "judge_failed": false
+        },
+        {
+          "qid": 29,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2][5]明确拼到第4包、轮胎未装，与标准一致",
+          "hits_n": 5,
+          "top1": "我妈周末又给我发微信，问我煤球最近怎么样。我说挺好的，就是胆子小。我妈说“跟你小时候一样”，我？？？",
+          "judge_failed": false
+        },
+        {
+          "qid": 30,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2][3]均提到靠生椰拿铁续命，与标准答案一致",
+          "hits_n": 5,
+          "top1": "成都这个天气也太离谱了吧，早上冷得要穿外套，中午又热到想开空调。我在工位上一天换了三次衣服，同事都看笑了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 31,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确提到弟弟玩《王者荣耀》",
+          "hits_n": 5,
+          "top1": "我弟今年 17 岁，读高二，天天打《王者荣耀》，我妈管不住他就来让我管。我一个后端程序员，远程指挥弟弟戒游戏，笑死。",
+          "judge_failed": false
+        },
+        {
+          "qid": 32,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确含每周3节、9月前笔记放GitHub，与标准答案一致",
+          "hits_n": 5,
+          "top1": "我打算从 7 月开始学 Redis 和消息队列，买了一个极客时间的《Redis 核心技术与实战》课程，计划每周学 3 节，争取 9 月前把笔记整理到自己的 Gi",
+          "judge_failed": false
+        },
+        {
+          "qid": 33,
+          "type": "correction",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确黑猫煤球2岁胆小，宽粉是室友的猫，正确信息在场",
+          "hits_n": 5,
+          "top1": "对了跟你说个事，其实宽粉是我合租室友的猫，我自己养的是那只黑猫叫煤球，2 岁，胆子特别小，一有快递员敲门就躲床底。",
+          "judge_failed": false
+        },
+        {
+          "qid": 34,
+          "type": "correction",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][4]明确会员积分模块、7月20日上线，旧说法被更新",
+          "hits_n": 5,
+          "top1": "我之前说的那个 6 月 15 日上线优惠券核销的项目，其实被砍了，现在改成做会员积分模块，上线时间也推到 7 月 20 日了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 35,
+          "type": "correction",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[4]明确最新计划为10月2-6日去西安，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "我国庆打算 10 月 1 日到 10 月 5 日去重庆，高铁票都买好了，早上 8 点 15 分那趟。现在已经开始盘算一天吃几顿火锅了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 36,
+          "type": "correction",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][3]均明确最新高铁为10月2日下午2点40分",
+          "hits_n": 5,
+          "top1": "重庆计划改了，我不去重庆了，改成 10 月 2 日到 10 月 6 日去西安，高铁票也重新买了，是 10 月 2 日下午 2 点 40 分那趟。",
+          "judge_failed": false
+        },
+        {
+          "qid": 37,
+          "type": "noise",
+          "correct": 1,
+          "misled": 0,
+          "reason": "多条记忆均明确必点千层肚和脑花，无冲突",
+          "hits_n": 5,
+          "top1": "周三了，冒椒火辣的冒菜我又点了。千层肚和脑花，多放小米辣，不要香菜。这家店我真的是每周三固定贡献营业额。",
+          "judge_failed": false
+        },
+        {
+          "qid": 38,
+          "type": "noise",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[3]明确煤球是黑猫，宽粉才是周六洗澡的猫",
+          "hits_n": 5,
+          "top1": "我养了一只橘猫叫宽粉，11 斤，每周六都带它去楼下宠物店洗澡。它真的巨重，航空箱一提起来我手臂都在抖。",
+          "judge_failed": false
+        },
+        {
+          "qid": 39,
+          "type": "noise",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][3]明确最新为10月2日下午2点40分，旧说法被更新",
+          "hits_n": 5,
+          "top1": "重庆计划改了，我不去重庆了，改成 10 月 2 日到 10 月 6 日去西安，高铁票也重新买了，是 10 月 2 日下午 2 点 40 分那趟。",
+          "judge_failed": false
+        },
+        {
+          "qid": 40,
+          "type": "noise",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][2]明确说拼到第4包、差两个轮胎未装，与答案一致。",
+          "hits_n": 5,
+          "top1": "我最近沉迷拼乐高，上个月刚拼完哈利波特城堡 71043，现在在拼保时捷 911，已经拼到第 4 包，桌上还差两个轮胎没装。",
+          "judge_failed": false
+        }
+      ]
+    },
+    "graphiti_kuzu": {
+      "status": "ok",
+      "error": null,
+      "reinit_s": 2.1,
+      "add_total_s": 1180.4,
+      "add_p50_ms": 16297.8,
+      "score": 27.0,
+      "acc": 0.675,
+      "misled": 5,
+      "storage": 60,
+      "retrieval_p50_ms": 337.6,
+      "quiz_total_s": 47.6,
+      "total_s": 1230.1,
+      "details": [
+        {
+          "qid": 1,
+          "type": "normal",
+          "correct": 0,
+          "misled": 0,
+          "reason": "选手未检索到任何记忆",
+          "hits_n": 0,
+          "top1": "",
+          "judge_failed": false
+        },
+        {
+          "qid": 2,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[3][5]明确提到脑花和千层肚，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户又点了冒椒火辣的冒菜",
+          "judge_failed": false
+        },
+        {
+          "qid": 3,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][2]明确给出多放小米辣、不要香菜，与标准答案一致",
+          "hits_n": 3,
+          "top1": "用户点冒菜外卖的备注永远写“多放小米辣”",
+          "judge_failed": false
+        },
+        {
+          "qid": 4,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆含周二和周四晚8点跳绳，与标准答案一致",
+          "hits_n": 2,
+          "top1": "用户周四晚上8点跳绳，跳了1500个，比上次好一点，但离2000个还差",
+          "judge_failed": false
+        },
+        {
+          "qid": 5,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆明确提到迪卡侬计数跳绳和目标2000个",
+          "hits_n": 3,
+          "top1": "用户使用在迪卡侬买的计数跳绳，计划今晚周二 8 点去小区楼下跳绳，目标一次跳 2000 个，但每次跳到 1200 个就开始摸鱼。",
+          "judge_failed": false
+        },
+        {
+          "qid": 6,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确提到跳到1200个开始摸鱼，与标准答案一致",
+          "hits_n": 2,
+          "top1": "用户使用在迪卡侬买的计数跳绳，计划今晚周二 8 点去小区楼下跳绳，目标一次跳 2000 个，但每次跳到 1200 个就开始摸鱼。",
+          "judge_failed": false
+        },
+        {
+          "qid": 7,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆明确含武侯区桐梓林地铁站附近，与标准答案一致",
+          "hits_n": 3,
+          "top1": "用户住在成都武侯区桐梓林地铁站附近的老小区，7 楼没电梯，月租 2300。",
+          "judge_failed": false
+        },
+        {
+          "qid": 8,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆均一致给出7楼无电梯月租2300",
+          "hits_n": 4,
+          "top1": "用户住的 7 楼无电梯房子月租 2300 元，代价就是每天爬楼做腿力训练。",
+          "judge_failed": false
+        },
+        {
+          "qid": 9,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆明确阳台朝北、下午4点后有太阳，与标准一致",
+          "hits_n": 4,
+          "top1": "用户的阳台朝北，下午 4 点后才有太阳晒进来。",
+          "judge_failed": false
+        },
+        {
+          "qid": 10,
+          "type": "normal",
+          "correct": 0,
+          "misled": 1,
+          "reason": "记忆只提宽粉是室友的猫，无年龄颜色体重，且煤球信息易干扰",
+          "hits_n": 2,
+          "top1": "宽粉是用户合租室友的猫，不是用户自己养的猫",
+          "judge_failed": false
+        },
+        {
+          "qid": 11,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆含去宠物店洗澡和用麦德氏猫条哄进航空箱信息",
+          "hits_n": 5,
+          "top1": "宽粉被用麦德氏的猫条哄着才肯进航空箱",
+          "judge_failed": false
+        },
+        {
+          "qid": 12,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]完整包含黑猫煤球、2岁、胆小躲床底信息",
+          "hits_n": 2,
+          "top1": "用户养了一只名叫宽粉的橘猫，体重11斤。",
+          "judge_failed": false
+        },
+        {
+          "qid": 13,
+          "type": "normal",
+          "correct": 0,
+          "misled": 0,
+          "reason": "选手未检索到任何记忆",
+          "hits_n": 0,
+          "top1": "",
+          "judge_failed": false
+        },
+        {
+          "qid": 14,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出上线时间推迟到7月20日，与标准答案一致。",
+          "hits_n": 2,
+          "top1": "用户现在改为做会员积分模块，上线时间推迟到7月20日。",
+          "judge_failed": false
+        },
+        {
+          "qid": 15,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆含哈利波特城堡和保时捷911，与答案一致",
+          "hits_n": 4,
+          "top1": "用户最近沉迷拼乐高。",
+          "judge_failed": false
+        },
+        {
+          "qid": 16,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出第4包且差两个轮胎，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户现在正在拼保时捷 911，已经拼到第 4 包，桌上还差两个轮胎没装。",
+          "judge_failed": false
+        },
+        {
+          "qid": 17,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[3]明确给出10月2日至6日去西安，与标准答案一致",
+          "hits_n": 4,
+          "top1": "用户更改了原重庆计划，不再去重庆。",
+          "judge_failed": false
+        },
+        {
+          "qid": 18,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出10月2日下午2点40分，与标准答案一致。",
+          "hits_n": 2,
+          "top1": "用户重新购买了去西安的高铁票，是10月2日下午2点40分那趟。",
+          "judge_failed": false
+        },
+        {
+          "qid": 19,
+          "type": "normal",
+          "correct": 0,
+          "misled": 0,
+          "reason": "选手未检索到任何记忆",
+          "hits_n": 0,
+          "top1": "",
+          "judge_failed": false
+        },
+        {
+          "qid": 20,
+          "type": "normal",
+          "correct": 0,
+          "misled": 0,
+          "reason": "记忆仅提到刷到1点半，无瑞幸续命信息",
+          "hits_n": 2,
+          "top1": "用户昨晚刷 B 站刷到凌晨 1 点半",
+          "judge_failed": false
+        },
+        {
+          "qid": 21,
+          "type": "normal",
+          "correct": 0,
+          "misled": 0,
+          "reason": "选手未检索到任何记忆",
+          "hits_n": 0,
+          "top1": "",
+          "judge_failed": false
+        },
+        {
+          "qid": 22,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆含17岁、高二、打王者荣耀，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户有一个弟弟，是高二男生",
+          "judge_failed": false
+        },
+        {
+          "qid": 23,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[4]含7月开始学Redis，[5]含课程名，与标准一致",
+          "hits_n": 5,
+          "top1": "用户已经看了 Redis 课程的第三节，消息队列部分还没开始。",
+          "judge_failed": false
+        },
+        {
+          "qid": 24,
+          "type": "normal",
+          "correct": 0,
+          "misled": 1,
+          "reason": "记忆只提每周3节，无9月前整理笔记信息",
+          "hits_n": 5,
+          "top1": "用户看了两节 Redis 课程",
+          "judge_failed": false
+        },
+        {
+          "qid": 25,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][2]明确提到妈妈问吃饭，与标准答案一致",
+          "hits_n": 4,
+          "top1": "用户的妈妈今天通过微信问用户有没有好好吃饭",
+          "judge_failed": false
+        },
+        {
+          "qid": 26,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确阳台朝北，与标准答案一致",
+          "hits_n": 4,
+          "top1": "用户的阳台朝北，下午 4 点后才有太阳晒进来。",
+          "judge_failed": false
+        },
+        {
+          "qid": 27,
+          "type": "paraphrase",
+          "correct": 0,
+          "misled": 1,
+          "reason": "记忆仅提周四跳绳，缺周二信息，无法答出两个晚上",
+          "hits_n": 2,
+          "top1": "用户周四晚上8点跳绳，跳了1500个，比上次好一点，但离2000个还差",
+          "judge_failed": false
+        },
+        {
+          "qid": 28,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆明确住7楼无电梯需爬楼，与标准答案一致",
+          "hits_n": 2,
+          "top1": "用户住在 7 楼，楼里没有电梯。",
+          "judge_failed": false
+        },
+        {
+          "qid": 29,
+          "type": "paraphrase",
+          "correct": 0,
+          "misled": 0,
+          "reason": "记忆仅提沉迷拼乐高，无进度信息，无法回答",
+          "hits_n": 1,
+          "top1": "用户最近沉迷拼乐高。",
+          "judge_failed": false
+        },
+        {
+          "qid": 30,
+          "type": "paraphrase",
+          "correct": 0,
+          "misled": 0,
+          "reason": "选手未检索到任何记忆",
+          "hits_n": 0,
+          "top1": "",
+          "judge_failed": false
+        },
+        {
+          "qid": 31,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确提到弟弟玩王者荣耀，与标准答案一致",
+          "hits_n": 2,
+          "top1": "用户的弟弟今年17岁，读高二，天天打《王者荣耀》",
+          "judge_failed": false
+        },
+        {
+          "qid": 32,
+          "type": "paraphrase",
+          "correct": 0,
+          "misled": 1,
+          "reason": "记忆缺每周3节Redis，且计划已过期，会带偏",
+          "hits_n": 2,
+          "top1": "用户争取在9月前把学习笔记整理到自己的GitHub上",
+          "judge_failed": false
+        },
+        {
+          "qid": 33,
+          "type": "correction",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆明确给出猫叫煤球，与标准答案一致",
+          "hits_n": 1,
+          "top1": "用户自己养的黑猫叫煤球，2 岁，胆子特别小，一有快递员敲门就躲床底",
+          "judge_failed": false
+        },
+        {
+          "qid": 34,
+          "type": "correction",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[3]明确给出会员积分模块和7月20日上线，与标准答案一致",
+          "hits_n": 3,
+          "top1": "用户最近在做的项目是给餐饮商家用的订单中台",
+          "judge_failed": false
+        },
+        {
+          "qid": 35,
+          "type": "correction",
+          "correct": 0,
+          "misled": 0,
+          "reason": "记忆只提西安，无日期，无法确认标准答案",
+          "hits_n": 1,
+          "top1": "用户计划国庆去西安。",
+          "judge_failed": false
+        },
+        {
+          "qid": 36,
+          "type": "correction",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出10月2日下午2点40分，与标准答案一致",
+          "hits_n": 2,
+          "top1": "用户重新购买了去西安的高铁票，是10月2日下午2点40分那趟。",
+          "judge_failed": false
+        },
+        {
+          "qid": 37,
+          "type": "noise",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[3]明确必点脑花，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户今晚的冒菜里有脑花，脑花还是那么嫩",
+          "judge_failed": false
+        },
+        {
+          "qid": 38,
+          "type": "noise",
+          "correct": 0,
+          "misled": 1,
+          "reason": "记忆未提宽粉是室友的猫，且[1]易被误认为煤球每周洗澡",
+          "hits_n": 2,
+          "top1": "用户每周六都带宽粉去楼下的宠物店洗澡。",
+          "judge_failed": false
+        },
+        {
+          "qid": 39,
+          "type": "noise",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[4]明确最新票为10月2日下午2点40分，与答案一致",
+          "hits_n": 5,
+          "top1": "用户的国庆西安计划包含10月2日下午2点40分的高铁。",
+          "judge_failed": false
+        },
+        {
+          "qid": 40,
+          "type": "noise",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确包含第4包和差两个轮胎的信息",
+          "hits_n": 5,
+          "top1": "用户现在正在拼保时捷 911，已经拼到第 4 包，桌上还差两个轮胎没装。",
+          "judge_failed": false
+        }
+      ]
+    }
+  },
+  "meta": {
+    "ts": "2026-09-28T17:29:19+00:00",
+    "seed": 2,
+    "llm_model": "deepseek-flash",
+    "embed": "Qwen/Qwen3-Embedding-0.6B (1024d, local CPU)",
+    "dialogue_rounds": 60,
+    "quiz_questions": 40,
+    "absent": {
+      "langmem": "全系 0.0.11-0.0.30 使用 Python 3.11+ 语法（typing.Literal[*x]），本机仅 3.10.6，无法 import",
+      "zep": "社区版服务端依赖 docker，本机无 docker（按约定不装）"
+    },
+    "wall_total_s": 2237.1
+  },
+  "ranking": [
+    "bm25_bigram",
+    "rag_qwen3",
+    "sme_minimal",
+    "sme_chat",
+    "mem0",
+    "graphiti_kuzu",
+    "sme_kb_dynamic"
+  ]
+}

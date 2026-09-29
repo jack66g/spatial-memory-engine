@@ -1,0 +1,14 @@
+{
+  "n": 2000,
+  "seed": 42,
+  "wal": {
+    "false": {
+      "writes_per_s": 3535.9,
+      "save_s": 0.076
+    },
+    "true": {
+      "writes_per_s": 1454.3,
+      "save_s": 0.079
+    }
+  }
+}

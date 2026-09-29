@@ -1,0 +1,266 @@
+{
+  "meta": {
+    "seeds": [
+      1,
+      2,
+      3
+    ],
+    "questions_per_seed": 40
+  },
+  "ranking": [
+    "sme_chat",
+    "sme_minimal",
+    "rag_qwen3",
+    "bm25_bigram",
+    "mem0",
+    "sme_kb_dynamic",
+    "graphiti_kuzu"
+  ],
+  "agg": {
+    "sme_chat": {
+      "seeds": 3,
+      "acc_mean": 0.9417,
+      "acc_range": [
+        0.9,
+        0.975
+      ],
+      "misled_total": 4,
+      "storage_mean": 82.3,
+      "add_p50_ms_mean": 771.4,
+      "retrieval_p50_ms_mean": 329.5,
+      "total_s_mean": 188.6,
+      "by_type": {
+        "normal": [
+          0.974,
+          76,
+          78
+        ],
+        "paraphrase": [
+          0.889,
+          16,
+          18
+        ],
+        "correction": [
+          1.0,
+          12,
+          12
+        ],
+        "noise": [
+          0.75,
+          9,
+          12
+        ]
+      }
+    },
+    "sme_kb_dynamic": {
+      "seeds": 3,
+      "acc_mean": 0.7333,
+      "acc_range": [
+        0.675,
+        0.8
+      ],
+      "misled_total": 22,
+      "storage_mean": 171.3,
+      "add_p50_ms_mean": 3676.6,
+      "retrieval_p50_ms_mean": 315.4,
+      "total_s_mean": 292.5,
+      "by_type": {
+        "normal": [
+          0.782,
+          61,
+          78
+        ],
+        "paraphrase": [
+          0.556,
+          10,
+          18
+        ],
+        "correction": [
+          0.75,
+          9,
+          12
+        ],
+        "noise": [
+          0.667,
+          8,
+          12
+        ]
+      }
+    },
+    "sme_minimal": {
+      "seeds": 3,
+      "acc_mean": 0.9333,
+      "acc_range": [
+        0.875,
+        0.975
+      ],
+      "misled_total": 4,
+      "storage_mean": 60,
+      "add_p50_ms_mean": 680.1,
+      "retrieval_p50_ms_mean": 325.8,
+      "total_s_mean": 112.3,
+      "by_type": {
+        "normal": [
+          0.974,
+          76,
+          78
+        ],
+        "paraphrase": [
+          0.833,
+          15,
+          18
+        ],
+        "correction": [
+          1.0,
+          12,
+          12
+        ],
+        "noise": [
+          0.75,
+          9,
+          12
+        ]
+      }
+    },
+    "mem0": {
+      "seeds": 3,
+      "acc_mean": 0.8417,
+      "acc_range": [
+        0.725,
+        0.925
+      ],
+      "misled_total": 11,
+      "storage_mean": 20,
+      "add_p50_ms_mean": 5163.2,
+      "retrieval_p50_ms_mean": 314.6,
+      "total_s_mean": 403.3,
+      "by_type": {
+        "normal": [
+          0.897,
+          70,
+          78
+        ],
+        "paraphrase": [
+          0.833,
+          15,
+          18
+        ],
+        "correction": [
+          0.833,
+          10,
+          12
+        ],
+        "noise": [
+          0.5,
+          6,
+          12
+        ]
+      }
+    },
+    "rag_qwen3": {
+      "seeds": 3,
+      "acc_mean": 0.9333,
+      "acc_range": [
+        0.9,
+        0.975
+      ],
+      "misled_total": 3,
+      "storage_mean": 60,
+      "add_p50_ms_mean": 645.6,
+      "retrieval_p50_ms_mean": 302.4,
+      "total_s_mean": 119.1,
+      "by_type": {
+        "normal": [
+          0.962,
+          75,
+          78
+        ],
+        "paraphrase": [
+          0.889,
+          16,
+          18
+        ],
+        "correction": [
+          1.0,
+          12,
+          12
+        ],
+        "noise": [
+          0.75,
+          9,
+          12
+        ]
+      }
+    },
+    "bm25_bigram": {
+      "seeds": 3,
+      "acc_mean": 0.9167,
+      "acc_range": [
+        0.85,
+        0.975
+      ],
+      "misled_total": 6,
+      "storage_mean": 60,
+      "add_p50_ms_mean": 0.0,
+      "retrieval_p50_ms_mean": 0.5,
+      "total_s_mean": 61.7,
+      "by_type": {
+        "normal": [
+          0.962,
+          75,
+          78
+        ],
+        "paraphrase": [
+          0.833,
+          15,
+          18
+        ],
+        "correction": [
+          1.0,
+          12,
+          12
+        ],
+        "noise": [
+          0.667,
+          8,
+          12
+        ]
+      }
+    },
+    "graphiti_kuzu": {
+      "seeds": 3,
+      "acc_mean": 0.6083,
+      "acc_range": [
+        0.55,
+        0.675
+      ],
+      "misled_total": 19,
+      "storage_mean": 60,
+      "add_p50_ms_mean": 17134.7,
+      "retrieval_p50_ms_mean": 386.3,
+      "total_s_mean": 1288.9,
+      "by_type": {
+        "normal": [
+          0.744,
+          58,
+          78
+        ],
+        "paraphrase": [
+          0.222,
+          4,
+          18
+        ],
+        "correction": [
+          0.5,
+          6,
+          12
+        ],
+        "noise": [
+          0.417,
+          5,
+          12
+        ]
+      }
+    }
+  }
+}

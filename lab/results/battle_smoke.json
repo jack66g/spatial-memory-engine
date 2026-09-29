@@ -1,0 +1,1538 @@
+{
+  "contestants": {
+    "sme_chat": {
+      "status": "ok",
+      "error": null,
+      "reinit_s": 24.6,
+      "add_total_s": 40.7,
+      "add_p50_ms": 916.8,
+      "score": 19.0,
+      "acc": 0.95,
+      "misled": 0,
+      "storage": 35,
+      "retrieval_p50_ms": 327.5,
+      "quiz_total_s": 52.6,
+      "total_s": 117.9,
+      "details": [
+        {
+          "qid": 1,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确成华区合租1600，最新说法在场，无冲突",
+          "hits_n": 5,
+          "top1": "还有啊，我上个月搬到成都成华区了，现在跟人合租，我那一间月租1600，离地铁7号线走路8分钟。之前说的武侯区一居室已经退租了，那个地铁3号线高架吵得我神经衰弱。",
+          "judge_failed": false
+        },
+        {
+          "qid": 2,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确豆豆是柯基，上个月满一岁，与答案一致。",
+          "hits_n": 5,
+          "top1": "哎对了，我之前跟你说年糕是我养的，其实搞错了，年糕是我合租室友的猫。我自己养的是只柯基叫“豆豆”，上个月刚满一岁，每天早晚都得遛，累死我了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 3,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确周三周六跟帕梅拉跳30分钟，与答案一致",
+          "hits_n": 5,
+          "top1": "晚上好呀，今天过得还行，就是有点困，你呢？我刚跟着帕梅拉跳了30分钟，周三周六固定节目，跳完必须来一盒250ml的维他柠檬茶，不然感觉白练了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 4,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确提到跳完喝250ml维他柠檬茶，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "晚上好呀，今天过得还行，就是有点困，你呢？我刚跟着帕梅拉跳了30分钟，周三周六固定节目，跳完必须来一盒250ml的维他柠檬茶，不然感觉白练了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 5,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][2]均含脑花、贡菜及蒜泥香油蚝油不放香菜",
+          "hits_n": 5,
+          "top1": "刚下班到家，累瘫了，先跟你唠两句再去做饭。今晚打算点老码头火锅外卖，必点脑花和贡菜，蘸碟只要蒜泥、香油和蚝油，坚决不放香菜，玉林路那家我常去。",
+          "judge_failed": false
+        },
+        {
+          "qid": 6,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][2]均明确玉林路老码头火锅，无冲突",
+          "hits_n": 5,
+          "top1": "刚下班到家，累瘫了，先跟你唠两句再去做饭。今晚打算点老码头火锅外卖，必点脑花和贡菜，蘸碟只要蒜泥、香油和蚝油，坚决不放香菜，玉林路那家我常去。",
+          "judge_failed": false
+        },
+        {
+          "qid": 7,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出证书和教材，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "今天成都又下雨了，烦死了，你那边天气怎么样？我打算今年12月前考过软考中级“软件设计师”，每周二、周四晚上9点到10点刷一套真题，用的清华大学出版社那本蓝皮的。",
+          "judge_failed": false
+        },
+        {
+          "qid": 8,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确周二、周四晚9-10点刷真题，无冲突",
+          "hits_n": 5,
+          "top1": "今天成都又下雨了，烦死了，你那边天气怎么样？我打算今年12月前考过软考中级“软件设计师”，每周二、周四晚上9点到10点刷一套真题，用的清华大学出版社那本蓝皮的。",
+          "judge_failed": false
+        },
+        {
+          "qid": 9,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出阿哲在深圳做产品经理，无冲突信息。",
+          "hits_n": 5,
+          "top1": "跟你说个事，我大学室友阿哲，现在在深圳做产品经理，我俩约好每个月最后一个周六晚上10点连麦打《王者荣耀》，他专玩对抗路，菜得要命还爱指挥。",
+          "judge_failed": false
+        },
+        {
+          "qid": 10,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出每月最后一个周六晚10点、对抗路，与标准一致。",
+          "hits_n": 5,
+          "top1": "跟你说个事，我大学室友阿哲，现在在深圳做产品经理，我俩约好每个月最后一个周六晚上10点连麦打《王者荣耀》，他专玩对抗路，菜得要命还爱指挥。",
+          "judge_failed": false
+        },
+        {
+          "qid": 11,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][3]明确给出洱海醒来民宿及400元预算，信息一致。",
+          "hits_n": 5,
+          "top1": "晚上好呀，今天过得还行，就是有点困，你呢？我计划明年3月请三天年假去云南大理，想住洱海边才村码头附近一家叫“洱海醒来”的民宿，预算一晚不超过400元。",
+          "judge_failed": false
+        },
+        {
+          "qid": 12,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出型号、价格、轴体，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "上周在京东花899买了个Keychron K8 Pro机械键盘，佳达隆红轴，用起来比公司配的薄膜键盘爽多了。现在在家敲代码都变勤快了，虽然还是不想加班。",
+          "judge_failed": false
+        },
+        {
+          "qid": 13,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出编号10281盆景树放电视柜，与答案一致",
+          "hits_n": 5,
+          "top1": "最近迷上了拼乐高，上周末刚拼完一套编号10281的乐高盆景树，放在电视柜上，花了差不多三个晚上。年糕老想拿爪子扒拉，被我凶了好几次。",
+          "judge_failed": false
+        },
+        {
+          "qid": 14,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]提到帕梅拉，即德国教练，信息一致。",
+          "hits_n": 5,
+          "top1": "晚上好呀，今天过得还行，就是有点困，你呢？我刚跟着帕梅拉跳了30分钟，周三周六固定节目，跳完必须来一盒250ml的维他柠檬茶，不然感觉白练了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 15,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][3]明确提到Keychron K8 Pro机械键盘，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "上周在京东花899买了个Keychron K8 Pro机械键盘，佳达隆红轴，用起来比公司配的薄膜键盘爽多了。现在在家敲代码都变勤快了，虽然还是不想加班。",
+          "judge_failed": false
+        },
+        {
+          "qid": 16,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确提到乐高10281盆景树，信息一致。",
+          "hits_n": 5,
+          "top1": "最近迷上了拼乐高，上周末刚拼完一套编号10281的乐高盆景树，放在电视柜上，花了差不多三个晚上。年糕老想拿爪子扒拉，被我凶了好几次。",
+          "judge_failed": false
+        },
+        {
+          "qid": 17,
+          "type": "correction",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确更正为柯基豆豆，最新说法清晰在场",
+          "hits_n": 5,
+          "top1": "哎对了，我之前跟你说年糕是我养的，其实搞错了，年糕是我合租室友的猫。我自己养的是只柯基叫“豆豆”，上个月刚满一岁，每天早晚都得遛，累死我了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 18,
+          "type": "correction",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确给出最新名称天枢、Java Spring Boot及75%进度",
+          "hits_n": 5,
+          "top1": "刚下班到家，累瘫了，先跟你唠两句再去做饭。这个月过得真快，项目改名、搬家、搞清豆豆和年糕的归属，感觉像过了半年。明天还得早起遛狗，先撤了，回头聊。",
+          "judge_failed": false
+        },
+        {
+          "qid": 19,
+          "type": "noise",
+          "correct": 0,
+          "misled": 0,
+          "reason": "记忆无跳操时间信息，无法回答",
+          "hits_n": 5,
+          "top1": "哎对了，我之前跟你说年糕是我养的，其实搞错了，年糕是我合租室友的猫。我自己养的是只柯基叫“豆豆”，上个月刚满一岁，每天早晚都得遛，累死我了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 20,
+          "type": "noise",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[3][4]均提到玉林路老码头火锅，信息一致",
+          "hits_n": 5,
+          "top1": "跟你说个事，我大学室友阿哲，现在在深圳做产品经理，我俩约好每个月最后一个周六晚上10点连麦打《王者荣耀》，他专玩对抗路，菜得要命还爱指挥。",
+          "judge_failed": false
+        }
+      ]
+    },
+    "sme_kb_dynamic": {
+      "status": "ok",
+      "error": null,
+      "reinit_s": 14.8,
+      "add_total_s": 197.3,
+      "add_p50_ms": 6276.2,
+      "score": 15.0,
+      "acc": 0.75,
+      "misled": 2,
+      "storage": 119,
+      "retrieval_p50_ms": 326.5,
+      "quiz_total_s": 52.1,
+      "total_s": 264.2,
+      "details": [
+        {
+          "qid": 1,
+          "type": "normal",
+          "correct": 0,
+          "misled": 1,
+          "reason": "记忆仅确认成华区，无房租信息，且有武侯区过期干扰",
+          "hits_n": 5,
+          "top1": "用户住在成都成华区",
+          "judge_failed": false
+        },
+        {
+          "qid": 2,
+          "type": "normal",
+          "correct": 0,
+          "misled": 1,
+          "reason": "记忆只提狗名豆豆，无年龄信息，且有年糕干扰",
+          "hits_n": 5,
+          "top1": "用户自己养的是一只柯基，叫豆豆",
+          "judge_failed": false
+        },
+        {
+          "qid": 3,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[5]明确周三周六跟帕梅拉跳30分钟，与答案一致",
+          "hits_n": 5,
+          "top1": "用户每周二、周四晚上9点到10点刷一套软考真题",
+          "judge_failed": false
+        },
+        {
+          "qid": 4,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[5]明确提到跳完喝250ml维他柠檬茶，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "用户刚跟阿哲打完王者",
+          "judge_failed": false
+        },
+        {
+          "qid": 5,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆含必点脑花贡菜、蘸碟蒜泥香油蚝油，无冲突",
+          "hits_n": 5,
+          "top1": "用户吃火锅必点老三样：脑花、贡菜",
+          "judge_failed": false
+        },
+        {
+          "qid": 6,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆明确提到玉林路老码头火锅，信息一致",
+          "hits_n": 5,
+          "top1": "用户常去玉林路那家老码头火锅",
+          "judge_failed": false
+        },
+        {
+          "qid": 7,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][2]明确给出证书与教材，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户打算今年12月前考过软考中级“软件设计师”",
+          "judge_failed": false
+        },
+        {
+          "qid": 8,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出每周二、周四晚9-10点，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "用户每周二、周四晚上9点到10点刷一套软考真题",
+          "judge_failed": false
+        },
+        {
+          "qid": 9,
+          "type": "normal",
+          "correct": 0,
+          "misled": 0,
+          "reason": "记忆只提到阿哲，无深圳产品经理信息",
+          "hits_n": 5,
+          "top1": "用户大学室友叫阿哲",
+          "judge_failed": false
+        },
+        {
+          "qid": 10,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]含约好时间，[4]含位置，信息完整一致",
+          "hits_n": 5,
+          "top1": "用户和阿哲约好每个月最后一个周六晚上10点连麦打《王者荣耀》",
+          "judge_failed": false
+        },
+        {
+          "qid": 11,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[3][4]直接给出民宿名和预算，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户查过“洱海醒来”民宿，明年3月还有房，一晚380元，在预算内",
+          "judge_failed": false
+        },
+        {
+          "qid": 12,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[3]含型号、价格、轴体，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户觉得买的Keychron K8 Pro机械键盘用起来比公司配的薄膜键盘爽多了",
+          "judge_failed": false
+        },
+        {
+          "qid": 13,
+          "type": "normal",
+          "correct": 0,
+          "misled": 0,
+          "reason": "记忆有编号和盆景树，但无放置位置信息",
+          "hits_n": 5,
+          "top1": "用户上周末刚拼完一套编号10281的乐高盆景树",
+          "judge_failed": false
+        },
+        {
+          "qid": 14,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[5]提到帕梅拉，标准答案即帕梅拉为德国人",
+          "hits_n": 5,
+          "top1": "用户现在跟人合租",
+          "judge_failed": false
+        },
+        {
+          "qid": 15,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆明确提到Keychron K8 Pro机械键盘，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户觉得买的Keychron K8 Pro机械键盘用起来比公司配的薄膜键盘爽多了",
+          "judge_failed": false
+        },
+        {
+          "qid": 16,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[3]明确给出编号10281乐高盆景树，与答案一致",
+          "hits_n": 5,
+          "top1": "用户把拼好的乐高盆景树放在电视柜上",
+          "judge_failed": false
+        },
+        {
+          "qid": 17,
+          "type": "correction",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆明确豆豆是柯基，年糕为搞错，无冲突",
+          "hits_n": 5,
+          "top1": "用户自己养的是一只柯基，叫豆豆",
+          "judge_failed": false
+        },
+        {
+          "qid": 18,
+          "type": "correction",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆含天枢及Java Spring Boot，无冲突过期说法",
+          "hits_n": 5,
+          "top1": "用户在公司负责一个叫“星云”的后端重构项目",
+          "judge_failed": false
+        },
+        {
+          "qid": 19,
+          "type": "noise",
+          "correct": 0,
+          "misled": 0,
+          "reason": "记忆无跳操时间信息，无法回答",
+          "hits_n": 5,
+          "top1": "用户之前说年糕是自己养的，这是搞错了",
+          "judge_failed": false
+        },
+        {
+          "qid": 20,
+          "type": "noise",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[3]明确给出玉林路老码头火锅，与标准答案一致",
+          "hits_n": 5,
+          "top1": "阿哲在深圳做产品经理",
+          "judge_failed": false
+        }
+      ]
+    },
+    "sme_minimal": {
+      "status": "ok",
+      "error": null,
+      "reinit_s": 14.0,
+      "add_total_s": 27.3,
+      "add_p50_ms": 924.0,
+      "score": 18.0,
+      "acc": 0.9,
+      "misled": 0,
+      "storage": 30,
+      "retrieval_p50_ms": 327.8,
+      "quiz_total_s": 50.8,
+      "total_s": 92.1,
+      "details": [
+        {
+          "qid": 1,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确成华区合租1600，旧武侯区信息已标注退租",
+          "hits_n": 5,
+          "top1": "还有啊，我上个月搬到成都成华区了，现在跟人合租，我那一间月租1600，离地铁7号线走路8分钟。之前说的武侯区一居室已经退租了，那个地铁3号线高架吵得我神经衰弱。",
+          "judge_failed": false
+        },
+        {
+          "qid": 2,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确豆豆是柯基，上个月满一岁，与答案一致。",
+          "hits_n": 5,
+          "top1": "哎对了，我之前跟你说年糕是我养的，其实搞错了，年糕是我合租室友的猫。我自己养的是只柯基叫“豆豆”，上个月刚满一岁，每天早晚都得遛，累死我了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 3,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确周三周六跟帕梅拉跳30分钟，与标准一致",
+          "hits_n": 5,
+          "top1": "晚上好呀，今天过得还行，就是有点困，你呢？我刚跟着帕梅拉跳了30分钟，周三周六固定节目，跳完必须来一盒250ml的维他柠檬茶，不然感觉白练了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 4,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确提到跳完喝250ml维他柠檬茶，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "晚上好呀，今天过得还行，就是有点困，你呢？我刚跟着帕梅拉跳了30分钟，周三周六固定节目，跳完必须来一盒250ml的维他柠檬茶，不然感觉白练了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 5,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][2]均明确脑花、贡菜及蒜泥香油蚝油不放香菜",
+          "hits_n": 5,
+          "top1": "刚下班到家，累瘫了，先跟你唠两句再去做饭。今晚打算点老码头火锅外卖，必点脑花和贡菜，蘸碟只要蒜泥、香油和蚝油，坚决不放香菜，玉林路那家我常去。",
+          "judge_failed": false
+        },
+        {
+          "qid": 6,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][2]均明确提到玉林路老码头火锅，信息一致。",
+          "hits_n": 5,
+          "top1": "刚下班到家，累瘫了，先跟你唠两句再去做饭。今晚打算点老码头火锅外卖，必点脑花和贡菜，蘸碟只要蒜泥、香油和蚝油，坚决不放香菜，玉林路那家我常去。",
+          "judge_failed": false
+        },
+        {
+          "qid": 7,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确提到软考中级软件设计师及清华蓝皮教材",
+          "hits_n": 5,
+          "top1": "今天成都又下雨了，烦死了，你那边天气怎么样？我打算今年12月前考过软考中级“软件设计师”，每周二、周四晚上9点到10点刷一套真题，用的清华大学出版社那本蓝皮的。",
+          "judge_failed": false
+        },
+        {
+          "qid": 8,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确给出每周二、周四晚9-10点刷真题，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "软考真题刷到第三套了，正确率才58%，有点慌。12月考试，还有几个月，实在不行就每天多刷半小时。蓝皮书都快被我翻烂了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 9,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确提到阿哲在深圳做产品经理",
+          "hits_n": 5,
+          "top1": "跟你说个事，我大学室友阿哲，现在在深圳做产品经理，我俩约好每个月最后一个周六晚上10点连麦打《王者荣耀》，他专玩对抗路，菜得要命还爱指挥。",
+          "judge_failed": false
+        },
+        {
+          "qid": 10,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出每月最后一个周六晚10点连麦，阿哲玩对抗路。",
+          "hits_n": 5,
+          "top1": "跟你说个事，我大学室友阿哲，现在在深圳做产品经理，我俩约好每个月最后一个周六晚上10点连麦打《王者荣耀》，他专玩对抗路，菜得要命还爱指挥。",
+          "judge_failed": false
+        },
+        {
+          "qid": 11,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出民宿名和预算，无冲突信息",
+          "hits_n": 5,
+          "top1": "晚上好呀，今天过得还行，就是有点困，你呢？我计划明年3月请三天年假去云南大理，想住洱海边才村码头附近一家叫“洱海醒来”的民宿，预算一晚不超过400元。",
+          "judge_failed": false
+        },
+        {
+          "qid": 12,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出型号、价格、轴体，与标准答案一致",
+          "hits_n": 5,
+          "top1": "上周在京东花899买了个Keychron K8 Pro机械键盘，佳达隆红轴，用起来比公司配的薄膜键盘爽多了。现在在家敲代码都变勤快了，虽然还是不想加班。",
+          "judge_failed": false
+        },
+        {
+          "qid": 13,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出编号10281盆景树放电视柜上，与答案一致。",
+          "hits_n": 5,
+          "top1": "最近迷上了拼乐高，上周末刚拼完一套编号10281的乐高盆景树，放在电视柜上，花了差不多三个晚上。年糕老想拿爪子扒拉，被我凶了好几次。",
+          "judge_failed": false
+        },
+        {
+          "qid": 14,
+          "type": "paraphrase",
+          "correct": 0,
+          "misled": 0,
+          "reason": "记忆只提帕梅拉，未提德国人，无法判断国籍",
+          "hits_n": 5,
+          "top1": "晚上好呀，今天过得还行，就是有点困，你呢？我刚跟着帕梅拉跳了30分钟，周三周六固定节目，跳完必须来一盒250ml的维他柠檬茶，不然感觉白练了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 15,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确提到Keychron K8 Pro机械键盘，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "上周在京东花899买了个Keychron K8 Pro机械键盘，佳达隆红轴，用起来比公司配的薄膜键盘爽多了。现在在家敲代码都变勤快了，虽然还是不想加班。",
+          "judge_failed": false
+        },
+        {
+          "qid": 16,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确提到乐高10281盆景树，信息一致。",
+          "hits_n": 5,
+          "top1": "最近迷上了拼乐高，上周末刚拼完一套编号10281的乐高盆景树，放在电视柜上，花了差不多三个晚上。年糕老想拿爪子扒拉，被我凶了好几次。",
+          "judge_failed": false
+        },
+        {
+          "qid": 17,
+          "type": "correction",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确更正：自己养的是柯基豆豆，年糕是室友的猫。",
+          "hits_n": 5,
+          "top1": "哎对了，我之前跟你说年糕是我养的，其实搞错了，年糕是我合租室友的猫。我自己养的是只柯基叫“豆豆”，上个月刚满一岁，每天早晚都得遛，累死我了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 18,
+          "type": "correction",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出最新名称天枢、Java Spring Boot、75%",
+          "hits_n": 5,
+          "top1": "“星云”项目上周改名了，现在叫“天枢”，而且技术栈换成Java Spring Boot了，进度也推到75%左右。我Go白学了，气死，但没办法，老大拍板的。",
+          "judge_failed": false
+        },
+        {
+          "qid": 19,
+          "type": "noise",
+          "correct": 0,
+          "misled": 0,
+          "reason": "记忆无跳操时间信息，无法作答",
+          "hits_n": 5,
+          "top1": "哎对了，我之前跟你说年糕是我养的，其实搞错了，年糕是我合租室友的猫。我自己养的是只柯基叫“豆豆”，上个月刚满一岁，每天早晚都得遛，累死我了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 20,
+          "type": "noise",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2][3]均提到玉林路老码头火锅，信息一致。",
+          "hits_n": 5,
+          "top1": "跟你说个事，我大学室友阿哲，现在在深圳做产品经理，我俩约好每个月最后一个周六晚上10点连麦打《王者荣耀》，他专玩对抗路，菜得要命还爱指挥。",
+          "judge_failed": false
+        }
+      ]
+    },
+    "mem0": {
+      "status": "ok",
+      "error": null,
+      "reinit_s": 16.3,
+      "add_total_s": 204.0,
+      "add_p50_ms": 6574.8,
+      "score": 17.0,
+      "acc": 0.85,
+      "misled": 0,
+      "storage": 20,
+      "retrieval_p50_ms": 335.5,
+      "quiz_total_s": 45.5,
+      "total_s": 265.8,
+      "details": [
+        {
+          "qid": 1,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确成华区合租1600元、距7号线8分钟，最新信息在场",
+          "hits_n": 5,
+          "top1": "User moved to 成华区 (Chenghua District), Chengdu in August 2026 (last month) and n",
+          "judge_failed": false
+        },
+        {
+          "qid": 2,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确柯基豆豆2026年8月满一岁，与答案一致",
+          "hits_n": 5,
+          "top1": "User's own pet is a corgi named 豆豆 (Doudou) who just turned one year old in Augu",
+          "judge_failed": false
+        },
+        {
+          "qid": 3,
+          "type": "normal",
+          "correct": 0,
+          "misled": 0,
+          "reason": "记忆仅提周三周六锻炼，未提晚上8点、B站、跟谁跳",
+          "hits_n": 5,
+          "top1": "User follows a fixed Pamela (帕梅拉) workout routine on Wednesdays and Saturdays, a",
+          "judge_failed": false
+        },
+        {
+          "qid": 4,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确提到健身后喝250ml维他柠檬茶，与标准答案一致",
+          "hits_n": 5,
+          "top1": "After every workout, User drinks a 250ml box of Vita Lemon Tea (维他柠檬茶), saying t",
+          "judge_failed": false
+        },
+        {
+          "qid": 5,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出必点脑花贡菜及蘸碟配方，无冲突",
+          "hits_n": 5,
+          "top1": "User's must-order items at 老码头火锅 are 脑花 (pig brain) and 贡菜, and their dipping sa",
+          "judge_failed": false
+        },
+        {
+          "qid": 6,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆明确提到玉林路老码头火锅，与答案一致",
+          "hits_n": 5,
+          "top1": "On the evening of September 28, 2026, User changed their dinner plan from cookin",
+          "judge_failed": false
+        },
+        {
+          "qid": 7,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆明确含软件设计师及清华蓝皮教材，无冲突",
+          "hits_n": 5,
+          "top1": "As of September 28, 2026, User has read to page 187 of the blue-covered 清华大学出版社 ",
+          "judge_failed": false
+        },
+        {
+          "qid": 8,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确周二周四21-22点刷真题，与标准答案一致",
+          "hits_n": 5,
+          "top1": "User is considering adding an extra half hour of 软考 exam practice per day, since",
+          "judge_failed": false
+        },
+        {
+          "qid": 9,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确阿哲在深圳做产品经理，与答案一致",
+          "hits_n": 5,
+          "top1": "User's college roommate 阿哲 (Azhe) now works as a product manager in Shenzhen",
+          "judge_failed": false
+        },
+        {
+          "qid": 10,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确每月最后周六晚10点连麦，[5]明确阿哲玩对抗路",
+          "hits_n": 5,
+          "top1": "User and their college roommate 阿哲 have a standing monthly appointment to voice ",
+          "judge_failed": false
+        },
+        {
+          "qid": 11,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][2]明确洱海醒来民宿，预算400元内，信息一致",
+          "hits_n": 5,
+          "top1": "User plans to take three days of annual leave in March 2027 to travel to Dali, Y",
+          "judge_failed": false
+        },
+        {
+          "qid": 12,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出型号、价格、轴体，与标准答案一致",
+          "hits_n": 5,
+          "top1": "User bought a Keychron K8 Pro mechanical keyboard with Gateron red switches (佳达隆",
+          "judge_failed": false
+        },
+        {
+          "qid": 13,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆明确给出编号10281盆景树，放电视柜上，与答案一致。",
+          "hits_n": 5,
+          "top1": "User recently got into building LEGO and completed set #10281, the LEGO Bonsai T",
+          "judge_failed": false
+        },
+        {
+          "qid": 14,
+          "type": "paraphrase",
+          "correct": 0,
+          "misled": 0,
+          "reason": "记忆仅提帕梅拉训练，未提国籍德国",
+          "hits_n": 5,
+          "top1": "User follows a fixed Pamela (帕梅拉) workout routine on Wednesdays and Saturdays, a",
+          "judge_failed": false
+        },
+        {
+          "qid": 15,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆明确提到Keychron K8 Pro键盘比公司键盘顺手",
+          "hits_n": 5,
+          "top1": "User bought a Keychron K8 Pro mechanical keyboard with Gateron red switches (佳达隆",
+          "judge_failed": false
+        },
+        {
+          "qid": 16,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆明确提到乐高10281盆景树，信息一致无冲突",
+          "hits_n": 5,
+          "top1": "User's LEGO Bonsai Tree set #10281 is now displayed on the top shelf of the TV c",
+          "judge_failed": false
+        },
+        {
+          "qid": 17,
+          "type": "correction",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆明确用户养柯基豆豆，猫是室友的，无冲突",
+          "hits_n": 5,
+          "top1": "User's own pet is a corgi named 豆豆 (Doudou) who just turned one year old in Augu",
+          "judge_failed": false
+        },
+        {
+          "qid": 18,
+          "type": "correction",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出最新名称天枢、Java Spring Boot及75%进度",
+          "hits_n": 5,
+          "top1": "The backend refactoring project formerly named \"星云\" (Nebula) was renamed to \"天枢\"",
+          "judge_failed": false
+        },
+        {
+          "qid": 19,
+          "type": "noise",
+          "correct": 0,
+          "misled": 0,
+          "reason": "记忆无跳操时间信息，无法回答",
+          "hits_n": 5,
+          "top1": "On September 28, 2026, when the user opened the door after getting home, their c",
+          "judge_failed": false
+        },
+        {
+          "qid": 20,
+          "type": "noise",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2][3]均提到玉林路老码头火锅，信息一致",
+          "hits_n": 5,
+          "top1": "User's college roommate 阿哲 (Azhe) now works as a product manager in Shenzhen",
+          "judge_failed": false
+        }
+      ]
+    },
+    "rag_qwen3": {
+      "status": "ok",
+      "error": null,
+      "reinit_s": 10.4,
+      "add_total_s": 28.4,
+      "add_p50_ms": 939.8,
+      "score": 18.0,
+      "acc": 0.9,
+      "misled": 0,
+      "storage": 30,
+      "retrieval_p50_ms": 338.6,
+      "quiz_total_s": 42.0,
+      "total_s": 80.8,
+      "details": [
+        {
+          "qid": 1,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确成华区合租1600，旧武侯区信息已标注退租",
+          "hits_n": 5,
+          "top1": "还有啊，我上个月搬到成都成华区了，现在跟人合租，我那一间月租1600，离地铁7号线走路8分钟。之前说的武侯区一居室已经退租了，那个地铁3号线高架吵得我神经衰弱。",
+          "judge_failed": false
+        },
+        {
+          "qid": 2,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确豆豆是柯基，上个月满一岁，与答案一致",
+          "hits_n": 5,
+          "top1": "哎对了，我之前跟你说年糕是我养的，其实搞错了，年糕是我合租室友的猫。我自己养的是只柯基叫“豆豆”，上个月刚满一岁，每天早晚都得遛，累死我了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 3,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确周三周六跟帕梅拉跳30分钟，与答案一致",
+          "hits_n": 5,
+          "top1": "晚上好呀，今天过得还行，就是有点困，你呢？我刚跟着帕梅拉跳了30分钟，周三周六固定节目，跳完必须来一盒250ml的维他柠檬茶，不然感觉白练了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 4,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确提到跳完喝250ml维他柠檬茶，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "晚上好呀，今天过得还行，就是有点困，你呢？我刚跟着帕梅拉跳了30分钟，周三周六固定节目，跳完必须来一盒250ml的维他柠檬茶，不然感觉白练了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 5,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][2]均明确脑花、贡菜及蒜泥香油蚝油蘸碟，无香菜",
+          "hits_n": 5,
+          "top1": "刚下班到家，累瘫了，先跟你唠两句再去做饭。今天下班去玉林路吃了老码头火锅，还是老三样：脑花、贡菜，蘸碟蒜泥香油蚝油，不放香菜，巴适得很。",
+          "judge_failed": false
+        },
+        {
+          "qid": 6,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][2]均明确玉林路老码头火锅，信息一致",
+          "hits_n": 5,
+          "top1": "刚下班到家，累瘫了，先跟你唠两句再去做饭。今天下班去玉林路吃了老码头火锅，还是老三样：脑花、贡菜，蘸碟蒜泥香油蚝油，不放香菜，巴适得很。",
+          "judge_failed": false
+        },
+        {
+          "qid": 7,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确提到软考中级软件设计师及清华蓝皮教材",
+          "hits_n": 5,
+          "top1": "软考真题刷到第三套了，正确率才58%，有点慌。12月考试，还有几个月，实在不行就每天多刷半小时。蓝皮书都快被我翻烂了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 8,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确给出每周二、周四晚9-10点刷真题，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "软考真题刷到第三套了，正确率才58%，有点慌。12月考试，还有几个月，实在不行就每天多刷半小时。蓝皮书都快被我翻烂了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 9,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确提到阿哲在深圳做产品经理",
+          "hits_n": 5,
+          "top1": "跟你说个事，我大学室友阿哲，现在在深圳做产品经理，我俩约好每个月最后一个周六晚上10点连麦打《王者荣耀》，他专玩对抗路，菜得要命还爱指挥。",
+          "judge_failed": false
+        },
+        {
+          "qid": 10,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出每月最后一个周六晚10点及对抗路",
+          "hits_n": 5,
+          "top1": "跟你说个事，我大学室友阿哲，现在在深圳做产品经理，我俩约好每个月最后一个周六晚上10点连麦打《王者荣耀》，他专玩对抗路，菜得要命还爱指挥。",
+          "judge_failed": false
+        },
+        {
+          "qid": 11,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出民宿名和预算，无冲突信息",
+          "hits_n": 5,
+          "top1": "晚上好呀，今天过得还行，就是有点困，你呢？我计划明年3月请三天年假去云南大理，想住洱海边才村码头附近一家叫“洱海醒来”的民宿，预算一晚不超过400元。",
+          "judge_failed": false
+        },
+        {
+          "qid": 12,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出型号、价格、轴体，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "上周在京东花899买了个Keychron K8 Pro机械键盘，佳达隆红轴，用起来比公司配的薄膜键盘爽多了。现在在家敲代码都变勤快了，虽然还是不想加班。",
+          "judge_failed": false
+        },
+        {
+          "qid": 13,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出编号10281盆景树放电视柜，与答案一致",
+          "hits_n": 5,
+          "top1": "最近迷上了拼乐高，上周末刚拼完一套编号10281的乐高盆景树，放在电视柜上，花了差不多三个晚上。年糕老想拿爪子扒拉，被我凶了好几次。",
+          "judge_failed": false
+        },
+        {
+          "qid": 14,
+          "type": "paraphrase",
+          "correct": 0,
+          "misled": 0,
+          "reason": "记忆只提帕梅拉，未提德国人，无法答国籍",
+          "hits_n": 5,
+          "top1": "晚上好呀，今天过得还行，就是有点困，你呢？我刚跟着帕梅拉跳了30分钟，周三周六固定节目，跳完必须来一盒250ml的维他柠檬茶，不然感觉白练了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 15,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆明确提到Keychron K8 Pro机械键盘，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "上周在京东花899买了个Keychron K8 Pro机械键盘，佳达隆红轴，用起来比公司配的薄膜键盘爽多了。现在在家敲代码都变勤快了，虽然还是不想加班。",
+          "judge_failed": false
+        },
+        {
+          "qid": 16,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确提到编号10281乐高盆景树，信息一致。",
+          "hits_n": 5,
+          "top1": "乐高盆景树被豆豆撞倒过一次，散了两根枝，我重新拼回去了。现在放电视柜最高一层，它够不着，年糕也够不着，总算安全了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 17,
+          "type": "correction",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确纠正：自己养的是柯基豆豆，年糕是室友的猫。",
+          "hits_n": 5,
+          "top1": "哎对了，我之前跟你说年糕是我养的，其实搞错了，年糕是我合租室友的猫。我自己养的是只柯基叫“豆豆”，上个月刚满一岁，每天早晚都得遛，累死我了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 18,
+          "type": "correction",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确给出最新名称、技术栈和进度，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "我在公司负责一个叫“星云”的后端重构项目，用Go语言把原来的PHP订单接口重写，目前进度大概60%，预计10月底上线。今天又写了三百行，眼睛快瞎了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 19,
+          "type": "noise",
+          "correct": 0,
+          "misled": 0,
+          "reason": "记忆未提及跳操时间，无法判断",
+          "hits_n": 5,
+          "top1": "哎对了，我之前跟你说年糕是我养的，其实搞错了，年糕是我合租室友的猫。我自己养的是只柯基叫“豆豆”，上个月刚满一岁，每天早晚都得遛，累死我了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 20,
+          "type": "noise",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2][3]均提到玉林路老码头火锅，信息一致。",
+          "hits_n": 5,
+          "top1": "跟你说个事，我大学室友阿哲，现在在深圳做产品经理，我俩约好每个月最后一个周六晚上10点连麦打《王者荣耀》，他专玩对抗路，菜得要命还爱指挥。",
+          "judge_failed": false
+        }
+      ]
+    },
+    "bm25_bigram": {
+      "status": "ok",
+      "error": null,
+      "reinit_s": 0.0,
+      "add_total_s": 0.0,
+      "add_p50_ms": 0.0,
+      "score": 20.0,
+      "acc": 1.0,
+      "misled": 0,
+      "storage": 30,
+      "retrieval_p50_ms": 0.0,
+      "quiz_total_s": 37.9,
+      "total_s": 37.9,
+      "details": [
+        {
+          "qid": 1,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][3]明确成华区合租1600，旧武侯区信息已标注退租",
+          "hits_n": 5,
+          "top1": "还有啊，我上个月搬到成都成华区了，现在跟人合租，我那一间月租1600，离地铁7号线走路8分钟。之前说的武侯区一居室已经退租了，那个地铁3号线高架吵得我神经衰弱。",
+          "judge_failed": false
+        },
+        {
+          "qid": 2,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确说柯基豆豆一岁，与答案一致",
+          "hits_n": 5,
+          "top1": "哎对了，我之前跟你说年糕是我养的，其实搞错了，年糕是我合租室友的猫。我自己养的是只柯基叫“豆豆”，上个月刚满一岁，每天早晚都得遛，累死我了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 3,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确周三周六跟帕梅拉跳30分钟，与答案一致",
+          "hits_n": 5,
+          "top1": "晚上好呀，今天过得还行，就是有点困，你呢？我刚跟着帕梅拉跳了30分钟，周三周六固定节目，跳完必须来一盒250ml的维他柠檬茶，不然感觉白练了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 4,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确提到跳完喝250ml维他柠檬茶，与答案一致。",
+          "hits_n": 5,
+          "top1": "晚上好呀，今天过得还行，就是有点困，你呢？我刚跟着帕梅拉跳了30分钟，周三周六固定节目，跳完必须来一盒250ml的维他柠檬茶，不然感觉白练了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 5,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][2]均含必点脑花贡菜、蘸碟蒜泥香油蚝油不放香菜",
+          "hits_n": 5,
+          "top1": "刚下班到家，累瘫了，先跟你唠两句再去做饭。今晚打算点老码头火锅外卖，必点脑花和贡菜，蘸碟只要蒜泥、香油和蚝油，坚决不放香菜，玉林路那家我常去。",
+          "judge_failed": false
+        },
+        {
+          "qid": 6,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][2]均明确提到玉林路老码头火锅，信息一致。",
+          "hits_n": 5,
+          "top1": "刚下班到家，累瘫了，先跟你唠两句再去做饭。今晚打算点老码头火锅外卖，必点脑花和贡菜，蘸碟只要蒜泥、香油和蚝油，坚决不放香菜，玉林路那家我常去。",
+          "judge_failed": false
+        },
+        {
+          "qid": 7,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确提到软考中级软件设计师及清华蓝皮教材",
+          "hits_n": 5,
+          "top1": "今天成都又下雨了，烦死了，你那边天气怎么样？我打算今年12月前考过软考中级“软件设计师”，每周二、周四晚上9点到10点刷一套真题，用的清华大学出版社那本蓝皮的。",
+          "judge_failed": false
+        },
+        {
+          "qid": 8,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确周二、周四晚9-10点刷真题，无冲突",
+          "hits_n": 5,
+          "top1": "软考真题刷到第三套了，正确率才58%，有点慌。12月考试，还有几个月，实在不行就每天多刷半小时。蓝皮书都快被我翻烂了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 9,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确阿哲在深圳做产品经理，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "跟你说个事，我大学室友阿哲，现在在深圳做产品经理，我俩约好每个月最后一个周六晚上10点连麦打《王者荣耀》，他专玩对抗路，菜得要命还爱指挥。",
+          "judge_failed": false
+        },
+        {
+          "qid": 10,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出每月最后一个周六晚10点连麦，阿哲玩对抗路。",
+          "hits_n": 5,
+          "top1": "跟你说个事，我大学室友阿哲，现在在深圳做产品经理，我俩约好每个月最后一个周六晚上10点连麦打《王者荣耀》，他专玩对抗路，菜得要命还爱指挥。",
+          "judge_failed": false
+        },
+        {
+          "qid": 11,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出民宿名和预算，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "晚上好呀，今天过得还行，就是有点困，你呢？我计划明年3月请三天年假去云南大理，想住洱海边才村码头附近一家叫“洱海醒来”的民宿，预算一晚不超过400元。",
+          "judge_failed": false
+        },
+        {
+          "qid": 12,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出型号、价格、轴体，与标准答案一致",
+          "hits_n": 5,
+          "top1": "上周在京东花899买了个Keychron K8 Pro机械键盘，佳达隆红轴，用起来比公司配的薄膜键盘爽多了。现在在家敲代码都变勤快了，虽然还是不想加班。",
+          "judge_failed": false
+        },
+        {
+          "qid": 13,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出编号10281盆景树放电视柜上",
+          "hits_n": 5,
+          "top1": "最近迷上了拼乐高，上周末刚拼完一套编号10281的乐高盆景树，放在电视柜上，花了差不多三个晚上。年糕老想拿爪子扒拉，被我凶了好几次。",
+          "judge_failed": false
+        },
+        {
+          "qid": 14,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]提到帕梅拉，即标准答案教练，信息一致。",
+          "hits_n": 5,
+          "top1": "晚上好呀，今天过得还行，就是有点困，你呢？我刚跟着帕梅拉跳了30分钟，周三周六固定节目，跳完必须来一盒250ml的维他柠檬茶，不然感觉白练了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 15,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确提到Keychron K8 Pro机械键盘，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "上周在京东花899买了个Keychron K8 Pro机械键盘，佳达隆红轴，用起来比公司配的薄膜键盘爽多了。现在在家敲代码都变勤快了，虽然还是不想加班。",
+          "judge_failed": false
+        },
+        {
+          "qid": 16,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确提到乐高10281盆景树，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "最近迷上了拼乐高，上周末刚拼完一套编号10281的乐高盆景树，放在电视柜上，花了差不多三个晚上。年糕老想拿爪子扒拉，被我凶了好几次。",
+          "judge_failed": false
+        },
+        {
+          "qid": 17,
+          "type": "correction",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确更正为柯基豆豆，最新说法清晰在场",
+          "hits_n": 5,
+          "top1": "哎对了，我之前跟你说年糕是我养的，其实搞错了，年糕是我合租室友的猫。我自己养的是只柯基叫“豆豆”，上个月刚满一岁，每天早晚都得遛，累死我了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 18,
+          "type": "correction",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出最新名称天枢、Java Spring Boot、75%",
+          "hits_n": 5,
+          "top1": "“星云”项目上周改名了，现在叫“天枢”，而且技术栈换成Java Spring Boot了，进度也推到75%左右。我Go白学了，气死，但没办法，老大拍板的。",
+          "judge_failed": false
+        },
+        {
+          "qid": 19,
+          "type": "noise",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[3]明确提到周三周六跳操，与答案一致",
+          "hits_n": 5,
+          "top1": "哎对了，我之前跟你说年糕是我养的，其实搞错了，年糕是我合租室友的猫。我自己养的是只柯基叫“豆豆”，上个月刚满一岁，每天早晚都得遛，累死我了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 20,
+          "type": "noise",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2][4]均提到玉林路老码头火锅，信息一致。",
+          "hits_n": 5,
+          "top1": "跟你说个事，我大学室友阿哲，现在在深圳做产品经理，我俩约好每个月最后一个周六晚上10点连麦打《王者荣耀》，他专玩对抗路，菜得要命还爱指挥。",
+          "judge_failed": false
+        }
+      ]
+    },
+    "graphiti_kuzu": {
+      "status": "ok",
+      "error": null,
+      "reinit_s": 2.1,
+      "add_total_s": 768.9,
+      "add_p50_ms": 21227.3,
+      "score": 11.0,
+      "acc": 0.55,
+      "misled": 2,
+      "storage": 30,
+      "retrieval_p50_ms": 361.7,
+      "quiz_total_s": 43.7,
+      "total_s": 814.7,
+      "details": [
+        {
+          "qid": 1,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆含成华区合租月租1600，与标准一致；武侯区为过期干扰但正确信息在场",
+          "hits_n": 5,
+          "top1": "用户上个月搬到成都成华区，现在跟人合租。",
+          "judge_failed": false
+        },
+        {
+          "qid": 2,
+          "type": "normal",
+          "correct": 0,
+          "misled": 0,
+          "reason": "记忆只提名字豆豆，缺年龄信息，无法答全",
+          "hits_n": 1,
+          "top1": "用户自己养的是一只柯基，名叫豆豆。",
+          "judge_failed": false
+        },
+        {
+          "qid": 3,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆含周三周六、帕梅拉，与标准答案一致",
+          "hits_n": 1,
+          "top1": "用户每周三和周六固定跟着帕梅拉跳30分钟的健身操。",
+          "judge_failed": false
+        },
+        {
+          "qid": 4,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆明确给出跳操后喝维他柠檬茶，与标准答案一致",
+          "hits_n": 1,
+          "top1": "用户跳完帕梅拉的操后必须喝一盒250ml的维他柠檬茶。",
+          "judge_failed": false
+        },
+        {
+          "qid": 5,
+          "type": "normal",
+          "correct": 0,
+          "misled": 1,
+          "reason": "蘸碟信息有冲突且缺必点脑花贡菜，无法得标准答案",
+          "hits_n": 5,
+          "top1": "用户的火锅蘸碟只放蒜泥、香油和蚝油，坚决不放香菜",
+          "judge_failed": false
+        },
+        {
+          "qid": 6,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆明确老码头火锅在玉林路，与答案一致",
+          "hits_n": 4,
+          "top1": "用户常去玉林路那家老码头火锅",
+          "judge_failed": false
+        },
+        {
+          "qid": 7,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[4]明确给出证书和教材，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户12月要参加软考，还有几个月时间",
+          "judge_failed": false
+        },
+        {
+          "qid": 8,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[3]明确给出每周二、周四晚9-10点刷真题，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "用户打算实在不行就每天多刷半小时软考真题",
+          "judge_failed": false
+        },
+        {
+          "qid": 9,
+          "type": "normal",
+          "correct": 0,
+          "misled": 0,
+          "reason": "记忆仅知阿哲是大学室友，无深圳产品经理信息",
+          "hits_n": 2,
+          "top1": "用户的合租室友挺好的",
+          "judge_failed": false
+        },
+        {
+          "qid": 10,
+          "type": "normal",
+          "correct": 0,
+          "misled": 0,
+          "reason": "记忆只含时间，无阿哲位置信息",
+          "hits_n": 5,
+          "top1": "用户与阿哲约好每个月最后一个周六晚上10点连麦打《王者荣耀》。",
+          "judge_failed": false
+        },
+        {
+          "qid": 11,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出民宿名和预算，与标准答案一致",
+          "hits_n": 4,
+          "top1": "用户计划明年3月入住洱海边才村码头附近一家叫“洱海醒来”的民宿，预算一晚不超过400元。",
+          "judge_failed": false
+        },
+        {
+          "qid": 12,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆含型号、价格、轴体，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户上周花899元购买了Keychron K8 Pro机械键盘",
+          "judge_failed": false
+        },
+        {
+          "qid": 13,
+          "type": "normal",
+          "correct": 0,
+          "misled": 0,
+          "reason": "记忆有编号和盆景树，但缺放置位置信息",
+          "hits_n": 2,
+          "top1": "用户上周末刚拼完一套编号10281的乐高盆景树，花了差不多三个晚上。",
+          "judge_failed": false
+        },
+        {
+          "qid": 14,
+          "type": "paraphrase",
+          "correct": 0,
+          "misled": 0,
+          "reason": "选手未检索到任何记忆",
+          "hits_n": 0,
+          "top1": "",
+          "judge_failed": false
+        },
+        {
+          "qid": 15,
+          "type": "paraphrase",
+          "correct": 0,
+          "misled": 0,
+          "reason": "选手未检索到任何记忆",
+          "hits_n": 0,
+          "top1": "",
+          "judge_failed": false
+        },
+        {
+          "qid": 16,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[4]明确给出编号10281的乐高盆景树，与答案一致。",
+          "hits_n": 5,
+          "top1": "用户把乐高盆景树放在电视柜最高一层",
+          "judge_failed": false
+        },
+        {
+          "qid": 17,
+          "type": "correction",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确柯基豆豆，与标准答案一致",
+          "hits_n": 2,
+          "top1": "用户自己养的是一只柯基，名叫豆豆。",
+          "judge_failed": false
+        },
+        {
+          "qid": 18,
+          "type": "correction",
+          "correct": 0,
+          "misled": 1,
+          "reason": "记忆只提星云Go，无天枢Java最新信息，会误导",
+          "hits_n": 3,
+          "top1": "用户在公司负责一个叫“星云”的后端重构项目。",
+          "judge_failed": false
+        },
+        {
+          "qid": 19,
+          "type": "noise",
+          "correct": 0,
+          "misled": 0,
+          "reason": "记忆无跳操时间信息，无法回答",
+          "hits_n": 5,
+          "top1": "用户养了一只叫年糕的猫，年糕是两岁橘猫，特别黏人，左耳朵有个小缺口",
+          "judge_failed": false
+        },
+        {
+          "qid": 20,
+          "type": "noise",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[3]明确玉林路老码头火锅，与答案一致",
+          "hits_n": 3,
+          "top1": "阿哲现在在深圳做产品经理。",
+          "judge_failed": false
+        }
+      ]
+    }
+  },
+  "meta": {
+    "ts": "2026-09-28T14:05:32+00:00",
+    "seed": 42,
+    "llm_model": "deepseek-flash",
+    "embed": "Qwen/Qwen3-Embedding-0.6B (1024d, local CPU)",
+    "dialogue_rounds": 30,
+    "quiz_questions": 20,
+    "absent": {
+      "langmem": "全系 0.0.11-0.0.30 使用 Python 3.11+ 语法（typing.Literal[*x]），本机仅 3.10.6，无法 import",
+      "zep": "社区版服务端依赖 docker，本机无 docker（按约定不装）"
+    },
+    "wall_total_s": 1674.3
+  },
+  "ranking": [
+    "bm25_bigram",
+    "sme_chat",
+    "sme_minimal",
+    "rag_qwen3",
+    "mem0",
+    "sme_kb_dynamic",
+    "graphiti_kuzu"
+  ]
+}

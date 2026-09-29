@@ -1,0 +1,10 @@
+{
+  "duration_s": 120.3,
+  "reads": 605,
+  "read_fail": 0,
+  "writes": 152,
+  "write_fail": 0,
+  "read_rps": 5.0,
+  "read_p50_ms": 742.3,
+  "read_p95_ms": 1196.8
+}

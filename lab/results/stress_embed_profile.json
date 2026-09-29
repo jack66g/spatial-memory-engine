@@ -1,0 +1,20 @@
+{
+  "n": 1000,
+  "seed": 42,
+  "providers": {
+    "hashing": {
+      "writes_per_s": 4230.8,
+      "search_p50_ms": 2.48,
+      "search_p95_ms": 2.96,
+      "regions": 19,
+      "memories": 1000
+    },
+    "sentence-transformers": {
+      "writes_per_s": 4.0,
+      "search_p50_ms": 115.15,
+      "search_p95_ms": 142.8,
+      "regions": 14,
+      "memories": 1000
+    }
+  }
+}

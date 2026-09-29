@@ -1,0 +1,8 @@
+.env
+.venv/
+data/
+*.log
+assets/
+results/run_*/
+results/*_ws_*/
+__pycache__/

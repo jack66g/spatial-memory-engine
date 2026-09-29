@@ -1,0 +1,2938 @@
+{
+  "contestants": {
+    "sme_chat": {
+      "status": "ok",
+      "error": null,
+      "reinit_s": 25.2,
+      "add_total_s": 71.2,
+      "add_p50_ms": 669.9,
+      "score": 36.0,
+      "acc": 0.9,
+      "misled": 2,
+      "storage": 75,
+      "retrieval_p50_ms": 305.5,
+      "quiz_total_s": 135.4,
+      "total_s": 231.8,
+      "details": [
+        {
+          "qid": 1,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[3]明确给出最新项目蓉城云仓，旧说法被纠正",
+          "hits_n": 5,
+          "top1": "我最近在做一个叫“蜀味点单”的后端项目，用 Spring Boot 写的，上周三刚把支付回调接口联调通过，现在卡在并发下单那块。",
+          "judge_failed": false
+        },
+        {
+          "qid": 2,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]完整包含配置与价格信息，无冲突干扰",
+          "hits_n": 5,
+          "top1": "双十一我咬咬牙在京东买了台 16 英寸 MacBook Pro，M4 Pro 芯片 24G 内存，花了一万九千九，分了 12 期免息，现在每个月要还 1658 ",
+          "judge_failed": false
+        },
+        {
+          "qid": 3,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出周二周四、熊猫健身、搏击操，与答案一致",
+          "hits_n": 5,
+          "top1": "我最近每周二和周四晚上八点都会去小区旁边那个“熊猫健身”上团课，主要是练搏击操，一节课 45 分钟，教练叫阿豪，已经坚持三周了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 4,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出绵阳中学、年级第87名，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "我表妹今年高三，在绵阳中学读书，上个月月考考了年级第 87 名，她妈也就是我小姨，天天在家族群里发她的成绩单。",
+          "judge_failed": false
+        },
+        {
+          "qid": 5,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[3]明确给出最新住址和月租，与标准答案一致",
+          "hits_n": 5,
+          "top1": "我现在就盼着项目上线后能发点奖金，不然 1658 块每个月跟闹钟一样准时提醒我穷。",
+          "judge_failed": false
+        },
+        {
+          "qid": 6,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出12月底前看完、看到第6章分区，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "我打算在 12 月底之前把《DDIA》也就是《数据密集型应用系统设计》那本书啃完，现在看到第 6 章分区那块，每周至少读两章。",
+          "judge_failed": false
+        },
+        {
+          "qid": 7,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出酒店和上山时间，与答案一致",
+          "hits_n": 5,
+          "top1": "元旦我准备去西岭雪山玩两天，已经订了 12 月 31 号晚上山脚下的“花水湾第一村温泉酒店”，打算 1 月 1 号一早坐索道上山看雪。",
+          "judge_failed": false
+        },
+        {
+          "qid": 8,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确纠正并给出最新宠物柯基锅盔",
+          "hits_n": 5,
+          "top1": "我现在就盼着项目上线后能发点奖金，不然 1658 块每个月跟闹钟一样准时提醒我穷。",
+          "judge_failed": false
+        },
+        {
+          "qid": 9,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出21318树屋和3036块零件，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "我最近迷上了拼乐高，上个月刚拼完那个 21318 树屋，有 3036 块零件，拼了整整三个周末，现在摆在电视柜上。",
+          "judge_failed": false
+        },
+        {
+          "qid": 10,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出每周至少三次、必点兔头加脑花，与标准一致。",
+          "hits_n": 5,
+          "top1": "我特别爱吃辣，每周至少点三次“冒椒火辣”的外卖，必点兔头加脑花，微辣对我来说刚刚好，太辣第二天会拉肚子。",
+          "judge_failed": false
+        },
+        {
+          "qid": 11,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确蓉城云仓用Go重写，信息一致",
+          "hits_n": 5,
+          "top1": "我之前说的“蜀味点单”其实是公司外包给我们的项目，我真正自己负责的是另一个叫“蓉城云仓”的库存系统，用 Go 重写的。",
+          "judge_failed": false
+        },
+        {
+          "qid": 12,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确柯基叫锅盔、三个月大，与答案一致",
+          "hits_n": 5,
+          "top1": "哦对，我得纠正一下，其实“宽粉”是我合租室友的猫，我真正自己养的是上个月从成都双流那边抱回来的一只柯基，叫“锅盔”，现在三个月大。",
+          "judge_failed": false
+        },
+        {
+          "qid": 13,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出最新住址和房租，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "我上个月底已经搬到武侯区火车南站那边的“桐梓林壹号”了，跟人合租，我住主卧带独卫，月租 1900。",
+          "judge_failed": false
+        },
+        {
+          "qid": 14,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][3]均明确教练阿豪、45分钟，无冲突",
+          "hits_n": 5,
+          "top1": "我最近每周二和周四晚上八点都会去小区旁边那个“熊猫健身”上团课，主要是练搏击操，一节课 45 分钟，教练叫阿豪，已经坚持三周了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 15,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确表妹妈妈是小姨，天天发成绩单，与答案一致。",
+          "hits_n": 5,
+          "top1": "我表妹今年高三，在绵阳中学读书，上个月月考考了年级第 87 名，她妈也就是我小姨，天天在家族群里发她的成绩单。",
+          "judge_failed": false
+        },
+        {
+          "qid": 16,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确12期免息、每月1658元，与标准答案一致",
+          "hits_n": 5,
+          "top1": "双十一我咬咬牙在京东买了台 16 英寸 MacBook Pro，M4 Pro 芯片 24G 内存，花了一万九千九，分了 12 期免息，现在每个月要还 1658 ",
+          "judge_failed": false
+        },
+        {
+          "qid": 17,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确说元旦去西岭雪山玩两天，与答案一致。",
+          "hits_n": 5,
+          "top1": "不过想到元旦要去西岭雪山，又觉得还能再撑一撑。",
+          "judge_failed": false
+        },
+        {
+          "qid": 18,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确含三个周末和电视柜，与答案一致",
+          "hits_n": 5,
+          "top1": "我最近迷上了拼乐高，上个月刚拼完那个 21318 树屋，有 3036 块零件，拼了整整三个周末，现在摆在电视柜上。",
+          "judge_failed": false
+        },
+        {
+          "qid": 19,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确含微辣刚好、太辣拉肚子，与标准答案一致",
+          "hits_n": 5,
+          "top1": "我特别爱吃辣，每周至少点三次“冒椒火辣”的外卖，必点兔头加脑花，微辣对我来说刚刚好，太辣第二天会拉肚子。",
+          "judge_failed": false
+        },
+        {
+          "qid": 20,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确提到每周至少读两章，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "我打算在 12 月底之前把《DDIA》也就是《数据密集型应用系统设计》那本书啃完，现在看到第 6 章分区那块，每周至少读两章。",
+          "judge_failed": false
+        },
+        {
+          "qid": 21,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确纠正宽粉是合租室友的猫，最新说法清晰在场。",
+          "hits_n": 5,
+          "top1": "我养了一只橘猫叫“宽粉”，是我今年 3 月在闲鱼上领养的，现在差不多一岁半，已经绝育了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 22,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确说明蜀味点单是公司外包项目，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "我之前说的“蜀味点单”其实是公司外包给我们的项目，我真正自己负责的是另一个叫“蓉城云仓”的库存系统，用 Go 重写的。",
+          "judge_failed": false
+        },
+        {
+          "qid": 23,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[4]明确已搬至桐梓林壹号，最新说法在场",
+          "hits_n": 5,
+          "top1": "我租在成都高新区中和街道一个叫“锦城悦庭”的小区，12 楼，一室一厅，月租 2300，阳台朝南，下午太阳晒进来特别舒服。",
+          "judge_failed": false
+        },
+        {
+          "qid": 24,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][2]均明确提到练搏击操，无冲突信息。",
+          "hits_n": 5,
+          "top1": "我最近每周二和周四晚上八点都会去小区旁边那个“熊猫健身”上团课，主要是练搏击操，一节课 45 分钟，教练叫阿豪，已经坚持三周了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 25,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确表妹今年高三，无冲突信息",
+          "hits_n": 5,
+          "top1": "我表妹今年高三，在绵阳中学读书，上个月月考考了年级第 87 名，她妈也就是我小姨，天天在家族群里发她的成绩单。",
+          "judge_failed": false
+        },
+        {
+          "qid": 26,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出柯基从成都双流抱回，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "哦对，我得纠正一下，其实“宽粉”是我合租室友的猫，我真正自己养的是上个月从成都双流那边抱回来的一只柯基，叫“锅盔”，现在三个月大。",
+          "judge_failed": false
+        },
+        {
+          "qid": 27,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[3]明确每月还1658元，与标准答案一致",
+          "hits_n": 5,
+          "top1": "我现在就盼着项目上线后能发点奖金，不然 1658 块每个月跟闹钟一样准时提醒我穷。",
+          "judge_failed": false
+        },
+        {
+          "qid": 28,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][3]均明确教练叫阿豪，无冲突信息。",
+          "hits_n": 5,
+          "top1": "我最近每周二和周四晚上八点都会去小区旁边那个“熊猫健身”上团课，主要是练搏击操，一节课 45 分钟，教练叫阿豪，已经坚持三周了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 29,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[3]明确阳台朝南下午阳光舒服，与答案一致",
+          "hits_n": 5,
+          "top1": "我现在就盼着项目上线后能发点奖金，不然 1658 块每个月跟闹钟一样准时提醒我穷。",
+          "judge_failed": false
+        },
+        {
+          "qid": 30,
+          "type": "paraphrase",
+          "correct": 0,
+          "misled": 1,
+          "reason": "记忆无宠物花费信息，且宠物从猫更正为柯基，会带偏",
+          "hits_n": 5,
+          "top1": "我现在就盼着项目上线后能发点奖金，不然 1658 块每个月跟闹钟一样准时提醒我穷。",
+          "judge_failed": false
+        },
+        {
+          "qid": 31,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确读到第6章分区，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "我现在就盼着项目上线后能发点奖金，不然 1658 块每个月跟闹钟一样准时提醒我穷。",
+          "judge_failed": false
+        },
+        {
+          "qid": 32,
+          "type": "paraphrase",
+          "correct": 0,
+          "misled": 0,
+          "reason": "记忆无跨年住宿信息，无法回答",
+          "hits_n": 5,
+          "top1": "我上个月底已经搬到武侯区火车南站那边的“桐梓林壹号”了，跟人合租，我住主卧带独卫，月租 1900。",
+          "judge_failed": false
+        },
+        {
+          "qid": 33,
+          "type": "correction",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确纠正：猫是室友的，自己养的是柯基锅盔",
+          "hits_n": 5,
+          "top1": "我养了一只橘猫叫“宽粉”，是我今年 3 月在闲鱼上领养的，现在差不多一岁半，已经绝育了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 34,
+          "type": "correction",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[3]明确最新项目为蓉城云仓，旧说法被澄清",
+          "hits_n": 5,
+          "top1": "我现在就盼着项目上线后能发点奖金，不然 1658 块每个月跟闹钟一样准时提醒我穷。",
+          "judge_failed": false
+        },
+        {
+          "qid": 35,
+          "type": "correction",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[3]明确给出最新住址桐梓林壹号，旧信息[1]虽在但最新说法清晰在场",
+          "hits_n": 5,
+          "top1": "我租在成都高新区中和街道一个叫“锦城悦庭”的小区，12 楼，一室一厅，月租 2300，阳台朝南，下午太阳晒进来特别舒服。",
+          "judge_failed": false
+        },
+        {
+          "qid": 36,
+          "type": "correction",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确纠正：宽粉是室友的猫，自己养柯基锅盔",
+          "hits_n": 5,
+          "top1": "哦对，我得纠正一下，其实“宽粉”是我合租室友的猫，我真正自己养的是上个月从成都双流那边抱回来的一只柯基，叫“锅盔”，现在三个月大。",
+          "judge_failed": false
+        },
+        {
+          "qid": 37,
+          "type": "noise",
+          "correct": 0,
+          "misled": 0,
+          "reason": "记忆无猫粮猫砂花费信息，无法作答",
+          "hits_n": 5,
+          "top1": "哦对，我得纠正一下，其实“宽粉”是我合租室友的猫，我真正自己养的是上个月从成都双流那边抱回来的一只柯基，叫“锅盔”，现在三个月大。",
+          "judge_failed": false
+        },
+        {
+          "qid": 38,
+          "type": "noise",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[4]明确300 QPS报死锁，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "我之前说的“蜀味点单”其实是公司外包给我们的项目，我真正自己负责的是另一个叫“蓉城云仓”的库存系统，用 Go 重写的。",
+          "judge_failed": false
+        },
+        {
+          "qid": 39,
+          "type": "noise",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确阳台朝南，下午太阳晒进来舒服，与答案一致。",
+          "hits_n": 5,
+          "top1": "我租在成都高新区中和街道一个叫“锦城悦庭”的小区，12 楼，一室一厅，月租 2300，阳台朝南，下午太阳晒进来特别舒服。",
+          "judge_failed": false
+        },
+        {
+          "qid": 40,
+          "type": "noise",
+          "correct": 0,
+          "misled": 1,
+          "reason": "记忆未提锅盔领养花费，且闲鱼领养信息实为宽粉，易误导。",
+          "hits_n": 5,
+          "top1": "我养了一只橘猫叫“宽粉”，是我今年 3 月在闲鱼上领养的，现在差不多一岁半，已经绝育了。",
+          "judge_failed": false
+        }
+      ]
+    },
+    "sme_kb_dynamic": {
+      "status": "ok",
+      "error": null,
+      "reinit_s": 21.1,
+      "add_total_s": 269.0,
+      "add_p50_ms": 4287.9,
+      "score": 29.0,
+      "acc": 0.725,
+      "misled": 9,
+      "storage": 136,
+      "retrieval_p50_ms": 274.2,
+      "quiz_total_s": 100.1,
+      "total_s": 390.2,
+      "details": [
+        {
+          "qid": 1,
+          "type": "normal",
+          "correct": 0,
+          "misled": 1,
+          "reason": "记忆只提蜀味点单，缺蓉城云仓及Go重写信息",
+          "hits_n": 5,
+          "top1": "用户的项目用 Spring Boot 写的",
+          "judge_failed": false
+        },
+        {
+          "qid": 2,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆含配置和价格，与标准答案一致，无冲突信息",
+          "hits_n": 5,
+          "top1": "用户在双十一期间在京东购买了一台16英寸MacBook Pro，M4 Pro芯片，24G内存",
+          "judge_failed": false
+        },
+        {
+          "qid": 3,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆含周二周四、熊猫健身、搏击操，与答案一致",
+          "hits_n": 5,
+          "top1": "用户最近每周二和周四晚上八点都会去小区旁边的“熊猫健身”上团课",
+          "judge_failed": false
+        },
+        {
+          "qid": 4,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆含绵阳中学和年级第87名，与答案一致",
+          "hits_n": 5,
+          "top1": "用户的表妹上个月月考考了年级第87名",
+          "judge_failed": false
+        },
+        {
+          "qid": 5,
+          "type": "normal",
+          "correct": 0,
+          "misled": 1,
+          "reason": "记忆只有旧地址和月租，无武侯区新址及1900元信息",
+          "hits_n": 5,
+          "top1": "用户月租2300",
+          "judge_failed": false
+        },
+        {
+          "qid": 6,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆含12月底前读完、第6章分区、每周两章，与答案一致",
+          "hits_n": 5,
+          "top1": "用户现在看到《DDIA》第6章分区那块",
+          "judge_failed": false
+        },
+        {
+          "qid": 7,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[3][4]明确给出酒店和上山时间，与答案一致",
+          "hits_n": 5,
+          "top1": "用户元旦准备去西岭雪山玩两天",
+          "judge_failed": false
+        },
+        {
+          "qid": 8,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]含完整正确信息，[5]干扰但正确说法清晰在场",
+          "hits_n": 5,
+          "top1": "用户真正自己养的是一只上个月从成都双流抱回来的柯基，叫“锅盔”，现在三个月大",
+          "judge_failed": false
+        },
+        {
+          "qid": 9,
+          "type": "normal",
+          "correct": 0,
+          "misled": 1,
+          "reason": "记忆未提21318树屋及3036块，仅提其他乐高，无法答出",
+          "hits_n": 5,
+          "top1": "用户最近迷上了拼乐高",
+          "judge_failed": false
+        },
+        {
+          "qid": 10,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆含每周至少三次及必点兔头加脑花，与标准一致",
+          "hits_n": 5,
+          "top1": "用户每周至少点三次“冒椒火辣”的外卖",
+          "judge_failed": false
+        },
+        {
+          "qid": 11,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][2]明确给出蓉城云仓及Go重写，无冲突",
+          "hits_n": 5,
+          "top1": "用户真正自己负责的是另一个叫“蓉城云仓”的库存系统",
+          "judge_failed": false
+        },
+        {
+          "qid": 12,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出柯基叫锅盔、三个月大，与答案一致",
+          "hits_n": 5,
+          "top1": "用户真正自己养的是一只上个月从成都双流抱回来的柯基，叫“锅盔”，现在三个月大",
+          "judge_failed": false
+        },
+        {
+          "qid": 13,
+          "type": "normal",
+          "correct": 0,
+          "misled": 1,
+          "reason": "记忆只提月租2300，未提1900主卧带独卫，且2300与标准冲突",
+          "hits_n": 5,
+          "top1": "希望到时候别下大雨，不然我花那么多钱订酒店就纯纯泡温泉了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 14,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]教练阿豪，[4]一节课45分钟，与答案一致",
+          "hits_n": 5,
+          "top1": "希望到时候别下大雨，不然我花那么多钱订酒店就纯纯泡温泉了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 15,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆明确小姨是表妹妈妈且天天发成绩单",
+          "hits_n": 5,
+          "top1": "用户的小姨天天在家族群里发表妹的成绩单",
+          "judge_failed": false
+        },
+        {
+          "qid": 16,
+          "type": "normal",
+          "correct": 0,
+          "misled": 0,
+          "reason": "记忆只提每月还1658，未提分12期，信息不全",
+          "hits_n": 5,
+          "top1": "用户每个月要还1658块",
+          "judge_failed": false
+        },
+        {
+          "qid": 17,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确说玩两天，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户元旦准备去西岭雪山玩两天",
+          "judge_failed": false
+        },
+        {
+          "qid": 18,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[4]和[1]分别提供拼装时长和摆放位置，与答案一致。",
+          "hits_n": 5,
+          "top1": "用户拼完的 21318 树屋现在摆在电视柜上",
+          "judge_failed": false
+        },
+        {
+          "qid": 19,
+          "type": "normal",
+          "correct": 0,
+          "misled": 1,
+          "reason": "记忆只说过敏和爱吃辣，无微辣刚好信息，且爱吃辣可能误导",
+          "hits_n": 5,
+          "top1": "用户吃太辣第二天会拉肚子",
+          "judge_failed": false
+        },
+        {
+          "qid": 20,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确每周至少读两章，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户每周至少读两章《DDIA》",
+          "judge_failed": false
+        },
+        {
+          "qid": 21,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确说明宽粉是合租室友的猫，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "用户养了一只橘猫叫“宽粉”",
+          "judge_failed": false
+        },
+        {
+          "qid": 22,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确说明是公司外包给用户的项目，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "用户之前说的“蜀味点单”其实是公司外包给用户的项目",
+          "judge_failed": false
+        },
+        {
+          "qid": 23,
+          "type": "normal",
+          "correct": 0,
+          "misled": 1,
+          "reason": "记忆仅说过期租住锦城悦庭，无搬家新信息，会误导",
+          "hits_n": 5,
+          "top1": "用户租住在成都高新区中和街道一个叫“锦城悦庭”的小区",
+          "judge_failed": false
+        },
+        {
+          "qid": 24,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][4]明确提到搏击操，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "用户今晚去熊猫健身上搏击操",
+          "judge_failed": false
+        },
+        {
+          "qid": 25,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确表妹今年高三，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户的表妹今年高三",
+          "judge_failed": false
+        },
+        {
+          "qid": 26,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出成都双流抱回，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户真正自己养的是一只上个月从成都双流抱回来的柯基，叫“锅盔”，现在三个月大",
+          "judge_failed": false
+        },
+        {
+          "qid": 27,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2][4]明确给出1658元，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户每月需要还 MacBook Pro 的分期款",
+          "judge_failed": false
+        },
+        {
+          "qid": 28,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆明确教练叫阿豪，无冲突信息",
+          "hits_n": 5,
+          "top1": "希望到时候别下大雨，不然我花那么多钱订酒店就纯纯泡温泉了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 29,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]与标准答案一致，无冲突信息。",
+          "hits_n": 5,
+          "top1": "希望到时候别下大雨，不然我花那么多钱订酒店就纯纯泡温泉了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 30,
+          "type": "paraphrase",
+          "correct": 0,
+          "misled": 1,
+          "reason": "记忆只提柯基锅盔，无猫粮猫砂花费，标准答案缺失",
+          "hits_n": 5,
+          "top1": "希望到时候别下大雨，不然我花那么多钱订酒店就纯纯泡温泉了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 31,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2][3]明确提到DDIA第6章分区，与答案一致",
+          "hits_n": 5,
+          "top1": "希望到时候别下大雨，不然我花那么多钱订酒店就纯纯泡温泉了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 32,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[3]明确给出跨年酒店名称，与标准答案一致",
+          "hits_n": 5,
+          "top1": "希望到时候别下大雨，不然我花那么多钱订酒店就纯纯泡温泉了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 33,
+          "type": "correction",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆含锅盔为真养柯基，宽粉为室友猫，信息完整",
+          "hits_n": 5,
+          "top1": "用户养了一只橘猫叫“宽粉”",
+          "judge_failed": false
+        },
+        {
+          "qid": 34,
+          "type": "correction",
+          "correct": 0,
+          "misled": 1,
+          "reason": "记忆只提蜀味点单，无蓉城云仓，会误导",
+          "hits_n": 5,
+          "top1": "希望到时候别下大雨，不然我花那么多钱订酒店就纯纯泡温泉了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 35,
+          "type": "correction",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[3]明确最新住址为桐梓林壹号，旧说法[1]可被时间覆盖",
+          "hits_n": 5,
+          "top1": "用户租住在成都高新区中和街道一个叫“锦城悦庭”的小区",
+          "judge_failed": false
+        },
+        {
+          "qid": 36,
+          "type": "correction",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[4]明确柯基叫锅盔，与标准答案一致，无冲突",
+          "hits_n": 5,
+          "top1": "用户有一只叫锅盔的宠物",
+          "judge_failed": false
+        },
+        {
+          "qid": 37,
+          "type": "noise",
+          "correct": 0,
+          "misled": 0,
+          "reason": "记忆无猫粮猫砂花费信息，无法回答",
+          "hits_n": 5,
+          "top1": "用户养了一只橘猫叫“宽粉”",
+          "judge_failed": false
+        },
+        {
+          "qid": 38,
+          "type": "noise",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出300 QPS死锁，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户压测到 300 QPS 就报死锁",
+          "judge_failed": false
+        },
+        {
+          "qid": 39,
+          "type": "noise",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[3][4]明确阳台朝南且下午晒太阳舒服，与答案一致。",
+          "hits_n": 5,
+          "top1": "用户租住在成都高新区中和街道一个叫“锦城悦庭”的小区",
+          "judge_failed": false
+        },
+        {
+          "qid": 40,
+          "type": "noise",
+          "correct": 0,
+          "misled": 1,
+          "reason": "记忆误将宽粉领养信息关联锅盔，无柯基花费信息",
+          "hits_n": 5,
+          "top1": "用户真正自己养的是一只上个月从成都双流抱回来的柯基，叫“锅盔”，现在三个月大",
+          "judge_failed": false
+        }
+      ]
+    },
+    "sme_minimal": {
+      "status": "ok",
+      "error": null,
+      "reinit_s": 11.4,
+      "add_total_s": 31.1,
+      "add_p50_ms": 453.8,
+      "score": 35.0,
+      "acc": 0.875,
+      "misled": 2,
+      "storage": 60,
+      "retrieval_p50_ms": 308.2,
+      "quiz_total_s": 104.5,
+      "total_s": 147.0,
+      "details": [
+        {
+          "qid": 1,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[3]明确最新说法为蓉城云仓，新旧并存但正确信息在场",
+          "hits_n": 5,
+          "top1": "我最近在做一个叫“蜀味点单”的后端项目，用 Spring Boot 写的，上周三刚把支付回调接口联调通过，现在卡在并发下单那块。",
+          "judge_failed": false
+        },
+        {
+          "qid": 2,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]完整包含配置、价格、分期信息，与标准答案一致",
+          "hits_n": 5,
+          "top1": "双十一我咬咬牙在京东买了台 16 英寸 MacBook Pro，M4 Pro 芯片 24G 内存，花了一万九千九，分了 12 期免息，现在每个月要还 1658 ",
+          "judge_failed": false
+        },
+        {
+          "qid": 3,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出周二周四、熊猫健身、搏击操，与答案一致",
+          "hits_n": 5,
+          "top1": "我最近每周二和周四晚上八点都会去小区旁边那个“熊猫健身”上团课，主要是练搏击操，一节课 45 分钟，教练叫阿豪，已经坚持三周了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 4,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出绵阳中学和年级第87名，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "我表妹今年高三，在绵阳中学读书，上个月月考考了年级第 87 名，她妈也就是我小姨，天天在家族群里发她的成绩单。",
+          "judge_failed": false
+        },
+        {
+          "qid": 5,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确给出最新住址和月租，与标准答案一致",
+          "hits_n": 5,
+          "top1": "我租在成都高新区中和街道一个叫“锦城悦庭”的小区，12 楼，一室一厅，月租 2300，阳台朝南，下午太阳晒进来特别舒服。",
+          "judge_failed": false
+        },
+        {
+          "qid": 6,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出12月底前看完、现看到第6章分区，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "我打算在 12 月底之前把《DDIA》也就是《数据密集型应用系统设计》那本书啃完，现在看到第 6 章分区那块，每周至少读两章。",
+          "judge_failed": false
+        },
+        {
+          "qid": 7,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出酒店和上山时间，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "元旦我准备去西岭雪山玩两天，已经订了 12 月 31 号晚上山脚下的“花水湾第一村温泉酒店”，打算 1 月 1 号一早坐索道上山看雪。",
+          "judge_failed": false
+        },
+        {
+          "qid": 8,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确纠正并给出最新宠物柯基锅盔，与标准答案一致",
+          "hits_n": 5,
+          "top1": "哦对，我得纠正一下，其实“宽粉”是我合租室友的猫，我真正自己养的是上个月从成都双流那边抱回来的一只柯基，叫“锅盔”，现在三个月大。",
+          "judge_failed": false
+        },
+        {
+          "qid": 9,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出21318树屋和3036块零件，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "我最近迷上了拼乐高，上个月刚拼完那个 21318 树屋，有 3036 块零件，拼了整整三个周末，现在摆在电视柜上。",
+          "judge_failed": false
+        },
+        {
+          "qid": 10,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出每周至少三次、必点兔头加脑花",
+          "hits_n": 5,
+          "top1": "我特别爱吃辣，每周至少点三次“冒椒火辣”的外卖，必点兔头加脑花，微辣对我来说刚刚好，太辣第二天会拉肚子。",
+          "judge_failed": false
+        },
+        {
+          "qid": 11,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确蓉城云仓用Go重写，与标准答案一致",
+          "hits_n": 5,
+          "top1": "我之前说的“蜀味点单”其实是公司外包给我们的项目，我真正自己负责的是另一个叫“蓉城云仓”的库存系统，用 Go 重写的。",
+          "judge_failed": false
+        },
+        {
+          "qid": 12,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确锅盔是柯基且三个月大，信息一致。",
+          "hits_n": 5,
+          "top1": "哦对，我得纠正一下，其实“宽粉”是我合租室友的猫，我真正自己养的是上个月从成都双流那边抱回来的一只柯基，叫“锅盔”，现在三个月大。",
+          "judge_failed": false
+        },
+        {
+          "qid": 13,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出最新住址和房租，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "我上个月底已经搬到武侯区火车南站那边的“桐梓林壹号”了，跟人合租，我住主卧带独卫，月租 1900。",
+          "judge_failed": false
+        },
+        {
+          "qid": 14,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确教练阿豪、45分钟，无冲突信息",
+          "hits_n": 5,
+          "top1": "我最近每周二和周四晚上八点都会去小区旁边那个“熊猫健身”上团课，主要是练搏击操，一节课 45 分钟，教练叫阿豪，已经坚持三周了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 15,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确表妹妈妈是小姨，天天发成绩单，与答案一致。",
+          "hits_n": 5,
+          "top1": "我表妹今年高三，在绵阳中学读书，上个月月考考了年级第 87 名，她妈也就是我小姨，天天在家族群里发她的成绩单。",
+          "judge_failed": false
+        },
+        {
+          "qid": 16,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确12期免息、每月1658元，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "双十一我咬咬牙在京东买了台 16 英寸 MacBook Pro，M4 Pro 芯片 24G 内存，花了一万九千九，分了 12 期免息，现在每个月要还 1658 ",
+          "judge_failed": false
+        },
+        {
+          "qid": 17,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确说玩两天，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "不过想到元旦要去西岭雪山，又觉得还能再撑一撑。",
+          "judge_failed": false
+        },
+        {
+          "qid": 18,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出三个周末和电视柜，与答案一致。",
+          "hits_n": 5,
+          "top1": "我最近迷上了拼乐高，上个月刚拼完那个 21318 树屋，有 3036 块零件，拼了整整三个周末，现在摆在电视柜上。",
+          "judge_failed": false
+        },
+        {
+          "qid": 19,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确微辣刚好、太辣拉肚子，与标准答案一致",
+          "hits_n": 5,
+          "top1": "我特别爱吃辣，每周至少点三次“冒椒火辣”的外卖，必点兔头加脑花，微辣对我来说刚刚好，太辣第二天会拉肚子。",
+          "judge_failed": false
+        },
+        {
+          "qid": 20,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确提到每周至少读两章，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "我打算在 12 月底之前把《DDIA》也就是《数据密集型应用系统设计》那本书啃完，现在看到第 6 章分区那块，每周至少读两章。",
+          "judge_failed": false
+        },
+        {
+          "qid": 21,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确纠正宽粉是室友的猫，最新说法清晰。",
+          "hits_n": 5,
+          "top1": "我养了一只橘猫叫“宽粉”，是我今年 3 月在闲鱼上领养的，现在差不多一岁半，已经绝育了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 22,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确说明蜀味点单是公司外包项目，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "我之前说的“蜀味点单”其实是公司外包给我们的项目，我真正自己负责的是另一个叫“蓉城云仓”的库存系统，用 Go 重写的。",
+          "judge_failed": false
+        },
+        {
+          "qid": 23,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[3]明确已搬至桐梓林壹号，最新说法在场",
+          "hits_n": 5,
+          "top1": "我租在成都高新区中和街道一个叫“锦城悦庭”的小区，12 楼，一室一厅，月租 2300，阳台朝南，下午太阳晒进来特别舒服。",
+          "judge_failed": false
+        },
+        {
+          "qid": 24,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][2]均明确提到在熊猫健身上搏击操",
+          "hits_n": 5,
+          "top1": "我最近每周二和周四晚上八点都会去小区旁边那个“熊猫健身”上团课，主要是练搏击操，一节课 45 分钟，教练叫阿豪，已经坚持三周了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 25,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确表妹今年高三，无冲突信息",
+          "hits_n": 5,
+          "top1": "我表妹今年高三，在绵阳中学读书，上个月月考考了年级第 87 名，她妈也就是我小姨，天天在家族群里发她的成绩单。",
+          "judge_failed": false
+        },
+        {
+          "qid": 26,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确提到柯基从成都双流抱回，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "哦对，我得纠正一下，其实“宽粉”是我合租室友的猫，我真正自己养的是上个月从成都双流那边抱回来的一只柯基，叫“锅盔”，现在三个月大。",
+          "judge_failed": false
+        },
+        {
+          "qid": 27,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确每月还1658块，与标准答案一致",
+          "hits_n": 5,
+          "top1": "MacBook Pro 现在用着是真的香，屏幕和续航都顶，就是每个月还款短信也很顶。",
+          "judge_failed": false
+        },
+        {
+          "qid": 28,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确教练叫阿豪，无冲突信息。",
+          "hits_n": 5,
+          "top1": "我最近每周二和周四晚上八点都会去小区旁边那个“熊猫健身”上团课，主要是练搏击操，一节课 45 分钟，教练叫阿豪，已经坚持三周了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 29,
+          "type": "paraphrase",
+          "correct": 0,
+          "misled": 0,
+          "reason": "记忆无房间光线信息，无法回答",
+          "hits_n": 5,
+          "top1": "下午同事还问我是不是刚从火锅店回来，我说对，工位就是我的火锅店。",
+          "judge_failed": false
+        },
+        {
+          "qid": 30,
+          "type": "paraphrase",
+          "correct": 0,
+          "misled": 1,
+          "reason": "记忆无花费信息，且宠物已从猫更正为柯基，会带偏",
+          "hits_n": 5,
+          "top1": "我养了一只橘猫叫“宽粉”，是我今年 3 月在闲鱼上领养的，现在差不多一岁半，已经绝育了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 31,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][3]均明确提到看到第6章分区，信息一致无冲突。",
+          "hits_n": 5,
+          "top1": "我打算在 12 月底之前把《DDIA》也就是《数据密集型应用系统设计》那本书啃完，现在看到第 6 章分区那块，每周至少读两章。",
+          "judge_failed": false
+        },
+        {
+          "qid": 32,
+          "type": "paraphrase",
+          "correct": 0,
+          "misled": 0,
+          "reason": "记忆未提及跨年住宿酒店名称，无相关信息",
+          "hits_n": 5,
+          "top1": "我上个月底已经搬到武侯区火车南站那边的“桐梓林壹号”了，跟人合租，我住主卧带独卫，月租 1900。",
+          "judge_failed": false
+        },
+        {
+          "qid": 33,
+          "type": "correction",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确纠正猫是室友的，自己养的是柯基锅盔，与标准答案一致",
+          "hits_n": 5,
+          "top1": "我养了一只橘猫叫“宽粉”，是我今年 3 月在闲鱼上领养的，现在差不多一岁半，已经绝育了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 34,
+          "type": "correction",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确说明真正负责的是蓉城云仓，与标准答案一致",
+          "hits_n": 5,
+          "top1": "我最近在做一个叫“蜀味点单”的后端项目，用 Spring Boot 写的，上周三刚把支付回调接口联调通过，现在卡在并发下单那块。",
+          "judge_failed": false
+        },
+        {
+          "qid": 35,
+          "type": "correction",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确给出最新小区桐梓林壹号，旧信息虽在但最新说法清晰。",
+          "hits_n": 5,
+          "top1": "我租在成都高新区中和街道一个叫“锦城悦庭”的小区，12 楼，一室一厅，月租 2300，阳台朝南，下午太阳晒进来特别舒服。",
+          "judge_failed": false
+        },
+        {
+          "qid": 36,
+          "type": "correction",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确纠正：宽粉是室友的猫，自己养的是柯基锅盔",
+          "hits_n": 5,
+          "top1": "我有时候觉得，养宠物的意义就是家里永远有个活物比你还理直气壮。",
+          "judge_failed": false
+        },
+        {
+          "qid": 37,
+          "type": "noise",
+          "correct": 0,
+          "misled": 0,
+          "reason": "记忆无猫粮猫砂花费信息，无法作答",
+          "hits_n": 5,
+          "top1": "哦对，我得纠正一下，其实“宽粉”是我合租室友的猫，我真正自己养的是上个月从成都双流那边抱回来的一只柯基，叫“锅盔”，现在三个月大。",
+          "judge_failed": false
+        },
+        {
+          "qid": 38,
+          "type": "noise",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确300 QPS报死锁，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "压测到 300 QPS 就报死锁，我真是服了，日志翻了一下午人都麻了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 39,
+          "type": "noise",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确阳台朝南，下午太阳晒进来舒服，与答案一致。",
+          "hits_n": 5,
+          "top1": "我租在成都高新区中和街道一个叫“锦城悦庭”的小区，12 楼，一室一厅，月租 2300，阳台朝南，下午太阳晒进来特别舒服。",
+          "judge_failed": false
+        },
+        {
+          "qid": 40,
+          "type": "noise",
+          "correct": 0,
+          "misled": 1,
+          "reason": "记忆称宽粉是闲鱼领养的猫，锅盔是成都抱回的柯基，无闲鱼花费信息",
+          "hits_n": 5,
+          "top1": "我养了一只橘猫叫“宽粉”，是我今年 3 月在闲鱼上领养的，现在差不多一岁半，已经绝育了。",
+          "judge_failed": false
+        }
+      ]
+    },
+    "mem0": {
+      "status": "ok",
+      "error": null,
+      "reinit_s": 17.0,
+      "add_total_s": 306.0,
+      "add_p50_ms": 4233.6,
+      "score": 35.0,
+      "acc": 0.875,
+      "misled": 0,
+      "storage": 20,
+      "retrieval_p50_ms": 286.2,
+      "quiz_total_s": 114.2,
+      "total_s": 437.2,
+      "details": [
+        {
+          "qid": 1,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确给出最新说法：真正负责的是蓉城云仓",
+          "hits_n": 5,
+          "top1": "User is working on a backend project called \"蜀味点单\" (Shuwei Ordering) written wit",
+          "judge_failed": false
+        },
+        {
+          "qid": 2,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]完整给出配置、价格与分期信息，与标准答案一致",
+          "hits_n": 5,
+          "top1": "User bought a 16-inch MacBook Pro (M4 Pro chip, 24GB RAM) on JD.com during Doubl",
+          "judge_failed": false
+        },
+        {
+          "qid": 3,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出周二周四晚8点、搏击操、45分钟、阿豪、三周",
+          "hits_n": 5,
+          "top1": "As of September 28, 2026, the user has been attending 45-minute boxing aerobics ",
+          "judge_failed": false
+        },
+        {
+          "qid": 4,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确表妹在绵阳中学，年级第87名，与答案一致",
+          "hits_n": 5,
+          "top1": "User's younger cousin (表妹), who is the daughter of the user's maternal aunt (小姨)",
+          "judge_failed": false
+        },
+        {
+          "qid": 5,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确给出最新住址桐梓林壹号、合租主卧1900元",
+          "hits_n": 5,
+          "top1": "User rents a one-bedroom, one-living-room apartment on the 12th floor of a compl",
+          "judge_failed": false
+        },
+        {
+          "qid": 6,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆含12月底前读完、每周两章、第6章分区，信息一致",
+          "hits_n": 5,
+          "top1": "User plans to finish reading 《DDIA》(《数据密集型应用系统设计》, Designing Data-Intensive Appl",
+          "judge_failed": false
+        },
+        {
+          "qid": 7,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确含酒店名和1月1日坐索道上山，与答案一致",
+          "hits_n": 5,
+          "top1": "User hopes it won't rain heavily during their New Year trip to 西岭雪山 (hotel booke",
+          "judge_failed": false
+        },
+        {
+          "qid": 8,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆明确柯基锅盔是用户自己的宠物，信息一致",
+          "hits_n": 5,
+          "top1": "User's own pet is a corgi named \"锅盔\", which they brought home from the Shuangliu",
+          "judge_failed": false
+        },
+        {
+          "qid": 9,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[4]明确给出21318树屋3036块，与标准答案一致",
+          "hits_n": 5,
+          "top1": "As of September 2026, the user has recently gotten into building LEGO sets as a ",
+          "judge_failed": false
+        },
+        {
+          "qid": 10,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确每周至少三次、必点兔头加脑花、微辣刚好",
+          "hits_n": 5,
+          "top1": "User loves spicy food and orders takeout from \"冒椒火辣\" at least three times a week",
+          "judge_failed": false
+        },
+        {
+          "qid": 11,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确蓉城云仓用Go重写，与答案一致",
+          "hits_n": 5,
+          "top1": "As of September 28, 2026, the user finds Go pleasant and satisfying to write, bu",
+          "judge_failed": false
+        },
+        {
+          "qid": 12,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确名字锅盔、三个月大，与标准答案一致",
+          "hits_n": 5,
+          "top1": "User's own pet is a corgi named \"锅盔\", which they brought home from the Shuangliu",
+          "judge_failed": false
+        },
+        {
+          "qid": 13,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确给出桐梓林壹号、合租主卧独卫、1900元",
+          "hits_n": 5,
+          "top1": "User rents a one-bedroom, one-living-room apartment on the 12th floor of a compl",
+          "judge_failed": false
+        },
+        {
+          "qid": 14,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确教练阿豪、45分钟，无冲突信息",
+          "hits_n": 5,
+          "top1": "As of September 28, 2026, the user has been attending 45-minute boxing aerobics ",
+          "judge_failed": false
+        },
+        {
+          "qid": 15,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆明确小姨是表妹母亲，且天天在群里发成绩单",
+          "hits_n": 5,
+          "top1": "User's maternal aunt (小姨) constantly posts the user's cousin's exam score report",
+          "judge_failed": false
+        },
+        {
+          "qid": 16,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确12期免息、每月1658元，与标准答案一致",
+          "hits_n": 5,
+          "top1": "User bought a 16-inch MacBook Pro (M4 Pro chip, 24GB RAM) on JD.com during Doubl",
+          "judge_failed": false
+        },
+        {
+          "qid": 17,
+          "type": "normal",
+          "correct": 0,
+          "misled": 0,
+          "reason": "记忆未提及游玩天数，无法判断两天",
+          "hits_n": 5,
+          "top1": "As of September 28, 2026, the user takes comfort in the upcoming New Year trip t",
+          "judge_failed": false
+        },
+        {
+          "qid": 18,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出三个周末和电视柜，与答案一致",
+          "hits_n": 5,
+          "top1": "The user finished the LEGO 21318 Tree House set (3036 pieces) in August 2026, sp",
+          "judge_failed": false
+        },
+        {
+          "qid": 19,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆明确微辣刚好，太辣会拉肚子，与标准答案一致",
+          "hits_n": 5,
+          "top1": "User avoids very spicy food because eating too much spice gives them diarrhea th",
+          "judge_failed": false
+        },
+        {
+          "qid": 20,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确每周至少读两章，与标准答案一致",
+          "hits_n": 5,
+          "top1": "User plans to finish reading 《DDIA》(《数据密集型应用系统设计》, Designing Data-Intensive Appl",
+          "judge_failed": false
+        },
+        {
+          "qid": 21,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确宽粉是室友的猫，最新说法在场",
+          "hits_n": 5,
+          "top1": "User corrected on September 28, 2026 that the orange cat 宽粉 is actually their ro",
+          "judge_failed": false
+        },
+        {
+          "qid": 22,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确说明是公司外包项目，最新说法在场",
+          "hits_n": 5,
+          "top1": "On September 28, 2026, the user clarified that \"蜀味点单\" (Shuwei Ordering, the Spri",
+          "judge_failed": false
+        },
+        {
+          "qid": 23,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确已搬至桐梓林壹号，替代锦城悦庭，信息一致",
+          "hits_n": 5,
+          "top1": "User rents a one-bedroom, one-living-room apartment on the 12th floor of a compl",
+          "judge_failed": false
+        },
+        {
+          "qid": 24,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆明确提到在熊猫健身练搏击操，信息一致无冲突",
+          "hits_n": 5,
+          "top1": "As of September 28, 2026, the user has been attending 45-minute boxing aerobics ",
+          "judge_failed": false
+        },
+        {
+          "qid": 25,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确表妹高三，信息一致无冲突",
+          "hits_n": 5,
+          "top1": "User's younger cousin (表妹), who is the daughter of the user's maternal aunt (小姨)",
+          "judge_failed": false
+        },
+        {
+          "qid": 26,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确提到从成都双流抱回，与标准答案一致",
+          "hits_n": 5,
+          "top1": "User's own pet is a corgi named \"锅盔\", which they brought home from the Shuangliu",
+          "judge_failed": false
+        },
+        {
+          "qid": 27,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆明确提到每月分期还款1658元，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "On September 28, 2026, the user said they are counting on getting a bonus after ",
+          "judge_failed": false
+        },
+        {
+          "qid": 28,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][3]均明确教练叫阿豪，无冲突信息",
+          "hits_n": 5,
+          "top1": "As of September 28, 2026, the user has been attending 45-minute boxing aerobics ",
+          "judge_failed": false
+        },
+        {
+          "qid": 29,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[3]明确阳台朝南，下午阳光温暖舒适，与答案一致。",
+          "hits_n": 5,
+          "top1": "As of late September 2026, Chengdu has had very little sunshine, and the user is",
+          "judge_failed": false
+        },
+        {
+          "qid": 30,
+          "type": "paraphrase",
+          "correct": 0,
+          "misled": 0,
+          "reason": "记忆只提狗，无猫粮猫砂花费信息",
+          "hits_n": 5,
+          "top1": "User's own pet is a corgi named \"锅盔\", which they brought home from the Shuangliu",
+          "judge_failed": false
+        },
+        {
+          "qid": 31,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[5]明确提到读到第6章分区，与标准答案一致",
+          "hits_n": 5,
+          "top1": "As of September 28, 2026, the user believes dense, hard books like 《DDIA》(《数据密集型",
+          "judge_failed": false
+        },
+        {
+          "qid": 32,
+          "type": "paraphrase",
+          "correct": 0,
+          "misled": 0,
+          "reason": "记忆无跨年住宿信息，无法判断",
+          "hits_n": 5,
+          "top1": "User moved at the end of August 2026 to \"桐梓林壹号\" near 火车南站 in Chengdu's Wuhou Dis",
+          "judge_failed": false
+        },
+        {
+          "qid": 33,
+          "type": "correction",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[3][4]明确宽粉是室友的猫，自己养的是柯基锅盔",
+          "hits_n": 5,
+          "top1": "On September 28, 2026, the orange cat 宽粉 was lounging on the roommate's bed whil",
+          "judge_failed": false
+        },
+        {
+          "qid": 34,
+          "type": "correction",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确给出最新说法：真正负责的是蓉城云仓",
+          "hits_n": 5,
+          "top1": "User is working on a backend project called \"蜀味点单\" (Shuwei Ordering) written wit",
+          "judge_failed": false
+        },
+        {
+          "qid": 35,
+          "type": "correction",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确最新租住桐梓林壹号，旧信息被标注替换",
+          "hits_n": 5,
+          "top1": "User rents a one-bedroom, one-living-room apartment on the 12th floor of a compl",
+          "judge_failed": false
+        },
+        {
+          "qid": 36,
+          "type": "correction",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆明确锅盔是柯基，宽粉是室友的猫，信息一致",
+          "hits_n": 5,
+          "top1": "On September 28, 2026, the orange cat 宽粉 was lounging on the roommate's bed whil",
+          "judge_failed": false
+        },
+        {
+          "qid": 37,
+          "type": "noise",
+          "correct": 0,
+          "misled": 0,
+          "reason": "记忆无猫粮猫砂花费信息，无法回答",
+          "hits_n": 5,
+          "top1": "User has an orange cat (橘猫) named \"宽粉\", which they adopted in March 2026 through",
+          "judge_failed": false
+        },
+        {
+          "qid": 38,
+          "type": "noise",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确提到300 QPS报死锁，与标准答案一致",
+          "hits_n": 5,
+          "top1": "While stress-testing the \"蜀味点单\" project, the user hit deadlock errors once load ",
+          "judge_failed": false
+        },
+        {
+          "qid": 39,
+          "type": "noise",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确阳台朝南，下午阳光温暖，与答案一致。",
+          "hits_n": 5,
+          "top1": "User rents a one-bedroom, one-living-room apartment on the 12th floor of a compl",
+          "judge_failed": false
+        },
+        {
+          "qid": 40,
+          "type": "noise",
+          "correct": 0,
+          "misled": 0,
+          "reason": "记忆无领养价格，标准答案也未提价格，仅澄清锅盔非闲鱼领养",
+          "hits_n": 5,
+          "top1": "User's own pet is a corgi named \"锅盔\", which they brought home from the Shuangliu",
+          "judge_failed": false
+        }
+      ]
+    },
+    "rag_qwen3": {
+      "status": "ok",
+      "error": null,
+      "reinit_s": 20.0,
+      "add_total_s": 30.7,
+      "add_p50_ms": 454.5,
+      "score": 36.0,
+      "acc": 0.9,
+      "misled": 1,
+      "storage": 60,
+      "retrieval_p50_ms": 277.1,
+      "quiz_total_s": 120.0,
+      "total_s": 170.7,
+      "details": [
+        {
+          "qid": 1,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确说明真正负责的是蓉城云仓，与标准答案一致",
+          "hits_n": 5,
+          "top1": "我之前说的“蜀味点单”其实是公司外包给我们的项目，我真正自己负责的是另一个叫“蓉城云仓”的库存系统，用 Go 重写的。",
+          "judge_failed": false
+        },
+        {
+          "qid": 2,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]完整给出配置、价格、分期信息，与标准答案一致",
+          "hits_n": 5,
+          "top1": "双十一我咬咬牙在京东买了台 16 英寸 MacBook Pro，M4 Pro 芯片 24G 内存，花了一万九千九，分了 12 期免息，现在每个月要还 1658 ",
+          "judge_failed": false
+        },
+        {
+          "qid": 3,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出周二周四晚八点、熊猫健身、搏击操",
+          "hits_n": 5,
+          "top1": "我最近每周二和周四晚上八点都会去小区旁边那个“熊猫健身”上团课，主要是练搏击操，一节课 45 分钟，教练叫阿豪，已经坚持三周了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 4,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出绵阳中学和年级第87名，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "我表妹今年高三，在绵阳中学读书，上个月月考考了年级第 87 名，她妈也就是我小姨，天天在家族群里发她的成绩单。",
+          "judge_failed": false
+        },
+        {
+          "qid": 5,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确给出最新住址和月租，与标准答案一致",
+          "hits_n": 5,
+          "top1": "我租在成都高新区中和街道一个叫“锦城悦庭”的小区，12 楼，一室一厅，月租 2300，阳台朝南，下午太阳晒进来特别舒服。",
+          "judge_failed": false
+        },
+        {
+          "qid": 6,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]完整包含12月底前看完及第6章分区信息",
+          "hits_n": 5,
+          "top1": "《DDIA》看到分区那章，感觉作者是真想把每个细节都塞我脑子里。",
+          "judge_failed": false
+        },
+        {
+          "qid": 7,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出酒店和上山时间，与标准答案一致",
+          "hits_n": 5,
+          "top1": "元旦我准备去西岭雪山玩两天，已经订了 12 月 31 号晚上山脚下的“花水湾第一村温泉酒店”，打算 1 月 1 号一早坐索道上山看雪。",
+          "judge_failed": false
+        },
+        {
+          "qid": 8,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[3]明确给出最新正确信息，旧说法已被纠正。",
+          "hits_n": 5,
+          "top1": "我有时候觉得，养宠物的意义就是家里永远有个活物比你还理直气壮。",
+          "judge_failed": false
+        },
+        {
+          "qid": 9,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出21318树屋和3036块零件，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "我最近迷上了拼乐高，上个月刚拼完那个 21318 树屋，有 3036 块零件，拼了整整三个周末，现在摆在电视柜上。",
+          "judge_failed": false
+        },
+        {
+          "qid": 10,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出每周至少三次、必点兔头加脑花",
+          "hits_n": 5,
+          "top1": "我特别爱吃辣，每周至少点三次“冒椒火辣”的外卖，必点兔头加脑花，微辣对我来说刚刚好，太辣第二天会拉肚子。",
+          "judge_failed": false
+        },
+        {
+          "qid": 11,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确给出蓉城云仓和Go重写，无冲突",
+          "hits_n": 5,
+          "top1": "明天还得早起改库存系统的 bug，想想就烦，但也没办法，打工人嘛。",
+          "judge_failed": false
+        },
+        {
+          "qid": 12,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确锅盔是柯基、三个月大，与答案一致",
+          "hits_n": 5,
+          "top1": "哦对，我得纠正一下，其实“宽粉”是我合租室友的猫，我真正自己养的是上个月从成都双流那边抱回来的一只柯基，叫“锅盔”，现在三个月大。",
+          "judge_failed": false
+        },
+        {
+          "qid": 13,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出最新住址和月租1900，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "我上个月底已经搬到武侯区火车南站那边的“桐梓林壹号”了，跟人合租，我住主卧带独卫，月租 1900。",
+          "judge_failed": false
+        },
+        {
+          "qid": 14,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确教练阿豪、45分钟，无冲突信息。",
+          "hits_n": 5,
+          "top1": "我最近每周二和周四晚上八点都会去小区旁边那个“熊猫健身”上团课，主要是练搏击操，一节课 45 分钟，教练叫阿豪，已经坚持三周了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 15,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确表妹妈是小姨，天天发成绩单，与答案一致",
+          "hits_n": 5,
+          "top1": "小姨今天又在家族群发表妹成绩，我回了句“妹妹太强了”，然后赶紧把群免打扰。",
+          "judge_failed": false
+        },
+        {
+          "qid": 16,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确12期免息、每月1658元，与标准答案一致",
+          "hits_n": 5,
+          "top1": "双十一我咬咬牙在京东买了台 16 英寸 MacBook Pro，M4 Pro 芯片 24G 内存，花了一万九千九，分了 12 期免息，现在每个月要还 1658 ",
+          "judge_failed": false
+        },
+        {
+          "qid": 17,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确说玩两天，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "元旦我准备去西岭雪山玩两天，已经订了 12 月 31 号晚上山脚下的“花水湾第一村温泉酒店”，打算 1 月 1 号一早坐索道上山看雪。",
+          "judge_failed": false
+        },
+        {
+          "qid": 18,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出拼了三个周末、摆在电视柜上，与答案一致。",
+          "hits_n": 5,
+          "top1": "我最近迷上了拼乐高，上个月刚拼完那个 21318 树屋，有 3036 块零件，拼了整整三个周末，现在摆在电视柜上。",
+          "judge_failed": false
+        },
+        {
+          "qid": 19,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确微辣刚好、太辣拉肚子，与标准答案一致",
+          "hits_n": 5,
+          "top1": "我特别爱吃辣，每周至少点三次“冒椒火辣”的外卖，必点兔头加脑花，微辣对我来说刚刚好，太辣第二天会拉肚子。",
+          "judge_failed": false
+        },
+        {
+          "qid": 20,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确说每周至少读两章，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "《DDIA》看到分区那章，感觉作者是真想把每个细节都塞我脑子里。",
+          "judge_failed": false
+        },
+        {
+          "qid": 21,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确纠正宽粉是室友的猫，信息在场",
+          "hits_n": 5,
+          "top1": "哦对，我得纠正一下，其实“宽粉”是我合租室友的猫，我真正自己养的是上个月从成都双流那边抱回来的一只柯基，叫“锅盔”，现在三个月大。",
+          "judge_failed": false
+        },
+        {
+          "qid": 22,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确说明蜀味点单是公司外包项目，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "我之前说的“蜀味点单”其实是公司外包给我们的项目，我真正自己负责的是另一个叫“蓉城云仓”的库存系统，用 Go 重写的。",
+          "judge_failed": false
+        },
+        {
+          "qid": 23,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确说明已搬至桐梓林壹号，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "我租在成都高新区中和街道一个叫“锦城悦庭”的小区，12 楼，一室一厅，月租 2300，阳台朝南，下午太阳晒进来特别舒服。",
+          "judge_failed": false
+        },
+        {
+          "qid": 24,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆明确提到在熊猫健身上搏击操",
+          "hits_n": 5,
+          "top1": "我最近每周二和周四晚上八点都会去小区旁边那个“熊猫健身”上团课，主要是练搏击操，一节课 45 分钟，教练叫阿豪，已经坚持三周了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 25,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确表妹今年高三，无冲突信息。",
+          "hits_n": 5,
+          "top1": "我表妹今年高三，在绵阳中学读书，上个月月考考了年级第 87 名，她妈也就是我小姨，天天在家族群里发她的成绩单。",
+          "judge_failed": false
+        },
+        {
+          "qid": 26,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出柯基从成都双流抱回，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "哦对，我得纠正一下，其实“宽粉”是我合租室友的猫，我真正自己养的是上个月从成都双流那边抱回来的一只柯基，叫“锅盔”，现在三个月大。",
+          "judge_failed": false
+        },
+        {
+          "qid": 27,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[3]明确每月还1658块，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "买完那一刻很爽，看到还款日那一刻就想把自己手剁了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 28,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1][3]均明确教练叫阿豪，无冲突信息。",
+          "hits_n": 5,
+          "top1": "我最近每周二和周四晚上八点都会去小区旁边那个“熊猫健身”上团课，主要是练搏击操，一节课 45 分钟，教练叫阿豪，已经坚持三周了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 29,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[5]明确阳台朝南下午太阳晒进来舒服，与答案一致。",
+          "hits_n": 5,
+          "top1": "下午同事还问我是不是刚从火锅店回来，我说对，工位就是我的火锅店。",
+          "judge_failed": false
+        },
+        {
+          "qid": 30,
+          "type": "paraphrase",
+          "correct": 0,
+          "misled": 0,
+          "reason": "记忆未提及每月花费260元，无相关信息",
+          "hits_n": 5,
+          "top1": "我有时候觉得，养宠物的意义就是家里永远有个活物比你还理直气壮。",
+          "judge_failed": false
+        },
+        {
+          "qid": 31,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[3]明确说看到第6章分区，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "但我又觉得这种硬书就得慢慢啃，跟锅盔啃骨头一样，急不得。",
+          "judge_failed": false
+        },
+        {
+          "qid": 32,
+          "type": "paraphrase",
+          "correct": 0,
+          "misled": 0,
+          "reason": "记忆未提及花水湾第一村温泉酒店，仅提西岭雪山和订酒店。",
+          "hits_n": 5,
+          "top1": "下午同事还问我是不是刚从火锅店回来，我说对，工位就是我的火锅店。",
+          "judge_failed": false
+        },
+        {
+          "qid": 33,
+          "type": "correction",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确纠正猫是室友的，自己养的是柯基锅盔",
+          "hits_n": 5,
+          "top1": "我养了一只橘猫叫“宽粉”，是我今年 3 月在闲鱼上领养的，现在差不多一岁半，已经绝育了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 34,
+          "type": "correction",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确说明真正负责的是蓉城云仓，与标准答案一致",
+          "hits_n": 5,
+          "top1": "我之前说的“蜀味点单”其实是公司外包给我们的项目，我真正自己负责的是另一个叫“蓉城云仓”的库存系统，用 Go 重写的。",
+          "judge_failed": false
+        },
+        {
+          "qid": 35,
+          "type": "correction",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[3]明确给出最新住址桐梓林壹号，旧信息虽在但最新说法清晰。",
+          "hits_n": 5,
+          "top1": "我租在成都高新区中和街道一个叫“锦城悦庭”的小区，12 楼，一室一厅，月租 2300，阳台朝南，下午太阳晒进来特别舒服。",
+          "judge_failed": false
+        },
+        {
+          "qid": 36,
+          "type": "correction",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确纠正：宽粉是室友的猫，自己养的是柯基锅盔",
+          "hits_n": 5,
+          "top1": "哦对，我得纠正一下，其实“宽粉”是我合租室友的猫，我真正自己养的是上个月从成都双流那边抱回来的一只柯基，叫“锅盔”，现在三个月大。",
+          "judge_failed": false
+        },
+        {
+          "qid": 37,
+          "type": "noise",
+          "correct": 0,
+          "misled": 0,
+          "reason": "记忆无猫粮猫砂花费信息，无法回答",
+          "hits_n": 5,
+          "top1": "哦对，我得纠正一下，其实“宽粉”是我合租室友的猫，我真正自己养的是上个月从成都双流那边抱回来的一只柯基，叫“锅盔”，现在三个月大。",
+          "judge_failed": false
+        },
+        {
+          "qid": 38,
+          "type": "noise",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确提到300 QPS报死锁，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "压测到 300 QPS 就报死锁，我真是服了，日志翻了一下午人都麻了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 39,
+          "type": "noise",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确阳台朝南，下午太阳晒进来舒服，与答案一致。",
+          "hits_n": 5,
+          "top1": "我租在成都高新区中和街道一个叫“锦城悦庭”的小区，12 楼，一室一厅，月租 2300，阳台朝南，下午太阳晒进来特别舒服。",
+          "judge_failed": false
+        },
+        {
+          "qid": 40,
+          "type": "noise",
+          "correct": 0,
+          "misled": 1,
+          "reason": "记忆只提宽粉闲鱼领养，锅盔是成都抱回，无领养花费信息",
+          "hits_n": 5,
+          "top1": "锅盔小得很，一天到晚咬我拖鞋，我怀疑它上辈子是个拆迁队。",
+          "judge_failed": false
+        }
+      ]
+    },
+    "bm25_bigram": {
+      "status": "ok",
+      "error": null,
+      "reinit_s": 0.0,
+      "add_total_s": 0.0,
+      "add_p50_ms": 0.0,
+      "score": 34.0,
+      "acc": 0.85,
+      "misled": 3,
+      "storage": 60,
+      "retrieval_p50_ms": 1.0,
+      "quiz_total_s": 119.3,
+      "total_s": 119.3,
+      "details": [
+        {
+          "qid": 1,
+          "type": "normal",
+          "correct": 0,
+          "misled": 1,
+          "reason": "记忆只提蜀味点单，无蓉城云仓，会误导",
+          "hits_n": 5,
+          "top1": "我最近在做一个叫“蜀味点单”的后端项目，用 Spring Boot 写的，上周三刚把支付回调接口联调通过，现在卡在并发下单那块。",
+          "judge_failed": false
+        },
+        {
+          "qid": 2,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]完整给出配置、价格、分期信息，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "双十一我咬咬牙在京东买了台 16 英寸 MacBook Pro，M4 Pro 芯片 24G 内存，花了一万九千九，分了 12 期免息，现在每个月要还 1658 ",
+          "judge_failed": false
+        },
+        {
+          "qid": 3,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出周二周四、熊猫健身、搏击操，与答案一致",
+          "hits_n": 5,
+          "top1": "我最近每周二和周四晚上八点都会去小区旁边那个“熊猫健身”上团课，主要是练搏击操，一节课 45 分钟，教练叫阿豪，已经坚持三周了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 4,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出绵阳中学和年级第87名，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "我表妹今年高三，在绵阳中学读书，上个月月考考了年级第 87 名，她妈也就是我小姨，天天在家族群里发她的成绩单。",
+          "judge_failed": false
+        },
+        {
+          "qid": 5,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确给出最新住址和月租，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "我租在成都高新区中和街道一个叫“锦城悦庭”的小区，12 楼，一室一厅，月租 2300，阳台朝南，下午太阳晒进来特别舒服。",
+          "judge_failed": false
+        },
+        {
+          "qid": 6,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出12月底前看完、看到第6章分区，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "我打算在 12 月底之前把《DDIA》也就是《数据密集型应用系统设计》那本书啃完，现在看到第 6 章分区那块，每周至少读两章。",
+          "judge_failed": false
+        },
+        {
+          "qid": 7,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出酒店和上山时间，与标准答案一致",
+          "hits_n": 5,
+          "top1": "元旦我准备去西岭雪山玩两天，已经订了 12 月 31 号晚上山脚下的“花水湾第一村温泉酒店”，打算 1 月 1 号一早坐索道上山看雪。",
+          "judge_failed": false
+        },
+        {
+          "qid": 8,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确纠正并给出最新宠物柯基锅盔",
+          "hits_n": 5,
+          "top1": "哦对，我得纠正一下，其实“宽粉”是我合租室友的猫，我真正自己养的是上个月从成都双流那边抱回来的一只柯基，叫“锅盔”，现在三个月大。",
+          "judge_failed": false
+        },
+        {
+          "qid": 9,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出21318树屋和3036块零件，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "我最近迷上了拼乐高，上个月刚拼完那个 21318 树屋，有 3036 块零件，拼了整整三个周末，现在摆在电视柜上。",
+          "judge_failed": false
+        },
+        {
+          "qid": 10,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出每周至少三次、必点兔头加脑花",
+          "hits_n": 5,
+          "top1": "我特别爱吃辣，每周至少点三次“冒椒火辣”的外卖，必点兔头加脑花，微辣对我来说刚刚好，太辣第二天会拉肚子。",
+          "judge_failed": false
+        },
+        {
+          "qid": 11,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出蓉城云仓及Go重写，无冲突",
+          "hits_n": 5,
+          "top1": "我之前说的“蜀味点单”其实是公司外包给我们的项目，我真正自己负责的是另一个叫“蓉城云仓”的库存系统，用 Go 重写的。",
+          "judge_failed": false
+        },
+        {
+          "qid": 12,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确柯基叫锅盔、三个月大，与答案一致",
+          "hits_n": 5,
+          "top1": "哦对，我得纠正一下，其实“宽粉”是我合租室友的猫，我真正自己养的是上个月从成都双流那边抱回来的一只柯基，叫“锅盔”，现在三个月大。",
+          "judge_failed": false
+        },
+        {
+          "qid": 13,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出地址和月租1900，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "我上个月底已经搬到武侯区火车南站那边的“桐梓林壹号”了，跟人合租，我住主卧带独卫，月租 1900。",
+          "judge_failed": false
+        },
+        {
+          "qid": 14,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出教练阿豪、每节45分钟，与答案一致。",
+          "hits_n": 5,
+          "top1": "我最近每周二和周四晚上八点都会去小区旁边那个“熊猫健身”上团课，主要是练搏击操，一节课 45 分钟，教练叫阿豪，已经坚持三周了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 15,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确表妹她妈是小姨，天天发成绩单，与答案一致。",
+          "hits_n": 5,
+          "top1": "我表妹今年高三，在绵阳中学读书，上个月月考考了年级第 87 名，她妈也就是我小姨，天天在家族群里发她的成绩单。",
+          "judge_failed": false
+        },
+        {
+          "qid": 16,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确12期免息、每月1658元，与标准答案一致",
+          "hits_n": 5,
+          "top1": "双十一我咬咬牙在京东买了台 16 英寸 MacBook Pro，M4 Pro 芯片 24G 内存，花了一万九千九，分了 12 期免息，现在每个月要还 1658 ",
+          "judge_failed": false
+        },
+        {
+          "qid": 17,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确说玩两天，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "不过想到元旦要去西岭雪山，又觉得还能再撑一撑。",
+          "judge_failed": false
+        },
+        {
+          "qid": 18,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确给出三个周末和电视柜，与答案一致",
+          "hits_n": 5,
+          "top1": "我最近迷上了拼乐高，上个月刚拼完那个 21318 树屋，有 3036 块零件，拼了整整三个周末，现在摆在电视柜上。",
+          "judge_failed": false
+        },
+        {
+          "qid": 19,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确微辣刚好、太辣拉肚子，与标准答案一致",
+          "hits_n": 5,
+          "top1": "我特别爱吃辣，每周至少点三次“冒椒火辣”的外卖，必点兔头加脑花，微辣对我来说刚刚好，太辣第二天会拉肚子。",
+          "judge_failed": false
+        },
+        {
+          "qid": 20,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确说每周至少读两章，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "我打算在 12 月底之前把《DDIA》也就是《数据密集型应用系统设计》那本书啃完，现在看到第 6 章分区那块，每周至少读两章。",
+          "judge_failed": false
+        },
+        {
+          "qid": 21,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[3]明确纠正宽粉是合租室友的猫，最新说法清晰。",
+          "hits_n": 5,
+          "top1": "我养了一只橘猫叫“宽粉”，是我今年 3 月在闲鱼上领养的，现在差不多一岁半，已经绝育了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 22,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确说明是公司外包项目，与标准答案一致",
+          "hits_n": 5,
+          "top1": "我最近在做一个叫“蜀味点单”的后端项目，用 Spring Boot 写的，上周三刚把支付回调接口联调通过，现在卡在并发下单那块。",
+          "judge_failed": false
+        },
+        {
+          "qid": 23,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[4]明确已搬至桐梓林壹号，最新说法清晰在场",
+          "hits_n": 5,
+          "top1": "我租在成都高新区中和街道一个叫“锦城悦庭”的小区，12 楼，一室一厅，月租 2300，阳台朝南，下午太阳晒进来特别舒服。",
+          "judge_failed": false
+        },
+        {
+          "qid": 24,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确说主要练搏击操，无冲突信息。",
+          "hits_n": 5,
+          "top1": "我最近每周二和周四晚上八点都会去小区旁边那个“熊猫健身”上团课，主要是练搏击操，一节课 45 分钟，教练叫阿豪，已经坚持三周了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 25,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确说表妹今年高三，信息一致。",
+          "hits_n": 5,
+          "top1": "我表妹今年高三，在绵阳中学读书，上个月月考考了年级第 87 名，她妈也就是我小姨，天天在家族群里发她的成绩单。",
+          "judge_failed": false
+        },
+        {
+          "qid": 26,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确说柯基从成都双流抱回，与答案一致。",
+          "hits_n": 5,
+          "top1": "哦对，我得纠正一下，其实“宽粉”是我合租室友的猫，我真正自己养的是上个月从成都双流那边抱回来的一只柯基，叫“锅盔”，现在三个月大。",
+          "judge_failed": false
+        },
+        {
+          "qid": 27,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[3]明确每月还1658块，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "MacBook Pro 现在用着是真的香，屏幕和续航都顶，就是每个月还款短信也很顶。",
+          "judge_failed": false
+        },
+        {
+          "qid": 28,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确提到教练叫阿豪，无冲突信息。",
+          "hits_n": 5,
+          "top1": "我最近每周二和周四晚上八点都会去小区旁边那个“熊猫健身”上团课，主要是练搏击操，一节课 45 分钟，教练叫阿豪，已经坚持三周了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 29,
+          "type": "paraphrase",
+          "correct": 0,
+          "misled": 0,
+          "reason": "记忆无朝向或下午光线信息，无法回答",
+          "hits_n": 5,
+          "top1": "我上个月底已经搬到武侯区火车南站那边的“桐梓林壹号”了，跟人合租，我住主卧带独卫，月租 1900。",
+          "judge_failed": false
+        },
+        {
+          "qid": 30,
+          "type": "paraphrase",
+          "correct": 0,
+          "misled": 1,
+          "reason": "记忆无花费信息，且宠物已从猫更正为柯基，会误导",
+          "hits_n": 5,
+          "top1": "我养了一只橘猫叫“宽粉”，是我今年 3 月在闲鱼上领养的，现在差不多一岁半，已经绝育了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 31,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确说看到第6章分区，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "我打算在 12 月底之前把《DDIA》也就是《数据密集型应用系统设计》那本书啃完，现在看到第 6 章分区那块，每周至少读两章。",
+          "judge_failed": false
+        },
+        {
+          "qid": 32,
+          "type": "paraphrase",
+          "correct": 0,
+          "misled": 0,
+          "reason": "记忆未提及跨年住宿酒店名称，无法作答",
+          "hits_n": 5,
+          "top1": "我表妹今年高三，在绵阳中学读书，上个月月考考了年级第 87 名，她妈也就是我小姨，天天在家族群里发她的成绩单。",
+          "judge_failed": false
+        },
+        {
+          "qid": 33,
+          "type": "correction",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确纠正猫是室友的，自己养的是柯基锅盔",
+          "hits_n": 5,
+          "top1": "我养了一只橘猫叫“宽粉”，是我今年 3 月在闲鱼上领养的，现在差不多一岁半，已经绝育了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 34,
+          "type": "correction",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[5]明确给出最新正确项目名蓉城云仓，与标准答案一致",
+          "hits_n": 5,
+          "top1": "我最近在做一个叫“蜀味点单”的后端项目，用 Spring Boot 写的，上周三刚把支付回调接口联调通过，现在卡在并发下单那块。",
+          "judge_failed": false
+        },
+        {
+          "qid": 35,
+          "type": "correction",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[3]明确给出最新住址桐梓林壹号，旧信息可辨",
+          "hits_n": 5,
+          "top1": "我租在成都高新区中和街道一个叫“锦城悦庭”的小区，12 楼，一室一厅，月租 2300，阳台朝南，下午太阳晒进来特别舒服。",
+          "judge_failed": false
+        },
+        {
+          "qid": 36,
+          "type": "correction",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[4]明确纠正：宽粉是室友的猫，自己养的是柯基锅盔",
+          "hits_n": 5,
+          "top1": "我有时候觉得，养宠物的意义就是家里永远有个活物比你还理直气壮。",
+          "judge_failed": false
+        },
+        {
+          "qid": 37,
+          "type": "noise",
+          "correct": 0,
+          "misled": 0,
+          "reason": "记忆无猫粮猫砂花费信息，无法作答",
+          "hits_n": 5,
+          "top1": "哦对，我得纠正一下，其实“宽粉”是我合租室友的猫，我真正自己养的是上个月从成都双流那边抱回来的一只柯基，叫“锅盔”，现在三个月大。",
+          "judge_failed": false
+        },
+        {
+          "qid": 38,
+          "type": "noise",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确提到300 QPS报死锁，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "压测到 300 QPS 就报死锁，我真是服了，日志翻了一下午人都麻了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 39,
+          "type": "noise",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确阳台朝南，下午太阳晒进来舒服，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "我租在成都高新区中和街道一个叫“锦城悦庭”的小区，12 楼，一室一厅，月租 2300，阳台朝南，下午太阳晒进来特别舒服。",
+          "judge_failed": false
+        },
+        {
+          "qid": 40,
+          "type": "noise",
+          "correct": 0,
+          "misled": 1,
+          "reason": "记忆称宽粉是闲鱼领养，锅盔是成都抱回，未提闲鱼花费",
+          "hits_n": 5,
+          "top1": "我养了一只橘猫叫“宽粉”，是我今年 3 月在闲鱼上领养的，现在差不多一岁半，已经绝育了。",
+          "judge_failed": false
+        }
+      ]
+    },
+    "graphiti_kuzu": {
+      "status": "ok",
+      "error": null,
+      "reinit_s": 2.6,
+      "add_total_s": 1076.4,
+      "add_p50_ms": 14836.0,
+      "score": 24.0,
+      "acc": 0.6,
+      "misled": 6,
+      "storage": 60,
+      "retrieval_p50_ms": 443.3,
+      "quiz_total_s": 91.4,
+      "total_s": 1170.4,
+      "details": [
+        {
+          "qid": 1,
+          "type": "normal",
+          "correct": 0,
+          "misled": 1,
+          "reason": "记忆只提蜀味点单，缺蓉城云仓正确信息，会误导",
+          "hits_n": 1,
+          "top1": "用户最近在做名为“蜀味点单”的后端项目。",
+          "judge_failed": false
+        },
+        {
+          "qid": 2,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆含配置、价格、分期等全部标准答案信息，无冲突",
+          "hits_n": 5,
+          "top1": "用户购买的 16 英寸 MacBook Pro 搭载 M4 Pro 芯片和 24G 内存。",
+          "judge_failed": false
+        },
+        {
+          "qid": 3,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆含周二周四、熊猫健身、团课，与标准答案一致",
+          "hits_n": 1,
+          "top1": "用户最近每周二和周四晚上八点都会去小区旁边的“熊猫健身”上团课，每节课45分钟，已经坚持三周了。",
+          "judge_failed": false
+        },
+        {
+          "qid": 4,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆含绵阳中学和年级第87名，与标准答案一致",
+          "hits_n": 5,
+          "top1": "用户表妹上个月（2026年8月）的月考考了年级第87名（在绵阳中学）。",
+          "judge_failed": false
+        },
+        {
+          "qid": 5,
+          "type": "normal",
+          "correct": 0,
+          "misled": 1,
+          "reason": "记忆只有旧地址成都高新区，无武侯区新址，会误导",
+          "hits_n": 1,
+          "top1": "用户在成都高新区中和街道一个叫“锦城悦庭”的小区租房居住，租的是一室一厅，月租 2300，阳台朝南，下午太阳晒进来特别舒服",
+          "judge_failed": false
+        },
+        {
+          "qid": 6,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆含12月底前看完及第6章分区，信息一致无冲突",
+          "hits_n": 5,
+          "top1": "用户打算在12月底之前把《DDIA》啃完。",
+          "judge_failed": false
+        },
+        {
+          "qid": 7,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆含酒店名和上山时间，与答案一致",
+          "hits_n": 4,
+          "top1": "用户计划元旦去西岭雪山玩两天",
+          "judge_failed": false
+        },
+        {
+          "qid": 8,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确柯基叫锅盔三个月大，与标准答案一致",
+          "hits_n": 2,
+          "top1": "用户自己养了一只柯基，名叫锅盔，现在三个月大。",
+          "judge_failed": false
+        },
+        {
+          "qid": 9,
+          "type": "normal",
+          "correct": 0,
+          "misled": 1,
+          "reason": "记忆无树屋及3036块信息，仅有小街景等干扰",
+          "hits_n": 4,
+          "top1": "用户新买的小一点的街景属于乐高",
+          "judge_failed": false
+        },
+        {
+          "qid": 10,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆含每周至少三次、必点兔头脑花及微辣信息，与标准一致",
+          "hits_n": 5,
+          "top1": "用户点“冒椒火辣”外卖时必点脑花。",
+          "judge_failed": false
+        },
+        {
+          "qid": 11,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆明确给出蓉城云仓及Go重写，无冲突",
+          "hits_n": 5,
+          "top1": "用户真正自己负责的是叫“蓉城云仓”的库存系统。",
+          "judge_failed": false
+        },
+        {
+          "qid": 12,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆明确给出名字锅盔和三个月大，与标准答案一致。",
+          "hits_n": 2,
+          "top1": "用户自己养了一只柯基，名叫锅盔，现在三个月大。",
+          "judge_failed": false
+        },
+        {
+          "qid": 13,
+          "type": "normal",
+          "correct": 0,
+          "misled": 0,
+          "reason": "选手未检索到任何记忆",
+          "hits_n": 0,
+          "top1": "",
+          "judge_failed": false
+        },
+        {
+          "qid": 14,
+          "type": "normal",
+          "correct": 0,
+          "misled": 0,
+          "reason": "记忆未提教练姓名，仅课时45分钟正确",
+          "hits_n": 2,
+          "top1": "用户在“熊猫健身”的团课上主要练搏击操，一节课45分钟。",
+          "judge_failed": false
+        },
+        {
+          "qid": 15,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆明确小姨是表妹妈妈且天天发成绩单，与答案一致",
+          "hits_n": 4,
+          "top1": "用户小姨是用户表妹的妈妈。",
+          "judge_failed": false
+        },
+        {
+          "qid": 16,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确含12期免息、每月1658元，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "用户在双十一购买了 16 英寸 MacBook Pro，花了一万九千九，分 12 期免息，现在每个月要还 1658 块。",
+          "judge_failed": false
+        },
+        {
+          "qid": 17,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确说玩两天，与标准答案一致",
+          "hits_n": 3,
+          "top1": "用户计划元旦去西岭雪山玩两天",
+          "judge_failed": false
+        },
+        {
+          "qid": 18,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]含拼三个周末，[3]含摆电视柜，与答案一致",
+          "hits_n": 5,
+          "top1": "用户上个月刚拼完 21318 树屋，该树屋有 3036 块零件，用户拼了整整三个周末。",
+          "judge_failed": false
+        },
+        {
+          "qid": 19,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确含微辣刚好、太辣拉肚子，与标准答案一致。",
+          "hits_n": 2,
+          "top1": "用户特别爱吃辣，每周至少点三次“冒椒火辣”的外卖，微辣对用户来说刚刚好，太辣第二天会拉肚子。",
+          "judge_failed": false
+        },
+        {
+          "qid": 20,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确每周至少读两章，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "用户每周至少读《DDIA》两章。",
+          "judge_failed": false
+        },
+        {
+          "qid": 21,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[3]明确宽粉是合租室友的猫，与标准答案一致。",
+          "hits_n": 4,
+          "top1": "用户养了一只名叫“宽粉”的橘猫",
+          "judge_failed": false
+        },
+        {
+          "qid": 22,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确说明是公司外包给用户团队，与标准答案一致。",
+          "hits_n": 5,
+          "top1": "蜀味点单是公司外包给用户所在团队的项目。",
+          "judge_failed": false
+        },
+        {
+          "qid": 23,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[3]明确说明已搬至桐梓林壹号，与标准答案一致",
+          "hits_n": 3,
+          "top1": "用户在“锦城悦庭”租的房子位于 12 楼",
+          "judge_failed": false
+        },
+        {
+          "qid": 24,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆明确显示用户主要练搏击操，无冲突信息。",
+          "hits_n": 5,
+          "top1": "用户在“熊猫健身”的团课上主要练搏击操，一节课45分钟。",
+          "judge_failed": false
+        },
+        {
+          "qid": 25,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆明确表妹读高三，与标准答案一致",
+          "hits_n": 2,
+          "top1": "用户表妹今年读高三，在绵阳中学读书。",
+          "judge_failed": false
+        },
+        {
+          "qid": 26,
+          "type": "normal",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确含成都双流抱回信息，与标准答案一致",
+          "hits_n": 3,
+          "top1": "锅盔是用户上个月从成都双流那边抱回来的柯基。",
+          "judge_failed": false
+        },
+        {
+          "qid": 27,
+          "type": "paraphrase",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[2]明确给出每月还1658块，与标准答案一致。",
+          "hits_n": 2,
+          "top1": "用户每个月都要为 MacBook Pro 还分期款，会收到还款短信。",
+          "judge_failed": false
+        },
+        {
+          "qid": 28,
+          "type": "paraphrase",
+          "correct": 0,
+          "misled": 0,
+          "reason": "选手未检索到任何记忆",
+          "hits_n": 0,
+          "top1": "",
+          "judge_failed": false
+        },
+        {
+          "qid": 29,
+          "type": "paraphrase",
+          "correct": 0,
+          "misled": 0,
+          "reason": "选手未检索到任何记忆",
+          "hits_n": 0,
+          "top1": "",
+          "judge_failed": false
+        },
+        {
+          "qid": 30,
+          "type": "paraphrase",
+          "correct": 0,
+          "misled": 0,
+          "reason": "选手未检索到任何记忆",
+          "hits_n": 0,
+          "top1": "",
+          "judge_failed": false
+        },
+        {
+          "qid": 31,
+          "type": "paraphrase",
+          "correct": 0,
+          "misled": 0,
+          "reason": "选手未检索到任何记忆",
+          "hits_n": 0,
+          "top1": "",
+          "judge_failed": false
+        },
+        {
+          "qid": 32,
+          "type": "paraphrase",
+          "correct": 0,
+          "misled": 0,
+          "reason": "选手未检索到任何记忆",
+          "hits_n": 0,
+          "top1": "",
+          "judge_failed": false
+        },
+        {
+          "qid": 33,
+          "type": "correction",
+          "correct": 0,
+          "misled": 1,
+          "reason": "记忆称猫叫宽粉，与标准答案冲突且无柯基锅盔信息",
+          "hits_n": 1,
+          "top1": "用户养了一只名叫“宽粉”的橘猫",
+          "judge_failed": false
+        },
+        {
+          "qid": 34,
+          "type": "correction",
+          "correct": 0,
+          "misled": 1,
+          "reason": "记忆只提蜀味点单，缺蓉城云仓正确信息，会误导",
+          "hits_n": 1,
+          "top1": "用户最近在做名为“蜀味点单”的后端项目。",
+          "judge_failed": false
+        },
+        {
+          "qid": 35,
+          "type": "correction",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[3]明确最新住址为桐梓林壹号，与标准答案一致",
+          "hits_n": 3,
+          "top1": "用户在“锦城悦庭”租的房子位于 12 楼",
+          "judge_failed": false
+        },
+        {
+          "qid": 36,
+          "type": "correction",
+          "correct": 0,
+          "misled": 0,
+          "reason": "选手未检索到任何记忆",
+          "hits_n": 0,
+          "top1": "",
+          "judge_failed": false
+        },
+        {
+          "qid": 37,
+          "type": "noise",
+          "correct": 0,
+          "misled": 0,
+          "reason": "选手未检索到任何记忆",
+          "hits_n": 0,
+          "top1": "",
+          "judge_failed": false
+        },
+        {
+          "qid": 38,
+          "type": "noise",
+          "correct": 0,
+          "misled": 0,
+          "reason": "记忆未含300 QPS死锁信息，无法回答",
+          "hits_n": 2,
+          "top1": "蜀味点单包含并发下单模块。",
+          "judge_failed": false
+        },
+        {
+          "qid": 39,
+          "type": "noise",
+          "correct": 1,
+          "misled": 0,
+          "reason": "记忆[1]明确阳台朝南，下午太阳晒进来舒服，与标准答案一致。",
+          "hits_n": 2,
+          "top1": "用户在成都高新区中和街道一个叫“锦城悦庭”的小区租房居住，租的是一室一厅，月租 2300，阳台朝南，下午太阳晒进来特别舒服",
+          "judge_failed": false
+        },
+        {
+          "qid": 40,
+          "type": "noise",
+          "correct": 0,
+          "misled": 1,
+          "reason": "记忆无闲鱼领养价格，且锅盔是成都抱回非闲鱼领养",
+          "hits_n": 5,
+          "top1": "用户自己养了一只柯基，名叫锅盔，现在三个月大。",
+          "judge_failed": false
+        }
+      ]
+    }
+  },
+  "meta": {
+    "ts": "2026-09-28T16:05:23+00:00",
+    "seed": 1,
+    "llm_model": "deepseek-flash",
+    "embed": "Qwen/Qwen3-Embedding-0.6B (1024d, local CPU)",
+    "dialogue_rounds": 60,
+    "quiz_questions": 40,
+    "absent": {
+      "langmem": "全系 0.0.11-0.0.30 使用 Python 3.11+ 语法（typing.Literal[*x]），本机仅 3.10.6，无法 import",
+      "zep": "社区版服务端依赖 docker，本机无 docker（按约定不装）"
+    },
+    "wall_total_s": 2667.5
+  },
+  "ranking": [
+    "rag_qwen3",
+    "sme_chat",
+    "mem0",
+    "sme_minimal",
+    "bm25_bigram",
+    "sme_kb_dynamic",
+    "graphiti_kuzu"
+  ]
+}
