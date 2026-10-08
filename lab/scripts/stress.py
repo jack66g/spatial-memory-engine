@@ -94,7 +94,7 @@ def cmd_embed_profile(n: int) -> None:
     _save("embed_profile", out)
 
 
-def cmd_rest_mix(minutes: float, base: str = "http://127.0.0.1:8760") -> None:
+def cmd_rest_mix(minutes: float, base: str = "http://127.0.0.1:8000") -> None:
     """并发 REST 混合负载：N 读线程 + 1 写线程打常驻服务。"""
     import httpx
 

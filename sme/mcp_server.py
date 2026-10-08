@@ -9,16 +9,18 @@
     memory_stats()                     引擎状态（记忆数/Region 数）
 
 架构：本进程是薄代理，唯一数据落盘方是常驻的 REST 服务
-（``python -m sme.api --port 8760``，单写者，自带热重建锁/WAL）。服务未运行时
-自动拉起（Windows 分离进程）并等待就绪。这样主会话与多个子智能体各自 spawn 的
-MCP 进程都指向同一个记忆库，不会出现多进程并发写同一快照文件。
+（``python -m sme.api``，端口随配置 ``api.port``（缺省 8000），单写者，
+自带热重建锁/WAL）。服务未运行时自动拉起（Windows 分离进程）并等待
+就绪。这样主会话与多个子智能体各自 spawn 的 MCP 进程都指向同一个
+记忆库，不会出现多进程并发写同一快照文件。
 
 用法（宿主配置示例）::
 
     {"mcpServers": {"sme-memory": {
         "command": "python",
         "args": ["C:/path/to/sme/mcp_server.py"],
-        "env": {"SME_MCP_PORT": "8760"}   # 可选，默认 8760
+        "env": {"SME_MCP_PORT": "8000"}   # 可选，默认 8000（与 api.port 缺省一致；
+                                          # 自定义 api.port 时需同设此变量）
     }}}
 """
 
@@ -35,7 +37,7 @@ import httpx
 from mcp.server.mcpserver import MCPServer
 
 REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-_PORT = int(os.environ.get("SME_MCP_PORT", "8760"))
+_PORT = int(os.environ.get("SME_MCP_PORT", "8000"))
 BASE_URL = f"http://127.0.0.1:{_PORT}"
 # 回环直连：httpx 不读环境代理（trust_env=False），但不修改环境变量本身——
 # 拉起的子服务要继承完整环境。模型已本地缓存，服务侧另设 HF_HUB_OFFLINE=1
