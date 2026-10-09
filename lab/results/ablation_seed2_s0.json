@@ -1,0 +1,838 @@
+{
+ "meta": {
+  "seed": 2,
+  "scale": 0
+ },
+ "sme_chat": {
+  "status": "ok",
+  "error": null,
+  "reinit_s": 0.3,
+  "add_total_s": 89.2,
+  "add_p50_ms": 598.6,
+  "score": 40.0,
+  "acc": 1.0,
+  "misled": 0,
+  "storage": 89,
+  "retrieval_p50_ms": 227.9,
+  "quiz_total_s": 51.2,
+  "total_s": 140.7,
+  "details": [
+   {
+    "qid": 1,
+    "type": "normal",
+    "correct": 1,
+    "misled": 0,
+    "reason": "多条记忆均指向建设路巷子口冒菜，信息一致无冲突",
+    "hits_n": 5,
+    "top1": "今天又点巷子口冒菜，备注还是微辣但多放花椒。老板可能真该给我发会员卡了，一个月至少8次。",
+    "judge_failed": false
+   },
+   {
+    "qid": 2,
+    "type": "normal",
+    "correct": 1,
+    "misled": 0,
+    "reason": "多条记忆均明确提到午餐肉、鹌鹑蛋、宽粉三样",
+    "hits_n": 5,
+    "top1": "今天又点巷子口冒菜，备注还是微辣但多放花椒。老板可能真该给我发会员卡了，一个月至少8次。",
+    "judge_failed": false
+   },
+   {
+    "qid": 3,
+    "type": "normal",
+    "correct": 1,
+    "misled": 0,
+    "reason": "多条记忆均明确备注为微辣但多放花椒，无冲突",
+    "hits_n": 5,
+    "top1": "今天又点巷子口冒菜，备注还是微辣但多放花椒。老板可能真该给我发会员卡了，一个月至少8次。",
+    "judge_failed": false
+   },
+   {
+    "qid": 4,
+    "type": "normal",
+    "correct": 1,
+    "misled": 0,
+    "reason": "记忆[1]明确说一个月至少8次，与标准答案一致。",
+    "hits_n": 5,
+    "top1": "今天又点巷子口冒菜，备注还是微辣但多放花椒。老板可能真该给我发会员卡了，一个月至少8次。",
+    "judge_failed": false
+   },
+   {
+    "qid": 5,
+    "type": "normal",
+    "correct": 1,
+    "misled": 0,
+    "reason": "记忆[1][3]明确周三周六晚8点，信息一致无冲突",
+    "hits_n": 5,
+    "top1": "今天跳操差点没跟上，刘畊宏周三周六晚上8点这场太狠了。Keep连续打卡还在撑，目标98斤不能倒。",
+    "judge_failed": false
+   },
+   {
+    "qid": 6,
+    "type": "normal",
+    "correct": 1,
+    "misled": 0,
+    "reason": "多条记忆均提到跳操30分钟，信息一致",
+    "hits_n": 5,
+    "top1": "今天没跳操，周三那场错过了，心里有点罪恶感。Keep打卡要断了，明天补个30分钟行不行啊。",
+    "judge_failed": false
+   },
+   {
+    "qid": 7,
+    "type": "normal",
+    "correct": 1,
+    "misled": 0,
+    "reason": "多条记忆提到Keep打卡，与标准答案一致",
+    "hits_n": 5,
+    "top1": "今天没跳操，周三那场错过了，心里有点罪恶感。Keep打卡要断了，明天补个30分钟行不行啊。",
+    "judge_failed": false
+   },
+   {
+    "qid": 8,
+    "type": "normal",
+    "correct": 1,
+    "misled": 0,
+    "reason": "记忆[3]明确提到Keep打卡第19天，与标准答案一致。",
+    "hits_n": 5,
+    "top1": "今天跳操差点没跟上，刘畊宏周三周六晚上8点这场太狠了。Keep连续打卡还在撑，目标98斤不能倒。",
+    "judge_failed": false
+   },
+   {
+    "qid": 9,
+    "type": "normal",
+    "correct": 1,
+    "misled": 0,
+    "reason": "多条记忆明确提到目标98斤，信息一致无冲突",
+    "hits_n": 5,
+    "top1": "我刚跳完刘畊宏，周三周六晚上8点那场，30分钟差点把我送走。Keep打卡第19天了，先瘦到98斤再说。",
+    "judge_failed": false
+   },
+   {
+    "qid": 10,
+    "type": "normal",
+    "correct": 1,
+    "misled": 0,
+    "reason": "记忆提到住中和，与中和街道语义一致",
+    "hits_n": 5,
+    "top1": "成都这天气也太闷了，走两步就一身汗。我住中和这边38平一居室，阳台朝南，晒衣服倒是挺快。",
+    "judge_failed": false
+   },
+   {
+    "qid": 11,
+    "type": "normal",
+    "correct": 1,
+    "misled": 0,
+    "reason": "记忆[1][2][3]均明确提到38平、月租2300，信息一致。",
+    "hits_n": 5,
+    "top1": "我住中和这边38平一居室，月租2300，阳台朝南，唯一优点就是离6号线观东站近。缺点就是小，乐高没地放。",
+    "judge_failed": false
+   },
+   {
+    "qid": 12,
+    "type": "normal",
+    "correct": 1,
+    "misled": 0,
+    "reason": "多条记忆均明确提到阳台朝南，信息一致无冲突",
+    "hits_n": 5,
+    "top1": "我住中和这边38平一居室，月租2300，阳台朝南，唯一优点就是离6号线观东站近。缺点就是小，乐高没地放。",
+    "judge_failed": false
+   },
+   {
+    "qid": 13,
+    "type": "normal",
+    "correct": 1,
+    "misled": 0,
+    "reason": "记忆明确提到楼下是6号线观东站，无冲突信息",
+    "hits_n": 5,
+    "top1": "楼下地铁6号线观东站早高峰太恐怖了，我每次都被挤成纸片人。住高新区中和这边，月租2300，38平，忍了。",
+    "judge_failed": false
+   },
+   {
+    "qid": 14,
+    "type": "normal",
+    "correct": 1,
+    "misled": 0,
+    "reason": "记忆明确说柯基土豆2岁，年糕是室友的猫，无冲突",
+    "hits_n": 5,
+    "top1": "对了纠正一下，年糕其实是我室友的猫，我自己养的是只柯基叫土豆，2岁。土豆比年糕还黏人，天天跟我抢沙发。",
+    "judge_failed": false
+   },
+   {
+    "qid": 15,
+    "type": "normal",
+    "correct": 1,
+    "misled": 0,
+    "reason": "记忆[1][2][3]均明确年糕是室友的猫，正确信息在场",
+    "hits_n": 5,
+    "top1": "对了纠正一下，年糕其实是我室友的猫，我自己养的是只柯基叫土豆，2岁。土豆比年糕还黏人，天天跟我抢沙发。",
+    "judge_failed": false
+   },
+   {
+    "qid": 16,
+    "type": "normal",
+    "correct": 1,
+    "misled": 0,
+    "reason": "记忆[1][3][5]均明确用户增长组、Python和FastAPI，最新说法清晰",
+    "hits_n": 5,
+    "top1": "订单中心那个项目其实5月就交给同事了，我现在转去做用户增长组，主搞Python和FastAPI，7月15号要上A/B测试平台。最近天天看埋点。",
+    "judge_failed": false
+   },
+   {
+    "qid": 17,
+    "type": "normal",
+    "correct": 1,
+    "misled": 0,
+    "reason": "多条记忆均明确7月15日上线A/B测试平台，信息一致",
+    "hits_n": 5,
+    "top1": "订单中心那个项目其实5月就交给同事了，我现在转去做用户增长组，主搞Python和FastAPI，7月15号要上A/B测试平台。最近天天看埋点。",
+    "judge_failed": false
+   },
+   {
+    "qid": 18,
+    "type": "normal",
+    "correct": 1,
+    "misled": 0,
+    "reason": "记忆[1][3][4]均明确最新为西双版纳4天，旧大理说法已被更新",
+    "hits_n": 5,
+    "top1": "大理那个计划改了，国庆改成去西双版纳4天，机票重订成10月1号成都飞版纳的3U8567。洱海电动车先欠着吧。",
+    "judge_failed": false
+   },
+   {
+    "qid": 19,
+    "type": "normal",
+    "correct": 1,
+    "misled": 0,
+    "reason": "记忆[1][2]明确重订为10月1日3U8567成都飞版纳",
+    "hits_n": 5,
+    "top1": "大理那个计划改了，国庆改成去西双版纳4天，机票重订成10月1号成都飞版纳的3U8567。洱海电动车先欠着吧。",
+    "judge_failed": false
+   },
+   {
+    "qid": 20,
+    "type": "normal",
+    "correct": 1,
+    "misled": 0,
+    "reason": "记忆明确提到21338树屋和10300时光机已拼完",
+    "hits_n": 5,
+    "top1": "我昨天拼乐高拼到一点，21338树屋终于收工了，桌上全是碎件。下一盒有点想冲21341迪士尼女巫小屋。",
+    "judge_failed": false
+   },
+   {
+    "qid": 21,
+    "type": "normal",
+    "correct": 1,
+    "misled": 0,
+    "reason": "多条记忆明确提到下一盒想买21341迪士尼女巫小屋",
+    "hits_n": 5,
+    "top1": "我昨天拼乐高拼到一点，21338树屋终于收工了，桌上全是碎件。下一盒有点想冲21341迪士尼女巫小屋。",
+    "judge_failed": false
+   },
+   {
+    "qid": 22,
+    "type": "normal",
+    "correct": 1,
+    "misled": 0,
+    "reason": "记忆[1][2][3]均明确12点半前睡、拖到凌晨1点",
+    "hits_n": 5,
+    "top1": "我最近逼自己12点半前睡，结果又拖到凌晨1点。早上8点20闹钟按掉3次，周末直接睡到11点，没救了。",
+    "judge_failed": false
+   },
+   {
+    "qid": 23,
+    "type": "normal",
+    "correct": 1,
+    "misled": 0,
+    "reason": "记忆[1][2][3]均明确8点20闹钟按掉3次，信息一致",
+    "hits_n": 5,
+    "top1": "我最近逼自己12点半前睡，结果又拖到凌晨1点。早上8点20闹钟按掉3次，周末直接睡到11点，没救了。",
+    "judge_failed": false
+   },
+   {
+    "qid": 24,
+    "type": "normal",
+    "correct": 1,
+    "misled": 0,
+    "reason": "记忆明确提到绵阳、妈妈小学老师、爸爸五金店",
+    "hits_n": 5,
+    "top1": "周日晚上跟我妈视频，她在绵阳当小学老师，我爸开五金店，我弟高二还在旁边写作业。每周一次，像交作业一样。",
+    "judge_failed": false
+   },
+   {
+    "qid": 25,
+    "type": "normal",
+    "correct": 1,
+    "misled": 0,
+    "reason": "多条记忆均明确提到弟弟读高二，信息一致无冲突",
+    "hits_n": 5,
+    "top1": "周日晚上跟家里视频，我妈小学老师又开始讲她班上小孩，我爸五金店最近进了一批货，我弟高二还在喊累。",
+    "judge_failed": false
+   },
+   {
+    "qid": 26,
+    "type": "normal",
+    "correct": 1,
+    "misled": 0,
+    "reason": "记忆[1]明确含7月开课、每天1讲、9月前刷完40讲",
+    "hits_n": 5,
+    "top1": "我报了极客时间7月开课的Redis核心技术与实战，打算每天学1讲，9月前刷完40讲，顺便准备软考中级。",
+    "judge_failed": false
+   },
+   {
+    "qid": 27,
+    "type": "paraphrase",
+    "correct": 1,
+    "misled": 0,
+    "reason": "多条记忆均明确备注微辣但多放花椒，无冲突信息",
+    "hits_n": 5,
+    "top1": "今天又点巷子口冒菜，备注还是微辣但多放花椒。老板可能真该给我发会员卡了，一个月至少8次。",
+    "judge_failed": false
+   },
+   {
+    "qid": 28,
+    "type": "paraphrase",
+    "correct": 1,
+    "misled": 0,
+    "reason": "记忆明确提到楼下地铁6号线观东站，信息一致",
+    "hits_n": 5,
+    "top1": "楼下地铁6号线观东站早高峰太恐怖了，我每次都被挤成纸片人。住高新区中和这边，月租2300，38平，忍了。",
+    "judge_failed": false
+   },
+   {
+    "qid": 29,
+    "type": "paraphrase",
+    "correct": 1,
+    "misled": 0,
+    "reason": "记忆[2][3]均明确每周日晚上跟家里视频",
+    "hits_n": 5,
+    "top1": "周日跟家里视频，我弟高二还在补课，我爸五金店最近忙，我妈说让我别老熬夜。我嘴上答应，晚上继续。",
+    "judge_failed": false
+   },
+   {
+    "qid": 30,
+    "type": "paraphrase",
+    "correct": 1,
+    "misled": 0,
+    "reason": "记忆[1]明确给出Redis学习及9月前40讲计划，与标准一致",
+    "hits_n": 5,
+    "top1": "我报了极客时间7月开课的Redis核心技术与实战，打算每天学1讲，9月前刷完40讲，顺便准备软考中级。",
+    "judge_failed": false
+   },
+   {
+    "qid": 31,
+    "type": "paraphrase",
+    "correct": 1,
+    "misled": 0,
+    "reason": "记忆[3]明确连续打卡19天、目标98斤，与标准一致",
+    "hits_n": 5,
+    "top1": "今天跳操差点没跟上，刘畊宏周三周六晚上8点这场太狠了。Keep连续打卡还在撑，目标98斤不能倒。",
+    "judge_failed": false
+   },
+   {
+    "qid": 32,
+    "type": "paraphrase",
+    "correct": 1,
+    "misled": 0,
+    "reason": "记忆明确拼完树屋和时光机，想入女巫小屋，无冲突",
+    "hits_n": 5,
+    "top1": "我昨天拼乐高拼到一点，21338树屋终于收工了，桌上全是碎件。下一盒有点想冲21341迪士尼女巫小屋。",
+    "judge_failed": false
+   },
+   {
+    "qid": 33,
+    "type": "correction",
+    "correct": 1,
+    "misled": 0,
+    "reason": "记忆[1][2][4]明确纠正年糕是室友的猫，自己养柯基土豆2岁",
+    "hits_n": 5,
+    "top1": "对了纠正一下，年糕其实是我室友的猫，我自己养的是只柯基叫土豆，2岁。土豆比年糕还黏人，天天跟我抢沙发。",
+    "judge_failed": false
+   },
+   {
+    "qid": 34,
+    "type": "correction",
+    "correct": 1,
+    "misled": 0,
+    "reason": "记忆[1]明确给出5月转交、用户增长组、Python/FastAPI，与标准答案一致",
+    "hits_n": 5,
+    "top1": "订单中心那个项目其实5月就交给同事了，我现在转去做用户增长组，主搞Python和FastAPI，7月15号要上A/B测试平台。最近天天看埋点。",
+    "judge_failed": false
+   },
+   {
+    "qid": 35,
+    "type": "correction",
+    "correct": 1,
+    "misled": 0,
+    "reason": "多条记忆明确最新为西双版纳4天3U8567，旧大理信息已标注作废",
+    "hits_n": 5,
+    "top1": "大理那个计划改了，国庆改成去西双版纳4天，机票重订成10月1号成都飞版纳的3U8567。洱海电动车先欠着吧。",
+    "judge_failed": false
+   },
+   {
+    "qid": 36,
+    "type": "correction",
+    "correct": 1,
+    "misled": 0,
+    "reason": "记忆[1][2][4]明确年糕是室友的猫，纠正信息在场",
+    "hits_n": 5,
+    "top1": "对了纠正一下，年糕其实是我室友的猫，我自己养的是只柯基叫土豆，2岁。土豆比年糕还黏人，天天跟我抢沙发。",
+    "judge_failed": false
+   },
+   {
+    "qid": 37,
+    "type": "noise",
+    "correct": 1,
+    "misled": 0,
+    "reason": "记忆[5]明确阳台朝南，与标准答案一致",
+    "hits_n": 5,
+    "top1": "对了纠正一下，年糕其实是我室友的猫，我自己养的是只柯基叫土豆，2岁。土豆比年糕还黏人，天天跟我抢沙发。",
+    "judge_failed": false
+   },
+   {
+    "qid": 38,
+    "type": "noise",
+    "correct": 1,
+    "misled": 0,
+    "reason": "记忆[1][4]均提到Keep打卡记录跳操，与标准答案一致。",
+    "hits_n": 5,
+    "top1": "今天没跳操，周三那场错过了，心里有点罪恶感。Keep打卡要断了，明天补个30分钟行不行啊。",
+    "judge_failed": false
+   },
+   {
+    "qid": 39,
+    "type": "noise",
+    "correct": 1,
+    "misled": 0,
+    "reason": "记忆[4][5]均明确弟弟读高二，无冲突信息。",
+    "hits_n": 5,
+    "top1": "跟你唠两句真舒服，我先去洗个澡。回来还得把订单中心那个V2.3的接口文档再看一遍。",
+    "judge_failed": false
+   },
+   {
+    "qid": 40,
+    "type": "noise",
+    "correct": 1,
+    "misled": 0,
+    "reason": "记忆[1][4]明确提到必加午餐肉、鹌鹑蛋、宽粉，无冲突",
+    "hits_n": 5,
+    "top1": "冒菜今天加了鹌鹑蛋和午餐肉，宽粉吸满汤汁，花椒放多了嘴都麻。建设路巷子口那家真是我的续命店。",
+    "judge_failed": false
+   }
+  ]
+ },
+ "sme_region_off": {
+  "status": "ok",
+  "error": null,
+  "reinit_s": 0.3,
+  "add_total_s": 88.8,
+  "add_p50_ms": 592.1,
+  "score": 40.0,
+  "acc": 1.0,
+  "misled": 0,
+  "storage": 88,
+  "retrieval_p50_ms": 229.0,
+  "quiz_total_s": 47.8,
+  "total_s": 136.9,
+  "details": [
+   {
+    "qid": 1,
+    "type": "normal",
+    "correct": 1,
+    "misled": 0,
+    "reason": "记忆均指向建设路巷子口冒菜，信息一致无冲突",
+    "hits_n": 5,
+    "top1": "今天又点巷子口冒菜，备注还是微辣但多放花椒。老板可能真该给我发会员卡了，一个月至少8次。",
+    "judge_failed": false
+   },
+   {
+    "qid": 2,
+    "type": "normal",
+    "correct": 1,
+    "misled": 0,
+    "reason": "记忆[2][3][4]均明确提到午餐肉、鹌鹑蛋、宽粉三样。",
+    "hits_n": 5,
+    "top1": "今天又点巷子口冒菜，备注还是微辣但多放花椒。老板可能真该给我发会员卡了，一个月至少8次。",
+    "judge_failed": false
+   },
+   {
+    "qid": 3,
+    "type": "normal",
+    "correct": 1,
+    "misled": 0,
+    "reason": "多条记忆均明确备注为微辣但多放花椒，无冲突",
+    "hits_n": 5,
+    "top1": "今天又点巷子口冒菜，备注还是微辣但多放花椒。老板可能真该给我发会员卡了，一个月至少8次。",
+    "judge_failed": false
+   },
+   {
+    "qid": 4,
+    "type": "normal",
+    "correct": 1,
+    "misled": 0,
+    "reason": "记忆[1][3]明确提到一个月至少8次，信息一致。",
+    "hits_n": 5,
+    "top1": "今天又点巷子口冒菜，备注还是微辣但多放花椒。老板可能真该给我发会员卡了，一个月至少8次。",
+    "judge_failed": false
+   },
+   {
+    "qid": 5,
+    "type": "normal",
+    "correct": 1,
+    "misled": 0,
+    "reason": "记忆[1][2]明确提到周三周六晚8点，信息一致无冲突",
+    "hits_n": 5,
+    "top1": "今天跳操差点没跟上，刘畊宏周三周六晚上8点这场太狠了。Keep连续打卡还在撑，目标98斤不能倒。",
+    "judge_failed": false
+   },
+   {
+    "qid": 6,
+    "type": "normal",
+    "correct": 1,
+    "misled": 0,
+    "reason": "多条记忆均提到跳操30分钟，信息一致",
+    "hits_n": 5,
+    "top1": "今天没跳操，周三那场错过了，心里有点罪恶感。Keep打卡要断了，明天补个30分钟行不行啊。",
+    "judge_failed": false
+   },
+   {
+    "qid": 7,
+    "type": "normal",
+    "correct": 1,
+    "misled": 0,
+    "reason": "多条记忆均提到Keep打卡，信息一致无冲突",
+    "hits_n": 5,
+    "top1": "今天跳操差点没跟上，刘畊宏周三周六晚上8点这场太狠了。Keep连续打卡还在撑，目标98斤不能倒。",
+    "judge_failed": false
+   },
+   {
+    "qid": 8,
+    "type": "normal",
+    "correct": 1,
+    "misled": 0,
+    "reason": "记忆[3]明确提到Keep打卡第19天，与标准答案一致。",
+    "hits_n": 5,
+    "top1": "今天跳操差点没跟上，刘畊宏周三周六晚上8点这场太狠了。Keep连续打卡还在撑，目标98斤不能倒。",
+    "judge_failed": false
+   },
+   {
+    "qid": 9,
+    "type": "normal",
+    "correct": 1,
+    "misled": 0,
+    "reason": "记忆[1][2][3]均明确目标98斤，无冲突信息",
+    "hits_n": 5,
+    "top1": "我刚跳完刘畊宏，周三周六晚上8点那场，30分钟差点把我送走。Keep打卡第19天了，先瘦到98斤再说。",
+    "judge_failed": false
+   },
+   {
+    "qid": 10,
+    "type": "normal",
+    "correct": 1,
+    "misled": 0,
+    "reason": "记忆[1]提到住中和，与标准答案中和街道一致",
+    "hits_n": 5,
+    "top1": "成都这天气也太闷了，走两步就一身汗。我住中和这边38平一居室，阳台朝南，晒衣服倒是挺快。",
+    "judge_failed": false
+   },
+   {
+    "qid": 11,
+    "type": "normal",
+    "correct": 1,
+    "misled": 0,
+    "reason": "多条记忆均明确提到38平、月租2300，信息一致。",
+    "hits_n": 5,
+    "top1": "我住中和这边38平一居室，月租2300，阳台朝南，唯一优点就是离6号线观东站近。缺点就是小，乐高没地放。",
+    "judge_failed": false
+   },
+   {
+    "qid": 12,
+    "type": "normal",
+    "correct": 1,
+    "misled": 0,
+    "reason": "多条记忆均明确提到阳台朝南，信息一致无冲突",
+    "hits_n": 5,
+    "top1": "我住中和这边38平一居室，月租2300，阳台朝南，唯一优点就是离6号线观东站近。缺点就是小，乐高没地放。",
+    "judge_failed": false
+   },
+   {
+    "qid": 13,
+    "type": "normal",
+    "correct": 1,
+    "misled": 0,
+    "reason": "记忆明确提到楼下是地铁6号线观东站，信息一致。",
+    "hits_n": 5,
+    "top1": "楼下地铁6号线观东站早高峰太恐怖了，我每次都被挤成纸片人。住高新区中和这边，月租2300，38平，忍了。",
+    "judge_failed": false
+   },
+   {
+    "qid": 14,
+    "type": "normal",
+    "correct": 1,
+    "misled": 0,
+    "reason": "记忆明确说柯基土豆2岁，年糕是室友的猫，信息一致",
+    "hits_n": 5,
+    "top1": "对了纠正一下，年糕其实是我室友的猫，我自己养的是只柯基叫土豆，2岁。土豆比年糕还黏人，天天跟我抢沙发。",
+    "judge_failed": false
+   },
+   {
+    "qid": 15,
+    "type": "normal",
+    "correct": 1,
+    "misled": 0,
+    "reason": "记忆[1][2][4]均明确年糕是室友的猫，无冲突",
+    "hits_n": 5,
+    "top1": "对了纠正一下，年糕其实是我室友的猫，我自己养的是只柯基叫土豆，2岁。土豆比年糕还黏人，天天跟我抢沙发。",
+    "judge_failed": false
+   },
+   {
+    "qid": 16,
+    "type": "normal",
+    "correct": 1,
+    "misled": 0,
+    "reason": "记忆[1][3][5]均明确用户增长组、Python和FastAPI，最新说法清晰。",
+    "hits_n": 5,
+    "top1": "订单中心那个项目其实5月就交给同事了，我现在转去做用户增长组，主搞Python和FastAPI，7月15号要上A/B测试平台。最近天天看埋点。",
+    "judge_failed": false
+   },
+   {
+    "qid": 17,
+    "type": "normal",
+    "correct": 1,
+    "misled": 0,
+    "reason": "多条记忆均明确7月15日上线A/B测试平台",
+    "hits_n": 5,
+    "top1": "订单中心那个项目其实5月就交给同事了，我现在转去做用户增长组，主搞Python和FastAPI，7月15号要上A/B测试平台。最近天天看埋点。",
+    "judge_failed": false
+   },
+   {
+    "qid": 18,
+    "type": "normal",
+    "correct": 1,
+    "misled": 0,
+    "reason": "记忆明确最新为西双版纳4天，旧大理说法已被覆盖",
+    "hits_n": 5,
+    "top1": "大理那个计划改了，国庆改成去西双版纳4天，机票重订成10月1号成都飞版纳的3U8567。洱海电动车先欠着吧。",
+    "judge_failed": false
+   },
+   {
+    "qid": 19,
+    "type": "normal",
+    "correct": 1,
+    "misled": 0,
+    "reason": "记忆明确重订为10月1日3U8567成都飞版纳，旧大理信息已过期",
+    "hits_n": 5,
+    "top1": "大理那个计划改了，国庆改成去西双版纳4天，机票重订成10月1号成都飞版纳的3U8567。洱海电动车先欠着吧。",
+    "judge_failed": false
+   },
+   {
+    "qid": 20,
+    "type": "normal",
+    "correct": 1,
+    "misled": 0,
+    "reason": "记忆明确提到21338树屋和10300时光机已拼完",
+    "hits_n": 5,
+    "top1": "我昨天拼乐高拼到一点，21338树屋终于收工了，桌上全是碎件。下一盒有点想冲21341迪士尼女巫小屋。",
+    "judge_failed": false
+   },
+   {
+    "qid": 21,
+    "type": "normal",
+    "correct": 1,
+    "misled": 0,
+    "reason": "多条记忆明确提到想买21341迪士尼女巫小屋，无冲突",
+    "hits_n": 5,
+    "top1": "我昨天拼乐高拼到一点，21338树屋终于收工了，桌上全是碎件。下一盒有点想冲21341迪士尼女巫小屋。",
+    "judge_failed": false
+   },
+   {
+    "qid": 22,
+    "type": "normal",
+    "correct": 1,
+    "misled": 0,
+    "reason": "多条记忆均明确12点半前睡失败拖到1点，信息一致",
+    "hits_n": 5,
+    "top1": "我最近逼自己12点半前睡，结果又拖到凌晨1点。早上8点20闹钟按掉3次，周末直接睡到11点，没救了。",
+    "judge_failed": false
+   },
+   {
+    "qid": 23,
+    "type": "normal",
+    "correct": 1,
+    "misled": 0,
+    "reason": "记忆[1][2][3]均明确8点20闹钟按掉3次，信息一致",
+    "hits_n": 5,
+    "top1": "我最近逼自己12点半前睡，结果又拖到凌晨1点。早上8点20闹钟按掉3次，周末直接睡到11点，没救了。",
+    "judge_failed": false
+   },
+   {
+    "qid": 24,
+    "type": "normal",
+    "correct": 1,
+    "misled": 0,
+    "reason": "记忆明确提到绵阳、妈妈小学老师、爸爸五金店",
+    "hits_n": 5,
+    "top1": "周日晚上跟我妈视频，她在绵阳当小学老师，我爸开五金店，我弟高二还在旁边写作业。每周一次，像交作业一样。",
+    "judge_failed": false
+   },
+   {
+    "qid": 25,
+    "type": "normal",
+    "correct": 1,
+    "misled": 0,
+    "reason": "多条记忆均明确弟弟读高二，无冲突信息",
+    "hits_n": 5,
+    "top1": "周日晚上跟家里视频，我妈小学老师又开始讲她班上小孩，我爸五金店最近进了一批货，我弟高二还在喊累。",
+    "judge_failed": false
+   },
+   {
+    "qid": 26,
+    "type": "normal",
+    "correct": 1,
+    "misled": 0,
+    "reason": "记忆[1]明确含7月开课、每天1讲、9月前刷完40讲",
+    "hits_n": 5,
+    "top1": "我报了极客时间7月开课的Redis核心技术与实战，打算每天学1讲，9月前刷完40讲，顺便准备软考中级。",
+    "judge_failed": false
+   },
+   {
+    "qid": 27,
+    "type": "paraphrase",
+    "correct": 1,
+    "misled": 0,
+    "reason": "多条记忆均明确备注微辣但多放花椒，信息一致",
+    "hits_n": 5,
+    "top1": "今天又点巷子口冒菜，备注还是微辣但多放花椒。老板可能真该给我发会员卡了，一个月至少8次。",
+    "judge_failed": false
+   },
+   {
+    "qid": 28,
+    "type": "paraphrase",
+    "correct": 1,
+    "misled": 0,
+    "reason": "记忆明确提到楼下地铁6号线观东站，信息一致",
+    "hits_n": 5,
+    "top1": "楼下地铁6号线观东站早高峰太恐怖了，我每次都被挤成纸片人。住高新区中和这边，月租2300，38平，忍了。",
+    "judge_failed": false
+   },
+   {
+    "qid": 29,
+    "type": "paraphrase",
+    "correct": 1,
+    "misled": 0,
+    "reason": "记忆[1][2][3]均明确每周日晚上跟家里视频",
+    "hits_n": 5,
+    "top1": "周日跟家里视频，我弟高二还在补课，我爸五金店最近忙，我妈说让我别老熬夜。我嘴上答应，晚上继续。",
+    "judge_failed": false
+   },
+   {
+    "qid": 30,
+    "type": "paraphrase",
+    "correct": 1,
+    "misled": 0,
+    "reason": "记忆明确提到Redis每天1讲、9月前40讲，与标准一致",
+    "hits_n": 5,
+    "top1": "我报了极客时间7月开课的Redis核心技术与实战，打算每天学1讲，9月前刷完40讲，顺便准备软考中级。",
+    "judge_failed": false
+   },
+   {
+    "qid": 31,
+    "type": "paraphrase",
+    "correct": 1,
+    "misled": 0,
+    "reason": "记忆[3]明确连续打卡19天、目标98斤，信息一致",
+    "hits_n": 5,
+    "top1": "今天跳操差点没跟上，刘畊宏周三周六晚上8点这场太狠了。Keep连续打卡还在撑，目标98斤不能倒。",
+    "judge_failed": false
+   },
+   {
+    "qid": 32,
+    "type": "paraphrase",
+    "correct": 1,
+    "misled": 0,
+    "reason": "记忆明确拼完树屋和时光机，想入女巫小屋，无冲突",
+    "hits_n": 5,
+    "top1": "我昨天拼乐高拼到一点，21338树屋终于收工了，桌上全是碎件。下一盒有点想冲21341迪士尼女巫小屋。",
+    "judge_failed": false
+   },
+   {
+    "qid": 33,
+    "type": "correction",
+    "correct": 1,
+    "misled": 0,
+    "reason": "记忆明确纠正年糕是室友的猫，自己养柯基土豆2岁",
+    "hits_n": 5,
+    "top1": "对了纠正一下，年糕其实是我室友的猫，我自己养的是只柯基叫土豆，2岁。土豆比年糕还黏人，天天跟我抢沙发。",
+    "judge_failed": false
+   },
+   {
+    "qid": 34,
+    "type": "correction",
+    "correct": 1,
+    "misled": 0,
+    "reason": "记忆[1]明确给出转组、技术栈及订单中心已交接，与标准答案一致",
+    "hits_n": 5,
+    "top1": "订单中心那个项目其实5月就交给同事了，我现在转去做用户增长组，主搞Python和FastAPI，7月15号要上A/B测试平台。最近天天看埋点。",
+    "judge_failed": false
+   },
+   {
+    "qid": 35,
+    "type": "correction",
+    "correct": 1,
+    "misled": 0,
+    "reason": "多条记忆明确给出西双版纳4天、3U8567，最新说法清晰",
+    "hits_n": 5,
+    "top1": "大理那个计划改了，国庆改成去西双版纳4天，机票重订成10月1号成都飞版纳的3U8567。洱海电动车先欠着吧。",
+    "judge_failed": false
+   },
+   {
+    "qid": 36,
+    "type": "correction",
+    "correct": 1,
+    "misled": 0,
+    "reason": "记忆[1][2][5]明确纠正年糕是室友的猫，最新说法清晰在场",
+    "hits_n": 5,
+    "top1": "对了纠正一下，年糕其实是我室友的猫，我自己养的是只柯基叫土豆，2岁。土豆比年糕还黏人，天天跟我抢沙发。",
+    "judge_failed": false
+   },
+   {
+    "qid": 37,
+    "type": "noise",
+    "correct": 1,
+    "misled": 0,
+    "reason": "记忆[4]明确阳台朝南，无冲突信息",
+    "hits_n": 5,
+    "top1": "对了纠正一下，年糕其实是我室友的猫，我自己养的是只柯基叫土豆，2岁。土豆比年糕还黏人，天天跟我抢沙发。",
+    "judge_failed": false
+   },
+   {
+    "qid": 38,
+    "type": "noise",
+    "correct": 1,
+    "misled": 0,
+    "reason": "记忆[1][3]明确提到Keep打卡记录跳操",
+    "hits_n": 5,
+    "top1": "今天没跳操，周三那场错过了，心里有点罪恶感。Keep打卡要断了，明天补个30分钟行不行啊。",
+    "judge_failed": false
+   },
+   {
+    "qid": 39,
+    "type": "noise",
+    "correct": 1,
+    "misled": 0,
+    "reason": "记忆[3][5]均明确弟弟读高二，无冲突信息",
+    "hits_n": 5,
+    "top1": "跟你唠两句真舒服，我先去洗个澡。回来还得把订单中心那个V2.3的接口文档再看一遍。",
+    "judge_failed": false
+   },
+   {
+    "qid": 40,
+    "type": "noise",
+    "correct": 1,
+    "misled": 0,
+    "reason": "记忆[1][4]明确列出午餐肉、鹌鹑蛋、宽粉三样",
+    "hits_n": 5,
+    "top1": "冒菜今天加了鹌鹑蛋和午餐肉，宽粉吸满汤汁，花椒放多了嘴都麻。建设路巷子口那家真是我的续命店。",
+    "judge_failed": false
+   }
+  ]
+ }
+}
