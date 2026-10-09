@@ -1,0 +1,839 @@
+{
+ "meta": {
+  "seed": 3,
+  "stage": "plain",
+  "note": "对照=官方chat原样；消融=仅关Region(4配置项)"
+ },
+ "sme_chat": {
+  "status": "ok",
+  "error": null,
+  "reinit_s": 7.7,
+  "add_total_s": 74.6,
+  "add_p50_ms": 506.3,
+  "score": 39.0,
+  "acc": 0.975,
+  "misled": 0,
+  "storage": 87,
+  "retrieval_p50_ms": 274.7,
+  "quiz_total_s": 50.3,
+  "total_s": 132.6,
+  "details": [
+   {
+    "qid": 1,
+    "type": "normal",
+    "correct": 1,
+    "misled": 0,
+    "reason": "记忆[1][2]明确给出2026年3月、周二周四晚8-10点，无冲突",
+    "hits_n": 5,
+    "top1": "我最近想学 Rust，打算从 2026 年 3 月开始，每周二、周四晚 8 点到 10 点啃《Rust 程序设计语言》第 2 版。",
+    "judge_failed": false
+   },
+   {
+    "qid": 2,
+    "type": "normal",
+    "correct": 1,
+    "misled": 0,
+    "reason": "记忆[1][3]明确给出5月底前刷完第2版目标",
+    "hits_n": 5,
+    "top1": "Rust 那个计划还在，3 月开始，周二周四晚上 8 点到 10 点，目标 5 月底前刷完第 2 版。",
+    "judge_failed": false
+   },
+   {
+    "qid": 3,
+    "type": "normal",
+    "correct": 1,
+    "misled": 0,
+    "reason": "记忆[1]明确给出型号和价格，与标准答案一致",
+    "hits_n": 5,
+    "top1": "2 月 18 号在京东花了 899 买了台米家空气净化器 4 Lite，放卧室里，成都这天气不开真的闷。",
+    "judge_failed": false
+   },
+   {
+    "qid": 4,
+    "type": "normal",
+    "correct": 1,
+    "misled": 0,
+    "reason": "记忆[2]明确说放卧室里，与标准答案一致。",
+    "hits_n": 5,
+    "top1": "空气净化器那个滤芯好像该换了，899 买的机器，后续耗材也不便宜啊。",
+    "judge_failed": false
+   },
+   {
+    "qid": 5,
+    "type": "normal",
+    "correct": 1,
+    "misled": 0,
+    "reason": "记忆[2]明确说已拼完75379 R2-D2，与标准答案一致。",
+    "hits_n": 5,
+    "top1": "我刚刚拼乐高拼到一半发现少了个件，气死，10300 还没买就先被 75379 折磨。",
+    "judge_failed": false
+   },
+   {
+    "qid": 6,
+    "type": "normal",
+    "correct": 1,
+    "misled": 0,
+    "reason": "记忆[1][3]明确提到下一个想买10300，信息一致",
+    "hits_n": 5,
+    "top1": "下一个想买的乐高是 10300 回到未来时光机，等发工资再说吧。",
+    "judge_failed": false
+   },
+   {
+    "qid": 7,
+    "type": "normal",
+    "correct": 1,
+    "misled": 0,
+    "reason": "记忆[1][2]明确白鹭项目用Java加MySQL，旧说法青橙已被澄清",
+    "hits_n": 5,
+    "top1": "还有啊，我上回说项目叫“青橙”，那其实是我上一家公司实习时做的。现在公司做的项目叫“白鹭”，后端是 Java 加 MySQL。",
+    "judge_failed": false
+   },
+   {
+    "qid": 8,
+    "type": "normal",
+    "correct": 1,
+    "misled": 0,
+    "reason": "记忆[1]明确说实习项目叫青橙，信息在场",
+    "hits_n": 5,
+    "top1": "还有啊，我上回说项目叫“青橙”，那其实是我上一家公司实习时做的。现在公司做的项目叫“白鹭”，后端是 Java 加 MySQL。",
+    "judge_failed": false
+   },
+   {
+    "qid": 9,
+    "type": "normal",
+    "correct": 1,
+    "misled": 0,
+    "reason": "记忆[1]明确更正为养狗煤球，黑色泰迪，与答案一致",
+    "hits_n": 5,
+    "top1": "哎对了，我之前说锅巴是我养的，其实搞错了，锅巴是我合租室友的猫，我自己养的是条狗叫煤球，黑色泰迪。",
+    "judge_failed": false
+   },
+   {
+    "qid": 10,
+    "type": "normal",
+    "correct": 1,
+    "misled": 0,
+    "reason": "记忆[1]明确更正锅巴是合租室友的猫，正确信息在场。",
+    "hits_n": 5,
+    "top1": "哎对了，我之前说锅巴是我养的，其实搞错了，锅巴是我合租室友的猫，我自己养的是条狗叫煤球，黑色泰迪。",
+    "judge_failed": false
+   },
+   {
+    "qid": 11,
+    "type": "normal",
+    "correct": 1,
+    "misled": 0,
+    "reason": "记忆[1]明确小满18岁，信息一致无冲突",
+    "hits_n": 5,
+    "top1": "对了，我妹叫小满，今年 18 岁，2026 年 6 月高考，她说想报成都的大学。",
+    "judge_failed": false
+   },
+   {
+    "qid": 12,
+    "type": "normal",
+    "correct": 1,
+    "misled": 0,
+    "reason": "记忆明确提到2026年6月高考、想报成都的大学",
+    "hits_n": 5,
+    "top1": "对了，我妹叫小满，今年 18 岁，2026 年 6 月高考，她说想报成都的大学。",
+    "judge_failed": false
+   },
+   {
+    "qid": 13,
+    "type": "normal",
+    "correct": 1,
+    "misled": 0,
+    "reason": "记忆[1]明确阿哲在杭州做前端，无冲突信息",
+    "hits_n": 5,
+    "top1": "我最好的朋友阿哲，大学室友，现在在杭州做前端，我们约好每月至少打一次语音电话。",
+    "judge_failed": false
+   },
+   {
+    "qid": 14,
+    "type": "normal",
+    "correct": 1,
+    "misled": 0,
+    "reason": "记忆[1]明确每月至少打一次语音电话，无冲突信息。",
+    "hits_n": 5,
+    "top1": "我最好的朋友阿哲，大学室友，现在在杭州做前端，我们约好每月至少打一次语音电话。",
+    "judge_failed": false
+   },
+   {
+    "qid": 15,
+    "type": "normal",
+    "correct": 1,
+    "misled": 0,
+    "reason": "记忆[2][5]明确最新为西安、5月1-3日、钟楼附近",
+    "hits_n": 5,
+    "top1": "我五一准备去重庆玩，5 月 1 日到 5 月 4 日，住洪崖洞附近，已经看好一家民宿了，预算 1200。",
+    "judge_failed": false
+   },
+   {
+    "qid": 16,
+    "type": "normal",
+    "correct": 1,
+    "misled": 0,
+    "reason": "记忆[1][2][3]均明确必点脑花毛肚、不要香菜",
+    "hits_n": 5,
+    "top1": "我吃火锅必点脑花和毛肚，但香菜真的不行，奶茶只喝三分糖茉莉奶绿。",
+    "judge_failed": false
+   },
+   {
+    "qid": 17,
+    "type": "normal",
+    "correct": 1,
+    "misled": 0,
+    "reason": "记忆[1][2][3]均明确三分糖茉莉奶绿，无冲突",
+    "hits_n": 5,
+    "top1": "奶茶今天又点了三分糖茉莉奶绿，同事说我喝得也太固定了，但我就好这口。",
+    "judge_failed": false
+   },
+   {
+    "qid": 18,
+    "type": "normal",
+    "correct": 1,
+    "misled": 0,
+    "reason": "记忆[1]明确给出地址、面积、月租，与标准答案一致。",
+    "hits_n": 5,
+    "top1": "我住成都高新区中和街道，一个 40 平的一居室，月租 2300，8 月到期，想想又要找房就好烦。",
+    "judge_failed": false
+   },
+   {
+    "qid": 19,
+    "type": "normal",
+    "correct": 1,
+    "misled": 0,
+    "reason": "记忆[2][3]均明确房子8月到期，与标准答案一致",
+    "hits_n": 5,
+    "top1": "我有时候真觉得一个人住 40 平刚刚好，但一想到 8 月到期要搬家就头疼。",
+    "judge_failed": false
+   },
+   {
+    "qid": 20,
+    "type": "normal",
+    "correct": 1,
+    "misled": 0,
+    "reason": "记忆[1][3]均明确晚上8点到10点，无冲突信息。",
+    "hits_n": 5,
+    "top1": "我最近想学 Rust，打算从 2026 年 3 月开始，每周二、周四晚 8 点到 10 点啃《Rust 程序设计语言》第 2 版。",
+    "judge_failed": false
+   },
+   {
+    "qid": 21,
+    "type": "normal",
+    "correct": 1,
+    "misled": 0,
+    "reason": "记忆[2]明确给出2月18日购买，与标准答案一致。",
+    "hits_n": 5,
+    "top1": "空气净化器那个滤芯好像该换了，899 买的机器，后续耗材也不便宜啊。",
+    "judge_failed": false
+   },
+   {
+    "qid": 22,
+    "type": "normal",
+    "correct": 1,
+    "misled": 0,
+    "reason": "记忆[2]明确拼完75379是R2-D2，无冲突信息",
+    "hits_n": 5,
+    "top1": "下一个想买的乐高是 10300 回到未来时光机，等发工资再说吧。",
+    "judge_failed": false
+   },
+   {
+    "qid": 23,
+    "type": "normal",
+    "correct": 1,
+    "misled": 0,
+    "reason": "多条记忆均明确提到想报成都的大学",
+    "hits_n": 5,
+    "top1": "对了，我妹叫小满，今年 18 岁，2026 年 6 月高考，她说想报成都的大学。",
+    "judge_failed": false
+   },
+   {
+    "qid": 24,
+    "type": "normal",
+    "correct": 1,
+    "misled": 0,
+    "reason": "记忆[1]明确说阿哲是最好的朋友、大学室友，与标准答案一致。",
+    "hits_n": 5,
+    "top1": "我最好的朋友阿哲，大学室友，现在在杭州做前端，我们约好每月至少打一次语音电话。",
+    "judge_failed": false
+   },
+   {
+    "qid": 25,
+    "type": "normal",
+    "correct": 1,
+    "misled": 0,
+    "reason": "记忆未提西安预算，仅提重庆1200且已改，无冲突",
+    "hits_n": 5,
+    "top1": "我五一准备去重庆玩，5 月 1 日到 5 月 4 日，住洪崖洞附近，已经看好一家民宿了，预算 1200。",
+    "judge_failed": false
+   },
+   {
+    "qid": 26,
+    "type": "normal",
+    "correct": 1,
+    "misled": 0,
+    "reason": "记忆[1][2]明确当前白鹭项目用Java加MySQL，最新说法清晰。",
+    "hits_n": 5,
+    "top1": "还有啊，我上回说项目叫“青橙”，那其实是我上一家公司实习时做的。现在公司做的项目叫“白鹭”，后端是 Java 加 MySQL。",
+    "judge_failed": false
+   },
+   {
+    "qid": 27,
+    "type": "paraphrase",
+    "correct": 1,
+    "misled": 0,
+    "reason": "记忆[1]明确周二周四晚上，共两个晚上",
+    "hits_n": 5,
+    "top1": "Rust 那个计划还在，3 月开始，周二周四晚上 8 点到 10 点，目标 5 月底前刷完第 2 版。",
+    "judge_failed": false
+   },
+   {
+    "qid": 28,
+    "type": "paraphrase",
+    "correct": 1,
+    "misled": 0,
+    "reason": "记忆[1]明确提到米家空气净化器4 Lite，与标准答案一致。",
+    "hits_n": 5,
+    "top1": "2 月 18 号在京东花了 899 买了台米家空气净化器 4 Lite，放卧室里，成都这天气不开真的闷。",
+    "judge_failed": false
+   },
+   {
+    "qid": 29,
+    "type": "paraphrase",
+    "correct": 1,
+    "misled": 0,
+    "reason": "记忆[1]明确已完成75379，无冲突信息。",
+    "hits_n": 5,
+    "top1": "今天在家拼乐高，终于把 75379 那个 R2-D2 拼完了，摆桌上还挺好看。",
+    "judge_failed": false
+   },
+   {
+    "qid": 30,
+    "type": "paraphrase",
+    "correct": 1,
+    "misled": 0,
+    "reason": "记忆明确当前项目为白鹭，青橙为过期说法但已澄清",
+    "hits_n": 5,
+    "top1": "还有啊，我上回说项目叫“青橙”，那其实是我上一家公司实习时做的。现在公司做的项目叫“白鹭”，后端是 Java 加 MySQL。",
+    "judge_failed": false
+   },
+   {
+    "qid": 31,
+    "type": "paraphrase",
+    "correct": 1,
+    "misled": 0,
+    "reason": "记忆[1][3][4]明确煤球是黑色泰迪，正确信息在场",
+    "hits_n": 5,
+    "top1": "哎对了，我之前说锅巴是我养的，其实搞错了，锅巴是我合租室友的猫，我自己养的是条狗叫煤球，黑色泰迪。",
+    "judge_failed": false
+   },
+   {
+    "qid": 32,
+    "type": "paraphrase",
+    "correct": 1,
+    "misled": 0,
+    "reason": "记忆明确提到妹妹小满2026年高考，与标准答案一致。",
+    "hits_n": 5,
+    "top1": "我最好的朋友阿哲，大学室友，现在在杭州做前端，我们约好每月至少打一次语音电话。",
+    "judge_failed": false
+   },
+   {
+    "qid": 33,
+    "type": "correction",
+    "correct": 1,
+    "misled": 0,
+    "reason": "记忆[1]明确更正为室友的猫，自己养黑泰迪煤球",
+    "hits_n": 5,
+    "top1": "哎对了，我之前说锅巴是我养的，其实搞错了，锅巴是我合租室友的猫，我自己养的是条狗叫煤球，黑色泰迪。",
+    "judge_failed": false
+   },
+   {
+    "qid": 34,
+    "type": "correction",
+    "correct": 1,
+    "misled": 0,
+    "reason": "记忆[1]明确改口为白鹭，Java加MySQL，与标准一致",
+    "hits_n": 5,
+    "top1": "还有啊，我上回说项目叫“青橙”，那其实是我上一家公司实习时做的。现在公司做的项目叫“白鹭”，后端是 Java 加 MySQL。",
+    "judge_failed": false
+   },
+   {
+    "qid": 35,
+    "type": "correction",
+    "correct": 1,
+    "misled": 0,
+    "reason": "记忆[1][4]明确给出改后西安行程，与标准答案一致。",
+    "hits_n": 5,
+    "top1": "重庆那个计划改了，我五一其实要去西安，5 月 1 日到 5 月 3 日，住钟楼附近。",
+    "judge_failed": false
+   },
+   {
+    "qid": 36,
+    "type": "correction",
+    "correct": 1,
+    "misled": 0,
+    "reason": "记忆[1]明确纠正锅巴是室友的猫，自己养煤球",
+    "hits_n": 5,
+    "top1": "哎对了，我之前说锅巴是我养的，其实搞错了，锅巴是我合租室友的猫，我自己养的是条狗叫煤球，黑色泰迪。",
+    "judge_failed": false
+   },
+   {
+    "qid": 37,
+    "type": "noise",
+    "correct": 0,
+    "misled": 0,
+    "reason": "记忆未提书放卧室，也无冲突信息",
+    "hits_n": 5,
+    "top1": "晚上学 Rust 的时候锅巴一直趴我键盘上，我怀疑它是来阻止我学习的。",
+    "judge_failed": false
+   },
+   {
+    "qid": 38,
+    "type": "noise",
+    "correct": 1,
+    "misled": 0,
+    "reason": "记忆只提小夏拼R2-D2，未提小满喜欢，无冲突信息",
+    "hits_n": 5,
+    "top1": "今天在家拼乐高，终于把 75379 那个 R2-D2 拼完了，摆桌上还挺好看。",
+    "judge_failed": false
+   },
+   {
+    "qid": 39,
+    "type": "noise",
+    "correct": 1,
+    "misled": 0,
+    "reason": "记忆[4]明确煤球是小夏自己养的狗，非阿哲养",
+    "hits_n": 5,
+    "top1": "我最好的朋友阿哲，大学室友，现在在杭州做前端，我们约好每月至少打一次语音电话。",
+    "judge_failed": false
+   },
+   {
+    "qid": 40,
+    "type": "noise",
+    "correct": 1,
+    "misled": 0,
+    "reason": "记忆明确西安计划无1200元预算，1200元属已改的重庆计划",
+    "hits_n": 5,
+    "top1": "我五一准备去重庆玩，5 月 1 日到 5 月 4 日，住洪崖洞附近，已经看好一家民宿了，预算 1200。",
+    "judge_failed": false
+   }
+  ]
+ },
+ "sme_region_off": {
+  "status": "ok",
+  "error": null,
+  "reinit_s": 0.3,
+  "add_total_s": 72.3,
+  "add_p50_ms": 511.5,
+  "score": 38.0,
+  "acc": 0.95,
+  "misled": 0,
+  "storage": 86,
+  "retrieval_p50_ms": 276.1,
+  "quiz_total_s": 50.5,
+  "total_s": 123.1,
+  "details": [
+   {
+    "qid": 1,
+    "type": "normal",
+    "correct": 1,
+    "misled": 0,
+    "reason": "记忆[1][2]明确给出2026年3月、周二周四晚8-10点，无冲突",
+    "hits_n": 5,
+    "top1": "我最近想学 Rust，打算从 2026 年 3 月开始，每周二、周四晚 8 点到 10 点啃《Rust 程序设计语言》第 2 版。",
+    "judge_failed": false
+   },
+   {
+    "qid": 2,
+    "type": "normal",
+    "correct": 1,
+    "misled": 0,
+    "reason": "记忆[2][3]明确5月底前刷完第2版，信息一致",
+    "hits_n": 5,
+    "top1": "晚上学 Rust 的时候锅巴一直趴我键盘上，我怀疑它是来阻止我学习的。",
+    "judge_failed": false
+   },
+   {
+    "qid": 3,
+    "type": "normal",
+    "correct": 1,
+    "misled": 0,
+    "reason": "记忆[1]明确给出型号和价格，与标准答案一致。",
+    "hits_n": 5,
+    "top1": "2 月 18 号在京东花了 899 买了台米家空气净化器 4 Lite，放卧室里，成都这天气不开真的闷。",
+    "judge_failed": false
+   },
+   {
+    "qid": 4,
+    "type": "normal",
+    "correct": 1,
+    "misled": 0,
+    "reason": "记忆[2]明确说放卧室里，与标准答案一致。",
+    "hits_n": 5,
+    "top1": "空气净化器那个滤芯好像该换了，899 买的机器，后续耗材也不便宜啊。",
+    "judge_failed": false
+   },
+   {
+    "qid": 5,
+    "type": "normal",
+    "correct": 1,
+    "misled": 0,
+    "reason": "记忆[2]明确说已拼完75379 R2-D2，与标准答案一致。",
+    "hits_n": 5,
+    "top1": "我刚刚拼乐高拼到一半发现少了个件，气死，10300 还没买就先被 75379 折磨。",
+    "judge_failed": false
+   },
+   {
+    "qid": 6,
+    "type": "normal",
+    "correct": 1,
+    "misled": 0,
+    "reason": "记忆[1][3]明确提到下一个想买10300，信息一致",
+    "hits_n": 5,
+    "top1": "下一个想买的乐高是 10300 回到未来时光机，等发工资再说吧。",
+    "judge_failed": false
+   },
+   {
+    "qid": 7,
+    "type": "normal",
+    "correct": 1,
+    "misled": 0,
+    "reason": "记忆[1][3]明确白鹭项目用Java加MySQL，最新说法在场",
+    "hits_n": 5,
+    "top1": "还有啊，我上回说项目叫“青橙”，那其实是我上一家公司实习时做的。现在公司做的项目叫“白鹭”，后端是 Java 加 MySQL。",
+    "judge_failed": false
+   },
+   {
+    "qid": 8,
+    "type": "normal",
+    "correct": 1,
+    "misled": 0,
+    "reason": "记忆[1]明确说实习项目叫青橙，信息在场",
+    "hits_n": 5,
+    "top1": "还有啊，我上回说项目叫“青橙”，那其实是我上一家公司实习时做的。现在公司做的项目叫“白鹭”，后端是 Java 加 MySQL。",
+    "judge_failed": false
+   },
+   {
+    "qid": 9,
+    "type": "normal",
+    "correct": 1,
+    "misled": 0,
+    "reason": "记忆[1]明确更正为养狗煤球，黑色泰迪，与答案一致",
+    "hits_n": 5,
+    "top1": "哎对了，我之前说锅巴是我养的，其实搞错了，锅巴是我合租室友的猫，我自己养的是条狗叫煤球，黑色泰迪。",
+    "judge_failed": false
+   },
+   {
+    "qid": 10,
+    "type": "normal",
+    "correct": 1,
+    "misled": 0,
+    "reason": "记忆[1]明确更正锅巴是合租室友的猫，最新说法清晰。",
+    "hits_n": 5,
+    "top1": "哎对了，我之前说锅巴是我养的，其实搞错了，锅巴是我合租室友的猫，我自己养的是条狗叫煤球，黑色泰迪。",
+    "judge_failed": false
+   },
+   {
+    "qid": 11,
+    "type": "normal",
+    "correct": 1,
+    "misled": 0,
+    "reason": "记忆[1]明确小满18岁，无冲突信息",
+    "hits_n": 5,
+    "top1": "对了，我妹叫小满，今年 18 岁，2026 年 6 月高考，她说想报成都的大学。",
+    "judge_failed": false
+   },
+   {
+    "qid": 12,
+    "type": "normal",
+    "correct": 1,
+    "misled": 0,
+    "reason": "记忆明确2026年6月高考、想报成都大学，无冲突",
+    "hits_n": 5,
+    "top1": "对了，我妹叫小满，今年 18 岁，2026 年 6 月高考，她说想报成都的大学。",
+    "judge_failed": false
+   },
+   {
+    "qid": 13,
+    "type": "normal",
+    "correct": 1,
+    "misled": 0,
+    "reason": "记忆[1]明确给出阿哲在杭州做前端，与标准答案一致。",
+    "hits_n": 5,
+    "top1": "我最好的朋友阿哲，大学室友，现在在杭州做前端，我们约好每月至少打一次语音电话。",
+    "judge_failed": false
+   },
+   {
+    "qid": 14,
+    "type": "normal",
+    "correct": 1,
+    "misled": 0,
+    "reason": "记忆[1]明确每月至少打一次语音电话，与标准答案一致。",
+    "hits_n": 5,
+    "top1": "我最好的朋友阿哲，大学室友，现在在杭州做前端，我们约好每月至少打一次语音电话。",
+    "judge_failed": false
+   },
+   {
+    "qid": 15,
+    "type": "normal",
+    "correct": 1,
+    "misled": 0,
+    "reason": "记忆[2][5]明确最新为西安、5月1-3日、钟楼附近",
+    "hits_n": 5,
+    "top1": "我五一准备去重庆玩，5 月 1 日到 5 月 4 日，住洪崖洞附近，已经看好一家民宿了，预算 1200。",
+    "judge_failed": false
+   },
+   {
+    "qid": 16,
+    "type": "normal",
+    "correct": 1,
+    "misled": 0,
+    "reason": "记忆[1][2][3]均明确必点脑花毛肚、不要香菜",
+    "hits_n": 5,
+    "top1": "我吃火锅必点脑花和毛肚，但香菜真的不行，奶茶只喝三分糖茉莉奶绿。",
+    "judge_failed": false
+   },
+   {
+    "qid": 17,
+    "type": "normal",
+    "correct": 1,
+    "misled": 0,
+    "reason": "多条记忆均明确提到三分糖茉莉奶绿，无冲突信息",
+    "hits_n": 5,
+    "top1": "奶茶今天又点了三分糖茉莉奶绿，同事说我喝得也太固定了，但我就好这口。",
+    "judge_failed": false
+   },
+   {
+    "qid": 18,
+    "type": "normal",
+    "correct": 1,
+    "misled": 0,
+    "reason": "记忆[1]明确给出成都高新区中和街道40平一居室月租2300，与标准答案一致。",
+    "hits_n": 5,
+    "top1": "我住成都高新区中和街道，一个 40 平的一居室，月租 2300，8 月到期，想想又要找房就好烦。",
+    "judge_failed": false
+   },
+   {
+    "qid": 19,
+    "type": "normal",
+    "correct": 0,
+    "misled": 0,
+    "reason": "记忆只说8月到期，未提2026年，无法确认年份",
+    "hits_n": 5,
+    "top1": "我住成都高新区中和街道，一个 40 平的一居室，月租 2300，8 月到期，想想又要找房就好烦。",
+    "judge_failed": false
+   },
+   {
+    "qid": 20,
+    "type": "normal",
+    "correct": 1,
+    "misled": 0,
+    "reason": "记忆[1][3]均明确晚上8点到10点，无冲突信息。",
+    "hits_n": 5,
+    "top1": "我最近想学 Rust，打算从 2026 年 3 月开始，每周二、周四晚 8 点到 10 点啃《Rust 程序设计语言》第 2 版。",
+    "judge_failed": false
+   },
+   {
+    "qid": 21,
+    "type": "normal",
+    "correct": 1,
+    "misled": 0,
+    "reason": "记忆[2]明确给出2月18日购买，与标准答案一致。",
+    "hits_n": 5,
+    "top1": "空气净化器那个滤芯好像该换了，899 买的机器，后续耗材也不便宜啊。",
+    "judge_failed": false
+   },
+   {
+    "qid": 22,
+    "type": "normal",
+    "correct": 1,
+    "misled": 0,
+    "reason": "记忆[2]明确拼完75379是R2-D2，无冲突信息",
+    "hits_n": 5,
+    "top1": "下一个想买的乐高是 10300 回到未来时光机，等发工资再说吧。",
+    "judge_failed": false
+   },
+   {
+    "qid": 23,
+    "type": "normal",
+    "correct": 1,
+    "misled": 0,
+    "reason": "多条记忆均明确提到想报成都的大学，信息一致。",
+    "hits_n": 5,
+    "top1": "对了，我妹叫小满，今年 18 岁，2026 年 6 月高考，她说想报成都的大学。",
+    "judge_failed": false
+   },
+   {
+    "qid": 24,
+    "type": "normal",
+    "correct": 1,
+    "misled": 0,
+    "reason": "记忆[1]明确说阿哲是最好的朋友、大学室友，与标准答案一致。",
+    "hits_n": 5,
+    "top1": "我最好的朋友阿哲，大学室友，现在在杭州做前端，我们约好每月至少打一次语音电话。",
+    "judge_failed": false
+   },
+   {
+    "qid": 25,
+    "type": "normal",
+    "correct": 1,
+    "misled": 0,
+    "reason": "记忆未提西安预算，重庆1200已改，无冲突",
+    "hits_n": 5,
+    "top1": "我五一准备去重庆玩，5 月 1 日到 5 月 4 日，住洪崖洞附近，已经看好一家民宿了，预算 1200。",
+    "judge_failed": false
+   },
+   {
+    "qid": 26,
+    "type": "normal",
+    "correct": 1,
+    "misled": 0,
+    "reason": "记忆[1][2]明确当前白鹭项目用Java加MySQL，与标准一致",
+    "hits_n": 5,
+    "top1": "还有啊，我上回说项目叫“青橙”，那其实是我上一家公司实习时做的。现在公司做的项目叫“白鹭”，后端是 Java 加 MySQL。",
+    "judge_failed": false
+   },
+   {
+    "qid": 27,
+    "type": "paraphrase",
+    "correct": 1,
+    "misled": 0,
+    "reason": "记忆明确周二周四晚，一周两个晚上",
+    "hits_n": 5,
+    "top1": "Rust 那个计划还在，3 月开始，周二周四晚上 8 点到 10 点，目标 5 月底前刷完第 2 版。",
+    "judge_failed": false
+   },
+   {
+    "qid": 28,
+    "type": "paraphrase",
+    "correct": 1,
+    "misled": 0,
+    "reason": "记忆[1]明确提到米家空气净化器4 Lite，信息一致。",
+    "hits_n": 5,
+    "top1": "2 月 18 号在京东花了 899 买了台米家空气净化器 4 Lite，放卧室里，成都这天气不开真的闷。",
+    "judge_failed": false
+   },
+   {
+    "qid": 29,
+    "type": "paraphrase",
+    "correct": 1,
+    "misled": 0,
+    "reason": "记忆[1]明确已完成75379，无冲突信息。",
+    "hits_n": 5,
+    "top1": "今天在家拼乐高，终于把 75379 那个 R2-D2 拼完了，摆桌上还挺好看。",
+    "judge_failed": false
+   },
+   {
+    "qid": 30,
+    "type": "paraphrase",
+    "correct": 1,
+    "misled": 0,
+    "reason": "记忆明确当前项目为白鹭，青橙为旧实习项目，无冲突。",
+    "hits_n": 5,
+    "top1": "还有啊，我上回说项目叫“青橙”，那其实是我上一家公司实习时做的。现在公司做的项目叫“白鹭”，后端是 Java 加 MySQL。",
+    "judge_failed": false
+   },
+   {
+    "qid": 31,
+    "type": "paraphrase",
+    "correct": 1,
+    "misled": 0,
+    "reason": "记忆明确煤球是黑色泰迪，即小型犬品种泰迪",
+    "hits_n": 5,
+    "top1": "哎对了，我之前说锅巴是我养的，其实搞错了，锅巴是我合租室友的猫，我自己养的是条狗叫煤球，黑色泰迪。",
+    "judge_failed": false
+   },
+   {
+    "qid": 32,
+    "type": "paraphrase",
+    "correct": 1,
+    "misled": 0,
+    "reason": "记忆明确提到妹妹小满，与标准答案一致。",
+    "hits_n": 5,
+    "top1": "对了，我妹叫小满，今年 18 岁，2026 年 6 月高考，她说想报成都的大学。",
+    "judge_failed": false
+   },
+   {
+    "qid": 33,
+    "type": "correction",
+    "correct": 1,
+    "misled": 0,
+    "reason": "记忆[1]明确更正为室友的猫，自己养狗煤球",
+    "hits_n": 5,
+    "top1": "哎对了，我之前说锅巴是我养的，其实搞错了，锅巴是我合租室友的猫，我自己养的是条狗叫煤球，黑色泰迪。",
+    "judge_failed": false
+   },
+   {
+    "qid": 34,
+    "type": "correction",
+    "correct": 1,
+    "misled": 0,
+    "reason": "记忆[1]明确给出改口后为白鹭项目，信息完整无冲突",
+    "hits_n": 5,
+    "top1": "还有啊，我上回说项目叫“青橙”，那其实是我上一家公司实习时做的。现在公司做的项目叫“白鹭”，后端是 Java 加 MySQL。",
+    "judge_failed": false
+   },
+   {
+    "qid": 35,
+    "type": "correction",
+    "correct": 1,
+    "misled": 0,
+    "reason": "记忆[1][5]明确给出改去西安及日期住宿，与标准一致",
+    "hits_n": 5,
+    "top1": "重庆那个计划改了，我五一其实要去西安，5 月 1 日到 5 月 3 日，住钟楼附近。",
+    "judge_failed": false
+   },
+   {
+    "qid": 36,
+    "type": "correction",
+    "correct": 1,
+    "misled": 0,
+    "reason": "记忆[1]明确纠正锅巴是室友的猫，自己养煤球",
+    "hits_n": 5,
+    "top1": "哎对了，我之前说锅巴是我养的，其实搞错了，锅巴是我合租室友的猫，我自己养的是条狗叫煤球，黑色泰迪。",
+    "judge_failed": false
+   },
+   {
+    "qid": 37,
+    "type": "noise",
+    "correct": 0,
+    "misled": 0,
+    "reason": "记忆未提书放卧室，只提净化器在卧室，无冲突",
+    "hits_n": 5,
+    "top1": "晚上学 Rust 的时候锅巴一直趴我键盘上，我怀疑它是来阻止我学习的。",
+    "judge_failed": false
+   },
+   {
+    "qid": 38,
+    "type": "noise",
+    "correct": 1,
+    "misled": 0,
+    "reason": "记忆只提小夏拼R2-D2，未提小满喜欢，无冲突信息",
+    "hits_n": 5,
+    "top1": "今天在家拼乐高，终于把 75379 那个 R2-D2 拼完了，摆桌上还挺好看。",
+    "judge_failed": false
+   },
+   {
+    "qid": 39,
+    "type": "noise",
+    "correct": 1,
+    "misled": 0,
+    "reason": "记忆明确煤球是小夏的狗，未提阿哲养狗",
+    "hits_n": 5,
+    "top1": "我最好的朋友阿哲，大学室友，现在在杭州做前端，我们约好每月至少打一次语音电话。",
+    "judge_failed": false
+   },
+   {
+    "qid": 40,
+    "type": "noise",
+    "correct": 1,
+    "misled": 0,
+    "reason": "记忆明确西安无1200预算，1200属已改的重庆计划",
+    "hits_n": 5,
+    "top1": "我五一准备去重庆玩，5 月 1 日到 5 月 4 日，住洪崖洞附近，已经看好一家民宿了，预算 1200。",
+    "judge_failed": false
+   }
+  ]
+ }
+}
