@@ -91,6 +91,8 @@ class AddMemoryRequest(BaseModel):
     source: str = "user"
     link_to: Optional[str] = None
     link_kind: str = "reference"
+    # W26：可选命名空间（多用户隔离）；不传 = 完全 v1 行为（无 ns 标签）
+    ns: Optional[str] = None
 
 
 class UpdateMemoryRequest(BaseModel):
@@ -111,6 +113,8 @@ class SearchRequest(BaseModel):
     region_retrieval: Optional[str] = None
     include_archived: bool = False
     graph_expand: int = 0
+    # W26：可选命名空间过滤；不传 = 完全 v1 行为（不过滤）
+    ns: Optional[str] = None
 
 
 class RegionSearchRequest(BaseModel):
@@ -593,6 +597,9 @@ def create_app(
                 source=req.source,
                 link_to=req.link_to,
                 link_kind=req.link_kind,
+                # W26：ns 透传引擎（引擎内打 metadata["ns"] 标签）；
+                # None 时不打标签，行为与 v1 完全一致
+                ns=req.ns,
             )
         return memory.to_dict()
 
@@ -692,7 +699,9 @@ def create_app(
             graph_expand=req.graph_expand,
         )
         eng = _snapshot()
-        hits = eng.search(query)
+        # W26：ns 透传引擎（引擎内转 metadata_filters["ns"] 过滤）；
+        # None 时不加过滤，行为与 v1 完全一致
+        hits = eng.search(query, ns=req.ns)
         return {
             "query": req.text,
             "count": len(hits),

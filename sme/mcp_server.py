@@ -3,8 +3,8 @@
 把 Spatial Memory Engine 暴露为 Model Context Protocol 工具，供任意 MCP 宿主
 （ZCode / Claude Code 等智能体）在会话中自动读写长期记忆：
 
-    remember(text, tags, importance)   写入一条记忆（决策/偏好/发现）
-    recall(query, top_k)               语义检索记忆（返回 id 便于强化）
+    remember(text, tags, importance, ns)   写入一条记忆（决策/偏好/发现；ns 可选隔离）
+    recall(query, top_k, ns)               语义检索记忆（返回 id 便于强化；ns 可选隔离视图）
     reinforce(memory_id)               标记"用上了"（Ebbinghaus 强化，越用越牢）
     memory_stats()                     引擎状态（记忆数/Region 数）
 
@@ -130,6 +130,7 @@ def remember(
     text: str,
     tags: list[str] | None = None,
     importance: float = 0.5,
+    ns: str | None = None,
 ) -> str:
     """写入一条长期记忆。用于：用户偏好/要求、项目决策、重要发现、工作流约定。
 
@@ -137,24 +138,35 @@ def remember(
         text: 记忆内容（一句话自包含，将来要能脱离上下文看懂）
         tags: 分类标签，如 ["user_pref"] / ["project","decision"] / ["todo"]
         importance: 0.3-0.9，用户明确要求/核心决策用高值
+        ns: 可选命名空间（多 agent/多项目隔离）。传入后本条记忆只对
+            同 ns 的检索可见；不传 = 全局共享（默认，与 v1 行为一致）
     """
-    d = _api("POST", "/memories", {
+    payload: dict = {
         "text": text, "tags": tags or [], "importance": importance, "source": "session",
-    })
+    }
+    if ns is not None:
+        payload["ns"] = ns
+    d = _api("POST", "/memories", payload)
     mid = d.get("id") or d.get("memory", {}).get("id", "?")
     n = _api("GET", "/stats").get("memories", {}).get("total", "?")
     return f"已记住 [{mid}]（库内共 {n} 条）：{text[:80]}"
 
 
 @mcp.tool()
-def recall(query: str, top_k: int = 3) -> str:
+def recall(query: str, top_k: int = 3, ns: str | None = None) -> str:
     """语义检索长期记忆（口语化查询即可）。会话开始恢复上下文、工作中查"之前怎么定的"都用它。
 
     Args:
         query: 查询（如"用户对提交代码的要求" / "项目现在最重要的策略"）
         top_k: 返回条数（默认 3）
+        ns: 可选命名空间——只检索该 ns 的记忆（隔离视图）。不传 = 全库
+            （默认）。注意隔离是双向的：带 ns 检索看不到全局记忆，全局
+            检索看得到带标签记忆（写入方决定归哪个空间）
     """
-    d = _api("POST", "/memories/search", {"text": query, "top_k": top_k})
+    payload: dict = {"text": query, "top_k": top_k}
+    if ns is not None:
+        payload["ns"] = ns
+    d = _api("POST", "/memories/search", payload)
     results = d.get("results", [])
     if not results:
         return "（记忆库中无相关记忆）"

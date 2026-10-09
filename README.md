@@ -378,7 +378,7 @@ sdk.close()
 }}}
 ```
 
-- 提供 4 个工具：`remember`（写记忆）/ `recall`（语义检索）/ `reinforce`（命中强化）/ `memory_stats`
+- 提供 4 个工具：`remember`（写记忆）/ `recall`（语义检索）/ `reinforce`（命中强化）/ `memory_stats`；`remember`/`recall` 支持可选 `ns` 命名空间（多 agent 共库隔离，不传=全局）
 - 服务未运行时自动拉起（默认 `127.0.0.1:8000`，与 `api.port` 缺省一致，`SME_MCP_PORT` 可改），重启自动恢复快照+WAL
 - 主会话与子智能体共享同一记忆库（REST 服务单写者，无并发写风险）
 - 依赖：`pip install -e ".[mcp]"`（mcp>=2.0）

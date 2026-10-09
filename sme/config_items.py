@@ -346,9 +346,13 @@ ITEMS: list[ConfigItem] = [
         "分层上下文管理的 token 预算", kind="int",
         minimum=256, maximum=1000000, default=4096),
     _it("namespaces.enabled", "多用户隔离", "v2 模块",
-        "A/B 用户/场景记忆互不可见（机器人多人共用）", kind="bool", default=False),
+        "命名空间管理层开关（视图工厂 + /stats 按 ns 统计）。注意：隔离本身"
+        "由调用方传 ns 参数生效（REST/MCP/SDK 均支持），打开本开关不会自动"
+        "给已有记忆打标签、也不会拦截不带 ns 的调用；给不同会话/用户分库请"
+        "在各自调用里显式传 ns", kind="bool", default=False),
     _it("namespaces.default_ns", "默认命名空间", "v2 模块",
-        "未指定时的命名空间名", required=True, default="default"),
+        "命名空间视图（SDK view / 模块视图）未显式指定 ns 时使用的默认名",
+        required=True, default="default"),
     _it("rerank.enabled", "精排 Rerank", "v2 模块",
         "检索后用交叉编码器（bge-reranker）精排；默认关=零影响，开需安装 "
         "sentence-transformers", kind="bool", default=False),
