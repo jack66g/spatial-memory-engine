@@ -129,6 +129,7 @@ def test_b3_wal_preserves_metadata_ns(fresh_engine, zh, tmp_path, new_engine):
     e.save(e.config.storage.path)          # checkpoint
     e.add(zh["lives_beijing"], ns="user_a", tags=["fact"], metadata={"k": 2})
     assert e.wal.ops == 1
+    e.wal.close()
 
     e2 = new_engine()
     e2.config.storage.path = e.config.storage.path
@@ -149,6 +150,7 @@ def test_b3_wal_replay_ids_stable(fresh_engine, tmp_path, new_engine):
     e.save(e.config.storage.path)
     mid = next(iter(e.memories))
     e.add("another one")
+    e.wal.close()
     e2 = new_engine()
     e2.config.storage.path = e.config.storage.path
     e2.config.persistence.enabled = True

@@ -35,6 +35,7 @@ import time
 
 import httpx
 from mcp.server.mcpserver import MCPServer
+from mcp.server.mcpserver.exceptions import ToolError
 
 REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 _PORT = int(os.environ.get("SME_MCP_PORT", "8000"))
@@ -120,7 +121,11 @@ def _ensure_service(wait_seconds: float = 90.0) -> None:
 
 def _api(method: str, path: str, payload: dict | None = None) -> dict:
     _ensure_service()
-    r = httpx.request(method, f"{BASE_URL}{path}", json=payload, timeout=300, **_NO_ENV_PROXY)
+    token = os.environ.get("SME_MCP_AUTH_TOKEN") or os.environ.get("SME_API_AUTH_TOKEN", "")
+    headers = {"Authorization": f"Bearer {token}"} if token else {}
+    r = httpx.request(method, f"{BASE_URL}{path}", json=payload, headers=headers, timeout=300, **_NO_ENV_PROXY)
+    if r.status_code in (401, 403):
+        raise ToolError("SME authentication failed; check SME_MCP_AUTH_TOKEN / SME_API_AUTH_TOKEN")
     r.raise_for_status()
     return r.json()
 
@@ -131,6 +136,7 @@ def remember(
     tags: list[str] | None = None,
     importance: float = 0.5,
     ns: str | None = None,
+    conversation_id: str | None = None,
 ) -> str:
     """写入一条长期记忆。用于：用户偏好/要求、项目决策、重要发现、工作流约定。
 
@@ -146,6 +152,8 @@ def remember(
     }
     if ns is not None:
         payload["ns"] = ns
+    if conversation_id is not None:
+        payload["conversation_id"] = conversation_id
     d = _api("POST", "/memories", payload)
     mid = d.get("id") or d.get("memory", {}).get("id", "?")
     n = _api("GET", "/stats").get("memories", {}).get("total", "?")
@@ -153,7 +161,8 @@ def remember(
 
 
 @mcp.tool()
-def recall(query: str, top_k: int = 3, ns: str | None = None) -> str:
+def recall(query: str, top_k: int = 3, ns: str | None = None,
+           conversation_id: str | None = None) -> str:
     """语义检索长期记忆（口语化查询即可）。会话开始恢复上下文、工作中查"之前怎么定的"都用它。
 
     Args:
@@ -166,6 +175,8 @@ def recall(query: str, top_k: int = 3, ns: str | None = None) -> str:
     payload: dict = {"text": query, "top_k": top_k}
     if ns is not None:
         payload["ns"] = ns
+    if conversation_id is not None:
+        payload["conversation_id"] = conversation_id
     d = _api("POST", "/memories/search", payload)
     results = d.get("results", [])
     if not results:

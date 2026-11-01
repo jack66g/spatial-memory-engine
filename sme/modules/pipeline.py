@@ -49,6 +49,7 @@ class WriteContext:
     assistant: bool = False
     primary: Any = None                         # the primary stored memory
     pending_question: dict | None = None        # qapair capture between turns
+    conversation_id: str | None = None
     extra: dict = field(default_factory=dict)   # module scratch space
 
 

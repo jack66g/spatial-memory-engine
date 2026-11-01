@@ -171,6 +171,22 @@ class FactGraph:
             "valid_relations": valid,
         }
 
+    def remove_source(self, memory_id: str) -> None:
+        """Remove this support, retaining facts supported by other memories."""
+        removed_entities = {eid for eid, ent in self.entities.items()
+                            if ent.memory_ids == [memory_id]}
+        for ent in self.entities.values():
+            ent.memory_ids = [mid for mid in ent.memory_ids if mid != memory_id]
+        removed_relations = {r.id for r in self.relations if r.memory_ids == [memory_id]}
+        for rel in self.relations:
+            rel.memory_ids = [mid for mid in rel.memory_ids if mid != memory_id]
+        self.relations = [r for r in self.relations if r.id not in removed_relations]
+        self.entities = {eid: e for eid, e in self.entities.items() if eid not in removed_entities}
+        self.relations = [r for r in self.relations if r.source in self.entities and r.target in self.entities]
+        self._name_index = {}
+        for ent in self.entities.values():
+            self._name_index.setdefault(ent.name, []).append(ent.id)
+
     def to_dict(self) -> dict[str, Any]:
         return {
             "entities": [e.to_dict() for e in self.entities.values()],

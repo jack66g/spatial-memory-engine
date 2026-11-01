@@ -38,6 +38,7 @@ class MemoryGraph:
         # `edges` into O(degree) bucket scans. `self.edges` remains the
         # canonical insertion-ordered store (snapshot/export order unchanged).
         self._adj: dict[str, dict[int, MemoryEdge]] = {}
+        self.on_change = None
 
     def _index_edge(self, edge: MemoryEdge) -> None:
         """Register `edge` under both endpoints in the adjacency index."""
@@ -79,12 +80,16 @@ class MemoryGraph:
         if existing is not None:
             existing.weight = weight
             existing.note = note or existing.note
+            if self.on_change is not None:
+                self.on_change(existing)
             return existing
         edge = MemoryEdge(
             source=source, target=target, kind=kind, weight=weight, note=note
         )
         self.edges.append(edge)
         self._index_edge(edge)
+        if self.on_change is not None:
+            self.on_change(edge)
         return edge
 
     def find(self, source: str, target: str, kind: str) -> Optional[MemoryEdge]:

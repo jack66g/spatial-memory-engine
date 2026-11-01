@@ -45,6 +45,10 @@ from sme.utils import logger
 _GROUP_FLUSH_CAP = 256
 
 
+class WALRecoveryError(RuntimeError):
+    """Recovery was not committed; the original log must be retained."""
+
+
 def default_wal_path(storage_path: str) -> str:
     return storage_path + ".wal"
 
@@ -139,6 +143,10 @@ class WriteAheadLog:
         self.ops = 0
         self.replayed = 0
         self.checkpointed = 0
+        self.sequence = 0
+        self._append_lock = threading.RLock()
+        self._flush_lock = threading.RLock()
+        self.recovery_error: str | None = None
 
     @property
     def sqlite(self) -> bool:
@@ -271,6 +279,12 @@ class WriteAheadLog:
                 time.sleep(0.05)
 
     def _flush_buffer(self) -> None:
+        # Serializes background and explicit flushes. Taking the buffer alone
+        # is insufficient: a second writer could publish a later batch first.
+        with self._flush_lock:
+            self._flush_buffer_locked()
+
+    def _flush_buffer_locked(self) -> None:
         """把攒批 buffer 一次性落盘。
 
         文件模式：合并为一次 write + flush + fsync；sqlite 模式：
@@ -311,22 +325,25 @@ class WriteAheadLog:
     # ------------------------------------------------------------------ #
     def append(self, op: dict[str, Any]) -> None:
         """Append one op (single write + fsync in fsync mode)."""
+        with self._append_lock:
+            self._append(op)
+
+    def _append(self, op: dict[str, Any]) -> None:
         if not self.enabled:
             return
+        if self.recovery_error:
+            raise WALRecoveryError(self.recovery_error)
+        op = {**op, "seq": self.sequence + 1}
         self._open()
-        try:
-            line = json.dumps(op, ensure_ascii=False)
-        except (TypeError, ValueError):
-            # metadata may hold non-JSON-safe values (numpy scalars, sets...);
-            # never let that break the write path - drop the unsafe fields
-            safe = {k: v for k, v in op.items() if k != "metadata"}
-            line = json.dumps(safe, ensure_ascii=False)
+        # A lossy metadata fallback would acknowledge data we cannot recover.
+        line = json.dumps(op, ensure_ascii=False, separators=(",", ":"))
         if self.config.sync_mode == "grouped":
             # 组提交：只进内存攒批 + 攒满唤醒；落盘交给后台 flusher
             self._ensure_flusher()
             with self._buf_lock:
                 self._buf.append(line)
                 self.ops += 1
+                self.sequence = op["seq"]
                 full = len(self._buf) >= _GROUP_FLUSH_CAP
             if full:
                 self._wake.set()
@@ -346,17 +363,38 @@ class WriteAheadLog:
             if self.config.sync_mode == "fsync":
                 os.fsync(self._fh.fileno())
         self.ops += 1
+        self.sequence = op["seq"]
 
     def ops_since_checkpoint(self) -> int:
         return self.ops
+
+    def flush(self) -> int:
+        """Wait for in-flight grouped I/O and persist all accepted operations.
+
+        Returns the confirmed sequence. Unlike best-effort close(), failures
+        propagate. SQLite NORMAL commits are followed by a FULL checkpoint.
+        """
+        with self._append_lock, self._flush_lock:
+            if self.recovery_error:
+                raise WALRecoveryError(self.recovery_error)
+            self._flush_buffer_locked()
+            if self.sqlite and self._conn is not None:
+                with self._db_lock:
+                    self._conn.commit()
+                    status = self._conn.execute("PRAGMA wal_checkpoint(FULL)").fetchone()
+                    if status and status[0]:
+                        raise WALRecoveryError("SQLite WAL flush is busy; durability not confirmed")
+            elif self._fh is not None:
+                self._fh.flush()
+                os.fsync(self._fh.fileno())
+            return self.sequence
 
     def reset(self) -> None:
         """Truncate the WAL after a successful checkpoint.
 
         删除失败不允许静默：WAL 文件还在就说明 checkpoint 实际没有完成，
         重启后会重放已入快照的 ops。失败时记 warning 并把 OSError 抛给
-        调用方（engine.save 路径因此显式失败被上层看到；replay 路径在
-        replay() 内部兜住，不会阻断 load）。失败时 ``self.ops`` 保持
+        调用方（engine.save 路径因此显式失败被上层看到）。失败时 ``self.ops`` 保持
         pending，不谎报已 checkpoint。
 
         grouped 模式：checkpoint 语义 = 快照已含全部 ops，截断前必须先
@@ -430,7 +468,14 @@ class WriteAheadLog:
 
     # ------------------------------------------------------------------ #
     def replay(self, engine: Any) -> int:
-        """Replay pending ops onto an already-loaded engine."""
+        """Recover without truncation; only a durable checkpoint clears WAL.
+
+        Sequence numbers make replay safe after a committed snapshot whose
+        WAL truncation was interrupted. Legacy unsequenced logs remain readable.
+        Any corrupt/failed record is reported and retained for retry/repair.
+        """
+        self.close()
+        self.recovery_error = None
         # 只有文件模式才做"文件存在"探测：sqlite 模式下 path 就是快照库
         # 本身，按文件存在性判断恒真（库在即"WAL 在"）；sqlite 分支直接
         # 读 wal_ops 表，空表自然重放 0 条
@@ -448,25 +493,29 @@ class WriteAheadLog:
             with open(self.path, "r", encoding="utf-8") as fh:
                 lines = fh.readlines()
         count = 0
-        for line in lines:
-            line = line.strip()
-            if not line:
+        checkpoint = getattr(engine, "_checkpoint_sequence", 0)
+        self.sequence = max(self.sequence, checkpoint)
+        for index, line in enumerate(lines, 1):
+            if not line.strip():
                 continue
             try:
                 op = json.loads(line)
-            except json.JSONDecodeError:
-                continue
-            self._apply(engine, op)
+                if not isinstance(op, dict):
+                    raise ValueError("WAL record must be an object")
+                seq = op.get("seq", 0)
+                if not isinstance(seq, int) or seq < 0:
+                    raise ValueError("invalid WAL sequence")
+                self.sequence = max(self.sequence, seq)
+                if seq and seq <= checkpoint:
+                    continue
+                self._apply(engine, op)
+            except Exception as exc:
+                self.recovery_error = f"WAL replay failed at record {index}; log retained: {exc}"
+                logger.error(self.recovery_error)
+                raise WALRecoveryError(self.recovery_error) from exc
             count += 1
         self.replayed += count
-        if count:
-            try:
-                self.reset()
-            except OSError:
-                # 重放本身已成功，引擎状态正确；WAL 文件删不掉只意味着
-                # 下次启动会把这些 ops 再（幂等地）重放一遍，不能因此
-                # 让整个 load 失败。reset() 内部已记 warning，不静默。
-                pass
+        self.ops = count
         return count
 
     @staticmethod
@@ -474,42 +523,51 @@ class WriteAheadLog:
         kind = op.get("op")
         mid = op.get("mid")
         mm = engine.memory_manager
-        try:
-            if kind == "add":
-                if mid and mid in engine.memories:
-                    # 重放幂等：该 add 已在快照/先前重放中落库（archived
-                    # 记忆仍留在 memories 里，同样被覆盖）。重复执行会用
-                    # op 里的少数字段重建 Memory，重置 hit_count/weight/
-                    # version/created_at/last_hit，并对 Region 质心二次
-                    # 累加——直接跳过。update/delete/archive/restore 天然
-                    # 幂等，不需要 guard。
-                    return
-                mm.add_memory(
-                    text=op.get("text", ""),
-                    metadata=op.get("metadata", {}) or {},
-                    tags=op.get("tags", []) or [],
-                    importance=float(op.get("importance", 0.5)),
-                    source=op.get("source", "user"),
-                    memory_id=mid,
-                )
-            elif kind == "update" and mid:
-                mm.update_memory(
-                    mid,
-                    text=op.get("text"),
-                    metadata=op.get("metadata"),
-                    tags=op.get("tags"),
-                    importance=op.get("importance"),
-                    weight=op.get("weight"),
-                    summary=op.get("summary"),
-                )
-            elif kind == "delete" and mid:
-                mm.delete_memory(mid)
-            elif kind == "archive" and mid:
-                mm.archive_memory(mid)
-            elif kind == "restore" and mid:
-                mm.restore_memory(mid)
-        except Exception:  # noqa: BLE001 - tolerate partial/corrupt WALs
-            pass
+        if kind == "transaction":
+            engine._apply_write_transaction(op)
+            return
+        if kind == "add":
+            if mid and mid in engine.memories:
+                # 重放幂等：该 add 已在快照/先前重放中落库（archived
+                # 记忆仍留在 memories 里，同样被覆盖）。重复执行会用
+                # op 里的少数字段重建 Memory，重置 hit_count/weight/
+                # version/created_at/last_hit，并对 Region 质心二次
+                # 累加——直接跳过。update/delete/archive/restore 天然
+                # 幂等，不需要 guard。
+                return
+            if "state" in op:
+                from sme.models import Memory
+                memory = Memory.from_dict(op["state"])
+                if memory.embedding is None:
+                    memory.embedding = engine.embeddings.embed_one(memory.text)
+                mm._register(memory)
+                return
+            mm.add_memory(
+                text=op.get("text", ""),
+                metadata=op.get("metadata", {}) or {},
+                tags=op.get("tags", []) or [],
+                importance=float(op.get("importance", 0.5)),
+                source=op.get("source", "user"),
+                memory_id=mid,
+            )
+        elif kind == "update" and mid:
+            mm.update_memory(
+                mid,
+                text=op.get("text"),
+                metadata=op.get("metadata"),
+                tags=op.get("tags"),
+                importance=op.get("importance"),
+                weight=op.get("weight"),
+                summary=op.get("summary"),
+            )
+        elif kind == "delete" and mid:
+            mm.delete_memory(mid)
+        elif kind == "archive" and mid:
+            mm.archive_memory(mid)
+        elif kind == "restore" and mid:
+            mm.restore_memory(mid)
+        else:
+            raise ValueError(f"unsupported WAL operation: {kind!r}")
 
     def has_pending(self) -> bool:
         """True when the WAL still holds ops not checkpointed into a snapshot.
@@ -517,8 +575,7 @@ class WriteAheadLog:
         文件模式探测 ``.wal`` 文件是否存在且非空；sqlite 模式查
         ``wal_ops`` 行数——sqlite 模式下 ``path`` 就是快照库本身，调用方
         若按 ``os.path.getsize(wal.path) > 0`` 探测会恒真（库存在即
-        "有积压"），导致每次重启都白做一次全量 save。探测失败按无积压
-        处理，不阻断恢复路径。grouped 模式下仍在内存攒批、未落盘的 ops
+        "有积压"），导致每次重启都白做一次全量 save。探测失败会阻止恢复，避免误判为空库。grouped 模式下仍在内存攒批、未落盘的 ops
         同样算积压。
         """
         if not self.enabled:
@@ -540,8 +597,8 @@ class WriteAheadLog:
                 self.close(stop_flusher=False)
                 return bool(row and row[0])
             return os.path.exists(self.path) and os.path.getsize(self.path) > 0
-        except Exception:  # noqa: BLE001 - 探测失败视为无积压
-            return False
+        except Exception as exc:
+            raise WALRecoveryError(f"Cannot inspect pending WAL; recovery must not start empty: {exc}") from exc
 
     def stats(self) -> dict[str, Any]:
         return {

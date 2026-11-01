@@ -135,8 +135,9 @@ class MemoryManager:
         changed = False
         index_change = False
         if text is not None and text.strip() != memory.text:
+            vector = self.embeddings.embed_one(text)
             memory.text = text
-            memory.embedding = self.embeddings.embed_one(text)
+            memory.embedding = vector
             # re-insert into the spatial space
             self.space.remove(memory.id)
             memory.region_id = self.space.insert(memory.id, memory.embedding)
@@ -183,14 +184,26 @@ class MemoryManager:
         memory = self.memories.pop(memory_id, None)
         if memory is None:
             return False
+        self.archive.cold.pop(memory_id, None)
+        # A generated summary embeds the source's text, not just a pointer.
+        # Invalidate that summary when any support is deleted; the remaining
+        # source memories survive and can be summarized again later.
+        derived = [m.id for m in self.memories.values() if m.source == "summary"
+                   and (memory_id in m.children or memory_id in m.metadata.get("covers", []))]
+        for mid in derived:
+            self.delete_memory(mid)
         self.space.remove(memory_id)
         self.graph.remove_edges_for(memory_id)
         for other in self.memories.values():
+            affected = (memory_id in other.neighbors or memory_id in other.children
+                        or other.parent_id == memory_id)
             other.neighbors.discard(memory_id)
             if memory_id in other.children:
                 other.children.remove(memory_id)
             if other.parent_id == memory_id:
                 other.parent_id = None
+            if affected and self.on_upsert is not None:
+                self.on_upsert(other)
         if self.on_delete is not None:
             self.on_delete(memory_id)
         return True
@@ -233,7 +246,10 @@ class MemoryManager:
         for memory in self.memories.values():
             if memory.archived:
                 continue
+            previous = memory.decay_factor
             self.decay.apply(memory, reference)
+            if previous != memory.decay_factor and self.on_upsert is not None:
+                self.on_upsert(memory)
             count += 1
         return count
 
@@ -304,6 +320,9 @@ class MemoryManager:
         if child_id not in parent.children:
             parent.children.append(child_id)
         self.graph.add_edge(child_id, parent_id, KIND_PARENT, weight=1.0, note="child")
+        if self.on_upsert is not None:
+            self.on_upsert(child)
+            self.on_upsert(parent)
         return True
 
     def summary_memory(

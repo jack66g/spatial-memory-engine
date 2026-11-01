@@ -20,6 +20,7 @@ Disabled => no-op; the engine keeps storing every statement like v1.
 from __future__ import annotations
 
 from typing import Any, Optional
+import re
 
 import numpy as np
 
@@ -105,6 +106,37 @@ class FactVersion:
     def enabled(self) -> bool:
         return self.config.enabled
 
+    @staticmethod
+    def wants_history(query: Any) -> bool:
+        return bool(getattr(query, "include_history", False) or re.search(
+            r"以前|之前|原来|曾经|历史|当时|最早|过去|\b(?:previous|history|historical|before|used to)\b",
+            query.text, re.I))
+
+    def prioritize_current(self, query: Any, hits: list[Any], engine: Any) -> list[Any]:
+        """A confirmed successor outranks its ancestor on current-state queries.
+
+        This neither invents a correction link nor hides historical records.
+        Apply after any optional reranker and before final truncation.
+        """
+        if not self.enabled or self.wants_history(query):
+            return hits
+        by_id = {h.memory.id: h for h in hits}
+        for hit in hits:
+            current = hit.memory
+            seen = {current.id}
+            for _ in range(MAX_CHAIN):
+                successor = engine.memories.get(current.metadata.get(STALE_TAG))
+                if (successor is None or successor.id in seen or successor.archived
+                        or successor.metadata.get("ns") != hit.memory.metadata.get("ns")):
+                    break
+                seen.add(successor.id)
+                current = successor
+            successor_hit = by_id.get(current.id)
+            if successor_hit is not None and current.id != hit.memory.id:
+                hit.score = min(hit.score, successor_hit.score - 1e-9)
+                hit.breakdown.final = hit.score
+        return sorted(hits, key=lambda h: h.score, reverse=True)
+
     # ------------------------------------------------------------------ #
     @staticmethod
     def is_correction(fact: Fact) -> bool:
@@ -114,7 +146,7 @@ class FactVersion:
         return any(m in text for m in self.config.correct_markers)
 
     # ------------------------------------------------------------------ #
-    def resolve(self, fact: Fact, engine: Any) -> tuple[Optional[Any], bool]:
+    def resolve(self, fact: Fact, engine: Any, metadata: Optional[dict] = None) -> tuple[Optional[Any], bool]:
         """Resolve a fact against existing memories.
 
         Returns (memory_or_None, is_new):
@@ -128,11 +160,11 @@ class FactVersion:
         if not self.enabled:
             return None, True
         if self.is_correction(fact) or self.has_correction_marker(fact.text):
-            return self._apply_correction(fact, engine)
-        return self._dedup(fact, engine)
+            return self._apply_correction(fact, engine, metadata)
+        return self._dedup(fact, engine, (metadata or {}).get("ns"))
 
     # ------------------------------------------------------------------ #
-    def _find_matches(self, engine: Any, fact: Fact):
+    def _find_matches(self, engine: Any, fact: Fact, ns: Optional[str] = None):
         """Return (best_memory, cosine) or (None, 0.0)."""
         vec = engine.embeddings.embed_one(fact.text)
         try:
@@ -148,6 +180,8 @@ class FactVersion:
         for mid in ids:
             mem = engine.memories.get(mid)
             if mem is None or mem.archived:
+                continue
+            if mem.metadata.get("ns") != ns:
                 continue
             if mem.metadata.get("fact_kind") != "fact":
                 continue
@@ -180,9 +214,9 @@ class FactVersion:
                 return min(value, 0.66)
         return value
 
-    def _apply_correction(self, fact: Fact, engine: Any):
+    def _apply_correction(self, fact: Fact, engine: Any, metadata: Optional[dict] = None):
         """'其实/不对/更正' -> the newest statement is canonical."""
-        old, cos = self._find_matches(engine, fact)
+        old, cos = self._find_matches(engine, fact, (metadata or {}).get("ns"))
         if old is not None and cos >= self._threshold(engine, "correction_threshold"):
             # the supersede moment: one instant closes the old validity
             # window and opens the new one (v_old.invalid_at == v_new.valid_at)
@@ -190,6 +224,7 @@ class FactVersion:
             new = engine.memory_manager.add_memory(
                 text=fact.text,
                 metadata={
+                    **(metadata or {}),
                     "fact_kind": "fact",
                     "fact_subject": fact.subject,
                     "confidence": fact.confidence,
@@ -205,6 +240,8 @@ class FactVersion:
             self._mark_stale_siblings(engine, old, new, ts)
             old.metadata[STALE_TAG] = new.id
             old.metadata[INVALID_AT_KEY] = ts
+            if engine.memory_manager.on_upsert is not None:
+                engine.memory_manager.on_upsert(old)
             return new, True
         return None, True  # correction without a clear target => plain fact
 
@@ -241,6 +278,8 @@ class FactVersion:
         for mid, mem in list(engine.memories.items()):
             if mid in (old.id, new.id) or mem is None or mem.archived:
                 continue
+            if mem.metadata.get("ns") != old.metadata.get("ns"):
+                continue
             if mem.metadata.get(STALE_TAG):
                 continue
             emb = mem.embedding
@@ -259,11 +298,13 @@ class FactVersion:
                 if not isinstance(mem.metadata.get(INVALID_AT_KEY), (int, float)):
                     mem.metadata[INVALID_AT_KEY] = ts
                 marked += 1
+                if engine.memory_manager.on_upsert is not None:
+                    engine.memory_manager.on_upsert(mem)
         return marked
 
-    def _dedup(self, fact: Fact, engine: Any):
+    def _dedup(self, fact: Fact, engine: Any, ns: Optional[str] = None):
         """Repeat statements collapse onto the existing canonical memory."""
-        old, cos = self._find_matches(engine, fact)
+        old, cos = self._find_matches(engine, fact, ns)
         if old is not None and cos >= self._threshold(engine, "dedup_threshold"):
             return old, False
         return None, True

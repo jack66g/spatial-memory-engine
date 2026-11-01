@@ -43,6 +43,9 @@ under shallow noisy edges. The legacy BFS survives as the control path
 from __future__ import annotations
 
 import math
+import threading
+import weakref
+from collections import OrderedDict
 from dataclasses import dataclass, field
 from typing import Any, Optional
 
@@ -75,6 +78,8 @@ class SearchQuery:
     include_archived: bool = False
     region_retrieval: Optional[str] = None  # top1 | top3 | top5
     graph_expand: int = 0  # walk the memory graph for related memories (0=off)
+    conversation_id: Optional[str] = None  # limits QA replay, not ordinary memories
+    include_history: bool = False  # bypass current-version preference
 
 
 class BM25Index:
@@ -217,12 +222,56 @@ class BM25Index:
             out = {k: v / peak for k, v in out.items()}
         return out
 
+    def top_candidates(self, text: str, limit: int, allows) -> list[str]:
+        """Independent lexical recall, filtered before spending the budget."""
+        tokens = self._tok(text)
+        ids = set()
+        for token in tokens:
+            ids.update(self._postings.get(token, ()))
+        eligible = [mid for mid in ids if allows(mid)]
+        scores = self.scores(tokens, eligible, normalize=False)
+        return sorted((mid for mid in eligible if scores[mid] > 0),
+                      key=lambda mid: (-scores[mid], mid))[:limit]
+
 
 class TwoStageRetriever:
     def __init__(self, config: RetrievalConfig, ranker: MemoryRanker) -> None:
         self.config = config
         self.ranker = ranker
         self.bm25 = BM25Index(cjk_bigram=config.cjk_bigram)
+        self._query_cache = OrderedDict()
+        self._query_cache_lock = threading.Lock()
+
+    def prepare_query(self, provider, text: str) -> np.ndarray:
+        """Cache vectors only, never memory hits; writes cannot stale results."""
+        limit = max(0, self.config.query_cache_size)
+        try:
+            provider_ref = weakref.ref(provider)
+        except TypeError:
+            # A non-weakrefable custom provider remains usable, uncached.
+            provider_ref = None
+            limit = 0
+        key = (id(provider), getattr(provider, "query_prefix", ""), text)
+        if limit:
+            with self._query_cache_lock:
+                cached = self._query_cache.get(key)
+                if cached is not None and cached[0]() is provider:
+                    self._query_cache.move_to_end(key)
+                    while len(self._query_cache) > limit:
+                        self._query_cache.popitem(last=False)
+                    return cached[1]
+        encode = getattr(provider, "embed_query", provider.embed_one)
+        vector = np.asarray(encode(text)).copy()
+        vector.setflags(write=False)
+        with self._query_cache_lock:
+            if limit:
+                # Identity is verified through a weakref: cached vectors must
+                # neither pin an old multi-GB model nor match a reused id.
+                self._query_cache[key] = (provider_ref, vector)
+                self._query_cache.move_to_end(key)
+            while len(self._query_cache) > limit:
+                self._query_cache.popitem(last=False)
+        return vector
 
     # ------------------------------------------------------------------ #
     def refresh_keywords(self, engine: object) -> None:
@@ -252,11 +301,13 @@ class TwoStageRetriever:
         self.refresh_keywords(engine)
 
     # ------------------------------------------------------------------ #
-    def search(self, engine: object, query: SearchQuery) -> list[SearchHit]:
+    def search(self, engine: object, query: SearchQuery,
+               query_vector: Optional[np.ndarray] = None) -> list[SearchHit]:
         """Two-stage search: regions first, then memories inside them."""
         ref = now()
         self.warm_keywords(engine)
-        query_vec = engine.embeddings.embed_one(query.text)
+        query_vec = (self.prepare_query(engine.embeddings, query.text)
+                     if query_vector is None else query_vector)
 
         # stage 1: region retrieval
         # explicit query override -> region_retrieval string -> config default
@@ -343,6 +394,17 @@ class TwoStageRetriever:
                     # these memories come from unranked regions, so they get
                     # the flat dampening boost (keyed by their region id)
                     region_scores.setdefault(rid or "", self.config.region_dampening)
+
+        if self.config.keyword_candidates > 0 and self.config.keyword_weight > 0:
+            def allows(mid):
+                m = engine.memories.get(mid)
+                return m is not None and (not m.archived or query.include_archived) and (
+                    engine.policy.allows_retrieval(m) or query.include_archived
+                ) and self._metadata_matches(m, query.metadata_filters) and self._tags_match(m, query.tags)
+            for mid in self.bm25.top_candidates(query.text, self.config.keyword_candidates, allows):
+                candidate_ids.add(mid)
+                rid = engine.space.region_for(mid)
+                region_scores.setdefault(rid or "", self.config.region_dampening)
 
         if not candidate_ids:
             return []
@@ -812,7 +874,7 @@ class TwoStageRetriever:
     # ------------------------------------------------------------------ #
     def search_regions(self, engine: object, text: str, top_k: int) -> list[RegionHit]:
         """Region-only retrieval (stage 1 standalone)."""
-        query_vec = engine.embeddings.embed_one(text)
+        query_vec = self.prepare_query(engine.embeddings, text)
         return engine.space.query_regions(query_vec, top_k)
 
     # ------------------------------------------------------------------ #
@@ -914,6 +976,14 @@ class TwoStageRetriever:
             mids = list(matched)
             return self._minmax_apply(raw, mids, np.array([matched[m] for m in mids]))
         return self.bm25.scores(tokens, ids)
+
+    @staticmethod
+    def visible(engine, memory, query: SearchQuery) -> bool:
+        """The same eligibility rules apply to every recall channel."""
+        return ((not memory.archived or query.include_archived)
+                and (engine.policy.allows_retrieval(memory) or query.include_archived)
+                and TwoStageRetriever._metadata_matches(memory, query.metadata_filters)
+                and TwoStageRetriever._tags_match(memory, query.tags))
 
     @staticmethod
     def _metadata_matches(memory, filters: dict[str, Any]) -> bool:

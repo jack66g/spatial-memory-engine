@@ -98,7 +98,7 @@ class ExtractionStage:
         if not ctx.facts:
             ctx.drop = True
         else:
-            ctx.facts = engine.extraction.dedup(ctx.facts, engine)
+            ctx.facts = engine.extraction.dedup(ctx.facts, engine, ns=ctx.metadata.get(NS_KEY))
             # opt-in dual write (getattr: not a declared config field, default
             # off => zero behavior drift). LLM extraction rewrites sever the
             # scene->entity context ("为了对付成都春天的雾霾" is lost from the
@@ -150,7 +150,7 @@ class CanonicalStage:
                 if fact.kind == "question":
                     canonical.append(fact)
                 elif engine.factversion.enabled:
-                    mem, is_new = engine.factversion.resolve(fact, engine)
+                    mem, is_new = engine.factversion.resolve(fact, engine, metadata=ctx.metadata)
                     if mem is not None and not is_new:
                         continue  # duplicate -> already remembered
                     canonical.append(mem if mem is not None else fact)
@@ -228,7 +228,7 @@ class StorageStage:
             return
         try:
             vec = engine.embeddings.embed_one(raw)
-            sims = engine.extraction._top_similar(engine, vec, k=5)
+            sims = engine.extraction._top_similar(engine, vec, k=5, ns=ctx.metadata.get(NS_KEY))
             if sims and sims[0] >= engine.extraction.config.dedup_threshold:
                 return  # raw already remembered verbatim
         except Exception:  # noqa: BLE001 - best effort dedup guard
@@ -258,6 +258,7 @@ class StorageStage:
                 "question_memory_id": mem.id,
                 "answer_memory_id": None,
                 "ns": ctx.metadata.get(NS_KEY),
+                "conversation_id": ctx.conversation_id,
             }
         return mem
 
@@ -293,43 +294,43 @@ class AnswerCaptureStage:
 
     def run(self, engine: Any, ctx: WriteContext) -> WriteContext:
         bridge = self._bridge
+        scope = (ctx.metadata.get(NS_KEY), ctx.conversation_id)
         if ctx.pending_question is not None:
             # 跨 add 调用传递：问题在上一轮 user 消息里，答案在本轮
-            bridge.pending_question = ctx.pending_question
-        if ctx.assistant and bridge.pending_question:
+            bridge.pending_questions[scope] = ctx.pending_question
+        if ctx.assistant and scope in bridge.pending_questions:
             self._capture_answer(engine, ctx, ctx.primary)
         elif not ctx.assistant and not ctx.primary:
             # a user utterance that produced nothing (question w/o qapair)
-            bridge.pending_question = None
+            bridge.pending_questions.pop(scope, None)
         return ctx
 
     def _capture_answer(self, engine: Any, ctx: WriteContext, primary: Any) -> None:
         bridge = self._bridge
-        if not engine.qapair.enabled or not bridge.pending_question:
+        scope = (ctx.metadata.get(NS_KEY), ctx.conversation_id)
+        if not engine.qapair.enabled or scope not in bridge.pending_questions:
             return
-        pq = bridge.pending_question
+        pq = bridge.pending_questions[scope]
         answer_mid = None
         if primary is not None and getattr(primary, "kind", None) != "question":
             answer_mid = primary.id
-        try:
-            engine.qapair.put(
-                question=pq["question"],
-                answer_text=ctx.text,
-                question_memory_id=pq.get("question_memory_id"),
-                answer_memory_id=answer_mid,
-                ns=pq.get("ns"),
-                engine=engine,
-            )
-        except Exception:  # noqa: BLE001
-            pass
-        bridge.pending_question = None
+        engine.qapair.put(
+            question=pq["question"],
+            answer_text=ctx.text,
+            question_memory_id=pq.get("question_memory_id"),
+            answer_memory_id=answer_mid,
+            ns=pq.get("ns"),
+            conversation_id=ctx.conversation_id,
+            engine=engine,
+        )
+        bridge.pending_questions.pop(scope, None)
 
 
 # --------------------------------------------------------------------------- #
 class V2Bridge:
     def __init__(self, engine: Any) -> None:
         self.engine = engine
-        self.pending_question: dict | None = None
+        self.pending_questions: dict[tuple, dict] = {}
         self._current_batch: str | None = None   # add-batch id (stale propagation)
         self._pipeline = WritePipeline()
         self._pipeline.register(ExtractionStage())
@@ -354,7 +355,8 @@ class V2Bridge:
         )
 
     def add(self, text: str, metadata=None, tags=None, importance=0.5,
-            source="user", link_to=None, link_kind="reference", embedding=None) -> Optional[Any]:
+            source="user", link_to=None, link_kind="reference", embedding=None,
+            conversation_id=None) -> Optional[Any]:
         """Pipeline write. Returns the primary stored memory (or None).
 
         Called by ``engine.add`` only when at least one v2 write-side module
@@ -373,6 +375,7 @@ class V2Bridge:
             link_kind=link_kind,
             embedding=embedding,
             assistant=(source == "assistant"),
+            conversation_id=conversation_id,
         )
         # one batch id per add() call: factversion stale propagation marks
         # the whole old statement (sibling fragments + raw) in one shot
@@ -412,7 +415,7 @@ class V2Bridge:
                     e.retriever.config.top_regions, POOL_REGIONS
                 )
 
-    def search_pre(self, query: Any) -> list[SearchHit]:
+    def search_pre(self, query: Any, query_vector=None) -> list[SearchHit]:
         """Module 02: direct question/answer replay (before v1 retrieval)."""
         e = self.engine
         self._pool_widen(query)
@@ -422,10 +425,11 @@ class V2Bridge:
             return []
         # module 12 isolation: replay only pairs of the queried namespace
         ns = (query.metadata_filters or {}).get(NS_KEY)
-        pairs = e.qapair.lookup(query.text, e, ns=ns)
+        pairs = e.qapair.lookup(query.text, e, ns=ns, query_vector=query_vector,
+                                conversation_id=query.conversation_id)
         if not pairs:
             return []
-        return e.qapair.answer_hits(pairs, e)
+        return e.qapair.answer_hits(pairs, e, query=query)
 
     def search_post(self, query: Any, hits: list[SearchHit]) -> list[SearchHit]:
         """Modules 03/04/05/06 after the v1 retrieval pipeline."""
@@ -441,7 +445,7 @@ class V2Bridge:
                 hits = e.noise.apply(hits, e)
             if e.profile.enabled:
                 hits = e.profile.boost(hits)
-            if e.factversion.enabled:
+            if e.factversion.enabled and not e.factversion.wants_history(query):
                 penalty = e.factversion.config.stale_penalty
                 # "stale but uniquely informative" guard: an old statement that
                 # still carries numbers/dates none of the live hits has (e.g.
@@ -566,7 +570,7 @@ class V2Bridge:
 
         for mid, depth in new_mems:
             mem = e.memories.get(mid)
-            if mem is None or mem.archived:
+            if mem is None or not e.retriever.visible(e, mem, query):
                 continue
             # module 12 isolation + general metadata filters: graph-recovered
             # memories must satisfy the query filters exactly like vector hits

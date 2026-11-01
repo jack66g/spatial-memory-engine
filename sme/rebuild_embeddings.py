@@ -197,6 +197,11 @@ def main(argv: Optional[list[str]] = None) -> int:
 
     # 重建期间禁用 autosave：导入中途的周期快照不该覆盖旧库
     engine.config.storage.autosave = False
+    if snapshot.module_state is not None:
+        engine._restore_module_state(snapshot.module_state)
+    else:
+        engine._load_sidecars()
+    engine.wal.sequence = snapshot.wal_sequence
     # 图边先恢复（import 不碰 graph；这样 WAL 模式下 import 触发的即时
     # checkpoint 也带着完整图边）
     engine.graph.load_dict(

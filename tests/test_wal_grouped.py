@@ -30,7 +30,8 @@ def test_config_items_registered_group_commit():
     # 标记 + MRL 截维，见 tests/test_embedding_revision_rebuild.py）
     # 94 -> 97：新增 maintenance.background/idle_after_s/every_s（空闲期
     # 整理 sleep-time compute，见 tests/test_sleep_maintenance.py）
-    assert len(ci.ITEMS) == 97
+    # Query prefix, lexical recall budget, raw similarity floor and vector LRU.
+    assert len(ci.ITEMS) == 101
     sync = ci.ITEM_BY_PATH["persistence.sync_mode"]
     assert sync.kind == "enum"
     assert sync.choices == ("fsync", "grouped")
@@ -169,7 +170,8 @@ def test_grouped_replay_roundtrip(tmp_path):
     wal.close()
 
     class _Mem:
-        pass
+        def add_memory(self, **kwargs):
+            return None
 
     class _FakeEngine:
         def __init__(self):
@@ -179,7 +181,10 @@ def test_grouped_replay_roundtrip(tmp_path):
     engine = _FakeEngine()
     count = wal.replay(engine)
     assert count == 4
-    assert wal.ops == 0
+    # replay is not a checkpoint: keep the only durable copy until save.
+    assert wal.ops == 4
+    assert os.path.exists(wal.path)
+    wal.reset()
     assert not os.path.exists(wal.path)
 
 
@@ -305,6 +310,7 @@ def test_engine_grouped_file_roundtrip(fresh_engine, new_engine, tmp_path):
         e.add(f"grouped new {i}")
     time.sleep(0.1)  # flusher 窗口
     assert e.wal.ops == 3
+    e.wal.close()  # a restart must release the original writer's file handle
 
     e2 = new_engine()
     e2.config.storage.path = e.config.storage.path

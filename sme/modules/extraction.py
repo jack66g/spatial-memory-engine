@@ -217,7 +217,7 @@ class ExtractionEngine:
         return kept
 
     # ------------------------------------------------------------------ #
-    def dedup(self, facts: list[Fact], engine: Any) -> list[Fact]:
+    def dedup(self, facts: list[Fact], engine: Any, ns: str | None = None) -> list[Fact]:
         """Embed each fact and drop those too similar to existing memories.
 
         Cosine >= dedup_threshold against any of the top-5 most similar
@@ -233,7 +233,7 @@ class ExtractionEngine:
                 out.append(fact)
                 continue
             vec = engine.embeddings.embed_one(fact.text)
-            sims = self._top_similar(engine, vec, k=5)
+            sims = self._top_similar(engine, vec, k=5, ns=ns)
             if sims and sims[0] >= threshold:
                 self.dedup_skipped += 1
                 continue
@@ -241,7 +241,8 @@ class ExtractionEngine:
         return out
 
     @staticmethod
-    def _top_similar(engine: Any, vec: np.ndarray, k: int = 5) -> list[float]:
+    def _top_similar(engine: Any, vec: np.ndarray, k: int = 5,
+                     ns: str | None = None) -> list[float]:
         """Cosine of the top-k most similar *unarchived* memories (bounded)."""
         try:
             regions = engine.space.query_regions(vec, 2)
@@ -256,11 +257,12 @@ class ExtractionEngine:
             return []
         mems = [
             m for m in (engine.memories.get(mid) for mid in ids)
-            if m is not None and not m.archived
+            if m is not None and not m.archived and m.embedding is not None
+            and m.metadata.get("ns") == ns
         ]
         if not mems:
             return []
-        mat = np.stack([m.embedding for m in mems if m.embedding is not None])
+        mat = np.stack([m.embedding for m in mems])
         if mat.size == 0:
             return []
         v = vec / max(float(np.linalg.norm(vec)), 1e-12)

@@ -67,32 +67,40 @@ class UserProfile:
             memory.tags = list(set(memory.tags + [PROFILE_TAG]))
             self._write_count += 1
             if self._write_count >= self.config.snapshot_every:
-                self.snapshot("default")
+                self.snapshot(ns=memory.metadata.get("ns"))
                 self._write_count = 0
             return True
         return False
 
     # ------------------------------------------------------------------ #
-    def snapshot(self, user_id: str = "default") -> dict:
+    def snapshot(self, user_id: str = "default", *, ns: str | None = None) -> dict:
         """Emit a profile snapshot: the top-N profile facts for one user."""
         top = self.config.top_facts
-        mems = self.profile_memories({})
+        mems = self.profile_memories({}, ns=ns)
         facts = [m.text for m in mems if m.source != "summary"][:top]
-        snap = {"ts": now(), "facts": facts, "count": len(facts)}
-        self.snapshots[user_id] = snap
+        snap = {"ts": now(), "facts": facts, "count": len(facts), "ns": ns}
+        self.snapshots[user_id if ns is None else "ns:" + ns] = snap
         return snap
 
-    def profile_memories(self, engine_memories: dict) -> list:
+    def profile_memories(self, engine_memories: dict, ns: str | None = None) -> list:
         """Current profile memories (ordered by importance)."""
         if self._engine is not None and not engine_memories:
             engine_memories = self._engine.memories
         out = []
         for mid in self.profile_facts:
             mem = engine_memories.get(mid)
-            if mem is not None and not mem.archived:
+            if (mem is not None and not mem.archived
+                    and not mem.metadata.get("superseded_by")
+                    and (ns is None or mem.metadata.get("ns") == ns)):
                 out.append(mem)
         out.sort(key=lambda m: m.importance, reverse=True)
         return out
+
+    def remove_source(self, memory_id: str) -> None:
+        self.profile_facts = [mid for mid in self.profile_facts if mid != memory_id]
+        # Legacy snapshots lack source IDs: invalidate instead of replaying
+        # a deleted claim from a text-only cache.
+        self.snapshots.clear()
 
     # ------------------------------------------------------------------ #
     def boost(self, hits: list[Any]) -> list[Any]:
@@ -119,7 +127,7 @@ class UserProfile:
         return {
             "profile_facts": list(self.profile_facts),
             "snapshots": {
-                k: {"ts": v["ts"], "facts": v["facts"], "count": v["count"]}
+                k: dict(v)
                 for k, v in self.snapshots.items()
             },
             "write_count": self._write_count,
@@ -129,7 +137,7 @@ class UserProfile:
         self.profile_facts = list(data.get("profile_facts", []))
         self.snapshots = {
             k: {"ts": v.get("ts", now()), "facts": v.get("facts", []),
-                "count": v.get("count", 0)}
+                "count": v.get("count", 0), "ns": v.get("ns")}
             for k, v in data.get("snapshots", {}).items()
         }
         self._write_count = int(data.get("write_count", 0))

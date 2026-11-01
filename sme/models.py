@@ -424,6 +424,7 @@ class QAPair:
     answer_memory_id: str | None = None
     created_at: float = field(default_factory=now)
     ns: str | None = None  # optional namespace tag (module 12 isolation)
+    conversation_id: str | None = None
 
     def to_dict(self) -> dict[str, Any]:
         return {
@@ -433,6 +434,7 @@ class QAPair:
             "answer_memory_id": self.answer_memory_id,
             "created_at": self.created_at,
             "ns": self.ns,
+            "conversation_id": self.conversation_id,
         }
 
     @classmethod
@@ -444,6 +446,7 @@ class QAPair:
             answer_memory_id=data.get("answer_memory_id"),
             created_at=float(data.get("created_at", now())),
             ns=data.get("ns"),
+            conversation_id=data.get("conversation_id"),
         )
 
 

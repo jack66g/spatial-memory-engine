@@ -17,6 +17,7 @@ Disabled => no-op; questions are simply dropped by extraction (v1+module 01).
 from __future__ import annotations
 
 import hashlib
+import json
 from typing import Any, Optional
 
 import numpy as np
@@ -53,7 +54,7 @@ class QAPairStore:
             question_memory_id: str | None = None,
             answer_memory_id: str | None = None,
             ns: str | None = None,
-            engine: Any = None) -> QAPair:
+            engine: Any = None, conversation_id: str | None = None) -> QAPair:
         """Store or refresh one question/answer pair."""
         q = question.strip()
         a = (answer_text or "").strip()
@@ -65,11 +66,10 @@ class QAPairStore:
             except Exception:  # noqa: BLE001 - caching is best-effort
                 pass
         for pair in self.pairs:
-            if pair.question == q:
+            if (pair.question, pair.ns, pair.conversation_id) == (q, ns, conversation_id):
                 pair.answer_text = a or pair.answer_text
                 pair.answer_memory_id = answer_memory_id or pair.answer_memory_id
                 pair.question_memory_id = question_memory_id or pair.question_memory_id
-                pair.ns = ns or pair.ns
                 pair.created_at = now()
                 return pair
         pair = QAPair(
@@ -79,6 +79,7 @@ class QAPairStore:
             answer_memory_id=answer_memory_id,
             created_at=now(),
             ns=ns,
+            conversation_id=conversation_id,
         )
         self.pairs.append(pair)
         return pair
@@ -96,7 +97,8 @@ class QAPairStore:
             pass
 
     def lookup(self, question: str, engine: Any, top_k: int | None = None,
-               ns: str | None = None) -> list[QAPair]:
+               ns: str | None = None, query_vector=None,
+               conversation_id: str | None = None) -> list[QAPair]:
         """Semantic lookup of stored questions; sorted by cosine desc.
 
         ``ns`` (module 12): when a namespace is given, only pairs stored in
@@ -116,7 +118,8 @@ class QAPairStore:
         threshold = self.config.similarity_threshold
         if engine.embeddings.name != "hashing":
             threshold = min(threshold, 0.72)
-        qvec = engine.embeddings.embed_one(question)
+        qvec = (engine.retriever.prepare_query(engine.embeddings, question)
+                if query_vector is None else query_vector)
         self._fill_cache(engine)
         scored: list[tuple[float, QAPair]] = []
         cutoff = now() - self.config.max_age_days * 86400.0
@@ -125,6 +128,8 @@ class QAPairStore:
             if pair.created_at < cutoff:
                 continue
             if ns is not None and pair.ns != ns:
+                continue
+            if conversation_id is not None and pair.conversation_id != conversation_id:
                 continue
             pvec = self._vec_cache.get(pair.question)
             if pvec is None:
@@ -138,10 +143,18 @@ class QAPairStore:
         return [p for c, p in scored if c >= threshold][:top_k]
 
     # ------------------------------------------------------------------ #
-    def answer_hits(self, pairs: list[QAPair], engine: Any) -> list[SearchHit]:
+    def answer_hits(self, pairs: list[QAPair], engine: Any, query=None) -> list[SearchHit]:
         """Turn matched pairs into replay hits (synthesized memories)."""
         hits: list[SearchHit] = []
         for pair in pairs:
+            sources = [engine.memories.get(mid) for mid in
+                       (pair.question_memory_id, pair.answer_memory_id) if mid]
+            if any(m is None or m.metadata.get("ns") != pair.ns for m in sources):
+                continue
+            if pair.question_memory_id and engine.memories[pair.question_memory_id].text != pair.question:
+                continue
+            if query is not None and any(not engine.retriever.visible(engine, m, query) for m in sources):
+                continue
             answer_memory = None
             if pair.answer_memory_id:
                 answer_memory = engine.memories.get(pair.answer_memory_id)
@@ -150,9 +163,16 @@ class QAPairStore:
                 continue
             mid = (
                 answer_memory.id if answer_memory is not None
-                else "qa_" + hashlib.sha1(pair.question.encode("utf-8")).hexdigest()[:16]
+                else "qa_" + hashlib.sha1(json.dumps(
+                    [pair.ns, pair.conversation_id, pair.question], ensure_ascii=False
+                ).encode("utf-8")).hexdigest()[:16]
             )
-            mem = _synthetic_memory(mid, text, answer_memory)
+            original = answer_memory or (sources[0] if sources else None)
+            mem = _synthetic_memory(mid, text, original)
+            if pair.ns is not None:
+                mem.metadata["ns"] = pair.ns
+            if query is not None and not engine.retriever.visible(engine, mem, query):
+                continue
             hits.append(
                 SearchHit(
                     memory=mem,
@@ -164,6 +184,12 @@ class QAPairStore:
                 )
             )
         return hits
+
+    def remove_source(self, memory_id: str) -> None:
+        self.pairs = [p for p in self.pairs if memory_id not in
+                      (p.question_memory_id, p.answer_memory_id)]
+        retained = {p.question for p in self.pairs}
+        self._vec_cache = {q: v for q, v in self._vec_cache.items() if q in retained}
 
     # ------------------------------------------------------------------ #
     def count(self) -> int:
@@ -189,9 +215,11 @@ def _synthetic_memory(mid: str, text: str, original: Any = None):
     return Memory(
         id=mid,
         text=text,
-        metadata={"kind": "qapair_replay", "answer_for": original.metadata.get("fact_subject") if original else None},
-        tags=[QUESTION_TAG, "replay"],
+        metadata={**(original.metadata if original else {}), "kind": "qapair_replay",
+                  "answer_for": original.metadata.get("fact_subject") if original else None},
+        tags=list(dict.fromkeys((original.tags if original else []) + [QUESTION_TAG, "replay"])),
         source="user",
         importance=0.8,
         embedding=original.embedding if original is not None else None,
+        archived=original.archived if original else False,
     )

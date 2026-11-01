@@ -29,6 +29,7 @@ class EmbeddingProvider(ABC):
     mrl_dim: int = 0
     normalize_output: bool = True
     model_name: str = "base"
+    query_prefix: str = ""
 
     @abstractmethod
     def embed(self, texts: Sequence[str]) -> list[np.ndarray]:
@@ -37,6 +38,10 @@ class EmbeddingProvider(ABC):
     def embed_one(self, text: str) -> np.ndarray:
         vectors = self.embed([text])
         return vectors[0]
+
+    def embed_query(self, text: str) -> np.ndarray:
+        """Queries may carry a model-specific instruction; documents never do."""
+        return self.embed_one(self.query_prefix + text)
 
     @property
     def effective_dim(self) -> int:

@@ -25,6 +25,8 @@
 
 ## 状态
 
+- 2026-11-01：本体隔离优化见 [验收记录](../docs/优化验收报告_2026-11-01.md)、[逐项证据](results/optimization_2026-11-01.json)。`scripts/verify_optimization_20261101.py` 覆盖冻结题集、质量、性能和随机恢复；`scripts/verify_durable_performance_20261101.py` 比较同等持久确认；`scripts/verify_protocols_20261101.py` 覆盖真正 HTTP/MCP；`scripts/verify_evidence_candidate_20261101.py` 记录未通过的答案充分性候选。输出必须指向独立目录，不用生产 `data/`。历史竞品对战不是本轮性能基线。
+
 - [x] 压测基线（2026-09-28）：hashing 4231写/s；Qwen3 CPU 4写/s·p50 115ms（并发 742ms 零失败）；WAL -59% 吞吐；soak 无泄漏（详见 results/）
 - [x] 冒烟赛（2026-09-28，1 seed）：7 选手完赛 2 缺席，bm25 1.00 / sme_chat 0.95 / rag·minimal 0.90 /
       mem0 0.85 / kb_dynamic 0.75 / graphiti(kuzu) 0.55；全量明细 results/battle_smoke.json。

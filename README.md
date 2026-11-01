@@ -3,6 +3,8 @@
 > 新一代 AI 长期记忆系统：空间记忆（Spatial Memory）+ 记忆动力学 + 可解释检索。
 > 零配置即可离线运行，也可以接入任意 OpenAI 兼容的 LLM / Embedding 服务（云端或本地）。
 
+2026-11-01 更新：补齐问答与画像作用域、删除派生状态、非 CRUD 变更恢复、MCP 鉴权与输入/上下文预算校验。状态与取舍见 [优化计划](docs/待优化计划_2026-10-23.md) 和 [验收记录](docs/优化验收报告_2026-11-01.md)。历史评测数字保留原实验口径。
+
 ---
 
 ## 1. 项目简介
@@ -23,11 +25,11 @@ SME 是给 AI 应用用的"长期记忆插件"。它不像传统向量数据库�
 
 | 特性 | 说明 |
 |---|---|
-| 零配置离线 | 内置 hashing embedding，无任何依赖/密钥即可跑通全链路 |
+| 零配置离线 | 安装核心依赖后，内置 hashing embedding，无模型下载/密钥即可跑通基础链路 |
 | 可解释检索 | 每条命中带 `breakdown`（semantic/importance/freshness/weight/decay/hit_count/recency/region 八信号） |
 | 中文友好 | 中文 1-2 元 BM25 关键词通道（默认开）+ 文档分条导入（法律/医疗等知识库场景） |
 | 记忆生命周期 | 强化/衰减/融合/压缩可配可关，记忆永不因衰减被删除，归档可恢复 |
-| 全部可关 | 97 项配置 + 5 个预设（聊天助手/知识库动态/知识库静态/具身机器人/全关） |
+| 全部可关 | 101 项配置 + 5 个预设（聊天助手/知识库动态/知识库静态/具身机器人/全关） |
 | 多种接入 | Python SDK、REST API（FastAPI）+ 官方 Client、**MCP（智能体原生，一行挂载）**、Web 配置中心（`python -m sme.api` 启动后浏览器打开） |
 | 性能 | WAL 组提交 2557 写/s（1.79x）；ONNX int8 批量嵌入 7.4x；记忆图热路径 O(E)→O(deg) 实测 127-159x；hashing 检索 p50 ~4ms（2k 条） |
 
@@ -51,7 +53,7 @@ engine.visualize("space.png")           # 2D 空间可视化（需可选 [viz] e
 engine.save("memory_state.json.gz")     # 持久化
 
 engine2 = SpatialMemoryEngine()
-engine2.load("memory_state.json.gz")    # 重新加载（重启不丢记忆）
+engine2.load("memory_state.json.gz")    # 加载快照；开启 WAL 时恢复已落盘增量
 ```
 
 ```bash
@@ -68,15 +70,15 @@ pip install -r requirements.txt
 
 ## 5. 配置
 
-### 5.1 三种配置方式（同一套 97 项可调项）
+### 5.1 三种配置方式（同一套 101 项可调项）
 
 | 方式 | 说明 |
 |---|---|
-| **Web 配置中心（推荐）** | `python -m sme.api` 启动服务后浏览器打开 `http://127.0.0.1:8000/`；全部 97 项分组展示、逐项校验、预设一键套用、测试连接；**保存到 `data/sme.config.json`**，引擎热重建立即生效（详见 5.2） |
+| **Web 配置中心（推荐）** | `python -m sme.api` 启动服务后浏览器打开 `http://127.0.0.1:8000/`；全部 101 项分组展示、逐项校验、预设一键套用、测试连接；**保存到 `data/sme.config.json`**，引擎热重建立即生效（详见 5.2） |
 | **显式 JSON 文件** | 自己写一个 JSON 配置文件：SDK 用 `SpatialMemoryEngine(config_path="路径")` 显式传入；REST 服务用环境变量 `SME_CONFIG_PATH` 或 `--config` 指定（见 5.4） |
 | **代码方式 `SMEConfig`** | 任意一项都可代码设置（见 5.3） |
 
-> 配置来源只有一套：**代码内置默认**（97 项注册表 `sme/config_items.py`，含每项中文说明）→
+> 配置来源只有一套：**代码内置默认**（101 项注册表 `sme/config_items.py`，含每项中文说明）→
 > 你通过 Web 配置中心修改，保存到 `data/sme.config.json`（`data/` 已被 .gitignore 排除；
 > 需要其他位置时用环境变量 `SME_CONFIG_PATH` 或 `python -m sme.api --config 路径`）。
 > 项目**不再随包分发 `config.json`**，引擎从不自动读取任何打包配置；SDK 直连请用
@@ -94,7 +96,7 @@ python -m sme.api          # 启动 REST 服务（默认 127.0.0.1:8000）
 
 | 功能 | 说明 |
 |---|---|
-| 分组展示 | 全部 97 项按功能分 9 组：模型接入 / 向量 / 检索与排序 / 空间与Region / 记忆动力学 / 存储 / 服务 / 会话层约定 / 扩展模块 |
+| 分组展示 | 全部 101 项按功能分 9 组：模型接入 / 向量 / 检索与排序 / 空间与Region / 记忆动力学 / 存储 / 服务 / 会话层约定 / 扩展模块 |
 | 详情弹窗 | 每项"详情"显示：作用说明全文、当前值/默认值、类型与可选值 |
 | 逐项校验 | 输入非法值当场红字提示（类型/枚举/范围） |
 | 密钥掩码 | API 密钥类项只显示是否已设置（`******`），不回显明文 |
@@ -132,7 +134,7 @@ engine = SpatialMemoryEngine(config)         # 或 SpatialMemoryEngine(config_pa
 | `SME_EMBEDDING_PROVIDER` / `MODEL` / `DIM` / `BASE_URL` / `API_KEY` | REST 服务端 embedding 配置（设了 PROVIDER 才读 KEY） |
 | `SME_API_AUTH_TOKEN` | REST 服务 Bearer 鉴权（等价 `api.auth_token`） |
 
-> 97 项配置完整总览（分组、默认值、逐项说明）与 `memory.*` 会话层参数说明见 [docs/接入使用.md](docs/接入使用.md) §3.3。
+> 101 项配置完整总览（分组、默认值、逐项说明）与 `memory.*` 会话层参数说明见 [docs/接入使用.md](docs/接入使用.md) §3.3。
 
 ## 6. 接入 AI：LLM 与 Embedding
 
@@ -445,7 +447,7 @@ python -m sme.benchmark --n-memories 2000                 # 写入/检索压测
 │   │                                   #   context / namespaces / observability / noise /
 │   │                                   #   memory_graph / bridge / pipeline / factgraph
 │   └── storage/                        # snapshot / backends / wal
-├── docs/                               # 接入使用 / 原理解析 / 迭代计划 / 修改记录
+├── docs/                               # 接入使用 / 原理解析 / 优化计划与验收 / 修改记录
 ├── lab/                                # 实验 2.0：对战/压测/补充赛脚本与数据 + 战报.md
 ├── requirements.txt / pyproject.toml
 └── README.md
@@ -469,9 +471,10 @@ python -m sme.benchmark --n-memories 2000                 # 写入/检索压测
 
 | 文档 | 内容 |
 |---|---|
-| [docs/接入使用.md](docs/接入使用.md) | 完整接入参考：97 项配置、环境变量、Python SDK 全 API、REST 端点表、预设、FAQ |
+| [docs/接入使用.md](docs/接入使用.md) | 完整接入参考：101 项配置、环境变量、Python SDK 全 API、REST 端点表、预设、FAQ |
 | [docs/原理解析.md](docs/原理解析.md) | 程序原理 + 每个文件/函数的作用（函数级解析） |
-| [docs/迭代计划.md](docs/迭代计划.md) | 对标第一梯队（Mem0/Zep/Graphiti/Letta）的迭代记录 |
+| [docs/待优化计划_2026-10-23.md](docs/待优化计划_2026-10-23.md) | B01—B10、纠错与证据检查的验收标准和实施状态 |
+| [docs/优化验收报告_2026-11-01.md](docs/优化验收报告_2026-11-01.md) | 本轮修复、严格回归、隔离实验与未采用项 |
 | [docs/修改记录.md](docs/修改记录.md) | 代码审查修复/完善/清理 + 修复前后对比数据 |
 
 > 注：原 `快速接入指南.md`、`项目介绍.md` 已合并进本文档。
@@ -479,3 +482,23 @@ python -m sme.benchmark --n-memories 2000                 # 写入/检索压测
 ## License
 
 Apache-2.0（见 [LICENSE](LICENSE)）。
+
+
+## 可靠性与检索优化（2026-10-23）
+
+恢复现在先完整重放，再提交快照，最后清 WAL。重放或 checkpoint 失败会保留日志并报错，服务不会把部分恢复结果当空库继续启动。V2 写入用单条事务日志保存多事实、原文、旧事实失效标记及模块状态；JSON 快照使用分代向量文件与原子提交，兼容读取旧快照。
+
+默认开启仅缓存查询向量的有界 LRU（128 条），检索结果实时计算；查询嵌入在引擎主锁外执行。启用精排时，先提供 `rerank.top_n` 候选，精排后再裁到请求的 `top_k`。
+
+以下选项会改变检索结果，默认保持兼容，需要按自己的数据先做对照：
+
+| 配置 | 默认 | 用途 |
+|---|---|---|
+| `embedding.query_prefix` | 空字符串 | 查询侧模型指令，文档向量不加前缀；仅查询设置，不要求重嵌文档 |
+| `retrieval.keyword_candidates` | 0 | 全库 BM25 独立补充候选，先执行命名空间和元数据过滤 |
+| `retrieval.min_similarity` | -1 | 最终结果原始余弦下限；-1 关闭，不能拿 min-max 排序分替代 |
+| `retrieval.query_cache_size` | 128 | 查询向量 LRU 上限；0 禁用；不缓存记忆命中结果 |
+
+查询前缀示例（Qwen，需按任务 A/B）：`Instruct: Given a question about a user's memories, retrieve the relevant facts that answer it.\nQuery: `。Python 字符串中的 `\n` 会被 Python 解析为换行；在配置中心输入时应使用实际换行。
+
+实验脚本：`lab/scripts/optimization_experiment.py`；完整结果与边界见 [优化实验报告](lab/results/optimization_2026-10-23.md)。恢复测试包含真实子进程在关键提交边界直接退出，未模拟物理断电。新增事务 WAL 需使用当前版本恢复；已有旧格式 WAL 与快照仍可读取。

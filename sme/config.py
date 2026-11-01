@@ -29,6 +29,7 @@ class EmbeddingConfig:
     mrl_dim: int = 0            # MRL 截断维度：0=不截断；>0 且 < 原生维度时截前 N 维再 L2 归一
     hash_seed: int = 0          # hashing provider 种子（0=默认 42；测试/隔离空间用，未注册配置中心）
     revision_stamp: str = ""    # 引擎 save() 写入的自动组合标记（provider|model|dim|...），勿手工编辑
+    query_prefix: str = ""      # query-only task instruction; documents unchanged
 
 
 @dataclass
@@ -73,6 +74,9 @@ class RetrievalConfig:
     #              vector uses (cos+1)/2, metadata adds a constant 0.1 shift),
     #              kept as the byte-identical compatibility tier
     fusion: str = "minmax"  # weighted | minmax
+    keyword_candidates: int = 0  # independent BM25 recall; 0 preserves legacy pool
+    min_similarity: float = -1.0  # raw cosine floor; -1 disables rejection
+    query_cache_size: int = 128  # bounded query-vector LRU; 0 disables cache
 
 
 @dataclass

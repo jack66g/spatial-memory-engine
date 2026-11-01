@@ -105,6 +105,8 @@ ITEMS: list[ConfigItem] = [
     _it("embedding.batch_size", "批量大小", "Embedding 向量",
         "每次编码的条数；本地模型可调小省内存", kind="int",
         minimum=1, maximum=512, default=32),
+    _it("embedding.query_prefix", "查询指令前缀", "Embedding 向量",
+        "仅查询侧添加的模型任务指令，文档向量不变；默认留空保持兼容，需先做独立题集 A/B"),
     _it("embedding.revision", "向量空间版本", "Embedding 向量",
         "模型向量空间版本标记，换模型必须换 revision 并重建"
         "（python -m sme.rebuild_embeddings）；相同维度换模型不会报维度错，"
@@ -222,6 +224,15 @@ ITEMS: list[ConfigItem] = [
     _it("retrieval.candidate_window", "候选窗口", "检索与排序",
         "混合打分的最小候选池（实际取 max(top_k×2, 此值)）；模板句霸榜时调大可救回真实记忆",
         kind="int", minimum=4, maximum=1000, default=20),
+    _it("retrieval.keyword_candidates", "独立关键词候选", "检索与排序",
+        "从全库 BM25 独立补充的候选数，先按 ns/标签/元数据过滤；0 保持原候选池",
+        kind="int", minimum=0, maximum=1000, default=0),
+    _it("retrieval.min_similarity", "最低原始相似度", "检索与排序",
+        "最终结果的原始余弦下限；-1 关闭。与归一化排序分无关，需按模型及题集校准",
+        kind="float", minimum=-1, maximum=1, default=-1),
+    _it("retrieval.query_cache_size", "查询向量缓存", "检索与排序",
+        "仅缓存查询向量，不缓存命中结果；0 关闭。写入后仍实时检索新记忆",
+        kind="int", minimum=0, maximum=4096, default=128),
     _it("retrieval.fusion", "混合归一方式", "检索与排序",
         "混合打分两通道的归一化：minmax=各通道在候选集内做 min-max 归一化（默认，"
         "消除 BM25 峰值锚定漂移与向量通道对无关文档的 0.5 白送分，元数据通道为死信号"

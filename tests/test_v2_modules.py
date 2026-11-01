@@ -158,13 +158,14 @@ def test_wal_basic_flow(fresh_engine, tmp_path, new_engine):
     for i in range(3):
         e.add(f"wal new {i}")
     assert e.wal.ops == 3
+    e.wal.close()  # emulate process shutdown before recovery checkpoints
 
     e2 = new_engine()
     e2.config.storage.path = e.config.storage.path
     e2.config.persistence.enabled = True
     assert e2.load(e.config.storage.path) is True
     assert len(e2.memories) == 8
-    assert e2.wal.ops == 0  # replay truncated the log
+    assert e2.wal.ops == 0  # recovered checkpoint committed before truncation
 
 
 # ------------------------------ module 09 ---------------------------------- #

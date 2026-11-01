@@ -15,6 +15,12 @@ from sme.utils import logger
 
 
 def build_embedding_provider(config: EmbeddingConfig) -> EmbeddingProvider:
+    provider = _build_embedding_provider(config)
+    provider.query_prefix = config.query_prefix
+    return provider
+
+
+def _build_embedding_provider(config: EmbeddingConfig) -> EmbeddingProvider:
     """Instantiate the provider named by ``config.provider``.
 
     ``openai`` uses the OpenAI-compatible REST endpoint configured in

@@ -14,10 +14,13 @@ Usage:
 from __future__ import annotations
 
 import json
+import copy
 import os
 import threading
 import time
 import weakref
+from contextlib import contextmanager
+from dataclasses import replace
 from typing import Any, Iterable, Optional
 
 import numpy as np
@@ -37,7 +40,7 @@ from sme.dynamics.reinforcement import EbbinghausReinforcement
 from sme.retrieval import SearchQuery, TwoStageRetriever
 from sme.space import RegionManager, SpatialMemorySpace
 from sme.storage.snapshot import EngineSnapshot
-from sme.utils import logger, now
+from sme.utils import logger, now, cosine_similarity
 
 # v2 modules (v2 模块设计) - all disabled by default, no-op when off
 from sme.modules.extraction import ExtractionEngine
@@ -46,7 +49,7 @@ from sme.modules.noise import NoiseScorer
 from sme.modules.qapair import QAPairStore
 from sme.modules.factgraph import FactGraph, FactGraphExtractor
 from sme.modules.profile import UserProfile
-from sme.storage.wal import WriteAheadLog
+from sme.storage.wal import WriteAheadLog, WALRecoveryError
 from sme.modules.observability import MemoryTelemetry
 from sme.modules.context import ContextManager
 from sme.modules.namespaces import Namespaces, NS_KEY
@@ -118,6 +121,8 @@ class SpatialMemoryEngine:
         self.graph = MemoryGraph()
         self.ranker = MemoryRanker(self.config.ranking)
         self.retriever = TwoStageRetriever(self.config.retrieval, self.ranker)
+        self._wal_dirty: Optional[set[str]] = None
+        self._checkpoint_sequence = 0
         self.memory_manager = MemoryManager(
             self.config,
             self.space,
@@ -127,8 +132,8 @@ class SpatialMemoryEngine:
             self.reinforcement,
             self.decay,
             self.archive_manager,
-            on_upsert=self.retriever.index_memory,
-            on_delete=self.retriever.drop_memory,
+            on_upsert=self._index_memory,
+            on_delete=self._drop_memory,
         )
         self.consolidation = ConsolidationEngine(self.config.consolidation, self.llm)
         self.compression = CompressionEngineProxy(self.config, self.llm)
@@ -166,6 +171,10 @@ class SpatialMemoryEngine:
         self.namespaces = Namespaces(self.config.namespaces)
         self.storage_backend = build_storage_backend(self.config.storage.backend)
         self._v2 = V2Bridge(self)
+        self._mutation_depth = 0
+        self._wal_deleted: set[str] = set()
+        self._wal_edges: dict[tuple, dict] | None = None
+        self.graph.on_change = self._graph_changed
         # module 13 (optional): cross-encoder re-ranking, lazy-loaded
         self.reranker = None
         self._rerank_enabled = self.config.rerank.enabled
@@ -241,6 +250,139 @@ class SpatialMemoryEngine:
         if memory is not None:
             memory.region_id = region_id
 
+    def _index_memory(self, memory: Memory) -> None:
+        self.retriever.index_memory(memory)
+        if hasattr(self, "profile") and memory.id in self.profile.profile_facts:
+            self.profile.snapshots.clear()
+        if self._wal_dirty is not None:
+            self._wal_dirty.add(memory.id)
+
+    def _module_state(self) -> dict:
+        """Module state belongs to the same commit as the memories it describes."""
+        state = {name: getattr(self, name).to_dict()
+                 for name in ("qapair", "factgraph", "profile")}
+        state["pending_questions"] = list(self._v2.pending_questions.values())
+        return state
+
+    def _restore_module_state(self, state: dict) -> None:
+        for name in ("qapair", "factgraph", "profile"):
+            if name in state:
+                getattr(self, name).load_dict(state[name])
+        pending = state.get("pending_questions", [])
+        # Legacy single pending records did store ns; never guess an identity
+        # or attach a newly invented conversation to them.
+        if "pending_questions" not in state and state.get("pending_question"):
+            pending = [state["pending_question"]]
+        self._v2.pending_questions = {(p.get("ns"), p.get("conversation_id")): p
+                                     for p in pending}
+
+    def _drop_memory(self, memory_id: str) -> None:
+        self.retriever.drop_memory(memory_id)
+        if memory_id in self.memories:  # archive: keep reversible sources
+            if self._wal_dirty is not None:
+                self._wal_dirty.add(memory_id)
+            return
+        if self._wal_dirty is not None:
+            self._wal_dirty.discard(memory_id)
+            self._wal_deleted.add(memory_id)
+        self.qapair.remove_source(memory_id)
+        self.profile.remove_source(memory_id)
+        self._v2.pending_questions = {k: p for k, p in self._v2.pending_questions.items()
+                                      if p.get("question_memory_id") != memory_id}
+        self.factgraph.remove_source(memory_id)
+
+    def _graph_changed(self, edge) -> None:
+        if self._wal_edges is not None:
+            self._wal_edges[(edge.source, edge.target, edge.kind)] = edge.to_dict()
+
+    @contextmanager
+    def _mutation(self, *, modules=False, vectors=False):
+        """Commit changed records/edges once, fail closed after an I/O error.
+
+        Field-only mutations omit unchanged vectors. No whole-store copy is
+        made for a reinforcement, link, archive or metadata patch.
+        """
+        if self.wal.recovery_error:
+            raise WALRecoveryError(self.wal.recovery_error)
+        if not self.wal.enabled or self._mutation_depth:
+            yield
+            return
+        before = copy.deepcopy(self._module_state()) if modules else None
+        self._wal_dirty, self._wal_deleted, self._wal_edges = set(), set(), {}
+        self._mutation_depth += 1
+        try:
+            yield
+            after = self._module_state() if modules else None
+            op = {"op": "transaction", "memories": [], "patches": [],
+                  "deleted": sorted(self._wal_deleted), "edges": list(self._wal_edges.values())}
+            key = "memories" if vectors else "patches"
+            op[key] = [self.memories[mid].to_dict(include_embedding=vectors)
+                       for mid in sorted(self._wal_dirty) if mid in self.memories]
+            if modules and before != after:
+                op["modules"] = after
+            op["counters"] = {"consolidations": self.consolidation.consolidation_count,
+                              "compressions": self.compression.compression_count}
+            if any(op[k] for k in ("memories", "patches", "deleted", "edges")) or "modules" in op:
+                self._record_write(op)
+        except Exception:
+            # The in-memory operation may already have changed several fields.
+            # It must not be checkpointed as a successful transaction.
+            if (self._wal_dirty or self._wal_deleted or self._wal_edges
+                    or (modules and before != self._module_state())):
+                self.wal.recovery_error = "Uncommitted mutation; reload before saving or writing"
+            raise
+        finally:
+            self._mutation_depth -= 1
+            self._wal_dirty, self._wal_edges = None, None
+            self._wal_deleted = set()
+
+    def _apply_write_transaction(self, op: dict) -> None:
+        """Apply the recorded result, without invoking embedding or an LLM.
+
+        Full record images preserve timestamps, weights and stale metadata.
+        Sequence-number checkpointing prevents old images overwriting newer
+        snapshot state if truncation was interrupted.
+        """
+        for mid in op.get("deleted", []):
+            self.memory_manager.delete_memory(mid)
+        records = [Memory.from_dict(d) for d in op.get("memories", [])]
+        for patch in op.get("patches", []):
+            previous = self.memories.get(patch["id"])
+            if previous is None:
+                raise ValueError("WAL patch source is missing: " + patch["id"])
+            records.append(Memory.from_dict({**previous.to_dict(), **patch}))
+        for memory in records:
+            old = self.memories.get(memory.id)
+            if old is not None and not old.archived:
+                self.space.remove(memory.id)
+            if memory.archived:
+                self.memories[memory.id] = memory
+                self.archive_manager.cold[memory.id] = memory.to_dict()
+                self.retriever.drop_memory(memory.id)
+            else:
+                self.archive_manager.cold.pop(memory.id, None)
+                self.memory_manager._register(memory)
+        if "graph" in op:
+            self.graph.load_dict(op["graph"])
+        for edge in op.get("edges", []):
+            self.graph.add_edge(edge["source"], edge["target"], edge["kind"],
+                                edge.get("weight", 1.0), edge.get("note", ""))
+        if "modules" in op:
+            self._restore_module_state(op["modules"])
+        counters = op.get("counters", {})
+        self.consolidation.consolidation_count = counters.get("consolidations", self.consolidation.consolidation_count)
+        self.compression.compression_count = counters.get("compressions", self.compression.compression_count)
+
+    def _recover_wal(self) -> bool:
+        if not self.wal.enabled or not self.wal.has_pending():
+            return False
+        self.wal.replay(self)
+        try:
+            self.save()
+        except Exception as exc:
+            raise WALRecoveryError(f"WAL recovery checkpoint failed; log retained: {exc}") from exc
+        return True
+
     def _calibrate_region_threshold(self) -> None:
         """Adapt the region join threshold to the embedding provider.
 
@@ -281,18 +423,35 @@ class SpatialMemoryEngine:
         link_kind: str = "reference",
         embedding: Optional[Any] = None,
         ns: Optional[str] = None,
+        conversation_id: Optional[str] = None,
     ) -> Memory:
         with self._lock:
+            if self.wal.recovery_error:
+                raise WALRecoveryError(self.wal.recovery_error)
             self._touch_write()
             metadata = dict(metadata or {})
             if ns is not None:
                 metadata[NS_KEY] = ns
+            transaction = self.wal.enabled and (link_to is not None or any(
+                m.enabled for m in (self.extraction, self.factversion, self.qapair,
+                                    self.factgraph, self.profile)))
+            before_modules = copy.deepcopy(self._module_state()) if transaction else None
+            edge_count = len(self.graph.edges)
+            if transaction:
+                self._wal_dirty = set()
             if self._v2.active():
-                memory = self._v2.add(
-                    text=text, metadata=metadata, tags=tags, importance=importance,
-                    source=source, link_to=link_to, link_kind=link_kind,
-                    embedding=embedding,
-                )
+                try:
+                    memory = self._v2.add(
+                        text=text, metadata=metadata, tags=tags, importance=importance,
+                        source=source, link_to=link_to, link_kind=link_kind,
+                        embedding=embedding,
+                        conversation_id=conversation_id,
+                    )
+                except Exception:
+                    if transaction:
+                        self.wal.recovery_error = "Uncommitted write transaction; reload before saving or writing"
+                        self._wal_dirty = None
+                    raise
                 if memory is None:
                     # nothing worth storing (e.g. bare question, w/o module 02):
                     # return a lightweight stub so callers can keep linking ids
@@ -312,7 +471,21 @@ class SpatialMemoryEngine:
                     link_kind=link_kind,
                     embedding=embedding,
                 )
-            if memory.id in self.memories:
+            if transaction:
+                try:
+                    modules = self._module_state()
+                    if self._wal_dirty or modules != before_modules:
+                        op = {"op": "transaction",
+                              "memories": [self.memories[mid].to_dict()
+                                           for mid in sorted(self._wal_dirty)]}
+                        if modules != before_modules:
+                            op["modules"] = modules
+                        if link_to is not None or len(self.graph.edges) != edge_count:
+                            op["graph"] = self.graph.to_dict()
+                        self._record_write(op)
+                finally:
+                    self._wal_dirty = None
+            elif memory.id in self.memories:
                 # only real stores enter the WAL - a dropped utterance (v2
                 # pipeline) must never resurrect after a crash
                 self._record_write({
@@ -323,9 +496,10 @@ class SpatialMemoryEngine:
                     "metadata": memory.metadata,
                     "tags": memory.tags,
                     "importance": memory.importance,
+                    "state": memory.to_dict(include_embedding=embedding is not None),
                 })
-                self.telemetry.record("add", memory_id=memory.id,
-                                      text=memory.text[:60])
+            if memory.id in self.memories:
+                self.telemetry.record("add", memory_id=memory.id, text=memory.text[:60])
             else:
                 self.telemetry.record("drop", text=memory.text[:60])
             self._autosave()
@@ -333,13 +507,22 @@ class SpatialMemoryEngine:
 
     def add_many(self, texts: list[str], **kwargs) -> list[Memory]:
         with self._lock:
+            if any(not isinstance(text, str) or not text.strip() for text in texts):
+                raise ValueError("memory texts must be nonblank strings")
             self._touch_write()
+            metadata = dict(kwargs.pop("metadata", {}) or {})
+            ns = kwargs.pop("ns", None)
+            if ns is not None:
+                metadata[NS_KEY] = ns
+            kwargs["metadata"] = metadata
             if self._v2.active():
                 # pipeline mode: route each text individually (extraction is
                 # per-message; the bulk optimization would bypass it)
                 out = []
-                for text in texts:
-                    mem = self.add(text, **kwargs)
+                vectors = (self.embeddings.embed(texts) if not self.extraction.enabled
+                           else [None] * len(texts))
+                for text, vector in zip(texts, vectors):
+                    mem = self.add(text, embedding=vector, **kwargs)
                     out.append(mem)
                 return out
             self.space.set_bulk(True)
@@ -367,23 +550,20 @@ class SpatialMemoryEngine:
     ) -> Memory:
         with self._lock:
             self._touch_write()
-            memory = self.memory_manager.update_memory(
-                memory_id, text, metadata, tags, importance, weight, summary
-            )
-            self._record_write({
-                "op": "update", "mid": memory_id,
-                "text": text, "metadata": metadata, "tags": tags,
-                "importance": importance, "weight": weight, "summary": summary,
-            })
+            self.memory_manager.require(memory_id)
+            with self._mutation(vectors=text is not None):
+                memory = self.memory_manager.update_memory(
+                    memory_id, text, metadata, tags, importance, weight, summary
+                )
             self._autosave()
             return memory
 
     def delete(self, memory_id: str) -> bool:
         with self._lock:
             self._touch_write()
-            ok = self.memory_manager.delete_memory(memory_id)
+            with self._mutation(modules=True):
+                ok = self.memory_manager.delete_memory(memory_id)
             if ok:
-                self._record_write({"op": "delete", "mid": memory_id})
                 self._autosave()
             return ok
 
@@ -406,18 +586,18 @@ class SpatialMemoryEngine:
     def archive(self, memory_id: str) -> bool:
         with self._lock:
             self._touch_write()
-            ok = self.memory_manager.archive_memory(memory_id)
+            with self._mutation():
+                ok = self.memory_manager.archive_memory(memory_id)
             if ok:
-                self._record_write({"op": "archive", "mid": memory_id})
                 self._autosave()
             return ok
 
     def restore(self, memory_id: str) -> bool:
         with self._lock:
             self._touch_write()
-            ok = self.memory_manager.restore_memory(memory_id)
+            with self._mutation():
+                ok = self.memory_manager.restore_memory(memory_id)
             if ok:
-                self._record_write({"op": "restore", "mid": memory_id})
                 self._autosave()
             return ok
 
@@ -429,14 +609,22 @@ class SpatialMemoryEngine:
     # ------------------------------------------------------------------ #
     def reinforce(self, memory_id: str) -> Optional[dict]:
         with self._lock:
-            result = self.memory_manager.reinforce(memory_id)
+            with self._mutation():
+                result = self.memory_manager.reinforce(memory_id)
+                if result is not None and self._wal_dirty is not None:
+                    self._wal_dirty.add(memory_id)
             if result is not None:
+                self._touch_write()
                 self.telemetry.record("reinforce", memory_id=memory_id)
+                self._autosave()
             return result
 
     def apply_decay(self, reference: Optional[float] = None) -> int:
         with self._lock:
-            return self.memory_manager.apply_decay_all(reference)
+            with self._mutation():
+                count = self.memory_manager.apply_decay_all(reference)
+            self._autosave()
+            return count
 
     # ------------------------------------------------------------------ #
     # search
@@ -452,7 +640,11 @@ class SpatialMemoryEngine:
         graph_expand: Optional[int] = None,
         ns: Optional[str] = None,
         include_archived: bool = False,
+        conversation_id: Optional[str] = None,
+        include_history: bool = False,
     ) -> list[SearchHit]:
+        if isinstance(query, SearchQuery):
+            query = replace(query, metadata_filters=dict(query.metadata_filters or {}))
         if isinstance(query, str):
             query = SearchQuery(
                 text=query,
@@ -463,22 +655,48 @@ class SpatialMemoryEngine:
                 region_retrieval=region_retrieval,
                 graph_expand=graph_expand or 0,
                 include_archived=include_archived,
+                conversation_id=conversation_id,
+                include_history=include_history,
             )
         elif graph_expand is not None:
             query.graph_expand = graph_expand
         if include_archived:
             query.include_archived = True
+        if conversation_id is not None:
+            query.conversation_id = conversation_id
+        if include_history:
+            query.include_history = True
         if ns is not None:
             query.metadata_filters = dict(query.metadata_filters or {})
             query.metadata_filters[NS_KEY] = ns
-        with self._lock:
+        if query.top_k <= 0:
+            return []
+        t0 = now()
+        # Capture the provider under lock, perform expensive inference outside
+        # it, then recheck identity. A simultaneous load/rebind must not mix
+        # query vectors from the old provider with the new document space.
+        while True:
+            with self._lock:
+                provider = self.embeddings
+                prefix = getattr(provider, "query_prefix", "")
+            query_vector = self.retriever.prepare_query(provider, query.text)
+            with self._lock:
+                if provider is self.embeddings and prefix == getattr(provider, "query_prefix", ""):
+                    return self._search_locked(query, query_vector, t0)
+
+    def _search_locked(self, query: SearchQuery, query_vector: np.ndarray, t0: float) -> list[SearchHit]:
+        requested_k = query.top_k
+        self._rerank_enabled = self.config.rerank.enabled
+        if self._rerank_enabled:
+            query.top_k = max(query.top_k, self.config.rerank.top_n)
+        try:
             self.decay.enabled = self.policy.decay_enabled
-            t0 = now()
-            direct = self._v2.search_pre(query)  # module 02: QA replay
-            hits = self.retriever.search(self, query)
+            direct = self._v2.search_pre(query, query_vector=query_vector)
+            hits = self.retriever.search(self, query, query_vector=query_vector)
             if direct:
                 hits = direct + hits
             hits = self._v2.search_post(query, hits)  # modules 03/04/05/06
+            hits = [h for h in hits if self.retriever.visible(self, h.memory, query)]
             if self._rerank_enabled and hits:
                 # module 13: optional cross-encoder precision pass
                 from sme.retrieval.rerank import Reranker
@@ -486,28 +704,44 @@ class SpatialMemoryEngine:
                 if self.reranker is None:
                     self.reranker = Reranker(self.config.rerank)
                 hits = self.reranker.rerank(query.text, hits)
+            hits = self.factversion.prioritize_current(query, hits, self)
+            floor = self.config.retrieval.min_similarity
+            if floor > -1:
+                hits = [h for h in hits if h.memory.embedding is not None
+                        and cosine_similarity(query_vector, h.memory.embedding) >= floor]
+            hits = hits[:requested_k]
             self.telemetry.search(
-                query.text, query.top_k, len(hits), (now() - t0) * 1000.0,
+                query.text, requested_k, len(hits), (now() - t0) * 1000.0,
                 [h.score for h in hits],
             )
             return hits
+        finally:
+            query.top_k = requested_k
 
     def search_regions(self, text: str, top_k: int = 5) -> list:
-        with self._lock:
-            return self.retriever.search_regions(self, text, top_k)
+        while True:
+            with self._lock:
+                provider = self.embeddings
+                prefix = getattr(provider, "query_prefix", "")
+            query_vector = self.retriever.prepare_query(provider, text)
+            with self._lock:
+                if provider is self.embeddings and prefix == getattr(provider, "query_prefix", ""):
+                    return self.space.query_regions(query_vector, top_k)
 
     # ------------------------------------------------------------------ #
     # consolidation / compression
     # ------------------------------------------------------------------ #
     def consolidate(self) -> list[Memory]:
         with self._lock:
-            created = self.consolidation.consolidate(self)
+            with self._mutation(vectors=True):
+                created = self.consolidation.consolidate(self)
             self._autosave()
             return created
 
     def compress(self) -> list[Memory]:
         with self._lock:
-            created = self.compression.compress(self)
+            with self._mutation(vectors=True):
+                created = self.compression.compress(self)
             self._autosave()
             return created
 
@@ -515,7 +749,13 @@ class SpatialMemoryEngine:
     # graph
     # ------------------------------------------------------------------ #
     def link(self, a: str, b: str, kind: str = "reference", weight: float = 1.0, note: str = "") -> bool:
-        return self.memory_manager.link(a, b, kind, weight, note)
+        with self._lock:
+            with self._mutation():
+                result = self.memory_manager.link(a, b, kind, weight, note)
+            if result:
+                self._touch_write()
+                self._autosave()
+            return result
 
     def graph_edges(self) -> list:
         return list(self.graph.edges)
@@ -524,6 +764,13 @@ class SpatialMemoryEngine:
         return self.graph.traverse(start, kinds, mode, max_depth)
 
     def build_neighbor_edges(self, k: int = 5, threshold: float = 0.55) -> int:
+        with self._lock:
+            with self._mutation():
+                added = self._build_neighbor_edges(k, threshold)
+            self._autosave()
+            return added
+
+    def _build_neighbor_edges(self, k: int, threshold: float) -> int:
         vectors = {mid: m.embedding for mid, m in self.memories.items() if m.embedding is not None}
         added = self.graph.add_auto_neighbors(list(vectors), vectors, k=k, threshold=threshold)
         # keep the legacy Memory.neighbors field in sync with the graph
@@ -535,6 +782,8 @@ class SpatialMemoryEngine:
                     a.neighbors.add(edge.target)
                 if b is not None:
                     b.neighbors.add(edge.source)
+                if self._wal_dirty is not None:
+                    self._wal_dirty.update(mid for mid in (edge.source, edge.target) if mid in self.memories)
         return added
 
     # ------------------------------------------------------------------ #
@@ -607,6 +856,12 @@ class SpatialMemoryEngine:
     # persistence
     # ------------------------------------------------------------------ #
     def save(self, path: Optional[str] = None) -> str:
+        with self._lock:
+            if self.wal.recovery_error:
+                raise WALRecoveryError(self.wal.recovery_error)
+            return self._save_locked(path)
+
+    def _save_locked(self, path: Optional[str] = None) -> str:
         path = path or self.config.storage.path
         self.space.sync_geometry()  # snapshot carries exact region geometry
         # revision 标记随快照落盘：provider/model/dim/mrl_dim 的组合身份，
@@ -627,11 +882,21 @@ class SpatialMemoryEngine:
                 "compressions": self.compression.compression_count,
             },
             config=self.config,
+            module_state=self._module_state(),
+            wal_sequence=self.wal.sequence,
         )
         saved = self.storage_backend.save(
             path, snapshot, compress=self.config.storage.compress
         )
+        # An export is not a checkpoint of the configured recovery store.
+        # Clearing its WAL here would lose changes when that store is reopened.
+        def recovery_path(value):
+            value = os.path.normcase(os.path.abspath(value))
+            return value[:-3] if value.lower().endswith(".json.gz") else value
+        if recovery_path(path) != recovery_path(self.config.storage.path):
+            return saved
         self._save_sidecars()
+        self._checkpoint_sequence = self.wal.sequence
         self._autosave_counter = 0
         self.wal.checkpointed += 1
         self.wal.reset()  # everything is in the snapshot now
@@ -652,7 +917,10 @@ class SpatialMemoryEngine:
                 self.storage_backend = build_storage_backend(detected)
             snapshot = self.storage_backend.load(path)
             if snapshot is None:
-                return False
+                return self._recover_wal()
+            self.wal.recovery_error = None
+            self._checkpoint_sequence = snapshot.wal_sequence
+            self.wal.sequence = snapshot.wal_sequence
             # 向量空间身份检查（SDK 直连软防护；REST PUT /config 已有硬闸门）：
             # 快照 revision 与当前引擎 revision 不一致且库非空 => 磁盘向量与
             # 当前 provider 不是同一空间（同维度换模型不报维度错，静默垃圾
@@ -729,6 +997,9 @@ class SpatialMemoryEngine:
                     self.compression._llm = self.llm
                     self.extraction.llm = self.llm
                     self.factgraph_extractor.llm = self.llm
+            self.embeddings.query_prefix = self.config.embedding.query_prefix
+            self.memory_manager.embeddings = self.embeddings
+            self.memory_manager.config = self.config
             self.memory_manager.load_state(
                 snapshot.memories,
                 {"edges": [e.to_dict() for e in snapshot.memory_edges]},
@@ -814,9 +1085,11 @@ class SpatialMemoryEngine:
             self.compression.compression_count = snapshot.counters.get("compressions", 0)
             self.retriever.refresh_keywords(self)
             # v2: sidecar module state + pending WAL replay (module 07)
-            self._load_sidecars()
-            if self.wal.enabled and os.path.exists(self.wal.path):
-                self.wal.replay(self)
+            if snapshot.module_state is None:
+                self._load_sidecars()  # legacy snapshot compatibility
+            else:
+                self._restore_module_state(snapshot.module_state)
+            self._recover_wal()
             # sleep-time compute：load 重绑快照配置后线程读新配置（间隔
             # 实时读）；快照翻开后台整理则（重）启线程，翻关由线程下跳自退。
             # load/replay 本身视为一次写活动：空闲计时从现在开始。
@@ -834,6 +1107,8 @@ class SpatialMemoryEngine:
                 "exported_at": now(),
                 "memories": [m.to_dict() for m in self.memories.values()],
                 "graph": self.graph.to_dict(),
+                "module_state": self._module_state(),
+                "wal_sequence": self.wal.sequence,
                 "stats": self.engine_stats(),
                 # 演化/融合/压缩计数器：热重建迁移后回填新引擎用
                 "counters": {
@@ -855,11 +1130,14 @@ class SpatialMemoryEngine:
         """
         with open(path, "r", encoding="utf-8") as fh:
             data = json.load(fh)
-        count = self.import_memories(data.get("memories", []))
-        graph_data = data.get("graph")
-        if graph_data:
-            self.graph.load_dict(graph_data)
-        return count
+        with self._lock:
+            graph_data = data.get("graph")
+            if graph_data:
+                self.graph.load_dict(graph_data)
+            if "module_state" in data:
+                self._restore_module_state(data["module_state"])
+            self.wal.sequence = max(self.wal.sequence, int(data.get("wal_sequence", 0)))
+            return self.import_memories(data.get("memories", []))
 
     def import_documents(
         self,
@@ -937,7 +1215,11 @@ class SpatialMemoryEngine:
     def _record_write(self, op: dict[str, Any]) -> None:
         """Module 07: append the write op to the WAL (no-op when disabled)."""
         if self.wal.enabled:
-            self.wal.append(op)
+            try:
+                self.wal.append(op)
+            except Exception:
+                self.wal.recovery_error = "WAL write failed; reload before saving or writing"
+                raise
 
     def _autosave(self) -> None:
         if not self.config.storage.autosave:
@@ -962,6 +1244,8 @@ class SpatialMemoryEngine:
         与 load/replay 都会调用；维护线程自己触发的 autosave 不算写活动，
         否则每轮整理都会把空闲窗口推开、饿死下一轮。
         """
+        if self.wal.recovery_error:
+            raise WALRecoveryError(self.wal.recovery_error)
         self._last_write_ts = now()
 
     @staticmethod

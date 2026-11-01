@@ -48,6 +48,10 @@ from fastapi import FastAPI, HTTPException, UploadFile, File
 from fastapi.responses import FileResponse, JSONResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field
+try:  # FastAPI >=0.100 also supports environments still using Pydantic 1.
+    from pydantic import field_validator
+except ImportError:  # pragma: no cover - compatibility with Pydantic 1
+    from pydantic import validator as field_validator
 from starlette.background import BackgroundTask
 
 from sme.config import SMEConfig
@@ -93,6 +97,14 @@ class AddMemoryRequest(BaseModel):
     link_kind: str = "reference"
     # W26：可选命名空间（多用户隔离）；不传 = 完全 v1 行为（无 ns 标签）
     ns: Optional[str] = None
+    conversation_id: Optional[str] = None
+
+    @field_validator("text")
+    @classmethod
+    def nonblank_text(cls, value):
+        if not value.strip():
+            raise ValueError("text must not be blank")
+        return value
 
 
 class UpdateMemoryRequest(BaseModel):
@@ -102,6 +114,13 @@ class UpdateMemoryRequest(BaseModel):
     importance: Optional[float] = None
     weight: Optional[float] = None
     summary: Optional[str] = None
+
+    @field_validator("text")
+    @classmethod
+    def nonblank_text(cls, value):
+        if value is not None and not value.strip():
+            raise ValueError("text must not be blank")
+        return value
 
 
 class SearchRequest(BaseModel):
@@ -115,6 +134,8 @@ class SearchRequest(BaseModel):
     graph_expand: int = 0
     # W26：可选命名空间过滤；不传 = 完全 v1 行为（不过滤）
     ns: Optional[str] = None
+    conversation_id: Optional[str] = None
+    include_history: bool = False
 
 
 class RegionSearchRequest(BaseModel):
@@ -124,6 +145,10 @@ class RegionSearchRequest(BaseModel):
 
 class ImportRequest(BaseModel):
     memories: list[dict[str, Any]]
+
+
+class BatchRequest(BaseModel):
+    memories: list[AddMemoryRequest]
 
 
 class LinkRequest(BaseModel):
@@ -299,6 +324,11 @@ def rebuild_engine_with(
     fd, tmp_path = tempfile.mkstemp(suffix=".json")
     os.close(fd)
     try:
+        # The API already holds engine_lock here. Release the old writer's
+        # handle only after its buffered ops have really reached the log;
+        # the replacement checkpoints the exported complete state.
+        old_engine.wal._flush_buffer()
+        old_engine.wal.close()
         old_engine.export_json(tmp_path)
         new_engine = SpatialMemoryEngine(new_config)
         new_engine.import_json(tmp_path)
@@ -600,31 +630,37 @@ def create_app(
                 # W26：ns 透传引擎（引擎内打 metadata["ns"] 标签）；
                 # None 时不打标签，行为与 v1 完全一致
                 ns=req.ns,
+                conversation_id=req.conversation_id,
             )
         return memory.to_dict()
 
     @app.post("/memories/batch", response_model=dict)
-    def add_batch(req: ImportRequest) -> dict:
+    def add_batch(req: BatchRequest) -> dict:
         # route through engine.add so the full write pipeline applies exactly
         # like engine.add_many (extraction/factversion/qapair are honored)
         with engine_lock:
             eng = engine
             added = 0
-            for item in req.memories:
-                text = (item or {}).get("text")
-                if not text or not str(text).strip():
-                    continue
-                mem = eng.add(
-                    text=str(text),
-                    metadata=item.get("metadata", {}),
-                    tags=item.get("tags", []),
-                    importance=item.get("importance", 0.5),
-                    source=item.get("source", "user"),
-                )
+            committed_ids = []
+            for index, item in enumerate(req.memories):
+                try:
+                    payload = item.model_dump() if hasattr(item, "model_dump") else item.dict()
+                    mem = eng.add(**payload)
+                except Exception as exc:
+                    # Return the successfully committed prefix, so a client
+                    # does not blindly retry the entire batch. The failed
+                    # operation may require recovery; its status is explicit.
+                    raise HTTPException(status_code=500, detail={
+                        "error": "batch execution failed", "failed_index": index,
+                        "committed_ids": committed_ids, "committed_count": len(committed_ids),
+                        "recovery_required": bool(eng.wal.recovery_error),
+                        "failed_item_status": "unknown" if eng.wal.recovery_error else "not_committed",
+                    }) from exc
                 # the extraction pipeline may drop the item (extraction noise etc.):
                 # only count memories that actually entered the store
                 if mem.id in eng.memories:
                     added += 1
+                    committed_ids.append(mem.id)
         return {
             "added": added,
             "dropped": len(req.memories) - added,
@@ -697,6 +733,8 @@ def create_app(
             include_archived=req.include_archived,
             region_retrieval=req.region_retrieval,
             graph_expand=req.graph_expand,
+            conversation_id=req.conversation_id,
+            include_history=req.include_history,
         )
         eng = _snapshot()
         # W26：ns 透传引擎（引擎内转 metadata_filters["ns"] 过滤）；
@@ -902,20 +940,23 @@ def create_app(
         return {"enabled": True, "entities": len(found), "results": results}
 
     @app.get("/profile")
-    def profile() -> dict:
+    def profile(ns: Optional[str] = None) -> dict:
         """Module 04 - user profile facts & snapshots (enabled only)."""
         eng = _snapshot()
         with eng._lock:
             prof = getattr(eng, "profile", None)
             if prof is None or not prof.enabled:
                 return {"enabled": False, "profile_facts": [], "snapshots": {}}
+            memories = prof.profile_memories(eng.memories, ns=ns)
+            snapshots = (prof.snapshots if ns is None else
+                         {k: v for k, v in prof.snapshots.items() if v.get("ns") == ns})
             return {
                 "enabled": True,
-                "stats": prof.stats(),
+                "stats": {"profile_facts": len(memories), "snapshots": {k: v["count"] for k, v in snapshots.items()}},
                 "profile_facts": [
-                    m.to_dict() for m in prof.profile_memories(eng.memories)
+                    m.to_dict() for m in memories
                 ],
-                "snapshots": prof.snapshots,
+                "snapshots": snapshots,
             }
 
     @app.get("/qapairs")
@@ -1004,72 +1045,14 @@ def _apply_env_overrides(config: SMEConfig) -> bool:
 
 
 def _restore_snapshot(engine: SpatialMemoryEngine) -> bool:
-    """服务启动时恢复既有快照（含 WAL 重放），否则每次重启都是空库。
+    """Restore and commit recovery before accepting traffic.
 
-    快照路径取 ``engine.config.storage.path``，兼容 gzip 后缀；
-    恢复失败（文件损坏等）不阻断启动，降级为空库并告警。
-    重放前 WAL 有积压时，恢复后立即 save() checkpoint——replay() 会清空
-    WAL，若不落盘，积压增量只存在于内存，服务在下次自动保存（默认每 30
-    次写入）之前被杀会丢失这些增量。
+    Engine.load owns snapshot + WAL-only recovery. Failed replay/checkpoint
+    must propagate: starting with a partial/empty store could overwrite the
+    only recoverable copy. The snapshot and WAL remain intact for retry.
     """
     base = str(getattr(engine.config.storage, "path", "") or "")
-    if not base:
-        return False
-    import logging
-
-    for candidate in (base, base + ".gz"):
-        if os.path.exists(candidate):
-            try:
-                wal_pending = engine.wal.has_pending()
-            except Exception:  # noqa: BLE001 - WAL 探测失败不阻断恢复
-                wal_pending = False
-            try:
-                restored = bool(engine.load(candidate))
-            except Exception as exc:  # noqa: BLE001 - 启动期降级
-                logging.getLogger("sme.api").warning(
-                    "快照恢复失败，以空库启动（%s）: %s", candidate, exc
-                )
-                # 坏快照改名保留：否则空库启动后的自动保存会把它覆盖掉，
-                # 把"部分损坏"放大成"全量丢失"（无任何现场可查）
-                try:
-                    backup = candidate + ".corrupt-" + time.strftime("%Y%m%d%H%M%S")
-                    os.replace(candidate, backup)
-                    logging.getLogger("sme.api").warning(
-                        "已将坏快照备份为 %s", backup
-                    )
-                except OSError:
-                    pass
-                return False
-            if restored and wal_pending:
-                try:
-                    engine.save()
-                except Exception as exc:  # noqa: BLE001 - checkpoint 失败不阻断服务
-                    logging.getLogger("sme.api").warning(
-                        "WAL 重放后 checkpoint 失败（增量仍在内存，下次保存会落盘）: %s", exc
-                    )
-            return restored
-    # 快照尚不存在（首启后、第一个 checkpoint 窗口内崩溃）但 WAL 有积压：
-    # 直接重放 WAL。否则 WAL 模式下前 checkpoint_every 次已确认（fsync
-    # 过）的写入会在重启时静默丢失，违背"返回 200 = 已持久化"的承诺。
-    try:
-        wal_pending = engine.wal.has_pending()
-    except Exception:  # noqa: BLE001 - WAL 探测失败不阻断恢复
-        wal_pending = False
-    if wal_pending:
-        try:
-            replayed = engine.wal.replay(engine)
-        except Exception as exc:  # noqa: BLE001 - 启动期降级
-            logging.getLogger("sme.api").warning("WAL-only 重放失败（快照缺失）: %s", exc)
-            return False
-        if replayed:
-            try:
-                engine.save()
-            except Exception as exc:  # noqa: BLE001
-                logging.getLogger("sme.api").warning(
-                    "WAL-only 重放后 checkpoint 失败（增量仍在内存）: %s", exc
-                )
-            return True
-    return False
+    return bool(base) and engine.load(base)
 
 
 def _apply_file_overrides(engine: SpatialMemoryEngine, path: str) -> None:

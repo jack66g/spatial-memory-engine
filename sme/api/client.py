@@ -108,11 +108,13 @@ class MemoryClient:
 
     def add(self, text: str, metadata: dict | None = None, tags: list | None = None,
             importance: float = 0.5, source: str = "user",
-            link_to: str | None = None, link_kind: str = "reference") -> dict:
+            link_to: str | None = None, link_kind: str = "reference",
+            ns: str | None = None, conversation_id: str | None = None) -> dict:
         return self._json("POST", "/memories", json={
             "text": text, "metadata": metadata or {}, "tags": tags or [],
             "importance": importance, "source": source,
             "link_to": link_to, "link_kind": link_kind,
+            "ns": ns, "conversation_id": conversation_id,
         })
 
     def add_many(self, memories: list[dict]) -> dict:
@@ -149,7 +151,8 @@ class MemoryClient:
     def search(self, query: str, top_k: int = 10, graph_expand: int = 0,
                metadata_filters: dict | None = None, tags: list | None = None,
                include_archived: bool = False, top_regions: int | None = None,
-               region_retrieval: str | None = None, ns: str | None = None) -> dict:
+               region_retrieval: str | None = None, ns: str | None = None,
+               conversation_id: str | None = None, include_history: bool = False) -> dict:
         filters = dict(metadata_filters or {})
         if ns is not None:
             # module 12 isolation over REST: same metadata tag as the engine
@@ -159,6 +162,8 @@ class MemoryClient:
             "metadata_filters": filters, "tags": tags,
             "include_archived": include_archived, "top_regions": top_regions,
             "region_retrieval": region_retrieval,
+            "conversation_id": conversation_id,
+            "include_history": include_history,
         })
 
     def regions(self) -> dict:
@@ -203,8 +208,8 @@ class MemoryClient:
     def qapairs(self) -> dict:
         return self._json("GET", "/qapairs")
 
-    def profile(self) -> dict:
-        return self._json("GET", "/profile")
+    def profile(self, ns: str | None = None) -> dict:
+        return self._json("GET", "/profile", params={"ns": ns} if ns is not None else {})
 
     def metrics(self) -> dict:
         return self._json("GET", "/metrics")

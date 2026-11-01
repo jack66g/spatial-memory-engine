@@ -72,6 +72,7 @@ class CompressionEngine:
             summary.metadata["compresses_region"] = region_id
             summary.metadata["compressed_at"] = now()
             summary.metadata["cover_count"] = len(candidates)
+            summary.metadata["covers"] = sorted(m.id for m in candidates)
             ns_values = {
                 m.metadata.get(NS_KEY) for m in candidates if m.metadata.get(NS_KEY)
             }
