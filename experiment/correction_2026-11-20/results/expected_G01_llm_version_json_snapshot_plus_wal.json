@@ -1,0 +1,46 @@
+{
+  "m_fa6d600ed9f9": {
+    "text": "用户每天喜欢喝咖啡",
+    "metadata": {
+      "experiment_case": "G01",
+      "experiment_turn": 0,
+      "ns": "person_a",
+      "fact_kind": "fact",
+      "fact_subject": "用户",
+      "confidence": 1.0,
+      "add_batch": "cd731412ad4c",
+      "superseded_by": "m_020ca77677e8",
+      "invalid_at": 1795175557.1145654
+    },
+    "tags": [
+      "extracted",
+      "fact"
+    ],
+    "source": "user",
+    "created_at": 1795175557.07289,
+    "archived": false
+  },
+  "m_020ca77677e8": {
+    "text": "用户的朋友小周现在不喝咖啡了，改喝绿茶",
+    "metadata": {
+      "experiment_case": "G01",
+      "experiment_turn": 1,
+      "ns": "person_a",
+      "fact_kind": "fact",
+      "fact_subject": "用户",
+      "confidence": 1.0,
+      "supersedes": "m_fa6d600ed9f9",
+      "corrects": "m_fa6d600ed9f9",
+      "add_batch": "09ce850ca72c",
+      "valid_at": 1795175557.1145654
+    },
+    "tags": [
+      "corrected",
+      "extracted",
+      "fact"
+    ],
+    "source": "user",
+    "created_at": 1795175557.1145654,
+    "archived": false
+  }
+}

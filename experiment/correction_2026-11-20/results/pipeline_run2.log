@@ -1,0 +1,10 @@
+run hashing/raw: explicit top1=4/12 errors=0
+run hashing/rules_no_version: explicit top1=4/12 errors=0
+run hashing/rules_version: explicit top1=9/12 errors=0
+run hashing/llm_no_version: explicit top1=7/12 errors=0
+run hashing/llm_version: explicit top1=11/12 errors=0
+run qwen/raw: explicit top1=1/12 errors=0
+run qwen/rules_no_version: explicit top1=1/12 errors=0
+run qwen/rules_version: explicit top1=9/12 errors=0
+run qwen/llm_no_version: explicit top1=6/12 errors=0
+run qwen/llm_version: explicit top1=12/12 errors=0

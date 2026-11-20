@@ -1,0 +1,21 @@
+{
+  "m_ac991b4e2cdc": {
+    "text": "用户现在住在北京。",
+    "metadata": {
+      "experiment_case": "C11",
+      "experiment_turn": 0,
+      "ns": "person_a",
+      "fact_kind": "fact",
+      "fact_subject": "用户",
+      "confidence": 1.0,
+      "add_batch": "bf4ef7f74584"
+    },
+    "tags": [
+      "extracted",
+      "fact"
+    ],
+    "source": "user",
+    "created_at": 1795175530.9292018,
+    "archived": false
+  }
+}

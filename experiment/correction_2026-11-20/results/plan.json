@@ -1,0 +1,1609 @@
+{
+  "date": "2026-11-20",
+  "head": "ed5378a",
+  "cases": [
+    {
+      "id": "C01",
+      "category": "explicit",
+      "title": "住址变更",
+      "turns": [
+        {
+          "text": "用户现在住在北京。",
+          "ns": "person_a",
+          "conversation_id": "session_1"
+        },
+        {
+          "text": "纠正一下，用户现在搬到上海了。",
+          "ns": "person_a",
+          "conversation_id": "session_2"
+        }
+      ],
+      "queries": [
+        {
+          "text": "用户现在住在哪里？",
+          "gold": {
+            "turn": 1,
+            "all": [
+              "上海"
+            ],
+            "absent": []
+          },
+          "ns": "person_a",
+          "include_history": false
+        }
+      ],
+      "retire": [
+        {
+          "old": {
+            "turn": 0,
+            "all": [
+              "北京"
+            ],
+            "absent": []
+          },
+          "new": {
+            "turn": 1,
+            "all": [
+              "上海"
+            ],
+            "absent": []
+          }
+        }
+      ],
+      "protect": []
+    },
+    {
+      "id": "C02",
+      "category": "explicit",
+      "title": "宠物改名",
+      "turns": [
+        {
+          "text": "用户养的猫叫团子。",
+          "ns": "person_a",
+          "conversation_id": "session_1"
+        },
+        {
+          "text": "纠正一下，用户的猫现在改名叫豆包。",
+          "ns": "person_a",
+          "conversation_id": "session_2"
+        }
+      ],
+      "queries": [
+        {
+          "text": "用户的猫现在叫什么名字？",
+          "gold": {
+            "turn": 1,
+            "all": [
+              "豆包"
+            ],
+            "absent": []
+          },
+          "ns": "person_a",
+          "include_history": false
+        }
+      ],
+      "retire": [
+        {
+          "old": {
+            "turn": 0,
+            "all": [
+              "团子"
+            ],
+            "absent": []
+          },
+          "new": {
+            "turn": 1,
+            "all": [
+              "豆包"
+            ],
+            "absent": []
+          }
+        }
+      ],
+      "protect": []
+    },
+    {
+      "id": "C03",
+      "category": "explicit",
+      "title": "饮料偏好变更",
+      "turns": [
+        {
+          "text": "用户喜欢每天喝咖啡。",
+          "ns": "person_a",
+          "conversation_id": "session_1"
+        },
+        {
+          "text": "纠正一下，用户现在不喝咖啡了，改喝绿茶。",
+          "ns": "person_a",
+          "conversation_id": "session_2"
+        }
+      ],
+      "queries": [
+        {
+          "text": "用户现在喝什么饮料？",
+          "gold": {
+            "turn": 1,
+            "all": [
+              "绿茶"
+            ],
+            "absent": []
+          },
+          "ns": "person_a",
+          "include_history": false
+        }
+      ],
+      "retire": [
+        {
+          "old": {
+            "turn": 0,
+            "all": [
+              "咖啡"
+            ],
+            "absent": []
+          },
+          "new": {
+            "turn": 1,
+            "all": [
+              "绿茶"
+            ],
+            "absent": []
+          }
+        }
+      ],
+      "protect": []
+    },
+    {
+      "id": "C04",
+      "category": "explicit",
+      "title": "工作单位变更",
+      "turns": [
+        {
+          "text": "用户在海星科技公司上班。",
+          "ns": "person_a",
+          "conversation_id": "session_1"
+        },
+        {
+          "text": "纠正一下，用户现在已经跳槽到晨光公司上班。",
+          "ns": "person_a",
+          "conversation_id": "session_2"
+        }
+      ],
+      "queries": [
+        {
+          "text": "用户现在在哪家公司工作？",
+          "gold": {
+            "turn": 1,
+            "all": [
+              "晨光"
+            ],
+            "absent": []
+          },
+          "ns": "person_a",
+          "include_history": false
+        }
+      ],
+      "retire": [
+        {
+          "old": {
+            "turn": 0,
+            "all": [
+              "海星"
+            ],
+            "absent": []
+          },
+          "new": {
+            "turn": 1,
+            "all": [
+              "晨光"
+            ],
+            "absent": []
+          }
+        }
+      ],
+      "protect": []
+    },
+    {
+      "id": "C05",
+      "category": "explicit",
+      "title": "颜色偏好",
+      "turns": [
+        {
+          "text": "用户最喜欢的颜色是蓝色。",
+          "ns": "person_a",
+          "conversation_id": "session_1"
+        },
+        {
+          "text": "更正一下，用户最喜欢的颜色是紫色，不是蓝色。",
+          "ns": "person_a",
+          "conversation_id": "session_2"
+        }
+      ],
+      "queries": [
+        {
+          "text": "用户最喜欢什么颜色？",
+          "gold": {
+            "turn": 1,
+            "all": [
+              "紫色"
+            ],
+            "absent": []
+          },
+          "ns": "person_a",
+          "include_history": false
+        }
+      ],
+      "retire": [
+        {
+          "old": {
+            "turn": 0,
+            "all": [
+              "蓝色"
+            ],
+            "absent": []
+          },
+          "new": {
+            "turn": 1,
+            "all": [
+              "紫色"
+            ],
+            "absent": []
+          }
+        }
+      ],
+      "protect": []
+    },
+    {
+      "id": "C06",
+      "category": "explicit",
+      "title": "配置文件变更",
+      "turns": [
+        {
+          "text": "Atlas 服务的生产配置文件是 atlas_v1.yaml。",
+          "ns": "person_a",
+          "conversation_id": "session_1"
+        },
+        {
+          "text": "更正一下，Atlas 服务的生产配置文件已经改为 atlas_v2.yaml。",
+          "ns": "person_a",
+          "conversation_id": "session_2"
+        }
+      ],
+      "queries": [
+        {
+          "text": "Atlas 服务现在使用哪个生产配置文件？",
+          "gold": {
+            "turn": 1,
+            "all": [
+              "atlas_v2.yaml"
+            ],
+            "absent": []
+          },
+          "ns": "person_a",
+          "include_history": false
+        }
+      ],
+      "retire": [
+        {
+          "old": {
+            "turn": 0,
+            "all": [
+              "atlas_v1.yaml"
+            ],
+            "absent": []
+          },
+          "new": {
+            "turn": 1,
+            "all": [
+              "atlas_v2.yaml"
+            ],
+            "absent": []
+          }
+        }
+      ],
+      "protect": []
+    },
+    {
+      "id": "C07",
+      "category": "explicit",
+      "title": "日志路径变更",
+      "turns": [
+        {
+          "text": "Atlas 服务的日志存放在 /var/log/atlas_old。",
+          "ns": "person_a",
+          "conversation_id": "session_1"
+        },
+        {
+          "text": "纠正一下，Atlas 服务的日志现在存放在 /srv/atlas/logs。",
+          "ns": "person_a",
+          "conversation_id": "session_2"
+        }
+      ],
+      "queries": [
+        {
+          "text": "Atlas 服务现在的日志路径是什么？",
+          "gold": {
+            "turn": 1,
+            "all": [
+              "/srv/atlas/logs"
+            ],
+            "absent": []
+          },
+          "ns": "person_a",
+          "include_history": false
+        }
+      ],
+      "retire": [
+        {
+          "old": {
+            "turn": 0,
+            "all": [
+              "/var/log/atlas_old"
+            ],
+            "absent": []
+          },
+          "new": {
+            "turn": 1,
+            "all": [
+              "/srv/atlas/logs"
+            ],
+            "absent": []
+          }
+        }
+      ],
+      "protect": []
+    },
+    {
+      "id": "C08",
+      "category": "explicit",
+      "title": "租金数字更正",
+      "turns": [
+        {
+          "text": "用户的房租每月是2300元。",
+          "ns": "person_a",
+          "conversation_id": "session_1"
+        },
+        {
+          "text": "记错了，用户的房租每月是1900元，不是2300元。",
+          "ns": "person_a",
+          "conversation_id": "session_2"
+        }
+      ],
+      "queries": [
+        {
+          "text": "用户现在每月房租是多少？",
+          "gold": {
+            "turn": 1,
+            "all": [
+              "1900"
+            ],
+            "absent": []
+          },
+          "ns": "person_a",
+          "include_history": false
+        }
+      ],
+      "retire": [
+        {
+          "old": {
+            "turn": 0,
+            "all": [
+              "2300"
+            ],
+            "absent": []
+          },
+          "new": {
+            "turn": 1,
+            "all": [
+              "1900"
+            ],
+            "absent": []
+          }
+        }
+      ],
+      "protect": []
+    },
+    {
+      "id": "C09",
+      "category": "explicit",
+      "title": "同词否定",
+      "turns": [
+        {
+          "text": "用户喜欢喝咖啡。",
+          "ns": "person_a",
+          "conversation_id": "session_1"
+        },
+        {
+          "text": "其实用户不喜欢喝咖啡了。",
+          "ns": "person_a",
+          "conversation_id": "session_2"
+        }
+      ],
+      "queries": [
+        {
+          "text": "用户现在还喜欢喝咖啡吗？",
+          "gold": {
+            "turn": 1,
+            "all": [
+              "不喜欢",
+              "咖啡"
+            ],
+            "absent": []
+          },
+          "ns": "person_a",
+          "include_history": false
+        }
+      ],
+      "retire": [
+        {
+          "old": {
+            "turn": 0,
+            "all": [
+              "咖啡"
+            ],
+            "absent": []
+          },
+          "new": {
+            "turn": 1,
+            "all": [
+              "不喜欢",
+              "咖啡"
+            ],
+            "absent": []
+          }
+        }
+      ],
+      "protect": []
+    },
+    {
+      "id": "C10",
+      "category": "explicit",
+      "title": "端口数字更正",
+      "turns": [
+        {
+          "text": "Atlas 服务的监听端口是8080。",
+          "ns": "person_a",
+          "conversation_id": "session_1"
+        },
+        {
+          "text": "更正一下，Atlas 服务的监听端口是9090，不是8080。",
+          "ns": "person_a",
+          "conversation_id": "session_2"
+        }
+      ],
+      "queries": [
+        {
+          "text": "Atlas 服务现在监听哪个端口？",
+          "gold": {
+            "turn": 1,
+            "all": [
+              "9090"
+            ],
+            "absent": []
+          },
+          "ns": "person_a",
+          "include_history": false
+        }
+      ],
+      "retire": [
+        {
+          "old": {
+            "turn": 0,
+            "all": [
+              "8080"
+            ],
+            "absent": []
+          },
+          "new": {
+            "turn": 1,
+            "all": [
+              "9090"
+            ],
+            "absent": []
+          }
+        }
+      ],
+      "protect": []
+    },
+    {
+      "id": "C11",
+      "category": "explicit",
+      "title": "礼貌前缀下的明确更正",
+      "turns": [
+        {
+          "text": "用户现在住在北京。",
+          "ns": "person_a",
+          "conversation_id": "session_1"
+        },
+        {
+          "text": "好的，纠正一下，用户现在住在上海。",
+          "ns": "person_a",
+          "conversation_id": "session_2"
+        }
+      ],
+      "queries": [
+        {
+          "text": "用户现在住在哪里？",
+          "gold": {
+            "turn": 1,
+            "all": [
+              "上海"
+            ],
+            "absent": []
+          },
+          "ns": "person_a",
+          "include_history": false
+        }
+      ],
+      "retire": [
+        {
+          "old": {
+            "turn": 0,
+            "all": [
+              "北京"
+            ],
+            "absent": []
+          },
+          "new": {
+            "turn": 1,
+            "all": [
+              "上海"
+            ],
+            "absent": []
+          }
+        }
+      ],
+      "protect": []
+    },
+    {
+      "id": "C12",
+      "category": "explicit",
+      "title": "明确否定旧宠物归属",
+      "turns": [
+        {
+          "text": "用户养了一只猫叫宽粉。",
+          "ns": "person_a",
+          "conversation_id": "session_1"
+        },
+        {
+          "text": "纠正一下，宽粉是用户室友的猫，用户自己养的是柯基锅盔。",
+          "ns": "person_a",
+          "conversation_id": "session_2"
+        }
+      ],
+      "queries": [
+        {
+          "text": "用户自己养的宠物叫什么？",
+          "gold": {
+            "turn": 1,
+            "all": [
+              "锅盔"
+            ],
+            "absent": []
+          },
+          "ns": "person_a",
+          "include_history": false
+        }
+      ],
+      "retire": [
+        {
+          "old": {
+            "turn": 0,
+            "all": [
+              "宽粉"
+            ],
+            "absent": []
+          },
+          "new": {
+            "turn": 1,
+            "all": [
+              "锅盔"
+            ],
+            "absent": []
+          }
+        }
+      ],
+      "protect": []
+    },
+    {
+      "id": "G01",
+      "category": "safety",
+      "title": "朋友改口不应使本人偏好失效",
+      "turns": [
+        {
+          "text": "用户每天喜欢喝咖啡。",
+          "ns": "person_a",
+          "conversation_id": "session_1"
+        },
+        {
+          "text": "更正一下，用户的朋友小周现在不喝咖啡了，改喝绿茶。",
+          "ns": "person_a",
+          "conversation_id": "session_1"
+        }
+      ],
+      "queries": [
+        {
+          "text": "用户本人每天喜欢喝什么？",
+          "gold": {
+            "turn": 0,
+            "all": [
+              "咖啡"
+            ],
+            "absent": []
+          },
+          "ns": "person_a",
+          "include_history": false
+        }
+      ],
+      "protect": [
+        {
+          "turn": 0,
+          "all": [
+            "咖啡"
+          ],
+          "absent": []
+        }
+      ],
+      "retire": []
+    },
+    {
+      "id": "G02",
+      "category": "safety",
+      "title": "猫狗名字是不同属性",
+      "turns": [
+        {
+          "text": "用户养的猫叫团子。",
+          "ns": "person_a",
+          "conversation_id": "session_1"
+        },
+        {
+          "text": "纠正一下，用户养的狗叫豆包。",
+          "ns": "person_a",
+          "conversation_id": "session_1"
+        }
+      ],
+      "queries": [
+        {
+          "text": "用户的猫叫什么？",
+          "gold": {
+            "turn": 0,
+            "all": [
+              "猫",
+              "团子"
+            ],
+            "absent": []
+          },
+          "ns": "person_a",
+          "include_history": false
+        }
+      ],
+      "protect": [
+        {
+          "turn": 0,
+          "all": [
+            "猫",
+            "团子"
+          ],
+          "absent": []
+        }
+      ],
+      "retire": []
+    },
+    {
+      "id": "G03",
+      "category": "safety",
+      "title": "同次写入多个字段只更正住址",
+      "turns": [
+        {
+          "text": "用户住在北京，用户在海星科技公司工作。",
+          "ns": "person_a",
+          "conversation_id": "session_1"
+        },
+        {
+          "text": "纠正一下，用户现在住在上海，工作单位没有变化。",
+          "ns": "person_a",
+          "conversation_id": "session_1"
+        }
+      ],
+      "queries": [
+        {
+          "text": "用户现在在哪家公司工作？",
+          "gold": {
+            "turn": 0,
+            "all": [
+              "海星"
+            ],
+            "absent": []
+          },
+          "ns": "person_a",
+          "include_history": false
+        },
+        {
+          "text": "用户现在住在哪里？",
+          "gold": {
+            "turn": 1,
+            "all": [
+              "上海"
+            ],
+            "absent": []
+          },
+          "ns": "person_a",
+          "include_history": false
+        }
+      ],
+      "protect": [
+        {
+          "turn": 0,
+          "all": [
+            "海星"
+          ],
+          "absent": []
+        }
+      ],
+      "retire": []
+    },
+    {
+      "id": "G04",
+      "category": "safety",
+      "title": "同名服务不同环境",
+      "turns": [
+        {
+          "text": "Atlas 生产环境的端口是8080。",
+          "ns": "person_a",
+          "conversation_id": "session_1"
+        },
+        {
+          "text": "纠正一下，Atlas 测试环境的端口是9090。",
+          "ns": "person_a",
+          "conversation_id": "session_1"
+        }
+      ],
+      "queries": [
+        {
+          "text": "Atlas 生产环境端口是多少？",
+          "gold": {
+            "turn": 0,
+            "all": [
+              "生产",
+              "8080"
+            ],
+            "absent": []
+          },
+          "ns": "person_a",
+          "include_history": false
+        }
+      ],
+      "protect": [
+        {
+          "turn": 0,
+          "all": [
+            "生产",
+            "8080"
+          ],
+          "absent": []
+        }
+      ],
+      "retire": []
+    },
+    {
+      "id": "G05",
+      "category": "safety",
+      "title": "其实引出补充而非替换",
+      "turns": [
+        {
+          "text": "用户喜欢喝咖啡。",
+          "ns": "person_a",
+          "conversation_id": "session_1"
+        },
+        {
+          "text": "其实用户也喜欢喝绿茶，咖啡仍然喜欢。",
+          "ns": "person_a",
+          "conversation_id": "session_1"
+        }
+      ],
+      "queries": [
+        {
+          "text": "用户还喜欢喝咖啡吗？",
+          "gold": {
+            "turn": 0,
+            "all": [
+              "喜欢",
+              "咖啡"
+            ],
+            "absent": []
+          },
+          "ns": "person_a",
+          "include_history": false
+        }
+      ],
+      "protect": [
+        {
+          "turn": 0,
+          "all": [
+            "喜欢",
+            "咖啡"
+          ],
+          "absent": []
+        }
+      ],
+      "retire": []
+    },
+    {
+      "id": "G06",
+      "category": "safety",
+      "title": "条件句不应变成已发生搬家",
+      "turns": [
+        {
+          "text": "用户现在住在北京。",
+          "ns": "person_a",
+          "conversation_id": "session_1"
+        },
+        {
+          "text": "如果用户以后搬到上海，就会换工作，目前还没有搬家。",
+          "ns": "person_a",
+          "conversation_id": "session_1"
+        }
+      ],
+      "queries": [
+        {
+          "text": "用户目前住在哪里？",
+          "gold": {
+            "turn": 0,
+            "all": [
+              "北京"
+            ],
+            "absent": []
+          },
+          "ns": "person_a",
+          "include_history": false
+        }
+      ],
+      "protect": [
+        {
+          "turn": 0,
+          "all": [
+            "北京"
+          ],
+          "absent": []
+        }
+      ],
+      "retire": []
+    },
+    {
+      "id": "G07",
+      "category": "safety",
+      "title": "引述室友的话不应改变本人住址",
+      "turns": [
+        {
+          "text": "用户现在住在北京。",
+          "ns": "person_a",
+          "conversation_id": "session_1"
+        },
+        {
+          "text": "用户转述室友小周的话：纠正一下，我现在搬到上海了。这句话说的是小周，不是用户。",
+          "ns": "person_a",
+          "conversation_id": "session_1"
+        }
+      ],
+      "queries": [
+        {
+          "text": "用户本人现在住在哪里？",
+          "gold": {
+            "turn": 0,
+            "all": [
+              "北京"
+            ],
+            "absent": []
+          },
+          "ns": "person_a",
+          "include_history": false
+        }
+      ],
+      "protect": [
+        {
+          "turn": 0,
+          "all": [
+            "北京"
+          ],
+          "absent": []
+        }
+      ],
+      "retire": []
+    },
+    {
+      "id": "G08",
+      "category": "safety",
+      "title": "同人不同属性不应互相覆盖",
+      "turns": [
+        {
+          "text": "用户喜欢喝咖啡。",
+          "ns": "person_a",
+          "conversation_id": "session_1"
+        },
+        {
+          "text": "更正一下，用户喜欢的咖啡杯颜色是绿色。",
+          "ns": "person_a",
+          "conversation_id": "session_1"
+        }
+      ],
+      "queries": [
+        {
+          "text": "用户喜欢喝什么饮料？",
+          "gold": {
+            "turn": 0,
+            "all": [
+              "喝",
+              "咖啡"
+            ],
+            "absent": []
+          },
+          "ns": "person_a",
+          "include_history": false
+        }
+      ],
+      "protect": [
+        {
+          "turn": 0,
+          "all": [
+            "喝",
+            "咖啡"
+          ],
+          "absent": []
+        }
+      ],
+      "retire": []
+    },
+    {
+      "id": "T01",
+      "category": "temporal",
+      "title": "晚写入的历史不覆盖现在",
+      "turns": [
+        {
+          "text": "截至2026年11月20日，用户现在住在上海。",
+          "ns": "person_a",
+          "conversation_id": "session_1"
+        },
+        {
+          "text": "补充历史记录：用户在2025年住在北京，这不是当前住址。",
+          "ns": "person_a",
+          "conversation_id": "session_2"
+        }
+      ],
+      "queries": [
+        {
+          "text": "用户现在住在哪里？",
+          "gold": {
+            "turn": 0,
+            "all": [
+              "上海"
+            ],
+            "absent": []
+          },
+          "ns": "person_a",
+          "include_history": false
+        },
+        {
+          "text": "用户2025年住在哪里？",
+          "gold": {
+            "turn": 1,
+            "all": [
+              "2025",
+              "北京"
+            ],
+            "absent": []
+          },
+          "ns": "person_a",
+          "include_history": true
+        }
+      ],
+      "protect": [
+        {
+          "turn": 0,
+          "all": [
+            "上海"
+          ],
+          "absent": []
+        }
+      ],
+      "retire": []
+    },
+    {
+      "id": "T02",
+      "category": "temporal",
+      "title": "未来计划不覆盖当前住址",
+      "turns": [
+        {
+          "text": "用户目前住在北京。",
+          "ns": "person_a",
+          "conversation_id": "session_1"
+        },
+        {
+          "text": "更正一下搬家计划：用户计划2027年搬去上海，目前还没有搬。",
+          "ns": "person_a",
+          "conversation_id": "session_1"
+        }
+      ],
+      "queries": [
+        {
+          "text": "用户目前住在哪里？",
+          "gold": {
+            "turn": 0,
+            "all": [
+              "北京"
+            ],
+            "absent": []
+          },
+          "ns": "person_a",
+          "include_history": false
+        }
+      ],
+      "protect": [
+        {
+          "turn": 0,
+          "all": [
+            "北京"
+          ],
+          "absent": []
+        }
+      ],
+      "retire": []
+    },
+    {
+      "id": "T03",
+      "category": "temporal",
+      "title": "出差不等于迁居",
+      "turns": [
+        {
+          "text": "用户长期住在北京。",
+          "ns": "person_a",
+          "conversation_id": "session_1"
+        },
+        {
+          "text": "其实用户这周在上海出差，周五回北京，并没有搬家。",
+          "ns": "person_a",
+          "conversation_id": "session_1"
+        }
+      ],
+      "queries": [
+        {
+          "text": "用户长期住在哪里？",
+          "gold": {
+            "turn": 0,
+            "all": [
+              "长期",
+              "北京"
+            ],
+            "absent": []
+          },
+          "ns": "person_a",
+          "include_history": false
+        }
+      ],
+      "protect": [
+        {
+          "turn": 0,
+          "all": [
+            "长期",
+            "北京"
+          ],
+          "absent": []
+        }
+      ],
+      "retire": []
+    },
+    {
+      "id": "T04",
+      "category": "temporal",
+      "title": "明确纠正后保留历史",
+      "turns": [
+        {
+          "text": "用户现在住在北京。",
+          "ns": "person_a",
+          "conversation_id": "session_1"
+        },
+        {
+          "text": "纠正一下，用户现在已经搬到上海了。",
+          "ns": "person_a",
+          "conversation_id": "session_2"
+        }
+      ],
+      "queries": [
+        {
+          "text": "用户现在住在哪里？",
+          "gold": {
+            "turn": 1,
+            "all": [
+              "上海"
+            ],
+            "absent": []
+          },
+          "ns": "person_a",
+          "include_history": false
+        },
+        {
+          "text": "用户搬去上海之前住在哪里？",
+          "gold": {
+            "turn": 0,
+            "all": [
+              "北京"
+            ],
+            "absent": []
+          },
+          "ns": "person_a",
+          "include_history": true
+        }
+      ],
+      "protect": [],
+      "retire": [
+        {
+          "old": {
+            "turn": 0,
+            "all": [
+              "北京"
+            ],
+            "absent": []
+          },
+          "new": {
+            "turn": 1,
+            "all": [
+              "上海"
+            ],
+            "absent": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "S01",
+      "category": "scope",
+      "title": "用户B纠正不得使用户A失效",
+      "turns": [
+        {
+          "text": "用户现在住在北京。",
+          "ns": "person_a",
+          "conversation_id": "session_1"
+        },
+        {
+          "text": "纠正一下，用户现在搬到上海了。",
+          "ns": "person_b",
+          "conversation_id": "session_1"
+        }
+      ],
+      "queries": [
+        {
+          "text": "用户现在住在哪里？",
+          "gold": {
+            "turn": 0,
+            "all": [
+              "北京"
+            ],
+            "absent": []
+          },
+          "ns": "person_a",
+          "include_history": false
+        },
+        {
+          "text": "用户现在住在哪里？",
+          "gold": {
+            "turn": 1,
+            "all": [
+              "上海"
+            ],
+            "absent": []
+          },
+          "ns": "person_b",
+          "include_history": false
+        }
+      ],
+      "protect": [
+        {
+          "turn": 0,
+          "all": [
+            "北京"
+          ],
+          "absent": []
+        }
+      ],
+      "retire": []
+    },
+    {
+      "id": "S02",
+      "category": "scope",
+      "title": "用户B否定不得使用户A偏好失效",
+      "turns": [
+        {
+          "text": "用户喜欢喝咖啡。",
+          "ns": "person_a",
+          "conversation_id": "session_1"
+        },
+        {
+          "text": "其实用户不喜欢喝咖啡了。",
+          "ns": "person_b",
+          "conversation_id": "session_1"
+        }
+      ],
+      "queries": [
+        {
+          "text": "用户喜欢喝什么？",
+          "gold": {
+            "turn": 0,
+            "all": [
+              "喜欢",
+              "咖啡"
+            ],
+            "absent": []
+          },
+          "ns": "person_a",
+          "include_history": false
+        }
+      ],
+      "protect": [
+        {
+          "turn": 0,
+          "all": [
+            "喜欢",
+            "咖啡"
+          ],
+          "absent": []
+        }
+      ],
+      "retire": []
+    },
+    {
+      "id": "S03",
+      "category": "scope",
+      "title": "同用户跨会话明确纠正",
+      "turns": [
+        {
+          "text": "用户养的猫叫团子。",
+          "ns": "person_a",
+          "conversation_id": "old_session"
+        },
+        {
+          "text": "纠正一下，用户的猫现在改名叫豆包。",
+          "ns": "person_a",
+          "conversation_id": "new_session"
+        }
+      ],
+      "queries": [
+        {
+          "text": "用户的猫现在叫什么？",
+          "gold": {
+            "turn": 1,
+            "all": [
+              "豆包"
+            ],
+            "absent": []
+          },
+          "ns": "person_a",
+          "include_history": false
+        }
+      ],
+      "protect": [],
+      "retire": [
+        {
+          "old": {
+            "turn": 0,
+            "all": [
+              "团子"
+            ],
+            "absent": []
+          },
+          "new": {
+            "turn": 1,
+            "all": [
+              "豆包"
+            ],
+            "absent": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "A01",
+      "category": "context",
+      "title": "省略主语的简短纠正",
+      "turns": [
+        {
+          "text": "用户现在住在北京。",
+          "ns": "person_a",
+          "conversation_id": "session_1"
+        },
+        {
+          "text": "不对，是上海。",
+          "ns": "person_a",
+          "conversation_id": "session_2"
+        }
+      ],
+      "queries": [
+        {
+          "text": "用户现在住在哪里？",
+          "gold": {
+            "turn": 1,
+            "all": [
+              "上海"
+            ],
+            "absent": []
+          },
+          "ns": "person_a",
+          "include_history": false
+        }
+      ],
+      "protect": [],
+      "retire": [
+        {
+          "old": {
+            "turn": 0,
+            "all": [
+              "北京"
+            ],
+            "absent": []
+          },
+          "new": {
+            "turn": 1,
+            "all": [
+              "上海"
+            ],
+            "absent": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "A02",
+      "category": "context",
+      "title": "两个同名人下指代不明确",
+      "turns": [
+        {
+          "text": "研发部张伟负责 Atlas 服务。",
+          "ns": "person_a",
+          "conversation_id": "session_1"
+        },
+        {
+          "text": "财务部张伟负责报销系统。",
+          "ns": "person_a",
+          "conversation_id": "session_1"
+        },
+        {
+          "text": "更正一下，张伟已经调到市场部了。",
+          "ns": "person_a",
+          "conversation_id": "session_2"
+        }
+      ],
+      "queries": [],
+      "protect": [
+        {
+          "turn": 0,
+          "all": [
+            "研发",
+            "张伟"
+          ],
+          "absent": []
+        },
+        {
+          "turn": 1,
+          "all": [
+            "财务",
+            "张伟"
+          ],
+          "absent": []
+        }
+      ],
+      "retire": []
+    },
+    {
+      "id": "A03",
+      "category": "context",
+      "title": "连续三次明确改口",
+      "turns": [
+        {
+          "text": "用户喜欢喝咖啡。",
+          "ns": "person_a",
+          "conversation_id": "session_1"
+        },
+        {
+          "text": "其实用户不喜欢喝咖啡了。",
+          "ns": "person_a",
+          "conversation_id": "session_1"
+        },
+        {
+          "text": "其实用户又喜欢喝咖啡了。",
+          "ns": "person_a",
+          "conversation_id": "session_3"
+        }
+      ],
+      "queries": [
+        {
+          "text": "用户现在还喜欢喝咖啡吗？",
+          "gold": {
+            "turn": 2,
+            "all": [
+              "又喜欢",
+              "咖啡"
+            ],
+            "absent": []
+          },
+          "ns": "person_a",
+          "include_history": false
+        }
+      ],
+      "protect": [],
+      "retire": [
+        {
+          "old": {
+            "turn": 0,
+            "all": [
+              "咖啡"
+            ],
+            "absent": []
+          },
+          "new": {
+            "turn": 1,
+            "all": [
+              "不喜欢"
+            ],
+            "absent": []
+          }
+        },
+        {
+          "old": {
+            "turn": 1,
+            "all": [
+              "不喜欢"
+            ],
+            "absent": []
+          },
+          "new": {
+            "turn": 2,
+            "all": [
+              "又喜欢"
+            ],
+            "absent": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "L01",
+      "category": "boundary",
+      "title": "纠正在600字符之后",
+      "turns": [
+        {
+          "text": "用户现在住在北京。",
+          "ns": "person_a",
+          "conversation_id": "session_1"
+        },
+        {
+          "text": "这段是项目运行记录，记录普通状态，不包含住址更新。这段是项目运行记录，记录普通状态，不包含住址更新。这段是项目运行记录，记录普通状态，不包含住址更新。这段是项目运行记录，记录普通状态，不包含住址更新。这段是项目运行记录，记录普通状态，不包含住址更新。这段是项目运行记录，记录普通状态，不包含住址更新。这段是项目运行记录，记录普通状态，不包含住址更新。这段是项目运行记录，记录普通状态，不包含住址更新。这段是项目运行记录，记录普通状态，不包含住址更新。这段是项目运行记录，记录普通状态，不包含住址更新。这段是项目运行记录，记录普通状态，不包含住址更新。这段是项目运行记录，记录普通状态，不包含住址更新。这段是项目运行记录，记录普通状态，不包含住址更新。这段是项目运行记录，记录普通状态，不包含住址更新。这段是项目运行记录，记录普通状态，不包含住址更新。这段是项目运行记录，记录普通状态，不包含住址更新。这段是项目运行记录，记录普通状态，不包含住址更新。这段是项目运行记录，记录普通状态，不包含住址更新。这段是项目运行记录，记录普通状态，不包含住址更新。这段是项目运行记录，记录普通状态，不包含住址更新。这段是项目运行记录，记录普通状态，不包含住址更新。这段是项目运行记录，记录普通状态，不包含住址更新。这段是项目运行记录，记录普通状态，不包含住址更新。这段是项目运行记录，记录普通状态，不包含住址更新。这段是项目运行记录，记录普通状态，不包含住址更新。这段是项目运行记录，记录普通状态，不包含住址更新。这段是项目运行记录，记录普通状态，不包含住址更新。这段是项目运行记录，记录普通状态，不包含住址更新。这段是项目运行记录，记录普通状态，不包含住址更新。这段是项目运行记录，记录普通状态，不包含住址更新。这段是项目运行记录，记录普通状态，不包含住址更新。这段是项目运行记录，记录普通状态，不包含住址更新。这段是项目运行记录，记录普通状态，不包含住址更新。这段是项目运行记录，记录普通状态，不包含住址更新。这段是项目运行记录，记录普通状态，不包含住址更新。纠正一下，用户现在住在上海。",
+          "ns": "person_a",
+          "conversation_id": "session_1"
+        }
+      ],
+      "queries": [
+        {
+          "text": "用户现在住在哪里？",
+          "gold": {
+            "turn": 1,
+            "all": [
+              "上海"
+            ],
+            "absent": []
+          },
+          "ns": "person_a",
+          "include_history": false
+        }
+      ],
+      "protect": [],
+      "retire": [
+        {
+          "old": {
+            "turn": 0,
+            "all": [
+              "北京"
+            ],
+            "absent": []
+          },
+          "new": {
+            "turn": 1,
+            "all": [
+              "上海"
+            ],
+            "absent": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "L02",
+      "category": "boundary",
+      "title": "一条消息同时更正和补充多个字段",
+      "turns": [
+        {
+          "text": "用户住在北京。",
+          "ns": "person_a",
+          "conversation_id": "session_1"
+        },
+        {
+          "text": "用户在海星科技公司工作。",
+          "ns": "person_a",
+          "conversation_id": "session_1"
+        },
+        {
+          "text": "纠正一下，用户住在上海；另外用户的朋友小周在晨光公司工作，用户自己的公司没有变化。",
+          "ns": "person_a",
+          "conversation_id": "session_1"
+        }
+      ],
+      "queries": [
+        {
+          "text": "用户本人在哪家公司工作？",
+          "gold": {
+            "turn": 1,
+            "all": [
+              "海星"
+            ],
+            "absent": []
+          },
+          "ns": "person_a",
+          "include_history": false
+        },
+        {
+          "text": "用户现在住在哪里？",
+          "gold": {
+            "turn": 2,
+            "all": [
+              "上海"
+            ],
+            "absent": []
+          },
+          "ns": "person_a",
+          "include_history": false
+        }
+      ],
+      "protect": [
+        {
+          "turn": 1,
+          "all": [
+            "海星"
+          ],
+          "absent": []
+        }
+      ],
+      "retire": [
+        {
+          "old": {
+            "turn": 0,
+            "all": [
+              "北京"
+            ],
+            "absent": []
+          },
+          "new": {
+            "turn": 2,
+            "all": [
+              "上海"
+            ],
+            "absent": []
+          }
+        }
+      ]
+    }
+  ],
+  "scoring": {
+    "query": "top-1/top-5 gold = input turn provenance AND frozen literal anchors; no answer generation or LLM judge",
+    "link": "each matching old fact must reach an appropriate successor in same namespace (chain allowed)",
+    "protect": "matching non-raw evidence from protected turn must exist and remain unretired",
+    "layers": "explicit cases scored separately from ambiguous/boundary cases; no universal accuracy claim",
+    "embedding": "hashing and locally cached Qwen3-Embedding-0.6B; real vectors frozen for paired runs, not a latency benchmark",
+    "arms": [
+      "raw",
+      "rules_no_version",
+      "rules_version",
+      "llm_no_version",
+      "llm_version"
+    ],
+    "llm": "existing laboratory DeepSeek configuration; synthetic inputs only; raw completions frozen and replayed identically; rules fallback tracked",
+    "time": "separate conversation IDs, explicit dates; no claim of real ten-day wait",
+    "production": "never called or written",
+    "defaults": "version thresholds unchanged; decay disabled and background maintenance off to isolate correction"
+  }
+}

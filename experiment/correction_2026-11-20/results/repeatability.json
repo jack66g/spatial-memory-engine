@@ -1,0 +1,8 @@
+{
+  "fresh_runs": 3,
+  "cases_per_run": 320,
+  "pipeline_runs": 960,
+  "frozen_model_outputs": true,
+  "changed_outcomes": 0,
+  "changes": []
+}

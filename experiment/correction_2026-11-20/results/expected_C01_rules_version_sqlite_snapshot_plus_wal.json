@@ -1,0 +1,46 @@
+{
+  "m_a0b5f06a7eb3": {
+    "text": "用户现在住在北京。",
+    "metadata": {
+      "experiment_case": "C01",
+      "experiment_turn": 0,
+      "ns": "person_a",
+      "fact_kind": "fact",
+      "fact_subject": "用户",
+      "confidence": 1.0,
+      "add_batch": "ec90aec47aa2",
+      "superseded_by": "m_5b15d361e970",
+      "invalid_at": 1795175490.798094
+    },
+    "tags": [
+      "extracted",
+      "fact"
+    ],
+    "source": "user",
+    "created_at": 1795175490.7618077,
+    "archived": false
+  },
+  "m_5b15d361e970": {
+    "text": "纠正一下，用户现在搬到上海了。",
+    "metadata": {
+      "experiment_case": "C01",
+      "experiment_turn": 1,
+      "ns": "person_a",
+      "fact_kind": "fact",
+      "fact_subject": "用户",
+      "confidence": 1.0,
+      "supersedes": "m_a0b5f06a7eb3",
+      "corrects": "m_a0b5f06a7eb3",
+      "add_batch": "537cfff2b486",
+      "valid_at": 1795175490.798094
+    },
+    "tags": [
+      "corrected",
+      "extracted",
+      "fact"
+    ],
+    "source": "user",
+    "created_at": 1795175490.798094,
+    "archived": false
+  }
+}

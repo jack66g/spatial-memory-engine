@@ -1,0 +1,30 @@
+{
+  "main_plan_unchanged": true,
+  "C12": {
+    "initial_metric": "strict chain target was the new dog's name",
+    "issue": "overly narrow target: the old cat ownership is correctly corrected by the new fact saying the cat belongs to the roommate",
+    "observed": "old -> roommate owns cat; separate current fact user owns dog; correct",
+    "treatment": "keep initial 10/12 strict count unchanged; semantic review adds one valid case, leaving C04 as the unresolved main explicit link; never rewrite frozen scores silently"
+  },
+  "G05": {
+    "issue": "old-source provenance fails although latest coffee statement correctly retains user's preference",
+    "observed": "new green-tea preference is nevertheless marked superseded by coffee, despite being an addition",
+    "treatment": "do not call the coffee answer wrong; report the incorrect multi-preference version chain separately"
+  },
+  "U05": {
+    "issue": "faithful combined restatement keeps user's coffee preference and friend's separate preference",
+    "treatment": "do not count old source being superseded as a semantic failure; this case is excluded from definitive false-correction examples"
+  },
+  "original_safety_cases": {
+    "issue": "some initial phrases containing correction markers leave the intended correction target implicit",
+    "treatment": "pressure observations only; use E01-E04, with both targets already recorded and an explicit only-this-object instruction, as stronger scope evidence"
+  },
+  "history": {
+    "observed": "T04 original Beijing fact remains in top-5 but ranks second for a historical query",
+    "treatment": "evidence retained; not proof of final answer failure, because no generator was run"
+  },
+  "threshold": {
+    "observed": "lower thresholds improve raw strict link counts but can create semantically wrong chains, including collapsing C12's roommate ownership into the user's dog",
+    "treatment": "reject using a higher score alone as acceptance; no default config change"
+  }
+}

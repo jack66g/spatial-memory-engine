@@ -1,0 +1,8 @@
+# Reproducible evidence is tracked; fresh runtime state stays local.
+/temporary/
+/.pytest_cache/
+__pycache__/
+*.py[cod]
+*.tmp
+.env
+.env.local

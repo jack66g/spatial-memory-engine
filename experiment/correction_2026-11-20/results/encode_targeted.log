@@ -1,0 +1,8 @@
+Encoding 23 extra texts, original 127 vectors remain untouched.
+2026-11-20 19:59:48.327797: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-11-20 19:59:51.003103: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+
+Loading weights:   0%|          | 0/310 [00:00<?, ?it/s]
+Loading weights: 100%|��������������������| 310/310 [00:00<00:00, 8670.89it/s]
+supplement encode 12/23
+supplement encode 23/23

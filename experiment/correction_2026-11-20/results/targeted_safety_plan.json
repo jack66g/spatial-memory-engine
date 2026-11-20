@@ -1,0 +1,323 @@
+{
+  "purpose": "Extra explicit-scope tests: both objects already recorded; user says only one changes. Frozen before new model calls. Earlier underspecified guard cases are not treated as definitive bugs without semantic review.",
+  "cases": [
+    {
+      "id": "E01",
+      "title": "已知本人和朋友，只改朋友",
+      "category": "targeted_safety",
+      "turns": [
+        {
+          "text": "我每天喜欢喝咖啡。",
+          "ns": "person_a",
+          "conversation_id": "session_0"
+        },
+        {
+          "text": "我的朋友小周每天喜欢喝咖啡。",
+          "ns": "person_a",
+          "conversation_id": "session_1"
+        },
+        {
+          "text": "只纠正我朋友小周的饮料偏好：小周现在改喝绿茶，我自己的偏好没有变化。",
+          "ns": "person_a",
+          "conversation_id": "session_2"
+        }
+      ],
+      "queries": [
+        {
+          "text": "我自己平时喜欢喝什么？",
+          "gold": {
+            "turn": 0,
+            "all": [
+              "咖啡"
+            ],
+            "absent": []
+          },
+          "ns": "person_a",
+          "include_history": false
+        },
+        {
+          "text": "我的朋友小周现在喝什么？",
+          "gold": {
+            "turn": 2,
+            "all": [
+              "小周",
+              "绿茶"
+            ],
+            "absent": []
+          },
+          "ns": "person_a",
+          "include_history": false
+        }
+      ],
+      "protect": [
+        {
+          "turn": 0,
+          "all": [
+            "咖啡"
+          ],
+          "absent": []
+        }
+      ],
+      "retire": [
+        {
+          "old": {
+            "turn": 1,
+            "all": [
+              "小周",
+              "咖啡"
+            ],
+            "absent": []
+          },
+          "new": {
+            "turn": 2,
+            "all": [
+              "小周",
+              "绿茶"
+            ],
+            "absent": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "E02",
+      "title": "已知猫和狗，只改狗名",
+      "category": "targeted_safety",
+      "turns": [
+        {
+          "text": "我养的猫叫团子。",
+          "ns": "person_a",
+          "conversation_id": "session_0"
+        },
+        {
+          "text": "我另外养了一只狗，名字叫汤圆。",
+          "ns": "person_a",
+          "conversation_id": "session_1"
+        },
+        {
+          "text": "只纠正狗的名字：我另外养的狗叫豆包，猫的记录不变。",
+          "ns": "person_a",
+          "conversation_id": "session_2"
+        }
+      ],
+      "queries": [
+        {
+          "text": "我的猫叫什么名字？",
+          "gold": {
+            "turn": 0,
+            "all": [
+              "猫",
+              "团子"
+            ],
+            "absent": []
+          },
+          "ns": "person_a",
+          "include_history": false
+        },
+        {
+          "text": "我的狗现在叫什么名字？",
+          "gold": {
+            "turn": 2,
+            "all": [
+              "狗",
+              "豆包"
+            ],
+            "absent": []
+          },
+          "ns": "person_a",
+          "include_history": false
+        }
+      ],
+      "protect": [
+        {
+          "turn": 0,
+          "all": [
+            "猫",
+            "团子"
+          ],
+          "absent": []
+        }
+      ],
+      "retire": [
+        {
+          "old": {
+            "turn": 1,
+            "all": [
+              "狗",
+              "汤圆"
+            ],
+            "absent": []
+          },
+          "new": {
+            "turn": 2,
+            "all": [
+              "狗",
+              "豆包"
+            ],
+            "absent": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "E03",
+      "title": "已知生产和测试，只改测试端口",
+      "category": "targeted_safety",
+      "turns": [
+        {
+          "text": "Atlas 生产环境的端口是8080。",
+          "ns": "person_a",
+          "conversation_id": "session_0"
+        },
+        {
+          "text": "Atlas 测试环境的端口是8081。",
+          "ns": "person_a",
+          "conversation_id": "session_1"
+        },
+        {
+          "text": "只纠正测试环境：Atlas 测试环境的端口改成9090，生产环境的记录不变。",
+          "ns": "person_a",
+          "conversation_id": "session_2"
+        }
+      ],
+      "queries": [
+        {
+          "text": "Atlas 生产环境端口是多少？",
+          "gold": {
+            "turn": 0,
+            "all": [
+              "生产",
+              "8080"
+            ],
+            "absent": []
+          },
+          "ns": "person_a",
+          "include_history": false
+        },
+        {
+          "text": "Atlas 测试环境现在端口是多少？",
+          "gold": {
+            "turn": 2,
+            "all": [
+              "测试",
+              "9090"
+            ],
+            "absent": []
+          },
+          "ns": "person_a",
+          "include_history": false
+        }
+      ],
+      "protect": [
+        {
+          "turn": 0,
+          "all": [
+            "生产",
+            "8080"
+          ],
+          "absent": []
+        }
+      ],
+      "retire": [
+        {
+          "old": {
+            "turn": 1,
+            "all": [
+              "测试",
+              "8081"
+            ],
+            "absent": []
+          },
+          "new": {
+            "turn": 2,
+            "all": [
+              "测试",
+              "9090"
+            ],
+            "absent": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "E04",
+      "title": "已知饮料和杯色，只改杯色",
+      "category": "targeted_safety",
+      "turns": [
+        {
+          "text": "我每天喜欢喝咖啡。",
+          "ns": "person_a",
+          "conversation_id": "session_0"
+        },
+        {
+          "text": "我使用的咖啡杯颜色是红色。",
+          "ns": "person_a",
+          "conversation_id": "session_1"
+        },
+        {
+          "text": "只纠正咖啡杯颜色：我使用的咖啡杯是绿色，喝咖啡的偏好没有变化。",
+          "ns": "person_a",
+          "conversation_id": "session_2"
+        }
+      ],
+      "queries": [
+        {
+          "text": "我每天喜欢喝什么？",
+          "gold": {
+            "turn": 0,
+            "all": [
+              "喝",
+              "咖啡"
+            ],
+            "absent": []
+          },
+          "ns": "person_a",
+          "include_history": false
+        },
+        {
+          "text": "我的咖啡杯现在是什么颜色？",
+          "gold": {
+            "turn": 2,
+            "all": [
+              "咖啡杯",
+              "绿色"
+            ],
+            "absent": []
+          },
+          "ns": "person_a",
+          "include_history": false
+        }
+      ],
+      "protect": [
+        {
+          "turn": 0,
+          "all": [
+            "喝",
+            "咖啡"
+          ],
+          "absent": []
+        }
+      ],
+      "retire": [
+        {
+          "old": {
+            "turn": 1,
+            "all": [
+              "咖啡杯",
+              "红色"
+            ],
+            "absent": []
+          },
+          "new": {
+            "turn": 2,
+            "all": [
+              "咖啡杯",
+              "绿色"
+            ],
+            "absent": []
+          }
+        }
+      ]
+    }
+  ]
+}

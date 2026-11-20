@@ -1,0 +1,16 @@
+{
+  "status": "completed",
+  "temporary_files": 83,
+  "temporary_bytes": 3820640,
+  "archive": "results/temporary_states.zip",
+  "archive_sha256": "7d6372ae8e639436af7c5a1c59bad65fc97dd01cc5d4ccec73be42e72a908e8d",
+  "archive_crc_verified": true,
+  "credential_value_scan_clean": true,
+  "recycle_bin_emptied": false,
+  "method": "Windows Recycle Bin",
+  "temporary_directory_removed": true,
+  "additional_recycled_files": [
+    "results/regression.log"
+  ],
+  "additional_cleanup_reason": "Discarded initial command-selector error log; no tests had run in that attempt. Actual 19-passed test log preserved as regression_final.log."
+}

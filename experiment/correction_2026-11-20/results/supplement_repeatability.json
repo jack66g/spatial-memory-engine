@@ -1,0 +1,14 @@
+{
+  "natural": {
+    "fresh_runs": 3,
+    "runs_per_repetition": 60,
+    "changed_outcomes": 0,
+    "changes": []
+  },
+  "targeted": {
+    "fresh_runs": 3,
+    "runs_per_repetition": 32,
+    "changed_outcomes": 0,
+    "changes": []
+  }
+}

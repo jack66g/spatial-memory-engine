@@ -1,0 +1,18 @@
+{
+  "model": "deepseek-flash",
+  "host": "api.deepseek.com",
+  "responses": 68,
+  "successful": 68,
+  "usage_this_process": {
+    "prompt_tokens": 1884,
+    "completion_tokens": 225,
+    "total_tokens": 2109
+  },
+  "total_frozen_usage": {
+    "prompt_tokens": 16176,
+    "completion_tokens": 1985,
+    "total_tokens": 18161
+  },
+  "prompt_sha256": "47ea5e06d8d130c2fa873f8c90557ea8725cccbd26b0eecf229d322ae8295d78",
+  "secrets_saved": false
+}

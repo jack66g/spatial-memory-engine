@@ -1,0 +1,2210 @@
+[
+  {
+    "name": "C01_rules_version_json_wal_only",
+    "checks": [
+      {
+        "repeat": 1,
+        "matches_before_crash": true,
+        "actual": {
+          "queries": [
+            [
+              1,
+              true,
+              true,
+              true
+            ]
+          ],
+          "links": [
+            true
+          ],
+          "protected": []
+        },
+        "expected": {
+          "queries": [
+            [
+              1,
+              true,
+              true,
+              true
+            ]
+          ],
+          "links": [
+            true
+          ],
+          "protected": []
+        }
+      },
+      {
+        "repeat": 2,
+        "matches_before_crash": true,
+        "actual": {
+          "queries": [
+            [
+              1,
+              true,
+              true,
+              true
+            ]
+          ],
+          "links": [
+            true
+          ],
+          "protected": []
+        },
+        "expected": {
+          "queries": [
+            [
+              1,
+              true,
+              true,
+              true
+            ]
+          ],
+          "links": [
+            true
+          ],
+          "protected": []
+        }
+      }
+    ]
+  },
+  {
+    "name": "C01_rules_version_json_snapshot_plus_wal",
+    "checks": [
+      {
+        "repeat": 1,
+        "matches_before_crash": true,
+        "actual": {
+          "queries": [
+            [
+              1,
+              true,
+              true,
+              true
+            ]
+          ],
+          "links": [
+            true
+          ],
+          "protected": []
+        },
+        "expected": {
+          "queries": [
+            [
+              1,
+              true,
+              true,
+              true
+            ]
+          ],
+          "links": [
+            true
+          ],
+          "protected": []
+        }
+      },
+      {
+        "repeat": 2,
+        "matches_before_crash": true,
+        "actual": {
+          "queries": [
+            [
+              1,
+              true,
+              true,
+              true
+            ]
+          ],
+          "links": [
+            true
+          ],
+          "protected": []
+        },
+        "expected": {
+          "queries": [
+            [
+              1,
+              true,
+              true,
+              true
+            ]
+          ],
+          "links": [
+            true
+          ],
+          "protected": []
+        }
+      }
+    ]
+  },
+  {
+    "name": "C01_rules_version_sqlite_wal_only",
+    "checks": [
+      {
+        "repeat": 1,
+        "matches_before_crash": true,
+        "actual": {
+          "queries": [
+            [
+              1,
+              true,
+              true,
+              true
+            ]
+          ],
+          "links": [
+            true
+          ],
+          "protected": []
+        },
+        "expected": {
+          "queries": [
+            [
+              1,
+              true,
+              true,
+              true
+            ]
+          ],
+          "links": [
+            true
+          ],
+          "protected": []
+        }
+      },
+      {
+        "repeat": 2,
+        "matches_before_crash": true,
+        "actual": {
+          "queries": [
+            [
+              1,
+              true,
+              true,
+              true
+            ]
+          ],
+          "links": [
+            true
+          ],
+          "protected": []
+        },
+        "expected": {
+          "queries": [
+            [
+              1,
+              true,
+              true,
+              true
+            ]
+          ],
+          "links": [
+            true
+          ],
+          "protected": []
+        }
+      }
+    ]
+  },
+  {
+    "name": "C01_rules_version_sqlite_snapshot_plus_wal",
+    "checks": [
+      {
+        "repeat": 1,
+        "matches_before_crash": true,
+        "actual": {
+          "queries": [
+            [
+              1,
+              true,
+              true,
+              true
+            ]
+          ],
+          "links": [
+            true
+          ],
+          "protected": []
+        },
+        "expected": {
+          "queries": [
+            [
+              1,
+              true,
+              true,
+              true
+            ]
+          ],
+          "links": [
+            true
+          ],
+          "protected": []
+        }
+      },
+      {
+        "repeat": 2,
+        "matches_before_crash": true,
+        "actual": {
+          "queries": [
+            [
+              1,
+              true,
+              true,
+              true
+            ]
+          ],
+          "links": [
+            true
+          ],
+          "protected": []
+        },
+        "expected": {
+          "queries": [
+            [
+              1,
+              true,
+              true,
+              true
+            ]
+          ],
+          "links": [
+            true
+          ],
+          "protected": []
+        }
+      }
+    ]
+  },
+  {
+    "name": "C01_llm_version_json_wal_only",
+    "checks": [
+      {
+        "repeat": 1,
+        "matches_before_crash": true,
+        "actual": {
+          "queries": [
+            [
+              1,
+              true,
+              true,
+              true
+            ]
+          ],
+          "links": [
+            true
+          ],
+          "protected": []
+        },
+        "expected": {
+          "queries": [
+            [
+              1,
+              true,
+              true,
+              true
+            ]
+          ],
+          "links": [
+            true
+          ],
+          "protected": []
+        }
+      },
+      {
+        "repeat": 2,
+        "matches_before_crash": true,
+        "actual": {
+          "queries": [
+            [
+              1,
+              true,
+              true,
+              true
+            ]
+          ],
+          "links": [
+            true
+          ],
+          "protected": []
+        },
+        "expected": {
+          "queries": [
+            [
+              1,
+              true,
+              true,
+              true
+            ]
+          ],
+          "links": [
+            true
+          ],
+          "protected": []
+        }
+      }
+    ]
+  },
+  {
+    "name": "C01_llm_version_json_snapshot_plus_wal",
+    "checks": [
+      {
+        "repeat": 1,
+        "matches_before_crash": true,
+        "actual": {
+          "queries": [
+            [
+              1,
+              true,
+              true,
+              true
+            ]
+          ],
+          "links": [
+            true
+          ],
+          "protected": []
+        },
+        "expected": {
+          "queries": [
+            [
+              1,
+              true,
+              true,
+              true
+            ]
+          ],
+          "links": [
+            true
+          ],
+          "protected": []
+        }
+      },
+      {
+        "repeat": 2,
+        "matches_before_crash": true,
+        "actual": {
+          "queries": [
+            [
+              1,
+              true,
+              true,
+              true
+            ]
+          ],
+          "links": [
+            true
+          ],
+          "protected": []
+        },
+        "expected": {
+          "queries": [
+            [
+              1,
+              true,
+              true,
+              true
+            ]
+          ],
+          "links": [
+            true
+          ],
+          "protected": []
+        }
+      }
+    ]
+  },
+  {
+    "name": "C01_llm_version_sqlite_wal_only",
+    "checks": [
+      {
+        "repeat": 1,
+        "matches_before_crash": true,
+        "actual": {
+          "queries": [
+            [
+              1,
+              true,
+              true,
+              true
+            ]
+          ],
+          "links": [
+            true
+          ],
+          "protected": []
+        },
+        "expected": {
+          "queries": [
+            [
+              1,
+              true,
+              true,
+              true
+            ]
+          ],
+          "links": [
+            true
+          ],
+          "protected": []
+        }
+      },
+      {
+        "repeat": 2,
+        "matches_before_crash": true,
+        "actual": {
+          "queries": [
+            [
+              1,
+              true,
+              true,
+              true
+            ]
+          ],
+          "links": [
+            true
+          ],
+          "protected": []
+        },
+        "expected": {
+          "queries": [
+            [
+              1,
+              true,
+              true,
+              true
+            ]
+          ],
+          "links": [
+            true
+          ],
+          "protected": []
+        }
+      }
+    ]
+  },
+  {
+    "name": "C01_llm_version_sqlite_snapshot_plus_wal",
+    "checks": [
+      {
+        "repeat": 1,
+        "matches_before_crash": true,
+        "actual": {
+          "queries": [
+            [
+              1,
+              true,
+              true,
+              true
+            ]
+          ],
+          "links": [
+            true
+          ],
+          "protected": []
+        },
+        "expected": {
+          "queries": [
+            [
+              1,
+              true,
+              true,
+              true
+            ]
+          ],
+          "links": [
+            true
+          ],
+          "protected": []
+        }
+      },
+      {
+        "repeat": 2,
+        "matches_before_crash": true,
+        "actual": {
+          "queries": [
+            [
+              1,
+              true,
+              true,
+              true
+            ]
+          ],
+          "links": [
+            true
+          ],
+          "protected": []
+        },
+        "expected": {
+          "queries": [
+            [
+              1,
+              true,
+              true,
+              true
+            ]
+          ],
+          "links": [
+            true
+          ],
+          "protected": []
+        }
+      }
+    ]
+  },
+  {
+    "name": "C03_rules_version_json_wal_only",
+    "checks": [
+      {
+        "repeat": 1,
+        "matches_before_crash": true,
+        "actual": {
+          "queries": [
+            [
+              2,
+              false,
+              true,
+              true
+            ]
+          ],
+          "links": [
+            false
+          ],
+          "protected": []
+        },
+        "expected": {
+          "queries": [
+            [
+              2,
+              false,
+              true,
+              true
+            ]
+          ],
+          "links": [
+            false
+          ],
+          "protected": []
+        }
+      },
+      {
+        "repeat": 2,
+        "matches_before_crash": true,
+        "actual": {
+          "queries": [
+            [
+              2,
+              false,
+              true,
+              true
+            ]
+          ],
+          "links": [
+            false
+          ],
+          "protected": []
+        },
+        "expected": {
+          "queries": [
+            [
+              2,
+              false,
+              true,
+              true
+            ]
+          ],
+          "links": [
+            false
+          ],
+          "protected": []
+        }
+      }
+    ]
+  },
+  {
+    "name": "C03_rules_version_json_snapshot_plus_wal",
+    "checks": [
+      {
+        "repeat": 1,
+        "matches_before_crash": true,
+        "actual": {
+          "queries": [
+            [
+              2,
+              false,
+              true,
+              true
+            ]
+          ],
+          "links": [
+            false
+          ],
+          "protected": []
+        },
+        "expected": {
+          "queries": [
+            [
+              2,
+              false,
+              true,
+              true
+            ]
+          ],
+          "links": [
+            false
+          ],
+          "protected": []
+        }
+      },
+      {
+        "repeat": 2,
+        "matches_before_crash": true,
+        "actual": {
+          "queries": [
+            [
+              2,
+              false,
+              true,
+              true
+            ]
+          ],
+          "links": [
+            false
+          ],
+          "protected": []
+        },
+        "expected": {
+          "queries": [
+            [
+              2,
+              false,
+              true,
+              true
+            ]
+          ],
+          "links": [
+            false
+          ],
+          "protected": []
+        }
+      }
+    ]
+  },
+  {
+    "name": "C03_rules_version_sqlite_wal_only",
+    "checks": [
+      {
+        "repeat": 1,
+        "matches_before_crash": true,
+        "actual": {
+          "queries": [
+            [
+              2,
+              false,
+              true,
+              true
+            ]
+          ],
+          "links": [
+            false
+          ],
+          "protected": []
+        },
+        "expected": {
+          "queries": [
+            [
+              2,
+              false,
+              true,
+              true
+            ]
+          ],
+          "links": [
+            false
+          ],
+          "protected": []
+        }
+      },
+      {
+        "repeat": 2,
+        "matches_before_crash": true,
+        "actual": {
+          "queries": [
+            [
+              2,
+              false,
+              true,
+              true
+            ]
+          ],
+          "links": [
+            false
+          ],
+          "protected": []
+        },
+        "expected": {
+          "queries": [
+            [
+              2,
+              false,
+              true,
+              true
+            ]
+          ],
+          "links": [
+            false
+          ],
+          "protected": []
+        }
+      }
+    ]
+  },
+  {
+    "name": "C03_rules_version_sqlite_snapshot_plus_wal",
+    "checks": [
+      {
+        "repeat": 1,
+        "matches_before_crash": true,
+        "actual": {
+          "queries": [
+            [
+              2,
+              false,
+              true,
+              true
+            ]
+          ],
+          "links": [
+            false
+          ],
+          "protected": []
+        },
+        "expected": {
+          "queries": [
+            [
+              2,
+              false,
+              true,
+              true
+            ]
+          ],
+          "links": [
+            false
+          ],
+          "protected": []
+        }
+      },
+      {
+        "repeat": 2,
+        "matches_before_crash": true,
+        "actual": {
+          "queries": [
+            [
+              2,
+              false,
+              true,
+              true
+            ]
+          ],
+          "links": [
+            false
+          ],
+          "protected": []
+        },
+        "expected": {
+          "queries": [
+            [
+              2,
+              false,
+              true,
+              true
+            ]
+          ],
+          "links": [
+            false
+          ],
+          "protected": []
+        }
+      }
+    ]
+  },
+  {
+    "name": "C03_llm_version_json_wal_only",
+    "checks": [
+      {
+        "repeat": 1,
+        "matches_before_crash": true,
+        "actual": {
+          "queries": [
+            [
+              1,
+              true,
+              true,
+              true
+            ]
+          ],
+          "links": [
+            true
+          ],
+          "protected": []
+        },
+        "expected": {
+          "queries": [
+            [
+              1,
+              true,
+              true,
+              true
+            ]
+          ],
+          "links": [
+            true
+          ],
+          "protected": []
+        }
+      },
+      {
+        "repeat": 2,
+        "matches_before_crash": true,
+        "actual": {
+          "queries": [
+            [
+              1,
+              true,
+              true,
+              true
+            ]
+          ],
+          "links": [
+            true
+          ],
+          "protected": []
+        },
+        "expected": {
+          "queries": [
+            [
+              1,
+              true,
+              true,
+              true
+            ]
+          ],
+          "links": [
+            true
+          ],
+          "protected": []
+        }
+      }
+    ]
+  },
+  {
+    "name": "C03_llm_version_json_snapshot_plus_wal",
+    "checks": [
+      {
+        "repeat": 1,
+        "matches_before_crash": true,
+        "actual": {
+          "queries": [
+            [
+              1,
+              true,
+              true,
+              true
+            ]
+          ],
+          "links": [
+            true
+          ],
+          "protected": []
+        },
+        "expected": {
+          "queries": [
+            [
+              1,
+              true,
+              true,
+              true
+            ]
+          ],
+          "links": [
+            true
+          ],
+          "protected": []
+        }
+      },
+      {
+        "repeat": 2,
+        "matches_before_crash": true,
+        "actual": {
+          "queries": [
+            [
+              1,
+              true,
+              true,
+              true
+            ]
+          ],
+          "links": [
+            true
+          ],
+          "protected": []
+        },
+        "expected": {
+          "queries": [
+            [
+              1,
+              true,
+              true,
+              true
+            ]
+          ],
+          "links": [
+            true
+          ],
+          "protected": []
+        }
+      }
+    ]
+  },
+  {
+    "name": "C03_llm_version_sqlite_wal_only",
+    "checks": [
+      {
+        "repeat": 1,
+        "matches_before_crash": true,
+        "actual": {
+          "queries": [
+            [
+              1,
+              true,
+              true,
+              true
+            ]
+          ],
+          "links": [
+            true
+          ],
+          "protected": []
+        },
+        "expected": {
+          "queries": [
+            [
+              1,
+              true,
+              true,
+              true
+            ]
+          ],
+          "links": [
+            true
+          ],
+          "protected": []
+        }
+      },
+      {
+        "repeat": 2,
+        "matches_before_crash": true,
+        "actual": {
+          "queries": [
+            [
+              1,
+              true,
+              true,
+              true
+            ]
+          ],
+          "links": [
+            true
+          ],
+          "protected": []
+        },
+        "expected": {
+          "queries": [
+            [
+              1,
+              true,
+              true,
+              true
+            ]
+          ],
+          "links": [
+            true
+          ],
+          "protected": []
+        }
+      }
+    ]
+  },
+  {
+    "name": "C03_llm_version_sqlite_snapshot_plus_wal",
+    "checks": [
+      {
+        "repeat": 1,
+        "matches_before_crash": true,
+        "actual": {
+          "queries": [
+            [
+              1,
+              true,
+              true,
+              true
+            ]
+          ],
+          "links": [
+            true
+          ],
+          "protected": []
+        },
+        "expected": {
+          "queries": [
+            [
+              1,
+              true,
+              true,
+              true
+            ]
+          ],
+          "links": [
+            true
+          ],
+          "protected": []
+        }
+      },
+      {
+        "repeat": 2,
+        "matches_before_crash": true,
+        "actual": {
+          "queries": [
+            [
+              1,
+              true,
+              true,
+              true
+            ]
+          ],
+          "links": [
+            true
+          ],
+          "protected": []
+        },
+        "expected": {
+          "queries": [
+            [
+              1,
+              true,
+              true,
+              true
+            ]
+          ],
+          "links": [
+            true
+          ],
+          "protected": []
+        }
+      }
+    ]
+  },
+  {
+    "name": "C11_rules_version_json_wal_only",
+    "checks": [
+      {
+        "repeat": 1,
+        "matches_before_crash": true,
+        "actual": {
+          "queries": [
+            [
+              null,
+              false,
+              false,
+              false
+            ]
+          ],
+          "links": [
+            false
+          ],
+          "protected": []
+        },
+        "expected": {
+          "queries": [
+            [
+              null,
+              false,
+              false,
+              false
+            ]
+          ],
+          "links": [
+            false
+          ],
+          "protected": []
+        }
+      },
+      {
+        "repeat": 2,
+        "matches_before_crash": true,
+        "actual": {
+          "queries": [
+            [
+              null,
+              false,
+              false,
+              false
+            ]
+          ],
+          "links": [
+            false
+          ],
+          "protected": []
+        },
+        "expected": {
+          "queries": [
+            [
+              null,
+              false,
+              false,
+              false
+            ]
+          ],
+          "links": [
+            false
+          ],
+          "protected": []
+        }
+      }
+    ]
+  },
+  {
+    "name": "C11_rules_version_json_snapshot_plus_wal",
+    "checks": [
+      {
+        "repeat": 1,
+        "matches_before_crash": true,
+        "actual": {
+          "queries": [
+            [
+              null,
+              false,
+              false,
+              false
+            ]
+          ],
+          "links": [
+            false
+          ],
+          "protected": []
+        },
+        "expected": {
+          "queries": [
+            [
+              null,
+              false,
+              false,
+              false
+            ]
+          ],
+          "links": [
+            false
+          ],
+          "protected": []
+        }
+      },
+      {
+        "repeat": 2,
+        "matches_before_crash": true,
+        "actual": {
+          "queries": [
+            [
+              null,
+              false,
+              false,
+              false
+            ]
+          ],
+          "links": [
+            false
+          ],
+          "protected": []
+        },
+        "expected": {
+          "queries": [
+            [
+              null,
+              false,
+              false,
+              false
+            ]
+          ],
+          "links": [
+            false
+          ],
+          "protected": []
+        }
+      }
+    ]
+  },
+  {
+    "name": "C11_rules_version_sqlite_wal_only",
+    "checks": [
+      {
+        "repeat": 1,
+        "matches_before_crash": true,
+        "actual": {
+          "queries": [
+            [
+              null,
+              false,
+              false,
+              false
+            ]
+          ],
+          "links": [
+            false
+          ],
+          "protected": []
+        },
+        "expected": {
+          "queries": [
+            [
+              null,
+              false,
+              false,
+              false
+            ]
+          ],
+          "links": [
+            false
+          ],
+          "protected": []
+        }
+      },
+      {
+        "repeat": 2,
+        "matches_before_crash": true,
+        "actual": {
+          "queries": [
+            [
+              null,
+              false,
+              false,
+              false
+            ]
+          ],
+          "links": [
+            false
+          ],
+          "protected": []
+        },
+        "expected": {
+          "queries": [
+            [
+              null,
+              false,
+              false,
+              false
+            ]
+          ],
+          "links": [
+            false
+          ],
+          "protected": []
+        }
+      }
+    ]
+  },
+  {
+    "name": "C11_rules_version_sqlite_snapshot_plus_wal",
+    "checks": [
+      {
+        "repeat": 1,
+        "matches_before_crash": true,
+        "actual": {
+          "queries": [
+            [
+              null,
+              false,
+              false,
+              false
+            ]
+          ],
+          "links": [
+            false
+          ],
+          "protected": []
+        },
+        "expected": {
+          "queries": [
+            [
+              null,
+              false,
+              false,
+              false
+            ]
+          ],
+          "links": [
+            false
+          ],
+          "protected": []
+        }
+      },
+      {
+        "repeat": 2,
+        "matches_before_crash": true,
+        "actual": {
+          "queries": [
+            [
+              null,
+              false,
+              false,
+              false
+            ]
+          ],
+          "links": [
+            false
+          ],
+          "protected": []
+        },
+        "expected": {
+          "queries": [
+            [
+              null,
+              false,
+              false,
+              false
+            ]
+          ],
+          "links": [
+            false
+          ],
+          "protected": []
+        }
+      }
+    ]
+  },
+  {
+    "name": "C11_llm_version_json_wal_only",
+    "checks": [
+      {
+        "repeat": 1,
+        "matches_before_crash": true,
+        "actual": {
+          "queries": [
+            [
+              1,
+              true,
+              true,
+              true
+            ]
+          ],
+          "links": [
+            true
+          ],
+          "protected": []
+        },
+        "expected": {
+          "queries": [
+            [
+              1,
+              true,
+              true,
+              true
+            ]
+          ],
+          "links": [
+            true
+          ],
+          "protected": []
+        }
+      },
+      {
+        "repeat": 2,
+        "matches_before_crash": true,
+        "actual": {
+          "queries": [
+            [
+              1,
+              true,
+              true,
+              true
+            ]
+          ],
+          "links": [
+            true
+          ],
+          "protected": []
+        },
+        "expected": {
+          "queries": [
+            [
+              1,
+              true,
+              true,
+              true
+            ]
+          ],
+          "links": [
+            true
+          ],
+          "protected": []
+        }
+      }
+    ]
+  },
+  {
+    "name": "C11_llm_version_json_snapshot_plus_wal",
+    "checks": [
+      {
+        "repeat": 1,
+        "matches_before_crash": true,
+        "actual": {
+          "queries": [
+            [
+              1,
+              true,
+              true,
+              true
+            ]
+          ],
+          "links": [
+            true
+          ],
+          "protected": []
+        },
+        "expected": {
+          "queries": [
+            [
+              1,
+              true,
+              true,
+              true
+            ]
+          ],
+          "links": [
+            true
+          ],
+          "protected": []
+        }
+      },
+      {
+        "repeat": 2,
+        "matches_before_crash": true,
+        "actual": {
+          "queries": [
+            [
+              1,
+              true,
+              true,
+              true
+            ]
+          ],
+          "links": [
+            true
+          ],
+          "protected": []
+        },
+        "expected": {
+          "queries": [
+            [
+              1,
+              true,
+              true,
+              true
+            ]
+          ],
+          "links": [
+            true
+          ],
+          "protected": []
+        }
+      }
+    ]
+  },
+  {
+    "name": "C11_llm_version_sqlite_wal_only",
+    "checks": [
+      {
+        "repeat": 1,
+        "matches_before_crash": true,
+        "actual": {
+          "queries": [
+            [
+              1,
+              true,
+              true,
+              true
+            ]
+          ],
+          "links": [
+            true
+          ],
+          "protected": []
+        },
+        "expected": {
+          "queries": [
+            [
+              1,
+              true,
+              true,
+              true
+            ]
+          ],
+          "links": [
+            true
+          ],
+          "protected": []
+        }
+      },
+      {
+        "repeat": 2,
+        "matches_before_crash": true,
+        "actual": {
+          "queries": [
+            [
+              1,
+              true,
+              true,
+              true
+            ]
+          ],
+          "links": [
+            true
+          ],
+          "protected": []
+        },
+        "expected": {
+          "queries": [
+            [
+              1,
+              true,
+              true,
+              true
+            ]
+          ],
+          "links": [
+            true
+          ],
+          "protected": []
+        }
+      }
+    ]
+  },
+  {
+    "name": "C11_llm_version_sqlite_snapshot_plus_wal",
+    "checks": [
+      {
+        "repeat": 1,
+        "matches_before_crash": true,
+        "actual": {
+          "queries": [
+            [
+              1,
+              true,
+              true,
+              true
+            ]
+          ],
+          "links": [
+            true
+          ],
+          "protected": []
+        },
+        "expected": {
+          "queries": [
+            [
+              1,
+              true,
+              true,
+              true
+            ]
+          ],
+          "links": [
+            true
+          ],
+          "protected": []
+        }
+      },
+      {
+        "repeat": 2,
+        "matches_before_crash": true,
+        "actual": {
+          "queries": [
+            [
+              1,
+              true,
+              true,
+              true
+            ]
+          ],
+          "links": [
+            true
+          ],
+          "protected": []
+        },
+        "expected": {
+          "queries": [
+            [
+              1,
+              true,
+              true,
+              true
+            ]
+          ],
+          "links": [
+            true
+          ],
+          "protected": []
+        }
+      }
+    ]
+  },
+  {
+    "name": "G01_rules_version_json_wal_only",
+    "checks": [
+      {
+        "repeat": 1,
+        "matches_before_crash": true,
+        "actual": {
+          "queries": [
+            [
+              1,
+              true,
+              true,
+              true
+            ]
+          ],
+          "links": [],
+          "protected": [
+            true
+          ]
+        },
+        "expected": {
+          "queries": [
+            [
+              1,
+              true,
+              true,
+              true
+            ]
+          ],
+          "links": [],
+          "protected": [
+            true
+          ]
+        }
+      },
+      {
+        "repeat": 2,
+        "matches_before_crash": true,
+        "actual": {
+          "queries": [
+            [
+              1,
+              true,
+              true,
+              true
+            ]
+          ],
+          "links": [],
+          "protected": [
+            true
+          ]
+        },
+        "expected": {
+          "queries": [
+            [
+              1,
+              true,
+              true,
+              true
+            ]
+          ],
+          "links": [],
+          "protected": [
+            true
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "G01_rules_version_json_snapshot_plus_wal",
+    "checks": [
+      {
+        "repeat": 1,
+        "matches_before_crash": true,
+        "actual": {
+          "queries": [
+            [
+              1,
+              true,
+              true,
+              true
+            ]
+          ],
+          "links": [],
+          "protected": [
+            true
+          ]
+        },
+        "expected": {
+          "queries": [
+            [
+              1,
+              true,
+              true,
+              true
+            ]
+          ],
+          "links": [],
+          "protected": [
+            true
+          ]
+        }
+      },
+      {
+        "repeat": 2,
+        "matches_before_crash": true,
+        "actual": {
+          "queries": [
+            [
+              1,
+              true,
+              true,
+              true
+            ]
+          ],
+          "links": [],
+          "protected": [
+            true
+          ]
+        },
+        "expected": {
+          "queries": [
+            [
+              1,
+              true,
+              true,
+              true
+            ]
+          ],
+          "links": [],
+          "protected": [
+            true
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "G01_rules_version_sqlite_wal_only",
+    "checks": [
+      {
+        "repeat": 1,
+        "matches_before_crash": true,
+        "actual": {
+          "queries": [
+            [
+              1,
+              true,
+              true,
+              true
+            ]
+          ],
+          "links": [],
+          "protected": [
+            true
+          ]
+        },
+        "expected": {
+          "queries": [
+            [
+              1,
+              true,
+              true,
+              true
+            ]
+          ],
+          "links": [],
+          "protected": [
+            true
+          ]
+        }
+      },
+      {
+        "repeat": 2,
+        "matches_before_crash": true,
+        "actual": {
+          "queries": [
+            [
+              1,
+              true,
+              true,
+              true
+            ]
+          ],
+          "links": [],
+          "protected": [
+            true
+          ]
+        },
+        "expected": {
+          "queries": [
+            [
+              1,
+              true,
+              true,
+              true
+            ]
+          ],
+          "links": [],
+          "protected": [
+            true
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "G01_rules_version_sqlite_snapshot_plus_wal",
+    "checks": [
+      {
+        "repeat": 1,
+        "matches_before_crash": true,
+        "actual": {
+          "queries": [
+            [
+              1,
+              true,
+              true,
+              true
+            ]
+          ],
+          "links": [],
+          "protected": [
+            true
+          ]
+        },
+        "expected": {
+          "queries": [
+            [
+              1,
+              true,
+              true,
+              true
+            ]
+          ],
+          "links": [],
+          "protected": [
+            true
+          ]
+        }
+      },
+      {
+        "repeat": 2,
+        "matches_before_crash": true,
+        "actual": {
+          "queries": [
+            [
+              1,
+              true,
+              true,
+              true
+            ]
+          ],
+          "links": [],
+          "protected": [
+            true
+          ]
+        },
+        "expected": {
+          "queries": [
+            [
+              1,
+              true,
+              true,
+              true
+            ]
+          ],
+          "links": [],
+          "protected": [
+            true
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "G01_llm_version_json_wal_only",
+    "checks": [
+      {
+        "repeat": 1,
+        "matches_before_crash": true,
+        "actual": {
+          "queries": [
+            [
+              null,
+              false,
+              false,
+              true
+            ]
+          ],
+          "links": [],
+          "protected": [
+            false
+          ]
+        },
+        "expected": {
+          "queries": [
+            [
+              null,
+              false,
+              false,
+              true
+            ]
+          ],
+          "links": [],
+          "protected": [
+            false
+          ]
+        }
+      },
+      {
+        "repeat": 2,
+        "matches_before_crash": true,
+        "actual": {
+          "queries": [
+            [
+              null,
+              false,
+              false,
+              true
+            ]
+          ],
+          "links": [],
+          "protected": [
+            false
+          ]
+        },
+        "expected": {
+          "queries": [
+            [
+              null,
+              false,
+              false,
+              true
+            ]
+          ],
+          "links": [],
+          "protected": [
+            false
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "G01_llm_version_json_snapshot_plus_wal",
+    "checks": [
+      {
+        "repeat": 1,
+        "matches_before_crash": true,
+        "actual": {
+          "queries": [
+            [
+              null,
+              false,
+              false,
+              true
+            ]
+          ],
+          "links": [],
+          "protected": [
+            false
+          ]
+        },
+        "expected": {
+          "queries": [
+            [
+              null,
+              false,
+              false,
+              true
+            ]
+          ],
+          "links": [],
+          "protected": [
+            false
+          ]
+        }
+      },
+      {
+        "repeat": 2,
+        "matches_before_crash": true,
+        "actual": {
+          "queries": [
+            [
+              null,
+              false,
+              false,
+              true
+            ]
+          ],
+          "links": [],
+          "protected": [
+            false
+          ]
+        },
+        "expected": {
+          "queries": [
+            [
+              null,
+              false,
+              false,
+              true
+            ]
+          ],
+          "links": [],
+          "protected": [
+            false
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "G01_llm_version_sqlite_wal_only",
+    "checks": [
+      {
+        "repeat": 1,
+        "matches_before_crash": true,
+        "actual": {
+          "queries": [
+            [
+              null,
+              false,
+              false,
+              true
+            ]
+          ],
+          "links": [],
+          "protected": [
+            false
+          ]
+        },
+        "expected": {
+          "queries": [
+            [
+              null,
+              false,
+              false,
+              true
+            ]
+          ],
+          "links": [],
+          "protected": [
+            false
+          ]
+        }
+      },
+      {
+        "repeat": 2,
+        "matches_before_crash": true,
+        "actual": {
+          "queries": [
+            [
+              null,
+              false,
+              false,
+              true
+            ]
+          ],
+          "links": [],
+          "protected": [
+            false
+          ]
+        },
+        "expected": {
+          "queries": [
+            [
+              null,
+              false,
+              false,
+              true
+            ]
+          ],
+          "links": [],
+          "protected": [
+            false
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "G01_llm_version_sqlite_snapshot_plus_wal",
+    "checks": [
+      {
+        "repeat": 1,
+        "matches_before_crash": true,
+        "actual": {
+          "queries": [
+            [
+              null,
+              false,
+              false,
+              true
+            ]
+          ],
+          "links": [],
+          "protected": [
+            false
+          ]
+        },
+        "expected": {
+          "queries": [
+            [
+              null,
+              false,
+              false,
+              true
+            ]
+          ],
+          "links": [],
+          "protected": [
+            false
+          ]
+        }
+      },
+      {
+        "repeat": 2,
+        "matches_before_crash": true,
+        "actual": {
+          "queries": [
+            [
+              null,
+              false,
+              false,
+              true
+            ]
+          ],
+          "links": [],
+          "protected": [
+            false
+          ]
+        },
+        "expected": {
+          "queries": [
+            [
+              null,
+              false,
+              false,
+              true
+            ]
+          ],
+          "links": [],
+          "protected": [
+            false
+          ]
+        }
+      }
+    ]
+  }
+]

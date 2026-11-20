@@ -1,0 +1,17 @@
+Loading existing local Qwen model; downloads disabled.
+2026-11-20 19:48:39.989837: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-11-20 19:48:45.250924: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+
+Loading weights:   0%|          | 0/310 [00:00<?, ?it/s]
+Loading weights: 100%|��������������������| 310/310 [00:00<00:00, 3080.01it/s]
+encode 12/127 elapsed=5.5s
+encode 24/127 elapsed=8.7s
+encode 36/127 elapsed=13.4s
+encode 48/127 elapsed=16.1s
+encode 60/127 elapsed=18.1s
+encode 72/127 elapsed=20.4s
+encode 84/127 elapsed=22.7s
+encode 96/127 elapsed=26.0s
+encode 108/127 elapsed=30.3s
+encode 120/127 elapsed=35.2s
+encode 127/127 elapsed=110.7s

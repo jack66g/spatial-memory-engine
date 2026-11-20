@@ -1,0 +1,10 @@
+{
+  "model": "Qwen/Qwen3-Embedding-0.6B",
+  "revision": "97b0c614be4d77ee51c0cef4e5f07c00f9eb65b3",
+  "dim": 1024,
+  "texts": 127,
+  "seconds": 110.71056720009074,
+  "vectors_sha256": "63ca1653ad37ffc8ced5cc82d7488de2e66a0e440d650bf54b2116b327b94551",
+  "offline": true,
+  "threads": 4
+}

@@ -1,0 +1,4952 @@
+[
+  {
+    "case": "U01",
+    "arm": "rules_version",
+    "decay": false,
+    "trace": {
+      "extraction": [
+        {
+          "input": "我现在住在北京。",
+          "facts_before_pipeline_markers": [
+            {
+              "text": "我现在住在北京。",
+              "kind": "fact",
+              "confidence": 1.0,
+              "subject": "用户"
+            }
+          ],
+          "llm": [],
+          "rules_fallback": false
+        },
+        {
+          "input": "你记错了，我现在已经搬到上海了。",
+          "facts_before_pipeline_markers": [
+            {
+              "text": "你记错了，我现在已经搬到上海了。",
+              "kind": "fact",
+              "confidence": 1.0,
+              "subject": "用户"
+            }
+          ],
+          "llm": [],
+          "rules_fallback": false
+        }
+      ],
+      "matching": [
+        {
+          "fact": {
+            "text": "我现在住在北京。",
+            "kind": "fact",
+            "confidence": 1.0,
+            "subject": "用户"
+          },
+          "ns": "person_a",
+          "best_id": null,
+          "best_text": null,
+          "cosine": 0.0,
+          "correction_threshold": 0.66,
+          "dedup_threshold": 0.92
+        },
+        {
+          "fact": {
+            "text": "你记错了，我现在已经搬到上海了。",
+            "kind": "correction",
+            "confidence": 1.0,
+            "subject": "用户"
+          },
+          "ns": "person_a",
+          "best_id": "m_dc70e150883f",
+          "best_text": "我现在住在北京。",
+          "cosine": 0.6133316889358206,
+          "correction_threshold": 0.66,
+          "dedup_threshold": 0.92
+        }
+      ]
+    },
+    "queries": [
+      {
+        "text": "我现在住在哪里？",
+        "gold": {
+          "turn": 1,
+          "all": [
+            "上海"
+          ],
+          "absent": []
+        },
+        "ns": "person_a",
+        "include_history": false,
+        "gold_present": true,
+        "rank": 2,
+        "top1": false,
+        "top5": true,
+        "hits": [
+          {
+            "rank": 1,
+            "score": 0.724995394173498,
+            "breakdown": {
+              "semantic": 1.0,
+              "importance": 0.55,
+              "freshness": 0.6667,
+              "weight": 0.5,
+              "decay": 1.0,
+              "hit_count": 0.0,
+              "recency": 0.3182,
+              "region": 0.7206,
+              "final": 0.725
+            },
+            "memory": {
+              "id": "m_dc70e150883f",
+              "text": "我现在住在北京。",
+              "metadata": {
+                "experiment_case": "U01",
+                "experiment_turn": 0,
+                "ns": "person_a",
+                "fact_kind": "fact",
+                "fact_subject": "用户",
+                "confidence": 1.0,
+                "add_batch": "ba1058a478a3"
+              },
+              "created_at": 1793879955.1879008,
+              "last_hit": 1793879955.1879008,
+              "hit_count": 0,
+              "weight": 1.0,
+              "importance": 0.55,
+              "freshness": 1.0,
+              "decay_factor": 1.0,
+              "region_id": "r_9715c9f1f7e4",
+              "neighbors": [],
+              "tags": [
+                "extracted",
+                "fact"
+              ],
+              "summary": null,
+              "version": 1,
+              "parent_id": null,
+              "children": [],
+              "archived": false,
+              "source": "user"
+            }
+          },
+          {
+            "rank": 2,
+            "score": 0.3992378174206287,
+            "breakdown": {
+              "semantic": 0.0,
+              "importance": 0.55,
+              "freshness": 1.0,
+              "weight": 0.5,
+              "decay": 1.0,
+              "hit_count": 0.0,
+              "recency": 1.0,
+              "region": 0.7206,
+              "final": 0.3992
+            },
+            "memory": {
+              "id": "m_e91412eb5d2a",
+              "text": "你记错了，我现在已经搬到上海了。",
+              "metadata": {
+                "experiment_case": "U01",
+                "experiment_turn": 1,
+                "ns": "person_a",
+                "fact_kind": "fact",
+                "fact_subject": "用户",
+                "confidence": 1.0,
+                "add_batch": "3cb90d3c5ebf"
+              },
+              "created_at": 1795175955.1879008,
+              "last_hit": 1795175955.1879008,
+              "hit_count": 0,
+              "weight": 1.0,
+              "importance": 0.55,
+              "freshness": 1.0,
+              "decay_factor": 1.0,
+              "region_id": "r_9715c9f1f7e4",
+              "neighbors": [],
+              "tags": [
+                "extracted",
+                "fact"
+              ],
+              "summary": null,
+              "version": 1,
+              "parent_id": null,
+              "children": [],
+              "archived": false,
+              "source": "user"
+            }
+          }
+        ]
+      }
+    ],
+    "links": [
+      {
+        "old": {
+          "turn": 0,
+          "all": [
+            "北京"
+          ],
+          "absent": []
+        },
+        "new": {
+          "turn": 1,
+          "all": [
+            "上海"
+          ],
+          "absent": []
+        },
+        "old_ids": [
+          "m_dc70e150883f"
+        ],
+        "new_ids": [
+          "m_e91412eb5d2a"
+        ],
+        "paths": [
+          [
+            "m_dc70e150883f"
+          ]
+        ],
+        "correct": false
+      }
+    ],
+    "protected": [],
+    "timelines": [
+      [
+        {
+          "id": "m_dc70e150883f",
+          "text": "我现在住在北京。",
+          "created_at": 1793879955.1879008,
+          "valid_at": null,
+          "invalid_at": null,
+          "is_current": true,
+          "supersedes": null,
+          "superseded_by": null
+        }
+      ]
+    ],
+    "memories": [
+      {
+        "id": "m_dc70e150883f",
+        "text": "我现在住在北京。",
+        "metadata": {
+          "experiment_case": "U01",
+          "experiment_turn": 0,
+          "ns": "person_a",
+          "fact_kind": "fact",
+          "fact_subject": "用户",
+          "confidence": 1.0,
+          "add_batch": "ba1058a478a3"
+        },
+        "created_at": 1793879955.1879008,
+        "last_hit": 1793879955.1879008,
+        "hit_count": 0,
+        "weight": 1.0,
+        "importance": 0.55,
+        "freshness": 1.0,
+        "decay_factor": 1.0,
+        "region_id": "r_9715c9f1f7e4",
+        "neighbors": [],
+        "tags": [
+          "extracted",
+          "fact"
+        ],
+        "summary": null,
+        "version": 1,
+        "parent_id": null,
+        "children": [],
+        "archived": false,
+        "source": "user"
+      },
+      {
+        "id": "m_e91412eb5d2a",
+        "text": "你记错了，我现在已经搬到上海了。",
+        "metadata": {
+          "experiment_case": "U01",
+          "experiment_turn": 1,
+          "ns": "person_a",
+          "fact_kind": "fact",
+          "fact_subject": "用户",
+          "confidence": 1.0,
+          "add_batch": "3cb90d3c5ebf"
+        },
+        "created_at": 1795175955.1879008,
+        "last_hit": 1795175955.1879008,
+        "hit_count": 0,
+        "weight": 1.0,
+        "importance": 0.55,
+        "freshness": 1.0,
+        "decay_factor": 1.0,
+        "region_id": "r_9715c9f1f7e4",
+        "neighbors": [],
+        "tags": [
+          "extracted",
+          "fact"
+        ],
+        "summary": null,
+        "version": 1,
+        "parent_id": null,
+        "children": [],
+        "archived": false,
+        "source": "user"
+      }
+    ]
+  },
+  {
+    "case": "U02",
+    "arm": "rules_version",
+    "decay": false,
+    "trace": {
+      "extraction": [
+        {
+          "input": "我每天早上都喜欢喝咖啡。",
+          "facts_before_pipeline_markers": [
+            {
+              "text": "我每天早上都喜欢喝咖啡。",
+              "kind": "fact",
+              "confidence": 1.0,
+              "subject": "用户"
+            }
+          ],
+          "llm": [],
+          "rules_fallback": false
+        },
+        {
+          "input": "更正一下，我现在不喝咖啡了，改喝绿茶。",
+          "facts_before_pipeline_markers": [
+            {
+              "text": "更正一下，我现在不喝咖啡了，改喝绿茶。",
+              "kind": "fact",
+              "confidence": 1.0,
+              "subject": "用户"
+            }
+          ],
+          "llm": [],
+          "rules_fallback": false
+        }
+      ],
+      "matching": [
+        {
+          "fact": {
+            "text": "我每天早上都喜欢喝咖啡。",
+            "kind": "fact",
+            "confidence": 1.0,
+            "subject": "用户"
+          },
+          "ns": "person_a",
+          "best_id": null,
+          "best_text": null,
+          "cosine": 0.0,
+          "correction_threshold": 0.66,
+          "dedup_threshold": 0.92
+        },
+        {
+          "fact": {
+            "text": "更正一下，我现在不喝咖啡了，改喝绿茶。",
+            "kind": "correction",
+            "confidence": 1.0,
+            "subject": "用户"
+          },
+          "ns": "person_a",
+          "best_id": "m_4e6f1ebbaa14",
+          "best_text": "我每天早上都喜欢喝咖啡。",
+          "cosine": 0.6624057846925825,
+          "correction_threshold": 0.66,
+          "dedup_threshold": 0.92
+        }
+      ]
+    },
+    "queries": [
+      {
+        "text": "我现在喝什么饮料？",
+        "gold": {
+          "turn": 1,
+          "all": [
+            "绿茶"
+          ],
+          "absent": []
+        },
+        "ns": "person_a",
+        "include_history": false,
+        "gold_present": true,
+        "rank": 1,
+        "top1": true,
+        "top5": true,
+        "hits": [
+          {
+            "rank": 1,
+            "score": 0.8067792889725791,
+            "breakdown": {
+              "semantic": 1.0,
+              "importance": 0.65,
+              "freshness": 1.0,
+              "weight": 0.5,
+              "decay": 1.0,
+              "hit_count": 0.0,
+              "recency": 1.0,
+              "region": 0.6463,
+              "final": 0.8068
+            },
+            "memory": {
+              "id": "m_99680a29923a",
+              "text": "更正一下，我现在不喝咖啡了，改喝绿茶。",
+              "metadata": {
+                "experiment_case": "U02",
+                "experiment_turn": 1,
+                "ns": "person_a",
+                "fact_kind": "fact",
+                "fact_subject": "用户",
+                "confidence": 1.0,
+                "supersedes": "m_4e6f1ebbaa14",
+                "corrects": "m_4e6f1ebbaa14",
+                "add_batch": "2306fbd82026",
+                "valid_at": 1795175955.1879008
+              },
+              "created_at": 1795175955.1879008,
+              "last_hit": 1795175955.1879008,
+              "hit_count": 0,
+              "weight": 1.0,
+              "importance": 0.65,
+              "freshness": 1.0,
+              "decay_factor": 1.0,
+              "region_id": "r_7fe3c6913ef5",
+              "neighbors": [],
+              "tags": [
+                "fact",
+                "extracted",
+                "corrected"
+              ],
+              "summary": null,
+              "version": 1,
+              "parent_id": null,
+              "children": [],
+              "archived": false,
+              "source": "user"
+            }
+          },
+          {
+            "rank": 2,
+            "score": 0.22437580616263741,
+            "breakdown": {
+              "semantic": 0.0,
+              "importance": 0.55,
+              "freshness": 0.6667,
+              "weight": 0.5,
+              "decay": 1.0,
+              "hit_count": 0.0,
+              "recency": 0.3182,
+              "region": 0.6463,
+              "final": 0.22437580616263741
+            },
+            "memory": {
+              "id": "m_4e6f1ebbaa14",
+              "text": "我每天早上都喜欢喝咖啡。",
+              "metadata": {
+                "experiment_case": "U02",
+                "experiment_turn": 0,
+                "ns": "person_a",
+                "fact_kind": "fact",
+                "fact_subject": "用户",
+                "confidence": 1.0,
+                "add_batch": "e94733a0eeff",
+                "superseded_by": "m_99680a29923a",
+                "invalid_at": 1795175955.1879008
+              },
+              "created_at": 1793879955.1879008,
+              "last_hit": 1793879955.1879008,
+              "hit_count": 0,
+              "weight": 1.0,
+              "importance": 0.55,
+              "freshness": 1.0,
+              "decay_factor": 1.0,
+              "region_id": "r_7fe3c6913ef5",
+              "neighbors": [],
+              "tags": [
+                "extracted",
+                "fact"
+              ],
+              "summary": null,
+              "version": 1,
+              "parent_id": null,
+              "children": [],
+              "archived": false,
+              "source": "user"
+            }
+          }
+        ]
+      }
+    ],
+    "links": [
+      {
+        "old": {
+          "turn": 0,
+          "all": [
+            "咖啡"
+          ],
+          "absent": []
+        },
+        "new": {
+          "turn": 1,
+          "all": [
+            "绿茶"
+          ],
+          "absent": []
+        },
+        "old_ids": [
+          "m_4e6f1ebbaa14"
+        ],
+        "new_ids": [
+          "m_99680a29923a"
+        ],
+        "paths": [
+          [
+            "m_4e6f1ebbaa14",
+            "m_99680a29923a"
+          ]
+        ],
+        "correct": true
+      }
+    ],
+    "protected": [],
+    "timelines": [
+      [
+        {
+          "id": "m_4e6f1ebbaa14",
+          "text": "我每天早上都喜欢喝咖啡。",
+          "created_at": 1793879955.1879008,
+          "valid_at": null,
+          "invalid_at": 1795175955.1879008,
+          "is_current": false,
+          "supersedes": null,
+          "superseded_by": "m_99680a29923a"
+        },
+        {
+          "id": "m_99680a29923a",
+          "text": "更正一下，我现在不喝咖啡了，改喝绿茶。",
+          "created_at": 1795175955.1879008,
+          "valid_at": 1795175955.1879008,
+          "invalid_at": null,
+          "is_current": true,
+          "supersedes": "m_4e6f1ebbaa14",
+          "superseded_by": null
+        }
+      ]
+    ],
+    "memories": [
+      {
+        "id": "m_4e6f1ebbaa14",
+        "text": "我每天早上都喜欢喝咖啡。",
+        "metadata": {
+          "experiment_case": "U02",
+          "experiment_turn": 0,
+          "ns": "person_a",
+          "fact_kind": "fact",
+          "fact_subject": "用户",
+          "confidence": 1.0,
+          "add_batch": "e94733a0eeff",
+          "superseded_by": "m_99680a29923a",
+          "invalid_at": 1795175955.1879008
+        },
+        "created_at": 1793879955.1879008,
+        "last_hit": 1793879955.1879008,
+        "hit_count": 0,
+        "weight": 1.0,
+        "importance": 0.55,
+        "freshness": 1.0,
+        "decay_factor": 1.0,
+        "region_id": "r_7fe3c6913ef5",
+        "neighbors": [],
+        "tags": [
+          "extracted",
+          "fact"
+        ],
+        "summary": null,
+        "version": 1,
+        "parent_id": null,
+        "children": [],
+        "archived": false,
+        "source": "user"
+      },
+      {
+        "id": "m_99680a29923a",
+        "text": "更正一下，我现在不喝咖啡了，改喝绿茶。",
+        "metadata": {
+          "experiment_case": "U02",
+          "experiment_turn": 1,
+          "ns": "person_a",
+          "fact_kind": "fact",
+          "fact_subject": "用户",
+          "confidence": 1.0,
+          "supersedes": "m_4e6f1ebbaa14",
+          "corrects": "m_4e6f1ebbaa14",
+          "add_batch": "2306fbd82026",
+          "valid_at": 1795175955.1879008
+        },
+        "created_at": 1795175955.1879008,
+        "last_hit": 1795175955.1879008,
+        "hit_count": 0,
+        "weight": 1.0,
+        "importance": 0.65,
+        "freshness": 1.0,
+        "decay_factor": 1.0,
+        "region_id": "r_7fe3c6913ef5",
+        "neighbors": [],
+        "tags": [
+          "fact",
+          "extracted",
+          "corrected"
+        ],
+        "summary": null,
+        "version": 1,
+        "parent_id": null,
+        "children": [],
+        "archived": false,
+        "source": "user"
+      }
+    ]
+  },
+  {
+    "case": "U03",
+    "arm": "rules_version",
+    "decay": false,
+    "trace": {
+      "extraction": [
+        {
+          "input": "我养的猫叫团子。",
+          "facts_before_pipeline_markers": [
+            {
+              "text": "我养的猫叫团子。",
+              "kind": "fact",
+              "confidence": 1.0,
+              "subject": "用户"
+            }
+          ],
+          "llm": [],
+          "rules_fallback": false
+        },
+        {
+          "input": "纠正一下，我的猫现在改名叫豆包了。",
+          "facts_before_pipeline_markers": [
+            {
+              "text": "纠正一下，我的猫现在改名叫豆包了。",
+              "kind": "fact",
+              "confidence": 1.0,
+              "subject": "用户"
+            }
+          ],
+          "llm": [],
+          "rules_fallback": false
+        }
+      ],
+      "matching": [
+        {
+          "fact": {
+            "text": "我养的猫叫团子。",
+            "kind": "fact",
+            "confidence": 1.0,
+            "subject": "用户"
+          },
+          "ns": "person_a",
+          "best_id": null,
+          "best_text": null,
+          "cosine": 0.0,
+          "correction_threshold": 0.66,
+          "dedup_threshold": 0.92
+        },
+        {
+          "fact": {
+            "text": "纠正一下，我的猫现在改名叫豆包了。",
+            "kind": "correction",
+            "confidence": 1.0,
+            "subject": "用户"
+          },
+          "ns": "person_a",
+          "best_id": "m_d2069a0f1957",
+          "best_text": "我养的猫叫团子。",
+          "cosine": 0.7154288381919074,
+          "correction_threshold": 0.66,
+          "dedup_threshold": 0.92
+        }
+      ]
+    },
+    "queries": [
+      {
+        "text": "我的猫现在叫什么？",
+        "gold": {
+          "turn": 1,
+          "all": [
+            "豆包"
+          ],
+          "absent": []
+        },
+        "ns": "person_a",
+        "include_history": false,
+        "gold_present": true,
+        "rank": 1,
+        "top1": true,
+        "top5": true,
+        "hits": [
+          {
+            "rank": 1,
+            "score": 0.8142490034887052,
+            "breakdown": {
+              "semantic": 1.0,
+              "importance": 0.65,
+              "freshness": 1.0,
+              "weight": 0.5,
+              "decay": 1.0,
+              "hit_count": 0.0,
+              "recency": 1.0,
+              "region": 0.7708,
+              "final": 0.8142
+            },
+            "memory": {
+              "id": "m_9abd97ae737b",
+              "text": "纠正一下，我的猫现在改名叫豆包了。",
+              "metadata": {
+                "experiment_case": "U03",
+                "experiment_turn": 1,
+                "ns": "person_a",
+                "fact_kind": "fact",
+                "fact_subject": "用户",
+                "confidence": 1.0,
+                "supersedes": "m_d2069a0f1957",
+                "corrects": "m_d2069a0f1957",
+                "add_batch": "9649cca5c598",
+                "valid_at": 1795175955.1879008
+              },
+              "created_at": 1795175955.1879008,
+              "last_hit": 1795175955.1879008,
+              "hit_count": 0,
+              "weight": 1.0,
+              "importance": 0.65,
+              "freshness": 1.0,
+              "decay_factor": 1.0,
+              "region_id": "r_c65de6b1cfa9",
+              "neighbors": [],
+              "tags": [
+                "fact",
+                "extracted",
+                "corrected"
+              ],
+              "summary": null,
+              "version": 1,
+              "parent_id": null,
+              "children": [],
+              "archived": false,
+              "source": "user"
+            }
+          },
+          {
+            "rank": 2,
+            "score": 0.22960460655614234,
+            "breakdown": {
+              "semantic": 0.0,
+              "importance": 0.55,
+              "freshness": 0.6667,
+              "weight": 0.5,
+              "decay": 1.0,
+              "hit_count": 0.0,
+              "recency": 0.3182,
+              "region": 0.7708,
+              "final": 0.22960460655614234
+            },
+            "memory": {
+              "id": "m_d2069a0f1957",
+              "text": "我养的猫叫团子。",
+              "metadata": {
+                "experiment_case": "U03",
+                "experiment_turn": 0,
+                "ns": "person_a",
+                "fact_kind": "fact",
+                "fact_subject": "用户",
+                "confidence": 1.0,
+                "add_batch": "51f725daaf92",
+                "superseded_by": "m_9abd97ae737b",
+                "invalid_at": 1795175955.1879008
+              },
+              "created_at": 1793879955.1879008,
+              "last_hit": 1793879955.1879008,
+              "hit_count": 0,
+              "weight": 1.0,
+              "importance": 0.55,
+              "freshness": 1.0,
+              "decay_factor": 1.0,
+              "region_id": "r_c65de6b1cfa9",
+              "neighbors": [],
+              "tags": [
+                "extracted",
+                "fact"
+              ],
+              "summary": null,
+              "version": 1,
+              "parent_id": null,
+              "children": [],
+              "archived": false,
+              "source": "user"
+            }
+          }
+        ]
+      }
+    ],
+    "links": [
+      {
+        "old": {
+          "turn": 0,
+          "all": [
+            "团子"
+          ],
+          "absent": []
+        },
+        "new": {
+          "turn": 1,
+          "all": [
+            "豆包"
+          ],
+          "absent": []
+        },
+        "old_ids": [
+          "m_d2069a0f1957"
+        ],
+        "new_ids": [
+          "m_9abd97ae737b"
+        ],
+        "paths": [
+          [
+            "m_d2069a0f1957",
+            "m_9abd97ae737b"
+          ]
+        ],
+        "correct": true
+      }
+    ],
+    "protected": [],
+    "timelines": [
+      [
+        {
+          "id": "m_d2069a0f1957",
+          "text": "我养的猫叫团子。",
+          "created_at": 1793879955.1879008,
+          "valid_at": null,
+          "invalid_at": 1795175955.1879008,
+          "is_current": false,
+          "supersedes": null,
+          "superseded_by": "m_9abd97ae737b"
+        },
+        {
+          "id": "m_9abd97ae737b",
+          "text": "纠正一下，我的猫现在改名叫豆包了。",
+          "created_at": 1795175955.1879008,
+          "valid_at": 1795175955.1879008,
+          "invalid_at": null,
+          "is_current": true,
+          "supersedes": "m_d2069a0f1957",
+          "superseded_by": null
+        }
+      ]
+    ],
+    "memories": [
+      {
+        "id": "m_d2069a0f1957",
+        "text": "我养的猫叫团子。",
+        "metadata": {
+          "experiment_case": "U03",
+          "experiment_turn": 0,
+          "ns": "person_a",
+          "fact_kind": "fact",
+          "fact_subject": "用户",
+          "confidence": 1.0,
+          "add_batch": "51f725daaf92",
+          "superseded_by": "m_9abd97ae737b",
+          "invalid_at": 1795175955.1879008
+        },
+        "created_at": 1793879955.1879008,
+        "last_hit": 1793879955.1879008,
+        "hit_count": 0,
+        "weight": 1.0,
+        "importance": 0.55,
+        "freshness": 1.0,
+        "decay_factor": 1.0,
+        "region_id": "r_c65de6b1cfa9",
+        "neighbors": [],
+        "tags": [
+          "extracted",
+          "fact"
+        ],
+        "summary": null,
+        "version": 1,
+        "parent_id": null,
+        "children": [],
+        "archived": false,
+        "source": "user"
+      },
+      {
+        "id": "m_9abd97ae737b",
+        "text": "纠正一下，我的猫现在改名叫豆包了。",
+        "metadata": {
+          "experiment_case": "U03",
+          "experiment_turn": 1,
+          "ns": "person_a",
+          "fact_kind": "fact",
+          "fact_subject": "用户",
+          "confidence": 1.0,
+          "supersedes": "m_d2069a0f1957",
+          "corrects": "m_d2069a0f1957",
+          "add_batch": "9649cca5c598",
+          "valid_at": 1795175955.1879008
+        },
+        "created_at": 1795175955.1879008,
+        "last_hit": 1795175955.1879008,
+        "hit_count": 0,
+        "weight": 1.0,
+        "importance": 0.65,
+        "freshness": 1.0,
+        "decay_factor": 1.0,
+        "region_id": "r_c65de6b1cfa9",
+        "neighbors": [],
+        "tags": [
+          "fact",
+          "extracted",
+          "corrected"
+        ],
+        "summary": null,
+        "version": 1,
+        "parent_id": null,
+        "children": [],
+        "archived": false,
+        "source": "user"
+      }
+    ]
+  },
+  {
+    "case": "U04",
+    "arm": "rules_version",
+    "decay": false,
+    "trace": {
+      "extraction": [
+        {
+          "input": "我在海星科技公司上班。",
+          "facts_before_pipeline_markers": [
+            {
+              "text": "我在海星科技公司上班。",
+              "kind": "fact",
+              "confidence": 1.0,
+              "subject": "用户"
+            }
+          ],
+          "llm": [],
+          "rules_fallback": false
+        },
+        {
+          "input": "之前你记错了，我已经跳槽到晨光公司上班了。",
+          "facts_before_pipeline_markers": [
+            {
+              "text": "之前你记错了，我已经跳槽到晨光公司上班了。",
+              "kind": "fact",
+              "confidence": 1.0,
+              "subject": "用户"
+            }
+          ],
+          "llm": [],
+          "rules_fallback": false
+        }
+      ],
+      "matching": [
+        {
+          "fact": {
+            "text": "我在海星科技公司上班。",
+            "kind": "fact",
+            "confidence": 1.0,
+            "subject": "用户"
+          },
+          "ns": "person_a",
+          "best_id": null,
+          "best_text": null,
+          "cosine": 0.0,
+          "correction_threshold": 0.66,
+          "dedup_threshold": 0.92
+        },
+        {
+          "fact": {
+            "text": "之前你记错了，我已经跳槽到晨光公司上班了。",
+            "kind": "correction",
+            "confidence": 1.0,
+            "subject": "用户"
+          },
+          "ns": "person_a",
+          "best_id": "m_0a77b46b96f5",
+          "best_text": "我在海星科技公司上班。",
+          "cosine": 0.5106117731864298,
+          "correction_threshold": 0.66,
+          "dedup_threshold": 0.92
+        }
+      ]
+    },
+    "queries": [
+      {
+        "text": "我现在在哪家公司工作？",
+        "gold": {
+          "turn": 1,
+          "all": [
+            "晨光"
+          ],
+          "absent": []
+        },
+        "ns": "person_a",
+        "include_history": false,
+        "gold_present": true,
+        "rank": 1,
+        "top1": true,
+        "top5": true,
+        "hits": [
+          {
+            "rank": 1,
+            "score": 0.6620795856068438,
+            "breakdown": {
+              "semantic": 0.6667,
+              "importance": 0.55,
+              "freshness": 1.0,
+              "weight": 0.5,
+              "decay": 1.0,
+              "hit_count": 0.0,
+              "recency": 1.0,
+              "region": 0.6569,
+              "final": 0.6621
+            },
+            "memory": {
+              "id": "m_d5a9b1e44636",
+              "text": "之前你记错了，我已经跳槽到晨光公司上班了。",
+              "metadata": {
+                "experiment_case": "U04",
+                "experiment_turn": 1,
+                "ns": "person_a",
+                "fact_kind": "fact",
+                "fact_subject": "用户",
+                "confidence": 1.0,
+                "add_batch": "edff1c9a7e03"
+              },
+              "created_at": 1795175955.1879008,
+              "last_hit": 1795175955.1879008,
+              "hit_count": 0,
+              "weight": 1.0,
+              "importance": 0.55,
+              "freshness": 1.0,
+              "decay_factor": 1.0,
+              "region_id": "r_45810f86acc1",
+              "neighbors": [],
+              "tags": [
+                "extracted",
+                "fact"
+              ],
+              "summary": null,
+              "version": 1,
+              "parent_id": null,
+              "children": [],
+              "archived": false,
+              "source": "user"
+            }
+          },
+          {
+            "rank": 2,
+            "score": 0.4535415664362227,
+            "breakdown": {
+              "semantic": 0.3333,
+              "importance": 0.55,
+              "freshness": 0.6667,
+              "weight": 0.5,
+              "decay": 1.0,
+              "hit_count": 0.0,
+              "recency": 0.3182,
+              "region": 0.6408,
+              "final": 0.4535
+            },
+            "memory": {
+              "id": "m_0a77b46b96f5",
+              "text": "我在海星科技公司上班。",
+              "metadata": {
+                "experiment_case": "U04",
+                "experiment_turn": 0,
+                "ns": "person_a",
+                "fact_kind": "fact",
+                "fact_subject": "用户",
+                "confidence": 1.0,
+                "add_batch": "91570c064c60"
+              },
+              "created_at": 1793879955.1879008,
+              "last_hit": 1793879955.1879008,
+              "hit_count": 0,
+              "weight": 1.0,
+              "importance": 0.55,
+              "freshness": 1.0,
+              "decay_factor": 1.0,
+              "region_id": "r_780970c12966",
+              "neighbors": [],
+              "tags": [
+                "extracted",
+                "fact"
+              ],
+              "summary": null,
+              "version": 1,
+              "parent_id": null,
+              "children": [],
+              "archived": false,
+              "source": "user"
+            }
+          }
+        ]
+      }
+    ],
+    "links": [
+      {
+        "old": {
+          "turn": 0,
+          "all": [
+            "海星"
+          ],
+          "absent": []
+        },
+        "new": {
+          "turn": 1,
+          "all": [
+            "晨光"
+          ],
+          "absent": []
+        },
+        "old_ids": [
+          "m_0a77b46b96f5"
+        ],
+        "new_ids": [
+          "m_d5a9b1e44636"
+        ],
+        "paths": [
+          [
+            "m_0a77b46b96f5"
+          ]
+        ],
+        "correct": false
+      }
+    ],
+    "protected": [],
+    "timelines": [
+      [
+        {
+          "id": "m_0a77b46b96f5",
+          "text": "我在海星科技公司上班。",
+          "created_at": 1793879955.1879008,
+          "valid_at": null,
+          "invalid_at": null,
+          "is_current": true,
+          "supersedes": null,
+          "superseded_by": null
+        }
+      ]
+    ],
+    "memories": [
+      {
+        "id": "m_0a77b46b96f5",
+        "text": "我在海星科技公司上班。",
+        "metadata": {
+          "experiment_case": "U04",
+          "experiment_turn": 0,
+          "ns": "person_a",
+          "fact_kind": "fact",
+          "fact_subject": "用户",
+          "confidence": 1.0,
+          "add_batch": "91570c064c60"
+        },
+        "created_at": 1793879955.1879008,
+        "last_hit": 1793879955.1879008,
+        "hit_count": 0,
+        "weight": 1.0,
+        "importance": 0.55,
+        "freshness": 1.0,
+        "decay_factor": 1.0,
+        "region_id": "r_780970c12966",
+        "neighbors": [],
+        "tags": [
+          "extracted",
+          "fact"
+        ],
+        "summary": null,
+        "version": 1,
+        "parent_id": null,
+        "children": [],
+        "archived": false,
+        "source": "user"
+      },
+      {
+        "id": "m_d5a9b1e44636",
+        "text": "之前你记错了，我已经跳槽到晨光公司上班了。",
+        "metadata": {
+          "experiment_case": "U04",
+          "experiment_turn": 1,
+          "ns": "person_a",
+          "fact_kind": "fact",
+          "fact_subject": "用户",
+          "confidence": 1.0,
+          "add_batch": "edff1c9a7e03"
+        },
+        "created_at": 1795175955.1879008,
+        "last_hit": 1795175955.1879008,
+        "hit_count": 0,
+        "weight": 1.0,
+        "importance": 0.55,
+        "freshness": 1.0,
+        "decay_factor": 1.0,
+        "region_id": "r_45810f86acc1",
+        "neighbors": [],
+        "tags": [
+          "extracted",
+          "fact"
+        ],
+        "summary": null,
+        "version": 1,
+        "parent_id": null,
+        "children": [],
+        "archived": false,
+        "source": "user"
+      }
+    ]
+  },
+  {
+    "case": "U01",
+    "arm": "llm_version",
+    "decay": false,
+    "trace": {
+      "extraction": [
+        {
+          "input": "我现在住在北京。",
+          "facts_before_pipeline_markers": [
+            {
+              "text": "用户现在住在北京",
+              "kind": "fact",
+              "confidence": 1.0,
+              "subject": "用户"
+            }
+          ],
+          "llm": [
+            {
+              "key": "a0eeaeedf6aa03b05d6bb4d686971573ab183dc82e54f9cc836e99e2c5abc2ea",
+              "status": "ok"
+            }
+          ],
+          "rules_fallback": false
+        },
+        {
+          "input": "你记错了，我现在已经搬到上海了。",
+          "facts_before_pipeline_markers": [
+            {
+              "text": "用户已经搬到上海了",
+              "kind": "correction",
+              "confidence": 1.0,
+              "subject": "用户"
+            }
+          ],
+          "llm": [
+            {
+              "key": "a696bad2a0d416ed7e48c6ca901a05f539decedce773713ee952b3d6fbd18525",
+              "status": "ok"
+            }
+          ],
+          "rules_fallback": false
+        }
+      ],
+      "matching": [
+        {
+          "fact": {
+            "text": "用户现在住在北京",
+            "kind": "fact",
+            "confidence": 1.0,
+            "subject": "用户"
+          },
+          "ns": "person_a",
+          "best_id": null,
+          "best_text": null,
+          "cosine": 0.0,
+          "correction_threshold": 0.66,
+          "dedup_threshold": 0.92
+        },
+        {
+          "fact": {
+            "text": "用户已经搬到上海了",
+            "kind": "correction",
+            "confidence": 1.0,
+            "subject": "用户"
+          },
+          "ns": "person_a",
+          "best_id": "m_a5f49be4effd",
+          "best_text": "用户现在住在北京",
+          "cosine": 0.7256142754731268,
+          "correction_threshold": 0.66,
+          "dedup_threshold": 0.92
+        }
+      ]
+    },
+    "queries": [
+      {
+        "text": "我现在住在哪里？",
+        "gold": {
+          "turn": 1,
+          "all": [
+            "上海"
+          ],
+          "absent": []
+        },
+        "ns": "person_a",
+        "include_history": false,
+        "gold_present": true,
+        "rank": 1,
+        "top1": true,
+        "top5": true,
+        "hits": [
+          {
+            "rank": 1,
+            "score": 0.40910779050044416,
+            "breakdown": {
+              "semantic": 0.0,
+              "importance": 0.65,
+              "freshness": 1.0,
+              "weight": 0.5,
+              "decay": 1.0,
+              "hit_count": 0.0,
+              "recency": 1.0,
+              "region": 0.6851,
+              "final": 0.4091
+            },
+            "memory": {
+              "id": "m_62ff80ad2f51",
+              "text": "用户已经搬到上海了",
+              "metadata": {
+                "experiment_case": "U01",
+                "experiment_turn": 1,
+                "ns": "person_a",
+                "fact_kind": "fact",
+                "fact_subject": "用户",
+                "confidence": 1.0,
+                "supersedes": "m_a5f49be4effd",
+                "corrects": "m_a5f49be4effd",
+                "add_batch": "eee781c599b0",
+                "valid_at": 1795175955.1879008
+              },
+              "created_at": 1795175955.1879008,
+              "last_hit": 1795175955.1879008,
+              "hit_count": 0,
+              "weight": 1.0,
+              "importance": 0.65,
+              "freshness": 1.0,
+              "decay_factor": 1.0,
+              "region_id": "r_1d3bf651894a",
+              "neighbors": [],
+              "tags": [
+                "fact",
+                "extracted",
+                "corrected"
+              ],
+              "summary": null,
+              "version": 1,
+              "parent_id": null,
+              "children": [],
+              "archived": false,
+              "source": "user"
+            }
+          },
+          {
+            "rank": 2,
+            "score": 0.40910778950044413,
+            "breakdown": {
+              "semantic": 0.8333,
+              "importance": 0.55,
+              "freshness": 0.6667,
+              "weight": 0.5,
+              "decay": 1.0,
+              "hit_count": 0.0,
+              "recency": 0.3182,
+              "region": 0.6851,
+              "final": 0.40910778950044413
+            },
+            "memory": {
+              "id": "m_a5f49be4effd",
+              "text": "用户现在住在北京",
+              "metadata": {
+                "experiment_case": "U01",
+                "experiment_turn": 0,
+                "ns": "person_a",
+                "fact_kind": "fact",
+                "fact_subject": "用户",
+                "confidence": 1.0,
+                "add_batch": "d8ede85c171f",
+                "superseded_by": "m_62ff80ad2f51",
+                "invalid_at": 1795175955.1879008
+              },
+              "created_at": 1793879955.1879008,
+              "last_hit": 1793879955.1879008,
+              "hit_count": 0,
+              "weight": 1.0,
+              "importance": 0.55,
+              "freshness": 1.0,
+              "decay_factor": 1.0,
+              "region_id": "r_1d3bf651894a",
+              "neighbors": [],
+              "tags": [
+                "extracted",
+                "fact"
+              ],
+              "summary": null,
+              "version": 1,
+              "parent_id": null,
+              "children": [],
+              "archived": false,
+              "source": "user"
+            }
+          }
+        ]
+      }
+    ],
+    "links": [
+      {
+        "old": {
+          "turn": 0,
+          "all": [
+            "北京"
+          ],
+          "absent": []
+        },
+        "new": {
+          "turn": 1,
+          "all": [
+            "上海"
+          ],
+          "absent": []
+        },
+        "old_ids": [
+          "m_a5f49be4effd"
+        ],
+        "new_ids": [
+          "m_62ff80ad2f51"
+        ],
+        "paths": [
+          [
+            "m_a5f49be4effd",
+            "m_62ff80ad2f51"
+          ]
+        ],
+        "correct": true
+      }
+    ],
+    "protected": [],
+    "timelines": [
+      [
+        {
+          "id": "m_a5f49be4effd",
+          "text": "用户现在住在北京",
+          "created_at": 1793879955.1879008,
+          "valid_at": null,
+          "invalid_at": 1795175955.1879008,
+          "is_current": false,
+          "supersedes": null,
+          "superseded_by": "m_62ff80ad2f51"
+        },
+        {
+          "id": "m_62ff80ad2f51",
+          "text": "用户已经搬到上海了",
+          "created_at": 1795175955.1879008,
+          "valid_at": 1795175955.1879008,
+          "invalid_at": null,
+          "is_current": true,
+          "supersedes": "m_a5f49be4effd",
+          "superseded_by": null
+        }
+      ]
+    ],
+    "memories": [
+      {
+        "id": "m_a5f49be4effd",
+        "text": "用户现在住在北京",
+        "metadata": {
+          "experiment_case": "U01",
+          "experiment_turn": 0,
+          "ns": "person_a",
+          "fact_kind": "fact",
+          "fact_subject": "用户",
+          "confidence": 1.0,
+          "add_batch": "d8ede85c171f",
+          "superseded_by": "m_62ff80ad2f51",
+          "invalid_at": 1795175955.1879008
+        },
+        "created_at": 1793879955.1879008,
+        "last_hit": 1793879955.1879008,
+        "hit_count": 0,
+        "weight": 1.0,
+        "importance": 0.55,
+        "freshness": 1.0,
+        "decay_factor": 1.0,
+        "region_id": "r_1d3bf651894a",
+        "neighbors": [],
+        "tags": [
+          "extracted",
+          "fact"
+        ],
+        "summary": null,
+        "version": 1,
+        "parent_id": null,
+        "children": [],
+        "archived": false,
+        "source": "user"
+      },
+      {
+        "id": "m_62ff80ad2f51",
+        "text": "用户已经搬到上海了",
+        "metadata": {
+          "experiment_case": "U01",
+          "experiment_turn": 1,
+          "ns": "person_a",
+          "fact_kind": "fact",
+          "fact_subject": "用户",
+          "confidence": 1.0,
+          "supersedes": "m_a5f49be4effd",
+          "corrects": "m_a5f49be4effd",
+          "add_batch": "eee781c599b0",
+          "valid_at": 1795175955.1879008
+        },
+        "created_at": 1795175955.1879008,
+        "last_hit": 1795175955.1879008,
+        "hit_count": 0,
+        "weight": 1.0,
+        "importance": 0.65,
+        "freshness": 1.0,
+        "decay_factor": 1.0,
+        "region_id": "r_1d3bf651894a",
+        "neighbors": [],
+        "tags": [
+          "fact",
+          "extracted",
+          "corrected"
+        ],
+        "summary": null,
+        "version": 1,
+        "parent_id": null,
+        "children": [],
+        "archived": false,
+        "source": "user"
+      }
+    ]
+  },
+  {
+    "case": "U02",
+    "arm": "llm_version",
+    "decay": false,
+    "trace": {
+      "extraction": [
+        {
+          "input": "我每天早上都喜欢喝咖啡。",
+          "facts_before_pipeline_markers": [
+            {
+              "text": "用户每天早上都喜欢喝咖啡",
+              "kind": "fact",
+              "confidence": 1.0,
+              "subject": "用户"
+            }
+          ],
+          "llm": [
+            {
+              "key": "e3d849a144da87d77b13fa5c20913812d0e52367d0d4e466bc65709099dabc86",
+              "status": "ok"
+            }
+          ],
+          "rules_fallback": false
+        },
+        {
+          "input": "更正一下，我现在不喝咖啡了，改喝绿茶。",
+          "facts_before_pipeline_markers": [
+            {
+              "text": "用户现在不喝咖啡了，改喝绿茶",
+              "kind": "correction",
+              "confidence": 1.0,
+              "subject": "用户"
+            }
+          ],
+          "llm": [
+            {
+              "key": "7c0787e53a912739f4eec91bcb3a32ce15d3a24d40c2e13c9af7497c52452142",
+              "status": "ok"
+            }
+          ],
+          "rules_fallback": false
+        }
+      ],
+      "matching": [
+        {
+          "fact": {
+            "text": "用户每天早上都喜欢喝咖啡",
+            "kind": "fact",
+            "confidence": 1.0,
+            "subject": "用户"
+          },
+          "ns": "person_a",
+          "best_id": null,
+          "best_text": null,
+          "cosine": 0.0,
+          "correction_threshold": 0.66,
+          "dedup_threshold": 0.92
+        },
+        {
+          "fact": {
+            "text": "用户现在不喝咖啡了，改喝绿茶",
+            "kind": "correction",
+            "confidence": 1.0,
+            "subject": "用户"
+          },
+          "ns": "person_a",
+          "best_id": "m_591f3ee206b5",
+          "best_text": "用户每天早上都喜欢喝咖啡",
+          "cosine": 0.6950906986970269,
+          "correction_threshold": 0.66,
+          "dedup_threshold": 0.92
+        }
+      ]
+    },
+    "queries": [
+      {
+        "text": "我现在喝什么饮料？",
+        "gold": {
+          "turn": 1,
+          "all": [
+            "绿茶"
+          ],
+          "absent": []
+        },
+        "ns": "person_a",
+        "include_history": false,
+        "gold_present": true,
+        "rank": 1,
+        "top1": true,
+        "top5": true,
+        "hits": [
+          {
+            "rank": 1,
+            "score": 0.8050253229250054,
+            "breakdown": {
+              "semantic": 1.0,
+              "importance": 0.65,
+              "freshness": 1.0,
+              "weight": 0.5,
+              "decay": 1.0,
+              "hit_count": 0.0,
+              "recency": 1.0,
+              "region": 0.6171,
+              "final": 0.805
+            },
+            "memory": {
+              "id": "m_bc0b4a6d8000",
+              "text": "用户现在不喝咖啡了，改喝绿茶",
+              "metadata": {
+                "experiment_case": "U02",
+                "experiment_turn": 1,
+                "ns": "person_a",
+                "fact_kind": "fact",
+                "fact_subject": "用户",
+                "confidence": 1.0,
+                "supersedes": "m_591f3ee206b5",
+                "corrects": "m_591f3ee206b5",
+                "add_batch": "69bc0817ad86",
+                "valid_at": 1795175955.1879008
+              },
+              "created_at": 1795175955.1879008,
+              "last_hit": 1795175955.1879008,
+              "hit_count": 0,
+              "weight": 1.0,
+              "importance": 0.65,
+              "freshness": 1.0,
+              "decay_factor": 1.0,
+              "region_id": "r_e1b2b5de23b3",
+              "neighbors": [],
+              "tags": [
+                "fact",
+                "extracted",
+                "corrected"
+              ],
+              "summary": null,
+              "version": 1,
+              "parent_id": null,
+              "children": [],
+              "archived": false,
+              "source": "user"
+            }
+          },
+          {
+            "rank": 2,
+            "score": 0.22314803170989772,
+            "breakdown": {
+              "semantic": 0.0,
+              "importance": 0.55,
+              "freshness": 0.6667,
+              "weight": 0.5,
+              "decay": 1.0,
+              "hit_count": 0.0,
+              "recency": 0.3182,
+              "region": 0.6171,
+              "final": 0.22314803170989772
+            },
+            "memory": {
+              "id": "m_591f3ee206b5",
+              "text": "用户每天早上都喜欢喝咖啡",
+              "metadata": {
+                "experiment_case": "U02",
+                "experiment_turn": 0,
+                "ns": "person_a",
+                "fact_kind": "fact",
+                "fact_subject": "用户",
+                "confidence": 1.0,
+                "add_batch": "2ff2f48d8a95",
+                "superseded_by": "m_bc0b4a6d8000",
+                "invalid_at": 1795175955.1879008
+              },
+              "created_at": 1793879955.1879008,
+              "last_hit": 1793879955.1879008,
+              "hit_count": 0,
+              "weight": 1.0,
+              "importance": 0.55,
+              "freshness": 1.0,
+              "decay_factor": 1.0,
+              "region_id": "r_e1b2b5de23b3",
+              "neighbors": [],
+              "tags": [
+                "extracted",
+                "fact"
+              ],
+              "summary": null,
+              "version": 1,
+              "parent_id": null,
+              "children": [],
+              "archived": false,
+              "source": "user"
+            }
+          }
+        ]
+      }
+    ],
+    "links": [
+      {
+        "old": {
+          "turn": 0,
+          "all": [
+            "咖啡"
+          ],
+          "absent": []
+        },
+        "new": {
+          "turn": 1,
+          "all": [
+            "绿茶"
+          ],
+          "absent": []
+        },
+        "old_ids": [
+          "m_591f3ee206b5"
+        ],
+        "new_ids": [
+          "m_bc0b4a6d8000"
+        ],
+        "paths": [
+          [
+            "m_591f3ee206b5",
+            "m_bc0b4a6d8000"
+          ]
+        ],
+        "correct": true
+      }
+    ],
+    "protected": [],
+    "timelines": [
+      [
+        {
+          "id": "m_591f3ee206b5",
+          "text": "用户每天早上都喜欢喝咖啡",
+          "created_at": 1793879955.1879008,
+          "valid_at": null,
+          "invalid_at": 1795175955.1879008,
+          "is_current": false,
+          "supersedes": null,
+          "superseded_by": "m_bc0b4a6d8000"
+        },
+        {
+          "id": "m_bc0b4a6d8000",
+          "text": "用户现在不喝咖啡了，改喝绿茶",
+          "created_at": 1795175955.1879008,
+          "valid_at": 1795175955.1879008,
+          "invalid_at": null,
+          "is_current": true,
+          "supersedes": "m_591f3ee206b5",
+          "superseded_by": null
+        }
+      ]
+    ],
+    "memories": [
+      {
+        "id": "m_591f3ee206b5",
+        "text": "用户每天早上都喜欢喝咖啡",
+        "metadata": {
+          "experiment_case": "U02",
+          "experiment_turn": 0,
+          "ns": "person_a",
+          "fact_kind": "fact",
+          "fact_subject": "用户",
+          "confidence": 1.0,
+          "add_batch": "2ff2f48d8a95",
+          "superseded_by": "m_bc0b4a6d8000",
+          "invalid_at": 1795175955.1879008
+        },
+        "created_at": 1793879955.1879008,
+        "last_hit": 1793879955.1879008,
+        "hit_count": 0,
+        "weight": 1.0,
+        "importance": 0.55,
+        "freshness": 1.0,
+        "decay_factor": 1.0,
+        "region_id": "r_e1b2b5de23b3",
+        "neighbors": [],
+        "tags": [
+          "extracted",
+          "fact"
+        ],
+        "summary": null,
+        "version": 1,
+        "parent_id": null,
+        "children": [],
+        "archived": false,
+        "source": "user"
+      },
+      {
+        "id": "m_bc0b4a6d8000",
+        "text": "用户现在不喝咖啡了，改喝绿茶",
+        "metadata": {
+          "experiment_case": "U02",
+          "experiment_turn": 1,
+          "ns": "person_a",
+          "fact_kind": "fact",
+          "fact_subject": "用户",
+          "confidence": 1.0,
+          "supersedes": "m_591f3ee206b5",
+          "corrects": "m_591f3ee206b5",
+          "add_batch": "69bc0817ad86",
+          "valid_at": 1795175955.1879008
+        },
+        "created_at": 1795175955.1879008,
+        "last_hit": 1795175955.1879008,
+        "hit_count": 0,
+        "weight": 1.0,
+        "importance": 0.65,
+        "freshness": 1.0,
+        "decay_factor": 1.0,
+        "region_id": "r_e1b2b5de23b3",
+        "neighbors": [],
+        "tags": [
+          "fact",
+          "extracted",
+          "corrected"
+        ],
+        "summary": null,
+        "version": 1,
+        "parent_id": null,
+        "children": [],
+        "archived": false,
+        "source": "user"
+      }
+    ]
+  },
+  {
+    "case": "U03",
+    "arm": "llm_version",
+    "decay": false,
+    "trace": {
+      "extraction": [
+        {
+          "input": "我养的猫叫团子。",
+          "facts_before_pipeline_markers": [
+            {
+              "text": "用户养的猫叫团子",
+              "kind": "fact",
+              "confidence": 1.0,
+              "subject": "用户"
+            }
+          ],
+          "llm": [
+            {
+              "key": "2d6b43ad39c6df9ca13fe666b6d4cd1df992dbc5afc64c8de0e09933b4282ac9",
+              "status": "ok"
+            }
+          ],
+          "rules_fallback": false
+        },
+        {
+          "input": "纠正一下，我的猫现在改名叫豆包了。",
+          "facts_before_pipeline_markers": [
+            {
+              "text": "用户的猫现在改名叫豆包",
+              "kind": "correction",
+              "confidence": 1.0,
+              "subject": "用户"
+            }
+          ],
+          "llm": [
+            {
+              "key": "a54cf20f0a27d40fd9a4377378c6604d6d024a8e71a00c8c204ad6075b046ede",
+              "status": "ok"
+            }
+          ],
+          "rules_fallback": false
+        }
+      ],
+      "matching": [
+        {
+          "fact": {
+            "text": "用户养的猫叫团子",
+            "kind": "fact",
+            "confidence": 1.0,
+            "subject": "用户"
+          },
+          "ns": "person_a",
+          "best_id": null,
+          "best_text": null,
+          "cosine": 0.0,
+          "correction_threshold": 0.66,
+          "dedup_threshold": 0.92
+        },
+        {
+          "fact": {
+            "text": "用户的猫现在改名叫豆包",
+            "kind": "correction",
+            "confidence": 1.0,
+            "subject": "用户"
+          },
+          "ns": "person_a",
+          "best_id": "m_d20f9fa90cd2",
+          "best_text": "用户养的猫叫团子",
+          "cosine": 0.7179706985822408,
+          "correction_threshold": 0.66,
+          "dedup_threshold": 0.92
+        }
+      ]
+    },
+    "queries": [
+      {
+        "text": "我的猫现在叫什么？",
+        "gold": {
+          "turn": 1,
+          "all": [
+            "豆包"
+          ],
+          "absent": []
+        },
+        "ns": "person_a",
+        "include_history": false,
+        "gold_present": true,
+        "rank": 1,
+        "top1": true,
+        "top5": true,
+        "hits": [
+          {
+            "rank": 1,
+            "score": 0.8128788790629129,
+            "breakdown": {
+              "semantic": 1.0,
+              "importance": 0.65,
+              "freshness": 1.0,
+              "weight": 0.5,
+              "decay": 1.0,
+              "hit_count": 0.0,
+              "recency": 1.0,
+              "region": 0.748,
+              "final": 0.8129
+            },
+            "memory": {
+              "id": "m_e8d6fe1fc312",
+              "text": "用户的猫现在改名叫豆包",
+              "metadata": {
+                "experiment_case": "U03",
+                "experiment_turn": 1,
+                "ns": "person_a",
+                "fact_kind": "fact",
+                "fact_subject": "用户",
+                "confidence": 1.0,
+                "supersedes": "m_d20f9fa90cd2",
+                "corrects": "m_d20f9fa90cd2",
+                "add_batch": "a7e70afac37d",
+                "valid_at": 1795175955.1879008
+              },
+              "created_at": 1795175955.1879008,
+              "last_hit": 1795175955.1879008,
+              "hit_count": 0,
+              "weight": 1.0,
+              "importance": 0.65,
+              "freshness": 1.0,
+              "decay_factor": 1.0,
+              "region_id": "r_bb618b069371",
+              "neighbors": [],
+              "tags": [
+                "fact",
+                "extracted",
+                "corrected"
+              ],
+              "summary": null,
+              "version": 1,
+              "parent_id": null,
+              "children": [],
+              "archived": false,
+              "source": "user"
+            }
+          },
+          {
+            "rank": 2,
+            "score": 0.2286455212386496,
+            "breakdown": {
+              "semantic": 0.0,
+              "importance": 0.55,
+              "freshness": 0.6667,
+              "weight": 0.5,
+              "decay": 1.0,
+              "hit_count": 0.0,
+              "recency": 0.3182,
+              "region": 0.748,
+              "final": 0.2286455212386496
+            },
+            "memory": {
+              "id": "m_d20f9fa90cd2",
+              "text": "用户养的猫叫团子",
+              "metadata": {
+                "experiment_case": "U03",
+                "experiment_turn": 0,
+                "ns": "person_a",
+                "fact_kind": "fact",
+                "fact_subject": "用户",
+                "confidence": 1.0,
+                "add_batch": "640547fee288",
+                "superseded_by": "m_e8d6fe1fc312",
+                "invalid_at": 1795175955.1879008
+              },
+              "created_at": 1793879955.1879008,
+              "last_hit": 1793879955.1879008,
+              "hit_count": 0,
+              "weight": 1.0,
+              "importance": 0.55,
+              "freshness": 1.0,
+              "decay_factor": 1.0,
+              "region_id": "r_bb618b069371",
+              "neighbors": [],
+              "tags": [
+                "extracted",
+                "fact"
+              ],
+              "summary": null,
+              "version": 1,
+              "parent_id": null,
+              "children": [],
+              "archived": false,
+              "source": "user"
+            }
+          }
+        ]
+      }
+    ],
+    "links": [
+      {
+        "old": {
+          "turn": 0,
+          "all": [
+            "团子"
+          ],
+          "absent": []
+        },
+        "new": {
+          "turn": 1,
+          "all": [
+            "豆包"
+          ],
+          "absent": []
+        },
+        "old_ids": [
+          "m_d20f9fa90cd2"
+        ],
+        "new_ids": [
+          "m_e8d6fe1fc312"
+        ],
+        "paths": [
+          [
+            "m_d20f9fa90cd2",
+            "m_e8d6fe1fc312"
+          ]
+        ],
+        "correct": true
+      }
+    ],
+    "protected": [],
+    "timelines": [
+      [
+        {
+          "id": "m_d20f9fa90cd2",
+          "text": "用户养的猫叫团子",
+          "created_at": 1793879955.1879008,
+          "valid_at": null,
+          "invalid_at": 1795175955.1879008,
+          "is_current": false,
+          "supersedes": null,
+          "superseded_by": "m_e8d6fe1fc312"
+        },
+        {
+          "id": "m_e8d6fe1fc312",
+          "text": "用户的猫现在改名叫豆包",
+          "created_at": 1795175955.1879008,
+          "valid_at": 1795175955.1879008,
+          "invalid_at": null,
+          "is_current": true,
+          "supersedes": "m_d20f9fa90cd2",
+          "superseded_by": null
+        }
+      ]
+    ],
+    "memories": [
+      {
+        "id": "m_d20f9fa90cd2",
+        "text": "用户养的猫叫团子",
+        "metadata": {
+          "experiment_case": "U03",
+          "experiment_turn": 0,
+          "ns": "person_a",
+          "fact_kind": "fact",
+          "fact_subject": "用户",
+          "confidence": 1.0,
+          "add_batch": "640547fee288",
+          "superseded_by": "m_e8d6fe1fc312",
+          "invalid_at": 1795175955.1879008
+        },
+        "created_at": 1793879955.1879008,
+        "last_hit": 1793879955.1879008,
+        "hit_count": 0,
+        "weight": 1.0,
+        "importance": 0.55,
+        "freshness": 1.0,
+        "decay_factor": 1.0,
+        "region_id": "r_bb618b069371",
+        "neighbors": [],
+        "tags": [
+          "extracted",
+          "fact"
+        ],
+        "summary": null,
+        "version": 1,
+        "parent_id": null,
+        "children": [],
+        "archived": false,
+        "source": "user"
+      },
+      {
+        "id": "m_e8d6fe1fc312",
+        "text": "用户的猫现在改名叫豆包",
+        "metadata": {
+          "experiment_case": "U03",
+          "experiment_turn": 1,
+          "ns": "person_a",
+          "fact_kind": "fact",
+          "fact_subject": "用户",
+          "confidence": 1.0,
+          "supersedes": "m_d20f9fa90cd2",
+          "corrects": "m_d20f9fa90cd2",
+          "add_batch": "a7e70afac37d",
+          "valid_at": 1795175955.1879008
+        },
+        "created_at": 1795175955.1879008,
+        "last_hit": 1795175955.1879008,
+        "hit_count": 0,
+        "weight": 1.0,
+        "importance": 0.65,
+        "freshness": 1.0,
+        "decay_factor": 1.0,
+        "region_id": "r_bb618b069371",
+        "neighbors": [],
+        "tags": [
+          "fact",
+          "extracted",
+          "corrected"
+        ],
+        "summary": null,
+        "version": 1,
+        "parent_id": null,
+        "children": [],
+        "archived": false,
+        "source": "user"
+      }
+    ]
+  },
+  {
+    "case": "U04",
+    "arm": "llm_version",
+    "decay": false,
+    "trace": {
+      "extraction": [
+        {
+          "input": "我在海星科技公司上班。",
+          "facts_before_pipeline_markers": [
+            {
+              "text": "用户在海星科技公司上班",
+              "kind": "fact",
+              "confidence": 1.0,
+              "subject": "用户"
+            }
+          ],
+          "llm": [
+            {
+              "key": "e1ee35f1900fe955fb42f0bb0e3548261fe190039bf9197aa55a7e808b3561b0",
+              "status": "ok"
+            }
+          ],
+          "rules_fallback": false
+        },
+        {
+          "input": "之前你记错了，我已经跳槽到晨光公司上班了。",
+          "facts_before_pipeline_markers": [
+            {
+              "text": "用户已经跳槽到晨光公司上班",
+              "kind": "correction",
+              "confidence": 1.0,
+              "subject": "用户"
+            }
+          ],
+          "llm": [
+            {
+              "key": "353d3e33d1f96bedc284935cacb5a8277bbfea34e942758fb081c71a6cc41638",
+              "status": "ok"
+            }
+          ],
+          "rules_fallback": false
+        }
+      ],
+      "matching": [
+        {
+          "fact": {
+            "text": "用户在海星科技公司上班",
+            "kind": "fact",
+            "confidence": 1.0,
+            "subject": "用户"
+          },
+          "ns": "person_a",
+          "best_id": null,
+          "best_text": null,
+          "cosine": 0.0,
+          "correction_threshold": 0.66,
+          "dedup_threshold": 0.92
+        },
+        {
+          "fact": {
+            "text": "用户已经跳槽到晨光公司上班",
+            "kind": "correction",
+            "confidence": 1.0,
+            "subject": "用户"
+          },
+          "ns": "person_a",
+          "best_id": "m_8027709067c5",
+          "best_text": "用户在海星科技公司上班",
+          "cosine": 0.6477499282996472,
+          "correction_threshold": 0.66,
+          "dedup_threshold": 0.92
+        }
+      ]
+    },
+    "queries": [
+      {
+        "text": "我现在在哪家公司工作？",
+        "gold": {
+          "turn": 1,
+          "all": [
+            "晨光"
+          ],
+          "absent": []
+        },
+        "ns": "person_a",
+        "include_history": false,
+        "gold_present": true,
+        "rank": 2,
+        "top1": false,
+        "top5": true,
+        "hits": [
+          {
+            "rank": 1,
+            "score": 0.7209604922819198,
+            "breakdown": {
+              "semantic": 1.0,
+              "importance": 0.55,
+              "freshness": 0.6667,
+              "weight": 0.5,
+              "decay": 1.0,
+              "hit_count": 0.0,
+              "recency": 0.3182,
+              "region": 0.6534,
+              "final": 0.721
+            },
+            "memory": {
+              "id": "m_8027709067c5",
+              "text": "用户在海星科技公司上班",
+              "metadata": {
+                "experiment_case": "U04",
+                "experiment_turn": 0,
+                "ns": "person_a",
+                "fact_kind": "fact",
+                "fact_subject": "用户",
+                "confidence": 1.0,
+                "add_batch": "f5729d2e3a29"
+              },
+              "created_at": 1793879955.1879008,
+              "last_hit": 1793879955.1879008,
+              "hit_count": 0,
+              "weight": 1.0,
+              "importance": 0.55,
+              "freshness": 1.0,
+              "decay_factor": 1.0,
+              "region_id": "r_72a1d93cba02",
+              "neighbors": [],
+              "tags": [
+                "extracted",
+                "fact"
+              ],
+              "summary": null,
+              "version": 1,
+              "parent_id": null,
+              "children": [],
+              "archived": false,
+              "source": "user"
+            }
+          },
+          {
+            "rank": 2,
+            "score": 0.39520291221100956,
+            "breakdown": {
+              "semantic": 0.0,
+              "importance": 0.55,
+              "freshness": 1.0,
+              "weight": 0.5,
+              "decay": 1.0,
+              "hit_count": 0.0,
+              "recency": 1.0,
+              "region": 0.6534,
+              "final": 0.3952
+            },
+            "memory": {
+              "id": "m_b24c959e9710",
+              "text": "用户已经跳槽到晨光公司上班",
+              "metadata": {
+                "experiment_case": "U04",
+                "experiment_turn": 1,
+                "ns": "person_a",
+                "fact_kind": "fact",
+                "fact_subject": "用户",
+                "confidence": 1.0,
+                "add_batch": "7312d51044ee"
+              },
+              "created_at": 1795175955.1879008,
+              "last_hit": 1795175955.1879008,
+              "hit_count": 0,
+              "weight": 1.0,
+              "importance": 0.55,
+              "freshness": 1.0,
+              "decay_factor": 1.0,
+              "region_id": "r_72a1d93cba02",
+              "neighbors": [],
+              "tags": [
+                "extracted",
+                "fact"
+              ],
+              "summary": null,
+              "version": 1,
+              "parent_id": null,
+              "children": [],
+              "archived": false,
+              "source": "user"
+            }
+          }
+        ]
+      }
+    ],
+    "links": [
+      {
+        "old": {
+          "turn": 0,
+          "all": [
+            "海星"
+          ],
+          "absent": []
+        },
+        "new": {
+          "turn": 1,
+          "all": [
+            "晨光"
+          ],
+          "absent": []
+        },
+        "old_ids": [
+          "m_8027709067c5"
+        ],
+        "new_ids": [
+          "m_b24c959e9710"
+        ],
+        "paths": [
+          [
+            "m_8027709067c5"
+          ]
+        ],
+        "correct": false
+      }
+    ],
+    "protected": [],
+    "timelines": [
+      [
+        {
+          "id": "m_8027709067c5",
+          "text": "用户在海星科技公司上班",
+          "created_at": 1793879955.1879008,
+          "valid_at": null,
+          "invalid_at": null,
+          "is_current": true,
+          "supersedes": null,
+          "superseded_by": null
+        }
+      ]
+    ],
+    "memories": [
+      {
+        "id": "m_8027709067c5",
+        "text": "用户在海星科技公司上班",
+        "metadata": {
+          "experiment_case": "U04",
+          "experiment_turn": 0,
+          "ns": "person_a",
+          "fact_kind": "fact",
+          "fact_subject": "用户",
+          "confidence": 1.0,
+          "add_batch": "f5729d2e3a29"
+        },
+        "created_at": 1793879955.1879008,
+        "last_hit": 1793879955.1879008,
+        "hit_count": 0,
+        "weight": 1.0,
+        "importance": 0.55,
+        "freshness": 1.0,
+        "decay_factor": 1.0,
+        "region_id": "r_72a1d93cba02",
+        "neighbors": [],
+        "tags": [
+          "extracted",
+          "fact"
+        ],
+        "summary": null,
+        "version": 1,
+        "parent_id": null,
+        "children": [],
+        "archived": false,
+        "source": "user"
+      },
+      {
+        "id": "m_b24c959e9710",
+        "text": "用户已经跳槽到晨光公司上班",
+        "metadata": {
+          "experiment_case": "U04",
+          "experiment_turn": 1,
+          "ns": "person_a",
+          "fact_kind": "fact",
+          "fact_subject": "用户",
+          "confidence": 1.0,
+          "add_batch": "7312d51044ee"
+        },
+        "created_at": 1795175955.1879008,
+        "last_hit": 1795175955.1879008,
+        "hit_count": 0,
+        "weight": 1.0,
+        "importance": 0.55,
+        "freshness": 1.0,
+        "decay_factor": 1.0,
+        "region_id": "r_72a1d93cba02",
+        "neighbors": [],
+        "tags": [
+          "extracted",
+          "fact"
+        ],
+        "summary": null,
+        "version": 1,
+        "parent_id": null,
+        "children": [],
+        "archived": false,
+        "source": "user"
+      }
+    ]
+  },
+  {
+    "case": "U01",
+    "arm": "rules_version",
+    "decay": true,
+    "trace": {
+      "extraction": [
+        {
+          "input": "我现在住在北京。",
+          "facts_before_pipeline_markers": [
+            {
+              "text": "我现在住在北京。",
+              "kind": "fact",
+              "confidence": 1.0,
+              "subject": "用户"
+            }
+          ],
+          "llm": [],
+          "rules_fallback": false
+        },
+        {
+          "input": "你记错了，我现在已经搬到上海了。",
+          "facts_before_pipeline_markers": [
+            {
+              "text": "你记错了，我现在已经搬到上海了。",
+              "kind": "fact",
+              "confidence": 1.0,
+              "subject": "用户"
+            }
+          ],
+          "llm": [],
+          "rules_fallback": false
+        }
+      ],
+      "matching": [
+        {
+          "fact": {
+            "text": "我现在住在北京。",
+            "kind": "fact",
+            "confidence": 1.0,
+            "subject": "用户"
+          },
+          "ns": "person_a",
+          "best_id": null,
+          "best_text": null,
+          "cosine": 0.0,
+          "correction_threshold": 0.66,
+          "dedup_threshold": 0.92
+        },
+        {
+          "fact": {
+            "text": "你记错了，我现在已经搬到上海了。",
+            "kind": "correction",
+            "confidence": 1.0,
+            "subject": "用户"
+          },
+          "ns": "person_a",
+          "best_id": "m_560e2a736ea0",
+          "best_text": "我现在住在北京。",
+          "cosine": 0.6133316889358206,
+          "correction_threshold": 0.66,
+          "dedup_threshold": 0.92
+        }
+      ]
+    },
+    "queries": [
+      {
+        "text": "我现在住在哪里？",
+        "gold": {
+          "turn": 1,
+          "all": [
+            "上海"
+          ],
+          "absent": []
+        },
+        "ns": "person_a",
+        "include_history": false,
+        "gold_present": true,
+        "rank": 2,
+        "top1": false,
+        "top5": true,
+        "hits": [
+          {
+            "rank": 1,
+            "score": 0.6815384504046152,
+            "breakdown": {
+              "semantic": 1.0,
+              "importance": 0.4131,
+              "freshness": 0.6667,
+              "weight": 0.4289,
+              "decay": 0.751,
+              "hit_count": 0.0,
+              "recency": 0.3182,
+              "region": 0.7206,
+              "final": 0.6815
+            },
+            "memory": {
+              "id": "m_560e2a736ea0",
+              "text": "我现在住在北京。",
+              "metadata": {
+                "experiment_case": "U01",
+                "experiment_turn": 0,
+                "ns": "person_a",
+                "fact_kind": "fact",
+                "fact_subject": "用户",
+                "confidence": 1.0,
+                "add_batch": "99d4b7d84ad5"
+              },
+              "created_at": 1793879955.1879008,
+              "last_hit": 1793879955.1879008,
+              "hit_count": 0,
+              "weight": 1.0,
+              "importance": 0.55,
+              "freshness": 1.0,
+              "decay_factor": 1.0,
+              "region_id": "r_564f38c7d18e",
+              "neighbors": [],
+              "tags": [
+                "extracted",
+                "fact"
+              ],
+              "summary": null,
+              "version": 1,
+              "parent_id": null,
+              "children": [],
+              "archived": false,
+              "source": "user"
+            }
+          },
+          {
+            "rank": 2,
+            "score": 0.39923781287357374,
+            "breakdown": {
+              "semantic": 0.0,
+              "importance": 0.55,
+              "freshness": 1.0,
+              "weight": 0.5,
+              "decay": 1.0,
+              "hit_count": 0.0,
+              "recency": 1.0,
+              "region": 0.7206,
+              "final": 0.3992
+            },
+            "memory": {
+              "id": "m_3f8a50c23ec7",
+              "text": "你记错了，我现在已经搬到上海了。",
+              "metadata": {
+                "experiment_case": "U01",
+                "experiment_turn": 1,
+                "ns": "person_a",
+                "fact_kind": "fact",
+                "fact_subject": "用户",
+                "confidence": 1.0,
+                "add_batch": "ef831dc50437"
+              },
+              "created_at": 1795175955.1879008,
+              "last_hit": 1795175955.1879008,
+              "hit_count": 0,
+              "weight": 1.0,
+              "importance": 0.55,
+              "freshness": 1.0,
+              "decay_factor": 1.0,
+              "region_id": "r_564f38c7d18e",
+              "neighbors": [],
+              "tags": [
+                "extracted",
+                "fact"
+              ],
+              "summary": null,
+              "version": 1,
+              "parent_id": null,
+              "children": [],
+              "archived": false,
+              "source": "user"
+            }
+          }
+        ]
+      }
+    ],
+    "links": [
+      {
+        "old": {
+          "turn": 0,
+          "all": [
+            "北京"
+          ],
+          "absent": []
+        },
+        "new": {
+          "turn": 1,
+          "all": [
+            "上海"
+          ],
+          "absent": []
+        },
+        "old_ids": [
+          "m_560e2a736ea0"
+        ],
+        "new_ids": [
+          "m_3f8a50c23ec7"
+        ],
+        "paths": [
+          [
+            "m_560e2a736ea0"
+          ]
+        ],
+        "correct": false
+      }
+    ],
+    "protected": [],
+    "timelines": [
+      [
+        {
+          "id": "m_560e2a736ea0",
+          "text": "我现在住在北京。",
+          "created_at": 1793879955.1879008,
+          "valid_at": null,
+          "invalid_at": null,
+          "is_current": true,
+          "supersedes": null,
+          "superseded_by": null
+        }
+      ]
+    ],
+    "memories": [
+      {
+        "id": "m_560e2a736ea0",
+        "text": "我现在住在北京。",
+        "metadata": {
+          "experiment_case": "U01",
+          "experiment_turn": 0,
+          "ns": "person_a",
+          "fact_kind": "fact",
+          "fact_subject": "用户",
+          "confidence": 1.0,
+          "add_batch": "99d4b7d84ad5"
+        },
+        "created_at": 1793879955.1879008,
+        "last_hit": 1793879955.1879008,
+        "hit_count": 0,
+        "weight": 1.0,
+        "importance": 0.55,
+        "freshness": 1.0,
+        "decay_factor": 1.0,
+        "region_id": "r_564f38c7d18e",
+        "neighbors": [],
+        "tags": [
+          "extracted",
+          "fact"
+        ],
+        "summary": null,
+        "version": 1,
+        "parent_id": null,
+        "children": [],
+        "archived": false,
+        "source": "user"
+      },
+      {
+        "id": "m_3f8a50c23ec7",
+        "text": "你记错了，我现在已经搬到上海了。",
+        "metadata": {
+          "experiment_case": "U01",
+          "experiment_turn": 1,
+          "ns": "person_a",
+          "fact_kind": "fact",
+          "fact_subject": "用户",
+          "confidence": 1.0,
+          "add_batch": "ef831dc50437"
+        },
+        "created_at": 1795175955.1879008,
+        "last_hit": 1795175955.1879008,
+        "hit_count": 0,
+        "weight": 1.0,
+        "importance": 0.55,
+        "freshness": 1.0,
+        "decay_factor": 1.0,
+        "region_id": "r_564f38c7d18e",
+        "neighbors": [],
+        "tags": [
+          "extracted",
+          "fact"
+        ],
+        "summary": null,
+        "version": 1,
+        "parent_id": null,
+        "children": [],
+        "archived": false,
+        "source": "user"
+      }
+    ]
+  },
+  {
+    "case": "U02",
+    "arm": "rules_version",
+    "decay": true,
+    "trace": {
+      "extraction": [
+        {
+          "input": "我每天早上都喜欢喝咖啡。",
+          "facts_before_pipeline_markers": [
+            {
+              "text": "我每天早上都喜欢喝咖啡。",
+              "kind": "fact",
+              "confidence": 1.0,
+              "subject": "用户"
+            }
+          ],
+          "llm": [],
+          "rules_fallback": false
+        },
+        {
+          "input": "更正一下，我现在不喝咖啡了，改喝绿茶。",
+          "facts_before_pipeline_markers": [
+            {
+              "text": "更正一下，我现在不喝咖啡了，改喝绿茶。",
+              "kind": "fact",
+              "confidence": 1.0,
+              "subject": "用户"
+            }
+          ],
+          "llm": [],
+          "rules_fallback": false
+        }
+      ],
+      "matching": [
+        {
+          "fact": {
+            "text": "我每天早上都喜欢喝咖啡。",
+            "kind": "fact",
+            "confidence": 1.0,
+            "subject": "用户"
+          },
+          "ns": "person_a",
+          "best_id": null,
+          "best_text": null,
+          "cosine": 0.0,
+          "correction_threshold": 0.66,
+          "dedup_threshold": 0.92
+        },
+        {
+          "fact": {
+            "text": "更正一下，我现在不喝咖啡了，改喝绿茶。",
+            "kind": "correction",
+            "confidence": 1.0,
+            "subject": "用户"
+          },
+          "ns": "person_a",
+          "best_id": "m_7e21c95604c1",
+          "best_text": "我每天早上都喜欢喝咖啡。",
+          "cosine": 0.6624057846925825,
+          "correction_threshold": 0.66,
+          "dedup_threshold": 0.92
+        }
+      ]
+    },
+    "queries": [
+      {
+        "text": "我现在喝什么饮料？",
+        "gold": {
+          "turn": 1,
+          "all": [
+            "绿茶"
+          ],
+          "absent": []
+        },
+        "ns": "person_a",
+        "include_history": false,
+        "gold_present": true,
+        "rank": 1,
+        "top1": true,
+        "top5": true,
+        "hits": [
+          {
+            "rank": 1,
+            "score": 0.8067792844255243,
+            "breakdown": {
+              "semantic": 1.0,
+              "importance": 0.65,
+              "freshness": 1.0,
+              "weight": 0.5,
+              "decay": 1.0,
+              "hit_count": 0.0,
+              "recency": 1.0,
+              "region": 0.6463,
+              "final": 0.8068
+            },
+            "memory": {
+              "id": "m_363088cabe37",
+              "text": "更正一下，我现在不喝咖啡了，改喝绿茶。",
+              "metadata": {
+                "experiment_case": "U02",
+                "experiment_turn": 1,
+                "ns": "person_a",
+                "fact_kind": "fact",
+                "fact_subject": "用户",
+                "confidence": 1.0,
+                "supersedes": "m_7e21c95604c1",
+                "corrects": "m_7e21c95604c1",
+                "add_batch": "a8fb912205c0",
+                "valid_at": 1795175955.1879008
+              },
+              "created_at": 1795175955.1879008,
+              "last_hit": 1795175955.1879008,
+              "hit_count": 0,
+              "weight": 1.0,
+              "importance": 0.65,
+              "freshness": 1.0,
+              "decay_factor": 1.0,
+              "region_id": "r_717e71f7bd56",
+              "neighbors": [],
+              "tags": [
+                "fact",
+                "extracted",
+                "corrected"
+              ],
+              "summary": null,
+              "version": 1,
+              "parent_id": null,
+              "children": [],
+              "archived": false,
+              "source": "user"
+            }
+          },
+          {
+            "rank": 2,
+            "score": 0.19395594548423045,
+            "breakdown": {
+              "semantic": 0.0,
+              "importance": 0.4131,
+              "freshness": 0.6667,
+              "weight": 0.4289,
+              "decay": 0.751,
+              "hit_count": 0.0,
+              "recency": 0.3182,
+              "region": 0.6463,
+              "final": 0.19395594548423045
+            },
+            "memory": {
+              "id": "m_7e21c95604c1",
+              "text": "我每天早上都喜欢喝咖啡。",
+              "metadata": {
+                "experiment_case": "U02",
+                "experiment_turn": 0,
+                "ns": "person_a",
+                "fact_kind": "fact",
+                "fact_subject": "用户",
+                "confidence": 1.0,
+                "add_batch": "33bd65d3a701",
+                "superseded_by": "m_363088cabe37",
+                "invalid_at": 1795175955.1879008
+              },
+              "created_at": 1793879955.1879008,
+              "last_hit": 1793879955.1879008,
+              "hit_count": 0,
+              "weight": 1.0,
+              "importance": 0.55,
+              "freshness": 1.0,
+              "decay_factor": 1.0,
+              "region_id": "r_717e71f7bd56",
+              "neighbors": [],
+              "tags": [
+                "extracted",
+                "fact"
+              ],
+              "summary": null,
+              "version": 1,
+              "parent_id": null,
+              "children": [],
+              "archived": false,
+              "source": "user"
+            }
+          }
+        ]
+      }
+    ],
+    "links": [
+      {
+        "old": {
+          "turn": 0,
+          "all": [
+            "咖啡"
+          ],
+          "absent": []
+        },
+        "new": {
+          "turn": 1,
+          "all": [
+            "绿茶"
+          ],
+          "absent": []
+        },
+        "old_ids": [
+          "m_7e21c95604c1"
+        ],
+        "new_ids": [
+          "m_363088cabe37"
+        ],
+        "paths": [
+          [
+            "m_7e21c95604c1",
+            "m_363088cabe37"
+          ]
+        ],
+        "correct": true
+      }
+    ],
+    "protected": [],
+    "timelines": [
+      [
+        {
+          "id": "m_7e21c95604c1",
+          "text": "我每天早上都喜欢喝咖啡。",
+          "created_at": 1793879955.1879008,
+          "valid_at": null,
+          "invalid_at": 1795175955.1879008,
+          "is_current": false,
+          "supersedes": null,
+          "superseded_by": "m_363088cabe37"
+        },
+        {
+          "id": "m_363088cabe37",
+          "text": "更正一下，我现在不喝咖啡了，改喝绿茶。",
+          "created_at": 1795175955.1879008,
+          "valid_at": 1795175955.1879008,
+          "invalid_at": null,
+          "is_current": true,
+          "supersedes": "m_7e21c95604c1",
+          "superseded_by": null
+        }
+      ]
+    ],
+    "memories": [
+      {
+        "id": "m_7e21c95604c1",
+        "text": "我每天早上都喜欢喝咖啡。",
+        "metadata": {
+          "experiment_case": "U02",
+          "experiment_turn": 0,
+          "ns": "person_a",
+          "fact_kind": "fact",
+          "fact_subject": "用户",
+          "confidence": 1.0,
+          "add_batch": "33bd65d3a701",
+          "superseded_by": "m_363088cabe37",
+          "invalid_at": 1795175955.1879008
+        },
+        "created_at": 1793879955.1879008,
+        "last_hit": 1793879955.1879008,
+        "hit_count": 0,
+        "weight": 1.0,
+        "importance": 0.55,
+        "freshness": 1.0,
+        "decay_factor": 1.0,
+        "region_id": "r_717e71f7bd56",
+        "neighbors": [],
+        "tags": [
+          "extracted",
+          "fact"
+        ],
+        "summary": null,
+        "version": 1,
+        "parent_id": null,
+        "children": [],
+        "archived": false,
+        "source": "user"
+      },
+      {
+        "id": "m_363088cabe37",
+        "text": "更正一下，我现在不喝咖啡了，改喝绿茶。",
+        "metadata": {
+          "experiment_case": "U02",
+          "experiment_turn": 1,
+          "ns": "person_a",
+          "fact_kind": "fact",
+          "fact_subject": "用户",
+          "confidence": 1.0,
+          "supersedes": "m_7e21c95604c1",
+          "corrects": "m_7e21c95604c1",
+          "add_batch": "a8fb912205c0",
+          "valid_at": 1795175955.1879008
+        },
+        "created_at": 1795175955.1879008,
+        "last_hit": 1795175955.1879008,
+        "hit_count": 0,
+        "weight": 1.0,
+        "importance": 0.65,
+        "freshness": 1.0,
+        "decay_factor": 1.0,
+        "region_id": "r_717e71f7bd56",
+        "neighbors": [],
+        "tags": [
+          "fact",
+          "extracted",
+          "corrected"
+        ],
+        "summary": null,
+        "version": 1,
+        "parent_id": null,
+        "children": [],
+        "archived": false,
+        "source": "user"
+      }
+    ]
+  },
+  {
+    "case": "U03",
+    "arm": "rules_version",
+    "decay": true,
+    "trace": {
+      "extraction": [
+        {
+          "input": "我养的猫叫团子。",
+          "facts_before_pipeline_markers": [
+            {
+              "text": "我养的猫叫团子。",
+              "kind": "fact",
+              "confidence": 1.0,
+              "subject": "用户"
+            }
+          ],
+          "llm": [],
+          "rules_fallback": false
+        },
+        {
+          "input": "纠正一下，我的猫现在改名叫豆包了。",
+          "facts_before_pipeline_markers": [
+            {
+              "text": "纠正一下，我的猫现在改名叫豆包了。",
+              "kind": "fact",
+              "confidence": 1.0,
+              "subject": "用户"
+            }
+          ],
+          "llm": [],
+          "rules_fallback": false
+        }
+      ],
+      "matching": [
+        {
+          "fact": {
+            "text": "我养的猫叫团子。",
+            "kind": "fact",
+            "confidence": 1.0,
+            "subject": "用户"
+          },
+          "ns": "person_a",
+          "best_id": null,
+          "best_text": null,
+          "cosine": 0.0,
+          "correction_threshold": 0.66,
+          "dedup_threshold": 0.92
+        },
+        {
+          "fact": {
+            "text": "纠正一下，我的猫现在改名叫豆包了。",
+            "kind": "correction",
+            "confidence": 1.0,
+            "subject": "用户"
+          },
+          "ns": "person_a",
+          "best_id": "m_b2173a53054f",
+          "best_text": "我养的猫叫团子。",
+          "cosine": 0.7154288381919074,
+          "correction_threshold": 0.66,
+          "dedup_threshold": 0.92
+        }
+      ]
+    },
+    "queries": [
+      {
+        "text": "我的猫现在叫什么？",
+        "gold": {
+          "turn": 1,
+          "all": [
+            "豆包"
+          ],
+          "absent": []
+        },
+        "ns": "person_a",
+        "include_history": false,
+        "gold_present": true,
+        "rank": 1,
+        "top1": true,
+        "top5": true,
+        "hits": [
+          {
+            "rank": 1,
+            "score": 0.8142489990794269,
+            "breakdown": {
+              "semantic": 1.0,
+              "importance": 0.65,
+              "freshness": 1.0,
+              "weight": 0.5,
+              "decay": 1.0,
+              "hit_count": 0.0,
+              "recency": 1.0,
+              "region": 0.7708,
+              "final": 0.8142
+            },
+            "memory": {
+              "id": "m_638a2e3fce14",
+              "text": "纠正一下，我的猫现在改名叫豆包了。",
+              "metadata": {
+                "experiment_case": "U03",
+                "experiment_turn": 1,
+                "ns": "person_a",
+                "fact_kind": "fact",
+                "fact_subject": "用户",
+                "confidence": 1.0,
+                "supersedes": "m_b2173a53054f",
+                "corrects": "m_b2173a53054f",
+                "add_batch": "50c778c467f4",
+                "valid_at": 1795175955.1879008
+              },
+              "created_at": 1795175955.1879008,
+              "last_hit": 1795175955.1879008,
+              "hit_count": 0,
+              "weight": 1.0,
+              "importance": 0.65,
+              "freshness": 1.0,
+              "decay_factor": 1.0,
+              "region_id": "r_5cec89c36b04",
+              "neighbors": [],
+              "tags": [
+                "fact",
+                "extracted",
+                "corrected"
+              ],
+              "summary": null,
+              "version": 1,
+              "parent_id": null,
+              "children": [],
+              "archived": false,
+              "source": "user"
+            }
+          },
+          {
+            "rank": 2,
+            "score": 0.19918474585658308,
+            "breakdown": {
+              "semantic": 0.0,
+              "importance": 0.4131,
+              "freshness": 0.6667,
+              "weight": 0.4289,
+              "decay": 0.751,
+              "hit_count": 0.0,
+              "recency": 0.3182,
+              "region": 0.7708,
+              "final": 0.19918474585658308
+            },
+            "memory": {
+              "id": "m_b2173a53054f",
+              "text": "我养的猫叫团子。",
+              "metadata": {
+                "experiment_case": "U03",
+                "experiment_turn": 0,
+                "ns": "person_a",
+                "fact_kind": "fact",
+                "fact_subject": "用户",
+                "confidence": 1.0,
+                "add_batch": "c13dad6037a5",
+                "superseded_by": "m_638a2e3fce14",
+                "invalid_at": 1795175955.1879008
+              },
+              "created_at": 1793879955.1879008,
+              "last_hit": 1793879955.1879008,
+              "hit_count": 0,
+              "weight": 1.0,
+              "importance": 0.55,
+              "freshness": 1.0,
+              "decay_factor": 1.0,
+              "region_id": "r_5cec89c36b04",
+              "neighbors": [],
+              "tags": [
+                "extracted",
+                "fact"
+              ],
+              "summary": null,
+              "version": 1,
+              "parent_id": null,
+              "children": [],
+              "archived": false,
+              "source": "user"
+            }
+          }
+        ]
+      }
+    ],
+    "links": [
+      {
+        "old": {
+          "turn": 0,
+          "all": [
+            "团子"
+          ],
+          "absent": []
+        },
+        "new": {
+          "turn": 1,
+          "all": [
+            "豆包"
+          ],
+          "absent": []
+        },
+        "old_ids": [
+          "m_b2173a53054f"
+        ],
+        "new_ids": [
+          "m_638a2e3fce14"
+        ],
+        "paths": [
+          [
+            "m_b2173a53054f",
+            "m_638a2e3fce14"
+          ]
+        ],
+        "correct": true
+      }
+    ],
+    "protected": [],
+    "timelines": [
+      [
+        {
+          "id": "m_b2173a53054f",
+          "text": "我养的猫叫团子。",
+          "created_at": 1793879955.1879008,
+          "valid_at": null,
+          "invalid_at": 1795175955.1879008,
+          "is_current": false,
+          "supersedes": null,
+          "superseded_by": "m_638a2e3fce14"
+        },
+        {
+          "id": "m_638a2e3fce14",
+          "text": "纠正一下，我的猫现在改名叫豆包了。",
+          "created_at": 1795175955.1879008,
+          "valid_at": 1795175955.1879008,
+          "invalid_at": null,
+          "is_current": true,
+          "supersedes": "m_b2173a53054f",
+          "superseded_by": null
+        }
+      ]
+    ],
+    "memories": [
+      {
+        "id": "m_b2173a53054f",
+        "text": "我养的猫叫团子。",
+        "metadata": {
+          "experiment_case": "U03",
+          "experiment_turn": 0,
+          "ns": "person_a",
+          "fact_kind": "fact",
+          "fact_subject": "用户",
+          "confidence": 1.0,
+          "add_batch": "c13dad6037a5",
+          "superseded_by": "m_638a2e3fce14",
+          "invalid_at": 1795175955.1879008
+        },
+        "created_at": 1793879955.1879008,
+        "last_hit": 1793879955.1879008,
+        "hit_count": 0,
+        "weight": 1.0,
+        "importance": 0.55,
+        "freshness": 1.0,
+        "decay_factor": 1.0,
+        "region_id": "r_5cec89c36b04",
+        "neighbors": [],
+        "tags": [
+          "extracted",
+          "fact"
+        ],
+        "summary": null,
+        "version": 1,
+        "parent_id": null,
+        "children": [],
+        "archived": false,
+        "source": "user"
+      },
+      {
+        "id": "m_638a2e3fce14",
+        "text": "纠正一下，我的猫现在改名叫豆包了。",
+        "metadata": {
+          "experiment_case": "U03",
+          "experiment_turn": 1,
+          "ns": "person_a",
+          "fact_kind": "fact",
+          "fact_subject": "用户",
+          "confidence": 1.0,
+          "supersedes": "m_b2173a53054f",
+          "corrects": "m_b2173a53054f",
+          "add_batch": "50c778c467f4",
+          "valid_at": 1795175955.1879008
+        },
+        "created_at": 1795175955.1879008,
+        "last_hit": 1795175955.1879008,
+        "hit_count": 0,
+        "weight": 1.0,
+        "importance": 0.65,
+        "freshness": 1.0,
+        "decay_factor": 1.0,
+        "region_id": "r_5cec89c36b04",
+        "neighbors": [],
+        "tags": [
+          "fact",
+          "extracted",
+          "corrected"
+        ],
+        "summary": null,
+        "version": 1,
+        "parent_id": null,
+        "children": [],
+        "archived": false,
+        "source": "user"
+      }
+    ]
+  },
+  {
+    "case": "U04",
+    "arm": "rules_version",
+    "decay": true,
+    "trace": {
+      "extraction": [
+        {
+          "input": "我在海星科技公司上班。",
+          "facts_before_pipeline_markers": [
+            {
+              "text": "我在海星科技公司上班。",
+              "kind": "fact",
+              "confidence": 1.0,
+              "subject": "用户"
+            }
+          ],
+          "llm": [],
+          "rules_fallback": false
+        },
+        {
+          "input": "之前你记错了，我已经跳槽到晨光公司上班了。",
+          "facts_before_pipeline_markers": [
+            {
+              "text": "之前你记错了，我已经跳槽到晨光公司上班了。",
+              "kind": "fact",
+              "confidence": 1.0,
+              "subject": "用户"
+            }
+          ],
+          "llm": [],
+          "rules_fallback": false
+        }
+      ],
+      "matching": [
+        {
+          "fact": {
+            "text": "我在海星科技公司上班。",
+            "kind": "fact",
+            "confidence": 1.0,
+            "subject": "用户"
+          },
+          "ns": "person_a",
+          "best_id": null,
+          "best_text": null,
+          "cosine": 0.0,
+          "correction_threshold": 0.66,
+          "dedup_threshold": 0.92
+        },
+        {
+          "fact": {
+            "text": "之前你记错了，我已经跳槽到晨光公司上班了。",
+            "kind": "correction",
+            "confidence": 1.0,
+            "subject": "用户"
+          },
+          "ns": "person_a",
+          "best_id": "m_37992d8585bd",
+          "best_text": "我在海星科技公司上班。",
+          "cosine": 0.5106117731864298,
+          "correction_threshold": 0.66,
+          "dedup_threshold": 0.92
+        }
+      ]
+    },
+    "queries": [
+      {
+        "text": "我现在在哪家公司工作？",
+        "gold": {
+          "turn": 1,
+          "all": [
+            "晨光"
+          ],
+          "absent": []
+        },
+        "ns": "person_a",
+        "include_history": false,
+        "gold_present": true,
+        "rank": 1,
+        "top1": true,
+        "top5": true,
+        "hits": [
+          {
+            "rank": 1,
+            "score": 0.6620795811973356,
+            "breakdown": {
+              "semantic": 0.6667,
+              "importance": 0.55,
+              "freshness": 1.0,
+              "weight": 0.5,
+              "decay": 1.0,
+              "hit_count": 0.0,
+              "recency": 1.0,
+              "region": 0.6569,
+              "final": 0.6621
+            },
+            "memory": {
+              "id": "m_7416a5b3436e",
+              "text": "之前你记错了，我已经跳槽到晨光公司上班了。",
+              "metadata": {
+                "experiment_case": "U04",
+                "experiment_turn": 1,
+                "ns": "person_a",
+                "fact_kind": "fact",
+                "fact_subject": "用户",
+                "confidence": 1.0,
+                "add_batch": "75d8d5554fa4"
+              },
+              "created_at": 1795175955.1879008,
+              "last_hit": 1795175955.1879008,
+              "hit_count": 0,
+              "weight": 1.0,
+              "importance": 0.55,
+              "freshness": 1.0,
+              "decay_factor": 1.0,
+              "region_id": "r_7774770de54f",
+              "neighbors": [],
+              "tags": [
+                "extracted",
+                "fact"
+              ],
+              "summary": null,
+              "version": 1,
+              "parent_id": null,
+              "children": [],
+              "archived": false,
+              "source": "user"
+            }
+          },
+          {
+            "rank": 2,
+            "score": 0.4100846225222306,
+            "breakdown": {
+              "semantic": 0.3333,
+              "importance": 0.4131,
+              "freshness": 0.6667,
+              "weight": 0.4289,
+              "decay": 0.751,
+              "hit_count": 0.0,
+              "recency": 0.3182,
+              "region": 0.6408,
+              "final": 0.4101
+            },
+            "memory": {
+              "id": "m_37992d8585bd",
+              "text": "我在海星科技公司上班。",
+              "metadata": {
+                "experiment_case": "U04",
+                "experiment_turn": 0,
+                "ns": "person_a",
+                "fact_kind": "fact",
+                "fact_subject": "用户",
+                "confidence": 1.0,
+                "add_batch": "40b7dfd73355"
+              },
+              "created_at": 1793879955.1879008,
+              "last_hit": 1793879955.1879008,
+              "hit_count": 0,
+              "weight": 1.0,
+              "importance": 0.55,
+              "freshness": 1.0,
+              "decay_factor": 1.0,
+              "region_id": "r_1cf50a32e3d3",
+              "neighbors": [],
+              "tags": [
+                "extracted",
+                "fact"
+              ],
+              "summary": null,
+              "version": 1,
+              "parent_id": null,
+              "children": [],
+              "archived": false,
+              "source": "user"
+            }
+          }
+        ]
+      }
+    ],
+    "links": [
+      {
+        "old": {
+          "turn": 0,
+          "all": [
+            "海星"
+          ],
+          "absent": []
+        },
+        "new": {
+          "turn": 1,
+          "all": [
+            "晨光"
+          ],
+          "absent": []
+        },
+        "old_ids": [
+          "m_37992d8585bd"
+        ],
+        "new_ids": [
+          "m_7416a5b3436e"
+        ],
+        "paths": [
+          [
+            "m_37992d8585bd"
+          ]
+        ],
+        "correct": false
+      }
+    ],
+    "protected": [],
+    "timelines": [
+      [
+        {
+          "id": "m_37992d8585bd",
+          "text": "我在海星科技公司上班。",
+          "created_at": 1793879955.1879008,
+          "valid_at": null,
+          "invalid_at": null,
+          "is_current": true,
+          "supersedes": null,
+          "superseded_by": null
+        }
+      ]
+    ],
+    "memories": [
+      {
+        "id": "m_37992d8585bd",
+        "text": "我在海星科技公司上班。",
+        "metadata": {
+          "experiment_case": "U04",
+          "experiment_turn": 0,
+          "ns": "person_a",
+          "fact_kind": "fact",
+          "fact_subject": "用户",
+          "confidence": 1.0,
+          "add_batch": "40b7dfd73355"
+        },
+        "created_at": 1793879955.1879008,
+        "last_hit": 1793879955.1879008,
+        "hit_count": 0,
+        "weight": 1.0,
+        "importance": 0.55,
+        "freshness": 1.0,
+        "decay_factor": 1.0,
+        "region_id": "r_1cf50a32e3d3",
+        "neighbors": [],
+        "tags": [
+          "extracted",
+          "fact"
+        ],
+        "summary": null,
+        "version": 1,
+        "parent_id": null,
+        "children": [],
+        "archived": false,
+        "source": "user"
+      },
+      {
+        "id": "m_7416a5b3436e",
+        "text": "之前你记错了，我已经跳槽到晨光公司上班了。",
+        "metadata": {
+          "experiment_case": "U04",
+          "experiment_turn": 1,
+          "ns": "person_a",
+          "fact_kind": "fact",
+          "fact_subject": "用户",
+          "confidence": 1.0,
+          "add_batch": "75d8d5554fa4"
+        },
+        "created_at": 1795175955.1879008,
+        "last_hit": 1795175955.1879008,
+        "hit_count": 0,
+        "weight": 1.0,
+        "importance": 0.55,
+        "freshness": 1.0,
+        "decay_factor": 1.0,
+        "region_id": "r_7774770de54f",
+        "neighbors": [],
+        "tags": [
+          "extracted",
+          "fact"
+        ],
+        "summary": null,
+        "version": 1,
+        "parent_id": null,
+        "children": [],
+        "archived": false,
+        "source": "user"
+      }
+    ]
+  },
+  {
+    "case": "U01",
+    "arm": "llm_version",
+    "decay": true,
+    "trace": {
+      "extraction": [
+        {
+          "input": "我现在住在北京。",
+          "facts_before_pipeline_markers": [
+            {
+              "text": "用户现在住在北京",
+              "kind": "fact",
+              "confidence": 1.0,
+              "subject": "用户"
+            }
+          ],
+          "llm": [
+            {
+              "key": "a0eeaeedf6aa03b05d6bb4d686971573ab183dc82e54f9cc836e99e2c5abc2ea",
+              "status": "ok"
+            }
+          ],
+          "rules_fallback": false
+        },
+        {
+          "input": "你记错了，我现在已经搬到上海了。",
+          "facts_before_pipeline_markers": [
+            {
+              "text": "用户已经搬到上海了",
+              "kind": "correction",
+              "confidence": 1.0,
+              "subject": "用户"
+            }
+          ],
+          "llm": [
+            {
+              "key": "a696bad2a0d416ed7e48c6ca901a05f539decedce773713ee952b3d6fbd18525",
+              "status": "ok"
+            }
+          ],
+          "rules_fallback": false
+        }
+      ],
+      "matching": [
+        {
+          "fact": {
+            "text": "用户现在住在北京",
+            "kind": "fact",
+            "confidence": 1.0,
+            "subject": "用户"
+          },
+          "ns": "person_a",
+          "best_id": null,
+          "best_text": null,
+          "cosine": 0.0,
+          "correction_threshold": 0.66,
+          "dedup_threshold": 0.92
+        },
+        {
+          "fact": {
+            "text": "用户已经搬到上海了",
+            "kind": "correction",
+            "confidence": 1.0,
+            "subject": "用户"
+          },
+          "ns": "person_a",
+          "best_id": "m_78cd5ecbd6a3",
+          "best_text": "用户现在住在北京",
+          "cosine": 0.7256142754731268,
+          "correction_threshold": 0.66,
+          "dedup_threshold": 0.92
+        }
+      ]
+    },
+    "queries": [
+      {
+        "text": "我现在住在哪里？",
+        "gold": {
+          "turn": 1,
+          "all": [
+            "上海"
+          ],
+          "absent": []
+        },
+        "ns": "person_a",
+        "include_history": false,
+        "gold_present": true,
+        "rank": 1,
+        "top1": true,
+        "top5": true,
+        "hits": [
+          {
+            "rank": 1,
+            "score": 0.4091077876063801,
+            "breakdown": {
+              "semantic": 0.0,
+              "importance": 0.65,
+              "freshness": 1.0,
+              "weight": 0.5,
+              "decay": 1.0,
+              "hit_count": 0.0,
+              "recency": 1.0,
+              "region": 0.6851,
+              "final": 0.4091
+            },
+            "memory": {
+              "id": "m_8ebd8fe65d15",
+              "text": "用户已经搬到上海了",
+              "metadata": {
+                "experiment_case": "U01",
+                "experiment_turn": 1,
+                "ns": "person_a",
+                "fact_kind": "fact",
+                "fact_subject": "用户",
+                "confidence": 1.0,
+                "supersedes": "m_78cd5ecbd6a3",
+                "corrects": "m_78cd5ecbd6a3",
+                "add_batch": "3a7d50578e9d",
+                "valid_at": 1795175955.1879008
+              },
+              "created_at": 1795175955.1879008,
+              "last_hit": 1795175955.1879008,
+              "hit_count": 0,
+              "weight": 1.0,
+              "importance": 0.65,
+              "freshness": 1.0,
+              "decay_factor": 1.0,
+              "region_id": "r_b75110ab8207",
+              "neighbors": [],
+              "tags": [
+                "fact",
+                "extracted",
+                "corrected"
+              ],
+              "summary": null,
+              "version": 1,
+              "parent_id": null,
+              "children": [],
+              "archived": false,
+              "source": "user"
+            }
+          },
+          {
+            "rank": 2,
+            "score": 0.4091077866063801,
+            "breakdown": {
+              "semantic": 0.8333,
+              "importance": 0.4131,
+              "freshness": 0.6667,
+              "weight": 0.4289,
+              "decay": 0.751,
+              "hit_count": 0.0,
+              "recency": 0.3182,
+              "region": 0.6851,
+              "final": 0.4091077866063801
+            },
+            "memory": {
+              "id": "m_78cd5ecbd6a3",
+              "text": "用户现在住在北京",
+              "metadata": {
+                "experiment_case": "U01",
+                "experiment_turn": 0,
+                "ns": "person_a",
+                "fact_kind": "fact",
+                "fact_subject": "用户",
+                "confidence": 1.0,
+                "add_batch": "ee976c45d94e",
+                "superseded_by": "m_8ebd8fe65d15",
+                "invalid_at": 1795175955.1879008
+              },
+              "created_at": 1793879955.1879008,
+              "last_hit": 1793879955.1879008,
+              "hit_count": 0,
+              "weight": 1.0,
+              "importance": 0.55,
+              "freshness": 1.0,
+              "decay_factor": 1.0,
+              "region_id": "r_b75110ab8207",
+              "neighbors": [],
+              "tags": [
+                "extracted",
+                "fact"
+              ],
+              "summary": null,
+              "version": 1,
+              "parent_id": null,
+              "children": [],
+              "archived": false,
+              "source": "user"
+            }
+          }
+        ]
+      }
+    ],
+    "links": [
+      {
+        "old": {
+          "turn": 0,
+          "all": [
+            "北京"
+          ],
+          "absent": []
+        },
+        "new": {
+          "turn": 1,
+          "all": [
+            "上海"
+          ],
+          "absent": []
+        },
+        "old_ids": [
+          "m_78cd5ecbd6a3"
+        ],
+        "new_ids": [
+          "m_8ebd8fe65d15"
+        ],
+        "paths": [
+          [
+            "m_78cd5ecbd6a3",
+            "m_8ebd8fe65d15"
+          ]
+        ],
+        "correct": true
+      }
+    ],
+    "protected": [],
+    "timelines": [
+      [
+        {
+          "id": "m_78cd5ecbd6a3",
+          "text": "用户现在住在北京",
+          "created_at": 1793879955.1879008,
+          "valid_at": null,
+          "invalid_at": 1795175955.1879008,
+          "is_current": false,
+          "supersedes": null,
+          "superseded_by": "m_8ebd8fe65d15"
+        },
+        {
+          "id": "m_8ebd8fe65d15",
+          "text": "用户已经搬到上海了",
+          "created_at": 1795175955.1879008,
+          "valid_at": 1795175955.1879008,
+          "invalid_at": null,
+          "is_current": true,
+          "supersedes": "m_78cd5ecbd6a3",
+          "superseded_by": null
+        }
+      ]
+    ],
+    "memories": [
+      {
+        "id": "m_78cd5ecbd6a3",
+        "text": "用户现在住在北京",
+        "metadata": {
+          "experiment_case": "U01",
+          "experiment_turn": 0,
+          "ns": "person_a",
+          "fact_kind": "fact",
+          "fact_subject": "用户",
+          "confidence": 1.0,
+          "add_batch": "ee976c45d94e",
+          "superseded_by": "m_8ebd8fe65d15",
+          "invalid_at": 1795175955.1879008
+        },
+        "created_at": 1793879955.1879008,
+        "last_hit": 1793879955.1879008,
+        "hit_count": 0,
+        "weight": 1.0,
+        "importance": 0.55,
+        "freshness": 1.0,
+        "decay_factor": 1.0,
+        "region_id": "r_b75110ab8207",
+        "neighbors": [],
+        "tags": [
+          "extracted",
+          "fact"
+        ],
+        "summary": null,
+        "version": 1,
+        "parent_id": null,
+        "children": [],
+        "archived": false,
+        "source": "user"
+      },
+      {
+        "id": "m_8ebd8fe65d15",
+        "text": "用户已经搬到上海了",
+        "metadata": {
+          "experiment_case": "U01",
+          "experiment_turn": 1,
+          "ns": "person_a",
+          "fact_kind": "fact",
+          "fact_subject": "用户",
+          "confidence": 1.0,
+          "supersedes": "m_78cd5ecbd6a3",
+          "corrects": "m_78cd5ecbd6a3",
+          "add_batch": "3a7d50578e9d",
+          "valid_at": 1795175955.1879008
+        },
+        "created_at": 1795175955.1879008,
+        "last_hit": 1795175955.1879008,
+        "hit_count": 0,
+        "weight": 1.0,
+        "importance": 0.65,
+        "freshness": 1.0,
+        "decay_factor": 1.0,
+        "region_id": "r_b75110ab8207",
+        "neighbors": [],
+        "tags": [
+          "fact",
+          "extracted",
+          "corrected"
+        ],
+        "summary": null,
+        "version": 1,
+        "parent_id": null,
+        "children": [],
+        "archived": false,
+        "source": "user"
+      }
+    ]
+  },
+  {
+    "case": "U02",
+    "arm": "llm_version",
+    "decay": true,
+    "trace": {
+      "extraction": [
+        {
+          "input": "我每天早上都喜欢喝咖啡。",
+          "facts_before_pipeline_markers": [
+            {
+              "text": "用户每天早上都喜欢喝咖啡",
+              "kind": "fact",
+              "confidence": 1.0,
+              "subject": "用户"
+            }
+          ],
+          "llm": [
+            {
+              "key": "e3d849a144da87d77b13fa5c20913812d0e52367d0d4e466bc65709099dabc86",
+              "status": "ok"
+            }
+          ],
+          "rules_fallback": false
+        },
+        {
+          "input": "更正一下，我现在不喝咖啡了，改喝绿茶。",
+          "facts_before_pipeline_markers": [
+            {
+              "text": "用户现在不喝咖啡了，改喝绿茶",
+              "kind": "correction",
+              "confidence": 1.0,
+              "subject": "用户"
+            }
+          ],
+          "llm": [
+            {
+              "key": "7c0787e53a912739f4eec91bcb3a32ce15d3a24d40c2e13c9af7497c52452142",
+              "status": "ok"
+            }
+          ],
+          "rules_fallback": false
+        }
+      ],
+      "matching": [
+        {
+          "fact": {
+            "text": "用户每天早上都喜欢喝咖啡",
+            "kind": "fact",
+            "confidence": 1.0,
+            "subject": "用户"
+          },
+          "ns": "person_a",
+          "best_id": null,
+          "best_text": null,
+          "cosine": 0.0,
+          "correction_threshold": 0.66,
+          "dedup_threshold": 0.92
+        },
+        {
+          "fact": {
+            "text": "用户现在不喝咖啡了，改喝绿茶",
+            "kind": "correction",
+            "confidence": 1.0,
+            "subject": "用户"
+          },
+          "ns": "person_a",
+          "best_id": "m_011783b7159c",
+          "best_text": "用户每天早上都喜欢喝咖啡",
+          "cosine": 0.6950906986970269,
+          "correction_threshold": 0.66,
+          "dedup_threshold": 0.92
+        }
+      ]
+    },
+    "queries": [
+      {
+        "text": "我现在喝什么饮料？",
+        "gold": {
+          "turn": 1,
+          "all": [
+            "绿茶"
+          ],
+          "absent": []
+        },
+        "ns": "person_a",
+        "include_history": false,
+        "gold_present": true,
+        "rank": 1,
+        "top1": true,
+        "top5": true,
+        "hits": [
+          {
+            "rank": 1,
+            "score": 0.8050253200311385,
+            "breakdown": {
+              "semantic": 1.0,
+              "importance": 0.65,
+              "freshness": 1.0,
+              "weight": 0.5,
+              "decay": 1.0,
+              "hit_count": 0.0,
+              "recency": 1.0,
+              "region": 0.6171,
+              "final": 0.805
+            },
+            "memory": {
+              "id": "m_d2dce6909da3",
+              "text": "用户现在不喝咖啡了，改喝绿茶",
+              "metadata": {
+                "experiment_case": "U02",
+                "experiment_turn": 1,
+                "ns": "person_a",
+                "fact_kind": "fact",
+                "fact_subject": "用户",
+                "confidence": 1.0,
+                "supersedes": "m_011783b7159c",
+                "corrects": "m_011783b7159c",
+                "add_batch": "887f086d9857",
+                "valid_at": 1795175955.1879008
+              },
+              "created_at": 1795175955.1879008,
+              "last_hit": 1795175955.1879008,
+              "hit_count": 0,
+              "weight": 1.0,
+              "importance": 0.65,
+              "freshness": 1.0,
+              "decay_factor": 1.0,
+              "region_id": "r_c651f792f70e",
+              "neighbors": [],
+              "tags": [
+                "fact",
+                "extracted",
+                "corrected"
+              ],
+              "summary": null,
+              "version": 1,
+              "parent_id": null,
+              "children": [],
+              "archived": false,
+              "source": "user"
+            }
+          },
+          {
+            "rank": 2,
+            "score": 0.1927281710387728,
+            "breakdown": {
+              "semantic": 0.0,
+              "importance": 0.4131,
+              "freshness": 0.6667,
+              "weight": 0.4289,
+              "decay": 0.751,
+              "hit_count": 0.0,
+              "recency": 0.3182,
+              "region": 0.6171,
+              "final": 0.1927281710387728
+            },
+            "memory": {
+              "id": "m_011783b7159c",
+              "text": "用户每天早上都喜欢喝咖啡",
+              "metadata": {
+                "experiment_case": "U02",
+                "experiment_turn": 0,
+                "ns": "person_a",
+                "fact_kind": "fact",
+                "fact_subject": "用户",
+                "confidence": 1.0,
+                "add_batch": "2b5bcfffb51d",
+                "superseded_by": "m_d2dce6909da3",
+                "invalid_at": 1795175955.1879008
+              },
+              "created_at": 1793879955.1879008,
+              "last_hit": 1793879955.1879008,
+              "hit_count": 0,
+              "weight": 1.0,
+              "importance": 0.55,
+              "freshness": 1.0,
+              "decay_factor": 1.0,
+              "region_id": "r_c651f792f70e",
+              "neighbors": [],
+              "tags": [
+                "extracted",
+                "fact"
+              ],
+              "summary": null,
+              "version": 1,
+              "parent_id": null,
+              "children": [],
+              "archived": false,
+              "source": "user"
+            }
+          }
+        ]
+      }
+    ],
+    "links": [
+      {
+        "old": {
+          "turn": 0,
+          "all": [
+            "咖啡"
+          ],
+          "absent": []
+        },
+        "new": {
+          "turn": 1,
+          "all": [
+            "绿茶"
+          ],
+          "absent": []
+        },
+        "old_ids": [
+          "m_011783b7159c"
+        ],
+        "new_ids": [
+          "m_d2dce6909da3"
+        ],
+        "paths": [
+          [
+            "m_011783b7159c",
+            "m_d2dce6909da3"
+          ]
+        ],
+        "correct": true
+      }
+    ],
+    "protected": [],
+    "timelines": [
+      [
+        {
+          "id": "m_011783b7159c",
+          "text": "用户每天早上都喜欢喝咖啡",
+          "created_at": 1793879955.1879008,
+          "valid_at": null,
+          "invalid_at": 1795175955.1879008,
+          "is_current": false,
+          "supersedes": null,
+          "superseded_by": "m_d2dce6909da3"
+        },
+        {
+          "id": "m_d2dce6909da3",
+          "text": "用户现在不喝咖啡了，改喝绿茶",
+          "created_at": 1795175955.1879008,
+          "valid_at": 1795175955.1879008,
+          "invalid_at": null,
+          "is_current": true,
+          "supersedes": "m_011783b7159c",
+          "superseded_by": null
+        }
+      ]
+    ],
+    "memories": [
+      {
+        "id": "m_011783b7159c",
+        "text": "用户每天早上都喜欢喝咖啡",
+        "metadata": {
+          "experiment_case": "U02",
+          "experiment_turn": 0,
+          "ns": "person_a",
+          "fact_kind": "fact",
+          "fact_subject": "用户",
+          "confidence": 1.0,
+          "add_batch": "2b5bcfffb51d",
+          "superseded_by": "m_d2dce6909da3",
+          "invalid_at": 1795175955.1879008
+        },
+        "created_at": 1793879955.1879008,
+        "last_hit": 1793879955.1879008,
+        "hit_count": 0,
+        "weight": 1.0,
+        "importance": 0.55,
+        "freshness": 1.0,
+        "decay_factor": 1.0,
+        "region_id": "r_c651f792f70e",
+        "neighbors": [],
+        "tags": [
+          "extracted",
+          "fact"
+        ],
+        "summary": null,
+        "version": 1,
+        "parent_id": null,
+        "children": [],
+        "archived": false,
+        "source": "user"
+      },
+      {
+        "id": "m_d2dce6909da3",
+        "text": "用户现在不喝咖啡了，改喝绿茶",
+        "metadata": {
+          "experiment_case": "U02",
+          "experiment_turn": 1,
+          "ns": "person_a",
+          "fact_kind": "fact",
+          "fact_subject": "用户",
+          "confidence": 1.0,
+          "supersedes": "m_011783b7159c",
+          "corrects": "m_011783b7159c",
+          "add_batch": "887f086d9857",
+          "valid_at": 1795175955.1879008
+        },
+        "created_at": 1795175955.1879008,
+        "last_hit": 1795175955.1879008,
+        "hit_count": 0,
+        "weight": 1.0,
+        "importance": 0.65,
+        "freshness": 1.0,
+        "decay_factor": 1.0,
+        "region_id": "r_c651f792f70e",
+        "neighbors": [],
+        "tags": [
+          "fact",
+          "extracted",
+          "corrected"
+        ],
+        "summary": null,
+        "version": 1,
+        "parent_id": null,
+        "children": [],
+        "archived": false,
+        "source": "user"
+      }
+    ]
+  },
+  {
+    "case": "U03",
+    "arm": "llm_version",
+    "decay": true,
+    "trace": {
+      "extraction": [
+        {
+          "input": "我养的猫叫团子。",
+          "facts_before_pipeline_markers": [
+            {
+              "text": "用户养的猫叫团子",
+              "kind": "fact",
+              "confidence": 1.0,
+              "subject": "用户"
+            }
+          ],
+          "llm": [
+            {
+              "key": "2d6b43ad39c6df9ca13fe666b6d4cd1df992dbc5afc64c8de0e09933b4282ac9",
+              "status": "ok"
+            }
+          ],
+          "rules_fallback": false
+        },
+        {
+          "input": "纠正一下，我的猫现在改名叫豆包了。",
+          "facts_before_pipeline_markers": [
+            {
+              "text": "用户的猫现在改名叫豆包",
+              "kind": "correction",
+              "confidence": 1.0,
+              "subject": "用户"
+            }
+          ],
+          "llm": [
+            {
+              "key": "a54cf20f0a27d40fd9a4377378c6604d6d024a8e71a00c8c204ad6075b046ede",
+              "status": "ok"
+            }
+          ],
+          "rules_fallback": false
+        }
+      ],
+      "matching": [
+        {
+          "fact": {
+            "text": "用户养的猫叫团子",
+            "kind": "fact",
+            "confidence": 1.0,
+            "subject": "用户"
+          },
+          "ns": "person_a",
+          "best_id": null,
+          "best_text": null,
+          "cosine": 0.0,
+          "correction_threshold": 0.66,
+          "dedup_threshold": 0.92
+        },
+        {
+          "fact": {
+            "text": "用户的猫现在改名叫豆包",
+            "kind": "correction",
+            "confidence": 1.0,
+            "subject": "用户"
+          },
+          "ns": "person_a",
+          "best_id": "m_a6d0a1b9cf98",
+          "best_text": "用户养的猫叫团子",
+          "cosine": 0.7179706985822408,
+          "correction_threshold": 0.66,
+          "dedup_threshold": 0.92
+        }
+      ]
+    },
+    "queries": [
+      {
+        "text": "我的猫现在叫什么？",
+        "gold": {
+          "turn": 1,
+          "all": [
+            "豆包"
+          ],
+          "absent": []
+        },
+        "ns": "person_a",
+        "include_history": false,
+        "gold_present": true,
+        "rank": 1,
+        "top1": true,
+        "top5": true,
+        "hits": [
+          {
+            "rank": 1,
+            "score": 0.8128788763070525,
+            "breakdown": {
+              "semantic": 1.0,
+              "importance": 0.65,
+              "freshness": 1.0,
+              "weight": 0.5,
+              "decay": 1.0,
+              "hit_count": 0.0,
+              "recency": 1.0,
+              "region": 0.748,
+              "final": 0.8129
+            },
+            "memory": {
+              "id": "m_9150476be780",
+              "text": "用户的猫现在改名叫豆包",
+              "metadata": {
+                "experiment_case": "U03",
+                "experiment_turn": 1,
+                "ns": "person_a",
+                "fact_kind": "fact",
+                "fact_subject": "用户",
+                "confidence": 1.0,
+                "supersedes": "m_a6d0a1b9cf98",
+                "corrects": "m_a6d0a1b9cf98",
+                "add_batch": "98c396e8bc42",
+                "valid_at": 1795175955.1879008
+              },
+              "created_at": 1795175955.1879008,
+              "last_hit": 1795175955.1879008,
+              "hit_count": 0,
+              "weight": 1.0,
+              "importance": 0.65,
+              "freshness": 1.0,
+              "decay_factor": 1.0,
+              "region_id": "r_78e5a62c21d4",
+              "neighbors": [],
+              "tags": [
+                "fact",
+                "extracted",
+                "corrected"
+              ],
+              "summary": null,
+              "version": 1,
+              "parent_id": null,
+              "children": [],
+              "archived": false,
+              "source": "user"
+            }
+          },
+          {
+            "rank": 2,
+            "score": 0.1982256605464377,
+            "breakdown": {
+              "semantic": 0.0,
+              "importance": 0.4131,
+              "freshness": 0.6667,
+              "weight": 0.4289,
+              "decay": 0.751,
+              "hit_count": 0.0,
+              "recency": 0.3182,
+              "region": 0.748,
+              "final": 0.1982256605464377
+            },
+            "memory": {
+              "id": "m_a6d0a1b9cf98",
+              "text": "用户养的猫叫团子",
+              "metadata": {
+                "experiment_case": "U03",
+                "experiment_turn": 0,
+                "ns": "person_a",
+                "fact_kind": "fact",
+                "fact_subject": "用户",
+                "confidence": 1.0,
+                "add_batch": "2eb5c75bad1f",
+                "superseded_by": "m_9150476be780",
+                "invalid_at": 1795175955.1879008
+              },
+              "created_at": 1793879955.1879008,
+              "last_hit": 1793879955.1879008,
+              "hit_count": 0,
+              "weight": 1.0,
+              "importance": 0.55,
+              "freshness": 1.0,
+              "decay_factor": 1.0,
+              "region_id": "r_78e5a62c21d4",
+              "neighbors": [],
+              "tags": [
+                "extracted",
+                "fact"
+              ],
+              "summary": null,
+              "version": 1,
+              "parent_id": null,
+              "children": [],
+              "archived": false,
+              "source": "user"
+            }
+          }
+        ]
+      }
+    ],
+    "links": [
+      {
+        "old": {
+          "turn": 0,
+          "all": [
+            "团子"
+          ],
+          "absent": []
+        },
+        "new": {
+          "turn": 1,
+          "all": [
+            "豆包"
+          ],
+          "absent": []
+        },
+        "old_ids": [
+          "m_a6d0a1b9cf98"
+        ],
+        "new_ids": [
+          "m_9150476be780"
+        ],
+        "paths": [
+          [
+            "m_a6d0a1b9cf98",
+            "m_9150476be780"
+          ]
+        ],
+        "correct": true
+      }
+    ],
+    "protected": [],
+    "timelines": [
+      [
+        {
+          "id": "m_a6d0a1b9cf98",
+          "text": "用户养的猫叫团子",
+          "created_at": 1793879955.1879008,
+          "valid_at": null,
+          "invalid_at": 1795175955.1879008,
+          "is_current": false,
+          "supersedes": null,
+          "superseded_by": "m_9150476be780"
+        },
+        {
+          "id": "m_9150476be780",
+          "text": "用户的猫现在改名叫豆包",
+          "created_at": 1795175955.1879008,
+          "valid_at": 1795175955.1879008,
+          "invalid_at": null,
+          "is_current": true,
+          "supersedes": "m_a6d0a1b9cf98",
+          "superseded_by": null
+        }
+      ]
+    ],
+    "memories": [
+      {
+        "id": "m_a6d0a1b9cf98",
+        "text": "用户养的猫叫团子",
+        "metadata": {
+          "experiment_case": "U03",
+          "experiment_turn": 0,
+          "ns": "person_a",
+          "fact_kind": "fact",
+          "fact_subject": "用户",
+          "confidence": 1.0,
+          "add_batch": "2eb5c75bad1f",
+          "superseded_by": "m_9150476be780",
+          "invalid_at": 1795175955.1879008
+        },
+        "created_at": 1793879955.1879008,
+        "last_hit": 1793879955.1879008,
+        "hit_count": 0,
+        "weight": 1.0,
+        "importance": 0.55,
+        "freshness": 1.0,
+        "decay_factor": 1.0,
+        "region_id": "r_78e5a62c21d4",
+        "neighbors": [],
+        "tags": [
+          "extracted",
+          "fact"
+        ],
+        "summary": null,
+        "version": 1,
+        "parent_id": null,
+        "children": [],
+        "archived": false,
+        "source": "user"
+      },
+      {
+        "id": "m_9150476be780",
+        "text": "用户的猫现在改名叫豆包",
+        "metadata": {
+          "experiment_case": "U03",
+          "experiment_turn": 1,
+          "ns": "person_a",
+          "fact_kind": "fact",
+          "fact_subject": "用户",
+          "confidence": 1.0,
+          "supersedes": "m_a6d0a1b9cf98",
+          "corrects": "m_a6d0a1b9cf98",
+          "add_batch": "98c396e8bc42",
+          "valid_at": 1795175955.1879008
+        },
+        "created_at": 1795175955.1879008,
+        "last_hit": 1795175955.1879008,
+        "hit_count": 0,
+        "weight": 1.0,
+        "importance": 0.65,
+        "freshness": 1.0,
+        "decay_factor": 1.0,
+        "region_id": "r_78e5a62c21d4",
+        "neighbors": [],
+        "tags": [
+          "fact",
+          "extracted",
+          "corrected"
+        ],
+        "summary": null,
+        "version": 1,
+        "parent_id": null,
+        "children": [],
+        "archived": false,
+        "source": "user"
+      }
+    ]
+  },
+  {
+    "case": "U04",
+    "arm": "llm_version",
+    "decay": true,
+    "trace": {
+      "extraction": [
+        {
+          "input": "我在海星科技公司上班。",
+          "facts_before_pipeline_markers": [
+            {
+              "text": "用户在海星科技公司上班",
+              "kind": "fact",
+              "confidence": 1.0,
+              "subject": "用户"
+            }
+          ],
+          "llm": [
+            {
+              "key": "e1ee35f1900fe955fb42f0bb0e3548261fe190039bf9197aa55a7e808b3561b0",
+              "status": "ok"
+            }
+          ],
+          "rules_fallback": false
+        },
+        {
+          "input": "之前你记错了，我已经跳槽到晨光公司上班了。",
+          "facts_before_pipeline_markers": [
+            {
+              "text": "用户已经跳槽到晨光公司上班",
+              "kind": "correction",
+              "confidence": 1.0,
+              "subject": "用户"
+            }
+          ],
+          "llm": [
+            {
+              "key": "353d3e33d1f96bedc284935cacb5a8277bbfea34e942758fb081c71a6cc41638",
+              "status": "ok"
+            }
+          ],
+          "rules_fallback": false
+        }
+      ],
+      "matching": [
+        {
+          "fact": {
+            "text": "用户在海星科技公司上班",
+            "kind": "fact",
+            "confidence": 1.0,
+            "subject": "用户"
+          },
+          "ns": "person_a",
+          "best_id": null,
+          "best_text": null,
+          "cosine": 0.0,
+          "correction_threshold": 0.66,
+          "dedup_threshold": 0.92
+        },
+        {
+          "fact": {
+            "text": "用户已经跳槽到晨光公司上班",
+            "kind": "correction",
+            "confidence": 1.0,
+            "subject": "用户"
+          },
+          "ns": "person_a",
+          "best_id": "m_4b3a874c0358",
+          "best_text": "用户在海星科技公司上班",
+          "cosine": 0.6477499282996472,
+          "correction_threshold": 0.66,
+          "dedup_threshold": 0.92
+        }
+      ]
+    },
+    "queries": [
+      {
+        "text": "我现在在哪家公司工作？",
+        "gold": {
+          "turn": 1,
+          "all": [
+            "晨光"
+          ],
+          "absent": []
+        },
+        "ns": "person_a",
+        "include_history": false,
+        "gold_present": true,
+        "rank": 2,
+        "top1": false,
+        "top5": true,
+        "hits": [
+          {
+            "rank": 1,
+            "score": 0.6775035483226531,
+            "breakdown": {
+              "semantic": 1.0,
+              "importance": 0.4131,
+              "freshness": 0.6667,
+              "weight": 0.4289,
+              "decay": 0.751,
+              "hit_count": 0.0,
+              "recency": 0.3182,
+              "region": 0.6534,
+              "final": 0.6775
+            },
+            "memory": {
+              "id": "m_4b3a874c0358",
+              "text": "用户在海星科技公司上班",
+              "metadata": {
+                "experiment_case": "U04",
+                "experiment_turn": 0,
+                "ns": "person_a",
+                "fact_kind": "fact",
+                "fact_subject": "用户",
+                "confidence": 1.0,
+                "add_batch": "8e0798ecc2bc"
+              },
+              "created_at": 1793879955.1879008,
+              "last_hit": 1793879955.1879008,
+              "hit_count": 0,
+              "weight": 1.0,
+              "importance": 0.55,
+              "freshness": 1.0,
+              "decay_factor": 1.0,
+              "region_id": "r_a685f4fa510c",
+              "neighbors": [],
+              "tags": [
+                "extracted",
+                "fact"
+              ],
+              "summary": null,
+              "version": 1,
+              "parent_id": null,
+              "children": [],
+              "archived": false,
+              "source": "user"
+            }
+          },
+          {
+            "rank": 2,
+            "score": 0.3952029093177012,
+            "breakdown": {
+              "semantic": 0.0,
+              "importance": 0.55,
+              "freshness": 1.0,
+              "weight": 0.5,
+              "decay": 1.0,
+              "hit_count": 0.0,
+              "recency": 1.0,
+              "region": 0.6534,
+              "final": 0.3952
+            },
+            "memory": {
+              "id": "m_2cb7cd249ea5",
+              "text": "用户已经跳槽到晨光公司上班",
+              "metadata": {
+                "experiment_case": "U04",
+                "experiment_turn": 1,
+                "ns": "person_a",
+                "fact_kind": "fact",
+                "fact_subject": "用户",
+                "confidence": 1.0,
+                "add_batch": "9b6970959dac"
+              },
+              "created_at": 1795175955.1879008,
+              "last_hit": 1795175955.1879008,
+              "hit_count": 0,
+              "weight": 1.0,
+              "importance": 0.55,
+              "freshness": 1.0,
+              "decay_factor": 1.0,
+              "region_id": "r_a685f4fa510c",
+              "neighbors": [],
+              "tags": [
+                "extracted",
+                "fact"
+              ],
+              "summary": null,
+              "version": 1,
+              "parent_id": null,
+              "children": [],
+              "archived": false,
+              "source": "user"
+            }
+          }
+        ]
+      }
+    ],
+    "links": [
+      {
+        "old": {
+          "turn": 0,
+          "all": [
+            "海星"
+          ],
+          "absent": []
+        },
+        "new": {
+          "turn": 1,
+          "all": [
+            "晨光"
+          ],
+          "absent": []
+        },
+        "old_ids": [
+          "m_4b3a874c0358"
+        ],
+        "new_ids": [
+          "m_2cb7cd249ea5"
+        ],
+        "paths": [
+          [
+            "m_4b3a874c0358"
+          ]
+        ],
+        "correct": false
+      }
+    ],
+    "protected": [],
+    "timelines": [
+      [
+        {
+          "id": "m_4b3a874c0358",
+          "text": "用户在海星科技公司上班",
+          "created_at": 1793879955.1879008,
+          "valid_at": null,
+          "invalid_at": null,
+          "is_current": true,
+          "supersedes": null,
+          "superseded_by": null
+        }
+      ]
+    ],
+    "memories": [
+      {
+        "id": "m_4b3a874c0358",
+        "text": "用户在海星科技公司上班",
+        "metadata": {
+          "experiment_case": "U04",
+          "experiment_turn": 0,
+          "ns": "person_a",
+          "fact_kind": "fact",
+          "fact_subject": "用户",
+          "confidence": 1.0,
+          "add_batch": "8e0798ecc2bc"
+        },
+        "created_at": 1793879955.1879008,
+        "last_hit": 1793879955.1879008,
+        "hit_count": 0,
+        "weight": 1.0,
+        "importance": 0.55,
+        "freshness": 1.0,
+        "decay_factor": 1.0,
+        "region_id": "r_a685f4fa510c",
+        "neighbors": [],
+        "tags": [
+          "extracted",
+          "fact"
+        ],
+        "summary": null,
+        "version": 1,
+        "parent_id": null,
+        "children": [],
+        "archived": false,
+        "source": "user"
+      },
+      {
+        "id": "m_2cb7cd249ea5",
+        "text": "用户已经跳槽到晨光公司上班",
+        "metadata": {
+          "experiment_case": "U04",
+          "experiment_turn": 1,
+          "ns": "person_a",
+          "fact_kind": "fact",
+          "fact_subject": "用户",
+          "confidence": 1.0,
+          "add_batch": "9b6970959dac"
+        },
+        "created_at": 1795175955.1879008,
+        "last_hit": 1795175955.1879008,
+        "hit_count": 0,
+        "weight": 1.0,
+        "importance": 0.55,
+        "freshness": 1.0,
+        "decay_factor": 1.0,
+        "region_id": "r_a685f4fa510c",
+        "neighbors": [],
+        "tags": [
+          "extracted",
+          "fact"
+        ],
+        "summary": null,
+        "version": 1,
+        "parent_id": null,
+        "children": [],
+        "archived": false,
+        "source": "user"
+      }
+    ]
+  }
+]

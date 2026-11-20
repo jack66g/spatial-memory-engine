@@ -1,0 +1,21 @@
+{
+  "m_f132b5b5b5db": {
+    "text": "用户现在住在北京。",
+    "metadata": {
+      "experiment_case": "C11",
+      "experiment_turn": 0,
+      "ns": "person_a",
+      "fact_kind": "fact",
+      "fact_subject": "用户",
+      "confidence": 1.0,
+      "add_batch": "90da3f76f0dd"
+    },
+    "tags": [
+      "extracted",
+      "fact"
+    ],
+    "source": "user",
+    "created_at": 1795175528.616243,
+    "archived": false
+  }
+}

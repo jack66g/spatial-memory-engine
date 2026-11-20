@@ -1,0 +1,9 @@
+{
+  "texts": 42,
+  "new_texts": 23,
+  "previous_frozen_vectors_kept": 19,
+  "seconds": 7.613087499979883,
+  "model_revision": "97b0c614be4d77ee51c0cef4e5f07c00f9eb65b3",
+  "sha256": "fd51512ec1ed8752eb390b59f041224e6976fa265f309ceb2162761aecb7098d",
+  "main_vectors_unchanged": true
+}

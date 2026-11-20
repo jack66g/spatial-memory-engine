@@ -1,0 +1,13 @@
+{
+  "hypothesis": "Can a single public correction_threshold improve missed links without extra unrelated retirement?",
+  "values": [
+    0.5,
+    0.6,
+    0.66,
+    0.72,
+    0.85
+  ],
+  "provider": "qwen",
+  "arm": "llm_version",
+  "note": "Existing provider adaptation is retained unchanged; inspect effective thresholds, not just configured values."
+}

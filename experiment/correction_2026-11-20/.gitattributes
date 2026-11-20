@@ -1,0 +1,2 @@
+# Preserve checksummed experiment files byte-for-byte across platforms.
+* -text

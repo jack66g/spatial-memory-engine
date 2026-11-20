@@ -1,0 +1,40 @@
+{
+  "m_5aee7857bc5c": {
+    "text": "用户每天喜欢喝咖啡。",
+    "metadata": {
+      "experiment_case": "G01",
+      "experiment_turn": 0,
+      "ns": "person_a",
+      "fact_kind": "fact",
+      "fact_subject": "用户",
+      "confidence": 1.0,
+      "add_batch": "ab804579afb7"
+    },
+    "tags": [
+      "extracted",
+      "fact"
+    ],
+    "source": "user",
+    "created_at": 1795175546.5477226,
+    "archived": false
+  },
+  "m_ae4914508d36": {
+    "text": "更正一下，用户的朋友小周现在不喝咖啡了，改喝绿茶。",
+    "metadata": {
+      "experiment_case": "G01",
+      "experiment_turn": 1,
+      "ns": "person_a",
+      "fact_kind": "fact",
+      "fact_subject": "用户",
+      "confidence": 1.0,
+      "add_batch": "0a48311477c6"
+    },
+    "tags": [
+      "extracted",
+      "fact"
+    ],
+    "source": "user",
+    "created_at": 1795175546.58472,
+    "archived": false
+  }
+}

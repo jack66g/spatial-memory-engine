@@ -1,0 +1,297 @@
+{
+  "purpose": "First-person user-facing phrasing; exploratory supplement, not part of frozen original 32 cases",
+  "time": "session name only, no simulated ten-day event timestamp and no real ten-day wait",
+  "cases": [
+    {
+      "id": "U01",
+      "title": "第一人称住址更正",
+      "category": "natural_explicit",
+      "turns": [
+        {
+          "text": "我现在住在北京。",
+          "ns": "person_a",
+          "conversation_id": "session_1"
+        },
+        {
+          "text": "你记错了，我现在已经搬到上海了。",
+          "ns": "person_a",
+          "conversation_id": "session_after_ten_days"
+        }
+      ],
+      "queries": [
+        {
+          "text": "我现在住在哪里？",
+          "gold": {
+            "turn": 1,
+            "all": [
+              "上海"
+            ],
+            "absent": []
+          },
+          "ns": "person_a",
+          "include_history": false
+        }
+      ],
+      "protect": [],
+      "retire": [
+        {
+          "old": {
+            "turn": 0,
+            "all": [
+              "北京"
+            ],
+            "absent": []
+          },
+          "new": {
+            "turn": 1,
+            "all": [
+              "上海"
+            ],
+            "absent": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "U02",
+      "title": "第一人称饮料更正",
+      "category": "natural_explicit",
+      "turns": [
+        {
+          "text": "我每天早上都喜欢喝咖啡。",
+          "ns": "person_a",
+          "conversation_id": "session_1"
+        },
+        {
+          "text": "更正一下，我现在不喝咖啡了，改喝绿茶。",
+          "ns": "person_a",
+          "conversation_id": "session_after_ten_days"
+        }
+      ],
+      "queries": [
+        {
+          "text": "我现在喝什么饮料？",
+          "gold": {
+            "turn": 1,
+            "all": [
+              "绿茶"
+            ],
+            "absent": []
+          },
+          "ns": "person_a",
+          "include_history": false
+        }
+      ],
+      "protect": [],
+      "retire": [
+        {
+          "old": {
+            "turn": 0,
+            "all": [
+              "咖啡"
+            ],
+            "absent": []
+          },
+          "new": {
+            "turn": 1,
+            "all": [
+              "绿茶"
+            ],
+            "absent": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "U03",
+      "title": "第一人称宠物改名",
+      "category": "natural_explicit",
+      "turns": [
+        {
+          "text": "我养的猫叫团子。",
+          "ns": "person_a",
+          "conversation_id": "session_1"
+        },
+        {
+          "text": "纠正一下，我的猫现在改名叫豆包了。",
+          "ns": "person_a",
+          "conversation_id": "session_after_ten_days"
+        }
+      ],
+      "queries": [
+        {
+          "text": "我的猫现在叫什么？",
+          "gold": {
+            "turn": 1,
+            "all": [
+              "豆包"
+            ],
+            "absent": []
+          },
+          "ns": "person_a",
+          "include_history": false
+        }
+      ],
+      "protect": [],
+      "retire": [
+        {
+          "old": {
+            "turn": 0,
+            "all": [
+              "团子"
+            ],
+            "absent": []
+          },
+          "new": {
+            "turn": 1,
+            "all": [
+              "豆包"
+            ],
+            "absent": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "U04",
+      "title": "第一人称工作单位更正",
+      "category": "natural_explicit",
+      "turns": [
+        {
+          "text": "我在海星科技公司上班。",
+          "ns": "person_a",
+          "conversation_id": "session_1"
+        },
+        {
+          "text": "之前你记错了，我已经跳槽到晨光公司上班了。",
+          "ns": "person_a",
+          "conversation_id": "session_after_ten_days"
+        }
+      ],
+      "queries": [
+        {
+          "text": "我现在在哪家公司工作？",
+          "gold": {
+            "turn": 1,
+            "all": [
+              "晨光"
+            ],
+            "absent": []
+          },
+          "ns": "person_a",
+          "include_history": false
+        }
+      ],
+      "protect": [],
+      "retire": [
+        {
+          "old": {
+            "turn": 0,
+            "all": [
+              "海星"
+            ],
+            "absent": []
+          },
+          "new": {
+            "turn": 1,
+            "all": [
+              "晨光"
+            ],
+            "absent": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "U05",
+      "title": "第一人称澄清朋友与本人",
+      "category": "natural_safety",
+      "turns": [
+        {
+          "text": "我每天喜欢喝咖啡。",
+          "ns": "person_a",
+          "conversation_id": "session_1"
+        },
+        {
+          "text": "更正一下，不喝咖啡的是我朋友小周，我自己还是喜欢喝咖啡。",
+          "ns": "person_a",
+          "conversation_id": "session_1"
+        }
+      ],
+      "queries": [
+        {
+          "text": "我自己还喜欢喝咖啡吗？",
+          "gold": {
+            "turn": 0,
+            "all": [
+              "咖啡"
+            ],
+            "absent": []
+          },
+          "ns": "person_a",
+          "include_history": false
+        }
+      ],
+      "protect": [
+        {
+          "turn": 0,
+          "all": [
+            "咖啡"
+          ],
+          "absent": []
+        }
+      ],
+      "retire": []
+    },
+    {
+      "id": "U06",
+      "title": "第一人称跨会话省略对象",
+      "category": "natural_context",
+      "turns": [
+        {
+          "text": "我现在住在北京。",
+          "ns": "person_a",
+          "conversation_id": "session_1"
+        },
+        {
+          "text": "不对，是上海。",
+          "ns": "person_a",
+          "conversation_id": "session_after_ten_days"
+        }
+      ],
+      "queries": [
+        {
+          "text": "我现在住在哪里？",
+          "gold": {
+            "turn": 1,
+            "all": [
+              "上海"
+            ],
+            "absent": []
+          },
+          "ns": "person_a",
+          "include_history": false
+        }
+      ],
+      "protect": [],
+      "retire": [
+        {
+          "old": {
+            "turn": 0,
+            "all": [
+              "北京"
+            ],
+            "absent": []
+          },
+          "new": {
+            "turn": 1,
+            "all": [
+              "上海"
+            ],
+            "absent": []
+          }
+        }
+      ]
+    }
+  ]
+}

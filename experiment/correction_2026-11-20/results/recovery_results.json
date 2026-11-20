@@ -1,0 +1,226 @@
+[
+  {
+    "name": "C01_rules_version_json_wal_only",
+    "exit_code": 73,
+    "expected_hard_exit": true,
+    "loaded": true,
+    "two_fresh_recoveries_equal": true
+  },
+  {
+    "name": "C01_rules_version_json_snapshot_plus_wal",
+    "exit_code": 73,
+    "expected_hard_exit": true,
+    "loaded": true,
+    "two_fresh_recoveries_equal": true
+  },
+  {
+    "name": "C01_rules_version_sqlite_wal_only",
+    "exit_code": 73,
+    "expected_hard_exit": true,
+    "loaded": true,
+    "two_fresh_recoveries_equal": true
+  },
+  {
+    "name": "C01_rules_version_sqlite_snapshot_plus_wal",
+    "exit_code": 73,
+    "expected_hard_exit": true,
+    "loaded": true,
+    "two_fresh_recoveries_equal": true
+  },
+  {
+    "name": "C01_llm_version_json_wal_only",
+    "exit_code": 73,
+    "expected_hard_exit": true,
+    "loaded": true,
+    "two_fresh_recoveries_equal": true
+  },
+  {
+    "name": "C01_llm_version_json_snapshot_plus_wal",
+    "exit_code": 73,
+    "expected_hard_exit": true,
+    "loaded": true,
+    "two_fresh_recoveries_equal": true
+  },
+  {
+    "name": "C01_llm_version_sqlite_wal_only",
+    "exit_code": 73,
+    "expected_hard_exit": true,
+    "loaded": true,
+    "two_fresh_recoveries_equal": true
+  },
+  {
+    "name": "C01_llm_version_sqlite_snapshot_plus_wal",
+    "exit_code": 73,
+    "expected_hard_exit": true,
+    "loaded": true,
+    "two_fresh_recoveries_equal": true
+  },
+  {
+    "name": "C03_rules_version_json_wal_only",
+    "exit_code": 73,
+    "expected_hard_exit": true,
+    "loaded": true,
+    "two_fresh_recoveries_equal": true
+  },
+  {
+    "name": "C03_rules_version_json_snapshot_plus_wal",
+    "exit_code": 73,
+    "expected_hard_exit": true,
+    "loaded": true,
+    "two_fresh_recoveries_equal": true
+  },
+  {
+    "name": "C03_rules_version_sqlite_wal_only",
+    "exit_code": 73,
+    "expected_hard_exit": true,
+    "loaded": true,
+    "two_fresh_recoveries_equal": true
+  },
+  {
+    "name": "C03_rules_version_sqlite_snapshot_plus_wal",
+    "exit_code": 73,
+    "expected_hard_exit": true,
+    "loaded": true,
+    "two_fresh_recoveries_equal": true
+  },
+  {
+    "name": "C03_llm_version_json_wal_only",
+    "exit_code": 73,
+    "expected_hard_exit": true,
+    "loaded": true,
+    "two_fresh_recoveries_equal": true
+  },
+  {
+    "name": "C03_llm_version_json_snapshot_plus_wal",
+    "exit_code": 73,
+    "expected_hard_exit": true,
+    "loaded": true,
+    "two_fresh_recoveries_equal": true
+  },
+  {
+    "name": "C03_llm_version_sqlite_wal_only",
+    "exit_code": 73,
+    "expected_hard_exit": true,
+    "loaded": true,
+    "two_fresh_recoveries_equal": true
+  },
+  {
+    "name": "C03_llm_version_sqlite_snapshot_plus_wal",
+    "exit_code": 73,
+    "expected_hard_exit": true,
+    "loaded": true,
+    "two_fresh_recoveries_equal": true
+  },
+  {
+    "name": "C11_rules_version_json_wal_only",
+    "exit_code": 73,
+    "expected_hard_exit": true,
+    "loaded": true,
+    "two_fresh_recoveries_equal": true
+  },
+  {
+    "name": "C11_rules_version_json_snapshot_plus_wal",
+    "exit_code": 73,
+    "expected_hard_exit": true,
+    "loaded": true,
+    "two_fresh_recoveries_equal": true
+  },
+  {
+    "name": "C11_rules_version_sqlite_wal_only",
+    "exit_code": 73,
+    "expected_hard_exit": true,
+    "loaded": true,
+    "two_fresh_recoveries_equal": true
+  },
+  {
+    "name": "C11_rules_version_sqlite_snapshot_plus_wal",
+    "exit_code": 73,
+    "expected_hard_exit": true,
+    "loaded": true,
+    "two_fresh_recoveries_equal": true
+  },
+  {
+    "name": "C11_llm_version_json_wal_only",
+    "exit_code": 73,
+    "expected_hard_exit": true,
+    "loaded": true,
+    "two_fresh_recoveries_equal": true
+  },
+  {
+    "name": "C11_llm_version_json_snapshot_plus_wal",
+    "exit_code": 73,
+    "expected_hard_exit": true,
+    "loaded": true,
+    "two_fresh_recoveries_equal": true
+  },
+  {
+    "name": "C11_llm_version_sqlite_wal_only",
+    "exit_code": 73,
+    "expected_hard_exit": true,
+    "loaded": true,
+    "two_fresh_recoveries_equal": true
+  },
+  {
+    "name": "C11_llm_version_sqlite_snapshot_plus_wal",
+    "exit_code": 73,
+    "expected_hard_exit": true,
+    "loaded": true,
+    "two_fresh_recoveries_equal": true
+  },
+  {
+    "name": "G01_rules_version_json_wal_only",
+    "exit_code": 73,
+    "expected_hard_exit": true,
+    "loaded": true,
+    "two_fresh_recoveries_equal": true
+  },
+  {
+    "name": "G01_rules_version_json_snapshot_plus_wal",
+    "exit_code": 73,
+    "expected_hard_exit": true,
+    "loaded": true,
+    "two_fresh_recoveries_equal": true
+  },
+  {
+    "name": "G01_rules_version_sqlite_wal_only",
+    "exit_code": 73,
+    "expected_hard_exit": true,
+    "loaded": true,
+    "two_fresh_recoveries_equal": true
+  },
+  {
+    "name": "G01_rules_version_sqlite_snapshot_plus_wal",
+    "exit_code": 73,
+    "expected_hard_exit": true,
+    "loaded": true,
+    "two_fresh_recoveries_equal": true
+  },
+  {
+    "name": "G01_llm_version_json_wal_only",
+    "exit_code": 73,
+    "expected_hard_exit": true,
+    "loaded": true,
+    "two_fresh_recoveries_equal": true
+  },
+  {
+    "name": "G01_llm_version_json_snapshot_plus_wal",
+    "exit_code": 73,
+    "expected_hard_exit": true,
+    "loaded": true,
+    "two_fresh_recoveries_equal": true
+  },
+  {
+    "name": "G01_llm_version_sqlite_wal_only",
+    "exit_code": 73,
+    "expected_hard_exit": true,
+    "loaded": true,
+    "two_fresh_recoveries_equal": true
+  },
+  {
+    "name": "G01_llm_version_sqlite_snapshot_plus_wal",
+    "exit_code": 73,
+    "expected_hard_exit": true,
+    "loaded": true,
+    "two_fresh_recoveries_equal": true
+  }
+]

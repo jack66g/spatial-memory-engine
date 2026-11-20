@@ -1,0 +1,18 @@
+{
+  "days": 15,
+  "cases": [
+    "U01",
+    "U02",
+    "U03",
+    "U04"
+  ],
+  "arms": [
+    "rules_version",
+    "llm_version"
+  ],
+  "decay": [
+    false,
+    true
+  ],
+  "method": "mock utils.time.time only around isolated add calls; actual created_at/last_hit recorded; base comparison remains untouched"
+}
