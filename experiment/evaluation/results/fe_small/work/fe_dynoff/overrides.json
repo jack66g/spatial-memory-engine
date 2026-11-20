@@ -1,0 +1,1 @@
+{"embedding.provider": "fastembed", "embedding.model": "BAAI/bge-small-zh-v1.5", "embedding.dim": 512, "policy.decay_enabled": false, "decay.max_weight_decay": 0.0}

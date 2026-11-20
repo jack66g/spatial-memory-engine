@@ -1,0 +1,33 @@
+{
+ "name": "fe_baseline",
+ "overrides": {
+  "embedding.provider": "fastembed",
+  "embedding.model": "BAAI/bge-small-zh-v1.5",
+  "embedding.dim": 512
+ },
+ "wall_s": 410.8,
+ "returncode": 0,
+ "n_queries": 242,
+ "hit@1": 0.376,
+ "recall@1": 0.1387,
+ "hit@3": 0.7231,
+ "recall@3": 0.3532,
+ "hit@5": 0.814,
+ "recall@5": 0.4602,
+ "hit@10": 0.8554,
+ "recall@10": 0.5694,
+ "mrr": 0.5535,
+ "ndcg@10": 0.463,
+ "composite": 0.5987,
+ "lat_p50_ms": 37.61,
+ "lat_p95_ms": 79.2,
+ "lat_mean_ms": 41.6,
+ "by_type": {
+  "direct": {
+   "n": 242,
+   "hit@3": 0.7231,
+   "mrr": 0.5535
+  }
+ },
+ "status": "ok"
+}

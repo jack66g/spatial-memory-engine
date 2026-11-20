@@ -1,0 +1,29 @@
+{
+ "name": "v_baseline",
+ "overrides": {},
+ "wall_s": 15.0,
+ "returncode": 0,
+ "n_queries": 500,
+ "hit@1": 0.176,
+ "recall@1": 0.176,
+ "hit@3": 0.264,
+ "recall@3": 0.264,
+ "hit@5": 0.31,
+ "recall@5": 0.31,
+ "hit@10": 0.382,
+ "recall@10": 0.382,
+ "mrr": 0.2363,
+ "ndcg@10": 0.2708,
+ "composite": 0.256,
+ "lat_p50_ms": 11.7,
+ "lat_p95_ms": 14.55,
+ "lat_mean_ms": 11.4,
+ "by_type": {
+  "direct": {
+   "n": 500,
+   "hit@3": 0.264,
+   "mrr": 0.2363
+  }
+ },
+ "status": "ok"
+}

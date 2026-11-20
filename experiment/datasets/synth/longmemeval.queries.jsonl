@@ -1,0 +1,24 @@
+{"qid": "f523d9fe", "text": "I wanted to check back on our previous conversation about Netflix. I mentioned that I wanted to be able to access all seasons of old shows? Do you remember what show I used as an example, the one that only had the last season available?", "gold": ["lm_000015"], "type": "temporal"}
+{"qid": "5a4f22c0", "text": "What company is Rachel, an old colleague from my previous company, currently working at?", "gold": ["lm_000025", "lm_000035"], "type": "temporal"}
+{"qid": "c8c3f81d", "text": "What brand are my favorite running shoes?", "gold": ["lm_000053"], "type": "temporal"}
+{"qid": "bb7c3b45", "text": "How much did I save on the Jimmy Choo heels?", "gold": ["lm_000057", "lm_000069"], "type": "temporal"}
+{"qid": "35a27287", "text": "Can you recommend some interesting cultural events happening around me this weekend?", "gold": ["lm_000083", "lm_000085", "lm_000093"], "type": "temporal"}
+{"qid": "gpt4_fe651585", "text": "Who became a parent first, Rachel or Alex?", "gold": ["lm_000103", "lm_000107"], "type": "temporal"}
+{"qid": "945e3d21", "text": "How often do I attend yoga classes to help with my anxiety?", "gold": ["lm_000123", "lm_000133"], "type": "temporal"}
+{"qid": "8c18457d", "text": "How many days had passed between the day I bought a gift for my brother's graduation ceremony and the day I bought a birthday gift for my best friend?", "gold": ["lm_000147", "lm_000153", "lm_000155"], "type": "temporal"}
+{"qid": "08f4fc43", "text": "How many days had passed between the Sunday mass at St. Mary's Church and the Ash Wednesday service at the cathedral?", "gold": ["lm_000163", "lm_000173"], "type": "temporal"}
+{"qid": "cf22b7bf", "text": "How much weight have I lost since I started going to the gym consistently?", "gold": ["lm_000193", "lm_000197"], "type": "temporal"}
+{"qid": "gpt4_5438fa52", "text": "Which event happened first, my attendance at a cultural festival or the start of my Spanish classes?", "gold": ["lm_000211", "lm_000219"], "type": "temporal"}
+{"qid": "b9cfe692", "text": "How long did I take to finish 'The Seven Husbands of Evelyn Hugo' and 'The Nightingale' combined?", "gold": ["lm_000243", "lm_000255"], "type": "temporal"}
+{"qid": "af082822", "text": "How many weeks ago did I attend the friends and family sale at Nordstrom?", "gold": ["lm_000269"], "type": "temporal"}
+{"qid": "gpt4_8e165409", "text": "How many days passed between the day I repotted the previous spider plant and the day I gave my neighbor, Mrs. Johnson, a few cuttings from my spider plant?", "gold": ["lm_000279", "lm_000297"], "type": "temporal"}
+{"qid": "08e075c7", "text": "How long have I been using my Fitbit Charge 3?", "gold": ["lm_000339", "lm_000351"], "type": "temporal"}
+{"qid": "94f70d80", "text": "How long did it take me to assemble the IKEA bookshelf?", "gold": ["lm_000363"], "type": "temporal"}
+{"qid": "1a1907b4", "text": "I've been thinking about making a cocktail for an upcoming get-together, but I'm not sure which one to choose. Any suggestions?", "gold": ["lm_000375"], "type": "temporal"}
+{"qid": "982b5123_abs", "text": "When did I book the Airbnb in Sacramento?", "gold": ["lm_000389"], "type": "temporal"}
+{"qid": "gpt4_70e84552", "text": "Which task did I complete first, fixing the fence or trimming the goats' hooves?", "gold": ["lm_000413", "lm_000425"], "type": "temporal"}
+{"qid": "e8a79c70", "text": "I was going through our previous conversation about making a classic French omelette, and I wanted to confirm - how many eggs did you say we need for the recipe?", "gold": ["lm_000438"], "type": "temporal"}
+{"qid": "gpt4_c27434e8", "text": "Which project did I start first, the Ferrari model or the Japanese Zero fighter plane model?", "gold": ["lm_000445", "lm_000457"], "type": "temporal"}
+{"qid": "10e09553", "text": "How many largemouth bass did I catch with Alex on the earlier fishing trip to Lake Michigan before the 7/22 trip?", "gold": ["lm_000469", "lm_000479"], "type": "temporal"}
+{"qid": "73d42213", "text": "What time did I reach the clinic on Monday?", "gold": ["lm_000491", "lm_000501"], "type": "temporal"}
+{"qid": "a96c20ee", "text": "At which university did I present a poster on my thesis research?", "gold": ["lm_000511", "lm_000523"], "type": "temporal"}

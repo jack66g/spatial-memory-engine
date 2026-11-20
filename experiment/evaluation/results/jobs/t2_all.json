@@ -1,0 +1,1267 @@
+[
+ {
+  "name": "baseline_default",
+  "overrides": {}
+ },
+ {
+  "name": "rank_semantic_x0.25",
+  "overrides": {
+   "ranking.semantic": 0.1,
+   "ranking.importance": 0.18,
+   "ranking.freshness": 0.15,
+   "ranking.weight": 0.15,
+   "ranking.decay": 0.12,
+   "ranking.hit_count": 0.12,
+   "ranking.recency": 0.09,
+   "ranking.region": 0.09
+  }
+ },
+ {
+  "name": "rank_semantic_x0.5",
+  "overrides": {
+   "ranking.semantic": 0.2,
+   "ranking.importance": 0.16,
+   "ranking.freshness": 0.1333,
+   "ranking.weight": 0.1333,
+   "ranking.decay": 0.1067,
+   "ranking.hit_count": 0.1067,
+   "ranking.recency": 0.08,
+   "ranking.region": 0.08
+  }
+ },
+ {
+  "name": "rank_semantic_x0.75",
+  "overrides": {
+   "ranking.semantic": 0.3,
+   "ranking.importance": 0.14,
+   "ranking.freshness": 0.1167,
+   "ranking.weight": 0.1167,
+   "ranking.decay": 0.0933,
+   "ranking.hit_count": 0.0933,
+   "ranking.recency": 0.07,
+   "ranking.region": 0.07
+  }
+ },
+ {
+  "name": "rank_semantic_x1.5",
+  "overrides": {
+   "ranking.semantic": 0.6,
+   "ranking.importance": 0.08,
+   "ranking.freshness": 0.0667,
+   "ranking.weight": 0.0667,
+   "ranking.decay": 0.0533,
+   "ranking.hit_count": 0.0533,
+   "ranking.recency": 0.04,
+   "ranking.region": 0.04
+  }
+ },
+ {
+  "name": "rank_semantic_x2.0",
+  "overrides": {
+   "ranking.semantic": 0.8,
+   "ranking.importance": 0.04,
+   "ranking.freshness": 0.0333,
+   "ranking.weight": 0.0333,
+   "ranking.decay": 0.0267,
+   "ranking.hit_count": 0.0267,
+   "ranking.recency": 0.02,
+   "ranking.region": 0.02
+  }
+ },
+ {
+  "name": "rank_semantic_zero",
+  "overrides": {
+   "ranking.semantic": 0.0,
+   "ranking.importance": 0.2,
+   "ranking.freshness": 0.1667,
+   "ranking.weight": 0.1667,
+   "ranking.decay": 0.1333,
+   "ranking.hit_count": 0.1333,
+   "ranking.recency": 0.1,
+   "ranking.region": 0.1
+  }
+ },
+ {
+  "name": "rank_importance_x0.25",
+  "overrides": {
+   "ranking.semantic": 0.4409,
+   "ranking.importance": 0.03,
+   "ranking.freshness": 0.1102,
+   "ranking.weight": 0.1102,
+   "ranking.decay": 0.0882,
+   "ranking.hit_count": 0.0882,
+   "ranking.recency": 0.0661,
+   "ranking.region": 0.0661
+  }
+ },
+ {
+  "name": "rank_importance_x0.5",
+  "overrides": {
+   "ranking.semantic": 0.4273,
+   "ranking.importance": 0.06,
+   "ranking.freshness": 0.1068,
+   "ranking.weight": 0.1068,
+   "ranking.decay": 0.0855,
+   "ranking.hit_count": 0.0855,
+   "ranking.recency": 0.0641,
+   "ranking.region": 0.0641
+  }
+ },
+ {
+  "name": "rank_importance_x0.75",
+  "overrides": {
+   "ranking.semantic": 0.4136,
+   "ranking.importance": 0.09,
+   "ranking.freshness": 0.1034,
+   "ranking.weight": 0.1034,
+   "ranking.decay": 0.0827,
+   "ranking.hit_count": 0.0827,
+   "ranking.recency": 0.062,
+   "ranking.region": 0.062
+  }
+ },
+ {
+  "name": "rank_importance_x1.5",
+  "overrides": {
+   "ranking.semantic": 0.3727,
+   "ranking.importance": 0.18,
+   "ranking.freshness": 0.0932,
+   "ranking.weight": 0.0932,
+   "ranking.decay": 0.0745,
+   "ranking.hit_count": 0.0745,
+   "ranking.recency": 0.0559,
+   "ranking.region": 0.0559
+  }
+ },
+ {
+  "name": "rank_importance_x2.0",
+  "overrides": {
+   "ranking.semantic": 0.3455,
+   "ranking.importance": 0.24,
+   "ranking.freshness": 0.0864,
+   "ranking.weight": 0.0864,
+   "ranking.decay": 0.0691,
+   "ranking.hit_count": 0.0691,
+   "ranking.recency": 0.0518,
+   "ranking.region": 0.0518
+  }
+ },
+ {
+  "name": "rank_importance_zero",
+  "overrides": {
+   "ranking.semantic": 0.4545,
+   "ranking.importance": 0.0,
+   "ranking.freshness": 0.1136,
+   "ranking.weight": 0.1136,
+   "ranking.decay": 0.0909,
+   "ranking.hit_count": 0.0909,
+   "ranking.recency": 0.0682,
+   "ranking.region": 0.0682
+  }
+ },
+ {
+  "name": "rank_freshness_x0.25",
+  "overrides": {
+   "ranking.semantic": 0.4333,
+   "ranking.importance": 0.13,
+   "ranking.freshness": 0.025,
+   "ranking.weight": 0.1083,
+   "ranking.decay": 0.0867,
+   "ranking.hit_count": 0.0867,
+   "ranking.recency": 0.065,
+   "ranking.region": 0.065
+  }
+ },
+ {
+  "name": "rank_freshness_x0.5",
+  "overrides": {
+   "ranking.semantic": 0.4222,
+   "ranking.importance": 0.1267,
+   "ranking.freshness": 0.05,
+   "ranking.weight": 0.1056,
+   "ranking.decay": 0.0844,
+   "ranking.hit_count": 0.0844,
+   "ranking.recency": 0.0633,
+   "ranking.region": 0.0633
+  }
+ },
+ {
+  "name": "rank_freshness_x0.75",
+  "overrides": {
+   "ranking.semantic": 0.4111,
+   "ranking.importance": 0.1233,
+   "ranking.freshness": 0.075,
+   "ranking.weight": 0.1028,
+   "ranking.decay": 0.0822,
+   "ranking.hit_count": 0.0822,
+   "ranking.recency": 0.0617,
+   "ranking.region": 0.0617
+  }
+ },
+ {
+  "name": "rank_freshness_x1.5",
+  "overrides": {
+   "ranking.semantic": 0.3778,
+   "ranking.importance": 0.1133,
+   "ranking.freshness": 0.15,
+   "ranking.weight": 0.0944,
+   "ranking.decay": 0.0756,
+   "ranking.hit_count": 0.0756,
+   "ranking.recency": 0.0567,
+   "ranking.region": 0.0567
+  }
+ },
+ {
+  "name": "rank_freshness_x2.0",
+  "overrides": {
+   "ranking.semantic": 0.3556,
+   "ranking.importance": 0.1067,
+   "ranking.freshness": 0.2,
+   "ranking.weight": 0.0889,
+   "ranking.decay": 0.0711,
+   "ranking.hit_count": 0.0711,
+   "ranking.recency": 0.0533,
+   "ranking.region": 0.0533
+  }
+ },
+ {
+  "name": "rank_freshness_zero",
+  "overrides": {
+   "ranking.semantic": 0.4444,
+   "ranking.importance": 0.1333,
+   "ranking.freshness": 0.0,
+   "ranking.weight": 0.1111,
+   "ranking.decay": 0.0889,
+   "ranking.hit_count": 0.0889,
+   "ranking.recency": 0.0667,
+   "ranking.region": 0.0667
+  }
+ },
+ {
+  "name": "rank_weight_x0.25",
+  "overrides": {
+   "ranking.semantic": 0.4333,
+   "ranking.importance": 0.13,
+   "ranking.freshness": 0.1083,
+   "ranking.weight": 0.025,
+   "ranking.decay": 0.0867,
+   "ranking.hit_count": 0.0867,
+   "ranking.recency": 0.065,
+   "ranking.region": 0.065
+  }
+ },
+ {
+  "name": "rank_weight_x0.5",
+  "overrides": {
+   "ranking.semantic": 0.4222,
+   "ranking.importance": 0.1267,
+   "ranking.freshness": 0.1056,
+   "ranking.weight": 0.05,
+   "ranking.decay": 0.0844,
+   "ranking.hit_count": 0.0844,
+   "ranking.recency": 0.0633,
+   "ranking.region": 0.0633
+  }
+ },
+ {
+  "name": "rank_weight_x0.75",
+  "overrides": {
+   "ranking.semantic": 0.4111,
+   "ranking.importance": 0.1233,
+   "ranking.freshness": 0.1028,
+   "ranking.weight": 0.075,
+   "ranking.decay": 0.0822,
+   "ranking.hit_count": 0.0822,
+   "ranking.recency": 0.0617,
+   "ranking.region": 0.0617
+  }
+ },
+ {
+  "name": "rank_weight_x1.5",
+  "overrides": {
+   "ranking.semantic": 0.3778,
+   "ranking.importance": 0.1133,
+   "ranking.freshness": 0.0944,
+   "ranking.weight": 0.15,
+   "ranking.decay": 0.0756,
+   "ranking.hit_count": 0.0756,
+   "ranking.recency": 0.0567,
+   "ranking.region": 0.0567
+  }
+ },
+ {
+  "name": "rank_weight_x2.0",
+  "overrides": {
+   "ranking.semantic": 0.3556,
+   "ranking.importance": 0.1067,
+   "ranking.freshness": 0.0889,
+   "ranking.weight": 0.2,
+   "ranking.decay": 0.0711,
+   "ranking.hit_count": 0.0711,
+   "ranking.recency": 0.0533,
+   "ranking.region": 0.0533
+  }
+ },
+ {
+  "name": "rank_weight_zero",
+  "overrides": {
+   "ranking.semantic": 0.4444,
+   "ranking.importance": 0.1333,
+   "ranking.freshness": 0.1111,
+   "ranking.weight": 0.0,
+   "ranking.decay": 0.0889,
+   "ranking.hit_count": 0.0889,
+   "ranking.recency": 0.0667,
+   "ranking.region": 0.0667
+  }
+ },
+ {
+  "name": "rank_decay_x0.25",
+  "overrides": {
+   "ranking.semantic": 0.4261,
+   "ranking.importance": 0.1278,
+   "ranking.freshness": 0.1065,
+   "ranking.weight": 0.1065,
+   "ranking.decay": 0.02,
+   "ranking.hit_count": 0.0852,
+   "ranking.recency": 0.0639,
+   "ranking.region": 0.0639
+  }
+ },
+ {
+  "name": "rank_decay_x0.5",
+  "overrides": {
+   "ranking.semantic": 0.4174,
+   "ranking.importance": 0.1252,
+   "ranking.freshness": 0.1043,
+   "ranking.weight": 0.1043,
+   "ranking.decay": 0.04,
+   "ranking.hit_count": 0.0835,
+   "ranking.recency": 0.0626,
+   "ranking.region": 0.0626
+  }
+ },
+ {
+  "name": "rank_decay_x0.75",
+  "overrides": {
+   "ranking.semantic": 0.4087,
+   "ranking.importance": 0.1226,
+   "ranking.freshness": 0.1022,
+   "ranking.weight": 0.1022,
+   "ranking.decay": 0.06,
+   "ranking.hit_count": 0.0817,
+   "ranking.recency": 0.0613,
+   "ranking.region": 0.0613
+  }
+ },
+ {
+  "name": "rank_decay_x1.5",
+  "overrides": {
+   "ranking.semantic": 0.3826,
+   "ranking.importance": 0.1148,
+   "ranking.freshness": 0.0957,
+   "ranking.weight": 0.0957,
+   "ranking.decay": 0.12,
+   "ranking.hit_count": 0.0765,
+   "ranking.recency": 0.0574,
+   "ranking.region": 0.0574
+  }
+ },
+ {
+  "name": "rank_decay_x2.0",
+  "overrides": {
+   "ranking.semantic": 0.3652,
+   "ranking.importance": 0.1096,
+   "ranking.freshness": 0.0913,
+   "ranking.weight": 0.0913,
+   "ranking.decay": 0.16,
+   "ranking.hit_count": 0.073,
+   "ranking.recency": 0.0548,
+   "ranking.region": 0.0548
+  }
+ },
+ {
+  "name": "rank_decay_zero",
+  "overrides": {
+   "ranking.semantic": 0.4348,
+   "ranking.importance": 0.1304,
+   "ranking.freshness": 0.1087,
+   "ranking.weight": 0.1087,
+   "ranking.decay": 0.0,
+   "ranking.hit_count": 0.087,
+   "ranking.recency": 0.0652,
+   "ranking.region": 0.0652
+  }
+ },
+ {
+  "name": "rank_hit_count_x0.25",
+  "overrides": {
+   "ranking.semantic": 0.4261,
+   "ranking.importance": 0.1278,
+   "ranking.freshness": 0.1065,
+   "ranking.weight": 0.1065,
+   "ranking.decay": 0.0852,
+   "ranking.hit_count": 0.02,
+   "ranking.recency": 0.0639,
+   "ranking.region": 0.0639
+  }
+ },
+ {
+  "name": "rank_hit_count_x0.5",
+  "overrides": {
+   "ranking.semantic": 0.4174,
+   "ranking.importance": 0.1252,
+   "ranking.freshness": 0.1043,
+   "ranking.weight": 0.1043,
+   "ranking.decay": 0.0835,
+   "ranking.hit_count": 0.04,
+   "ranking.recency": 0.0626,
+   "ranking.region": 0.0626
+  }
+ },
+ {
+  "name": "rank_hit_count_x0.75",
+  "overrides": {
+   "ranking.semantic": 0.4087,
+   "ranking.importance": 0.1226,
+   "ranking.freshness": 0.1022,
+   "ranking.weight": 0.1022,
+   "ranking.decay": 0.0817,
+   "ranking.hit_count": 0.06,
+   "ranking.recency": 0.0613,
+   "ranking.region": 0.0613
+  }
+ },
+ {
+  "name": "rank_hit_count_x1.5",
+  "overrides": {
+   "ranking.semantic": 0.3826,
+   "ranking.importance": 0.1148,
+   "ranking.freshness": 0.0957,
+   "ranking.weight": 0.0957,
+   "ranking.decay": 0.0765,
+   "ranking.hit_count": 0.12,
+   "ranking.recency": 0.0574,
+   "ranking.region": 0.0574
+  }
+ },
+ {
+  "name": "rank_hit_count_x2.0",
+  "overrides": {
+   "ranking.semantic": 0.3652,
+   "ranking.importance": 0.1096,
+   "ranking.freshness": 0.0913,
+   "ranking.weight": 0.0913,
+   "ranking.decay": 0.073,
+   "ranking.hit_count": 0.16,
+   "ranking.recency": 0.0548,
+   "ranking.region": 0.0548
+  }
+ },
+ {
+  "name": "rank_hit_count_zero",
+  "overrides": {
+   "ranking.semantic": 0.4348,
+   "ranking.importance": 0.1304,
+   "ranking.freshness": 0.1087,
+   "ranking.weight": 0.1087,
+   "ranking.decay": 0.087,
+   "ranking.hit_count": 0.0,
+   "ranking.recency": 0.0652,
+   "ranking.region": 0.0652
+  }
+ },
+ {
+  "name": "rank_recency_x0.25",
+  "overrides": {
+   "ranking.semantic": 0.4191,
+   "ranking.importance": 0.1257,
+   "ranking.freshness": 0.1048,
+   "ranking.weight": 0.1048,
+   "ranking.decay": 0.0838,
+   "ranking.hit_count": 0.0838,
+   "ranking.recency": 0.015,
+   "ranking.region": 0.0629
+  }
+ },
+ {
+  "name": "rank_recency_x0.5",
+  "overrides": {
+   "ranking.semantic": 0.4128,
+   "ranking.importance": 0.1238,
+   "ranking.freshness": 0.1032,
+   "ranking.weight": 0.1032,
+   "ranking.decay": 0.0826,
+   "ranking.hit_count": 0.0826,
+   "ranking.recency": 0.03,
+   "ranking.region": 0.0619
+  }
+ },
+ {
+  "name": "rank_recency_x0.75",
+  "overrides": {
+   "ranking.semantic": 0.4064,
+   "ranking.importance": 0.1219,
+   "ranking.freshness": 0.1016,
+   "ranking.weight": 0.1016,
+   "ranking.decay": 0.0813,
+   "ranking.hit_count": 0.0813,
+   "ranking.recency": 0.045,
+   "ranking.region": 0.061
+  }
+ },
+ {
+  "name": "rank_recency_x1.5",
+  "overrides": {
+   "ranking.semantic": 0.3872,
+   "ranking.importance": 0.1162,
+   "ranking.freshness": 0.0968,
+   "ranking.weight": 0.0968,
+   "ranking.decay": 0.0774,
+   "ranking.hit_count": 0.0774,
+   "ranking.recency": 0.09,
+   "ranking.region": 0.0581
+  }
+ },
+ {
+  "name": "rank_recency_x2.0",
+  "overrides": {
+   "ranking.semantic": 0.3745,
+   "ranking.importance": 0.1123,
+   "ranking.freshness": 0.0936,
+   "ranking.weight": 0.0936,
+   "ranking.decay": 0.0749,
+   "ranking.hit_count": 0.0749,
+   "ranking.recency": 0.12,
+   "ranking.region": 0.0562
+  }
+ },
+ {
+  "name": "rank_recency_zero",
+  "overrides": {
+   "ranking.semantic": 0.4255,
+   "ranking.importance": 0.1277,
+   "ranking.freshness": 0.1064,
+   "ranking.weight": 0.1064,
+   "ranking.decay": 0.0851,
+   "ranking.hit_count": 0.0851,
+   "ranking.recency": 0.0,
+   "ranking.region": 0.0638
+  }
+ },
+ {
+  "name": "rank_region_x0.25",
+  "overrides": {
+   "ranking.semantic": 0.4191,
+   "ranking.importance": 0.1257,
+   "ranking.freshness": 0.1048,
+   "ranking.weight": 0.1048,
+   "ranking.decay": 0.0838,
+   "ranking.hit_count": 0.0838,
+   "ranking.recency": 0.0629,
+   "ranking.region": 0.015
+  }
+ },
+ {
+  "name": "rank_region_x0.5",
+  "overrides": {
+   "ranking.semantic": 0.4128,
+   "ranking.importance": 0.1238,
+   "ranking.freshness": 0.1032,
+   "ranking.weight": 0.1032,
+   "ranking.decay": 0.0826,
+   "ranking.hit_count": 0.0826,
+   "ranking.recency": 0.0619,
+   "ranking.region": 0.03
+  }
+ },
+ {
+  "name": "rank_region_x0.75",
+  "overrides": {
+   "ranking.semantic": 0.4064,
+   "ranking.importance": 0.1219,
+   "ranking.freshness": 0.1016,
+   "ranking.weight": 0.1016,
+   "ranking.decay": 0.0813,
+   "ranking.hit_count": 0.0813,
+   "ranking.recency": 0.061,
+   "ranking.region": 0.045
+  }
+ },
+ {
+  "name": "rank_region_x1.5",
+  "overrides": {
+   "ranking.semantic": 0.3872,
+   "ranking.importance": 0.1162,
+   "ranking.freshness": 0.0968,
+   "ranking.weight": 0.0968,
+   "ranking.decay": 0.0774,
+   "ranking.hit_count": 0.0774,
+   "ranking.recency": 0.0581,
+   "ranking.region": 0.09
+  }
+ },
+ {
+  "name": "rank_region_x2.0",
+  "overrides": {
+   "ranking.semantic": 0.3745,
+   "ranking.importance": 0.1123,
+   "ranking.freshness": 0.0936,
+   "ranking.weight": 0.0936,
+   "ranking.decay": 0.0749,
+   "ranking.hit_count": 0.0749,
+   "ranking.recency": 0.0562,
+   "ranking.region": 0.12
+  }
+ },
+ {
+  "name": "rank_region_zero",
+  "overrides": {
+   "ranking.semantic": 0.4255,
+   "ranking.importance": 0.1277,
+   "ranking.freshness": 0.1064,
+   "ranking.weight": 0.1064,
+   "ranking.decay": 0.0851,
+   "ranking.hit_count": 0.0851,
+   "ranking.recency": 0.0638,
+   "ranking.region": 0.0
+  }
+ },
+ {
+  "name": "fusion_v0.0_k0.1",
+  "overrides": {
+   "retrieval.vector_weight": 0.0,
+   "retrieval.keyword_weight": 0.1,
+   "retrieval.metadata_weight": 0.9
+  }
+ },
+ {
+  "name": "fusion_v0.0_k0.3",
+  "overrides": {
+   "retrieval.vector_weight": 0.0,
+   "retrieval.keyword_weight": 0.3,
+   "retrieval.metadata_weight": 0.7
+  }
+ },
+ {
+  "name": "fusion_v0.0_k0.5",
+  "overrides": {
+   "retrieval.vector_weight": 0.0,
+   "retrieval.keyword_weight": 0.5,
+   "retrieval.metadata_weight": 0.5
+  }
+ },
+ {
+  "name": "fusion_v0.0_k0.7",
+  "overrides": {
+   "retrieval.vector_weight": 0.0,
+   "retrieval.keyword_weight": 0.7,
+   "retrieval.metadata_weight": 0.3
+  }
+ },
+ {
+  "name": "fusion_v0.2_k0.0",
+  "overrides": {
+   "retrieval.vector_weight": 0.2,
+   "retrieval.keyword_weight": 0.0,
+   "retrieval.metadata_weight": 0.8
+  }
+ },
+ {
+  "name": "fusion_v0.2_k0.1",
+  "overrides": {
+   "retrieval.vector_weight": 0.2,
+   "retrieval.keyword_weight": 0.1,
+   "retrieval.metadata_weight": 0.7
+  }
+ },
+ {
+  "name": "fusion_v0.2_k0.3",
+  "overrides": {
+   "retrieval.vector_weight": 0.2,
+   "retrieval.keyword_weight": 0.3,
+   "retrieval.metadata_weight": 0.5
+  }
+ },
+ {
+  "name": "fusion_v0.2_k0.5",
+  "overrides": {
+   "retrieval.vector_weight": 0.2,
+   "retrieval.keyword_weight": 0.5,
+   "retrieval.metadata_weight": 0.3
+  }
+ },
+ {
+  "name": "fusion_v0.2_k0.7",
+  "overrides": {
+   "retrieval.vector_weight": 0.2,
+   "retrieval.keyword_weight": 0.7,
+   "retrieval.metadata_weight": 0.1
+  }
+ },
+ {
+  "name": "fusion_v0.4_k0.0",
+  "overrides": {
+   "retrieval.vector_weight": 0.4,
+   "retrieval.keyword_weight": 0.0,
+   "retrieval.metadata_weight": 0.6
+  }
+ },
+ {
+  "name": "fusion_v0.4_k0.1",
+  "overrides": {
+   "retrieval.vector_weight": 0.4,
+   "retrieval.keyword_weight": 0.1,
+   "retrieval.metadata_weight": 0.5
+  }
+ },
+ {
+  "name": "fusion_v0.4_k0.3",
+  "overrides": {
+   "retrieval.vector_weight": 0.4,
+   "retrieval.keyword_weight": 0.3,
+   "retrieval.metadata_weight": 0.3
+  }
+ },
+ {
+  "name": "fusion_v0.4_k0.5",
+  "overrides": {
+   "retrieval.vector_weight": 0.4,
+   "retrieval.keyword_weight": 0.5,
+   "retrieval.metadata_weight": 0.1
+  }
+ },
+ {
+  "name": "fusion_v0.4_k0.7",
+  "overrides": {
+   "retrieval.vector_weight": 0.4,
+   "retrieval.keyword_weight": 0.7,
+   "retrieval.metadata_weight": 0
+  }
+ },
+ {
+  "name": "fusion_v0.6_k0.0",
+  "overrides": {
+   "retrieval.vector_weight": 0.6,
+   "retrieval.keyword_weight": 0.0,
+   "retrieval.metadata_weight": 0.4
+  }
+ },
+ {
+  "name": "fusion_v0.6_k0.1",
+  "overrides": {
+   "retrieval.vector_weight": 0.6,
+   "retrieval.keyword_weight": 0.1,
+   "retrieval.metadata_weight": 0.3
+  }
+ },
+ {
+  "name": "fusion_v0.6_k0.3",
+  "overrides": {
+   "retrieval.vector_weight": 0.6,
+   "retrieval.keyword_weight": 0.3,
+   "retrieval.metadata_weight": 0.1
+  }
+ },
+ {
+  "name": "fusion_v0.6_k0.5",
+  "overrides": {
+   "retrieval.vector_weight": 0.6,
+   "retrieval.keyword_weight": 0.5,
+   "retrieval.metadata_weight": 0
+  }
+ },
+ {
+  "name": "fusion_v0.6_k0.7",
+  "overrides": {
+   "retrieval.vector_weight": 0.6,
+   "retrieval.keyword_weight": 0.7,
+   "retrieval.metadata_weight": 0
+  }
+ },
+ {
+  "name": "fusion_v0.8_k0.0",
+  "overrides": {
+   "retrieval.vector_weight": 0.8,
+   "retrieval.keyword_weight": 0.0,
+   "retrieval.metadata_weight": 0.2
+  }
+ },
+ {
+  "name": "fusion_v0.8_k0.1",
+  "overrides": {
+   "retrieval.vector_weight": 0.8,
+   "retrieval.keyword_weight": 0.1,
+   "retrieval.metadata_weight": 0.1
+  }
+ },
+ {
+  "name": "fusion_v0.8_k0.3",
+  "overrides": {
+   "retrieval.vector_weight": 0.8,
+   "retrieval.keyword_weight": 0.3,
+   "retrieval.metadata_weight": 0
+  }
+ },
+ {
+  "name": "fusion_v0.8_k0.5",
+  "overrides": {
+   "retrieval.vector_weight": 0.8,
+   "retrieval.keyword_weight": 0.5,
+   "retrieval.metadata_weight": 0
+  }
+ },
+ {
+  "name": "fusion_v0.8_k0.7",
+  "overrides": {
+   "retrieval.vector_weight": 0.8,
+   "retrieval.keyword_weight": 0.7,
+   "retrieval.metadata_weight": 0
+  }
+ },
+ {
+  "name": "fusion_v1.0_k0.0",
+  "overrides": {
+   "retrieval.vector_weight": 1.0,
+   "retrieval.keyword_weight": 0.0,
+   "retrieval.metadata_weight": 0.0
+  }
+ },
+ {
+  "name": "fusion_v1.0_k0.1",
+  "overrides": {
+   "retrieval.vector_weight": 1.0,
+   "retrieval.keyword_weight": 0.1,
+   "retrieval.metadata_weight": 0
+  }
+ },
+ {
+  "name": "fusion_v1.0_k0.3",
+  "overrides": {
+   "retrieval.vector_weight": 1.0,
+   "retrieval.keyword_weight": 0.3,
+   "retrieval.metadata_weight": 0
+  }
+ },
+ {
+  "name": "fusion_v1.0_k0.5",
+  "overrides": {
+   "retrieval.vector_weight": 1.0,
+   "retrieval.keyword_weight": 0.5,
+   "retrieval.metadata_weight": 0
+  }
+ },
+ {
+  "name": "fusion_v1.0_k0.7",
+  "overrides": {
+   "retrieval.vector_weight": 1.0,
+   "retrieval.keyword_weight": 0.7,
+   "retrieval.metadata_weight": 0
+  }
+ },
+ {
+  "name": "fusion_meta0.0_weighted",
+  "overrides": {
+   "retrieval.vector_weight": 0.6,
+   "retrieval.keyword_weight": 0.3,
+   "retrieval.metadata_weight": 0.0,
+   "retrieval.fusion": "weighted"
+  }
+ },
+ {
+  "name": "fusion_meta0.3_weighted",
+  "overrides": {
+   "retrieval.vector_weight": 0.6,
+   "retrieval.keyword_weight": 0.3,
+   "retrieval.metadata_weight": 0.3,
+   "retrieval.fusion": "weighted"
+  }
+ },
+ {
+  "name": "fusion_meta0.5_weighted",
+  "overrides": {
+   "retrieval.vector_weight": 0.6,
+   "retrieval.keyword_weight": 0.3,
+   "retrieval.metadata_weight": 0.5,
+   "retrieval.fusion": "weighted"
+  }
+ },
+ {
+  "name": "fusion_weighted_default",
+  "overrides": {
+   "retrieval.fusion": "weighted"
+  }
+ },
+ {
+  "name": "top_regions_1",
+  "overrides": {
+   "retrieval.top_regions": 1
+  }
+ },
+ {
+  "name": "top_regions_2",
+  "overrides": {
+   "retrieval.top_regions": 2
+  }
+ },
+ {
+  "name": "top_regions_5",
+  "overrides": {
+   "retrieval.top_regions": 5
+  }
+ },
+ {
+  "name": "top_regions_8",
+  "overrides": {
+   "retrieval.top_regions": 8
+  }
+ },
+ {
+  "name": "cand_win_4",
+  "overrides": {
+   "retrieval.candidate_window": 4
+  }
+ },
+ {
+  "name": "cand_win_50",
+  "overrides": {
+   "retrieval.candidate_window": 50
+  }
+ },
+ {
+  "name": "cand_win_100",
+  "overrides": {
+   "retrieval.candidate_window": 100
+  }
+ },
+ {
+  "name": "cand_win_200",
+  "overrides": {
+   "retrieval.candidate_window": 200
+  }
+ },
+ {
+  "name": "kw_cand_20",
+  "overrides": {
+   "retrieval.keyword_candidates": 20
+  }
+ },
+ {
+  "name": "kw_cand_50",
+  "overrides": {
+   "retrieval.keyword_candidates": 50
+  }
+ },
+ {
+  "name": "kw_cand_100",
+  "overrides": {
+   "retrieval.keyword_candidates": 100
+  }
+ },
+ {
+  "name": "region_damp_0.0",
+  "overrides": {
+   "retrieval.region_dampening": 0.0
+  }
+ },
+ {
+  "name": "region_damp_0.3",
+  "overrides": {
+   "retrieval.region_dampening": 0.3
+  }
+ },
+ {
+  "name": "region_damp_0.5",
+  "overrides": {
+   "retrieval.region_dampening": 0.5
+  }
+ },
+ {
+  "name": "min_sim_-0.5",
+  "overrides": {
+   "retrieval.min_similarity": -0.5
+  }
+ },
+ {
+  "name": "min_sim_0.0",
+  "overrides": {
+   "retrieval.min_similarity": 0.0
+  }
+ },
+ {
+  "name": "min_sim_0.1",
+  "overrides": {
+   "retrieval.min_similarity": 0.1
+  }
+ },
+ {
+  "name": "min_sim_0.2",
+  "overrides": {
+   "retrieval.min_similarity": 0.2
+  }
+ },
+ {
+  "name": "min_sim_0.3",
+  "overrides": {
+   "retrieval.min_similarity": 0.3
+  }
+ },
+ {
+  "name": "cjk_bigram_off",
+  "overrides": {
+   "retrieval.cjk_bigram": false
+  }
+ },
+ {
+  "name": "summary_pen_0.0",
+  "overrides": {
+   "retrieval.summary_penalty": 0.0
+  }
+ },
+ {
+  "name": "summary_pen_0.25",
+  "overrides": {
+   "retrieval.summary_penalty": 0.25
+  }
+ },
+ {
+  "name": "summary_pen_0.75",
+  "overrides": {
+   "retrieval.summary_penalty": 0.75
+  }
+ },
+ {
+  "name": "summary_pen_1.0",
+  "overrides": {
+   "retrieval.summary_penalty": 1.0
+  }
+ },
+ {
+  "name": "query_cache_5",
+  "overrides": {
+   "retrieval.query_cache_size": 5
+  }
+ },
+ {
+  "name": "query_cache_20",
+  "overrides": {
+   "retrieval.query_cache_size": 20
+  }
+ },
+ {
+  "name": "query_cache_50",
+  "overrides": {
+   "retrieval.query_cache_size": 50
+  }
+ },
+ {
+  "name": "bool_memory_reinforce_on_off",
+  "overrides": {
+   "memory.reinforce_on": false
+  }
+ },
+ {
+  "name": "bool_policy_decay_enabled_off",
+  "overrides": {
+   "policy.decay_enabled": false
+  }
+ },
+ {
+  "name": "bool_policy_full_memory_off",
+  "overrides": {
+   "policy.full_memory": false
+  }
+ },
+ {
+  "name": "bool_region_auto_evolve_off",
+  "overrides": {
+   "region.auto_evolve": false
+  }
+ },
+ {
+  "name": "bool_region_ann_enabled_off",
+  "overrides": {
+   "region.ann_enabled": false
+  }
+ },
+ {
+  "name": "bool_retrieval_cjk_bigram_off",
+  "overrides": {
+   "retrieval.cjk_bigram": false
+  }
+ },
+ {
+  "name": "bool_storage_autosave_off",
+  "overrides": {
+   "storage.autosave": false
+  }
+ },
+ {
+  "name": "bool_storage_compress_off",
+  "overrides": {
+   "storage.compress": false
+  }
+ },
+ {
+  "name": "bool_maintenance_background_on",
+  "overrides": {
+   "maintenance.background": true
+  }
+ },
+ {
+  "name": "bool_extraction_enabled_on",
+  "overrides": {
+   "extraction.enabled": true
+  }
+ },
+ {
+  "name": "bool_factversion_enabled_on",
+  "overrides": {
+   "factversion.enabled": true
+  }
+ },
+ {
+  "name": "bool_noise_enabled_on",
+  "overrides": {
+   "noise.enabled": true
+  }
+ },
+ {
+  "name": "bool_qapair_enabled_on",
+  "overrides": {
+   "qapair.enabled": true
+  }
+ },
+ {
+  "name": "bool_factgraph_enabled_on",
+  "overrides": {
+   "factgraph.enabled": true
+  }
+ },
+ {
+  "name": "bool_profile_enabled_on",
+  "overrides": {
+   "profile.enabled": true
+  }
+ },
+ {
+  "name": "bool_persistence_enabled_on",
+  "overrides": {
+   "persistence.enabled": true
+  }
+ },
+ {
+  "name": "bool_observability_enabled_on",
+  "overrides": {
+   "observability.enabled": true
+  }
+ },
+ {
+  "name": "bool_context_enabled_on",
+  "overrides": {
+   "context.enabled": true
+  }
+ },
+ {
+  "name": "bool_namespaces_enabled_on",
+  "overrides": {
+   "namespaces.enabled": true
+  }
+ },
+ {
+  "name": "bool_rerank_enabled_on",
+  "overrides": {
+   "rerank.enabled": true
+  }
+ },
+ {
+  "name": "decay_halflife_7",
+  "overrides": {
+   "decay.half_life_days": 7
+  }
+ },
+ {
+  "name": "decay_halflife_90",
+  "overrides": {
+   "decay.half_life_days": 90
+  }
+ },
+ {
+  "name": "decay_halflife_365",
+  "overrides": {
+   "decay.half_life_days": 365
+  }
+ },
+ {
+  "name": "max_wdecay_0.0",
+  "overrides": {
+   "decay.max_weight_decay": 0.0
+  }
+ },
+ {
+  "name": "max_wdecay_0.5",
+  "overrides": {
+   "decay.max_weight_decay": 0.5
+  }
+ },
+ {
+  "name": "max_wdecay_1.0",
+  "overrides": {
+   "decay.max_weight_decay": 1.0
+  }
+ },
+ {
+  "name": "ebb_halflife_1",
+  "overrides": {
+   "reinforcement.ebbinghaus_half_life_days": 1
+  }
+ },
+ {
+  "name": "ebb_halflife_30",
+  "overrides": {
+   "reinforcement.ebbinghaus_half_life_days": 30
+  }
+ },
+ {
+  "name": "ebb_halflife_90",
+  "overrides": {
+   "reinforcement.ebbinghaus_half_life_days": 90
+  }
+ },
+ {
+  "name": "imp_thresh_0.0",
+  "overrides": {
+   "policy.importance_threshold": 0.0
+  }
+ },
+ {
+  "name": "imp_thresh_0.5",
+  "overrides": {
+   "policy.importance_threshold": 0.5
+  }
+ },
+ {
+  "name": "imp_thresh_0.75",
+  "overrides": {
+   "policy.importance_threshold": 0.75
+  }
+ },
+ {
+  "name": "hit_delta_0.05",
+  "overrides": {
+   "reinforcement.hit_weight_delta": 0.05
+  }
+ },
+ {
+  "name": "hit_delta_0.2",
+  "overrides": {
+   "reinforcement.hit_weight_delta": 0.2
+  }
+ },
+ {
+  "name": "hit_delta_0.4",
+  "overrides": {
+   "reinforcement.hit_weight_delta": 0.4
+  }
+ }
+]

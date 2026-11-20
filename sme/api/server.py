@@ -38,6 +38,7 @@ Interactive docs at /docs (Swagger UI) and /redoc.
 from __future__ import annotations
 
 import json
+import math
 import os
 import tempfile
 import time
@@ -47,7 +48,7 @@ from typing import Any, Optional
 from fastapi import FastAPI, HTTPException, UploadFile, File
 from fastapi.responses import FileResponse, JSONResponse
 from fastapi.staticfiles import StaticFiles
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, ConfigDict, Field
 try:  # FastAPI >=0.100 also supports environments still using Pydantic 1.
     from pydantic import field_validator
 except ImportError:  # pragma: no cover - compatibility with Pydantic 1
@@ -88,10 +89,16 @@ DEFAULT_CONFIG_FILE = "data/sme.config.json"
 # request / response models
 # --------------------------------------------------------------------------- #
 class AddMemoryRequest(BaseModel):
+    # hide_input_in_errors：NaN/inf 被拒时 422 详情不回显非法输入值本身，
+    # 否则响应序列化会因 NaN 不兼容 JSON 而当场崩掉（有损可观测性）
+    model_config = ConfigDict(hide_input_in_errors=True)
+
     text: str
     metadata: dict[str, Any] = Field(default_factory=dict)
     tags: list[str] = Field(default_factory=list)
-    importance: float = 0.5
+    # ge/le 同时挡住 NaN（NaN 与任何边界比较都为 False → 校验失败），
+    # pydantic v2 的 float 默认 allow_inf_nan=True，必须靠边界约束补位
+    importance: float = Field(default=0.5, ge=0.0, le=1.0, allow_inf_nan=False)
     source: str = "user"
     link_to: Optional[str] = None
     link_kind: str = "reference"
@@ -108,11 +115,13 @@ class AddMemoryRequest(BaseModel):
 
 
 class UpdateMemoryRequest(BaseModel):
+    model_config = ConfigDict(hide_input_in_errors=True)
+
     text: Optional[str] = None
     metadata: Optional[dict[str, Any]] = None
     tags: Optional[list[str]] = None
-    importance: Optional[float] = None
-    weight: Optional[float] = None
+    importance: Optional[float] = Field(default=None, ge=0.0, le=1.0, allow_inf_nan=False)
+    weight: Optional[float] = Field(default=None, ge=0.0, allow_inf_nan=False)
     summary: Optional[str] = None
 
     @field_validator("text")
@@ -242,9 +251,12 @@ class ConfigApplyError(Exception):
     """热重建引擎失败；message 为可直接展示给用户的中文提示。"""
 
 
-def _embedding_identity(config: SMEConfig) -> tuple[str, str, int]:
+def _embedding_identity(config: SMEConfig) -> tuple[str, str, int, int]:
     emb = config.embedding
-    return (emb.provider, emb.model, emb.dim)
+    # mrl_dim 改变 effective 维度（MRL 截维），与 provider/model/dim 同属
+    # "旧向量必然不匹配"的身份变更（P2-3：闸门漏检会让 32 维新向量混进
+    # 64 维 Region，nearest_region 广播失败、库永久不可用）
+    return (emb.provider, emb.model, emb.dim, emb.mrl_dim)
 
 
 # 热重建时需要迁移活态状态的 v2 扩展模块：引擎属性名 -> sidecar 文件名
@@ -315,8 +327,8 @@ def rebuild_engine_with(
     ):
         old, new = old_engine.config.embedding, new_config.embedding
         raise ConfigApplyError(
-            f"embedding 配置变更（{old.provider}/{old.model}/{old.dim} → "
-            f"{new.provider}/{new.model}/{new.dim}）会使现有记忆的向量维度与新配置"
+            f"embedding 配置变更（{old.provider}/{old.model}/{old.dim}/mrl={old.mrl_dim} → "
+            f"{new.provider}/{new.model}/{new.dim}/mrl={new.mrl_dim}）会使现有记忆的向量维度与新配置"
             "不一致，需要新库或清空现有记忆后重启服务；请先导出记忆并清空，"
             "再修改 embedding 配置"
         )
@@ -334,6 +346,17 @@ def rebuild_engine_with(
         new_engine.import_json(tmp_path)
         # 迁移扩展模块的活态状态（问答对 / 实体关系 / 画像事实）
         _migrate_module_state(old_engine, new_engine)
+        if not new_config.persistence.enabled:
+            # P3-14：persistence 关闭后 WAL 不再兜底，而旧引擎的 WAL 已被
+            # flush+close（未 reset）。不落盘的话，进程重启会回退到旧快照
+            # 丢掉自上次 checkpoint 以来的全部写入。这里把迁移后的完整状态
+            # 立即 checkpoint 到恢复存储路径。
+            try:
+                new_engine.save()
+            except Exception as exc:  # noqa: BLE001 - 重建必须整体成功或整体回滚
+                raise ConfigApplyError(
+                    f"persistence 关闭模式下 checkpoint 落盘失败，引擎保持原配置：{exc}"
+                ) from exc
         # 回填统计计数器（engine_stats 展示口径与旧引擎保持一致）
         try:
             new_engine.region_manager.split_count = counters.get("splits", 0)
@@ -429,6 +452,30 @@ def create_app(
     app = FastAPI(title=APP_TITLE, version=APP_VERSION)
     if not config_file:
         config_file = DEFAULT_CONFIG_FILE
+
+    # 校验失败的 422 详情会把非法输入值原样回显（pydantic errors 的 input
+    # 字段）；NaN/inf 不兼容 JSON，会让错误响应本身的序列化当场崩掉。
+    # 这里统一清洗成可读字符串，保证"拒绝非法输入"这个动作总能成功送达。
+    from fastapi.exceptions import RequestValidationError
+    from fastapi.encoders import jsonable_encoder
+    from starlette.responses import JSONResponse
+
+    def _scrub_nonfinite(value):
+        if isinstance(value, float) and not math.isfinite(value):
+            return repr(value)
+        if isinstance(value, dict):
+            return {k: _scrub_nonfinite(v) for k, v in value.items()}
+        if isinstance(value, list):
+            return [_scrub_nonfinite(v) for v in value]
+        return value
+
+    @app.exception_handler(RequestValidationError)
+    async def _sanitized_validation_handler(request, exc):
+        return JSONResponse(
+            status_code=422,
+            content={"detail": _scrub_nonfinite(jsonable_encoder(exc.errors()))},
+        )
+
     # 当前配置来源（随配置中心的动作实时更新）
     current_source = source
 
@@ -688,7 +735,7 @@ def create_app(
                     weight=req.weight,
                     summary=req.summary,
                 )
-            except KeyError as exc:
+            except (KeyError, ValueError) as exc:
                 raise HTTPException(status_code=404, detail=str(exc)) from exc
         return memory.to_dict()
 

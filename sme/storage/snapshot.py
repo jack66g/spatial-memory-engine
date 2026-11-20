@@ -218,17 +218,33 @@ def _cleanup_embeddings(path: str, emb_base: str) -> None:
 
     Preserve references from both plain/gzip manifests, plus legacy sidecars.
     Cleanup failure never changes the success of an already committed save.
+    并发保护：另一进程可能刚写好 sidecar、尚未写引用它的 manifest（写序为
+    sidecar→manifest）。该在途文件一定比"当前被引用的 sidecar"更新，因此
+    只删除 mtime 早于被引用 sidecar 的未引用代——既满足"发布后清旧代"的
+    契约，又不会删掉并发写方的在途文件制造孤儿 manifest。
     """
     base = path[:-3] if path.lower().endswith(".gz") else path
     references = set()
+    ref_mtime = 0.0
     try:
         for manifest in (base, base + ".gz"):
             if os.path.exists(manifest):
                 references.add(json.loads(_read_json(manifest)).get("embedding_file"))
+        references.discard(None)  # 空库快照无 embedding_file 键
+        for name in references:
+            try:
+                ref_mtime = max(ref_mtime, (Path(emb_base).parent / name).stat().st_mtime)
+            except OSError:
+                pass
         prefix = Path(emb_base).name[:-4]
         pattern = re.compile(re.escape(prefix) + r"\.[0-9a-f]{32}\.npz$")
         for candidate in Path(emb_base).parent.iterdir():
             if pattern.fullmatch(candidate.name) and candidate.name not in references:
+                try:
+                    if candidate.stat().st_mtime > ref_mtime:
+                        continue  # 严格新于被引用代 → 可能是并发写方的在途文件
+                except OSError:
+                    continue
                 candidate.unlink()
     except (OSError, ValueError):
         pass

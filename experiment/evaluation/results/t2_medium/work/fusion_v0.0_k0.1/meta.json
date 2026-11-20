@@ -1,0 +1,43 @@
+{
+ "name": "fusion_v0.0_k0.1",
+ "overrides": {
+  "retrieval.vector_weight": 0.0,
+  "retrieval.keyword_weight": 0.1,
+  "retrieval.metadata_weight": 0.9
+ },
+ "wall_s": 41.0,
+ "returncode": 0,
+ "n_queries": 1088,
+ "hit@1": 0.3281,
+ "recall@1": 0.318,
+ "hit@3": 0.4246,
+ "recall@3": 0.4127,
+ "hit@5": 0.4467,
+ "recall@5": 0.4357,
+ "hit@10": 0.4513,
+ "recall@10": 0.443,
+ "mrr": 0.3773,
+ "ndcg@10": 0.3898,
+ "composite": 0.3993,
+ "lat_p50_ms": 24.52,
+ "lat_p95_ms": 33.77,
+ "lat_mean_ms": 25.13,
+ "by_type": {
+  "direct": {
+   "n": 815,
+   "hit@3": 0.4994,
+   "mrr": 0.4465
+  },
+  "temporal": {
+   "n": 164,
+   "hit@3": 0.1159,
+   "mrr": 0.1012
+  },
+  "multi": {
+   "n": 109,
+   "hit@3": 0.3303,
+   "mrr": 0.2758
+  }
+ },
+ "status": "ok"
+}

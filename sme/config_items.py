@@ -69,7 +69,7 @@ ITEMS: list[ConfigItem] = [
         "服务商密钥；留空则读取环境变量 SME_LLM_API_KEY（建议用环境变量，不写进文件）"),
     _it("llm.model", "模型", "LLM 接入",
         "模型名，如 deepseek-v4-flash / gpt-4o-mini / qwen-plus",
-        required=True, default=""),
+        required=True, default="gpt-4o-mini"),
     _it("llm.reasoning_effort", "推理级别", "LLM 接入",
         "推理型模型（如 deepseek-v4-flash）必须填 none，否则小 max_tokens 时返回空回复",
         kind="enum", choices=("", "none", "low", "medium", "high")),
@@ -78,7 +78,7 @@ ITEMS: list[ConfigItem] = [
         minimum=1, maximum=128000, default=1024),
     _it("llm.temperature", "温度", "LLM 接入",
         "随机度 0~2；知识问答建议 0.3~0.6，越高越发散", kind="float",
-        minimum=0, maximum=2, default=0.6),
+        minimum=0, maximum=2, default=0.3),
     _it("llm.timeout", "超时（秒）", "LLM 接入",
         "请求超时秒数；本地模型可调大", kind="float",
         minimum=1, maximum=600, default=60),
@@ -525,11 +525,6 @@ def _is_blank(value: Any) -> bool:
 _LLM_DEFAULT_BASE_URL = "https://api.openai.com/v1"
 
 
-def _is_blank(value: Any) -> bool:
-    """字符串配置项的"未设置"判定（空白串视为未填）。"""
-    return value is None or (isinstance(value, str) and not value.strip())
-
-
 def _llm_configured(cfg: dict) -> bool:
     """LLM 是否算"已配置"——与 ``LLMClient.configured`` 同口径：
     默认 OpenAI 地址且未填密钥视为未配置（离线兜底），其余 base_url 非空即已配置。"""
@@ -704,9 +699,16 @@ PRESETS: list[dict] = [
             "retrieval.keyword_weight": 0.3,
             # 静态知识场景下 freshness/recency 无意义（迭代 2.4）：
             # 语义权重调高、动态权重调低
-            "ranking.semantic": 0.45,
-            "ranking.freshness": 0.04,
-            "ranking.recency": 0.02,
+            # 八权重和=1.0（P4 修复：旧值 3 键 + 默认其余 = 0.95，
+            # 线性排序虽不变但绝对分漂移，与其他预设口径不一致）
+            "ranking.semantic": 0.4736,
+            "ranking.importance": 0.1263,
+            "ranking.freshness": 0.0421,
+            "ranking.weight": 0.1053,
+            "ranking.decay": 0.0842,
+            "ranking.hit_count": 0.0842,
+            "ranking.recency": 0.0211,
+            "ranking.region": 0.0632,
             "extraction.enabled": True,
             "factversion.enabled": True,
             "noise.enabled": True,
@@ -732,9 +734,16 @@ PRESETS: list[dict] = [
             "retrieval.keyword_weight": 0.3,
             # 静态知识场景下 freshness/recency 无意义（迭代 2.4）：
             # 语义权重调高、动态权重调低
-            "ranking.semantic": 0.45,
-            "ranking.freshness": 0.04,
-            "ranking.recency": 0.02,
+            # 八权重和=1.0（P4 修复：旧值 3 键 + 默认其余 = 0.95，
+            # 线性排序虽不变但绝对分漂移，与其他预设口径不一致）
+            "ranking.semantic": 0.4736,
+            "ranking.importance": 0.1263,
+            "ranking.freshness": 0.0421,
+            "ranking.weight": 0.1053,
+            "ranking.decay": 0.0842,
+            "ranking.hit_count": 0.0842,
+            "ranking.recency": 0.0211,
+            "ranking.region": 0.0632,
             "extraction.enabled": True,
             "factversion.enabled": True,
             "noise.enabled": True,
@@ -782,6 +791,83 @@ PRESETS: list[dict] = [
             "memory.compress_every": OFF_PERIOD,
             "memory.graph_expand": 0,
             "retrieval.keyword_weight": 0.3,
+            "extraction.enabled": False,
+            "factversion.enabled": False,
+            "noise.enabled": False,
+            "qapair.enabled": False,
+            "factgraph.enabled": False,
+            "profile.enabled": False,
+            "persistence.enabled": False,
+            "observability.enabled": False,
+            "context.enabled": False,
+            "namespaces.enabled": False,
+        },
+    },
+    {
+        # 2026-11-20 大型权重寻优战役成果（TestLab reports/测试战报_2026-11-20.md）：
+        # 261 任务扫参 + 4 真实数据集交叉验证，composite 0.24→0.89（合成 medium）、
+        # DuReader 2.8×/CMRC 3.8×/LoCoMo 8.4×/LongMemEval 7.3×。
+        # 口径：hashing 离线 embedding（BM25 主导）；换真模型后请重评融合权重。
+        # 适用：静态知识库（一次性写入→查）；聊天助手等持续使用场景请用 01 预设
+        # 保留动力学信号（纵向实验：强化后 hit@3 +0.205）。
+        "key": "united_static", "name": "06 静态检索·UNITED",
+        "desc": "静态知识库最优：纯语义排序+BM25 主导融合，动力学信号归零（权重寻优实测 2.8~8.4×）",
+        "values": {
+            "policy.decay_enabled": False,
+            "region.auto_evolve": False,
+            "memory.reinforce_on": False,
+            "memory.consolidate_every": OFF_PERIOD,
+            "memory.compress_every": OFF_PERIOD,
+            "memory.graph_expand": 0,
+            "retrieval.keyword_weight": 0.3,
+            "decay.max_weight_decay": 0.0,
+            "retrieval.keyword_candidates": 20,
+            "retrieval.top_regions": 1,
+            "retrieval.vector_weight": 0.0,
+            "ranking.semantic": 1.0,
+            "ranking.importance": 0.0,
+            "ranking.freshness": 0.0,
+            "ranking.weight": 0.0,
+            "ranking.decay": 0.0,
+            "ranking.hit_count": 0.0,
+            "ranking.recency": 0.0,
+            "ranking.region": 0.0,
+            "extraction.enabled": False,
+            "factversion.enabled": False,
+            "noise.enabled": False,
+            "qapair.enabled": False,
+            "factgraph.enabled": False,
+            "profile.enabled": False,
+            "persistence.enabled": False,
+            "observability.enabled": False,
+            "context.enabled": False,
+            "namespaces.enabled": False,
+        },
+    },
+    {
+        # 2026-11-20 真模型重调(fastembed + BAAI/bge-small-zh-v1.5, 512维):
+        # 真向量让 semantic 信号质变——纯语义排序 medium 0.94/CMRC 0.99(hit@1 0.986),
+        # DuReader 长文档较 hashing 时代 +9pp。适配"已配置真 embedding 模型"的部署;
+        # hashing 离线场景请用 06(纯 BM25 融合口径)。数据:TestLab results/fe_final_*。
+        "key": "semantic_first", "name": "07 真模型·语义优先",
+        "desc": "真 embedding 部署的静态检索最优:纯语义排序+默认 minmax 融合(实测 CMRC hit@1 0.986)",
+        "values": {
+            "policy.decay_enabled": False,
+            "region.auto_evolve": False,
+            "memory.reinforce_on": False,
+            "memory.consolidate_every": OFF_PERIOD,
+            "memory.compress_every": OFF_PERIOD,
+            "memory.graph_expand": 0,
+            "retrieval.keyword_weight": 0.3,
+            "decay.max_weight_decay": 0.0,
+            "ranking.semantic": 1.0,
+            "ranking.importance": 0.0,
+            "ranking.freshness": 0.0,
+            "ranking.weight": 0.0,
+            "ranking.decay": 0.0,
+            "ranking.hit_count": 0.0,
+            "ranking.recency": 0.0,
+            "ranking.region": 0.0,
             "extraction.enabled": False,
             "factversion.enabled": False,
             "noise.enabled": False,

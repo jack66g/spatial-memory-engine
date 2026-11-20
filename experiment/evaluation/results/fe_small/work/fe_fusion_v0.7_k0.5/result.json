@@ -1,0 +1,47 @@
+{
+ "dataset": "small",
+ "n_memories": 1000,
+ "top_k": 10,
+ "overrides": {
+  "embedding.provider": "fastembed",
+  "embedding.model": "BAAI/bge-small-zh-v1.5",
+  "embedding.dim": 512,
+  "retrieval.vector_weight": 0.7,
+  "retrieval.keyword_weight": 0.5
+ },
+ "build_s": 14.1,
+ "metrics": {
+  "n_queries": 264,
+  "hit@1": 0.4356,
+  "recall@1": 0.4167,
+  "hit@3": 0.5114,
+  "recall@3": 0.4924,
+  "hit@5": 0.5455,
+  "recall@5": 0.5265,
+  "hit@10": 0.6553,
+  "recall@10": 0.6345,
+  "mrr": 0.4895,
+  "ndcg@10": 0.5154,
+  "composite": 0.5047,
+  "lat_p50_ms": 11.34,
+  "lat_p95_ms": 29.1,
+  "lat_mean_ms": 13.9
+ },
+ "by_type": {
+  "direct": {
+   "n": 201,
+   "hit@3": 0.5124,
+   "mrr": 0.5013
+  },
+  "temporal": {
+   "n": 39,
+   "hit@3": 0.4103,
+   "mrr": 0.3932
+  },
+  "multi": {
+   "n": 24,
+   "hit@3": 0.6667,
+   "mrr": 0.5472
+  }
+ }
+}

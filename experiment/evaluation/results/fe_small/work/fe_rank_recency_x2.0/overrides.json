@@ -1,0 +1,1 @@
+{"embedding.provider": "fastembed", "embedding.model": "BAAI/bge-small-zh-v1.5", "embedding.dim": 512, "ranking.semantic": 0.3745, "ranking.importance": 0.1123, "ranking.freshness": 0.0936, "ranking.weight": 0.0936, "ranking.decay": 0.0749, "ranking.hit_count": 0.0749, "ranking.recency": 0.12, "ranking.region": 0.0562}

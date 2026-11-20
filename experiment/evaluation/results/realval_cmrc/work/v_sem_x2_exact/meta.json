@@ -1,0 +1,38 @@
+{
+ "name": "v_sem_x2_exact",
+ "overrides": {
+  "ranking.semantic": 0.8,
+  "ranking.importance": 0.04,
+  "ranking.freshness": 0.0333,
+  "ranking.weight": 0.0333,
+  "ranking.decay": 0.0267,
+  "ranking.hit_count": 0.0267,
+  "ranking.recency": 0.02,
+  "ranking.region": 0.02
+ },
+ "wall_s": 15.1,
+ "returncode": 0,
+ "n_queries": 500,
+ "hit@1": 0.254,
+ "recall@1": 0.254,
+ "hit@3": 0.352,
+ "recall@3": 0.352,
+ "hit@5": 0.39,
+ "recall@5": 0.39,
+ "hit@10": 0.416,
+ "recall@10": 0.416,
+ "mrr": 0.3123,
+ "ndcg@10": 0.3377,
+ "composite": 0.3345,
+ "lat_p50_ms": 11.63,
+ "lat_p95_ms": 14.92,
+ "lat_mean_ms": 11.4,
+ "by_type": {
+  "direct": {
+   "n": 500,
+   "hit@3": 0.352,
+   "mrr": 0.3123
+  }
+ },
+ "status": "ok"
+}

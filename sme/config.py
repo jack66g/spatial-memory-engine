@@ -327,6 +327,32 @@ class VisualizationConfig:
     show_graph: bool = True
 
 
+def _validate_field(section: str, field: str, value: object) -> None:
+    """from_dict 入口走注册表校验（P3-15：零校验会让非法值延迟到深层崩溃）。
+
+    只校验注册表里登记过的 path；None 一律放行（= 显式回退默认值，
+    如 llm.reasoning_effort=None 是合法状态）。惰性导入避免环。
+    豁免表 = 引擎语义上合法、仅 UI 口径收紧的字段（如测试用 every_s=0.1
+    加速维护线程打点；注册表最小 1s 只是配置中心的输入约束）。
+    """
+    if value is None or f"{section}.{field}" in _FROMDICT_SKIP_VALIDATION:
+        return
+    from sme.config_items import ITEM_BY_PATH
+    item = ITEM_BY_PATH.get(f"{section}.{field}")
+    if item is None:
+        return
+    from sme.config_items import validate_value
+    error = validate_value(item, value)
+    if error:
+        raise ValueError(f"config {section}.{field}: {error}")
+
+
+# from_dict 校验豁免：引擎内部往返会合法携带、但低于注册表 UI 下限的字段
+_FROMDICT_SKIP_VALIDATION = frozenset({
+    "maintenance.every_s",   # 测试/高频打点用 0.1s；UI 下限 1s 仅为人工输入约束
+})
+
+
 @dataclass
 class SMEConfig:
     embedding: EmbeddingConfig = field(default_factory=EmbeddingConfig)
@@ -397,6 +423,7 @@ class SMEConfig:
                 current = getattr(cfg, key)
                 for k, v in data[key].items():
                     if hasattr(current, k):
+                        _validate_field(key, k, v)
                         setattr(current, k, v)
                         cfg._explicit_keys.add(f"{key}.{k}")
         if "seed" in data:

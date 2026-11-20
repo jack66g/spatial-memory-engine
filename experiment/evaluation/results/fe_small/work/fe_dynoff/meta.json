@@ -1,0 +1,45 @@
+{
+ "name": "fe_dynoff",
+ "overrides": {
+  "embedding.provider": "fastembed",
+  "embedding.model": "BAAI/bge-small-zh-v1.5",
+  "embedding.dim": 512,
+  "policy.decay_enabled": false,
+  "decay.max_weight_decay": 0.0
+ },
+ "wall_s": 15.9,
+ "returncode": 0,
+ "n_queries": 264,
+ "hit@1": 0.7689,
+ "recall@1": 0.7443,
+ "hit@3": 0.9242,
+ "recall@3": 0.9072,
+ "hit@5": 0.9508,
+ "recall@5": 0.9356,
+ "hit@10": 0.9848,
+ "recall@10": 0.9754,
+ "mrr": 0.8476,
+ "ndcg@10": 0.8739,
+ "composite": 0.8848,
+ "lat_p50_ms": 11.62,
+ "lat_p95_ms": 43.35,
+ "lat_mean_ms": 15.74,
+ "by_type": {
+  "direct": {
+   "n": 201,
+   "hit@3": 0.9552,
+   "mrr": 0.8799
+  },
+  "temporal": {
+   "n": 39,
+   "hit@3": 0.7692,
+   "mrr": 0.7262
+  },
+  "multi": {
+   "n": 24,
+   "hit@3": 0.9167,
+   "mrr": 0.7743
+  }
+ },
+ "status": "ok"
+}

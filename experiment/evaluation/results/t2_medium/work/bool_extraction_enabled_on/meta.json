@@ -1,0 +1,10 @@
+{
+ "name": "bool_extraction_enabled_on",
+ "overrides": {
+  "extraction.enabled": true
+ },
+ "wall_s": 0.4,
+ "returncode": 1,
+ "status": "crash(rc=1)",
+ "stderr_tail": ""
+}

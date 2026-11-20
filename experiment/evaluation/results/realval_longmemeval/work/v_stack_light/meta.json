@@ -1,0 +1,32 @@
+{
+ "name": "v_stack_light",
+ "overrides": {
+  "retrieval.keyword_candidates": 20,
+  "retrieval.top_regions": 1
+ },
+ "wall_s": 4.1,
+ "returncode": 0,
+ "n_queries": 24,
+ "hit@1": 0.0417,
+ "recall@1": 0.0417,
+ "hit@3": 0.125,
+ "recall@3": 0.0833,
+ "hit@5": 0.2917,
+ "recall@5": 0.1875,
+ "hit@10": 0.5,
+ "recall@10": 0.3542,
+ "mrr": 0.146,
+ "ndcg@10": 0.1815,
+ "composite": 0.1465,
+ "lat_p50_ms": 11.66,
+ "lat_p95_ms": 15.31,
+ "lat_mean_ms": 11.13,
+ "by_type": {
+  "temporal": {
+   "n": 24,
+   "hit@3": 0.125,
+   "mrr": 0.146
+  }
+ },
+ "status": "ok"
+}

@@ -1,0 +1,32 @@
+{
+ "name": "v_kw_only",
+ "overrides": {
+  "retrieval.vector_weight": 0.0,
+  "retrieval.keyword_weight": 0.3
+ },
+ "wall_s": 15.1,
+ "returncode": 0,
+ "n_queries": 500,
+ "hit@1": 0.392,
+ "recall@1": 0.392,
+ "hit@3": 0.414,
+ "recall@3": 0.414,
+ "hit@5": 0.416,
+ "recall@5": 0.416,
+ "hit@10": 0.416,
+ "recall@10": 0.416,
+ "mrr": 0.4031,
+ "ndcg@10": 0.4064,
+ "composite": 0.4083,
+ "lat_p50_ms": 11.27,
+ "lat_p95_ms": 14.77,
+ "lat_mean_ms": 11.24,
+ "by_type": {
+  "direct": {
+   "n": 500,
+   "hit@3": 0.414,
+   "mrr": 0.4031
+  }
+ },
+ "status": "ok"
+}

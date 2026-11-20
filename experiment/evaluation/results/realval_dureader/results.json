@@ -1,0 +1,215 @@
+[
+ {
+  "name": "v_sem_x2_exact",
+  "overrides": {
+   "ranking.semantic": 0.8,
+   "ranking.importance": 0.04,
+   "ranking.freshness": 0.0333,
+   "ranking.weight": 0.0333,
+   "ranking.decay": 0.0267,
+   "ranking.hit_count": 0.0267,
+   "ranking.recency": 0.02,
+   "ranking.region": 0.02
+  },
+  "wall_s": 45.0,
+  "returncode": 0,
+  "n_queries": 268,
+  "hit@1": 0.1567,
+  "recall@1": 0.0522,
+  "hit@3": 0.3246,
+  "recall@3": 0.1172,
+  "hit@5": 0.3881,
+  "recall@5": 0.1694,
+  "hit@10": 0.4142,
+  "recall@10": 0.2049,
+  "mrr": 0.2468,
+  "ndcg@10": 0.1748,
+  "composite": 0.2599,
+  "lat_p50_ms": 35.65,
+  "lat_p95_ms": 45.33,
+  "lat_mean_ms": 36.16,
+  "by_type": {
+   "direct": {
+    "n": 268,
+    "hit@3": 0.3246,
+    "mrr": 0.2468
+   }
+  },
+  "status": "ok"
+ },
+ {
+  "name": "v_baseline",
+  "overrides": {},
+  "wall_s": 45.3,
+  "returncode": 0,
+  "n_queries": 268,
+  "hit@1": 0.153,
+  "recall@1": 0.0471,
+  "hit@3": 0.2948,
+  "recall@3": 0.1124,
+  "hit@5": 0.3396,
+  "recall@5": 0.1401,
+  "hit@10": 0.3993,
+  "recall@10": 0.1853,
+  "mrr": 0.2352,
+  "ndcg@10": 0.1587,
+  "composite": 0.2399,
+  "lat_p50_ms": 35.44,
+  "lat_p95_ms": 46.13,
+  "lat_mean_ms": 36.17,
+  "by_type": {
+   "direct": {
+    "n": 268,
+    "hit@3": 0.2948,
+    "mrr": 0.2352
+   }
+  },
+  "status": "ok"
+ },
+ {
+  "name": "v_static_lean",
+  "overrides": {
+   "ranking.semantic": 0.6897,
+   "ranking.importance": 0.2069,
+   "ranking.freshness": 0.0,
+   "ranking.weight": 0.0,
+   "ranking.decay": 0.0,
+   "ranking.hit_count": 0.0,
+   "ranking.recency": 0.0,
+   "ranking.region": 0.1034
+  },
+  "wall_s": 45.0,
+  "returncode": 0,
+  "n_queries": 268,
+  "hit@1": 0.1604,
+  "recall@1": 0.0526,
+  "hit@3": 0.3507,
+  "recall@3": 0.1307,
+  "hit@5": 0.3955,
+  "recall@5": 0.1705,
+  "hit@10": 0.4142,
+  "recall@10": 0.208,
+  "mrr": 0.2556,
+  "ndcg@10": 0.181,
+  "composite": 0.275,
+  "lat_p50_ms": 34.23,
+  "lat_p95_ms": 43.74,
+  "lat_mean_ms": 35.24,
+  "by_type": {
+   "direct": {
+    "n": 268,
+    "hit@3": 0.3507,
+    "mrr": 0.2556
+   }
+  },
+  "status": "ok"
+ },
+ {
+  "name": "v_kw_only",
+  "overrides": {
+   "retrieval.vector_weight": 0.0,
+   "retrieval.keyword_weight": 0.3
+  },
+  "wall_s": 45.5,
+  "returncode": 0,
+  "n_queries": 268,
+  "hit@1": 0.209,
+  "recall@1": 0.064,
+  "hit@3": 0.3843,
+  "recall@3": 0.1506,
+  "hit@5": 0.403,
+  "recall@5": 0.1786,
+  "hit@10": 0.4142,
+  "recall@10": 0.2058,
+  "mrr": 0.2911,
+  "ndcg@10": 0.1927,
+  "composite": 0.3038,
+  "lat_p50_ms": 34.48,
+  "lat_p95_ms": 44.06,
+  "lat_mean_ms": 35.4,
+  "by_type": {
+   "direct": {
+    "n": 268,
+    "hit@3": 0.3843,
+    "mrr": 0.2911
+   }
+  },
+  "status": "ok"
+ },
+ {
+  "name": "v_stack_light",
+  "overrides": {
+   "retrieval.keyword_candidates": 20,
+   "retrieval.top_regions": 1
+  },
+  "wall_s": 78.1,
+  "returncode": 0,
+  "n_queries": 268,
+  "hit@1": 0.2612,
+  "recall@1": 0.084,
+  "hit@3": 0.444,
+  "recall@3": 0.1785,
+  "hit@5": 0.5597,
+  "recall@5": 0.2451,
+  "hit@10": 0.6903,
+  "recall@10": 0.3716,
+  "mrr": 0.3865,
+  "ndcg@10": 0.2914,
+  "composite": 0.3857,
+  "lat_p50_ms": 165.46,
+  "lat_p95_ms": 199.78,
+  "lat_mean_ms": 159.72,
+  "by_type": {
+   "direct": {
+    "n": 268,
+    "hit@3": 0.444,
+    "mrr": 0.3865
+   }
+  },
+  "status": "ok"
+ },
+ {
+  "name": "v_stack_static",
+  "overrides": {
+   "policy.decay_enabled": false,
+   "decay.max_weight_decay": 0.0,
+   "retrieval.keyword_candidates": 20,
+   "retrieval.top_regions": 1,
+   "retrieval.vector_weight": 0.0,
+   "retrieval.keyword_weight": 0.3,
+   "ranking.semantic": 0.6897,
+   "ranking.importance": 0.2069,
+   "ranking.freshness": 0.0,
+   "ranking.weight": 0.0,
+   "ranking.decay": 0.0,
+   "ranking.hit_count": 0.0,
+   "ranking.recency": 0.0,
+   "ranking.region": 0.1034
+  },
+  "wall_s": 78.7,
+  "returncode": 0,
+  "n_queries": 268,
+  "hit@1": 0.5224,
+  "recall@1": 0.1944,
+  "hit@3": 0.8284,
+  "recall@3": 0.4995,
+  "hit@5": 0.9366,
+  "recall@5": 0.6879,
+  "hit@10": 0.9739,
+  "recall@10": 0.8833,
+  "mrr": 0.6913,
+  "ndcg@10": 0.705,
+  "composite": 0.7496,
+  "lat_p50_ms": 164.94,
+  "lat_p95_ms": 201.14,
+  "lat_mean_ms": 161.33,
+  "by_type": {
+   "direct": {
+    "n": 268,
+    "hit@3": 0.8284,
+    "mrr": 0.6913
+   }
+  },
+  "status": "ok"
+ }
+]

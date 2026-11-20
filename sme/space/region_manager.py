@@ -273,6 +273,9 @@ class RegionManager:
         for mid in absorbed.member_ids:
             space._set_membership(mid, keeper_id)
         del space.regions[absorbed_id]
+        # 被吸收 Region 与第三方的邻边必须一并剪掉（P3-6）：否则留下端点已
+        # 不存在的悬空边，edge_count 虚高、邻边遍历命中失效端点
+        space._prune_edges_for(absorbed_id)
         space._touch(keeper_id)
         self.note_region(space, keeper_id)
         self.note_region(space, absorbed_id)
@@ -327,9 +330,17 @@ class RegionManager:
 
         # --- 1) density-based splits ----------------------------------- #
         splits = 0
-        for rid in list(space._split_candidates):
+        todo = list(space._split_candidates)
+        space._split_candidates.clear()
+        examined = 0
+        for rid in todo:
             if splits >= MAX_SPLITS_PER_PASS:
+                # 未检视的候选滚入下一轮（P2-5 候选饥饿修复：bulk import 后
+                # 超阈 Region 多于单轮上限时，旧实现整批丢弃，已饱和且不再
+                # 吸收新成员的大 Region 将永不拆分）
+                space._split_candidates.update(todo[examined:])
                 break
+            examined += 1
             region = space.regions.get(rid)
             if region is None:
                 continue
@@ -344,13 +355,17 @@ class RegionManager:
                 if outcome is not None:
                     splits += 1
                     events.append(self.history[-1])
-        space._split_candidates.clear()
 
         # --- 2) absorb tiny regions into their nearest neighbor -------- #
         merges = 0
-        for rid in list(space._small_candidates):
+        todo_small = list(space._small_candidates)
+        space._small_candidates.clear()
+        examined_small = 0
+        for rid in todo_small:
             if merges >= MAX_MERGES_PER_PASS:
+                space._small_candidates.update(todo_small[examined_small:])
                 break
+            examined_small += 1
             region = space.regions.get(rid)
             if region is None or region.size >= cfg.min_region_size:
                 continue
@@ -378,7 +393,6 @@ class RegionManager:
                 if outcome is not None:
                     merges += 1
                     events.append(self.history[-1])
-        space._small_candidates.clear()
 
         # --- 3) merge regions that drifted close together ------------- #
         for key in list(space._close_edge_keys):

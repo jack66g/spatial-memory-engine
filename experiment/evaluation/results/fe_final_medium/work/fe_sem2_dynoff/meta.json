@@ -1,0 +1,53 @@
+{
+ "name": "fe_sem2_dynoff",
+ "overrides": {
+  "embedding.provider": "fastembed",
+  "embedding.model": "BAAI/bge-small-zh-v1.5",
+  "embedding.dim": 512,
+  "ranking.semantic": 0.8,
+  "ranking.importance": 0.04,
+  "ranking.freshness": 0.0333,
+  "ranking.weight": 0.0333,
+  "ranking.decay": 0.0267,
+  "ranking.hit_count": 0.0267,
+  "ranking.recency": 0.02,
+  "ranking.region": 0.02,
+  "policy.decay_enabled": false,
+  "decay.max_weight_decay": 0.0
+ },
+ "wall_s": 46.7,
+ "returncode": 0,
+ "n_queries": 1088,
+ "hit@1": 0.8667,
+ "recall@1": 0.8323,
+ "hit@3": 0.92,
+ "recall@3": 0.9113,
+ "hit@5": 0.9246,
+ "recall@5": 0.9205,
+ "hit@10": 0.9246,
+ "recall@10": 0.9242,
+ "mrr": 0.893,
+ "ndcg@10": 0.8999,
+ "composite": 0.9055,
+ "lat_p50_ms": 14.43,
+ "lat_p95_ms": 44.89,
+ "lat_mean_ms": 18.89,
+ "by_type": {
+  "direct": {
+   "n": 815,
+   "hit@3": 0.9644,
+   "mrr": 0.9463
+  },
+  "temporal": {
+   "n": 164,
+   "hit@3": 0.6768,
+   "mrr": 0.6402
+  },
+  "multi": {
+   "n": 109,
+   "hit@3": 0.9541,
+   "mrr": 0.8746
+  }
+ },
+ "status": "ok"
+}

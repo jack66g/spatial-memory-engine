@@ -1,0 +1,18 @@
+{
+ "default(动力学开)": {
+  "mrr_before": 0.3293,
+  "mrr_after": 0.4991,
+  "mrr_gain": 0.1698,
+  "hit@3_before": 0.3561,
+  "hit@3_after": 0.5606,
+  "hit3_gain": 0.2045
+ },
+ "dyn_off(动力学关)": {
+  "mrr_before": 0.4414,
+  "mrr_after": 0.4456,
+  "mrr_gain": 0.0042,
+  "hit@3_before": 0.4886,
+  "hit@3_after": 0.4886,
+  "hit3_gain": 0.0
+ }
+}

@@ -1,0 +1,1088 @@
+{"qid": "q0001", "text": "杜岚的生日是几月几号", "gold": ["m000001"], "type": "direct"}
+{"qid": "q0002", "text": "刘梦琪现在住在哪个城市", "gold": ["m000006"], "type": "temporal"}
+{"qid": "q0003", "text": "魏子涵喜欢什么水果", "gold": ["m000008"], "type": "direct"}
+{"qid": "q0004", "text": "薛煦学的什么专业", "gold": ["m000009"], "type": "direct"}
+{"qid": "q0005", "text": "李天佑和谁是同事", "gold": ["m000010", "m000011"], "type": "multi"}
+{"qid": "q0006", "text": "郝芳学的什么专业", "gold": ["m000012"], "type": "direct"}
+{"qid": "q0007", "text": "Which city does 丁敏 live in", "gold": ["m000013"], "type": "direct"}
+{"qid": "q0008", "text": "陆欣的生日是几月几号", "gold": ["m000017"], "type": "direct"}
+{"qid": "q0009", "text": "钟强现在用什么技术", "gold": ["m000018"], "type": "temporal"}
+{"qid": "q0010", "text": "王霞喜欢什么水果", "gold": ["m000019"], "type": "direct"}
+{"qid": "q0011", "text": "孙平现在用什么技术", "gold": ["m000023"], "type": "temporal"}
+{"qid": "q0012", "text": "徐佳怡现在更喜欢什么水果", "gold": ["m000027"], "type": "temporal"}
+{"qid": "q0013", "text": "沈煦学的什么专业", "gold": ["m000029"], "type": "direct"}
+{"qid": "q0014", "text": "朱敏养了什么宠物", "gold": ["m000031"], "type": "direct"}
+{"qid": "q0015", "text": "朱欣爱吃什么菜", "gold": ["m000032"], "type": "direct"}
+{"qid": "q0016", "text": "沈思远现在用什么技术", "gold": ["m000035"], "type": "temporal"}
+{"qid": "q0017", "text": "薛梓萌和谁一起打球", "gold": ["m000038", "m000039"], "type": "multi"}
+{"qid": "q0018", "text": "莫涛有什么爱好", "gold": ["m000040"], "type": "direct"}
+{"qid": "q0019", "text": "郭岚学的什么专业", "gold": ["m000043"], "type": "direct"}
+{"qid": "q0020", "text": "韩煦是什么职位", "gold": ["m000044"], "type": "direct"}
+{"qid": "q0021", "text": "段欣有什么爱好", "gold": ["m000045"], "type": "direct"}
+{"qid": "q0022", "text": "万明和谁是同事", "gold": ["m000048", "m000049"], "type": "multi"}
+{"qid": "q0023", "text": "陈平和谁是同事", "gold": ["m000050", "m000051"], "type": "multi"}
+{"qid": "q0024", "text": "刘雨萱现在用什么技术", "gold": ["m000052"], "type": "temporal"}
+{"qid": "q0025", "text": "姚梓萌现在更喜欢什么水果", "gold": ["m000053"], "type": "temporal"}
+{"qid": "q0026", "text": "陆皓住在哪个城市", "gold": ["m000060"], "type": "direct"}
+{"qid": "q0027", "text": "Which city does 蒋小红 live in", "gold": ["m000061"], "type": "direct"}
+{"qid": "q0028", "text": "陈霞住在哪个城市", "gold": ["m000064"], "type": "direct"}
+{"qid": "q0029", "text": "范涛的生日是几月几号", "gold": ["m000065"], "type": "direct"}
+{"qid": "q0030", "text": "What tech does 胡辉 prefer", "gold": ["m000067"], "type": "direct"}
+{"qid": "q0031", "text": "孟皓有什么爱好", "gold": ["m000068"], "type": "direct"}
+{"qid": "q0032", "text": "余涛现在用什么技术", "gold": ["m000069"], "type": "temporal"}
+{"qid": "q0033", "text": "陆浩然爱吃什么菜", "gold": ["m000070"], "type": "direct"}
+{"qid": "q0034", "text": "钟皓讨厌什么水果", "gold": ["m000077"], "type": "direct"}
+{"qid": "q0035", "text": "姚岚喜欢什么水果", "gold": ["m000080"], "type": "direct"}
+{"qid": "q0036", "text": "段皓是什么职位", "gold": ["m000082"], "type": "direct"}
+{"qid": "q0037", "text": "周澈和谁是同事", "gold": ["m000083", "m000084"], "type": "multi"}
+{"qid": "q0038", "text": "吴思远现在住在哪个城市", "gold": ["m000087"], "type": "temporal"}
+{"qid": "q0039", "text": "冯军讨厌什么水果", "gold": ["m000090"], "type": "direct"}
+{"qid": "q0040", "text": "Which city does 孙梓萌 live in", "gold": ["m000094"], "type": "direct"}
+{"qid": "q0041", "text": "郝梦琪现在更喜欢什么水果", "gold": ["m000095"], "type": "temporal"}
+{"qid": "q0042", "text": "戴雪和谁是同事", "gold": ["m000102", "m000103"], "type": "multi"}
+{"qid": "q0043", "text": "刘涛养了什么宠物", "gold": ["m000105"], "type": "direct"}
+{"qid": "q0044", "text": "蔡欣周末做什么运动", "gold": ["m000113"], "type": "direct"}
+{"qid": "q0045", "text": "龙涛爱吃什么菜", "gold": ["m000115"], "type": "direct"}
+{"qid": "q0046", "text": "曹军是什么职位", "gold": ["m000116"], "type": "direct"}
+{"qid": "q0047", "text": "马超和谁是同事", "gold": ["m000126", "m000127"], "type": "multi"}
+{"qid": "q0048", "text": "梁洋现在住在哪个城市", "gold": ["m000128"], "type": "temporal"}
+{"qid": "q0049", "text": "叶恩现在更喜欢什么水果", "gold": ["m000129"], "type": "temporal"}
+{"qid": "q0050", "text": "郭佳怡讨厌什么水果", "gold": ["m000134"], "type": "direct"}
+{"qid": "q0051", "text": "钟然和谁是同事", "gold": ["m000135", "m000136"], "type": "multi"}
+{"qid": "q0052", "text": "谢强学的什么专业", "gold": ["m000137"], "type": "direct"}
+{"qid": "q0053", "text": "姜梦琪讨厌什么水果", "gold": ["m000138"], "type": "direct"}
+{"qid": "q0054", "text": "蔡磊养了什么宠物", "gold": ["m000142"], "type": "direct"}
+{"qid": "q0055", "text": "孔欣爱吃什么菜", "gold": ["m000143"], "type": "direct"}
+{"qid": "q0056", "text": "Which city does 尹涛 live in", "gold": ["m000147"], "type": "direct"}
+{"qid": "q0057", "text": "彭一诺是什么职位", "gold": ["m000148"], "type": "direct"}
+{"qid": "q0058", "text": "付平有什么爱好", "gold": ["m000149"], "type": "direct"}
+{"qid": "q0059", "text": "Which city does 武涛 live in", "gold": ["m000151"], "type": "direct"}
+{"qid": "q0060", "text": "付小红是什么职位", "gold": ["m000152"], "type": "direct"}
+{"qid": "q0061", "text": "钱然养了什么宠物", "gold": ["m000153"], "type": "direct"}
+{"qid": "q0062", "text": "叶睿是什么职位", "gold": ["m000154"], "type": "direct"}
+{"qid": "q0063", "text": "苏静和谁是同事", "gold": ["m000155", "m000156"], "type": "multi"}
+{"qid": "q0064", "text": "夏然喜欢什么水果", "gold": ["m000159"], "type": "direct"}
+{"qid": "q0065", "text": "梁天佑养了什么宠物", "gold": ["m000160"], "type": "direct"}
+{"qid": "q0066", "text": "刘军做什么工作", "gold": ["m000162"], "type": "direct"}
+{"qid": "q0067", "text": "程宇学的什么专业", "gold": ["m000163"], "type": "direct"}
+{"qid": "q0068", "text": "莫欣周末做什么运动", "gold": ["m000166"], "type": "direct"}
+{"qid": "q0069", "text": "雷子涵和谁是同事", "gold": ["m000169", "m000170"], "type": "multi"}
+{"qid": "q0070", "text": "曾梓萌是什么职位", "gold": ["m000172"], "type": "direct"}
+{"qid": "q0071", "text": "梁岚现在用什么技术", "gold": ["m000175"], "type": "temporal"}
+{"qid": "q0072", "text": "孔敏现在用什么技术", "gold": ["m000178"], "type": "temporal"}
+{"qid": "q0073", "text": "何恩用什么技术栈", "gold": ["m000179"], "type": "direct"}
+{"qid": "q0074", "text": "丁恩有什么爱好", "gold": ["m000182"], "type": "direct"}
+{"qid": "q0075", "text": "Where does 范煦 work", "gold": ["m000183"], "type": "direct"}
+{"qid": "q0076", "text": "史思远现在用什么技术", "gold": ["m000184"], "type": "temporal"}
+{"qid": "q0077", "text": "Which city does 戴明 live in", "gold": ["m000185"], "type": "direct"}
+{"qid": "q0078", "text": "马睿周末做什么运动", "gold": ["m000190"], "type": "direct"}
+{"qid": "q0079", "text": "雷梓萌现在更喜欢什么水果", "gold": ["m000195"], "type": "temporal"}
+{"qid": "q0080", "text": "梁睿现在住在哪个城市", "gold": ["m000196"], "type": "temporal"}
+{"qid": "q0081", "text": "冯霞用什么技术栈", "gold": ["m000197"], "type": "direct"}
+{"qid": "q0082", "text": "谢欣现在用什么技术", "gold": ["m000202"], "type": "temporal"}
+{"qid": "q0083", "text": "白明现在用什么技术", "gold": ["m000203"], "type": "temporal"}
+{"qid": "q0084", "text": "薛皓在哪家公司工作", "gold": ["m000204"], "type": "direct"}
+{"qid": "q0085", "text": "卢明周末做什么运动", "gold": ["m000206"], "type": "direct"}
+{"qid": "q0086", "text": "尹望舒和谁一起打球", "gold": ["m000207", "m000208"], "type": "multi"}
+{"qid": "q0087", "text": "陶明在哪家公司工作", "gold": ["m000212"], "type": "direct"}
+{"qid": "q0088", "text": "汪辉喜欢什么水果", "gold": ["m000219"], "type": "direct"}
+{"qid": "q0089", "text": "钱辉是什么职位", "gold": ["m000220"], "type": "direct"}
+{"qid": "q0090", "text": "卢梓萌做什么工作", "gold": ["m000222"], "type": "direct"}
+{"qid": "q0091", "text": "李浩然在哪家公司工作", "gold": ["m000223"], "type": "direct"}
+{"qid": "q0092", "text": "谢岚在哪家公司工作", "gold": ["m000224"], "type": "direct"}
+{"qid": "q0093", "text": "高小红和谁一起打球", "gold": ["m000226", "m000227"], "type": "multi"}
+{"qid": "q0094", "text": "陶超喜欢什么水果", "gold": ["m000230"], "type": "direct"}
+{"qid": "q0095", "text": "方伟住在哪个城市", "gold": ["m000231"], "type": "direct"}
+{"qid": "q0096", "text": "杨伟喜欢什么水果", "gold": ["m000232"], "type": "direct"}
+{"qid": "q0097", "text": "刘恩用什么技术栈", "gold": ["m000234"], "type": "direct"}
+{"qid": "q0098", "text": "宋思远是什么职位", "gold": ["m000240"], "type": "direct"}
+{"qid": "q0099", "text": "姜思远学的什么专业", "gold": ["m000241"], "type": "direct"}
+{"qid": "q0100", "text": "杨然现在用什么技术", "gold": ["m000242"], "type": "temporal"}
+{"qid": "q0101", "text": "马睿是什么职位", "gold": ["m000243"], "type": "direct"}
+{"qid": "q0102", "text": "邱伟和谁一起打球", "gold": ["m000245", "m000246"], "type": "multi"}
+{"qid": "q0103", "text": "蔡辉做什么工作", "gold": ["m000247"], "type": "direct"}
+{"qid": "q0104", "text": "孟娜现在住在哪个城市", "gold": ["m000248"], "type": "temporal"}
+{"qid": "q0105", "text": "汪强讨厌什么水果", "gold": ["m000250"], "type": "direct"}
+{"qid": "q0106", "text": "周军现在更喜欢什么水果", "gold": ["m000254"], "type": "temporal"}
+{"qid": "q0107", "text": "孙平和谁一起打球", "gold": ["m000258", "m000259"], "type": "multi"}
+{"qid": "q0108", "text": "武辉学的什么专业", "gold": ["m000261"], "type": "direct"}
+{"qid": "q0109", "text": "付洋在哪家公司工作", "gold": ["m000263"], "type": "direct"}
+{"qid": "q0110", "text": "丁梓萌学的什么专业", "gold": ["m000264"], "type": "direct"}
+{"qid": "q0111", "text": "程欣养了什么宠物", "gold": ["m000265"], "type": "direct"}
+{"qid": "q0112", "text": "顾佳怡现在住在哪个城市", "gold": ["m000267"], "type": "temporal"}
+{"qid": "q0113", "text": "曹欣有什么爱好", "gold": ["m000268"], "type": "direct"}
+{"qid": "q0114", "text": "付雨萱周末做什么运动", "gold": ["m000269"], "type": "direct"}
+{"qid": "q0115", "text": "田佳怡和谁是同事", "gold": ["m000271"], "type": "multi"}
+{"qid": "q0116", "text": "What tech does 邓子涵 prefer", "gold": ["m000273"], "type": "direct"}
+{"qid": "q0117", "text": "刘梦琪做什么工作", "gold": ["m000274"], "type": "direct"}
+{"qid": "q0118", "text": "侯天佑周末做什么运动", "gold": ["m000275"], "type": "direct"}
+{"qid": "q0119", "text": "田雨萱的生日是几月几号", "gold": ["m000276"], "type": "direct"}
+{"qid": "q0120", "text": "邱霞在哪家公司工作", "gold": ["m000277"], "type": "direct"}
+{"qid": "q0121", "text": "吴一诺周末做什么运动", "gold": ["m000280"], "type": "direct"}
+{"qid": "q0122", "text": "夏小明现在更喜欢什么水果", "gold": ["m000281"], "type": "temporal"}
+{"qid": "q0123", "text": "顾宇是什么职位", "gold": ["m000283"], "type": "direct"}
+{"qid": "q0124", "text": "韩雪喜欢什么水果", "gold": ["m000284"], "type": "direct"}
+{"qid": "q0125", "text": "贺一诺现在住在哪个城市", "gold": ["m000286"], "type": "temporal"}
+{"qid": "q0126", "text": "秦雨萱喜欢什么水果", "gold": ["m000290"], "type": "direct"}
+{"qid": "q0127", "text": "杜佳怡在哪家公司工作", "gold": ["m000291"], "type": "direct"}
+{"qid": "q0128", "text": "Where does 彭军 work", "gold": ["m000292"], "type": "direct"}
+{"qid": "q0129", "text": "崔杰和谁是同事", "gold": ["m000293", "m000294"], "type": "multi"}
+{"qid": "q0130", "text": "何平在哪家公司工作", "gold": ["m000303"], "type": "direct"}
+{"qid": "q0131", "text": "Which city does 史婷 live in", "gold": ["m000304"], "type": "direct"}
+{"qid": "q0132", "text": "雷娜和谁是同事", "gold": ["m000305"], "type": "multi"}
+{"qid": "q0133", "text": "梁军的生日是几月几号", "gold": ["m000307"], "type": "direct"}
+{"qid": "q0134", "text": "魏静现在用什么技术", "gold": ["m000309"], "type": "temporal"}
+{"qid": "q0135", "text": "曾平学的什么专业", "gold": ["m000310"], "type": "direct"}
+{"qid": "q0136", "text": "彭梓萌的生日是几月几号", "gold": ["m000311"], "type": "direct"}
+{"qid": "q0137", "text": "江佳怡的生日是几月几号", "gold": ["m000312"], "type": "direct"}
+{"qid": "q0138", "text": "钱雨萱现在住在哪个城市", "gold": ["m000313"], "type": "temporal"}
+{"qid": "q0139", "text": "范婷爱吃什么菜", "gold": ["m000315"], "type": "direct"}
+{"qid": "q0140", "text": "汤磊和谁一起打球", "gold": ["m000316", "m000317"], "type": "multi"}
+{"qid": "q0141", "text": "董辉周末做什么运动", "gold": ["m000320"], "type": "direct"}
+{"qid": "q0142", "text": "严望舒做什么工作", "gold": ["m000324"], "type": "direct"}
+{"qid": "q0143", "text": "石平和谁一起打球", "gold": ["m000325", "m000326"], "type": "multi"}
+{"qid": "q0144", "text": "龚梦琪用什么技术栈", "gold": ["m000338"], "type": "direct"}
+{"qid": "q0145", "text": "苏明是什么职位", "gold": ["m000340"], "type": "direct"}
+{"qid": "q0146", "text": "邵杰和谁一起打球", "gold": ["m000341"], "type": "multi"}
+{"qid": "q0147", "text": "史婷讨厌什么水果", "gold": ["m000342"], "type": "direct"}
+{"qid": "q0148", "text": "戴皓周末做什么运动", "gold": ["m000343"], "type": "direct"}
+{"qid": "q0149", "text": "余雪有什么爱好", "gold": ["m000346"], "type": "direct"}
+{"qid": "q0150", "text": "梁超现在更喜欢什么水果", "gold": ["m000350"], "type": "temporal"}
+{"qid": "q0151", "text": "曹杰和谁一起打球", "gold": ["m000355", "m000356"], "type": "multi"}
+{"qid": "q0152", "text": "秦天佑和谁一起打球", "gold": ["m000357", "m000358"], "type": "multi"}
+{"qid": "q0153", "text": "胡超现在住在哪个城市", "gold": ["m000359"], "type": "temporal"}
+{"qid": "q0154", "text": "蒋强现在住在哪个城市", "gold": ["m000361"], "type": "temporal"}
+{"qid": "q0155", "text": "邹梦琪的生日是几月几号", "gold": ["m000362"], "type": "direct"}
+{"qid": "q0156", "text": "曹睿讨厌什么水果", "gold": ["m000364"], "type": "direct"}
+{"qid": "q0157", "text": "段婷现在住在哪个城市", "gold": ["m000365"], "type": "temporal"}
+{"qid": "q0158", "text": "杜小明养了什么宠物", "gold": ["m000369"], "type": "direct"}
+{"qid": "q0159", "text": "姚磊在哪家公司工作", "gold": ["m000375"], "type": "direct"}
+{"qid": "q0160", "text": "孟煦喜欢什么水果", "gold": ["m000376"], "type": "direct"}
+{"qid": "q0161", "text": "崔辉喜欢什么水果", "gold": ["m000377"], "type": "direct"}
+{"qid": "q0162", "text": "赵磊的生日是几月几号", "gold": ["m000378"], "type": "direct"}
+{"qid": "q0163", "text": "郭伟住在哪个城市", "gold": ["m000380"], "type": "direct"}
+{"qid": "q0164", "text": "汤小红用什么技术栈", "gold": ["m000381"], "type": "direct"}
+{"qid": "q0165", "text": "范雨萱喜欢什么水果", "gold": ["m000382"], "type": "direct"}
+{"qid": "q0166", "text": "丁敏在哪家公司工作", "gold": ["m000384"], "type": "direct"}
+{"qid": "q0167", "text": "蒋睿养了什么宠物", "gold": ["m000385"], "type": "direct"}
+{"qid": "q0168", "text": "丁欣住在哪个城市", "gold": ["m000386"], "type": "direct"}
+{"qid": "q0169", "text": "Which city does 邓明 live in", "gold": ["m000387"], "type": "direct"}
+{"qid": "q0170", "text": "江天佑在哪家公司工作", "gold": ["m000390"], "type": "direct"}
+{"qid": "q0171", "text": "莫雪喜欢什么水果", "gold": ["m000391"], "type": "direct"}
+{"qid": "q0172", "text": "韦霞是什么职位", "gold": ["m000393"], "type": "direct"}
+{"qid": "q0173", "text": "余洋爱吃什么菜", "gold": ["m000394"], "type": "direct"}
+{"qid": "q0174", "text": "钱皓喜欢什么水果", "gold": ["m000398"], "type": "direct"}
+{"qid": "q0175", "text": "陈思远在哪家公司工作", "gold": ["m000400"], "type": "direct"}
+{"qid": "q0176", "text": "严岚用什么技术栈", "gold": ["m000402"], "type": "direct"}
+{"qid": "q0177", "text": "苏雨萱现在更喜欢什么水果", "gold": ["m000406"], "type": "temporal"}
+{"qid": "q0178", "text": "顾欣喜欢什么水果", "gold": ["m000407"], "type": "direct"}
+{"qid": "q0179", "text": "郑敏在哪家公司工作", "gold": ["m000410"], "type": "direct"}
+{"qid": "q0180", "text": "龚明爱吃什么菜", "gold": ["m000411"], "type": "direct"}
+{"qid": "q0181", "text": "廖佳怡现在住在哪个城市", "gold": ["m000412"], "type": "temporal"}
+{"qid": "q0182", "text": "万梦琪周末做什么运动", "gold": ["m000413"], "type": "direct"}
+{"qid": "q0183", "text": "龚然用什么技术栈", "gold": ["m000415"], "type": "direct"}
+{"qid": "q0184", "text": "付敏有什么爱好", "gold": ["m000416"], "type": "direct"}
+{"qid": "q0185", "text": "尹洋现在更喜欢什么水果", "gold": ["m000417"], "type": "temporal"}
+{"qid": "q0186", "text": "卢敏用什么技术栈", "gold": ["m000421"], "type": "direct"}
+{"qid": "q0187", "text": "黄雨萱爱吃什么菜", "gold": ["m000422"], "type": "direct"}
+{"qid": "q0188", "text": "胡静是什么职位", "gold": ["m000424"], "type": "direct"}
+{"qid": "q0189", "text": "杜敏养了什么宠物", "gold": ["m000426"], "type": "direct"}
+{"qid": "q0190", "text": "武一诺现在更喜欢什么水果", "gold": ["m000427"], "type": "temporal"}
+{"qid": "q0191", "text": "任军讨厌什么水果", "gold": ["m000429"], "type": "direct"}
+{"qid": "q0192", "text": "潘小明做什么工作", "gold": ["m000430"], "type": "direct"}
+{"qid": "q0193", "text": "武娜做什么工作", "gold": ["m000431"], "type": "direct"}
+{"qid": "q0194", "text": "夏浩然周末做什么运动", "gold": ["m000433"], "type": "direct"}
+{"qid": "q0195", "text": "林宇的生日是几月几号", "gold": ["m000442"], "type": "direct"}
+{"qid": "q0196", "text": "朱超和谁是同事", "gold": ["m000443", "m000444"], "type": "multi"}
+{"qid": "q0197", "text": "唐一诺周末做什么运动", "gold": ["m000445"], "type": "direct"}
+{"qid": "q0198", "text": "熊恩养了什么宠物", "gold": ["m000451"], "type": "direct"}
+{"qid": "q0199", "text": "雷霞喜欢什么水果", "gold": ["m000452"], "type": "direct"}
+{"qid": "q0200", "text": "严霞养了什么宠物", "gold": ["m000456"], "type": "direct"}
+{"qid": "q0201", "text": "夏欣现在用什么技术", "gold": ["m000457"], "type": "temporal"}
+{"qid": "q0202", "text": "陶洋在哪家公司工作", "gold": ["m000458"], "type": "direct"}
+{"qid": "q0203", "text": "曾天佑在哪家公司工作", "gold": ["m000464"], "type": "direct"}
+{"qid": "q0204", "text": "戴子涵住在哪个城市", "gold": ["m000468"], "type": "direct"}
+{"qid": "q0205", "text": "陈霞和谁是同事", "gold": ["m000470", "m000471"], "type": "multi"}
+{"qid": "q0206", "text": "田一诺住在哪个城市", "gold": ["m000472"], "type": "direct"}
+{"qid": "q0207", "text": "徐辉和谁是同事", "gold": ["m000475", "m000476"], "type": "multi"}
+{"qid": "q0208", "text": "姜超现在用什么技术", "gold": ["m000477"], "type": "temporal"}
+{"qid": "q0209", "text": "沈思远现在用什么技术", "gold": ["m000480"], "type": "temporal"}
+{"qid": "q0210", "text": "陶望舒爱吃什么菜", "gold": ["m000482"], "type": "direct"}
+{"qid": "q0211", "text": "What tech does 苏梓萌 prefer", "gold": ["m000483"], "type": "direct"}
+{"qid": "q0212", "text": "徐洋学的什么专业", "gold": ["m000484"], "type": "direct"}
+{"qid": "q0213", "text": "夏静现在更喜欢什么水果", "gold": ["m000485"], "type": "temporal"}
+{"qid": "q0214", "text": "姚芳喜欢什么水果", "gold": ["m000486"], "type": "direct"}
+{"qid": "q0215", "text": "冯平有什么爱好", "gold": ["m000489"], "type": "direct"}
+{"qid": "q0216", "text": "卢恩爱吃什么菜", "gold": ["m000490"], "type": "direct"}
+{"qid": "q0217", "text": "孟平在哪家公司工作", "gold": ["m000491"], "type": "direct"}
+{"qid": "q0218", "text": "王子涵爱吃什么菜", "gold": ["m000496"], "type": "direct"}
+{"qid": "q0219", "text": "张欣和谁是同事", "gold": ["m000499", "m000500"], "type": "multi"}
+{"qid": "q0220", "text": "郭磊住在哪个城市", "gold": ["m000501"], "type": "direct"}
+{"qid": "q0221", "text": "贺欣现在用什么技术", "gold": ["m000502"], "type": "temporal"}
+{"qid": "q0222", "text": "袁强学的什么专业", "gold": ["m000503"], "type": "direct"}
+{"qid": "q0223", "text": "侯芳爱吃什么菜", "gold": ["m000505"], "type": "direct"}
+{"qid": "q0224", "text": "唐敏是什么职位", "gold": ["m000506"], "type": "direct"}
+{"qid": "q0225", "text": "熊煦喜欢什么水果", "gold": ["m000507"], "type": "direct"}
+{"qid": "q0226", "text": "侯梦琪学的什么专业", "gold": ["m000508"], "type": "direct"}
+{"qid": "q0227", "text": "汤洋现在住在哪个城市", "gold": ["m000513"], "type": "temporal"}
+{"qid": "q0228", "text": "郑子涵的生日是几月几号", "gold": ["m000514"], "type": "direct"}
+{"qid": "q0229", "text": "薛思远做什么工作", "gold": ["m000519"], "type": "direct"}
+{"qid": "q0230", "text": "雷超用什么技术栈", "gold": ["m000522"], "type": "direct"}
+{"qid": "q0231", "text": "林娜现在住在哪个城市", "gold": ["m000523"], "type": "temporal"}
+{"qid": "q0232", "text": "崔超喜欢什么水果", "gold": ["m000524"], "type": "direct"}
+{"qid": "q0233", "text": "苏伟的生日是几月几号", "gold": ["m000525"], "type": "direct"}
+{"qid": "q0234", "text": "武睿住在哪个城市", "gold": ["m000526"], "type": "direct"}
+{"qid": "q0235", "text": "袁雪用什么技术栈", "gold": ["m000533"], "type": "direct"}
+{"qid": "q0236", "text": "姚望舒养了什么宠物", "gold": ["m000534"], "type": "direct"}
+{"qid": "q0237", "text": "邱娜和谁是同事", "gold": ["m000535", "m000536"], "type": "multi"}
+{"qid": "q0238", "text": "彭天佑喜欢什么水果", "gold": ["m000537"], "type": "direct"}
+{"qid": "q0239", "text": "韩艳爱吃什么菜", "gold": ["m000538"], "type": "direct"}
+{"qid": "q0240", "text": "叶小明住在哪个城市", "gold": ["m000540"], "type": "direct"}
+{"qid": "q0241", "text": "邱超和谁是同事", "gold": ["m000541"], "type": "multi"}
+{"qid": "q0242", "text": "许伟养了什么宠物", "gold": ["m000542"], "type": "direct"}
+{"qid": "q0243", "text": "叶浩然和谁一起打球", "gold": ["m000544", "m000545"], "type": "multi"}
+{"qid": "q0244", "text": "陶思远住在哪个城市", "gold": ["m000546"], "type": "direct"}
+{"qid": "q0245", "text": "彭皓现在用什么技术", "gold": ["m000552"], "type": "temporal"}
+{"qid": "q0246", "text": "黄婷在哪家公司工作", "gold": ["m000553"], "type": "direct"}
+{"qid": "q0247", "text": "宋洋在哪家公司工作", "gold": ["m000554"], "type": "direct"}
+{"qid": "q0248", "text": "胡艳的生日是几月几号", "gold": ["m000555"], "type": "direct"}
+{"qid": "q0249", "text": "武芳现在住在哪个城市", "gold": ["m000557"], "type": "temporal"}
+{"qid": "q0250", "text": "What tech does 吴小明 prefer", "gold": ["m000558"], "type": "direct"}
+{"qid": "q0251", "text": "沈煦在哪家公司工作", "gold": ["m000560"], "type": "direct"}
+{"qid": "q0252", "text": "任小明在哪家公司工作", "gold": ["m000562"], "type": "direct"}
+{"qid": "q0253", "text": "韩佳怡现在更喜欢什么水果", "gold": ["m000563"], "type": "temporal"}
+{"qid": "q0254", "text": "范梦琪做什么工作", "gold": ["m000565"], "type": "direct"}
+{"qid": "q0255", "text": "朱皓现在用什么技术", "gold": ["m000566"], "type": "temporal"}
+{"qid": "q0256", "text": "刘思远讨厌什么水果", "gold": ["m000567"], "type": "direct"}
+{"qid": "q0257", "text": "顾明做什么工作", "gold": ["m000568"], "type": "direct"}
+{"qid": "q0258", "text": "魏静喜欢什么水果", "gold": ["m000569"], "type": "direct"}
+{"qid": "q0259", "text": "白天佑和谁一起打球", "gold": ["m000570", "m000571"], "type": "multi"}
+{"qid": "q0260", "text": "钱杰学的什么专业", "gold": ["m000573"], "type": "direct"}
+{"qid": "q0261", "text": "贺洋现在用什么技术", "gold": ["m000576"], "type": "temporal"}
+{"qid": "q0262", "text": "龚杰讨厌什么水果", "gold": ["m000579"], "type": "direct"}
+{"qid": "q0263", "text": "杨涛做什么工作", "gold": ["m000581"], "type": "direct"}
+{"qid": "q0264", "text": "李小明在哪家公司工作", "gold": ["m000582"], "type": "direct"}
+{"qid": "q0265", "text": "龚伟喜欢什么水果", "gold": ["m000584"], "type": "direct"}
+{"qid": "q0266", "text": "Where does 唐然 work", "gold": ["m000588"], "type": "direct"}
+{"qid": "q0267", "text": "贺澈做什么工作", "gold": ["m000589"], "type": "direct"}
+{"qid": "q0268", "text": "林皓是什么职位", "gold": ["m000592"], "type": "direct"}
+{"qid": "q0269", "text": "宋婷讨厌什么水果", "gold": ["m000593"], "type": "direct"}
+{"qid": "q0270", "text": "王梓萌爱吃什么菜", "gold": ["m000599"], "type": "direct"}
+{"qid": "q0271", "text": "向小红用什么技术栈", "gold": ["m000600"], "type": "direct"}
+{"qid": "q0272", "text": "戴辉喜欢什么水果", "gold": ["m000602"], "type": "direct"}
+{"qid": "q0273", "text": "吕超养了什么宠物", "gold": ["m000605"], "type": "direct"}
+{"qid": "q0274", "text": "卢佳怡和谁一起打球", "gold": ["m000606", "m000607"], "type": "multi"}
+{"qid": "q0275", "text": "黄天佑讨厌什么水果", "gold": ["m000611"], "type": "direct"}
+{"qid": "q0276", "text": "陶然是什么职位", "gold": ["m000613"], "type": "direct"}
+{"qid": "q0277", "text": "林天佑的生日是几月几号", "gold": ["m000617"], "type": "direct"}
+{"qid": "q0278", "text": "秦强周末做什么运动", "gold": ["m000618"], "type": "direct"}
+{"qid": "q0279", "text": "朱梦琪现在更喜欢什么水果", "gold": ["m000620"], "type": "temporal"}
+{"qid": "q0280", "text": "罗小红讨厌什么水果", "gold": ["m000625"], "type": "direct"}
+{"qid": "q0281", "text": "黄宇讨厌什么水果", "gold": ["m000626"], "type": "direct"}
+{"qid": "q0282", "text": "方欣做什么工作", "gold": ["m000628"], "type": "direct"}
+{"qid": "q0283", "text": "龚艳周末做什么运动", "gold": ["m000629"], "type": "direct"}
+{"qid": "q0284", "text": "韩静用什么技术栈", "gold": ["m000631"], "type": "direct"}
+{"qid": "q0285", "text": "曾芳现在用什么技术", "gold": ["m000632"], "type": "temporal"}
+{"qid": "q0286", "text": "黄杰喜欢什么水果", "gold": ["m000633"], "type": "direct"}
+{"qid": "q0287", "text": "严伟周末做什么运动", "gold": ["m000637"], "type": "direct"}
+{"qid": "q0288", "text": "雷梦琪现在用什么技术", "gold": ["m000639"], "type": "temporal"}
+{"qid": "q0289", "text": "田佳怡现在更喜欢什么水果", "gold": ["m000642"], "type": "temporal"}
+{"qid": "q0290", "text": "龙然和谁是同事", "gold": ["m000643"], "type": "multi"}
+{"qid": "q0291", "text": "孟一诺爱吃什么菜", "gold": ["m000644"], "type": "direct"}
+{"qid": "q0292", "text": "何平用什么技术栈", "gold": ["m000646"], "type": "direct"}
+{"qid": "q0293", "text": "莫皓做什么工作", "gold": ["m000649"], "type": "direct"}
+{"qid": "q0294", "text": "龙杰在哪家公司工作", "gold": ["m000650"], "type": "direct"}
+{"qid": "q0295", "text": "武宇现在住在哪个城市", "gold": ["m000652"], "type": "temporal"}
+{"qid": "q0296", "text": "周洋是什么职位", "gold": ["m000653"], "type": "direct"}
+{"qid": "q0297", "text": "戴宇用什么技术栈", "gold": ["m000654"], "type": "direct"}
+{"qid": "q0298", "text": "邱超和谁一起打球", "gold": ["m000655", "m000656"], "type": "multi"}
+{"qid": "q0299", "text": "廖娜有什么爱好", "gold": ["m000657"], "type": "direct"}
+{"qid": "q0300", "text": "苏梦琪爱吃什么菜", "gold": ["m000662"], "type": "direct"}
+{"qid": "q0301", "text": "苏娜讨厌什么水果", "gold": ["m000663"], "type": "direct"}
+{"qid": "q0302", "text": "韩然养了什么宠物", "gold": ["m000666"], "type": "direct"}
+{"qid": "q0303", "text": "郭霞喜欢什么水果", "gold": ["m000670"], "type": "direct"}
+{"qid": "q0304", "text": "蒋婷周末做什么运动", "gold": ["m000671"], "type": "direct"}
+{"qid": "q0305", "text": "吕煦养了什么宠物", "gold": ["m000672"], "type": "direct"}
+{"qid": "q0306", "text": "徐思远在哪家公司工作", "gold": ["m000673"], "type": "direct"}
+{"qid": "q0307", "text": "钱平用什么技术栈", "gold": ["m000676"], "type": "direct"}
+{"qid": "q0308", "text": "曹洋爱吃什么菜", "gold": ["m000678"], "type": "direct"}
+{"qid": "q0309", "text": "秦浩然现在住在哪个城市", "gold": ["m000680"], "type": "temporal"}
+{"qid": "q0310", "text": "顾小明和谁是同事", "gold": ["m000681", "m000682"], "type": "multi"}
+{"qid": "q0311", "text": "许望舒在哪家公司工作", "gold": ["m000683"], "type": "direct"}
+{"qid": "q0312", "text": "彭辉喜欢什么水果", "gold": ["m000684"], "type": "direct"}
+{"qid": "q0313", "text": "陆天佑喜欢什么水果", "gold": ["m000685"], "type": "direct"}
+{"qid": "q0314", "text": "金雪养了什么宠物", "gold": ["m000686"], "type": "direct"}
+{"qid": "q0315", "text": "孟敏现在用什么技术", "gold": ["m000689"], "type": "temporal"}
+{"qid": "q0316", "text": "周艳爱吃什么菜", "gold": ["m000690"], "type": "direct"}
+{"qid": "q0317", "text": "龙子涵学的什么专业", "gold": ["m000691"], "type": "direct"}
+{"qid": "q0318", "text": "廖艳周末做什么运动", "gold": ["m000693"], "type": "direct"}
+{"qid": "q0319", "text": "侯杰的生日是几月几号", "gold": ["m000700"], "type": "direct"}
+{"qid": "q0320", "text": "史静喜欢什么水果", "gold": ["m000701"], "type": "direct"}
+{"qid": "q0321", "text": "Which city does 徐军 live in", "gold": ["m000704"], "type": "direct"}
+{"qid": "q0322", "text": "杨明和谁一起打球", "gold": ["m000705", "m000706"], "type": "multi"}
+{"qid": "q0323", "text": "赵超和谁是同事", "gold": ["m000709", "m000710"], "type": "multi"}
+{"qid": "q0324", "text": "闫宇是什么职位", "gold": ["m000715"], "type": "direct"}
+{"qid": "q0325", "text": "廖平做什么工作", "gold": ["m000716"], "type": "direct"}
+{"qid": "q0326", "text": "陆岚现在用什么技术", "gold": ["m000721"], "type": "temporal"}
+{"qid": "q0327", "text": "梁婷爱吃什么菜", "gold": ["m000722"], "type": "direct"}
+{"qid": "q0328", "text": "徐伟的生日是几月几号", "gold": ["m000725"], "type": "direct"}
+{"qid": "q0329", "text": "莫宇在哪家公司工作", "gold": ["m000733"], "type": "direct"}
+{"qid": "q0330", "text": "夏望舒周末做什么运动", "gold": ["m000735"], "type": "direct"}
+{"qid": "q0331", "text": "史雨萱喜欢什么水果", "gold": ["m000739"], "type": "direct"}
+{"qid": "q0332", "text": "莫思远喜欢什么水果", "gold": ["m000740"], "type": "direct"}
+{"qid": "q0333", "text": "段雨萱现在用什么技术", "gold": ["m000741"], "type": "temporal"}
+{"qid": "q0334", "text": "许天佑的生日是几月几号", "gold": ["m000742"], "type": "direct"}
+{"qid": "q0335", "text": "汤芳在哪家公司工作", "gold": ["m000743"], "type": "direct"}
+{"qid": "q0336", "text": "邵然是什么职位", "gold": ["m000744"], "type": "direct"}
+{"qid": "q0337", "text": "杨睿现在用什么技术", "gold": ["m000745"], "type": "temporal"}
+{"qid": "q0338", "text": "石煦在哪家公司工作", "gold": ["m000748"], "type": "direct"}
+{"qid": "q0339", "text": "陶杰有什么爱好", "gold": ["m000753"], "type": "direct"}
+{"qid": "q0340", "text": "卢思远和谁一起打球", "gold": ["m000754", "m000755"], "type": "multi"}
+{"qid": "q0341", "text": "韦皓养了什么宠物", "gold": ["m000758"], "type": "direct"}
+{"qid": "q0342", "text": "孙一诺讨厌什么水果", "gold": ["m000759"], "type": "direct"}
+{"qid": "q0343", "text": "钟望舒周末做什么运动", "gold": ["m000760"], "type": "direct"}
+{"qid": "q0344", "text": "程一诺用什么技术栈", "gold": ["m000763"], "type": "direct"}
+{"qid": "q0345", "text": "许煦用什么技术栈", "gold": ["m000764"], "type": "direct"}
+{"qid": "q0346", "text": "史娜的生日是几月几号", "gold": ["m000765"], "type": "direct"}
+{"qid": "q0347", "text": "Which city does 方杰 live in", "gold": ["m000767"], "type": "direct"}
+{"qid": "q0348", "text": "周煦和谁一起打球", "gold": ["m000769", "m000770"], "type": "multi"}
+{"qid": "q0349", "text": "蒋婷周末做什么运动", "gold": ["m000771"], "type": "direct"}
+{"qid": "q0350", "text": "夏伟喜欢什么水果", "gold": ["m000772"], "type": "direct"}
+{"qid": "q0351", "text": "马天佑养了什么宠物", "gold": ["m000773"], "type": "direct"}
+{"qid": "q0352", "text": "What tech does 薛婷 prefer", "gold": ["m000774"], "type": "direct"}
+{"qid": "q0353", "text": "袁霞喜欢什么水果", "gold": ["m000776"], "type": "direct"}
+{"qid": "q0354", "text": "何静养了什么宠物", "gold": ["m000778"], "type": "direct"}
+{"qid": "q0355", "text": "谭明的生日是几月几号", "gold": ["m000781"], "type": "direct"}
+{"qid": "q0356", "text": "Which city does 冯洋 live in", "gold": ["m000782"], "type": "direct"}
+{"qid": "q0357", "text": "邓睿做什么工作", "gold": ["m000784"], "type": "direct"}
+{"qid": "q0358", "text": "袁超做什么工作", "gold": ["m000785"], "type": "direct"}
+{"qid": "q0359", "text": "龚超住在哪个城市", "gold": ["m000787"], "type": "direct"}
+{"qid": "q0360", "text": "石恩周末做什么运动", "gold": ["m000793"], "type": "direct"}
+{"qid": "q0361", "text": "高岚现在更喜欢什么水果", "gold": ["m000794"], "type": "temporal"}
+{"qid": "q0362", "text": "熊雨萱在哪家公司工作", "gold": ["m000796"], "type": "direct"}
+{"qid": "q0363", "text": "罗霞和谁是同事", "gold": ["m000797", "m000798"], "type": "multi"}
+{"qid": "q0364", "text": "孔望舒和谁一起打球", "gold": ["m000800", "m000801"], "type": "multi"}
+{"qid": "q0365", "text": "邹敏讨厌什么水果", "gold": ["m000803"], "type": "direct"}
+{"qid": "q0366", "text": "江超在哪家公司工作", "gold": ["m000804"], "type": "direct"}
+{"qid": "q0367", "text": "孟涛在哪家公司工作", "gold": ["m000805"], "type": "direct"}
+{"qid": "q0368", "text": "孙强用什么技术栈", "gold": ["m000807"], "type": "direct"}
+{"qid": "q0369", "text": "程一诺和谁一起打球", "gold": ["m000808", "m000809"], "type": "multi"}
+{"qid": "q0370", "text": "袁辉是什么职位", "gold": ["m000812"], "type": "direct"}
+{"qid": "q0371", "text": "宋磊的生日是几月几号", "gold": ["m000813"], "type": "direct"}
+{"qid": "q0372", "text": "戴然做什么工作", "gold": ["m000815"], "type": "direct"}
+{"qid": "q0373", "text": "秦婷和谁一起打球", "gold": ["m000817", "m000818"], "type": "multi"}
+{"qid": "q0374", "text": "谭佳怡爱吃什么菜", "gold": ["m000819"], "type": "direct"}
+{"qid": "q0375", "text": "崔静爱吃什么菜", "gold": ["m000820"], "type": "direct"}
+{"qid": "q0376", "text": "陈子涵的生日是几月几号", "gold": ["m000823"], "type": "direct"}
+{"qid": "q0377", "text": "Where does 莫娜 work", "gold": ["m000824"], "type": "direct"}
+{"qid": "q0378", "text": "任梓萌和谁是同事", "gold": ["m000827", "m000828"], "type": "multi"}
+{"qid": "q0379", "text": "叶煦在哪家公司工作", "gold": ["m000830"], "type": "direct"}
+{"qid": "q0380", "text": "吕辉现在住在哪个城市", "gold": ["m000835"], "type": "temporal"}
+{"qid": "q0381", "text": "蔡涛周末做什么运动", "gold": ["m000839"], "type": "direct"}
+{"qid": "q0382", "text": "刘煦养了什么宠物", "gold": ["m000840"], "type": "direct"}
+{"qid": "q0383", "text": "蒋小明学的什么专业", "gold": ["m000841"], "type": "direct"}
+{"qid": "q0384", "text": "曹岚现在更喜欢什么水果", "gold": ["m000844"], "type": "temporal"}
+{"qid": "q0385", "text": "金宇学的什么专业", "gold": ["m000847"], "type": "direct"}
+{"qid": "q0386", "text": "陶煦住在哪个城市", "gold": ["m000850"], "type": "direct"}
+{"qid": "q0387", "text": "蒋军学的什么专业", "gold": ["m000852"], "type": "direct"}
+{"qid": "q0388", "text": "谭芳用什么技术栈", "gold": ["m000854"], "type": "direct"}
+{"qid": "q0389", "text": "萧天佑学的什么专业", "gold": ["m000855"], "type": "direct"}
+{"qid": "q0390", "text": "顾霞是什么职位", "gold": ["m000856"], "type": "direct"}
+{"qid": "q0391", "text": "韩军现在用什么技术", "gold": ["m000858"], "type": "temporal"}
+{"qid": "q0392", "text": "郭霞有什么爱好", "gold": ["m000860"], "type": "direct"}
+{"qid": "q0393", "text": "郝皓的生日是几月几号", "gold": ["m000862"], "type": "direct"}
+{"qid": "q0394", "text": "莫静周末做什么运动", "gold": ["m000863"], "type": "direct"}
+{"qid": "q0395", "text": "Which city does 覃浩然 live in", "gold": ["m000865"], "type": "direct"}
+{"qid": "q0396", "text": "戴思远在哪家公司工作", "gold": ["m000866"], "type": "direct"}
+{"qid": "q0397", "text": "史伟周末做什么运动", "gold": ["m000869"], "type": "direct"}
+{"qid": "q0398", "text": "Where does 袁平 work", "gold": ["m000870"], "type": "direct"}
+{"qid": "q0399", "text": "魏思远的生日是几月几号", "gold": ["m000873"], "type": "direct"}
+{"qid": "q0400", "text": "秦澈周末做什么运动", "gold": ["m000874"], "type": "direct"}
+{"qid": "q0401", "text": "孟伟在哪家公司工作", "gold": ["m000876"], "type": "direct"}
+{"qid": "q0402", "text": "严佳怡和谁一起打球", "gold": ["m000881", "m000882"], "type": "multi"}
+{"qid": "q0403", "text": "石辉和谁是同事", "gold": ["m000884", "m000885"], "type": "multi"}
+{"qid": "q0404", "text": "邓天佑喜欢什么水果", "gold": ["m000886"], "type": "direct"}
+{"qid": "q0405", "text": "白艳在哪家公司工作", "gold": ["m000888"], "type": "direct"}
+{"qid": "q0406", "text": "范皓现在住在哪个城市", "gold": ["m000893"], "type": "temporal"}
+{"qid": "q0407", "text": "徐杰周末做什么运动", "gold": ["m000895"], "type": "direct"}
+{"qid": "q0408", "text": "余雪现在更喜欢什么水果", "gold": ["m000899"], "type": "temporal"}
+{"qid": "q0409", "text": "金艳住在哪个城市", "gold": ["m000901"], "type": "direct"}
+{"qid": "q0410", "text": "余杰和谁是同事", "gold": ["m000903", "m000904"], "type": "multi"}
+{"qid": "q0411", "text": "Which city does 毛超 live in", "gold": ["m000907"], "type": "direct"}
+{"qid": "q0412", "text": "宋欣现在更喜欢什么水果", "gold": ["m000911"], "type": "temporal"}
+{"qid": "q0413", "text": "马艳喜欢什么水果", "gold": ["m000913"], "type": "direct"}
+{"qid": "q0414", "text": "闫强和谁是同事", "gold": ["m000916", "m000917"], "type": "multi"}
+{"qid": "q0415", "text": "陆霞的生日是几月几号", "gold": ["m000920"], "type": "direct"}
+{"qid": "q0416", "text": "崔澈爱吃什么菜", "gold": ["m000925"], "type": "direct"}
+{"qid": "q0417", "text": "汤艳养了什么宠物", "gold": ["m000927"], "type": "direct"}
+{"qid": "q0418", "text": "郑皓和谁一起打球", "gold": ["m000929", "m000930"], "type": "multi"}
+{"qid": "q0419", "text": "任一诺住在哪个城市", "gold": ["m000932"], "type": "direct"}
+{"qid": "q0420", "text": "孙欣做什么工作", "gold": ["m000936"], "type": "direct"}
+{"qid": "q0421", "text": "许明喜欢什么水果", "gold": ["m000939"], "type": "direct"}
+{"qid": "q0422", "text": "熊军现在更喜欢什么水果", "gold": ["m000940"], "type": "temporal"}
+{"qid": "q0423", "text": "罗辉现在用什么技术", "gold": ["m000941"], "type": "temporal"}
+{"qid": "q0424", "text": "姜杰养了什么宠物", "gold": ["m000947"], "type": "direct"}
+{"qid": "q0425", "text": "廖芳和谁一起打球", "gold": ["m000948", "m000949"], "type": "multi"}
+{"qid": "q0426", "text": "冯佳怡和谁是同事", "gold": ["m000951", "m000952"], "type": "multi"}
+{"qid": "q0427", "text": "邹艳住在哪个城市", "gold": ["m000955"], "type": "direct"}
+{"qid": "q0428", "text": "贾一诺住在哪个城市", "gold": ["m000956"], "type": "direct"}
+{"qid": "q0429", "text": "Which city does 谭天佑 live in", "gold": ["m000963"], "type": "direct"}
+{"qid": "q0430", "text": "What tech does 邱婷 prefer", "gold": ["m000964"], "type": "direct"}
+{"qid": "q0431", "text": "What tech does 曾天佑 prefer", "gold": ["m000967"], "type": "direct"}
+{"qid": "q0432", "text": "罗芳现在住在哪个城市", "gold": ["m000969"], "type": "temporal"}
+{"qid": "q0433", "text": "宋望舒喜欢什么水果", "gold": ["m000970"], "type": "direct"}
+{"qid": "q0434", "text": "韦静养了什么宠物", "gold": ["m000971"], "type": "direct"}
+{"qid": "q0435", "text": "邹一诺现在更喜欢什么水果", "gold": ["m000972"], "type": "temporal"}
+{"qid": "q0436", "text": "邓宇做什么工作", "gold": ["m000974"], "type": "direct"}
+{"qid": "q0437", "text": "曹煦做什么工作", "gold": ["m000975"], "type": "direct"}
+{"qid": "q0438", "text": "罗军现在住在哪个城市", "gold": ["m000976"], "type": "temporal"}
+{"qid": "q0439", "text": "段辉爱吃什么菜", "gold": ["m000977"], "type": "direct"}
+{"qid": "q0440", "text": "汪艳住在哪个城市", "gold": ["m000978"], "type": "direct"}
+{"qid": "q0441", "text": "戴宇现在住在哪个城市", "gold": ["m000980"], "type": "temporal"}
+{"qid": "q0442", "text": "罗敏在哪家公司工作", "gold": ["m000982"], "type": "direct"}
+{"qid": "q0443", "text": "丁望舒讨厌什么水果", "gold": ["m000985"], "type": "direct"}
+{"qid": "q0444", "text": "严澈现在用什么技术", "gold": ["m000986"], "type": "temporal"}
+{"qid": "q0445", "text": "许天佑用什么技术栈", "gold": ["m000987"], "type": "direct"}
+{"qid": "q0446", "text": "覃梦琪现在用什么技术", "gold": ["m000988"], "type": "temporal"}
+{"qid": "q0447", "text": "Which city does 毛一诺 live in", "gold": ["m000989"], "type": "direct"}
+{"qid": "q0448", "text": "武澈喜欢什么水果", "gold": ["m000990"], "type": "direct"}
+{"qid": "q0449", "text": "姜煦周末做什么运动", "gold": ["m000991"], "type": "direct"}
+{"qid": "q0450", "text": "胡雪学的什么专业", "gold": ["m000995"], "type": "direct"}
+{"qid": "q0451", "text": "唐然爱吃什么菜", "gold": ["m000996"], "type": "direct"}
+{"qid": "q0452", "text": "Where does 范超 work", "gold": ["m000997"], "type": "direct"}
+{"qid": "q0453", "text": "崔然养了什么宠物", "gold": ["m000998"], "type": "direct"}
+{"qid": "q0454", "text": "朱望舒用什么技术栈", "gold": ["m001000"], "type": "direct"}
+{"qid": "q0455", "text": "薛军有什么爱好", "gold": ["m001002"], "type": "direct"}
+{"qid": "q0456", "text": "Which city does 胡雨萱 live in", "gold": ["m001005"], "type": "direct"}
+{"qid": "q0457", "text": "苏娜周末做什么运动", "gold": ["m001008"], "type": "direct"}
+{"qid": "q0458", "text": "郭恩学的什么专业", "gold": ["m001009"], "type": "direct"}
+{"qid": "q0459", "text": "秦军的生日是几月几号", "gold": ["m001010"], "type": "direct"}
+{"qid": "q0460", "text": "吴欣在哪家公司工作", "gold": ["m001011"], "type": "direct"}
+{"qid": "q0461", "text": "何一诺现在用什么技术", "gold": ["m001013"], "type": "temporal"}
+{"qid": "q0462", "text": "彭明现在更喜欢什么水果", "gold": ["m001014"], "type": "temporal"}
+{"qid": "q0463", "text": "严子涵在哪家公司工作", "gold": ["m001015"], "type": "direct"}
+{"qid": "q0464", "text": "曹澈现在用什么技术", "gold": ["m001016"], "type": "temporal"}
+{"qid": "q0465", "text": "邓明有什么爱好", "gold": ["m001017"], "type": "direct"}
+{"qid": "q0466", "text": "萧涛有什么爱好", "gold": ["m001020"], "type": "direct"}
+{"qid": "q0467", "text": "刘磊用什么技术栈", "gold": ["m001021"], "type": "direct"}
+{"qid": "q0468", "text": "戴小红和谁是同事", "gold": ["m001022", "m001023"], "type": "multi"}
+{"qid": "q0469", "text": "徐宇住在哪个城市", "gold": ["m001024"], "type": "direct"}
+{"qid": "q0470", "text": "蔡洋是什么职位", "gold": ["m001025"], "type": "direct"}
+{"qid": "q0471", "text": "钟杰有什么爱好", "gold": ["m001028"], "type": "direct"}
+{"qid": "q0472", "text": "潘一诺住在哪个城市", "gold": ["m001029"], "type": "direct"}
+{"qid": "q0473", "text": "顾磊在哪家公司工作", "gold": ["m001033"], "type": "direct"}
+{"qid": "q0474", "text": "金恩讨厌什么水果", "gold": ["m001036"], "type": "direct"}
+{"qid": "q0475", "text": "韦欣是什么职位", "gold": ["m001042"], "type": "direct"}
+{"qid": "q0476", "text": "郭磊和谁一起打球", "gold": ["m001045", "m001046"], "type": "multi"}
+{"qid": "q0477", "text": "向平是什么职位", "gold": ["m001047"], "type": "direct"}
+{"qid": "q0478", "text": "贺强现在用什么技术", "gold": ["m001049"], "type": "temporal"}
+{"qid": "q0479", "text": "程霞现在住在哪个城市", "gold": ["m001050"], "type": "temporal"}
+{"qid": "q0480", "text": "潘皓喜欢什么水果", "gold": ["m001051"], "type": "direct"}
+{"qid": "q0481", "text": "余雨萱周末做什么运动", "gold": ["m001052"], "type": "direct"}
+{"qid": "q0482", "text": "王宇爱吃什么菜", "gold": ["m001053"], "type": "direct"}
+{"qid": "q0483", "text": "陈岚学的什么专业", "gold": ["m001055"], "type": "direct"}
+{"qid": "q0484", "text": "罗平讨厌什么水果", "gold": ["m001056"], "type": "direct"}
+{"qid": "q0485", "text": "丁娜做什么工作", "gold": ["m001057"], "type": "direct"}
+{"qid": "q0486", "text": "黄岚的生日是几月几号", "gold": ["m001062"], "type": "direct"}
+{"qid": "q0487", "text": "蒋恩爱吃什么菜", "gold": ["m001063"], "type": "direct"}
+{"qid": "q0488", "text": "邵天佑和谁一起打球", "gold": ["m001064", "m001065"], "type": "multi"}
+{"qid": "q0489", "text": "姚艳学的什么专业", "gold": ["m001068"], "type": "direct"}
+{"qid": "q0490", "text": "方梦琪的生日是几月几号", "gold": ["m001069"], "type": "direct"}
+{"qid": "q0491", "text": "薛子涵在哪家公司工作", "gold": ["m001070"], "type": "direct"}
+{"qid": "q0492", "text": "姚天佑现在用什么技术", "gold": ["m001073"], "type": "temporal"}
+{"qid": "q0493", "text": "付恩和谁一起打球", "gold": ["m001074", "m001075"], "type": "multi"}
+{"qid": "q0494", "text": "陆娜用什么技术栈", "gold": ["m001077"], "type": "direct"}
+{"qid": "q0495", "text": "许霞喜欢什么水果", "gold": ["m001078"], "type": "direct"}
+{"qid": "q0496", "text": "张梦琪现在更喜欢什么水果", "gold": ["m001080"], "type": "temporal"}
+{"qid": "q0497", "text": "韩小明讨厌什么水果", "gold": ["m001082"], "type": "direct"}
+{"qid": "q0498", "text": "萧小红讨厌什么水果", "gold": ["m001083"], "type": "direct"}
+{"qid": "q0499", "text": "邵静和谁是同事", "gold": ["m001086", "m001087"], "type": "multi"}
+{"qid": "q0500", "text": "龚杰学的什么专业", "gold": ["m001088"], "type": "direct"}
+{"qid": "q0501", "text": "曾欣和谁一起打球", "gold": ["m001089", "m001090"], "type": "multi"}
+{"qid": "q0502", "text": "杨明和谁一起打球", "gold": ["m001092", "m001093"], "type": "multi"}
+{"qid": "q0503", "text": "彭小红有什么爱好", "gold": ["m001094"], "type": "direct"}
+{"qid": "q0504", "text": "廖婷有什么爱好", "gold": ["m001097"], "type": "direct"}
+{"qid": "q0505", "text": "金霞和谁是同事", "gold": ["m001098", "m001099"], "type": "multi"}
+{"qid": "q0506", "text": "李小红学的什么专业", "gold": ["m001100"], "type": "direct"}
+{"qid": "q0507", "text": "陶涛和谁是同事", "gold": ["m001109", "m001110"], "type": "multi"}
+{"qid": "q0508", "text": "叶雨萱和谁一起打球", "gold": ["m001112", "m001113"], "type": "multi"}
+{"qid": "q0509", "text": "唐子涵用什么技术栈", "gold": ["m001114"], "type": "direct"}
+{"qid": "q0510", "text": "宋辉住在哪个城市", "gold": ["m001115"], "type": "direct"}
+{"qid": "q0511", "text": "魏子涵的生日是几月几号", "gold": ["m001116"], "type": "direct"}
+{"qid": "q0512", "text": "Where does 戴宇 work", "gold": ["m001118"], "type": "direct"}
+{"qid": "q0513", "text": "冯欣现在更喜欢什么水果", "gold": ["m001122"], "type": "temporal"}
+{"qid": "q0514", "text": "戴杰和谁一起打球", "gold": ["m001123", "m001124"], "type": "multi"}
+{"qid": "q0515", "text": "孔子涵住在哪个城市", "gold": ["m001125"], "type": "direct"}
+{"qid": "q0516", "text": "潘婷在哪家公司工作", "gold": ["m001126"], "type": "direct"}
+{"qid": "q0517", "text": "沈梦琪周末做什么运动", "gold": ["m001129"], "type": "direct"}
+{"qid": "q0518", "text": "孔皓住在哪个城市", "gold": ["m001133"], "type": "direct"}
+{"qid": "q0519", "text": "贺子涵周末做什么运动", "gold": ["m001135"], "type": "direct"}
+{"qid": "q0520", "text": "潘岚喜欢什么水果", "gold": ["m001136"], "type": "direct"}
+{"qid": "q0521", "text": "钱杰养了什么宠物", "gold": ["m001139"], "type": "direct"}
+{"qid": "q0522", "text": "姜雨萱现在更喜欢什么水果", "gold": ["m001141"], "type": "temporal"}
+{"qid": "q0523", "text": "龙梦琪周末做什么运动", "gold": ["m001144"], "type": "direct"}
+{"qid": "q0524", "text": "韦望舒有什么爱好", "gold": ["m001145"], "type": "direct"}
+{"qid": "q0525", "text": "龙望舒讨厌什么水果", "gold": ["m001146"], "type": "direct"}
+{"qid": "q0526", "text": "黄洋讨厌什么水果", "gold": ["m001148"], "type": "direct"}
+{"qid": "q0527", "text": "覃霞养了什么宠物", "gold": ["m001151"], "type": "direct"}
+{"qid": "q0528", "text": "万子涵养了什么宠物", "gold": ["m001153"], "type": "direct"}
+{"qid": "q0529", "text": "吴思远和谁一起打球", "gold": ["m001154", "m001155"], "type": "multi"}
+{"qid": "q0530", "text": "高杰和谁是同事", "gold": ["m001156", "m001157"], "type": "multi"}
+{"qid": "q0531", "text": "曾雨萱喜欢什么水果", "gold": ["m001158"], "type": "direct"}
+{"qid": "q0532", "text": "龚涛爱吃什么菜", "gold": ["m001162"], "type": "direct"}
+{"qid": "q0533", "text": "沈平做什么工作", "gold": ["m001164"], "type": "direct"}
+{"qid": "q0534", "text": "黄雨萱是什么职位", "gold": ["m001165"], "type": "direct"}
+{"qid": "q0535", "text": "方皓有什么爱好", "gold": ["m001166"], "type": "direct"}
+{"qid": "q0536", "text": "韩霞养了什么宠物", "gold": ["m001167"], "type": "direct"}
+{"qid": "q0537", "text": "董霞喜欢什么水果", "gold": ["m001168"], "type": "direct"}
+{"qid": "q0538", "text": "严军现在住在哪个城市", "gold": ["m001172"], "type": "temporal"}
+{"qid": "q0539", "text": "汤一诺周末做什么运动", "gold": ["m001173"], "type": "direct"}
+{"qid": "q0540", "text": "胡浩然在哪家公司工作", "gold": ["m001177"], "type": "direct"}
+{"qid": "q0541", "text": "林宇学的什么专业", "gold": ["m001180"], "type": "direct"}
+{"qid": "q0542", "text": "邹强用什么技术栈", "gold": ["m001190"], "type": "direct"}
+{"qid": "q0543", "text": "夏佳怡爱吃什么菜", "gold": ["m001192"], "type": "direct"}
+{"qid": "q0544", "text": "孙梓萌现在用什么技术", "gold": ["m001194"], "type": "temporal"}
+{"qid": "q0545", "text": "雷天佑的生日是几月几号", "gold": ["m001195"], "type": "direct"}
+{"qid": "q0546", "text": "孙艳住在哪个城市", "gold": ["m001196"], "type": "direct"}
+{"qid": "q0547", "text": "雷梓萌是什么职位", "gold": ["m001197"], "type": "direct"}
+{"qid": "q0548", "text": "范军养了什么宠物", "gold": ["m001198"], "type": "direct"}
+{"qid": "q0549", "text": "于静现在用什么技术", "gold": ["m001199"], "type": "temporal"}
+{"qid": "q0550", "text": "罗子涵住在哪个城市", "gold": ["m001200"], "type": "direct"}
+{"qid": "q0551", "text": "程洋和谁一起打球", "gold": ["m001201", "m001202"], "type": "multi"}
+{"qid": "q0552", "text": "韩宇讨厌什么水果", "gold": ["m001204"], "type": "direct"}
+{"qid": "q0553", "text": "任磊现在住在哪个城市", "gold": ["m001209"], "type": "temporal"}
+{"qid": "q0554", "text": "许欣讨厌什么水果", "gold": ["m001215"], "type": "direct"}
+{"qid": "q0555", "text": "黎霞住在哪个城市", "gold": ["m001216"], "type": "direct"}
+{"qid": "q0556", "text": "雷敏和谁是同事", "gold": ["m001220", "m001221"], "type": "multi"}
+{"qid": "q0557", "text": "熊睿养了什么宠物", "gold": ["m001222"], "type": "direct"}
+{"qid": "q0558", "text": "蒋煦现在更喜欢什么水果", "gold": ["m001224"], "type": "temporal"}
+{"qid": "q0559", "text": "What tech does 郑芳 prefer", "gold": ["m001225"], "type": "direct"}
+{"qid": "q0560", "text": "武杰讨厌什么水果", "gold": ["m001227"], "type": "direct"}
+{"qid": "q0561", "text": "What tech does 黄芳 prefer", "gold": ["m001228"], "type": "direct"}
+{"qid": "q0562", "text": "邹霞住在哪个城市", "gold": ["m001229"], "type": "direct"}
+{"qid": "q0563", "text": "What tech does 杜小红 prefer", "gold": ["m001231"], "type": "direct"}
+{"qid": "q0564", "text": "林梦琪住在哪个城市", "gold": ["m001234"], "type": "direct"}
+{"qid": "q0565", "text": "Which city does 陆洋 live in", "gold": ["m001237"], "type": "direct"}
+{"qid": "q0566", "text": "What tech does 王强 prefer", "gold": ["m001239"], "type": "direct"}
+{"qid": "q0567", "text": "周皓在哪家公司工作", "gold": ["m001241"], "type": "direct"}
+{"qid": "q0568", "text": "姜雨萱用什么技术栈", "gold": ["m001243"], "type": "direct"}
+{"qid": "q0569", "text": "徐思远现在用什么技术", "gold": ["m001244"], "type": "temporal"}
+{"qid": "q0570", "text": "田岚现在住在哪个城市", "gold": ["m001245"], "type": "temporal"}
+{"qid": "q0571", "text": "许澈爱吃什么菜", "gold": ["m001247"], "type": "direct"}
+{"qid": "q0572", "text": "万梦琪做什么工作", "gold": ["m001250"], "type": "direct"}
+{"qid": "q0573", "text": "任望舒用什么技术栈", "gold": ["m001251"], "type": "direct"}
+{"qid": "q0574", "text": "江欣在哪家公司工作", "gold": ["m001257"], "type": "direct"}
+{"qid": "q0575", "text": "谢皓周末做什么运动", "gold": ["m001262"], "type": "direct"}
+{"qid": "q0576", "text": "孔思远在哪家公司工作", "gold": ["m001264"], "type": "direct"}
+{"qid": "q0577", "text": "罗浩然用什么技术栈", "gold": ["m001265"], "type": "direct"}
+{"qid": "q0578", "text": "任宇用什么技术栈", "gold": ["m001266"], "type": "direct"}
+{"qid": "q0579", "text": "任岚现在用什么技术", "gold": ["m001267"], "type": "temporal"}
+{"qid": "q0580", "text": "萧敏和谁是同事", "gold": ["m001271", "m001272"], "type": "multi"}
+{"qid": "q0581", "text": "郝煦用什么技术栈", "gold": ["m001274"], "type": "direct"}
+{"qid": "q0582", "text": "林梦琪现在更喜欢什么水果", "gold": ["m001275"], "type": "temporal"}
+{"qid": "q0583", "text": "汤洋和谁是同事", "gold": ["m001278", "m001279"], "type": "multi"}
+{"qid": "q0584", "text": "潘欣用什么技术栈", "gold": ["m001280"], "type": "direct"}
+{"qid": "q0585", "text": "孔煦现在用什么技术", "gold": ["m001281"], "type": "temporal"}
+{"qid": "q0586", "text": "彭伟和谁是同事", "gold": ["m001285", "m001286"], "type": "multi"}
+{"qid": "q0587", "text": "石子涵住在哪个城市", "gold": ["m001289"], "type": "direct"}
+{"qid": "q0588", "text": "何欣养了什么宠物", "gold": ["m001294"], "type": "direct"}
+{"qid": "q0589", "text": "崔一诺养了什么宠物", "gold": ["m001295"], "type": "direct"}
+{"qid": "q0590", "text": "陆然住在哪个城市", "gold": ["m001296"], "type": "direct"}
+{"qid": "q0591", "text": "董然现在更喜欢什么水果", "gold": ["m001297"], "type": "temporal"}
+{"qid": "q0592", "text": "贾岚的生日是几月几号", "gold": ["m001298"], "type": "direct"}
+{"qid": "q0593", "text": "孟煦现在住在哪个城市", "gold": ["m001299"], "type": "temporal"}
+{"qid": "q0594", "text": "钟澈有什么爱好", "gold": ["m001300"], "type": "direct"}
+{"qid": "q0595", "text": "侯杰学的什么专业", "gold": ["m001304"], "type": "direct"}
+{"qid": "q0596", "text": "张明用什么技术栈", "gold": ["m001305"], "type": "direct"}
+{"qid": "q0597", "text": "江伟现在用什么技术", "gold": ["m001310"], "type": "temporal"}
+{"qid": "q0598", "text": "邹磊现在住在哪个城市", "gold": ["m001312"], "type": "temporal"}
+{"qid": "q0599", "text": "郑磊住在哪个城市", "gold": ["m001313"], "type": "direct"}
+{"qid": "q0600", "text": "Which city does 苏澈 live in", "gold": ["m001314"], "type": "direct"}
+{"qid": "q0601", "text": "石澈在哪家公司工作", "gold": ["m001319"], "type": "direct"}
+{"qid": "q0602", "text": "唐明在哪家公司工作", "gold": ["m001321"], "type": "direct"}
+{"qid": "q0603", "text": "赵宇学的什么专业", "gold": ["m001324"], "type": "direct"}
+{"qid": "q0604", "text": "孙超爱吃什么菜", "gold": ["m001325"], "type": "direct"}
+{"qid": "q0605", "text": "赵洋有什么爱好", "gold": ["m001333"], "type": "direct"}
+{"qid": "q0606", "text": "余梦琪喜欢什么水果", "gold": ["m001334"], "type": "direct"}
+{"qid": "q0607", "text": "张洋周末做什么运动", "gold": ["m001335"], "type": "direct"}
+{"qid": "q0608", "text": "周子涵现在住在哪个城市", "gold": ["m001337"], "type": "temporal"}
+{"qid": "q0609", "text": "侯子涵和谁一起打球", "gold": ["m001343", "m001344"], "type": "multi"}
+{"qid": "q0610", "text": "杜强周末做什么运动", "gold": ["m001345"], "type": "direct"}
+{"qid": "q0611", "text": "莫明的生日是几月几号", "gold": ["m001347"], "type": "direct"}
+{"qid": "q0612", "text": "What tech does 邱佳怡 prefer", "gold": ["m001350"], "type": "direct"}
+{"qid": "q0613", "text": "钟伟讨厌什么水果", "gold": ["m001351"], "type": "direct"}
+{"qid": "q0614", "text": "史小红学的什么专业", "gold": ["m001352"], "type": "direct"}
+{"qid": "q0615", "text": "姚辉住在哪个城市", "gold": ["m001356"], "type": "direct"}
+{"qid": "q0616", "text": "Which city does 孔磊 live in", "gold": ["m001360"], "type": "direct"}
+{"qid": "q0617", "text": "邵娜讨厌什么水果", "gold": ["m001361"], "type": "direct"}
+{"qid": "q0618", "text": "邱艳有什么爱好", "gold": ["m001364"], "type": "direct"}
+{"qid": "q0619", "text": "孙辉有什么爱好", "gold": ["m001366"], "type": "direct"}
+{"qid": "q0620", "text": "孔皓和谁一起打球", "gold": ["m001367", "m001368"], "type": "multi"}
+{"qid": "q0621", "text": "郭雪讨厌什么水果", "gold": ["m001370"], "type": "direct"}
+{"qid": "q0622", "text": "What tech does 万浩然 prefer", "gold": ["m001372"], "type": "direct"}
+{"qid": "q0623", "text": "汪梦琪养了什么宠物", "gold": ["m001375"], "type": "direct"}
+{"qid": "q0624", "text": "万宇喜欢什么水果", "gold": ["m001378"], "type": "direct"}
+{"qid": "q0625", "text": "郝婷在哪家公司工作", "gold": ["m001379"], "type": "direct"}
+{"qid": "q0626", "text": "罗平在哪家公司工作", "gold": ["m001381"], "type": "direct"}
+{"qid": "q0627", "text": "丁澈喜欢什么水果", "gold": ["m001385"], "type": "direct"}
+{"qid": "q0628", "text": "薛明学的什么专业", "gold": ["m001386"], "type": "direct"}
+{"qid": "q0629", "text": "龚小红有什么爱好", "gold": ["m001387"], "type": "direct"}
+{"qid": "q0630", "text": "王子涵是什么职位", "gold": ["m001389"], "type": "direct"}
+{"qid": "q0631", "text": "张娜现在住在哪个城市", "gold": ["m001391"], "type": "temporal"}
+{"qid": "q0632", "text": "于雪现在用什么技术", "gold": ["m001395"], "type": "temporal"}
+{"qid": "q0633", "text": "马婷和谁是同事", "gold": ["m001399", "m001400"], "type": "multi"}
+{"qid": "q0634", "text": "田军和谁一起打球", "gold": ["m001401"], "type": "multi"}
+{"qid": "q0635", "text": "石子涵是什么职位", "gold": ["m001403"], "type": "direct"}
+{"qid": "q0636", "text": "黎雨萱的生日是几月几号", "gold": ["m001406"], "type": "direct"}
+{"qid": "q0637", "text": "Where does 江宇 work", "gold": ["m001407"], "type": "direct"}
+{"qid": "q0638", "text": "毛浩然用什么技术栈", "gold": ["m001410"], "type": "direct"}
+{"qid": "q0639", "text": "Where does 马天佑 work", "gold": ["m001412"], "type": "direct"}
+{"qid": "q0640", "text": "What tech does 钟皓 prefer", "gold": ["m001413"], "type": "direct"}
+{"qid": "q0641", "text": "Where does 马浩然 work", "gold": ["m001414"], "type": "direct"}
+{"qid": "q0642", "text": "郑岚讨厌什么水果", "gold": ["m001417"], "type": "direct"}
+{"qid": "q0643", "text": "潘军现在用什么技术", "gold": ["m001419"], "type": "temporal"}
+{"qid": "q0644", "text": "史子涵是什么职位", "gold": ["m001420"], "type": "direct"}
+{"qid": "q0645", "text": "闫洋讨厌什么水果", "gold": ["m001421"], "type": "direct"}
+{"qid": "q0646", "text": "What tech does 余婷 prefer", "gold": ["m001422"], "type": "direct"}
+{"qid": "q0647", "text": "马天佑做什么工作", "gold": ["m001423"], "type": "direct"}
+{"qid": "q0648", "text": "钱澈周末做什么运动", "gold": ["m001427"], "type": "direct"}
+{"qid": "q0649", "text": "余强现在更喜欢什么水果", "gold": ["m001428"], "type": "temporal"}
+{"qid": "q0650", "text": "戴婷在哪家公司工作", "gold": ["m001432"], "type": "direct"}
+{"qid": "q0651", "text": "付雪爱吃什么菜", "gold": ["m001433"], "type": "direct"}
+{"qid": "q0652", "text": "石伟爱吃什么菜", "gold": ["m001434"], "type": "direct"}
+{"qid": "q0653", "text": "闫强住在哪个城市", "gold": ["m001438"], "type": "direct"}
+{"qid": "q0654", "text": "韩望舒喜欢什么水果", "gold": ["m001439"], "type": "direct"}
+{"qid": "q0655", "text": "何一诺用什么技术栈", "gold": ["m001441"], "type": "direct"}
+{"qid": "q0656", "text": "许军是什么职位", "gold": ["m001447"], "type": "direct"}
+{"qid": "q0657", "text": "张子涵住在哪个城市", "gold": ["m001448"], "type": "direct"}
+{"qid": "q0658", "text": "Which city does 袁雨萱 live in", "gold": ["m001450"], "type": "direct"}
+{"qid": "q0659", "text": "龙小明在哪家公司工作", "gold": ["m001453"], "type": "direct"}
+{"qid": "q0660", "text": "于岚是什么职位", "gold": ["m001455"], "type": "direct"}
+{"qid": "q0661", "text": "雷煦做什么工作", "gold": ["m001457"], "type": "direct"}
+{"qid": "q0662", "text": "戴然住在哪个城市", "gold": ["m001459"], "type": "direct"}
+{"qid": "q0663", "text": "孔超和谁是同事", "gold": ["m001461"], "type": "multi"}
+{"qid": "q0664", "text": "于一诺现在住在哪个城市", "gold": ["m001463"], "type": "temporal"}
+{"qid": "q0665", "text": "宋一诺是什么职位", "gold": ["m001465"], "type": "direct"}
+{"qid": "q0666", "text": "苏敏用什么技术栈", "gold": ["m001469"], "type": "direct"}
+{"qid": "q0667", "text": "冯雨萱有什么爱好", "gold": ["m001472"], "type": "direct"}
+{"qid": "q0668", "text": "萧静和谁一起打球", "gold": ["m001473"], "type": "multi"}
+{"qid": "q0669", "text": "唐洋现在用什么技术", "gold": ["m001477"], "type": "temporal"}
+{"qid": "q0670", "text": "林睿现在用什么技术", "gold": ["m001478"], "type": "temporal"}
+{"qid": "q0671", "text": "沈敏现在用什么技术", "gold": ["m001482"], "type": "temporal"}
+{"qid": "q0672", "text": "龚霞有什么爱好", "gold": ["m001485"], "type": "direct"}
+{"qid": "q0673", "text": "张娜住在哪个城市", "gold": ["m001487"], "type": "direct"}
+{"qid": "q0674", "text": "孙思远现在用什么技术", "gold": ["m001489"], "type": "temporal"}
+{"qid": "q0675", "text": "杜艳学的什么专业", "gold": ["m001491"], "type": "direct"}
+{"qid": "q0676", "text": "梁芳现在住在哪个城市", "gold": ["m001492"], "type": "temporal"}
+{"qid": "q0677", "text": "Where does 程天佑 work", "gold": ["m001493"], "type": "direct"}
+{"qid": "q0678", "text": "李天佑周末做什么运动", "gold": ["m001494"], "type": "direct"}
+{"qid": "q0679", "text": "罗梓萌学的什么专业", "gold": ["m001495"], "type": "direct"}
+{"qid": "q0680", "text": "蔡娜用什么技术栈", "gold": ["m001496"], "type": "direct"}
+{"qid": "q0681", "text": "汪雪现在住在哪个城市", "gold": ["m001497"], "type": "temporal"}
+{"qid": "q0682", "text": "江思远喜欢什么水果", "gold": ["m001498"], "type": "direct"}
+{"qid": "q0683", "text": "曹欣现在更喜欢什么水果", "gold": ["m001502"], "type": "temporal"}
+{"qid": "q0684", "text": "毛超住在哪个城市", "gold": ["m001503"], "type": "direct"}
+{"qid": "q0685", "text": "毛浩然爱吃什么菜", "gold": ["m001506"], "type": "direct"}
+{"qid": "q0686", "text": "沈军和谁是同事", "gold": ["m001508", "m001509"], "type": "multi"}
+{"qid": "q0687", "text": "梁煦用什么技术栈", "gold": ["m001513"], "type": "direct"}
+{"qid": "q0688", "text": "叶军喜欢什么水果", "gold": ["m001515"], "type": "direct"}
+{"qid": "q0689", "text": "付霞现在用什么技术", "gold": ["m001516"], "type": "temporal"}
+{"qid": "q0690", "text": "林洋用什么技术栈", "gold": ["m001517"], "type": "direct"}
+{"qid": "q0691", "text": "夏皓养了什么宠物", "gold": ["m001523"], "type": "direct"}
+{"qid": "q0692", "text": "What tech does 付军 prefer", "gold": ["m001524"], "type": "direct"}
+{"qid": "q0693", "text": "严雨萱做什么工作", "gold": ["m001525"], "type": "direct"}
+{"qid": "q0694", "text": "杨雨萱在哪家公司工作", "gold": ["m001527"], "type": "direct"}
+{"qid": "q0695", "text": "杜佳怡做什么工作", "gold": ["m001530"], "type": "direct"}
+{"qid": "q0696", "text": "Where does 卢小红 work", "gold": ["m001533"], "type": "direct"}
+{"qid": "q0697", "text": "龚思远做什么工作", "gold": ["m001534"], "type": "direct"}
+{"qid": "q0698", "text": "谢皓用什么技术栈", "gold": ["m001537"], "type": "direct"}
+{"qid": "q0699", "text": "石梦琪现在住在哪个城市", "gold": ["m001539"], "type": "temporal"}
+{"qid": "q0700", "text": "魏涛养了什么宠物", "gold": ["m001540"], "type": "direct"}
+{"qid": "q0701", "text": "刘一诺学的什么专业", "gold": ["m001543"], "type": "direct"}
+{"qid": "q0702", "text": "宋煦在哪家公司工作", "gold": ["m001544"], "type": "direct"}
+{"qid": "q0703", "text": "陈浩然喜欢什么水果", "gold": ["m001545"], "type": "direct"}
+{"qid": "q0704", "text": "莫明和谁是同事", "gold": ["m001546", "m001547"], "type": "multi"}
+{"qid": "q0705", "text": "刘敏养了什么宠物", "gold": ["m001549"], "type": "direct"}
+{"qid": "q0706", "text": "万超养了什么宠物", "gold": ["m001550"], "type": "direct"}
+{"qid": "q0707", "text": "戴恩现在更喜欢什么水果", "gold": ["m001551"], "type": "temporal"}
+{"qid": "q0708", "text": "What tech does 龙娜 prefer", "gold": ["m001552"], "type": "direct"}
+{"qid": "q0709", "text": "邓霞有什么爱好", "gold": ["m001553"], "type": "direct"}
+{"qid": "q0710", "text": "钟芳养了什么宠物", "gold": ["m001554"], "type": "direct"}
+{"qid": "q0711", "text": "蔡浩然是什么职位", "gold": ["m001559"], "type": "direct"}
+{"qid": "q0712", "text": "李宇的生日是几月几号", "gold": ["m001560"], "type": "direct"}
+{"qid": "q0713", "text": "梁敏和谁是同事", "gold": ["m001563", "m001564"], "type": "multi"}
+{"qid": "q0714", "text": "姚小明爱吃什么菜", "gold": ["m001566"], "type": "direct"}
+{"qid": "q0715", "text": "What tech does 侯皓 prefer", "gold": ["m001568"], "type": "direct"}
+{"qid": "q0716", "text": "侯强周末做什么运动", "gold": ["m001569"], "type": "direct"}
+{"qid": "q0717", "text": "彭敏喜欢什么水果", "gold": ["m001571"], "type": "direct"}
+{"qid": "q0718", "text": "郭煦周末做什么运动", "gold": ["m001575"], "type": "direct"}
+{"qid": "q0719", "text": "吴梓萌现在住在哪个城市", "gold": ["m001577"], "type": "temporal"}
+{"qid": "q0720", "text": "熊然用什么技术栈", "gold": ["m001578"], "type": "direct"}
+{"qid": "q0721", "text": "田睿的生日是几月几号", "gold": ["m001584"], "type": "direct"}
+{"qid": "q0722", "text": "张洋现在更喜欢什么水果", "gold": ["m001586"], "type": "temporal"}
+{"qid": "q0723", "text": "谭静现在用什么技术", "gold": ["m001588"], "type": "temporal"}
+{"qid": "q0724", "text": "周敏讨厌什么水果", "gold": ["m001589"], "type": "direct"}
+{"qid": "q0725", "text": "谢强学的什么专业", "gold": ["m001590"], "type": "direct"}
+{"qid": "q0726", "text": "姚小明讨厌什么水果", "gold": ["m001592"], "type": "direct"}
+{"qid": "q0727", "text": "闫平住在哪个城市", "gold": ["m001594"], "type": "direct"}
+{"qid": "q0728", "text": "邹梦琪现在更喜欢什么水果", "gold": ["m001595"], "type": "temporal"}
+{"qid": "q0729", "text": "韦煦现在用什么技术", "gold": ["m001597"], "type": "temporal"}
+{"qid": "q0730", "text": "钱睿用什么技术栈", "gold": ["m001598"], "type": "direct"}
+{"qid": "q0731", "text": "袁艳有什么爱好", "gold": ["m001599"], "type": "direct"}
+{"qid": "q0732", "text": "于杰和谁是同事", "gold": ["m001603", "m001604"], "type": "multi"}
+{"qid": "q0733", "text": "陶磊喜欢什么水果", "gold": ["m001609"], "type": "direct"}
+{"qid": "q0734", "text": "曾天佑现在住在哪个城市", "gold": ["m001611"], "type": "temporal"}
+{"qid": "q0735", "text": "龙澈和谁是同事", "gold": ["m001614", "m001615"], "type": "multi"}
+{"qid": "q0736", "text": "丁天佑用什么技术栈", "gold": ["m001616"], "type": "direct"}
+{"qid": "q0737", "text": "万涛喜欢什么水果", "gold": ["m001617"], "type": "direct"}
+{"qid": "q0738", "text": "向军养了什么宠物", "gold": ["m001618"], "type": "direct"}
+{"qid": "q0739", "text": "潘霞用什么技术栈", "gold": ["m001620"], "type": "direct"}
+{"qid": "q0740", "text": "李娜用什么技术栈", "gold": ["m001622"], "type": "direct"}
+{"qid": "q0741", "text": "龚洋现在住在哪个城市", "gold": ["m001623"], "type": "temporal"}
+{"qid": "q0742", "text": "严涛在哪家公司工作", "gold": ["m001628"], "type": "direct"}
+{"qid": "q0743", "text": "姚杰养了什么宠物", "gold": ["m001632"], "type": "direct"}
+{"qid": "q0744", "text": "金婷现在住在哪个城市", "gold": ["m001635"], "type": "temporal"}
+{"qid": "q0745", "text": "董婷的生日是几月几号", "gold": ["m001637"], "type": "direct"}
+{"qid": "q0746", "text": "崔洋讨厌什么水果", "gold": ["m001639"], "type": "direct"}
+{"qid": "q0747", "text": "杨霞住在哪个城市", "gold": ["m001641"], "type": "direct"}
+{"qid": "q0748", "text": "汪皓住在哪个城市", "gold": ["m001642"], "type": "direct"}
+{"qid": "q0749", "text": "熊欣养了什么宠物", "gold": ["m001643"], "type": "direct"}
+{"qid": "q0750", "text": "白然喜欢什么水果", "gold": ["m001644"], "type": "direct"}
+{"qid": "q0751", "text": "孟芳现在更喜欢什么水果", "gold": ["m001646"], "type": "temporal"}
+{"qid": "q0752", "text": "史然做什么工作", "gold": ["m001647"], "type": "direct"}
+{"qid": "q0753", "text": "朱芳现在用什么技术", "gold": ["m001648"], "type": "temporal"}
+{"qid": "q0754", "text": "陶军在哪家公司工作", "gold": ["m001649"], "type": "direct"}
+{"qid": "q0755", "text": "胡婷学的什么专业", "gold": ["m001650"], "type": "direct"}
+{"qid": "q0756", "text": "金子涵爱吃什么菜", "gold": ["m001651"], "type": "direct"}
+{"qid": "q0757", "text": "姜天佑住在哪个城市", "gold": ["m001653"], "type": "direct"}
+{"qid": "q0758", "text": "Where does 史煦 work", "gold": ["m001655"], "type": "direct"}
+{"qid": "q0759", "text": "何小红用什么技术栈", "gold": ["m001656"], "type": "direct"}
+{"qid": "q0760", "text": "孔敏爱吃什么菜", "gold": ["m001657"], "type": "direct"}
+{"qid": "q0761", "text": "郑睿喜欢什么水果", "gold": ["m001663"], "type": "direct"}
+{"qid": "q0762", "text": "黄雨萱讨厌什么水果", "gold": ["m001666"], "type": "direct"}
+{"qid": "q0763", "text": "石子涵住在哪个城市", "gold": ["m001669"], "type": "direct"}
+{"qid": "q0764", "text": "闫一诺有什么爱好", "gold": ["m001670"], "type": "direct"}
+{"qid": "q0765", "text": "What tech does 陆明 prefer", "gold": ["m001671"], "type": "direct"}
+{"qid": "q0766", "text": "雷杰爱吃什么菜", "gold": ["m001674"], "type": "direct"}
+{"qid": "q0767", "text": "What tech does 龙军 prefer", "gold": ["m001676"], "type": "direct"}
+{"qid": "q0768", "text": "冯皓讨厌什么水果", "gold": ["m001679"], "type": "direct"}
+{"qid": "q0769", "text": "魏敏学的什么专业", "gold": ["m001681"], "type": "direct"}
+{"qid": "q0770", "text": "侯艳周末做什么运动", "gold": ["m001682"], "type": "direct"}
+{"qid": "q0771", "text": "陶艳讨厌什么水果", "gold": ["m001684"], "type": "direct"}
+{"qid": "q0772", "text": "汪小明学的什么专业", "gold": ["m001685"], "type": "direct"}
+{"qid": "q0773", "text": "莫佳怡做什么工作", "gold": ["m001689"], "type": "direct"}
+{"qid": "q0774", "text": "方思远讨厌什么水果", "gold": ["m001692"], "type": "direct"}
+{"qid": "q0775", "text": "陆梓萌和谁是同事", "gold": ["m001696", "m001697"], "type": "multi"}
+{"qid": "q0776", "text": "曹佳怡学的什么专业", "gold": ["m001698"], "type": "direct"}
+{"qid": "q0777", "text": "孔静现在用什么技术", "gold": ["m001699"], "type": "temporal"}
+{"qid": "q0778", "text": "Which city does 郝辉 live in", "gold": ["m001701"], "type": "direct"}
+{"qid": "q0779", "text": "尹磊现在住在哪个城市", "gold": ["m001702"], "type": "temporal"}
+{"qid": "q0780", "text": "邱欣爱吃什么菜", "gold": ["m001703"], "type": "direct"}
+{"qid": "q0781", "text": "刘睿现在用什么技术", "gold": ["m001704"], "type": "temporal"}
+{"qid": "q0782", "text": "邹天佑的生日是几月几号", "gold": ["m001705"], "type": "direct"}
+{"qid": "q0783", "text": "谭一诺有什么爱好", "gold": ["m001707"], "type": "direct"}
+{"qid": "q0784", "text": "What tech does 万恩 prefer", "gold": ["m001708"], "type": "direct"}
+{"qid": "q0785", "text": "姜思远现在用什么技术", "gold": ["m001709"], "type": "temporal"}
+{"qid": "q0786", "text": "付娜讨厌什么水果", "gold": ["m001715"], "type": "direct"}
+{"qid": "q0787", "text": "尹霞和谁一起打球", "gold": ["m001717", "m001718"], "type": "multi"}
+{"qid": "q0788", "text": "陈睿的生日是几月几号", "gold": ["m001720"], "type": "direct"}
+{"qid": "q0789", "text": "雷佳怡喜欢什么水果", "gold": ["m001722"], "type": "direct"}
+{"qid": "q0790", "text": "蔡辉做什么工作", "gold": ["m001724"], "type": "direct"}
+{"qid": "q0791", "text": "莫娜和谁一起打球", "gold": ["m001725", "m001726"], "type": "multi"}
+{"qid": "q0792", "text": "袁敏周末做什么运动", "gold": ["m001727"], "type": "direct"}
+{"qid": "q0793", "text": "陈芳爱吃什么菜", "gold": ["m001728"], "type": "direct"}
+{"qid": "q0794", "text": "高霞养了什么宠物", "gold": ["m001732"], "type": "direct"}
+{"qid": "q0795", "text": "钱强用什么技术栈", "gold": ["m001733"], "type": "direct"}
+{"qid": "q0796", "text": "薛娜的生日是几月几号", "gold": ["m001735"], "type": "direct"}
+{"qid": "q0797", "text": "胡芳养了什么宠物", "gold": ["m001740"], "type": "direct"}
+{"qid": "q0798", "text": "Where does 白思远 work", "gold": ["m001741"], "type": "direct"}
+{"qid": "q0799", "text": "何雪在哪家公司工作", "gold": ["m001742"], "type": "direct"}
+{"qid": "q0800", "text": "吕天佑讨厌什么水果", "gold": ["m001746"], "type": "direct"}
+{"qid": "q0801", "text": "曾恩养了什么宠物", "gold": ["m001749"], "type": "direct"}
+{"qid": "q0802", "text": "严芳和谁是同事", "gold": ["m001750", "m001751"], "type": "multi"}
+{"qid": "q0803", "text": "蒋静在哪家公司工作", "gold": ["m001753"], "type": "direct"}
+{"qid": "q0804", "text": "萧洋和谁是同事", "gold": ["m001754"], "type": "multi"}
+{"qid": "q0805", "text": "龙小红和谁一起打球", "gold": ["m001755", "m001756"], "type": "multi"}
+{"qid": "q0806", "text": "刘雪有什么爱好", "gold": ["m001757"], "type": "direct"}
+{"qid": "q0807", "text": "黄睿和谁是同事", "gold": ["m001760", "m001761"], "type": "multi"}
+{"qid": "q0808", "text": "郑敏和谁是同事", "gold": ["m001762", "m001763"], "type": "multi"}
+{"qid": "q0809", "text": "叶然现在住在哪个城市", "gold": ["m001764"], "type": "temporal"}
+{"qid": "q0810", "text": "苏睿在哪家公司工作", "gold": ["m001765"], "type": "direct"}
+{"qid": "q0811", "text": "刘睿是什么职位", "gold": ["m001767"], "type": "direct"}
+{"qid": "q0812", "text": "熊杰养了什么宠物", "gold": ["m001772"], "type": "direct"}
+{"qid": "q0813", "text": "邵军和谁一起打球", "gold": ["m001774", "m001775"], "type": "multi"}
+{"qid": "q0814", "text": "侯浩然现在用什么技术", "gold": ["m001776"], "type": "temporal"}
+{"qid": "q0815", "text": "孟欣现在住在哪个城市", "gold": ["m001777"], "type": "temporal"}
+{"qid": "q0816", "text": "唐天佑现在住在哪个城市", "gold": ["m001782"], "type": "temporal"}
+{"qid": "q0817", "text": "叶思远讨厌什么水果", "gold": ["m001783"], "type": "direct"}
+{"qid": "q0818", "text": "龚娜现在住在哪个城市", "gold": ["m001785"], "type": "temporal"}
+{"qid": "q0819", "text": "武思远周末做什么运动", "gold": ["m001786"], "type": "direct"}
+{"qid": "q0820", "text": "冯艳和谁一起打球", "gold": ["m001789", "m001790"], "type": "multi"}
+{"qid": "q0821", "text": "吴天佑和谁是同事", "gold": ["m001794", "m001795"], "type": "multi"}
+{"qid": "q0822", "text": "罗然讨厌什么水果", "gold": ["m001796"], "type": "direct"}
+{"qid": "q0823", "text": "林洋周末做什么运动", "gold": ["m001797"], "type": "direct"}
+{"qid": "q0824", "text": "武平住在哪个城市", "gold": ["m001802"], "type": "direct"}
+{"qid": "q0825", "text": "白澈周末做什么运动", "gold": ["m001803"], "type": "direct"}
+{"qid": "q0826", "text": "张佳怡住在哪个城市", "gold": ["m001804"], "type": "direct"}
+{"qid": "q0827", "text": "邱澈周末做什么运动", "gold": ["m001805"], "type": "direct"}
+{"qid": "q0828", "text": "叶梦琪和谁一起打球", "gold": ["m001807", "m001808"], "type": "multi"}
+{"qid": "q0829", "text": "Which city does 龚磊 live in", "gold": ["m001809"], "type": "direct"}
+{"qid": "q0830", "text": "谢静在哪家公司工作", "gold": ["m001810"], "type": "direct"}
+{"qid": "q0831", "text": "谭望舒有什么爱好", "gold": ["m001813"], "type": "direct"}
+{"qid": "q0832", "text": "袁思远爱吃什么菜", "gold": ["m001814"], "type": "direct"}
+{"qid": "q0833", "text": "龙望舒现在更喜欢什么水果", "gold": ["m001815"], "type": "temporal"}
+{"qid": "q0834", "text": "梁天佑有什么爱好", "gold": ["m001816"], "type": "direct"}
+{"qid": "q0835", "text": "周天佑爱吃什么菜", "gold": ["m001822"], "type": "direct"}
+{"qid": "q0836", "text": "徐霞讨厌什么水果", "gold": ["m001823"], "type": "direct"}
+{"qid": "q0837", "text": "高磊学的什么专业", "gold": ["m001824"], "type": "direct"}
+{"qid": "q0838", "text": "雷伟现在更喜欢什么水果", "gold": ["m001828"], "type": "temporal"}
+{"qid": "q0839", "text": "袁子涵和谁一起打球", "gold": ["m001832", "m001833"], "type": "multi"}
+{"qid": "q0840", "text": "丁然喜欢什么水果", "gold": ["m001837"], "type": "direct"}
+{"qid": "q0841", "text": "尹婷在哪家公司工作", "gold": ["m001842"], "type": "direct"}
+{"qid": "q0842", "text": "陆宇现在住在哪个城市", "gold": ["m001843"], "type": "temporal"}
+{"qid": "q0843", "text": "袁恩爱吃什么菜", "gold": ["m001847"], "type": "direct"}
+{"qid": "q0844", "text": "孔思远学的什么专业", "gold": ["m001849"], "type": "direct"}
+{"qid": "q0845", "text": "赵敏学的什么专业", "gold": ["m001853"], "type": "direct"}
+{"qid": "q0846", "text": "覃澈做什么工作", "gold": ["m001856"], "type": "direct"}
+{"qid": "q0847", "text": "陈一诺现在更喜欢什么水果", "gold": ["m001857"], "type": "temporal"}
+{"qid": "q0848", "text": "于皓是什么职位", "gold": ["m001859"], "type": "direct"}
+{"qid": "q0849", "text": "胡澈现在用什么技术", "gold": ["m001860"], "type": "temporal"}
+{"qid": "q0850", "text": "崔煦有什么爱好", "gold": ["m001865"], "type": "direct"}
+{"qid": "q0851", "text": "尹恩现在用什么技术", "gold": ["m001866"], "type": "temporal"}
+{"qid": "q0852", "text": "毛平的生日是几月几号", "gold": ["m001867"], "type": "direct"}
+{"qid": "q0853", "text": "侯宇是什么职位", "gold": ["m001871"], "type": "direct"}
+{"qid": "q0854", "text": "董涛现在住在哪个城市", "gold": ["m001872"], "type": "temporal"}
+{"qid": "q0855", "text": "梁佳怡和谁一起打球", "gold": ["m001874"], "type": "multi"}
+{"qid": "q0856", "text": "刘岚周末做什么运动", "gold": ["m001878"], "type": "direct"}
+{"qid": "q0857", "text": "毛小红做什么工作", "gold": ["m001880"], "type": "direct"}
+{"qid": "q0858", "text": "What tech does 朱睿 prefer", "gold": ["m001881"], "type": "direct"}
+{"qid": "q0859", "text": "What tech does 万强 prefer", "gold": ["m001887"], "type": "direct"}
+{"qid": "q0860", "text": "谢子涵住在哪个城市", "gold": ["m001888"], "type": "direct"}
+{"qid": "q0861", "text": "孟辉住在哪个城市", "gold": ["m001890"], "type": "direct"}
+{"qid": "q0862", "text": "沈浩然喜欢什么水果", "gold": ["m001896"], "type": "direct"}
+{"qid": "q0863", "text": "秦涛在哪家公司工作", "gold": ["m001899"], "type": "direct"}
+{"qid": "q0864", "text": "程霞和谁一起打球", "gold": ["m001903", "m001904"], "type": "multi"}
+{"qid": "q0865", "text": "袁然在哪家公司工作", "gold": ["m001905"], "type": "direct"}
+{"qid": "q0866", "text": "林然有什么爱好", "gold": ["m001908"], "type": "direct"}
+{"qid": "q0867", "text": "孙超是什么职位", "gold": ["m001910"], "type": "direct"}
+{"qid": "q0868", "text": "谢杰现在更喜欢什么水果", "gold": ["m001911"], "type": "temporal"}
+{"qid": "q0869", "text": "王澈讨厌什么水果", "gold": ["m001914"], "type": "direct"}
+{"qid": "q0870", "text": "姚涛在哪家公司工作", "gold": ["m001915"], "type": "direct"}
+{"qid": "q0871", "text": "苏强现在住在哪个城市", "gold": ["m001916"], "type": "temporal"}
+{"qid": "q0872", "text": "石澈有什么爱好", "gold": ["m001917"], "type": "direct"}
+{"qid": "q0873", "text": "叶明现在更喜欢什么水果", "gold": ["m001920"], "type": "temporal"}
+{"qid": "q0874", "text": "侯雪现在更喜欢什么水果", "gold": ["m001922"], "type": "temporal"}
+{"qid": "q0875", "text": "田婷爱吃什么菜", "gold": ["m001923"], "type": "direct"}
+{"qid": "q0876", "text": "史皓用什么技术栈", "gold": ["m001924"], "type": "direct"}
+{"qid": "q0877", "text": "What tech does 向涛 prefer", "gold": ["m001925"], "type": "direct"}
+{"qid": "q0878", "text": "徐梦琪住在哪个城市", "gold": ["m001928"], "type": "direct"}
+{"qid": "q0879", "text": "龚浩然有什么爱好", "gold": ["m001935"], "type": "direct"}
+{"qid": "q0880", "text": "江子涵在哪家公司工作", "gold": ["m001936"], "type": "direct"}
+{"qid": "q0881", "text": "邵杰在哪家公司工作", "gold": ["m001938"], "type": "direct"}
+{"qid": "q0882", "text": "龚雪和谁是同事", "gold": ["m001940", "m001941"], "type": "multi"}
+{"qid": "q0883", "text": "侯小明现在住在哪个城市", "gold": ["m001944"], "type": "temporal"}
+{"qid": "q0884", "text": "孟芳爱吃什么菜", "gold": ["m001945"], "type": "direct"}
+{"qid": "q0885", "text": "What tech does 梁静 prefer", "gold": ["m001946"], "type": "direct"}
+{"qid": "q0886", "text": "薛雨萱住在哪个城市", "gold": ["m001948"], "type": "direct"}
+{"qid": "q0887", "text": "邵梓萌是什么职位", "gold": ["m001949"], "type": "direct"}
+{"qid": "q0888", "text": "What tech does 胡望舒 prefer", "gold": ["m001952"], "type": "direct"}
+{"qid": "q0889", "text": "邱小红学的什么专业", "gold": ["m001954"], "type": "direct"}
+{"qid": "q0890", "text": "程天佑现在住在哪个城市", "gold": ["m001956"], "type": "temporal"}
+{"qid": "q0891", "text": "徐静用什么技术栈", "gold": ["m001963"], "type": "direct"}
+{"qid": "q0892", "text": "白梓萌学的什么专业", "gold": ["m001964"], "type": "direct"}
+{"qid": "q0893", "text": "毛小红周末做什么运动", "gold": ["m001966"], "type": "direct"}
+{"qid": "q0894", "text": "任欣学的什么专业", "gold": ["m001978"], "type": "direct"}
+{"qid": "q0895", "text": "许皓和谁一起打球", "gold": ["m001984"], "type": "multi"}
+{"qid": "q0896", "text": "田然现在住在哪个城市", "gold": ["m001985"], "type": "temporal"}
+{"qid": "q0897", "text": "丁澈和谁一起打球", "gold": ["m001990", "m001991"], "type": "multi"}
+{"qid": "q0898", "text": "孙辉现在住在哪个城市", "gold": ["m001992"], "type": "temporal"}
+{"qid": "q0899", "text": "叶岚现在住在哪个城市", "gold": ["m001993"], "type": "temporal"}
+{"qid": "q0900", "text": "万芳和谁一起打球", "gold": ["m001995", "m001996"], "type": "multi"}
+{"qid": "q0901", "text": "丁欣在哪家公司工作", "gold": ["m001997"], "type": "direct"}
+{"qid": "q0902", "text": "彭望舒在哪家公司工作", "gold": ["m001999"], "type": "direct"}
+{"qid": "q0903", "text": "Which city does 曾杰 live in", "gold": ["m002000"], "type": "direct"}
+{"qid": "q0904", "text": "周宇现在更喜欢什么水果", "gold": ["m002005"], "type": "temporal"}
+{"qid": "q0905", "text": "唐睿周末做什么运动", "gold": ["m002006"], "type": "direct"}
+{"qid": "q0906", "text": "付煦现在住在哪个城市", "gold": ["m002008"], "type": "temporal"}
+{"qid": "q0907", "text": "尹睿现在更喜欢什么水果", "gold": ["m002009"], "type": "temporal"}
+{"qid": "q0908", "text": "魏辉讨厌什么水果", "gold": ["m002013"], "type": "direct"}
+{"qid": "q0909", "text": "闫岚养了什么宠物", "gold": ["m002014"], "type": "direct"}
+{"qid": "q0910", "text": "韦伟讨厌什么水果", "gold": ["m002018"], "type": "direct"}
+{"qid": "q0911", "text": "严伟喜欢什么水果", "gold": ["m002019"], "type": "direct"}
+{"qid": "q0912", "text": "龚平在哪家公司工作", "gold": ["m002020"], "type": "direct"}
+{"qid": "q0913", "text": "姚小红周末做什么运动", "gold": ["m002023"], "type": "direct"}
+{"qid": "q0914", "text": "贺霞讨厌什么水果", "gold": ["m002025"], "type": "direct"}
+{"qid": "q0915", "text": "黄娜在哪家公司工作", "gold": ["m002027"], "type": "direct"}
+{"qid": "q0916", "text": "许伟周末做什么运动", "gold": ["m002028"], "type": "direct"}
+{"qid": "q0917", "text": "吴梓萌现在用什么技术", "gold": ["m002032"], "type": "temporal"}
+{"qid": "q0918", "text": "孙军的生日是几月几号", "gold": ["m002033"], "type": "direct"}
+{"qid": "q0919", "text": "宋小红在哪家公司工作", "gold": ["m002034"], "type": "direct"}
+{"qid": "q0920", "text": "方涛的生日是几月几号", "gold": ["m002035"], "type": "direct"}
+{"qid": "q0921", "text": "萧宇的生日是几月几号", "gold": ["m002036"], "type": "direct"}
+{"qid": "q0922", "text": "严娜和谁一起打球", "gold": ["m002039", "m002040"], "type": "multi"}
+{"qid": "q0923", "text": "廖超做什么工作", "gold": ["m002044"], "type": "direct"}
+{"qid": "q0924", "text": "叶强是什么职位", "gold": ["m002045"], "type": "direct"}
+{"qid": "q0925", "text": "郭强养了什么宠物", "gold": ["m002046"], "type": "direct"}
+{"qid": "q0926", "text": "夏芳和谁一起打球", "gold": ["m002047", "m002048"], "type": "multi"}
+{"qid": "q0927", "text": "胡军做什么工作", "gold": ["m002052"], "type": "direct"}
+{"qid": "q0928", "text": "魏欣现在用什么技术", "gold": ["m002054"], "type": "temporal"}
+{"qid": "q0929", "text": "闫梓萌学的什么专业", "gold": ["m002055"], "type": "direct"}
+{"qid": "q0930", "text": "余杰养了什么宠物", "gold": ["m002056"], "type": "direct"}
+{"qid": "q0931", "text": "顾静爱吃什么菜", "gold": ["m002058"], "type": "direct"}
+{"qid": "q0932", "text": "顾芳现在住在哪个城市", "gold": ["m002059"], "type": "temporal"}
+{"qid": "q0933", "text": "覃超现在住在哪个城市", "gold": ["m002064"], "type": "temporal"}
+{"qid": "q0934", "text": "邹静做什么工作", "gold": ["m002075"], "type": "direct"}
+{"qid": "q0935", "text": "蒋强和谁是同事", "gold": ["m002077", "m002078"], "type": "multi"}
+{"qid": "q0936", "text": "汤辉喜欢什么水果", "gold": ["m002079"], "type": "direct"}
+{"qid": "q0937", "text": "邹佳怡周末做什么运动", "gold": ["m002080"], "type": "direct"}
+{"qid": "q0938", "text": "叶梦琪喜欢什么水果", "gold": ["m002081"], "type": "direct"}
+{"qid": "q0939", "text": "朱明和谁是同事", "gold": ["m002082"], "type": "multi"}
+{"qid": "q0940", "text": "严思远用什么技术栈", "gold": ["m002084"], "type": "direct"}
+{"qid": "q0941", "text": "闫辉用什么技术栈", "gold": ["m002086"], "type": "direct"}
+{"qid": "q0942", "text": "侯洋和谁一起打球", "gold": ["m002089"], "type": "multi"}
+{"qid": "q0943", "text": "Where does 邓辉 work", "gold": ["m002091"], "type": "direct"}
+{"qid": "q0944", "text": "What tech does 高小明 prefer", "gold": ["m002092"], "type": "direct"}
+{"qid": "q0945", "text": "萧娜是什么职位", "gold": ["m002093"], "type": "direct"}
+{"qid": "q0946", "text": "毛强现在更喜欢什么水果", "gold": ["m002094"], "type": "temporal"}
+{"qid": "q0947", "text": "韦涛和谁一起打球", "gold": ["m002095", "m002096"], "type": "multi"}
+{"qid": "q0948", "text": "王芳和谁是同事", "gold": ["m002097", "m002098"], "type": "multi"}
+{"qid": "q0949", "text": "曾磊爱吃什么菜", "gold": ["m002101"], "type": "direct"}
+{"qid": "q0950", "text": "杜望舒学的什么专业", "gold": ["m002104"], "type": "direct"}
+{"qid": "q0951", "text": "余婷养了什么宠物", "gold": ["m002105"], "type": "direct"}
+{"qid": "q0952", "text": "付艳周末做什么运动", "gold": ["m002107"], "type": "direct"}
+{"qid": "q0953", "text": "胡磊爱吃什么菜", "gold": ["m002110"], "type": "direct"}
+{"qid": "q0954", "text": "崔霞现在住在哪个城市", "gold": ["m002112"], "type": "temporal"}
+{"qid": "q0955", "text": "萧浩然爱吃什么菜", "gold": ["m002113"], "type": "direct"}
+{"qid": "q0956", "text": "尹思远在哪家公司工作", "gold": ["m002114"], "type": "direct"}
+{"qid": "q0957", "text": "毛磊爱吃什么菜", "gold": ["m002116"], "type": "direct"}
+{"qid": "q0958", "text": "闫澈住在哪个城市", "gold": ["m002117"], "type": "direct"}
+{"qid": "q0959", "text": "秦天佑现在更喜欢什么水果", "gold": ["m002119"], "type": "temporal"}
+{"qid": "q0960", "text": "魏磊和谁一起打球", "gold": ["m002124", "m002125"], "type": "multi"}
+{"qid": "q0961", "text": "江超喜欢什么水果", "gold": ["m002129"], "type": "direct"}
+{"qid": "q0962", "text": "郭杰现在用什么技术", "gold": ["m002130"], "type": "temporal"}
+{"qid": "q0963", "text": "姜芳学的什么专业", "gold": ["m002131"], "type": "direct"}
+{"qid": "q0964", "text": "莫静现在住在哪个城市", "gold": ["m002132"], "type": "temporal"}
+{"qid": "q0965", "text": "白澈喜欢什么水果", "gold": ["m002134"], "type": "direct"}
+{"qid": "q0966", "text": "郭涛养了什么宠物", "gold": ["m002135"], "type": "direct"}
+{"qid": "q0967", "text": "何静讨厌什么水果", "gold": ["m002137"], "type": "direct"}
+{"qid": "q0968", "text": "莫军用什么技术栈", "gold": ["m002141"], "type": "direct"}
+{"qid": "q0969", "text": "崔恩讨厌什么水果", "gold": ["m002142"], "type": "direct"}
+{"qid": "q0970", "text": "王皓是什么职位", "gold": ["m002144"], "type": "direct"}
+{"qid": "q0971", "text": "杨岚的生日是几月几号", "gold": ["m002145"], "type": "direct"}
+{"qid": "q0972", "text": "龙敏和谁是同事", "gold": ["m002146", "m002147"], "type": "multi"}
+{"qid": "q0973", "text": "潘梓萌现在更喜欢什么水果", "gold": ["m002148"], "type": "temporal"}
+{"qid": "q0974", "text": "魏天佑现在用什么技术", "gold": ["m002151"], "type": "temporal"}
+{"qid": "q0975", "text": "曹宇学的什么专业", "gold": ["m002153"], "type": "direct"}
+{"qid": "q0976", "text": "Where does 邵杰 work", "gold": ["m002155"], "type": "direct"}
+{"qid": "q0977", "text": "程皓住在哪个城市", "gold": ["m002156"], "type": "direct"}
+{"qid": "q0978", "text": "白芳现在用什么技术", "gold": ["m002157"], "type": "temporal"}
+{"qid": "q0979", "text": "万皓爱吃什么菜", "gold": ["m002160"], "type": "direct"}
+{"qid": "q0980", "text": "What tech does 顾军 prefer", "gold": ["m002163"], "type": "direct"}
+{"qid": "q0981", "text": "段敏是什么职位", "gold": ["m002166"], "type": "direct"}
+{"qid": "q0982", "text": "龚强住在哪个城市", "gold": ["m002169"], "type": "direct"}
+{"qid": "q0983", "text": "莫超住在哪个城市", "gold": ["m002175"], "type": "direct"}
+{"qid": "q0984", "text": "吕望舒周末做什么运动", "gold": ["m002178"], "type": "direct"}
+{"qid": "q0985", "text": "韦皓喜欢什么水果", "gold": ["m002179"], "type": "direct"}
+{"qid": "q0986", "text": "钱芳现在用什么技术", "gold": ["m002180"], "type": "temporal"}
+{"qid": "q0987", "text": "袁小明喜欢什么水果", "gold": ["m002181"], "type": "direct"}
+{"qid": "q0988", "text": "吕思远现在住在哪个城市", "gold": ["m002182"], "type": "temporal"}
+{"qid": "q0989", "text": "于雨萱讨厌什么水果", "gold": ["m002185"], "type": "direct"}
+{"qid": "q0990", "text": "王伟做什么工作", "gold": ["m002187"], "type": "direct"}
+{"qid": "q0991", "text": "郝望舒在哪家公司工作", "gold": ["m002188"], "type": "direct"}
+{"qid": "q0992", "text": "万恩现在用什么技术", "gold": ["m002190"], "type": "temporal"}
+{"qid": "q0993", "text": "武伟和谁是同事", "gold": ["m002191", "m002192"], "type": "multi"}
+{"qid": "q0994", "text": "邓佳怡和谁是同事", "gold": ["m002193", "m002194"], "type": "multi"}
+{"qid": "q0995", "text": "蒋睿住在哪个城市", "gold": ["m002196"], "type": "direct"}
+{"qid": "q0996", "text": "彭子涵是什么职位", "gold": ["m002198"], "type": "direct"}
+{"qid": "q0997", "text": "闫小明学的什么专业", "gold": ["m002202"], "type": "direct"}
+{"qid": "q0998", "text": "徐磊爱吃什么菜", "gold": ["m002204"], "type": "direct"}
+{"qid": "q0999", "text": "万磊有什么爱好", "gold": ["m002208"], "type": "direct"}
+{"qid": "q1000", "text": "卢煦喜欢什么水果", "gold": ["m002209"], "type": "direct"}
+{"qid": "q1001", "text": "What tech does 何宇 prefer", "gold": ["m002234"], "type": "direct"}
+{"qid": "q1002", "text": "Where does 武睿 work", "gold": ["m002293"], "type": "direct"}
+{"qid": "q1003", "text": "Which city does 许然 live in", "gold": ["m002324"], "type": "direct"}
+{"qid": "q1004", "text": "Which city does 杨娜 live in", "gold": ["m002340"], "type": "direct"}
+{"qid": "q1005", "text": "What tech does 熊望舒 prefer", "gold": ["m002381"], "type": "direct"}
+{"qid": "q1006", "text": "Which city does 贺霞 live in", "gold": ["m002390"], "type": "direct"}
+{"qid": "q1007", "text": "Where does 武雪 work", "gold": ["m002409"], "type": "direct"}
+{"qid": "q1008", "text": "Which city does 冯煦 live in", "gold": ["m002473"], "type": "direct"}
+{"qid": "q1009", "text": "Where does 黎皓 work", "gold": ["m002508"], "type": "direct"}
+{"qid": "q1010", "text": "Where does 范娜 work", "gold": ["m002518"], "type": "direct"}
+{"qid": "q1011", "text": "What tech does 万子涵 prefer", "gold": ["m002557"], "type": "direct"}
+{"qid": "q1012", "text": "What tech does 冯天佑 prefer", "gold": ["m002607"], "type": "direct"}
+{"qid": "q1013", "text": "Where does 董望舒 work", "gold": ["m002691"], "type": "direct"}
+{"qid": "q1014", "text": "Which city does 郝婷 live in", "gold": ["m002720"], "type": "direct"}
+{"qid": "q1015", "text": "What tech does 武澈 prefer", "gold": ["m002729"], "type": "direct"}
+{"qid": "q1016", "text": "What tech does 许强 prefer", "gold": ["m002730"], "type": "direct"}
+{"qid": "q1017", "text": "What tech does 萧一诺 prefer", "gold": ["m002756"], "type": "direct"}
+{"qid": "q1018", "text": "Which city does 宋澈 live in", "gold": ["m002769"], "type": "direct"}
+{"qid": "q1019", "text": "Where does 刘梦琪 work", "gold": ["m002850"], "type": "direct"}
+{"qid": "q1020", "text": "Which city does 姜芳 live in", "gold": ["m002887"], "type": "direct"}
+{"qid": "q1021", "text": "Which city does 邱小红 live in", "gold": ["m002915"], "type": "direct"}
+{"qid": "q1022", "text": "Which city does 张洋 live in", "gold": ["m002927"], "type": "direct"}
+{"qid": "q1023", "text": "What tech does 贾婷 prefer", "gold": ["m002971"], "type": "direct"}
+{"qid": "q1024", "text": "Where does 汪婷 work", "gold": ["m002981"], "type": "direct"}
+{"qid": "q1025", "text": "What tech does 孔超 prefer", "gold": ["m002983"], "type": "direct"}
+{"qid": "q1026", "text": "Where does 向皓 work", "gold": ["m003013"], "type": "direct"}
+{"qid": "q1027", "text": "Which city does 廖皓 live in", "gold": ["m003038"], "type": "direct"}
+{"qid": "q1028", "text": "Where does 沈辉 work", "gold": ["m003042"], "type": "direct"}
+{"qid": "q1029", "text": "Where does 钟平 work", "gold": ["m003043"], "type": "direct"}
+{"qid": "q1030", "text": "Which city does 朱望舒 live in", "gold": ["m003096"], "type": "direct"}
+{"qid": "q1031", "text": "What tech does 何娜 prefer", "gold": ["m003159"], "type": "direct"}
+{"qid": "q1032", "text": "Where does 付恩 work", "gold": ["m003242"], "type": "direct"}
+{"qid": "q1033", "text": "Which city does 熊煦 live in", "gold": ["m003244"], "type": "direct"}
+{"qid": "q1034", "text": "Where does 彭杰 work", "gold": ["m003271"], "type": "direct"}
+{"qid": "q1035", "text": "What tech does 蒋芳 prefer", "gold": ["m003322"], "type": "direct"}
+{"qid": "q1036", "text": "Which city does 高洋 live in", "gold": ["m003345"], "type": "direct"}
+{"qid": "q1037", "text": "Which city does 叶涛 live in", "gold": ["m003388"], "type": "direct"}
+{"qid": "q1038", "text": "Where does 白强 work", "gold": ["m003438"], "type": "direct"}
+{"qid": "q1039", "text": "What tech does 毛雨萱 prefer", "gold": ["m003474"], "type": "direct"}
+{"qid": "q1040", "text": "What tech does 宋思远 prefer", "gold": ["m003476"], "type": "direct"}
+{"qid": "q1041", "text": "Which city does 胡小红 live in", "gold": ["m003519"], "type": "direct"}
+{"qid": "q1042", "text": "Where does 吕岚 work", "gold": ["m003551"], "type": "direct"}
+{"qid": "q1043", "text": "Which city does 郑睿 live in", "gold": ["m003568"], "type": "direct"}
+{"qid": "q1044", "text": "Which city does 毛梦琪 live in", "gold": ["m003569"], "type": "direct"}
+{"qid": "q1045", "text": "Where does 吕静 work", "gold": ["m003660"], "type": "direct"}
+{"qid": "q1046", "text": "What tech does 吕芳 prefer", "gold": ["m003686"], "type": "direct"}
+{"qid": "q1047", "text": "What tech does 孔磊 prefer", "gold": ["m003800"], "type": "direct"}
+{"qid": "q1048", "text": "Which city does 曹静 live in", "gold": ["m003886"], "type": "direct"}
+{"qid": "q1049", "text": "Which city does 万恩 live in", "gold": ["m003943"], "type": "direct"}
+{"qid": "q1050", "text": "What tech does 史宇 prefer", "gold": ["m003973"], "type": "direct"}
+{"qid": "q1051", "text": "Where does 蒋佳怡 work", "gold": ["m004002"], "type": "direct"}
+{"qid": "q1052", "text": "Which city does 方欣 live in", "gold": ["m004010"], "type": "direct"}
+{"qid": "q1053", "text": "What tech does 段宇 prefer", "gold": ["m004031"], "type": "direct"}
+{"qid": "q1054", "text": "Where does 夏芳 work", "gold": ["m004168"], "type": "direct"}
+{"qid": "q1055", "text": "Which city does 曾天佑 live in", "gold": ["m004190"], "type": "direct"}
+{"qid": "q1056", "text": "Which city does 吴杰 live in", "gold": ["m004201"], "type": "direct"}
+{"qid": "q1057", "text": "What tech does 林天佑 prefer", "gold": ["m004203"], "type": "direct"}
+{"qid": "q1058", "text": "What tech does 向欣 prefer", "gold": ["m004224"], "type": "direct"}
+{"qid": "q1059", "text": "Where does 史欣 work", "gold": ["m004265"], "type": "direct"}
+{"qid": "q1060", "text": "What tech does 胡敏 prefer", "gold": ["m004320"], "type": "direct"}
+{"qid": "q1061", "text": "Where does 林然 work", "gold": ["m004391"], "type": "direct"}
+{"qid": "q1062", "text": "Where does 梁艳 work", "gold": ["m004407"], "type": "direct"}
+{"qid": "q1063", "text": "What tech does 罗望舒 prefer", "gold": ["m004468"], "type": "direct"}
+{"qid": "q1064", "text": "Which city does 何小红 live in", "gold": ["m004490"], "type": "direct"}
+{"qid": "q1065", "text": "Where does 武睿 work", "gold": ["m004494"], "type": "direct"}
+{"qid": "q1066", "text": "What tech does 汪辉 prefer", "gold": ["m004522"], "type": "direct"}
+{"qid": "q1067", "text": "Which city does 白浩然 live in", "gold": ["m004559"], "type": "direct"}
+{"qid": "q1068", "text": "Which city does 陆一诺 live in", "gold": ["m004583"], "type": "direct"}
+{"qid": "q1069", "text": "Where does 侯雨萱 work", "gold": ["m004608"], "type": "direct"}
+{"qid": "q1070", "text": "Which city does 董一诺 live in", "gold": ["m004672"], "type": "direct"}
+{"qid": "q1071", "text": "Which city does 黄明 live in", "gold": ["m004697"], "type": "direct"}
+{"qid": "q1072", "text": "Which city does 董雪 live in", "gold": ["m004775"], "type": "direct"}
+{"qid": "q1073", "text": "Where does 冯思远 work", "gold": ["m004780"], "type": "direct"}
+{"qid": "q1074", "text": "What tech does 邵子涵 prefer", "gold": ["m004785"], "type": "direct"}
+{"qid": "q1075", "text": "What tech does 马恩 prefer", "gold": ["m004794"], "type": "direct"}
+{"qid": "q1076", "text": "What tech does 贾煦 prefer", "gold": ["m004796"], "type": "direct"}
+{"qid": "q1077", "text": "What tech does 孔子涵 prefer", "gold": ["m004803"], "type": "direct"}
+{"qid": "q1078", "text": "Which city does 贾军 live in", "gold": ["m004812"], "type": "direct"}
+{"qid": "q1079", "text": "What tech does 钱霞 prefer", "gold": ["m004836"], "type": "direct"}
+{"qid": "q1080", "text": "What tech does 薛洋 prefer", "gold": ["m004859"], "type": "direct"}
+{"qid": "q1081", "text": "Which city does 邵杰 live in", "gold": ["m004860"], "type": "direct"}
+{"qid": "q1082", "text": "Where does 雷梦琪 work", "gold": ["m004862"], "type": "direct"}
+{"qid": "q1083", "text": "What tech does 杜磊 prefer", "gold": ["m004906"], "type": "direct"}
+{"qid": "q1084", "text": "Where does 龚娜 work", "gold": ["m004913"], "type": "direct"}
+{"qid": "q1085", "text": "What tech does 魏杰 prefer", "gold": ["m004920"], "type": "direct"}
+{"qid": "q1086", "text": "Where does 邱伟 work", "gold": ["m004932"], "type": "direct"}
+{"qid": "q1087", "text": "Which city does 廖梓萌 live in", "gold": ["m004959"], "type": "direct"}
+{"qid": "q1088", "text": "What tech does 谭然 prefer", "gold": ["m004960"], "type": "direct"}

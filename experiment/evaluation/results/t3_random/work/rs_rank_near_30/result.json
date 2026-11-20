@@ -1,0 +1,50 @@
+{
+ "dataset": "medium",
+ "n_memories": 5000,
+ "top_k": 10,
+ "overrides": {
+  "ranking.semantic": 0.3917,
+  "ranking.importance": 0.0397,
+  "ranking.freshness": 0.0874,
+  "ranking.weight": 0.1289,
+  "ranking.decay": 0.0841,
+  "ranking.hit_count": 0.0379,
+  "ranking.recency": 0.0661,
+  "ranking.region": 0.1642
+ },
+ "build_s": 39.4,
+ "metrics": {
+  "n_queries": 1088,
+  "hit@1": 0.1912,
+  "recall@1": 0.1843,
+  "hit@3": 0.2656,
+  "recall@3": 0.2583,
+  "hit@5": 0.2996,
+  "recall@5": 0.2904,
+  "hit@10": 0.3557,
+  "recall@10": 0.346,
+  "mrr": 0.239,
+  "ndcg@10": 0.2614,
+  "composite": 0.2552,
+  "lat_p50_ms": 23.18,
+  "lat_p95_ms": 33.73,
+  "lat_mean_ms": 24.03
+ },
+ "by_type": {
+  "direct": {
+   "n": 815,
+   "hit@3": 0.319,
+   "mrr": 0.2833
+  },
+  "temporal": {
+   "n": 164,
+   "hit@3": 0.0488,
+   "mrr": 0.0508
+  },
+  "multi": {
+   "n": 109,
+   "hit@3": 0.1927,
+   "mrr": 0.191
+  }
+ }
+}

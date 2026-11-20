@@ -1,0 +1,43 @@
+{
+ "dataset": "dureader_uni",
+ "n_memories": 2885,
+ "top_k": 10,
+ "overrides": {
+  "embedding.provider": "fastembed",
+  "embedding.model": "BAAI/bge-small-zh-v1.5",
+  "embedding.dim": 512,
+  "ranking.semantic": 1.0,
+  "ranking.importance": 0.0,
+  "ranking.freshness": 0.0,
+  "ranking.weight": 0.0,
+  "ranking.decay": 0.0,
+  "ranking.hit_count": 0.0,
+  "ranking.recency": 0.0,
+  "ranking.region": 0.0
+ },
+ "build_s": 407.2,
+ "metrics": {
+  "n_queries": 242,
+  "hit@1": 0.3967,
+  "recall@1": 0.1603,
+  "hit@3": 0.7686,
+  "recall@3": 0.443,
+  "hit@5": 0.8884,
+  "recall@5": 0.6251,
+  "hit@10": 0.9752,
+  "recall@10": 0.8916,
+  "mrr": 0.5988,
+  "ndcg@10": 0.6448,
+  "composite": 0.6782,
+  "lat_p50_ms": 45.76,
+  "lat_p95_ms": 79.66,
+  "lat_mean_ms": 43.65
+ },
+ "by_type": {
+  "direct": {
+   "n": 242,
+   "hit@3": 0.7686,
+   "mrr": 0.5988
+  }
+ }
+}

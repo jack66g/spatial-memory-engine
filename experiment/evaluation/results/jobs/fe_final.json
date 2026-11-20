@@ -1,0 +1,82 @@
+[
+ {
+  "name": "fe_baseline",
+  "overrides": {
+   "embedding.provider": "fastembed",
+   "embedding.model": "BAAI/bge-small-zh-v1.5",
+   "embedding.dim": 512
+  }
+ },
+ {
+  "name": "fe_sem2",
+  "overrides": {
+   "embedding.provider": "fastembed",
+   "embedding.model": "BAAI/bge-small-zh-v1.5",
+   "embedding.dim": 512,
+   "ranking.semantic": 0.8,
+   "ranking.importance": 0.04,
+   "ranking.freshness": 0.0333,
+   "ranking.weight": 0.0333,
+   "ranking.decay": 0.0267,
+   "ranking.hit_count": 0.0267,
+   "ranking.recency": 0.02,
+   "ranking.region": 0.02
+  }
+ },
+ {
+  "name": "fe_pure",
+  "overrides": {
+   "embedding.provider": "fastembed",
+   "embedding.model": "BAAI/bge-small-zh-v1.5",
+   "embedding.dim": 512,
+   "ranking.semantic": 1.0,
+   "ranking.importance": 0.0,
+   "ranking.freshness": 0.0,
+   "ranking.weight": 0.0,
+   "ranking.decay": 0.0,
+   "ranking.hit_count": 0.0,
+   "ranking.recency": 0.0,
+   "ranking.region": 0.0
+  }
+ },
+ {
+  "name": "fe_sem2_dynoff",
+  "overrides": {
+   "embedding.provider": "fastembed",
+   "embedding.model": "BAAI/bge-small-zh-v1.5",
+   "embedding.dim": 512,
+   "ranking.semantic": 0.8,
+   "ranking.importance": 0.04,
+   "ranking.freshness": 0.0333,
+   "ranking.weight": 0.0333,
+   "ranking.decay": 0.0267,
+   "ranking.hit_count": 0.0267,
+   "ranking.recency": 0.02,
+   "ranking.region": 0.02,
+   "policy.decay_enabled": false,
+   "decay.max_weight_decay": 0.0
+  }
+ },
+ {
+  "name": "fe_united_old",
+  "overrides": {
+   "embedding.provider": "fastembed",
+   "embedding.model": "BAAI/bge-small-zh-v1.5",
+   "embedding.dim": 512,
+   "policy.decay_enabled": false,
+   "decay.max_weight_decay": 0.0,
+   "retrieval.keyword_candidates": 20,
+   "retrieval.top_regions": 1,
+   "retrieval.vector_weight": 0.0,
+   "retrieval.keyword_weight": 0.3,
+   "ranking.semantic": 1.0,
+   "ranking.importance": 0.0,
+   "ranking.freshness": 0.0,
+   "ranking.weight": 0.0,
+   "ranking.decay": 0.0,
+   "ranking.hit_count": 0.0,
+   "ranking.recency": 0.0,
+   "ranking.region": 0.0
+  }
+ }
+]

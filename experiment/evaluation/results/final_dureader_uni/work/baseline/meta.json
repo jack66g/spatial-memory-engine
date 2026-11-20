@@ -1,0 +1,29 @@
+{
+ "name": "baseline",
+ "overrides": {},
+ "wall_s": 34.3,
+ "returncode": 0,
+ "n_queries": 242,
+ "hit@1": 0.1364,
+ "recall@1": 0.0411,
+ "hit@3": 0.2521,
+ "recall@3": 0.1005,
+ "hit@5": 0.3099,
+ "recall@5": 0.1319,
+ "hit@10": 0.3636,
+ "recall@10": 0.1754,
+ "mrr": 0.208,
+ "ndcg@10": 0.145,
+ "composite": 0.2099,
+ "lat_p50_ms": 27.91,
+ "lat_p95_ms": 38.72,
+ "lat_mean_ms": 29.31,
+ "by_type": {
+  "direct": {
+   "n": 242,
+   "hit@3": 0.2521,
+   "mrr": 0.208
+  }
+ },
+ "status": "ok"
+}

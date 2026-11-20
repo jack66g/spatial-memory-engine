@@ -64,7 +64,7 @@ class UserProfile:
         ):
             if memory.id not in self.profile_facts:
                 self.profile_facts.append(memory.id)
-            memory.tags = list(set(memory.tags + [PROFILE_TAG]))
+            memory.tags = sorted(set(memory.tags + [PROFILE_TAG]))  # 排序保证快照/导出 diff 稳定
             self._write_count += 1
             if self._write_count >= self.config.snapshot_every:
                 self.snapshot(ns=memory.metadata.get("ns"))

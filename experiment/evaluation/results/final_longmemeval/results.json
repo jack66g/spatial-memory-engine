@@ -1,0 +1,46 @@
+[
+ {
+  "name": "final_united",
+  "overrides": {
+   "policy.decay_enabled": false,
+   "decay.max_weight_decay": 0.0,
+   "retrieval.keyword_candidates": 20,
+   "retrieval.top_regions": 1,
+   "retrieval.vector_weight": 0.0,
+   "retrieval.keyword_weight": 0.3,
+   "ranking.semantic": 1.0,
+   "ranking.importance": 0.0,
+   "ranking.freshness": 0.0,
+   "ranking.weight": 0.0,
+   "ranking.decay": 0.0,
+   "ranking.hit_count": 0.0,
+   "ranking.recency": 0.0,
+   "ranking.region": 0.0
+  },
+  "wall_s": 3.5,
+  "returncode": 0,
+  "n_queries": 24,
+  "hit@1": 0.5417,
+  "recall@1": 0.3472,
+  "hit@3": 0.8333,
+  "recall@3": 0.6667,
+  "hit@5": 0.875,
+  "recall@5": 0.7014,
+  "hit@10": 0.875,
+  "recall@10": 0.7986,
+  "mrr": 0.675,
+  "ndcg@10": 0.676,
+  "composite": 0.7386,
+  "lat_p50_ms": 8.9,
+  "lat_p95_ms": 11.62,
+  "lat_mean_ms": 8.67,
+  "by_type": {
+   "temporal": {
+    "n": 24,
+    "hit@3": 0.8333,
+    "mrr": 0.675
+   }
+  },
+  "status": "ok"
+ }
+]

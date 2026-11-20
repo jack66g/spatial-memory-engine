@@ -12,6 +12,8 @@ subsystems.
 
 from __future__ import annotations
 
+import math
+
 from typing import Any, Iterable, Optional
 
 from sme.dynamics.archive import ArchiveManager
@@ -32,6 +34,18 @@ from sme.dynamics.reinforcement import EbbinghausReinforcement
 from sme.modules.namespaces import NS_KEY
 from sme.space.space import SpatialMemorySpace
 from sme.utils import now
+
+
+def _check_encodable_text(text: str) -> None:
+    """孤立代理字符（lone surrogate）无法 UTF-8 编码：落库后 BM25/快照序列化
+    才会炸（P4）。在写入口直接拒绝，报错信息指明原因而不是裸 UnicodeEncodeError。"""
+    try:
+        text.encode("utf-8")
+    except UnicodeEncodeError as exc:
+        raise ValueError(
+            "text contains invalid unicode (lone surrogate), "
+            "which cannot be stored: " + repr(text[:30])
+        ) from exc
 
 
 class MemoryManager:
@@ -60,6 +74,14 @@ class MemoryManager:
         self.on_delete = on_delete
         self.memories: dict[str, Memory] = {}
 
+    @staticmethod
+    def _clamp01(value: float, field: str) -> float:
+        """NaN/inf 先拦再 clamp：min/max 对 NaN 恒返回 NaN（P2-2 根因）。"""
+        v = float(value)
+        if not math.isfinite(v):
+            raise ValueError(f"{field} must be a finite number, got {value!r}")
+        return min(max(v, 0.0), 1.0)
+
     # ------------------------------------------------------------------ #
     # add
     # ------------------------------------------------------------------ #
@@ -77,6 +99,7 @@ class MemoryManager:
     ) -> Memory:
         if not text or not text.strip():
             raise ValueError("memory text must not be empty")
+        _check_encodable_text(text)
         vector = embedding
         if vector is None:
             vector = self.embeddings.embed_one(text)
@@ -85,7 +108,7 @@ class MemoryManager:
             text=text,
             metadata=metadata or {},
             tags=list(tags or []),
-            importance=min(max(importance, 0.0), 1.0),
+            importance=self._clamp01(importance, "importance"),
             embedding=vector,
             source=source,
         )
@@ -103,7 +126,7 @@ class MemoryManager:
                 # 每条独立拷贝：共享同一 dict 对象会让改一条的 metadata 漏到全部
                 metadata=dict(kwargs.get("metadata", {}) or {}),
                 tags=list(kwargs.get("tags", []) or []),
-                importance=kwargs.get("importance", 0.5),
+                importance=self._clamp01(kwargs.get("importance", 0.5), "importance"),
                 embedding=vector,
                 source=kwargs.get("source", "user"),
             )
@@ -134,6 +157,11 @@ class MemoryManager:
         memory = self.require(memory_id)
         changed = False
         index_change = False
+        if text is not None and not text.strip():
+            # SDK 路径补齐 REST 同款校验：空白文本不允许覆盖已有内容（P3-8）
+            raise ValueError("memory text must not be empty")
+        if text is not None:
+            _check_encodable_text(text)
         if text is not None and text.strip() != memory.text:
             vector = self.embeddings.embed_one(text)
             memory.text = text
@@ -157,9 +185,11 @@ class MemoryManager:
             memory.tags = tags
             changed = True
         if importance is not None and importance != memory.importance:
-            memory.importance = min(max(importance, 0.0), 1.0)
+            memory.importance = self._clamp01(importance, "importance")
             changed = True
         if weight is not None and weight != memory.weight:
+            if not math.isfinite(weight):
+                raise ValueError(f"weight must be a finite number, got {weight!r}")
             memory.weight = max(0.0, weight)
             changed = True
         if summary is not None and summary != memory.summary:
@@ -258,7 +288,9 @@ class MemoryManager:
     # ------------------------------------------------------------------ #
     def require(self, memory_id: str) -> Memory:
         if memory_id not in self.memories:
-            raise KeyError(f"memory {memory_id} not found")
+            # ValueError 而非 KeyError（P4）：裸 KeyError 对 SDK 用户是噪音;
+            # REST 层统一捕获转 404
+            raise ValueError(f"memory {memory_id} not found")
         return self.memories[memory_id]
 
     def get(self, memory_id: str) -> Optional[Memory]:

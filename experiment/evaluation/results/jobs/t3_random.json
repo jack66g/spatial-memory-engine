@@ -1,0 +1,1334 @@
+[
+ {
+  "name": "t3_baseline",
+  "overrides": {}
+ },
+ {
+  "name": "rs_rank_near_00",
+  "overrides": {
+   "ranking.semantic": 0.535,
+   "ranking.importance": 0.1183,
+   "ranking.freshness": 0.0621,
+   "ranking.weight": 0.059,
+   "ranking.decay": 0.1048,
+   "ranking.hit_count": 0.0473,
+   "ranking.recency": 0.0496,
+   "ranking.region": 0.0239
+  }
+ },
+ {
+  "name": "rs_rank_near_01",
+  "overrides": {
+   "ranking.semantic": 0.3928,
+   "ranking.importance": 0.1766,
+   "ranking.freshness": 0.1861,
+   "ranking.weight": 0.0814,
+   "ranking.decay": 0.0197,
+   "ranking.hit_count": 0.0176,
+   "ranking.recency": 0.068,
+   "ranking.region": 0.0578
+  }
+ },
+ {
+  "name": "rs_rank_near_02",
+  "overrides": {
+   "ranking.semantic": 0.02,
+   "ranking.importance": 0.02,
+   "ranking.freshness": 0.02,
+   "ranking.weight": 0.02,
+   "ranking.decay": 0.86,
+   "ranking.hit_count": 0.02,
+   "ranking.recency": 0.02,
+   "ranking.region": 0.02
+  }
+ },
+ {
+  "name": "rs_rank_near_03",
+  "overrides": {
+   "ranking.semantic": 0.3155,
+   "ranking.importance": 0.0158,
+   "ranking.freshness": 0.179,
+   "ranking.weight": 0.2385,
+   "ranking.decay": 0.0609,
+   "ranking.hit_count": 0.099,
+   "ranking.recency": 0.0413,
+   "ranking.region": 0.0499
+  }
+ },
+ {
+  "name": "rs_rank_near_04",
+  "overrides": {
+   "ranking.semantic": 0.3558,
+   "ranking.importance": 0.0842,
+   "ranking.freshness": 0.196,
+   "ranking.weight": 0.1513,
+   "ranking.decay": 0.0631,
+   "ranking.hit_count": 0.0541,
+   "ranking.recency": 0.0625,
+   "ranking.region": 0.033
+  }
+ },
+ {
+  "name": "rs_rank_near_05",
+  "overrides": {
+   "ranking.semantic": 0.395,
+   "ranking.importance": 0.2693,
+   "ranking.freshness": 0.0616,
+   "ranking.weight": 0.0307,
+   "ranking.decay": 0.052,
+   "ranking.hit_count": 0.0468,
+   "ranking.recency": 0.0079,
+   "ranking.region": 0.1367
+  }
+ },
+ {
+  "name": "rs_rank_near_06",
+  "overrides": {
+   "ranking.semantic": 0.4287,
+   "ranking.importance": 0.1179,
+   "ranking.freshness": 0.1477,
+   "ranking.weight": 0.0601,
+   "ranking.decay": 0.044,
+   "ranking.hit_count": 0.0958,
+   "ranking.recency": 0.0261,
+   "ranking.region": 0.0796
+  }
+ },
+ {
+  "name": "rs_rank_near_07",
+  "overrides": {
+   "ranking.semantic": 0.02,
+   "ranking.importance": 0.02,
+   "ranking.freshness": 0.02,
+   "ranking.weight": 0.02,
+   "ranking.decay": 0.02,
+   "ranking.hit_count": 0.02,
+   "ranking.recency": 0.86,
+   "ranking.region": 0.02
+  }
+ },
+ {
+  "name": "rs_rank_near_08",
+  "overrides": {
+   "ranking.semantic": 0.4379,
+   "ranking.importance": 0.0547,
+   "ranking.freshness": 0.1027,
+   "ranking.weight": 0.0986,
+   "ranking.decay": 0.0491,
+   "ranking.hit_count": 0.1148,
+   "ranking.recency": 0.0852,
+   "ranking.region": 0.057
+  }
+ },
+ {
+  "name": "rs_rank_near_09",
+  "overrides": {
+   "ranking.semantic": 0.3772,
+   "ranking.importance": 0.1448,
+   "ranking.freshness": 0.1384,
+   "ranking.weight": 0.0595,
+   "ranking.decay": 0.0692,
+   "ranking.hit_count": 0.0459,
+   "ranking.recency": 0.0979,
+   "ranking.region": 0.067
+  }
+ },
+ {
+  "name": "rs_rank_near_10",
+  "overrides": {
+   "ranking.semantic": 0.4544,
+   "ranking.importance": 0.1859,
+   "ranking.freshness": 0.0825,
+   "ranking.weight": 0.0788,
+   "ranking.decay": 0.0515,
+   "ranking.hit_count": 0.0065,
+   "ranking.recency": 0.0955,
+   "ranking.region": 0.0449
+  }
+ },
+ {
+  "name": "rs_rank_near_11",
+  "overrides": {
+   "ranking.semantic": 0.3946,
+   "ranking.importance": 0.154,
+   "ranking.freshness": 0.0657,
+   "ranking.weight": 0.1375,
+   "ranking.decay": 0.0426,
+   "ranking.hit_count": 0.0964,
+   "ranking.recency": 0.0226,
+   "ranking.region": 0.0866
+  }
+ },
+ {
+  "name": "rs_rank_near_12",
+  "overrides": {
+   "ranking.semantic": 0.4304,
+   "ranking.importance": 0.12,
+   "ranking.freshness": 0.0574,
+   "ranking.weight": 0.1211,
+   "ranking.decay": 0.0705,
+   "ranking.hit_count": 0.0301,
+   "ranking.recency": 0.0042,
+   "ranking.region": 0.1663
+  }
+ },
+ {
+  "name": "rs_rank_near_13",
+  "overrides": {
+   "ranking.semantic": 0.02,
+   "ranking.importance": 0.02,
+   "ranking.freshness": 0.86,
+   "ranking.weight": 0.02,
+   "ranking.decay": 0.02,
+   "ranking.hit_count": 0.02,
+   "ranking.recency": 0.02,
+   "ranking.region": 0.02
+  }
+ },
+ {
+  "name": "rs_rank_near_14",
+  "overrides": {
+   "ranking.semantic": 0.02,
+   "ranking.importance": 0.02,
+   "ranking.freshness": 0.02,
+   "ranking.weight": 0.02,
+   "ranking.decay": 0.86,
+   "ranking.hit_count": 0.02,
+   "ranking.recency": 0.02,
+   "ranking.region": 0.02
+  }
+ },
+ {
+  "name": "rs_rank_near_15",
+  "overrides": {
+   "ranking.semantic": 0.1994,
+   "ranking.importance": 0.1476,
+   "ranking.freshness": 0.0679,
+   "ranking.weight": 0.1362,
+   "ranking.decay": 0.1053,
+   "ranking.hit_count": 0.1072,
+   "ranking.recency": 0.1392,
+   "ranking.region": 0.0972
+  }
+ },
+ {
+  "name": "rs_rank_near_16",
+  "overrides": {
+   "ranking.semantic": 0.5436,
+   "ranking.importance": 0.1735,
+   "ranking.freshness": 0.036,
+   "ranking.weight": 0.0557,
+   "ranking.decay": 0.0901,
+   "ranking.hit_count": 0.0819,
+   "ranking.recency": 0.0178,
+   "ranking.region": 0.0013
+  }
+ },
+ {
+  "name": "rs_rank_near_17",
+  "overrides": {
+   "ranking.semantic": 0.5873,
+   "ranking.importance": 0.0585,
+   "ranking.freshness": 0.1243,
+   "ranking.weight": 0.0433,
+   "ranking.decay": 0.0452,
+   "ranking.hit_count": 0.076,
+   "ranking.recency": 0.0407,
+   "ranking.region": 0.0248
+  }
+ },
+ {
+  "name": "rs_rank_near_18",
+  "overrides": {
+   "ranking.semantic": 0.3382,
+   "ranking.importance": 0.1781,
+   "ranking.freshness": 0.056,
+   "ranking.weight": 0.0789,
+   "ranking.decay": 0.1088,
+   "ranking.hit_count": 0.1811,
+   "ranking.recency": 0.0483,
+   "ranking.region": 0.0106
+  }
+ },
+ {
+  "name": "rs_rank_near_19",
+  "overrides": {
+   "ranking.semantic": 0.4313,
+   "ranking.importance": 0.1568,
+   "ranking.freshness": 0.1913,
+   "ranking.weight": 0.0624,
+   "ranking.decay": 0.0599,
+   "ranking.hit_count": 0.0399,
+   "ranking.recency": 0.0201,
+   "ranking.region": 0.0382
+  }
+ },
+ {
+  "name": "rs_rank_near_20",
+  "overrides": {
+   "ranking.semantic": 0.3882,
+   "ranking.importance": 0.0812,
+   "ranking.freshness": 0.0787,
+   "ranking.weight": 0.0269,
+   "ranking.decay": 0.0789,
+   "ranking.hit_count": 0.0897,
+   "ranking.recency": 0.1376,
+   "ranking.region": 0.1189
+  }
+ },
+ {
+  "name": "rs_rank_near_21",
+  "overrides": {
+   "ranking.semantic": 0.3845,
+   "ranking.importance": 0.1729,
+   "ranking.freshness": 0.0258,
+   "ranking.weight": 0.0262,
+   "ranking.decay": 0.1584,
+   "ranking.hit_count": 0.0847,
+   "ranking.recency": 0.0194,
+   "ranking.region": 0.128
+  }
+ },
+ {
+  "name": "rs_rank_near_22",
+  "overrides": {
+   "ranking.semantic": 0.4491,
+   "ranking.importance": 0.157,
+   "ranking.freshness": 0.1019,
+   "ranking.weight": 0.0887,
+   "ranking.decay": 0.0606,
+   "ranking.hit_count": 0.0346,
+   "ranking.recency": 0.083,
+   "ranking.region": 0.0252
+  }
+ },
+ {
+  "name": "rs_rank_near_23",
+  "overrides": {
+   "ranking.semantic": 0.382,
+   "ranking.importance": 0.0755,
+   "ranking.freshness": 0.1415,
+   "ranking.weight": 0.1016,
+   "ranking.decay": 0.14,
+   "ranking.hit_count": 0.0507,
+   "ranking.recency": 0.0649,
+   "ranking.region": 0.0438
+  }
+ },
+ {
+  "name": "rs_rank_near_24",
+  "overrides": {
+   "ranking.semantic": 0.3306,
+   "ranking.importance": 0.184,
+   "ranking.freshness": 0.0979,
+   "ranking.weight": 0.1125,
+   "ranking.decay": 0.1237,
+   "ranking.hit_count": 0.0603,
+   "ranking.recency": 0.0027,
+   "ranking.region": 0.0883
+  }
+ },
+ {
+  "name": "rs_rank_near_25",
+  "overrides": {
+   "ranking.semantic": 0.4882,
+   "ranking.importance": 0.1489,
+   "ranking.freshness": 0.0416,
+   "ranking.weight": 0.091,
+   "ranking.decay": 0.0754,
+   "ranking.hit_count": 0.0768,
+   "ranking.recency": 0.0353,
+   "ranking.region": 0.0428
+  }
+ },
+ {
+  "name": "rs_rank_near_26",
+  "overrides": {
+   "ranking.semantic": 0.3587,
+   "ranking.importance": 0.1204,
+   "ranking.freshness": 0.0676,
+   "ranking.weight": 0.068,
+   "ranking.decay": 0.0825,
+   "ranking.hit_count": 0.1701,
+   "ranking.recency": 0.0605,
+   "ranking.region": 0.0722
+  }
+ },
+ {
+  "name": "rs_rank_near_27",
+  "overrides": {
+   "ranking.semantic": 0.1586,
+   "ranking.importance": 0.2886,
+   "ranking.freshness": 0.2547,
+   "ranking.weight": 0.0705,
+   "ranking.decay": 0.0846,
+   "ranking.hit_count": 0.0452,
+   "ranking.recency": 0.0878,
+   "ranking.region": 0.0101
+  }
+ },
+ {
+  "name": "rs_rank_near_28",
+  "overrides": {
+   "ranking.semantic": 0.5329,
+   "ranking.importance": 0.0692,
+   "ranking.freshness": 0.076,
+   "ranking.weight": 0.0909,
+   "ranking.decay": 0.0768,
+   "ranking.hit_count": 0.0282,
+   "ranking.recency": 0.0179,
+   "ranking.region": 0.1081
+  }
+ },
+ {
+  "name": "rs_rank_near_29",
+  "overrides": {
+   "ranking.semantic": 0.3847,
+   "ranking.importance": 0.0811,
+   "ranking.freshness": 0.0826,
+   "ranking.weight": 0.0775,
+   "ranking.decay": 0.1362,
+   "ranking.hit_count": 0.0491,
+   "ranking.recency": 0.0931,
+   "ranking.region": 0.0957
+  }
+ },
+ {
+  "name": "rs_rank_near_30",
+  "overrides": {
+   "ranking.semantic": 0.3917,
+   "ranking.importance": 0.0397,
+   "ranking.freshness": 0.0874,
+   "ranking.weight": 0.1289,
+   "ranking.decay": 0.0841,
+   "ranking.hit_count": 0.0379,
+   "ranking.recency": 0.0661,
+   "ranking.region": 0.1642
+  }
+ },
+ {
+  "name": "rs_rank_near_31",
+  "overrides": {
+   "ranking.semantic": 0.4387,
+   "ranking.importance": 0.1131,
+   "ranking.freshness": 0.1155,
+   "ranking.weight": 0.0541,
+   "ranking.decay": 0.1674,
+   "ranking.hit_count": 0.0404,
+   "ranking.recency": 0.0481,
+   "ranking.region": 0.0227
+  }
+ },
+ {
+  "name": "rs_rank_near_32",
+  "overrides": {
+   "ranking.semantic": 0.5051,
+   "ranking.importance": 0.1155,
+   "ranking.freshness": 0.073,
+   "ranking.weight": 0.1389,
+   "ranking.decay": 0.0282,
+   "ranking.hit_count": 0.0533,
+   "ranking.recency": 0.0788,
+   "ranking.region": 0.0072
+  }
+ },
+ {
+  "name": "rs_rank_near_33",
+  "overrides": {
+   "ranking.semantic": 0.6311,
+   "ranking.importance": 0.0353,
+   "ranking.freshness": 0.0876,
+   "ranking.weight": 0.0763,
+   "ranking.decay": 0.0275,
+   "ranking.hit_count": 0.0442,
+   "ranking.recency": 0.0431,
+   "ranking.region": 0.0549
+  }
+ },
+ {
+  "name": "rs_rank_near_34",
+  "overrides": {
+   "ranking.semantic": 0.3071,
+   "ranking.importance": 0.0542,
+   "ranking.freshness": 0.0563,
+   "ranking.weight": 0.1949,
+   "ranking.decay": 0.0903,
+   "ranking.hit_count": 0.0559,
+   "ranking.recency": 0.1961,
+   "ranking.region": 0.0452
+  }
+ },
+ {
+  "name": "rs_rank_near_35",
+  "overrides": {
+   "ranking.semantic": 0.4586,
+   "ranking.importance": 0.2221,
+   "ranking.freshness": 0.146,
+   "ranking.weight": 0.0513,
+   "ranking.decay": 0.0365,
+   "ranking.hit_count": 0.0482,
+   "ranking.recency": 0.0181,
+   "ranking.region": 0.0191
+  }
+ },
+ {
+  "name": "rs_rank_near_36",
+  "overrides": {
+   "ranking.semantic": 0.4322,
+   "ranking.importance": 0.1687,
+   "ranking.freshness": 0.0319,
+   "ranking.weight": 0.1386,
+   "ranking.decay": 0.0761,
+   "ranking.hit_count": 0.0835,
+   "ranking.recency": 0.0245,
+   "ranking.region": 0.0444
+  }
+ },
+ {
+  "name": "rs_rank_near_37",
+  "overrides": {
+   "ranking.semantic": 0.3287,
+   "ranking.importance": 0.2462,
+   "ranking.freshness": 0.0964,
+   "ranking.weight": 0.0722,
+   "ranking.decay": 0.0634,
+   "ranking.hit_count": 0.0561,
+   "ranking.recency": 0.0952,
+   "ranking.region": 0.0419
+  }
+ },
+ {
+  "name": "rs_rank_near_38",
+  "overrides": {
+   "ranking.semantic": 0.3092,
+   "ranking.importance": 0.1119,
+   "ranking.freshness": 0.0446,
+   "ranking.weight": 0.2173,
+   "ranking.decay": 0.1618,
+   "ranking.hit_count": 0.0247,
+   "ranking.recency": 0.0716,
+   "ranking.region": 0.0591
+  }
+ },
+ {
+  "name": "rs_rank_near_39",
+  "overrides": {
+   "ranking.semantic": 0.4656,
+   "ranking.importance": 0.0152,
+   "ranking.freshness": 0.0844,
+   "ranking.weight": 0.0843,
+   "ranking.decay": 0.2237,
+   "ranking.hit_count": 0.0226,
+   "ranking.recency": 0.0766,
+   "ranking.region": 0.0276
+  }
+ },
+ {
+  "name": "rs_rank_near_40",
+  "overrides": {
+   "ranking.semantic": 0.334,
+   "ranking.importance": 0.0846,
+   "ranking.freshness": 0.0949,
+   "ranking.weight": 0.0909,
+   "ranking.decay": 0.1955,
+   "ranking.hit_count": 0.0249,
+   "ranking.recency": 0.1661,
+   "ranking.region": 0.0093
+  }
+ },
+ {
+  "name": "rs_rank_near_41",
+  "overrides": {
+   "ranking.semantic": 0.4616,
+   "ranking.importance": 0.2049,
+   "ranking.freshness": 0.0381,
+   "ranking.weight": 0.0856,
+   "ranking.decay": 0.0504,
+   "ranking.hit_count": 0.0863,
+   "ranking.recency": 0.0535,
+   "ranking.region": 0.0195
+  }
+ },
+ {
+  "name": "rs_rank_near_42",
+  "overrides": {
+   "ranking.semantic": 0.3568,
+   "ranking.importance": 0.1332,
+   "ranking.freshness": 0.1888,
+   "ranking.weight": 0.0317,
+   "ranking.decay": 0.08,
+   "ranking.hit_count": 0.1323,
+   "ranking.recency": 0.0601,
+   "ranking.region": 0.0172
+  }
+ },
+ {
+  "name": "rs_rank_near_43",
+  "overrides": {
+   "ranking.semantic": 0.3498,
+   "ranking.importance": 0.1683,
+   "ranking.freshness": 0.1162,
+   "ranking.weight": 0.0558,
+   "ranking.decay": 0.144,
+   "ranking.hit_count": 0.0166,
+   "ranking.recency": 0.1391,
+   "ranking.region": 0.0102
+  }
+ },
+ {
+  "name": "rs_rank_near_44",
+  "overrides": {
+   "ranking.semantic": 0.4695,
+   "ranking.importance": 0.1618,
+   "ranking.freshness": 0.0361,
+   "ranking.weight": 0.1023,
+   "ranking.decay": 0.081,
+   "ranking.hit_count": 0.105,
+   "ranking.recency": 0.0281,
+   "ranking.region": 0.0162
+  }
+ },
+ {
+  "name": "rs_rank_far_00",
+  "overrides": {
+   "ranking.semantic": 0.5547,
+   "ranking.importance": 0.3669,
+   "ranking.freshness": 0.0763,
+   "ranking.weight": 0.0,
+   "ranking.decay": 0.0001,
+   "ranking.hit_count": 0.0003,
+   "ranking.recency": 0.0,
+   "ranking.region": 0.0017
+  }
+ },
+ {
+  "name": "rs_rank_far_01",
+  "overrides": {
+   "ranking.semantic": 0.0607,
+   "ranking.importance": 0.0022,
+   "ranking.freshness": 0.4474,
+   "ranking.weight": 0.0071,
+   "ranking.decay": 0.0983,
+   "ranking.hit_count": 0.0277,
+   "ranking.recency": 0.0147,
+   "ranking.region": 0.3418
+  }
+ },
+ {
+  "name": "rs_rank_far_02",
+  "overrides": {
+   "ranking.semantic": 0.1477,
+   "ranking.importance": 0.3176,
+   "ranking.freshness": 0.0404,
+   "ranking.weight": 0.0271,
+   "ranking.decay": 0.189,
+   "ranking.hit_count": 0.1926,
+   "ranking.recency": 0.0066,
+   "ranking.region": 0.079
+  }
+ },
+ {
+  "name": "rs_rank_far_03",
+  "overrides": {
+   "ranking.semantic": 0.4511,
+   "ranking.importance": 0.0081,
+   "ranking.freshness": 0.0975,
+   "ranking.weight": 0.0807,
+   "ranking.decay": 0.1979,
+   "ranking.hit_count": 0.1154,
+   "ranking.recency": 0.026,
+   "ranking.region": 0.0233
+  }
+ },
+ {
+  "name": "rs_rank_far_04",
+  "overrides": {
+   "ranking.semantic": 0.3642,
+   "ranking.importance": 0.4259,
+   "ranking.freshness": 0.1214,
+   "ranking.weight": 0.0031,
+   "ranking.decay": 0.0,
+   "ranking.hit_count": 0.0001,
+   "ranking.recency": 0.081,
+   "ranking.region": 0.0042
+  }
+ },
+ {
+  "name": "rs_rank_far_05",
+  "overrides": {
+   "ranking.semantic": 0.3756,
+   "ranking.importance": 0.0512,
+   "ranking.freshness": 0.0619,
+   "ranking.weight": 0.1757,
+   "ranking.decay": 0.0138,
+   "ranking.hit_count": 0.0025,
+   "ranking.recency": 0.0304,
+   "ranking.region": 0.2889
+  }
+ },
+ {
+  "name": "rs_rank_far_06",
+  "overrides": {
+   "ranking.semantic": 0.4656,
+   "ranking.importance": 0.1438,
+   "ranking.freshness": 0.0564,
+   "ranking.weight": 0.0474,
+   "ranking.decay": 0.0,
+   "ranking.hit_count": 0.2105,
+   "ranking.recency": 0.0536,
+   "ranking.region": 0.0227
+  }
+ },
+ {
+  "name": "rs_rank_far_07",
+  "overrides": {
+   "ranking.semantic": 0.1512,
+   "ranking.importance": 0.1518,
+   "ranking.freshness": 0.0818,
+   "ranking.weight": 0.0196,
+   "ranking.decay": 0.0062,
+   "ranking.hit_count": 0.3885,
+   "ranking.recency": 0.1971,
+   "ranking.region": 0.0037
+  }
+ },
+ {
+  "name": "rs_rank_far_08",
+  "overrides": {
+   "ranking.semantic": 0.2155,
+   "ranking.importance": 0.0565,
+   "ranking.freshness": 0.0493,
+   "ranking.weight": 0.0508,
+   "ranking.decay": 0.1922,
+   "ranking.hit_count": 0.2542,
+   "ranking.recency": 0.0,
+   "ranking.region": 0.1814
+  }
+ },
+ {
+  "name": "rs_rank_far_09",
+  "overrides": {
+   "ranking.semantic": 0.8805,
+   "ranking.importance": 0.0021,
+   "ranking.freshness": 0.0206,
+   "ranking.weight": 0.0365,
+   "ranking.decay": 0.0112,
+   "ranking.hit_count": 0.0001,
+   "ranking.recency": 0.049,
+   "ranking.region": 0.0001
+  }
+ },
+ {
+  "name": "rs_rank_far_10",
+  "overrides": {
+   "ranking.semantic": 0.6769,
+   "ranking.importance": 0.0759,
+   "ranking.freshness": 0.1384,
+   "ranking.weight": 0.0157,
+   "ranking.decay": 0.0,
+   "ranking.hit_count": 0.0,
+   "ranking.recency": 0.093,
+   "ranking.region": 0.0
+  }
+ },
+ {
+  "name": "rs_rank_far_11",
+  "overrides": {
+   "ranking.semantic": 0.686,
+   "ranking.importance": 0.2013,
+   "ranking.freshness": 0.0002,
+   "ranking.weight": 0.0036,
+   "ranking.decay": 0.013,
+   "ranking.hit_count": 0.0674,
+   "ranking.recency": 0.0134,
+   "ranking.region": 0.0151
+  }
+ },
+ {
+  "name": "rs_rank_far_12",
+  "overrides": {
+   "ranking.semantic": 0.7692,
+   "ranking.importance": 0.0128,
+   "ranking.freshness": 0.0082,
+   "ranking.weight": 0.1559,
+   "ranking.decay": 0.0202,
+   "ranking.hit_count": 0.0312,
+   "ranking.recency": 0.0,
+   "ranking.region": 0.0024
+  }
+ },
+ {
+  "name": "rs_rank_far_13",
+  "overrides": {
+   "ranking.semantic": 0.0828,
+   "ranking.importance": 0.0193,
+   "ranking.freshness": 0.1232,
+   "ranking.weight": 0.0065,
+   "ranking.decay": 0.7275,
+   "ranking.hit_count": 0.0098,
+   "ranking.recency": 0.0272,
+   "ranking.region": 0.0037
+  }
+ },
+ {
+  "name": "rs_rank_far_14",
+  "overrides": {
+   "ranking.semantic": 0.1836,
+   "ranking.importance": 0.3546,
+   "ranking.freshness": 0.1046,
+   "ranking.weight": 0.001,
+   "ranking.decay": 0.0641,
+   "ranking.hit_count": 0.2234,
+   "ranking.recency": 0.0673,
+   "ranking.region": 0.0014
+  }
+ },
+ {
+  "name": "rs_rank_far_15",
+  "overrides": {
+   "ranking.semantic": 0.4451,
+   "ranking.importance": 0.0799,
+   "ranking.freshness": 0.1108,
+   "ranking.weight": 0.0,
+   "ranking.decay": 0.0011,
+   "ranking.hit_count": 0.3022,
+   "ranking.recency": 0.0,
+   "ranking.region": 0.0609
+  }
+ },
+ {
+  "name": "rs_rank_far_16",
+  "overrides": {
+   "ranking.semantic": 0.3231,
+   "ranking.importance": 0.0135,
+   "ranking.freshness": 0.0023,
+   "ranking.weight": 0.0492,
+   "ranking.decay": 0.0,
+   "ranking.hit_count": 0.4137,
+   "ranking.recency": 0.0167,
+   "ranking.region": 0.1816
+  }
+ },
+ {
+  "name": "rs_rank_far_17",
+  "overrides": {
+   "ranking.semantic": 0.5844,
+   "ranking.importance": 0.0051,
+   "ranking.freshness": 0.2591,
+   "ranking.weight": 0.0607,
+   "ranking.decay": 0.0011,
+   "ranking.hit_count": 0.009,
+   "ranking.recency": 0.0,
+   "ranking.region": 0.0806
+  }
+ },
+ {
+  "name": "rs_rank_far_18",
+  "overrides": {
+   "ranking.semantic": 0.2812,
+   "ranking.importance": 0.0,
+   "ranking.freshness": 0.0143,
+   "ranking.weight": 0.014,
+   "ranking.decay": 0.0038,
+   "ranking.hit_count": 0.0053,
+   "ranking.recency": 0.059,
+   "ranking.region": 0.6224
+  }
+ },
+ {
+  "name": "rs_rank_far_19",
+  "overrides": {
+   "ranking.semantic": 0.3888,
+   "ranking.importance": 0.2797,
+   "ranking.freshness": 0.0,
+   "ranking.weight": 0.0115,
+   "ranking.decay": 0.137,
+   "ranking.hit_count": 0.0518,
+   "ranking.recency": 0.1312,
+   "ranking.region": 0.0
+  }
+ },
+ {
+  "name": "rs_rank_far_20",
+  "overrides": {
+   "ranking.semantic": 0.4941,
+   "ranking.importance": 0.146,
+   "ranking.freshness": 0.0852,
+   "ranking.weight": 0.0215,
+   "ranking.decay": 0.0681,
+   "ranking.hit_count": 0.0084,
+   "ranking.recency": 0.0128,
+   "ranking.region": 0.1639
+  }
+ },
+ {
+  "name": "rs_rank_far_21",
+  "overrides": {
+   "ranking.semantic": 0.6276,
+   "ranking.importance": 0.0236,
+   "ranking.freshness": 0.2186,
+   "ranking.weight": 0.0001,
+   "ranking.decay": 0.0348,
+   "ranking.hit_count": 0.0896,
+   "ranking.recency": 0.0052,
+   "ranking.region": 0.0005
+  }
+ },
+ {
+  "name": "rs_rank_far_22",
+  "overrides": {
+   "ranking.semantic": 0.3999,
+   "ranking.importance": 0.0465,
+   "ranking.freshness": 0.0145,
+   "ranking.weight": 0.1363,
+   "ranking.decay": 0.2813,
+   "ranking.hit_count": 0.0002,
+   "ranking.recency": 0.0001,
+   "ranking.region": 0.1212
+  }
+ },
+ {
+  "name": "rs_rank_far_23",
+  "overrides": {
+   "ranking.semantic": 0.1499,
+   "ranking.importance": 0.0037,
+   "ranking.freshness": 0.0363,
+   "ranking.weight": 0.0387,
+   "ranking.decay": 0.5955,
+   "ranking.hit_count": 0.0215,
+   "ranking.recency": 0.0005,
+   "ranking.region": 0.154
+  }
+ },
+ {
+  "name": "rs_rank_far_24",
+  "overrides": {
+   "ranking.semantic": 0.4313,
+   "ranking.importance": 0.0764,
+   "ranking.freshness": 0.225,
+   "ranking.weight": 0.0007,
+   "ranking.decay": 0.0458,
+   "ranking.hit_count": 0.0396,
+   "ranking.recency": 0.1811,
+   "ranking.region": 0.0002
+  }
+ },
+ {
+  "name": "rs_rank_far_25",
+  "overrides": {
+   "ranking.semantic": 0.2414,
+   "ranking.importance": 0.6206,
+   "ranking.freshness": 0.0317,
+   "ranking.weight": 0.0011,
+   "ranking.decay": 0.0004,
+   "ranking.hit_count": 0.0918,
+   "ranking.recency": 0.0056,
+   "ranking.region": 0.0074
+  }
+ },
+ {
+  "name": "rs_rank_far_26",
+  "overrides": {
+   "ranking.semantic": 0.2425,
+   "ranking.importance": 0.0012,
+   "ranking.freshness": 0.0029,
+   "ranking.weight": 0.6594,
+   "ranking.decay": 0.0346,
+   "ranking.hit_count": 0.0444,
+   "ranking.recency": 0.0,
+   "ranking.region": 0.0149
+  }
+ },
+ {
+  "name": "rs_rank_far_27",
+  "overrides": {
+   "ranking.semantic": 0.1596,
+   "ranking.importance": 0.0724,
+   "ranking.freshness": 0.002,
+   "ranking.weight": 0.0104,
+   "ranking.decay": 0.5623,
+   "ranking.hit_count": 0.0383,
+   "ranking.recency": 0.0353,
+   "ranking.region": 0.1197
+  }
+ },
+ {
+  "name": "rs_rank_far_28",
+  "overrides": {
+   "ranking.semantic": 0.7658,
+   "ranking.importance": 0.1488,
+   "ranking.freshness": 0.0222,
+   "ranking.weight": 0.0005,
+   "ranking.decay": 0.0001,
+   "ranking.hit_count": 0.0492,
+   "ranking.recency": 0.0134,
+   "ranking.region": 0.0
+  }
+ },
+ {
+  "name": "rs_rank_far_29",
+  "overrides": {
+   "ranking.semantic": 0.3231,
+   "ranking.importance": 0.1008,
+   "ranking.freshness": 0.4318,
+   "ranking.weight": 0.0589,
+   "ranking.decay": 0.0,
+   "ranking.hit_count": 0.009,
+   "ranking.recency": 0.0,
+   "ranking.region": 0.0764
+  }
+ },
+ {
+  "name": "rs_rank_far_30",
+  "overrides": {
+   "ranking.semantic": 0.0034,
+   "ranking.importance": 0.167,
+   "ranking.freshness": 0.0311,
+   "ranking.weight": 0.7033,
+   "ranking.decay": 0.0076,
+   "ranking.hit_count": 0.0852,
+   "ranking.recency": 0.0019,
+   "ranking.region": 0.0005
+  }
+ },
+ {
+  "name": "rs_rank_far_31",
+  "overrides": {
+   "ranking.semantic": 0.3867,
+   "ranking.importance": 0.33,
+   "ranking.freshness": 0.0005,
+   "ranking.weight": 0.0035,
+   "ranking.decay": 0.2064,
+   "ranking.hit_count": 0.0084,
+   "ranking.recency": 0.0286,
+   "ranking.region": 0.0359
+  }
+ },
+ {
+  "name": "rs_rank_far_32",
+  "overrides": {
+   "ranking.semantic": 0.1412,
+   "ranking.importance": 0.5723,
+   "ranking.freshness": 0.0115,
+   "ranking.weight": 0.1762,
+   "ranking.decay": 0.0209,
+   "ranking.hit_count": 0.0002,
+   "ranking.recency": 0.0726,
+   "ranking.region": 0.0051
+  }
+ },
+ {
+  "name": "rs_rank_far_33",
+  "overrides": {
+   "ranking.semantic": 0.4018,
+   "ranking.importance": 0.0554,
+   "ranking.freshness": 0.046,
+   "ranking.weight": 0.4359,
+   "ranking.decay": 0.0189,
+   "ranking.hit_count": 0.0418,
+   "ranking.recency": 0.0,
+   "ranking.region": 0.0001
+  }
+ },
+ {
+  "name": "rs_rank_far_34",
+  "overrides": {
+   "ranking.semantic": 0.5991,
+   "ranking.importance": 0.034,
+   "ranking.freshness": 0.0505,
+   "ranking.weight": 0.0211,
+   "ranking.decay": 0.0071,
+   "ranking.hit_count": 0.0097,
+   "ranking.recency": 0.2357,
+   "ranking.region": 0.0426
+  }
+ },
+ {
+  "name": "struct_sem_dominant",
+  "overrides": {
+   "ranking.semantic": 0.6,
+   "ranking.importance": 0.1,
+   "ranking.freshness": 0.08,
+   "ranking.weight": 0.08,
+   "ranking.decay": 0.06,
+   "ranking.hit_count": 0.04,
+   "ranking.recency": 0.02,
+   "ranking.region": 0.02
+  }
+ },
+ {
+  "name": "struct_temporal_boost",
+  "overrides": {
+   "ranking.semantic": 0.3,
+   "ranking.importance": 0.1,
+   "ranking.freshness": 0.2,
+   "ranking.weight": 0.08,
+   "ranking.decay": 0.1,
+   "ranking.hit_count": 0.04,
+   "ranking.recency": 0.14,
+   "ranking.region": 0.04
+  }
+ },
+ {
+  "name": "struct_pure_semantic",
+  "overrides": {
+   "ranking.semantic": 1.0,
+   "ranking.importance": 0.0,
+   "ranking.freshness": 0.0,
+   "ranking.weight": 0.0,
+   "ranking.decay": 0.0,
+   "ranking.hit_count": 0.0,
+   "ranking.recency": 0.0,
+   "ranking.region": 0.0
+  }
+ },
+ {
+  "name": "struct_fresh_heavy",
+  "overrides": {
+   "ranking.semantic": 0.35,
+   "ranking.importance": 0.08,
+   "ranking.freshness": 0.3,
+   "ranking.weight": 0.08,
+   "ranking.decay": 0.08,
+   "ranking.hit_count": 0.03,
+   "ranking.recency": 0.05,
+   "ranking.region": 0.03
+  }
+ },
+ {
+  "name": "struct_usage_heavy",
+  "overrides": {
+   "ranking.semantic": 0.35,
+   "ranking.importance": 0.1,
+   "ranking.freshness": 0.05,
+   "ranking.weight": 0.15,
+   "ranking.decay": 0.05,
+   "ranking.hit_count": 0.15,
+   "ranking.recency": 0.1,
+   "ranking.region": 0.05
+  }
+ },
+ {
+  "name": "struct_region_heavy",
+  "overrides": {
+   "ranking.semantic": 0.35,
+   "ranking.importance": 0.08,
+   "ranking.freshness": 0.06,
+   "ranking.weight": 0.06,
+   "ranking.decay": 0.05,
+   "ranking.hit_count": 0.04,
+   "ranking.recency": 0.04,
+   "ranking.region": 0.32
+  }
+ },
+ {
+  "name": "rs_fusion_00",
+  "overrides": {
+   "retrieval.vector_weight": 0.151,
+   "retrieval.keyword_weight": 0.405
+  }
+ },
+ {
+  "name": "rs_fusion_01",
+  "overrides": {
+   "retrieval.vector_weight": 0.658,
+   "retrieval.keyword_weight": 0.144
+  }
+ },
+ {
+  "name": "rs_fusion_02",
+  "overrides": {
+   "retrieval.vector_weight": 0.478,
+   "retrieval.keyword_weight": 0.461
+  }
+ },
+ {
+  "name": "rs_fusion_03",
+  "overrides": {
+   "retrieval.vector_weight": 0.582,
+   "retrieval.keyword_weight": 0.416
+  }
+ },
+ {
+  "name": "rs_fusion_04",
+  "overrides": {
+   "retrieval.vector_weight": 0.327,
+   "retrieval.keyword_weight": 0.555
+  }
+ },
+ {
+  "name": "rs_fusion_05",
+  "overrides": {
+   "retrieval.vector_weight": 0.786,
+   "retrieval.keyword_weight": 0.07
+  }
+ },
+ {
+  "name": "rs_fusion_06",
+  "overrides": {
+   "retrieval.vector_weight": 0.442,
+   "retrieval.keyword_weight": 0.537
+  }
+ },
+ {
+  "name": "rs_fusion_07",
+  "overrides": {
+   "retrieval.vector_weight": 0.571,
+   "retrieval.keyword_weight": 0.427
+  }
+ },
+ {
+  "name": "rs_fusion_08",
+  "overrides": {
+   "retrieval.vector_weight": 0.519,
+   "retrieval.keyword_weight": 0.062
+  }
+ },
+ {
+  "name": "rs_fusion_09",
+  "overrides": {
+   "retrieval.vector_weight": 0.707,
+   "retrieval.keyword_weight": 0.274
+  }
+ },
+ {
+  "name": "rs_fusion_10",
+  "overrides": {
+   "retrieval.vector_weight": 0.499,
+   "retrieval.keyword_weight": 0.101
+  }
+ },
+ {
+  "name": "rs_fusion_11",
+  "overrides": {
+   "retrieval.vector_weight": 0.581,
+   "retrieval.keyword_weight": 0.114
+  }
+ },
+ {
+  "name": "rs_fusion_12",
+  "overrides": {
+   "retrieval.vector_weight": 0.934,
+   "retrieval.keyword_weight": 0.055
+  }
+ },
+ {
+  "name": "rs_fusion_13",
+  "overrides": {
+   "retrieval.vector_weight": 0.463,
+   "retrieval.keyword_weight": 0.419
+  }
+ },
+ {
+  "name": "rs_fusion_14",
+  "overrides": {
+   "retrieval.vector_weight": 0.551,
+   "retrieval.keyword_weight": 0.071
+  }
+ },
+ {
+  "name": "rs_fusion_15",
+  "overrides": {
+   "retrieval.vector_weight": 0.501,
+   "retrieval.keyword_weight": 0.302
+  }
+ },
+ {
+  "name": "rs_fusion_16",
+  "overrides": {
+   "retrieval.vector_weight": 0.606,
+   "retrieval.keyword_weight": 0.383
+  }
+ },
+ {
+  "name": "rs_fusion_17",
+  "overrides": {
+   "retrieval.vector_weight": 0.735,
+   "retrieval.keyword_weight": 0.089
+  }
+ },
+ {
+  "name": "rs_fusion_18",
+  "overrides": {
+   "retrieval.vector_weight": 0.641,
+   "retrieval.keyword_weight": 0.226
+  }
+ },
+ {
+  "name": "rs_fusion_19",
+  "overrides": {
+   "retrieval.vector_weight": 0.457,
+   "retrieval.keyword_weight": 0.165
+  }
+ },
+ {
+  "name": "rs_fusion_20",
+  "overrides": {
+   "retrieval.vector_weight": 0.743,
+   "retrieval.keyword_weight": 0.243
+  }
+ },
+ {
+  "name": "rs_fusion_21",
+  "overrides": {
+   "retrieval.vector_weight": 0.782,
+   "retrieval.keyword_weight": 0.072
+  }
+ },
+ {
+  "name": "rs_fusion_22",
+  "overrides": {
+   "retrieval.vector_weight": 0.862,
+   "retrieval.keyword_weight": 0.129
+  }
+ },
+ {
+  "name": "rs_fusion_23",
+  "overrides": {
+   "retrieval.vector_weight": 0.286,
+   "retrieval.keyword_weight": 0.109
+  }
+ },
+ {
+  "name": "rs_fusion_24",
+  "overrides": {
+   "retrieval.vector_weight": 0.216,
+   "retrieval.keyword_weight": 0.767
+  }
+ },
+ {
+  "name": "rs_fusion_25",
+  "overrides": {
+   "retrieval.vector_weight": 0.264,
+   "retrieval.keyword_weight": 0.232
+  }
+ },
+ {
+  "name": "rs_fusion_26",
+  "overrides": {
+   "retrieval.vector_weight": 0.668,
+   "retrieval.keyword_weight": 0.128
+  }
+ },
+ {
+  "name": "rs_fusion_27",
+  "overrides": {
+   "retrieval.vector_weight": 0.545,
+   "retrieval.keyword_weight": 0.082
+  }
+ },
+ {
+  "name": "rs_fusion_28",
+  "overrides": {
+   "retrieval.vector_weight": 0.912,
+   "retrieval.keyword_weight": 0.072
+  }
+ },
+ {
+  "name": "rs_fusion_29",
+  "overrides": {
+   "retrieval.vector_weight": 0.374,
+   "retrieval.keyword_weight": 0.289
+  }
+ }
+]

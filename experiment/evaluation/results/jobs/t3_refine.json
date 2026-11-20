@@ -1,0 +1,379 @@
+[
+ {
+  "name": "refine_r1_center",
+  "overrides": {
+   "ranking.semantic": 1.0,
+   "ranking.importance": 0.0,
+   "ranking.freshness": 0.0,
+   "ranking.weight": 0.0,
+   "ranking.decay": 0.0,
+   "ranking.hit_count": 0.0,
+   "ranking.recency": 0.0,
+   "ranking.region": 0.0
+  }
+ },
+ {
+  "name": "refine_r1_importance_x0.6",
+  "overrides": {
+   "ranking.semantic": 1.0,
+   "ranking.importance": 0.0,
+   "ranking.freshness": 0.0,
+   "ranking.weight": 0.0,
+   "ranking.decay": 0.0,
+   "ranking.hit_count": 0.0,
+   "ranking.recency": 0.0,
+   "ranking.region": 0.0
+  }
+ },
+ {
+  "name": "refine_r1_importance_x0.8",
+  "overrides": {
+   "ranking.semantic": 1.0,
+   "ranking.importance": 0.0,
+   "ranking.freshness": 0.0,
+   "ranking.weight": 0.0,
+   "ranking.decay": 0.0,
+   "ranking.hit_count": 0.0,
+   "ranking.recency": 0.0,
+   "ranking.region": 0.0
+  }
+ },
+ {
+  "name": "refine_r1_importance_x1.25",
+  "overrides": {
+   "ranking.semantic": 1.0,
+   "ranking.importance": 0.0,
+   "ranking.freshness": 0.0,
+   "ranking.weight": 0.0,
+   "ranking.decay": 0.0,
+   "ranking.hit_count": 0.0,
+   "ranking.recency": 0.0,
+   "ranking.region": 0.0
+  }
+ },
+ {
+  "name": "refine_r1_importance_x1.6",
+  "overrides": {
+   "ranking.semantic": 1.0,
+   "ranking.importance": 0.0,
+   "ranking.freshness": 0.0,
+   "ranking.weight": 0.0,
+   "ranking.decay": 0.0,
+   "ranking.hit_count": 0.0,
+   "ranking.recency": 0.0,
+   "ranking.region": 0.0
+  }
+ },
+ {
+  "name": "refine_r1_freshness_x0.6",
+  "overrides": {
+   "ranking.semantic": 1.0,
+   "ranking.importance": 0.0,
+   "ranking.freshness": 0.0,
+   "ranking.weight": 0.0,
+   "ranking.decay": 0.0,
+   "ranking.hit_count": 0.0,
+   "ranking.recency": 0.0,
+   "ranking.region": 0.0
+  }
+ },
+ {
+  "name": "refine_r1_freshness_x0.8",
+  "overrides": {
+   "ranking.semantic": 1.0,
+   "ranking.importance": 0.0,
+   "ranking.freshness": 0.0,
+   "ranking.weight": 0.0,
+   "ranking.decay": 0.0,
+   "ranking.hit_count": 0.0,
+   "ranking.recency": 0.0,
+   "ranking.region": 0.0
+  }
+ },
+ {
+  "name": "refine_r1_freshness_x1.25",
+  "overrides": {
+   "ranking.semantic": 1.0,
+   "ranking.importance": 0.0,
+   "ranking.freshness": 0.0,
+   "ranking.weight": 0.0,
+   "ranking.decay": 0.0,
+   "ranking.hit_count": 0.0,
+   "ranking.recency": 0.0,
+   "ranking.region": 0.0
+  }
+ },
+ {
+  "name": "refine_r1_freshness_x1.6",
+  "overrides": {
+   "ranking.semantic": 1.0,
+   "ranking.importance": 0.0,
+   "ranking.freshness": 0.0,
+   "ranking.weight": 0.0,
+   "ranking.decay": 0.0,
+   "ranking.hit_count": 0.0,
+   "ranking.recency": 0.0,
+   "ranking.region": 0.0
+  }
+ },
+ {
+  "name": "refine_r1_weight_x0.6",
+  "overrides": {
+   "ranking.semantic": 1.0,
+   "ranking.importance": 0.0,
+   "ranking.freshness": 0.0,
+   "ranking.weight": 0.0,
+   "ranking.decay": 0.0,
+   "ranking.hit_count": 0.0,
+   "ranking.recency": 0.0,
+   "ranking.region": 0.0
+  }
+ },
+ {
+  "name": "refine_r1_weight_x0.8",
+  "overrides": {
+   "ranking.semantic": 1.0,
+   "ranking.importance": 0.0,
+   "ranking.freshness": 0.0,
+   "ranking.weight": 0.0,
+   "ranking.decay": 0.0,
+   "ranking.hit_count": 0.0,
+   "ranking.recency": 0.0,
+   "ranking.region": 0.0
+  }
+ },
+ {
+  "name": "refine_r1_weight_x1.25",
+  "overrides": {
+   "ranking.semantic": 1.0,
+   "ranking.importance": 0.0,
+   "ranking.freshness": 0.0,
+   "ranking.weight": 0.0,
+   "ranking.decay": 0.0,
+   "ranking.hit_count": 0.0,
+   "ranking.recency": 0.0,
+   "ranking.region": 0.0
+  }
+ },
+ {
+  "name": "refine_r1_weight_x1.6",
+  "overrides": {
+   "ranking.semantic": 1.0,
+   "ranking.importance": 0.0,
+   "ranking.freshness": 0.0,
+   "ranking.weight": 0.0,
+   "ranking.decay": 0.0,
+   "ranking.hit_count": 0.0,
+   "ranking.recency": 0.0,
+   "ranking.region": 0.0
+  }
+ },
+ {
+  "name": "refine_r1_decay_x0.6",
+  "overrides": {
+   "ranking.semantic": 1.0,
+   "ranking.importance": 0.0,
+   "ranking.freshness": 0.0,
+   "ranking.weight": 0.0,
+   "ranking.decay": 0.0,
+   "ranking.hit_count": 0.0,
+   "ranking.recency": 0.0,
+   "ranking.region": 0.0
+  }
+ },
+ {
+  "name": "refine_r1_decay_x0.8",
+  "overrides": {
+   "ranking.semantic": 1.0,
+   "ranking.importance": 0.0,
+   "ranking.freshness": 0.0,
+   "ranking.weight": 0.0,
+   "ranking.decay": 0.0,
+   "ranking.hit_count": 0.0,
+   "ranking.recency": 0.0,
+   "ranking.region": 0.0
+  }
+ },
+ {
+  "name": "refine_r1_decay_x1.25",
+  "overrides": {
+   "ranking.semantic": 1.0,
+   "ranking.importance": 0.0,
+   "ranking.freshness": 0.0,
+   "ranking.weight": 0.0,
+   "ranking.decay": 0.0,
+   "ranking.hit_count": 0.0,
+   "ranking.recency": 0.0,
+   "ranking.region": 0.0
+  }
+ },
+ {
+  "name": "refine_r1_decay_x1.6",
+  "overrides": {
+   "ranking.semantic": 1.0,
+   "ranking.importance": 0.0,
+   "ranking.freshness": 0.0,
+   "ranking.weight": 0.0,
+   "ranking.decay": 0.0,
+   "ranking.hit_count": 0.0,
+   "ranking.recency": 0.0,
+   "ranking.region": 0.0
+  }
+ },
+ {
+  "name": "refine_r1_hit_count_x0.6",
+  "overrides": {
+   "ranking.semantic": 1.0,
+   "ranking.importance": 0.0,
+   "ranking.freshness": 0.0,
+   "ranking.weight": 0.0,
+   "ranking.decay": 0.0,
+   "ranking.hit_count": 0.0,
+   "ranking.recency": 0.0,
+   "ranking.region": 0.0
+  }
+ },
+ {
+  "name": "refine_r1_hit_count_x0.8",
+  "overrides": {
+   "ranking.semantic": 1.0,
+   "ranking.importance": 0.0,
+   "ranking.freshness": 0.0,
+   "ranking.weight": 0.0,
+   "ranking.decay": 0.0,
+   "ranking.hit_count": 0.0,
+   "ranking.recency": 0.0,
+   "ranking.region": 0.0
+  }
+ },
+ {
+  "name": "refine_r1_hit_count_x1.25",
+  "overrides": {
+   "ranking.semantic": 1.0,
+   "ranking.importance": 0.0,
+   "ranking.freshness": 0.0,
+   "ranking.weight": 0.0,
+   "ranking.decay": 0.0,
+   "ranking.hit_count": 0.0,
+   "ranking.recency": 0.0,
+   "ranking.region": 0.0
+  }
+ },
+ {
+  "name": "refine_r1_hit_count_x1.6",
+  "overrides": {
+   "ranking.semantic": 1.0,
+   "ranking.importance": 0.0,
+   "ranking.freshness": 0.0,
+   "ranking.weight": 0.0,
+   "ranking.decay": 0.0,
+   "ranking.hit_count": 0.0,
+   "ranking.recency": 0.0,
+   "ranking.region": 0.0
+  }
+ },
+ {
+  "name": "refine_r1_recency_x0.6",
+  "overrides": {
+   "ranking.semantic": 1.0,
+   "ranking.importance": 0.0,
+   "ranking.freshness": 0.0,
+   "ranking.weight": 0.0,
+   "ranking.decay": 0.0,
+   "ranking.hit_count": 0.0,
+   "ranking.recency": 0.0,
+   "ranking.region": 0.0
+  }
+ },
+ {
+  "name": "refine_r1_recency_x0.8",
+  "overrides": {
+   "ranking.semantic": 1.0,
+   "ranking.importance": 0.0,
+   "ranking.freshness": 0.0,
+   "ranking.weight": 0.0,
+   "ranking.decay": 0.0,
+   "ranking.hit_count": 0.0,
+   "ranking.recency": 0.0,
+   "ranking.region": 0.0
+  }
+ },
+ {
+  "name": "refine_r1_recency_x1.25",
+  "overrides": {
+   "ranking.semantic": 1.0,
+   "ranking.importance": 0.0,
+   "ranking.freshness": 0.0,
+   "ranking.weight": 0.0,
+   "ranking.decay": 0.0,
+   "ranking.hit_count": 0.0,
+   "ranking.recency": 0.0,
+   "ranking.region": 0.0
+  }
+ },
+ {
+  "name": "refine_r1_recency_x1.6",
+  "overrides": {
+   "ranking.semantic": 1.0,
+   "ranking.importance": 0.0,
+   "ranking.freshness": 0.0,
+   "ranking.weight": 0.0,
+   "ranking.decay": 0.0,
+   "ranking.hit_count": 0.0,
+   "ranking.recency": 0.0,
+   "ranking.region": 0.0
+  }
+ },
+ {
+  "name": "refine_r1_region_x0.6",
+  "overrides": {
+   "ranking.semantic": 1.0,
+   "ranking.importance": 0.0,
+   "ranking.freshness": 0.0,
+   "ranking.weight": 0.0,
+   "ranking.decay": 0.0,
+   "ranking.hit_count": 0.0,
+   "ranking.recency": 0.0,
+   "ranking.region": 0.0
+  }
+ },
+ {
+  "name": "refine_r1_region_x0.8",
+  "overrides": {
+   "ranking.semantic": 1.0,
+   "ranking.importance": 0.0,
+   "ranking.freshness": 0.0,
+   "ranking.weight": 0.0,
+   "ranking.decay": 0.0,
+   "ranking.hit_count": 0.0,
+   "ranking.recency": 0.0,
+   "ranking.region": 0.0
+  }
+ },
+ {
+  "name": "refine_r1_region_x1.25",
+  "overrides": {
+   "ranking.semantic": 1.0,
+   "ranking.importance": 0.0,
+   "ranking.freshness": 0.0,
+   "ranking.weight": 0.0,
+   "ranking.decay": 0.0,
+   "ranking.hit_count": 0.0,
+   "ranking.recency": 0.0,
+   "ranking.region": 0.0
+  }
+ },
+ {
+  "name": "refine_r1_region_x1.6",
+  "overrides": {
+   "ranking.semantic": 1.0,
+   "ranking.importance": 0.0,
+   "ranking.freshness": 0.0,
+   "ranking.weight": 0.0,
+   "ranking.decay": 0.0,
+   "ranking.hit_count": 0.0,
+   "ranking.recency": 0.0,
+   "ranking.region": 0.0
+  }
+ }
+]

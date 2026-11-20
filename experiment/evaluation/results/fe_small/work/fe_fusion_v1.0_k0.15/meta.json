@@ -1,0 +1,45 @@
+{
+ "name": "fe_fusion_v1.0_k0.15",
+ "overrides": {
+  "embedding.provider": "fastembed",
+  "embedding.model": "BAAI/bge-small-zh-v1.5",
+  "embedding.dim": 512,
+  "retrieval.vector_weight": 1.0,
+  "retrieval.keyword_weight": 0.15
+ },
+ "wall_s": 19.7,
+ "returncode": 0,
+ "n_queries": 264,
+ "hit@1": 0.375,
+ "recall@1": 0.358,
+ "hit@3": 0.4583,
+ "recall@3": 0.4394,
+ "hit@5": 0.5,
+ "recall@5": 0.4811,
+ "hit@10": 0.572,
+ "recall@10": 0.553,
+ "mrr": 0.4288,
+ "ndcg@10": 0.4506,
+ "composite": 0.4461,
+ "lat_p50_ms": 13.54,
+ "lat_p95_ms": 75.9,
+ "lat_mean_ms": 26.28,
+ "by_type": {
+  "direct": {
+   "n": 201,
+   "hit@3": 0.4577,
+   "mrr": 0.4364
+  },
+  "temporal": {
+   "n": 39,
+   "hit@3": 0.359,
+   "mrr": 0.3397
+  },
+  "multi": {
+   "n": 24,
+   "hit@3": 0.625,
+   "mrr": 0.5104
+  }
+ },
+ "status": "ok"
+}

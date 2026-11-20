@@ -19,6 +19,27 @@ def new_id(prefix: str = "m") -> str:
     return f"{prefix}_{uuid.uuid4().hex[:12]}"
 
 
+def _validate_memory_numbers(mem: "Memory", src_id: object = None) -> None:
+    """导入/反序列化入口的数值校验（2026-11-20 测试战役 P2-4/P2-2 修复）。
+
+    负 hit_count 会让 ranking.hit_count 信号除零、-1 的 weight 同理；
+    NaN/inf 穿透 min/max clamp 后污染最终排序分。任何一项非法直接拒绝，
+    绝不带毒入库（一次 search 即全库崩、且无法自愈）。
+    """
+    tag = f"(id={src_id}) " if src_id else ""
+    import math as _math
+    if not isinstance(mem.hit_count, int) or isinstance(mem.hit_count, bool) or mem.hit_count < 0:
+        raise ValueError(f"hit_count must be a non-negative integer, got {mem.hit_count!r} {tag}")
+    if not _math.isfinite(mem.weight) or mem.weight < 0:
+        raise ValueError(f"weight must be a finite non-negative number, got {mem.weight!r} {tag}")
+    if not _math.isfinite(mem.importance) or not 0.0 <= mem.importance <= 1.0:
+        raise ValueError(f"importance must be finite in [0,1], got {mem.importance!r} {tag}")
+    for field_name in ("created_at", "last_hit", "freshness", "decay_factor"):
+        value = getattr(mem, field_name)
+        if not _math.isfinite(value):
+            raise ValueError(f"{field_name} must be finite, got {value!r} {tag}")
+
+
 # --------------------------------------------------------------------------- #
 # Memory
 # --------------------------------------------------------------------------- #
@@ -119,6 +140,7 @@ class Memory:
             archived=data.get("archived", False),
             source=data.get("source", "user"),
         )
+        _validate_memory_numbers(mem, data.get("id"))
         if emb is not None:
             mem.embedding = np.asarray(emb, dtype=np.float64)
         return mem

@@ -1,0 +1,207 @@
+[
+ {
+  "name": "fe_pure",
+  "overrides": {
+   "embedding.provider": "fastembed",
+   "embedding.model": "BAAI/bge-small-zh-v1.5",
+   "embedding.dim": 512,
+   "ranking.semantic": 1.0,
+   "ranking.importance": 0.0,
+   "ranking.freshness": 0.0,
+   "ranking.weight": 0.0,
+   "ranking.decay": 0.0,
+   "ranking.hit_count": 0.0,
+   "ranking.recency": 0.0,
+   "ranking.region": 0.0
+  },
+  "wall_s": 408.1,
+  "returncode": 0,
+  "n_queries": 242,
+  "hit@1": 0.3967,
+  "recall@1": 0.1603,
+  "hit@3": 0.7686,
+  "recall@3": 0.443,
+  "hit@5": 0.8884,
+  "recall@5": 0.6251,
+  "hit@10": 0.9752,
+  "recall@10": 0.8916,
+  "mrr": 0.5988,
+  "ndcg@10": 0.6448,
+  "composite": 0.6782,
+  "lat_p50_ms": 45.76,
+  "lat_p95_ms": 79.66,
+  "lat_mean_ms": 43.65,
+  "by_type": {
+   "direct": {
+    "n": 242,
+    "hit@3": 0.7686,
+    "mrr": 0.5988
+   }
+  },
+  "status": "ok"
+ },
+ {
+  "name": "fe_sem2",
+  "overrides": {
+   "embedding.provider": "fastembed",
+   "embedding.model": "BAAI/bge-small-zh-v1.5",
+   "embedding.dim": 512,
+   "ranking.semantic": 0.8,
+   "ranking.importance": 0.04,
+   "ranking.freshness": 0.0333,
+   "ranking.weight": 0.0333,
+   "ranking.decay": 0.0267,
+   "ranking.hit_count": 0.0267,
+   "ranking.recency": 0.02,
+   "ranking.region": 0.02
+  },
+  "wall_s": 410.4,
+  "returncode": 0,
+  "n_queries": 242,
+  "hit@1": 0.4256,
+  "recall@1": 0.17,
+  "hit@3": 0.781,
+  "recall@3": 0.4386,
+  "hit@5": 0.8884,
+  "recall@5": 0.6288,
+  "hit@10": 0.9793,
+  "recall@10": 0.9022,
+  "mrr": 0.6207,
+  "ndcg@10": 0.6571,
+  "composite": 0.6939,
+  "lat_p50_ms": 40.42,
+  "lat_p95_ms": 81.79,
+  "lat_mean_ms": 42.03,
+  "by_type": {
+   "direct": {
+    "n": 242,
+    "hit@3": 0.781,
+    "mrr": 0.6207
+   }
+  },
+  "status": "ok"
+ },
+ {
+  "name": "fe_baseline",
+  "overrides": {
+   "embedding.provider": "fastembed",
+   "embedding.model": "BAAI/bge-small-zh-v1.5",
+   "embedding.dim": 512
+  },
+  "wall_s": 410.8,
+  "returncode": 0,
+  "n_queries": 242,
+  "hit@1": 0.376,
+  "recall@1": 0.1387,
+  "hit@3": 0.7231,
+  "recall@3": 0.3532,
+  "hit@5": 0.814,
+  "recall@5": 0.4602,
+  "hit@10": 0.8554,
+  "recall@10": 0.5694,
+  "mrr": 0.5535,
+  "ndcg@10": 0.463,
+  "composite": 0.5987,
+  "lat_p50_ms": 37.61,
+  "lat_p95_ms": 79.2,
+  "lat_mean_ms": 41.6,
+  "by_type": {
+   "direct": {
+    "n": 242,
+    "hit@3": 0.7231,
+    "mrr": 0.5535
+   }
+  },
+  "status": "ok"
+ },
+ {
+  "name": "fe_sem2_dynoff",
+  "overrides": {
+   "embedding.provider": "fastembed",
+   "embedding.model": "BAAI/bge-small-zh-v1.5",
+   "embedding.dim": 512,
+   "ranking.semantic": 0.8,
+   "ranking.importance": 0.04,
+   "ranking.freshness": 0.0333,
+   "ranking.weight": 0.0333,
+   "ranking.decay": 0.0267,
+   "ranking.hit_count": 0.0267,
+   "ranking.recency": 0.02,
+   "ranking.region": 0.02,
+   "policy.decay_enabled": false,
+   "decay.max_weight_decay": 0.0
+  },
+  "wall_s": 187.8,
+  "returncode": 0,
+  "n_queries": 242,
+  "hit@1": 0.4091,
+  "recall@1": 0.1699,
+  "hit@3": 0.7727,
+  "recall@3": 0.4508,
+  "hit@5": 0.8802,
+  "recall@5": 0.629,
+  "hit@10": 0.9793,
+  "recall@10": 0.9009,
+  "mrr": 0.6119,
+  "ndcg@10": 0.655,
+  "composite": 0.687,
+  "lat_p50_ms": 25.78,
+  "lat_p95_ms": 72.46,
+  "lat_mean_ms": 32.45,
+  "by_type": {
+   "direct": {
+    "n": 242,
+    "hit@3": 0.7727,
+    "mrr": 0.6119
+   }
+  },
+  "status": "ok"
+ },
+ {
+  "name": "fe_united_old",
+  "overrides": {
+   "embedding.provider": "fastembed",
+   "embedding.model": "BAAI/bge-small-zh-v1.5",
+   "embedding.dim": 512,
+   "policy.decay_enabled": false,
+   "decay.max_weight_decay": 0.0,
+   "retrieval.keyword_candidates": 20,
+   "retrieval.top_regions": 1,
+   "retrieval.vector_weight": 0.0,
+   "retrieval.keyword_weight": 0.3,
+   "ranking.semantic": 1.0,
+   "ranking.importance": 0.0,
+   "ranking.freshness": 0.0,
+   "ranking.weight": 0.0,
+   "ranking.decay": 0.0,
+   "ranking.hit_count": 0.0,
+   "ranking.recency": 0.0,
+   "ranking.region": 0.0
+  },
+  "wall_s": 204.9,
+  "returncode": 0,
+  "n_queries": 242,
+  "hit@1": 0.3595,
+  "recall@1": 0.1446,
+  "hit@3": 0.6736,
+  "recall@3": 0.3672,
+  "hit@5": 0.8264,
+  "recall@5": 0.544,
+  "hit@10": 0.9504,
+  "recall@10": 0.8163,
+  "mrr": 0.5448,
+  "ndcg@10": 0.5762,
+  "composite": 0.6042,
+  "lat_p50_ms": 112.58,
+  "lat_p95_ms": 211.64,
+  "lat_mean_ms": 120.68,
+  "by_type": {
+   "direct": {
+    "n": 242,
+    "hit@3": 0.6736,
+    "mrr": 0.5448
+   }
+  },
+  "status": "ok"
+ }
+]

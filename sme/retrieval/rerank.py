@@ -61,6 +61,13 @@ class Reranker:
         scored = sorted(
             zip(pool, scores), key=lambda pair: float(pair[1]), reverse=True
         )
-        reranked = [h for h, _ in scored]
+        reranked = []
+        for hit, score in scored:
+            # 分数同步（P4 修复）：重排后的顺序与 score/breakdown 必须一致，
+            # 否则遥测与展示层拿到"顺序 A、分数 B"的撕裂结果
+            hit.score = round(float(score), 4)
+            if hit.breakdown is not None:
+                hit.breakdown.final = hit.score
+            reranked.append(hit)
         # keep the untouched tail (beyond top_n) in its original order
         return reranked + list(hits[top_n:])

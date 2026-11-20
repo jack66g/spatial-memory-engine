@@ -38,7 +38,11 @@ from mcp.server.mcpserver import MCPServer
 from mcp.server.mcpserver.exceptions import ToolError
 
 REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-_PORT = int(os.environ.get("SME_MCP_PORT", "8000"))
+_RAW_PORT = os.environ.get("SME_MCP_PORT", "8000")
+try:
+    _PORT = int(_RAW_PORT)
+except ValueError:
+    raise SystemExit(f"SME_MCP_PORT must be an integer, got: {_RAW_PORT!r}") from None
 BASE_URL = f"http://127.0.0.1:{_PORT}"
 # 回环直连：httpx 不读环境代理（trust_env=False），但不修改环境变量本身——
 # 拉起的子服务要继承完整环境。模型已本地缓存，服务侧另设 HF_HUB_OFFLINE=1

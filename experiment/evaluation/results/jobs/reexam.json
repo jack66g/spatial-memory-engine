@@ -1,0 +1,4 @@
+[
+ {"name": "baseline", "overrides": {}},
+ {"name": "united", "overrides": {"policy.decay_enabled": false, "decay.max_weight_decay": 0.0, "retrieval.keyword_candidates": 20, "retrieval.top_regions": 1, "retrieval.vector_weight": 0.0, "retrieval.keyword_weight": 0.3, "ranking.semantic": 1.0, "ranking.importance": 0.0, "ranking.freshness": 0.0, "ranking.weight": 0.0, "ranking.decay": 0.0, "ranking.hit_count": 0.0, "ranking.recency": 0.0, "ranking.region": 0.0}}
+]

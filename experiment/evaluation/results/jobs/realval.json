@@ -1,0 +1,8 @@
+[
+  {"name": "v_baseline", "overrides": {}},
+  {"name": "v_sem_x2_exact", "overrides": {"ranking.semantic": 0.8, "ranking.importance": 0.04, "ranking.freshness": 0.0333, "ranking.weight": 0.0333, "ranking.decay": 0.0267, "ranking.hit_count": 0.0267, "ranking.recency": 0.02, "ranking.region": 0.02}},
+  {"name": "v_kw_only", "overrides": {"retrieval.vector_weight": 0.0, "retrieval.keyword_weight": 0.3}},
+  {"name": "v_static_lean", "overrides": {"ranking.semantic": 0.6897, "ranking.importance": 0.2069, "ranking.freshness": 0.0, "ranking.weight": 0.0, "ranking.decay": 0.0, "ranking.hit_count": 0.0, "ranking.recency": 0.0, "ranking.region": 0.1034}},
+  {"name": "v_stack_light", "overrides": {"retrieval.keyword_candidates": 20, "retrieval.top_regions": 1}},
+  {"name": "v_stack_static", "overrides": {"policy.decay_enabled": false, "decay.max_weight_decay": 0.0, "retrieval.keyword_candidates": 20, "retrieval.top_regions": 1, "retrieval.vector_weight": 0.0, "retrieval.keyword_weight": 0.3, "ranking.semantic": 0.6897, "ranking.importance": 0.2069, "ranking.freshness": 0.0, "ranking.weight": 0.0, "ranking.decay": 0.0, "ranking.hit_count": 0.0, "ranking.recency": 0.0, "ranking.region": 0.1034}}
+]

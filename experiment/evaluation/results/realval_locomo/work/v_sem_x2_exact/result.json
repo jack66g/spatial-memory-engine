@@ -1,0 +1,45 @@
+{
+ "dataset": "locomo",
+ "n_memories": 788,
+ "top_k": 10,
+ "overrides": {
+  "ranking.semantic": 0.8,
+  "ranking.importance": 0.04,
+  "ranking.freshness": 0.0333,
+  "ranking.weight": 0.0333,
+  "ranking.decay": 0.0267,
+  "ranking.hit_count": 0.0267,
+  "ranking.recency": 0.02,
+  "ranking.region": 0.02
+ },
+ "build_s": 3.8,
+ "metrics": {
+  "n_queries": 301,
+  "hit@1": 0.196,
+  "recall@1": 0.1845,
+  "hit@3": 0.3056,
+  "recall@3": 0.2915,
+  "hit@5": 0.3355,
+  "recall@5": 0.3122,
+  "hit@10": 0.3953,
+  "recall@10": 0.3661,
+  "mrr": 0.2593,
+  "ndcg@10": 0.278,
+  "composite": 0.2825,
+  "lat_p50_ms": 6.25,
+  "lat_p95_ms": 10.66,
+  "lat_mean_ms": 6.76
+ },
+ "by_type": {
+  "direct": {
+   "n": 246,
+   "hit@3": 0.3415,
+   "mrr": 0.2832
+  },
+  "multi": {
+   "n": 55,
+   "hit@3": 0.1455,
+   "mrr": 0.152
+  }
+ }
+}

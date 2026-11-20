@@ -1,0 +1,41 @@
+{
+ "name": "max_wdecay_0.0",
+ "overrides": {
+  "decay.max_weight_decay": 0.0
+ },
+ "wall_s": 35.9,
+ "returncode": 0,
+ "n_queries": 1088,
+ "hit@1": 0.216,
+ "recall@1": 0.2091,
+ "hit@3": 0.2996,
+ "recall@3": 0.2904,
+ "hit@5": 0.3355,
+ "recall@5": 0.3254,
+ "hit@10": 0.3906,
+ "recall@10": 0.3814,
+ "mrr": 0.2682,
+ "ndcg@10": 0.2923,
+ "composite": 0.2868,
+ "lat_p50_ms": 21.71,
+ "lat_p95_ms": 30.59,
+ "lat_mean_ms": 22.36,
+ "by_type": {
+  "direct": {
+   "n": 815,
+   "hit@3": 0.3583,
+   "mrr": 0.321
+  },
+  "temporal": {
+   "n": 164,
+   "hit@3": 0.0488,
+   "mrr": 0.0511
+  },
+  "multi": {
+   "n": 109,
+   "hit@3": 0.2385,
+   "mrr": 0.2004
+  }
+ },
+ "status": "ok"
+}

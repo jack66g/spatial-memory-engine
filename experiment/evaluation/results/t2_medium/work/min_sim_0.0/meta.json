@@ -1,0 +1,41 @@
+{
+ "name": "min_sim_0.0",
+ "overrides": {
+  "retrieval.min_similarity": 0.0
+ },
+ "wall_s": 37.8,
+ "returncode": 0,
+ "n_queries": 1088,
+ "hit@1": 0.1765,
+ "recall@1": 0.1705,
+ "hit@3": 0.2463,
+ "recall@3": 0.2394,
+ "hit@5": 0.2923,
+ "recall@5": 0.2822,
+ "hit@10": 0.3456,
+ "recall@10": 0.3355,
+ "mrr": 0.2224,
+ "ndcg@10": 0.2464,
+ "composite": 0.238,
+ "lat_p50_ms": 22.57,
+ "lat_p95_ms": 32.13,
+ "lat_mean_ms": 23.25,
+ "by_type": {
+  "direct": {
+   "n": 815,
+   "hit@3": 0.2945,
+   "mrr": 0.2641
+  },
+  "temporal": {
+   "n": 164,
+   "hit@3": 0.0488,
+   "mrr": 0.0431
+  },
+  "multi": {
+   "n": 109,
+   "hit@3": 0.1835,
+   "mrr": 0.1806
+  }
+ },
+ "status": "ok"
+}

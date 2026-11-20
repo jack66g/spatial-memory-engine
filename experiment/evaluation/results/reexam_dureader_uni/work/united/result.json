@@ -1,0 +1,46 @@
+{
+ "dataset": "dureader_uni",
+ "n_memories": 2885,
+ "top_k": 10,
+ "overrides": {
+  "policy.decay_enabled": false,
+  "decay.max_weight_decay": 0.0,
+  "retrieval.keyword_candidates": 20,
+  "retrieval.top_regions": 1,
+  "retrieval.vector_weight": 0.0,
+  "retrieval.keyword_weight": 0.3,
+  "ranking.semantic": 1.0,
+  "ranking.importance": 0.0,
+  "ranking.freshness": 0.0,
+  "ranking.weight": 0.0,
+  "ranking.decay": 0.0,
+  "ranking.hit_count": 0.0,
+  "ranking.recency": 0.0,
+  "ranking.region": 0.0
+ },
+ "build_s": 53.4,
+ "metrics": {
+  "n_queries": 242,
+  "hit@1": 0.3595,
+  "recall@1": 0.1446,
+  "hit@3": 0.6736,
+  "recall@3": 0.3672,
+  "hit@5": 0.8264,
+  "recall@5": 0.544,
+  "hit@10": 0.9504,
+  "recall@10": 0.8163,
+  "mrr": 0.5448,
+  "ndcg@10": 0.5762,
+  "composite": 0.6042,
+  "lat_p50_ms": 115.32,
+  "lat_p95_ms": 141.01,
+  "lat_mean_ms": 112.31
+ },
+ "by_type": {
+  "direct": {
+   "n": 242,
+   "hit@3": 0.6736,
+   "mrr": 0.5448
+  }
+ }
+}

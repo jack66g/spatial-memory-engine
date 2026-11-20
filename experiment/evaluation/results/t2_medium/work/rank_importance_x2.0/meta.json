@@ -1,0 +1,48 @@
+{
+ "name": "rank_importance_x2.0",
+ "overrides": {
+  "ranking.semantic": 0.3455,
+  "ranking.importance": 0.24,
+  "ranking.freshness": 0.0864,
+  "ranking.weight": 0.0864,
+  "ranking.decay": 0.0691,
+  "ranking.hit_count": 0.0691,
+  "ranking.recency": 0.0518,
+  "ranking.region": 0.0518
+ },
+ "wall_s": 38.4,
+ "returncode": 0,
+ "n_queries": 1088,
+ "hit@1": 0.1333,
+ "recall@1": 0.1287,
+ "hit@3": 0.1903,
+ "recall@3": 0.1847,
+ "hit@5": 0.2436,
+ "recall@5": 0.2358,
+ "hit@10": 0.329,
+ "recall@10": 0.3185,
+ "mrr": 0.1812,
+ "ndcg@10": 0.211,
+ "composite": 0.1923,
+ "lat_p50_ms": 22.55,
+ "lat_p95_ms": 32.07,
+ "lat_mean_ms": 23.34,
+ "by_type": {
+  "direct": {
+   "n": 815,
+   "hit@3": 0.2319,
+   "mrr": 0.2177
+  },
+  "temporal": {
+   "n": 164,
+   "hit@3": 0.0183,
+   "mrr": 0.0218
+  },
+  "multi": {
+   "n": 109,
+   "hit@3": 0.1376,
+   "mrr": 0.1475
+  }
+ },
+ "status": "ok"
+}

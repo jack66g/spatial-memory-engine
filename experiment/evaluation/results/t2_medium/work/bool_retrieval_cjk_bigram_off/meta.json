@@ -1,0 +1,41 @@
+{
+ "name": "bool_retrieval_cjk_bigram_off",
+ "overrides": {
+  "retrieval.cjk_bigram": false
+ },
+ "wall_s": 34.8,
+ "returncode": 0,
+ "n_queries": 1088,
+ "hit@1": 0.1691,
+ "recall@1": 0.1641,
+ "hit@3": 0.2408,
+ "recall@3": 0.2344,
+ "hit@5": 0.2886,
+ "recall@5": 0.2794,
+ "hit@10": 0.3419,
+ "recall@10": 0.3327,
+ "mrr": 0.2168,
+ "ndcg@10": 0.242,
+ "composite": 0.2327,
+ "lat_p50_ms": 20.84,
+ "lat_p95_ms": 30.36,
+ "lat_mean_ms": 21.51,
+ "by_type": {
+  "direct": {
+   "n": 815,
+   "hit@3": 0.2908,
+   "mrr": 0.2614
+  },
+  "temporal": {
+   "n": 164,
+   "hit@3": 0.0427,
+   "mrr": 0.0312
+  },
+  "multi": {
+   "n": 109,
+   "hit@3": 0.1651,
+   "mrr": 0.1632
+  }
+ },
+ "status": "ok"
+}

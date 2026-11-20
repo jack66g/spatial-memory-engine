@@ -1,0 +1,1 @@
+{"embedding.provider": "fastembed", "embedding.model": "BAAI/bge-small-zh-v1.5", "embedding.dim": 512, "retrieval.vector_weight": 0.3, "retrieval.keyword_weight": 0.0}

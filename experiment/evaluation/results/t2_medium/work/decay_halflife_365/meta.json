@@ -1,0 +1,41 @@
+{
+ "name": "decay_halflife_365",
+ "overrides": {
+  "decay.half_life_days": 365
+ },
+ "wall_s": 37.2,
+ "returncode": 0,
+ "n_queries": 1088,
+ "hit@1": 0.2417,
+ "recall@1": 0.2348,
+ "hit@3": 0.3392,
+ "recall@3": 0.33,
+ "hit@5": 0.3814,
+ "recall@5": 0.3718,
+ "hit@10": 0.4136,
+ "recall@10": 0.404,
+ "mrr": 0.2986,
+ "ndcg@10": 0.3215,
+ "composite": 0.3206,
+ "lat_p50_ms": 22.65,
+ "lat_p95_ms": 31.75,
+ "lat_mean_ms": 23.18,
+ "by_type": {
+  "direct": {
+   "n": 815,
+   "hit@3": 0.4012,
+   "mrr": 0.3566
+  },
+  "temporal": {
+   "n": 164,
+   "hit@3": 0.0854,
+   "mrr": 0.0675
+  },
+  "multi": {
+   "n": 109,
+   "hit@3": 0.2569,
+   "mrr": 0.2126
+  }
+ },
+ "status": "ok"
+}

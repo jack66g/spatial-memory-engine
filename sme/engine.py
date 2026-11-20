@@ -140,6 +140,9 @@ class SpatialMemoryEngine:
         self.space.set_membership_hook(self._sync_memory_region)
         self._autosave_counter = 0
         self._lock = threading.RLock()
+        # 跨进程丢更新防护:上次 load/save 时存储锁文件里的写入者谱系 (pid, n);
+        # None = 尚未与磁盘同步过(首次 save 不设防,与旧行为兼容)
+        self._storage_lineage: tuple[int, int] | None = None
         # --- sleep-time compute：空闲期后台整理（maintenance.background） --
         # 写活动时间戳（空闲判定基准）；维护线程状态；观测量。
         # background=False（默认）时只有这几个轻量属性，零行为变化。
@@ -669,6 +672,12 @@ class SpatialMemoryEngine:
         if ns is not None:
             query.metadata_filters = dict(query.metadata_filters or {})
             query.metadata_filters[NS_KEY] = ns
+        if isinstance(query.top_k, bool) or not isinstance(query.top_k, int):
+            # P4：float/str 型 top_k 旧实现会以裸 TypeError 死在切片上
+            if isinstance(query.top_k, float) and query.top_k.is_integer():
+                query = replace(query, top_k=int(query.top_k))
+            else:
+                raise ValueError(f"top_k must be an integer, got {query.top_k!r}")
         if query.top_k <= 0:
             return []
         t0 = now()
@@ -859,7 +868,35 @@ class SpatialMemoryEngine:
         with self._lock:
             if self.wal.recovery_error:
                 raise WALRecoveryError(self.wal.recovery_error)
-            return self._save_locked(path)
+            path = path or self.config.storage.path
+            # 导出语义(写到非恢复存储路径)不参与丢更新防护:那不是"共享存储"
+            is_recovery = self._recovery_path(path) == self._recovery_path(self.config.storage.path)
+            # 跨进程锁 + 谱系核对:覆盖"读谱系→落盘→推进谱系"整段。
+            # 谱系 (pid, n) 只被成功的恢复路径 save 推进,WAL 内部写不动它,
+            # 因此不会把自家 mutation 误判成外部修改(sqlite 的 WAL 与快照同库)。
+            from sme.storage import xlock as _xl
+            with _xl.xlock(path) as lf:
+                if is_recovery:
+                    current = lf.read_lineage()
+                    if self._storage_lineage is not None and current != self._storage_lineage:
+                        # 我们同步过这份存储(上次 load/save),之后另一个写者落了盘:
+                        # 直接覆盖=静默丢对方的写入。如实拒绝,让调用方 load 后重放。
+                        raise RuntimeError(
+                            f"存储 {path} 已被其他进程修改(本引擎上次同步后外部有写入);"
+                            "请先 engine.load() 重新加载再保存,避免覆盖他人数据"
+                        )
+                saved = self._save_locked(path)
+                if is_recovery:
+                    # 推进谱系:接在磁盘当前版本(含首次无记录)之后,换成自己的 pid
+                    _, disk_n = lf.read_lineage()
+                    lf.write_lineage(os.getpid(), disk_n + 1)
+                    self._storage_lineage = lf.read_lineage()
+                return saved
+
+    @staticmethod
+    def _recovery_path(value: str) -> str:
+        value = os.path.normcase(os.path.abspath(value))
+        return value[:-3] if value.lower().endswith(".json.gz") else value
 
     def _save_locked(self, path: Optional[str] = None) -> str:
         path = path or self.config.storage.path
@@ -907,196 +944,206 @@ class SpatialMemoryEngine:
     def load(self, path: Optional[str] = None) -> bool:
         with self._lock:
             path = path or self.config.storage.path
-            # cross-backend loading: sniff the file signature and switch the
-            # backend before reading, so a sqlite snapshot can be loaded by a
-            # json-configured engine (and vice versa) instead of failing with
-            # a confusing JSON parse error on the binary file.
-            detected = self._detect_backend(path)
-            if detected != self.config.storage.backend:
-                self.config.storage.backend = detected
-                self.storage_backend = build_storage_backend(detected)
-            snapshot = self.storage_backend.load(path)
-            if snapshot is None:
-                return self._recover_wal()
-            self.wal.recovery_error = None
-            self._checkpoint_sequence = snapshot.wal_sequence
-            self.wal.sequence = snapshot.wal_sequence
-            # 向量空间身份检查（SDK 直连软防护；REST PUT /config 已有硬闸门）：
-            # 快照 revision 与当前引擎 revision 不一致且库非空 => 磁盘向量与
-            # 当前 provider 不是同一空间（同维度换模型不报维度错，静默垃圾
-            # 相似度），明确告警让用户跑官方重建工具
-            if snapshot.memories and self._explicit_config:
-                disk_revision = (
-                    snapshot.config.embedding.revision_stamp
-                    or embedding_revision(snapshot.config)
+            is_recovery = self._recovery_path(path) == self._recovery_path(self.config.storage.path)
+            # 跨进程锁:与其它进程的 save/load 串行化,读到的快照必是完整发布态
+            from sme.storage import xlock as _xl
+            with _xl.xlock(path) as lf:
+                ok = self._load_locked(path)
+                if ok and is_recovery:
+                    self._storage_lineage = lf.read_lineage()
+                return ok
+
+    def _load_locked(self, path: str) -> bool:
+        # cross-backend loading: sniff the file signature and switch the
+        # backend before reading, so a sqlite snapshot can be loaded by a
+        # json-configured engine (and vice versa) instead of failing with
+        # a confusing JSON parse error on the binary file.
+        detected = self._detect_backend(path)
+        if detected != self.config.storage.backend:
+            self.config.storage.backend = detected
+            self.storage_backend = build_storage_backend(detected)
+        snapshot = self.storage_backend.load(path)
+        if snapshot is None:
+            return self._recover_wal()
+        self.wal.recovery_error = None
+        self._checkpoint_sequence = snapshot.wal_sequence
+        self.wal.sequence = snapshot.wal_sequence
+        # 向量空间身份检查（SDK 直连软防护；REST PUT /config 已有硬闸门）：
+        # 快照 revision 与当前引擎 revision 不一致且库非空 => 磁盘向量与
+        # 当前 provider 不是同一空间（同维度换模型不报维度错，静默垃圾
+        # 相似度），明确告警让用户跑官方重建工具
+        if snapshot.memories and self._explicit_config:
+            disk_revision = (
+                snapshot.config.embedding.revision_stamp
+                or embedding_revision(snapshot.config)
+            )
+            engine_revision = embedding_revision(self.config)
+            if disk_revision != engine_revision:
+                logger.warning(
+                    "embedding 向量空间不匹配：快照 revision=%s，当前引擎 "
+                    "revision=%s，检索质量不可信，请运行 "
+                    "python -m sme.rebuild_embeddings 重建向量",
+                    disk_revision, engine_revision,
                 )
-                engine_revision = embedding_revision(self.config)
-                if disk_revision != engine_revision:
-                    logger.warning(
-                        "embedding 向量空间不匹配：快照 revision=%s，当前引擎 "
-                        "revision=%s，检索质量不可信，请运行 "
-                        "python -m sme.rebuild_embeddings 重建向量",
-                        disk_revision, engine_revision,
-                    )
-            self.config = snapshot.config
-            # re-bind EVERY subsystem config (v1 + v2) to the snapshot config
-            # so the restored engine behaves exactly like the saved one
-            self.space.config = self.config.region
-            self.region_manager.config = self.config.region
-            self.policy.config = self.config.policy
-            self.reinforcement.config = self.config.reinforcement
-            self.decay.config = self.config.decay
-            self.ranker.config = self.config.ranking
-            self.retriever.config = self.config.retrieval
-            self.consolidation.config = self.config.consolidation
-            self.compression._config = self.config
-            if self.compression._engine is not None:
-                self.compression._engine.config = self.config.compression
-            self.extraction.config = self.config.extraction
-            self.factversion.config = self.config.factversion
-            self.noise.config = self.config.noise
-            self.qapair.config = self.config.qapair
-            self.factgraph.config = self.config.factgraph
-            self.factgraph_extractor.config = self.config.factgraph
-            self.profile.config = self.config.profile
-            self.wal.config = self.config.persistence
-            # 回绑 WAL 捕获的 StorageConfig 引用：WAL 构造时持有的是旧 config.storage
-            # 对象，快照可能带着不同的存储路径/后端；不同步的话 WAL 会继续写旧路径。
-            # 先关旧句柄（文件/sqlite），下次 append 时按新路径重新打开。
-            self.wal.close()
-            self.wal._storage = self.config.storage
-            self.telemetry.config = self.config.observability
-            self.context.config = self.config.context
-            self.namespaces.config = self.config.namespaces
-            self.storage_backend = build_storage_backend(self.config.storage.backend)
-            self._rerank_enabled = self.config.rerank.enabled
-            if self.reranker is not None:
-                self.reranker.config = self.config.rerank
-            # rebuild the embedding provider / LLM client when the snapshot
-            # was saved with a different provider (dim mismatch is fatal)
-            if (
-                self.embeddings.name != self.config.embedding.provider
-                or self.embeddings.model_name != self.config.embedding.model
-                or self.embeddings.dim != self.config.embedding.dim
-                or self.embeddings.mrl_dim != self.config.embedding.mrl_dim
-            ):
-                self.embeddings = build_embedding_provider(self.config.embedding)
-                self._calibrate_region_threshold()
+        self.config = snapshot.config
+        # re-bind EVERY subsystem config (v1 + v2) to the snapshot config
+        # so the restored engine behaves exactly like the saved one
+        self.space.config = self.config.region
+        self.region_manager.config = self.config.region
+        self.policy.config = self.config.policy
+        self.reinforcement.config = self.config.reinforcement
+        self.decay.config = self.config.decay
+        self.ranker.config = self.config.ranking
+        self.retriever.config = self.config.retrieval
+        self.consolidation.config = self.config.consolidation
+        self.compression._config = self.config
+        if self.compression._engine is not None:
+            self.compression._engine.config = self.config.compression
+        self.extraction.config = self.config.extraction
+        self.factversion.config = self.config.factversion
+        self.noise.config = self.config.noise
+        self.qapair.config = self.config.qapair
+        self.factgraph.config = self.config.factgraph
+        self.factgraph_extractor.config = self.config.factgraph
+        self.profile.config = self.config.profile
+        self.wal.config = self.config.persistence
+        # 回绑 WAL 捕获的 StorageConfig 引用：WAL 构造时持有的是旧 config.storage
+        # 对象，快照可能带着不同的存储路径/后端；不同步的话 WAL 会继续写旧路径。
+        # 先关旧句柄（文件/sqlite），下次 append 时按新路径重新打开。
+        self.wal.close()
+        self.wal._storage = self.config.storage
+        self.telemetry.config = self.config.observability
+        self.context.config = self.config.context
+        self.namespaces.config = self.config.namespaces
+        self.storage_backend = build_storage_backend(self.config.storage.backend)
+        self._rerank_enabled = self.config.rerank.enabled
+        if self.reranker is not None:
+            self.reranker.config = self.config.rerank
+        # rebuild the embedding provider / LLM client when the snapshot
+        # was saved with a different provider (dim mismatch is fatal)
+        if (
+            self.embeddings.name != self.config.embedding.provider
+            or self.embeddings.model_name != self.config.embedding.model
+            or self.embeddings.dim != self.config.embedding.dim
+            or self.embeddings.mrl_dim != self.config.embedding.mrl_dim
+        ):
+            self.embeddings = build_embedding_provider(self.config.embedding)
+            self._calibrate_region_threshold()
+            self.llm = LLMClient(self.config.llm)
+            self.consolidation.llm = self.llm
+            self.compression._llm = self.llm
+            self.extraction.llm = self.llm
+            self.factgraph_extractor.llm = self.llm
+        else:
+            # provider unchanged: keep the live client but re-point its
+            # config (temperature/max_tokens/...) to the snapshot values
+            self.llm.config = self.config.llm
+            if self.llm.base_url != self.config.llm.base_url.rstrip("/"):
                 self.llm = LLMClient(self.config.llm)
                 self.consolidation.llm = self.llm
                 self.compression._llm = self.llm
                 self.extraction.llm = self.llm
                 self.factgraph_extractor.llm = self.llm
-            else:
-                # provider unchanged: keep the live client but re-point its
-                # config (temperature/max_tokens/...) to the snapshot values
-                self.llm.config = self.config.llm
-                if self.llm.base_url != self.config.llm.base_url.rstrip("/"):
-                    self.llm = LLMClient(self.config.llm)
-                    self.consolidation.llm = self.llm
-                    self.compression._llm = self.llm
-                    self.extraction.llm = self.llm
-                    self.factgraph_extractor.llm = self.llm
-            self.embeddings.query_prefix = self.config.embedding.query_prefix
-            self.memory_manager.embeddings = self.embeddings
-            self.memory_manager.config = self.config
-            self.memory_manager.load_state(
-                snapshot.memories,
-                {"edges": [e.to_dict() for e in snapshot.memory_edges]},
-            )
-            # rebuild the spatial index from the loaded memories; the space
-            # dim follows the (possibly rebuilt) provider's effective dim so
-            # MRL-truncated vectors load into geometry of the right size
-            self.space.load_state(
-                {"dim": self.embeddings.effective_dim, "write_ops": 0, "membership": {}, "vectors": {}},
-                snapshot.regions,
-                snapshot.region_edges,
-            )
-            # archived memories never re-enter the spatial space
-            vectors: dict[str, np.ndarray] = {}
-            for mid, memory in self.memories.items():
-                if memory.archived:
-                    memory.region_id = None
-                elif memory.embedding is not None:
-                    vectors[mid] = memory.embedding
-            self.space.vectors = vectors
-            # membership is rebuilt from the region snapshot (the regions'
-            # member sets are authoritative; memory.region_id may be stale)
-            vector_ids = set(vectors)
-            membership: dict[str, Optional[str]] = {}
-            pruned: list[str] = []
-            to_rebuild = [
-                region
-                for region in self.space.regions.values()
-                if region.member_ids & vector_ids
-            ]
-            # parallel exact geometry rebuild (numpy releases the GIL;
-            # iteration 2.6 - 100k regions/memories load well under budget)
-            from concurrent.futures import ThreadPoolExecutor
+        self.embeddings.query_prefix = self.config.embedding.query_prefix
+        self.memory_manager.embeddings = self.embeddings
+        self.memory_manager.config = self.config
+        self.memory_manager.load_state(
+            snapshot.memories,
+            {"edges": [e.to_dict() for e in snapshot.memory_edges]},
+        )
+        # rebuild the spatial index from the loaded memories; the space
+        # dim follows the (possibly rebuilt) provider's effective dim so
+        # MRL-truncated vectors load into geometry of the right size
+        self.space.load_state(
+            {"dim": self.embeddings.effective_dim, "write_ops": 0, "membership": {}, "vectors": {}},
+            snapshot.regions,
+            snapshot.region_edges,
+        )
+        # archived memories never re-enter the spatial space
+        vectors: dict[str, np.ndarray] = {}
+        for mid, memory in self.memories.items():
+            if memory.archived:
+                memory.region_id = None
+            elif memory.embedding is not None:
+                vectors[mid] = memory.embedding
+        self.space.vectors = vectors
+        # membership is rebuilt from the region snapshot (the regions'
+        # member sets are authoritative; memory.region_id may be stale)
+        vector_ids = set(vectors)
+        membership: dict[str, Optional[str]] = {}
+        pruned: list[str] = []
+        to_rebuild = [
+            region
+            for region in self.space.regions.values()
+            if region.member_ids & vector_ids
+        ]
+        # parallel exact geometry rebuild (numpy releases the GIL;
+        # iteration 2.6 - 100k regions/memories load well under budget)
+        from concurrent.futures import ThreadPoolExecutor
 
-            if len(to_rebuild) > 8:
-                with ThreadPoolExecutor(max_workers=min(8, len(to_rebuild))) as pool:
-                    list(pool.map(
-                        lambda r: r.update_geometry(vectors, self.space.dim),
-                        to_rebuild,
-                    ))
+        if len(to_rebuild) > 8:
+            with ThreadPoolExecutor(max_workers=min(8, len(to_rebuild))) as pool:
+                list(pool.map(
+                    lambda r: r.update_geometry(vectors, self.space.dim),
+                    to_rebuild,
+                ))
+        else:
+            for region in to_rebuild:
+                region.update_geometry(vectors, self.space.dim)
+        for region in self.space.regions.values():
+            region.member_ids &= vector_ids
+            if region.member_ids:
+                for mid in region.member_ids:
+                    membership[mid] = region.id
             else:
-                for region in to_rebuild:
-                    region.update_geometry(vectors, self.space.dim)
-            for region in self.space.regions.values():
-                region.member_ids &= vector_ids
-                if region.member_ids:
-                    for mid in region.member_ids:
-                        membership[mid] = region.id
-                else:
-                    # collect first, delete after iteration (mutating the
-                    # dict while iterating raises RuntimeError)
-                    pruned.append(region.id)
-            for rid in pruned:
-                self.space.regions.pop(rid, None)
-            self.space._membership = membership
-            for mid, memory in self.memories.items():
-                if not memory.archived:
-                    memory.region_id = membership.get(mid)
-            # drop region-graph edges that point to pruned regions
-            for key, edge in list(self.space.region_edges.items()):
-                if edge.source not in self.space.regions or edge.target not in self.space.regions:
-                    self.space.region_edges.pop(key, None)
-            self.space._centroids_dirty = True
-            self.decay.enabled = self.policy.decay_enabled
-            # re-sync the cold archive with the loaded snapshot: archived
-            # memories live inside the snapshot, and the cold store must
-            # point at the loaded path (a stale cold dict would corrupt
-            # stats and could be flushed over another path's archive)
-            cold_path = (
-                os.path.join(
-                    os.path.dirname(self.config.storage.path), "cold_archive.json"
-                )
-                if self.config.storage.path
-                else None
+                # collect first, delete after iteration (mutating the
+                # dict while iterating raises RuntimeError)
+                pruned.append(region.id)
+        for rid in pruned:
+            self.space.regions.pop(rid, None)
+        self.space._membership = membership
+        for mid, memory in self.memories.items():
+            if not memory.archived:
+                memory.region_id = membership.get(mid)
+        # drop region-graph edges that point to pruned regions
+        for key, edge in list(self.space.region_edges.items()):
+            if edge.source not in self.space.regions or edge.target not in self.space.regions:
+                self.space.region_edges.pop(key, None)
+        self.space._centroids_dirty = True
+        self.decay.enabled = self.policy.decay_enabled
+        # re-sync the cold archive with the loaded snapshot: archived
+        # memories live inside the snapshot, and the cold store must
+        # point at the loaded path (a stale cold dict would corrupt
+        # stats and could be flushed over another path's archive)
+        cold_path = (
+            os.path.join(
+                os.path.dirname(self.config.storage.path), "cold_archive.json"
             )
-            self.archive_manager.cold_path = cold_path
-            self.archive_manager.load_state(
-                {m.id: m.to_dict() for m in snapshot.memories if m.archived}
-            )
-            self.region_manager.split_count = snapshot.counters.get("splits", 0)
-            self.region_manager.merge_count = snapshot.counters.get("merges", 0)
-            self.consolidation.consolidation_count = snapshot.counters.get("consolidations", 0)
-            self.compression.compression_count = snapshot.counters.get("compressions", 0)
-            self.retriever.refresh_keywords(self)
-            # v2: sidecar module state + pending WAL replay (module 07)
-            if snapshot.module_state is None:
-                self._load_sidecars()  # legacy snapshot compatibility
-            else:
-                self._restore_module_state(snapshot.module_state)
-            self._recover_wal()
-            # sleep-time compute：load 重绑快照配置后线程读新配置（间隔
-            # 实时读）；快照翻开后台整理则（重）启线程，翻关由线程下跳自退。
-            # load/replay 本身视为一次写活动：空闲计时从现在开始。
-            self._touch_write()
-            self._ensure_maintenance_thread()
-            logger.info("engine loaded: %s (%d memories)", path, len(self.memories))
-            return True
+            if self.config.storage.path
+            else None
+        )
+        self.archive_manager.cold_path = cold_path
+        self.archive_manager.load_state(
+            {m.id: m.to_dict() for m in snapshot.memories if m.archived}
+        )
+        self.region_manager.split_count = snapshot.counters.get("splits", 0)
+        self.region_manager.merge_count = snapshot.counters.get("merges", 0)
+        self.consolidation.consolidation_count = snapshot.counters.get("consolidations", 0)
+        self.compression.compression_count = snapshot.counters.get("compressions", 0)
+        self.retriever.refresh_keywords(self)
+        # v2: sidecar module state + pending WAL replay (module 07)
+        if snapshot.module_state is None:
+            self._load_sidecars()  # legacy snapshot compatibility
+        else:
+            self._restore_module_state(snapshot.module_state)
+        self._recover_wal()
+        # sleep-time compute：load 重绑快照配置后线程读新配置（间隔
+        # 实时读）；快照翻开后台整理则（重）启线程，翻关由线程下跳自退。
+        # load/replay 本身视为一次写活动：空闲计时从现在开始。
+        self._touch_write()
+        self._ensure_maintenance_thread()
+        logger.info("engine loaded: %s (%d memories)", path, len(self.memories))
+        return True
 
     def export_json(self, path: str) -> str:
         """Export all memories (with embeddings) as plain JSON."""

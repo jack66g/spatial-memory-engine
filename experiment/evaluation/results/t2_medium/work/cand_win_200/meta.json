@@ -1,0 +1,41 @@
+{
+ "name": "cand_win_200",
+ "overrides": {
+  "retrieval.candidate_window": 200
+ },
+ "wall_s": 47.1,
+ "returncode": 0,
+ "n_queries": 1088,
+ "hit@1": 0.1783,
+ "recall@1": 0.1719,
+ "hit@3": 0.2491,
+ "recall@3": 0.2413,
+ "hit@5": 0.2858,
+ "recall@5": 0.2757,
+ "hit@10": 0.3364,
+ "recall@10": 0.3249,
+ "mrr": 0.2231,
+ "ndcg@10": 0.2438,
+ "composite": 0.2387,
+ "lat_p50_ms": 32.67,
+ "lat_p95_ms": 37.13,
+ "lat_mean_ms": 31.29,
+ "by_type": {
+  "direct": {
+   "n": 815,
+   "hit@3": 0.2957,
+   "mrr": 0.2665
+  },
+  "temporal": {
+   "n": 164,
+   "hit@3": 0.0488,
+   "mrr": 0.0367
+  },
+  "multi": {
+   "n": 109,
+   "hit@3": 0.2018,
+   "mrr": 0.1795
+  }
+ },
+ "status": "ok"
+}

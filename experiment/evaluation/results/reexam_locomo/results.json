@@ -1,0 +1,85 @@
+[
+ {
+  "name": "baseline",
+  "overrides": {},
+  "wall_s": 4.0,
+  "returncode": 0,
+  "n_queries": 301,
+  "hit@1": 0.0199,
+  "recall@1": 0.0166,
+  "hit@3": 0.0365,
+  "recall@3": 0.0316,
+  "hit@5": 0.0764,
+  "recall@5": 0.067,
+  "hit@10": 0.1462,
+  "recall@10": 0.1351,
+  "mrr": 0.0445,
+  "ndcg@10": 0.0626,
+  "composite": 0.0458,
+  "lat_p50_ms": 5.96,
+  "lat_p95_ms": 10.18,
+  "lat_mean_ms": 6.48,
+  "by_type": {
+   "direct": {
+    "n": 246,
+    "hit@3": 0.0325,
+    "mrr": 0.0427
+   },
+   "multi": {
+    "n": 55,
+    "hit@3": 0.0545,
+    "mrr": 0.0526
+   }
+  },
+  "status": "ok"
+ },
+ {
+  "name": "united",
+  "overrides": {
+   "policy.decay_enabled": false,
+   "decay.max_weight_decay": 0.0,
+   "retrieval.keyword_candidates": 20,
+   "retrieval.top_regions": 1,
+   "retrieval.vector_weight": 0.0,
+   "retrieval.keyword_weight": 0.3,
+   "ranking.semantic": 1.0,
+   "ranking.importance": 0.0,
+   "ranking.freshness": 0.0,
+   "ranking.weight": 0.0,
+   "ranking.decay": 0.0,
+   "ranking.hit_count": 0.0,
+   "ranking.recency": 0.0,
+   "ranking.region": 0.0
+  },
+  "wall_s": 4.2,
+  "returncode": 0,
+  "n_queries": 301,
+  "hit@1": 0.2625,
+  "recall@1": 0.2509,
+  "hit@3": 0.4053,
+  "recall@3": 0.3858,
+  "hit@5": 0.4618,
+  "recall@5": 0.4373,
+  "hit@10": 0.5581,
+  "recall@10": 0.52,
+  "mrr": 0.3518,
+  "ndcg@10": 0.3836,
+  "composite": 0.3811,
+  "lat_p50_ms": 6.55,
+  "lat_p95_ms": 9.89,
+  "lat_mean_ms": 6.85,
+  "by_type": {
+   "direct": {
+    "n": 246,
+    "hit@3": 0.4512,
+    "mrr": 0.3873
+   },
+   "multi": {
+    "n": 55,
+    "hit@3": 0.2,
+    "mrr": 0.193
+   }
+  },
+  "status": "ok"
+ }
+]

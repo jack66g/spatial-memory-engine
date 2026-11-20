@@ -1,0 +1,51 @@
+{
+ "name": "fe_rank_recency_x0.5",
+ "overrides": {
+  "embedding.provider": "fastembed",
+  "embedding.model": "BAAI/bge-small-zh-v1.5",
+  "embedding.dim": 512,
+  "ranking.semantic": 0.4128,
+  "ranking.importance": 0.1238,
+  "ranking.freshness": 0.1032,
+  "ranking.weight": 0.1032,
+  "ranking.decay": 0.0826,
+  "ranking.hit_count": 0.0826,
+  "ranking.recency": 0.03,
+  "ranking.region": 0.0619
+ },
+ "wall_s": 17.8,
+ "returncode": 0,
+ "n_queries": 264,
+ "hit@1": 0.4508,
+ "recall@1": 0.4318,
+ "hit@3": 0.5341,
+ "recall@3": 0.5152,
+ "hit@5": 0.5947,
+ "recall@5": 0.5758,
+ "hit@10": 0.7273,
+ "recall@10": 0.7064,
+ "mrr": 0.5179,
+ "ndcg@10": 0.5535,
+ "composite": 0.5333,
+ "lat_p50_ms": 13.0,
+ "lat_p95_ms": 51.39,
+ "lat_mean_ms": 19.6,
+ "by_type": {
+  "direct": {
+   "n": 201,
+   "hit@3": 0.5423,
+   "mrr": 0.5342
+  },
+  "temporal": {
+   "n": 39,
+   "hit@3": 0.4103,
+   "mrr": 0.4054
+  },
+  "multi": {
+   "n": 24,
+   "hit@3": 0.6667,
+   "mrr": 0.565
+  }
+ },
+ "status": "ok"
+}

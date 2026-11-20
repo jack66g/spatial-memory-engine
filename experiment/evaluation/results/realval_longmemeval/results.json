@@ -1,0 +1,215 @@
+[
+ {
+  "name": "v_baseline",
+  "overrides": {},
+  "wall_s": 3.9,
+  "returncode": 0,
+  "n_queries": 24,
+  "hit@1": 0.0417,
+  "recall@1": 0.0417,
+  "hit@3": 0.0833,
+  "recall@3": 0.0625,
+  "hit@5": 0.0833,
+  "recall@5": 0.0625,
+  "hit@10": 0.4167,
+  "recall@10": 0.2708,
+  "mrr": 0.0995,
+  "ndcg@10": 0.1298,
+  "composite": 0.1006,
+  "lat_p50_ms": 7.86,
+  "lat_p95_ms": 12.6,
+  "lat_mean_ms": 7.8,
+  "by_type": {
+   "temporal": {
+    "n": 24,
+    "hit@3": 0.0833,
+    "mrr": 0.0995
+   }
+  },
+  "status": "ok"
+ },
+ {
+  "name": "v_sem_x2_exact",
+  "overrides": {
+   "ranking.semantic": 0.8,
+   "ranking.importance": 0.04,
+   "ranking.freshness": 0.0333,
+   "ranking.weight": 0.0333,
+   "ranking.decay": 0.0267,
+   "ranking.hit_count": 0.0267,
+   "ranking.recency": 0.02,
+   "ranking.region": 0.02
+  },
+  "wall_s": 3.9,
+  "returncode": 0,
+  "n_queries": 24,
+  "hit@1": 0.4167,
+  "recall@1": 0.2917,
+  "hit@3": 0.6667,
+  "recall@3": 0.4722,
+  "hit@5": 0.75,
+  "recall@5": 0.5694,
+  "hit@10": 0.8333,
+  "recall@10": 0.6667,
+  "mrr": 0.5726,
+  "ndcg@10": 0.5445,
+  "composite": 0.6032,
+  "lat_p50_ms": 8.12,
+  "lat_p95_ms": 12.3,
+  "lat_mean_ms": 8.38,
+  "by_type": {
+   "temporal": {
+    "n": 24,
+    "hit@3": 0.6667,
+    "mrr": 0.5726
+   }
+  },
+  "status": "ok"
+ },
+ {
+  "name": "v_kw_only",
+  "overrides": {
+   "retrieval.vector_weight": 0.0,
+   "retrieval.keyword_weight": 0.3
+  },
+  "wall_s": 3.8,
+  "returncode": 0,
+  "n_queries": 24,
+  "hit@1": 0.4583,
+  "recall@1": 0.3125,
+  "hit@3": 0.625,
+  "recall@3": 0.4306,
+  "hit@5": 0.6667,
+  "recall@5": 0.4722,
+  "hit@10": 0.8333,
+  "recall@10": 0.625,
+  "mrr": 0.5696,
+  "ndcg@10": 0.5152,
+  "composite": 0.5782,
+  "lat_p50_ms": 8.47,
+  "lat_p95_ms": 12.82,
+  "lat_mean_ms": 8.4,
+  "by_type": {
+   "temporal": {
+    "n": 24,
+    "hit@3": 0.625,
+    "mrr": 0.5696
+   }
+  },
+  "status": "ok"
+ },
+ {
+  "name": "v_static_lean",
+  "overrides": {
+   "ranking.semantic": 0.6897,
+   "ranking.importance": 0.2069,
+   "ranking.freshness": 0.0,
+   "ranking.weight": 0.0,
+   "ranking.decay": 0.0,
+   "ranking.hit_count": 0.0,
+   "ranking.recency": 0.0,
+   "ranking.region": 0.1034
+  },
+  "wall_s": 3.9,
+  "returncode": 0,
+  "n_queries": 24,
+  "hit@1": 0.4167,
+  "recall@1": 0.2917,
+  "hit@3": 0.6667,
+  "recall@3": 0.4722,
+  "hit@5": 0.75,
+  "recall@5": 0.5486,
+  "hit@10": 0.8333,
+  "recall@10": 0.6667,
+  "mrr": 0.5726,
+  "ndcg@10": 0.5427,
+  "composite": 0.6028,
+  "lat_p50_ms": 7.6,
+  "lat_p95_ms": 14.07,
+  "lat_mean_ms": 9.11,
+  "by_type": {
+   "temporal": {
+    "n": 24,
+    "hit@3": 0.6667,
+    "mrr": 0.5726
+   }
+  },
+  "status": "ok"
+ },
+ {
+  "name": "v_stack_static",
+  "overrides": {
+   "policy.decay_enabled": false,
+   "decay.max_weight_decay": 0.0,
+   "retrieval.keyword_candidates": 20,
+   "retrieval.top_regions": 1,
+   "retrieval.vector_weight": 0.0,
+   "retrieval.keyword_weight": 0.3,
+   "ranking.semantic": 0.6897,
+   "ranking.importance": 0.2069,
+   "ranking.freshness": 0.0,
+   "ranking.weight": 0.0,
+   "ranking.decay": 0.0,
+   "ranking.hit_count": 0.0,
+   "ranking.recency": 0.0,
+   "ranking.region": 0.1034
+  },
+  "wall_s": 3.9,
+  "returncode": 0,
+  "n_queries": 24,
+  "hit@1": 0.5417,
+  "recall@1": 0.3472,
+  "hit@3": 0.875,
+  "recall@3": 0.6528,
+  "hit@5": 0.875,
+  "recall@5": 0.7014,
+  "hit@10": 0.875,
+  "recall@10": 0.7986,
+  "mrr": 0.6806,
+  "ndcg@10": 0.6688,
+  "composite": 0.7554,
+  "lat_p50_ms": 11.33,
+  "lat_p95_ms": 15.7,
+  "lat_mean_ms": 11.08,
+  "by_type": {
+   "temporal": {
+    "n": 24,
+    "hit@3": 0.875,
+    "mrr": 0.6806
+   }
+  },
+  "status": "ok"
+ },
+ {
+  "name": "v_stack_light",
+  "overrides": {
+   "retrieval.keyword_candidates": 20,
+   "retrieval.top_regions": 1
+  },
+  "wall_s": 4.1,
+  "returncode": 0,
+  "n_queries": 24,
+  "hit@1": 0.0417,
+  "recall@1": 0.0417,
+  "hit@3": 0.125,
+  "recall@3": 0.0833,
+  "hit@5": 0.2917,
+  "recall@5": 0.1875,
+  "hit@10": 0.5,
+  "recall@10": 0.3542,
+  "mrr": 0.146,
+  "ndcg@10": 0.1815,
+  "composite": 0.1465,
+  "lat_p50_ms": 11.66,
+  "lat_p95_ms": 15.31,
+  "lat_mean_ms": 11.13,
+  "by_type": {
+   "temporal": {
+    "n": 24,
+    "hit@3": 0.125,
+    "mrr": 0.146
+   }
+  },
+  "status": "ok"
+ }
+]

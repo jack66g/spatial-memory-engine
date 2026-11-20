@@ -1,0 +1,41 @@
+{
+ "name": "region_damp_0.5",
+ "overrides": {
+  "retrieval.region_dampening": 0.5
+ },
+ "wall_s": 37.9,
+ "returncode": 0,
+ "n_queries": 1088,
+ "hit@1": 0.1737,
+ "recall@1": 0.1682,
+ "hit@3": 0.2445,
+ "recall@3": 0.2371,
+ "hit@5": 0.2923,
+ "recall@5": 0.2822,
+ "hit@10": 0.3447,
+ "recall@10": 0.3341,
+ "mrr": 0.2207,
+ "ndcg@10": 0.2449,
+ "composite": 0.2363,
+ "lat_p50_ms": 22.47,
+ "lat_p95_ms": 31.97,
+ "lat_mean_ms": 23.19,
+ "by_type": {
+  "direct": {
+   "n": 815,
+   "hit@3": 0.2908,
+   "mrr": 0.2639
+  },
+  "temporal": {
+   "n": 164,
+   "hit@3": 0.0488,
+   "mrr": 0.0384
+  },
+  "multi": {
+   "n": 109,
+   "hit@3": 0.1927,
+   "mrr": 0.1721
+  }
+ },
+ "status": "ok"
+}

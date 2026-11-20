@@ -1,0 +1,51 @@
+{
+ "name": "fe_pure",
+ "overrides": {
+  "embedding.provider": "fastembed",
+  "embedding.model": "BAAI/bge-small-zh-v1.5",
+  "embedding.dim": 512,
+  "ranking.semantic": 1.0,
+  "ranking.importance": 0.0,
+  "ranking.freshness": 0.0,
+  "ranking.weight": 0.0,
+  "ranking.decay": 0.0,
+  "ranking.hit_count": 0.0,
+  "ranking.recency": 0.0,
+  "ranking.region": 0.0
+ },
+ "wall_s": 109.7,
+ "returncode": 0,
+ "n_queries": 1088,
+ "hit@1": 0.8879,
+ "recall@1": 0.8516,
+ "hit@3": 0.9559,
+ "recall@3": 0.9467,
+ "hit@5": 0.9586,
+ "recall@5": 0.9554,
+ "hit@10": 0.9596,
+ "recall@10": 0.9591,
+ "mrr": 0.9199,
+ "ndcg@10": 0.9285,
+ "composite": 0.9365,
+ "lat_p50_ms": 24.55,
+ "lat_p95_ms": 90.58,
+ "lat_mean_ms": 39.5,
+ "by_type": {
+  "direct": {
+   "n": 815,
+   "hit@3": 0.989,
+   "mrr": 0.9594
+  },
+  "temporal": {
+   "n": 164,
+   "hit@3": 0.7866,
+   "mrr": 0.7409
+  },
+  "multi": {
+   "n": 109,
+   "hit@3": 0.9633,
+   "mrr": 0.8937
+  }
+ },
+ "status": "ok"
+}

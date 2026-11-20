@@ -1,0 +1,26 @@
+[
+ {
+  "op": "add(empty)",
+  "exc": "ValueError: memory text must not be empty"
+ },
+ {
+  "op": "add(whitespace)",
+  "exc": "ValueError: memory text must not be empty"
+ },
+ {
+  "op": "add(lone_surrogate)",
+  "exc": "UnicodeEncodeError: 'utf-8' codec can't encode character '\\ud800' in position 5: surrogates not allowed"
+ },
+ {
+  "op": "search(lone_surrogate)",
+  "exc": "UnicodeEncodeError: 'utf-8' codec can't encode character '\\ud800' in position 5: surrogates not allowed"
+ },
+ {
+  "op": "search(top_k=float)",
+  "exc": "TypeError: slice indices must be integers or None or have an __index__ method"
+ },
+ {
+  "op": "update(ghost_id)",
+  "exc": "KeyError: 'memory 不存在的id not found'"
+ }
+]

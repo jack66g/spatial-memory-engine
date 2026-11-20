@@ -1,0 +1,656 @@
+[
+ {
+  "name": "fe_baseline",
+  "overrides": {
+   "embedding.provider": "fastembed",
+   "embedding.model": "BAAI/bge-small-zh-v1.5",
+   "embedding.dim": 512
+  }
+ },
+ {
+  "name": "fe_fusion_v0.0_k0.15",
+  "overrides": {
+   "embedding.provider": "fastembed",
+   "embedding.model": "BAAI/bge-small-zh-v1.5",
+   "embedding.dim": 512,
+   "retrieval.vector_weight": 0.0,
+   "retrieval.keyword_weight": 0.15
+  }
+ },
+ {
+  "name": "fe_fusion_v0.0_k0.3",
+  "overrides": {
+   "embedding.provider": "fastembed",
+   "embedding.model": "BAAI/bge-small-zh-v1.5",
+   "embedding.dim": 512,
+   "retrieval.vector_weight": 0.0,
+   "retrieval.keyword_weight": 0.3
+  }
+ },
+ {
+  "name": "fe_fusion_v0.0_k0.5",
+  "overrides": {
+   "embedding.provider": "fastembed",
+   "embedding.model": "BAAI/bge-small-zh-v1.5",
+   "embedding.dim": 512,
+   "retrieval.vector_weight": 0.0,
+   "retrieval.keyword_weight": 0.5
+  }
+ },
+ {
+  "name": "fe_fusion_v0.3_k0.0",
+  "overrides": {
+   "embedding.provider": "fastembed",
+   "embedding.model": "BAAI/bge-small-zh-v1.5",
+   "embedding.dim": 512,
+   "retrieval.vector_weight": 0.3,
+   "retrieval.keyword_weight": 0.0
+  }
+ },
+ {
+  "name": "fe_fusion_v0.3_k0.15",
+  "overrides": {
+   "embedding.provider": "fastembed",
+   "embedding.model": "BAAI/bge-small-zh-v1.5",
+   "embedding.dim": 512,
+   "retrieval.vector_weight": 0.3,
+   "retrieval.keyword_weight": 0.15
+  }
+ },
+ {
+  "name": "fe_fusion_v0.3_k0.3",
+  "overrides": {
+   "embedding.provider": "fastembed",
+   "embedding.model": "BAAI/bge-small-zh-v1.5",
+   "embedding.dim": 512,
+   "retrieval.vector_weight": 0.3,
+   "retrieval.keyword_weight": 0.3
+  }
+ },
+ {
+  "name": "fe_fusion_v0.3_k0.5",
+  "overrides": {
+   "embedding.provider": "fastembed",
+   "embedding.model": "BAAI/bge-small-zh-v1.5",
+   "embedding.dim": 512,
+   "retrieval.vector_weight": 0.3,
+   "retrieval.keyword_weight": 0.5
+  }
+ },
+ {
+  "name": "fe_fusion_v0.5_k0.0",
+  "overrides": {
+   "embedding.provider": "fastembed",
+   "embedding.model": "BAAI/bge-small-zh-v1.5",
+   "embedding.dim": 512,
+   "retrieval.vector_weight": 0.5,
+   "retrieval.keyword_weight": 0.0
+  }
+ },
+ {
+  "name": "fe_fusion_v0.5_k0.15",
+  "overrides": {
+   "embedding.provider": "fastembed",
+   "embedding.model": "BAAI/bge-small-zh-v1.5",
+   "embedding.dim": 512,
+   "retrieval.vector_weight": 0.5,
+   "retrieval.keyword_weight": 0.15
+  }
+ },
+ {
+  "name": "fe_fusion_v0.5_k0.3",
+  "overrides": {
+   "embedding.provider": "fastembed",
+   "embedding.model": "BAAI/bge-small-zh-v1.5",
+   "embedding.dim": 512,
+   "retrieval.vector_weight": 0.5,
+   "retrieval.keyword_weight": 0.3
+  }
+ },
+ {
+  "name": "fe_fusion_v0.5_k0.5",
+  "overrides": {
+   "embedding.provider": "fastembed",
+   "embedding.model": "BAAI/bge-small-zh-v1.5",
+   "embedding.dim": 512,
+   "retrieval.vector_weight": 0.5,
+   "retrieval.keyword_weight": 0.5
+  }
+ },
+ {
+  "name": "fe_fusion_v0.7_k0.0",
+  "overrides": {
+   "embedding.provider": "fastembed",
+   "embedding.model": "BAAI/bge-small-zh-v1.5",
+   "embedding.dim": 512,
+   "retrieval.vector_weight": 0.7,
+   "retrieval.keyword_weight": 0.0
+  }
+ },
+ {
+  "name": "fe_fusion_v0.7_k0.15",
+  "overrides": {
+   "embedding.provider": "fastembed",
+   "embedding.model": "BAAI/bge-small-zh-v1.5",
+   "embedding.dim": 512,
+   "retrieval.vector_weight": 0.7,
+   "retrieval.keyword_weight": 0.15
+  }
+ },
+ {
+  "name": "fe_fusion_v0.7_k0.3",
+  "overrides": {
+   "embedding.provider": "fastembed",
+   "embedding.model": "BAAI/bge-small-zh-v1.5",
+   "embedding.dim": 512,
+   "retrieval.vector_weight": 0.7,
+   "retrieval.keyword_weight": 0.3
+  }
+ },
+ {
+  "name": "fe_fusion_v0.7_k0.5",
+  "overrides": {
+   "embedding.provider": "fastembed",
+   "embedding.model": "BAAI/bge-small-zh-v1.5",
+   "embedding.dim": 512,
+   "retrieval.vector_weight": 0.7,
+   "retrieval.keyword_weight": 0.5
+  }
+ },
+ {
+  "name": "fe_fusion_v0.9_k0.0",
+  "overrides": {
+   "embedding.provider": "fastembed",
+   "embedding.model": "BAAI/bge-small-zh-v1.5",
+   "embedding.dim": 512,
+   "retrieval.vector_weight": 0.9,
+   "retrieval.keyword_weight": 0.0
+  }
+ },
+ {
+  "name": "fe_fusion_v0.9_k0.15",
+  "overrides": {
+   "embedding.provider": "fastembed",
+   "embedding.model": "BAAI/bge-small-zh-v1.5",
+   "embedding.dim": 512,
+   "retrieval.vector_weight": 0.9,
+   "retrieval.keyword_weight": 0.15
+  }
+ },
+ {
+  "name": "fe_fusion_v0.9_k0.3",
+  "overrides": {
+   "embedding.provider": "fastembed",
+   "embedding.model": "BAAI/bge-small-zh-v1.5",
+   "embedding.dim": 512,
+   "retrieval.vector_weight": 0.9,
+   "retrieval.keyword_weight": 0.3
+  }
+ },
+ {
+  "name": "fe_fusion_v0.9_k0.5",
+  "overrides": {
+   "embedding.provider": "fastembed",
+   "embedding.model": "BAAI/bge-small-zh-v1.5",
+   "embedding.dim": 512,
+   "retrieval.vector_weight": 0.9,
+   "retrieval.keyword_weight": 0.5
+  }
+ },
+ {
+  "name": "fe_fusion_v1.0_k0.0",
+  "overrides": {
+   "embedding.provider": "fastembed",
+   "embedding.model": "BAAI/bge-small-zh-v1.5",
+   "embedding.dim": 512,
+   "retrieval.vector_weight": 1.0,
+   "retrieval.keyword_weight": 0.0
+  }
+ },
+ {
+  "name": "fe_fusion_v1.0_k0.15",
+  "overrides": {
+   "embedding.provider": "fastembed",
+   "embedding.model": "BAAI/bge-small-zh-v1.5",
+   "embedding.dim": 512,
+   "retrieval.vector_weight": 1.0,
+   "retrieval.keyword_weight": 0.15
+  }
+ },
+ {
+  "name": "fe_fusion_v1.0_k0.3",
+  "overrides": {
+   "embedding.provider": "fastembed",
+   "embedding.model": "BAAI/bge-small-zh-v1.5",
+   "embedding.dim": 512,
+   "retrieval.vector_weight": 1.0,
+   "retrieval.keyword_weight": 0.3
+  }
+ },
+ {
+  "name": "fe_fusion_v1.0_k0.5",
+  "overrides": {
+   "embedding.provider": "fastembed",
+   "embedding.model": "BAAI/bge-small-zh-v1.5",
+   "embedding.dim": 512,
+   "retrieval.vector_weight": 1.0,
+   "retrieval.keyword_weight": 0.5
+  }
+ },
+ {
+  "name": "fe_rank_semantic_x0.0",
+  "overrides": {
+   "embedding.provider": "fastembed",
+   "embedding.model": "BAAI/bge-small-zh-v1.5",
+   "embedding.dim": 512,
+   "ranking.semantic": 0.0,
+   "ranking.importance": 0.2,
+   "ranking.freshness": 0.1667,
+   "ranking.weight": 0.1667,
+   "ranking.decay": 0.1333,
+   "ranking.hit_count": 0.1333,
+   "ranking.recency": 0.1,
+   "ranking.region": 0.1
+  }
+ },
+ {
+  "name": "fe_rank_semantic_x0.5",
+  "overrides": {
+   "embedding.provider": "fastembed",
+   "embedding.model": "BAAI/bge-small-zh-v1.5",
+   "embedding.dim": 512,
+   "ranking.semantic": 0.2,
+   "ranking.importance": 0.16,
+   "ranking.freshness": 0.1333,
+   "ranking.weight": 0.1333,
+   "ranking.decay": 0.1067,
+   "ranking.hit_count": 0.1067,
+   "ranking.recency": 0.08,
+   "ranking.region": 0.08
+  }
+ },
+ {
+  "name": "fe_rank_semantic_x2.0",
+  "overrides": {
+   "embedding.provider": "fastembed",
+   "embedding.model": "BAAI/bge-small-zh-v1.5",
+   "embedding.dim": 512,
+   "ranking.semantic": 0.8,
+   "ranking.importance": 0.04,
+   "ranking.freshness": 0.0333,
+   "ranking.weight": 0.0333,
+   "ranking.decay": 0.0267,
+   "ranking.hit_count": 0.0267,
+   "ranking.recency": 0.02,
+   "ranking.region": 0.02
+  }
+ },
+ {
+  "name": "fe_rank_importance_x0.0",
+  "overrides": {
+   "embedding.provider": "fastembed",
+   "embedding.model": "BAAI/bge-small-zh-v1.5",
+   "embedding.dim": 512,
+   "ranking.semantic": 0.4545,
+   "ranking.importance": 0.0,
+   "ranking.freshness": 0.1136,
+   "ranking.weight": 0.1136,
+   "ranking.decay": 0.0909,
+   "ranking.hit_count": 0.0909,
+   "ranking.recency": 0.0682,
+   "ranking.region": 0.0682
+  }
+ },
+ {
+  "name": "fe_rank_importance_x0.5",
+  "overrides": {
+   "embedding.provider": "fastembed",
+   "embedding.model": "BAAI/bge-small-zh-v1.5",
+   "embedding.dim": 512,
+   "ranking.semantic": 0.4273,
+   "ranking.importance": 0.06,
+   "ranking.freshness": 0.1068,
+   "ranking.weight": 0.1068,
+   "ranking.decay": 0.0855,
+   "ranking.hit_count": 0.0855,
+   "ranking.recency": 0.0641,
+   "ranking.region": 0.0641
+  }
+ },
+ {
+  "name": "fe_rank_importance_x2.0",
+  "overrides": {
+   "embedding.provider": "fastembed",
+   "embedding.model": "BAAI/bge-small-zh-v1.5",
+   "embedding.dim": 512,
+   "ranking.semantic": 0.3455,
+   "ranking.importance": 0.24,
+   "ranking.freshness": 0.0864,
+   "ranking.weight": 0.0864,
+   "ranking.decay": 0.0691,
+   "ranking.hit_count": 0.0691,
+   "ranking.recency": 0.0518,
+   "ranking.region": 0.0518
+  }
+ },
+ {
+  "name": "fe_rank_freshness_x0.0",
+  "overrides": {
+   "embedding.provider": "fastembed",
+   "embedding.model": "BAAI/bge-small-zh-v1.5",
+   "embedding.dim": 512,
+   "ranking.semantic": 0.4444,
+   "ranking.importance": 0.1333,
+   "ranking.freshness": 0.0,
+   "ranking.weight": 0.1111,
+   "ranking.decay": 0.0889,
+   "ranking.hit_count": 0.0889,
+   "ranking.recency": 0.0667,
+   "ranking.region": 0.0667
+  }
+ },
+ {
+  "name": "fe_rank_freshness_x0.5",
+  "overrides": {
+   "embedding.provider": "fastembed",
+   "embedding.model": "BAAI/bge-small-zh-v1.5",
+   "embedding.dim": 512,
+   "ranking.semantic": 0.4222,
+   "ranking.importance": 0.1267,
+   "ranking.freshness": 0.05,
+   "ranking.weight": 0.1056,
+   "ranking.decay": 0.0844,
+   "ranking.hit_count": 0.0844,
+   "ranking.recency": 0.0633,
+   "ranking.region": 0.0633
+  }
+ },
+ {
+  "name": "fe_rank_freshness_x2.0",
+  "overrides": {
+   "embedding.provider": "fastembed",
+   "embedding.model": "BAAI/bge-small-zh-v1.5",
+   "embedding.dim": 512,
+   "ranking.semantic": 0.3556,
+   "ranking.importance": 0.1067,
+   "ranking.freshness": 0.2,
+   "ranking.weight": 0.0889,
+   "ranking.decay": 0.0711,
+   "ranking.hit_count": 0.0711,
+   "ranking.recency": 0.0533,
+   "ranking.region": 0.0533
+  }
+ },
+ {
+  "name": "fe_rank_weight_x0.0",
+  "overrides": {
+   "embedding.provider": "fastembed",
+   "embedding.model": "BAAI/bge-small-zh-v1.5",
+   "embedding.dim": 512,
+   "ranking.semantic": 0.4444,
+   "ranking.importance": 0.1333,
+   "ranking.freshness": 0.1111,
+   "ranking.weight": 0.0,
+   "ranking.decay": 0.0889,
+   "ranking.hit_count": 0.0889,
+   "ranking.recency": 0.0667,
+   "ranking.region": 0.0667
+  }
+ },
+ {
+  "name": "fe_rank_weight_x0.5",
+  "overrides": {
+   "embedding.provider": "fastembed",
+   "embedding.model": "BAAI/bge-small-zh-v1.5",
+   "embedding.dim": 512,
+   "ranking.semantic": 0.4222,
+   "ranking.importance": 0.1267,
+   "ranking.freshness": 0.1056,
+   "ranking.weight": 0.05,
+   "ranking.decay": 0.0844,
+   "ranking.hit_count": 0.0844,
+   "ranking.recency": 0.0633,
+   "ranking.region": 0.0633
+  }
+ },
+ {
+  "name": "fe_rank_weight_x2.0",
+  "overrides": {
+   "embedding.provider": "fastembed",
+   "embedding.model": "BAAI/bge-small-zh-v1.5",
+   "embedding.dim": 512,
+   "ranking.semantic": 0.3556,
+   "ranking.importance": 0.1067,
+   "ranking.freshness": 0.0889,
+   "ranking.weight": 0.2,
+   "ranking.decay": 0.0711,
+   "ranking.hit_count": 0.0711,
+   "ranking.recency": 0.0533,
+   "ranking.region": 0.0533
+  }
+ },
+ {
+  "name": "fe_rank_decay_x0.0",
+  "overrides": {
+   "embedding.provider": "fastembed",
+   "embedding.model": "BAAI/bge-small-zh-v1.5",
+   "embedding.dim": 512,
+   "ranking.semantic": 0.4348,
+   "ranking.importance": 0.1304,
+   "ranking.freshness": 0.1087,
+   "ranking.weight": 0.1087,
+   "ranking.decay": 0.0,
+   "ranking.hit_count": 0.087,
+   "ranking.recency": 0.0652,
+   "ranking.region": 0.0652
+  }
+ },
+ {
+  "name": "fe_rank_decay_x0.5",
+  "overrides": {
+   "embedding.provider": "fastembed",
+   "embedding.model": "BAAI/bge-small-zh-v1.5",
+   "embedding.dim": 512,
+   "ranking.semantic": 0.4174,
+   "ranking.importance": 0.1252,
+   "ranking.freshness": 0.1043,
+   "ranking.weight": 0.1043,
+   "ranking.decay": 0.04,
+   "ranking.hit_count": 0.0835,
+   "ranking.recency": 0.0626,
+   "ranking.region": 0.0626
+  }
+ },
+ {
+  "name": "fe_rank_decay_x2.0",
+  "overrides": {
+   "embedding.provider": "fastembed",
+   "embedding.model": "BAAI/bge-small-zh-v1.5",
+   "embedding.dim": 512,
+   "ranking.semantic": 0.3652,
+   "ranking.importance": 0.1096,
+   "ranking.freshness": 0.0913,
+   "ranking.weight": 0.0913,
+   "ranking.decay": 0.16,
+   "ranking.hit_count": 0.073,
+   "ranking.recency": 0.0548,
+   "ranking.region": 0.0548
+  }
+ },
+ {
+  "name": "fe_rank_hit_count_x0.0",
+  "overrides": {
+   "embedding.provider": "fastembed",
+   "embedding.model": "BAAI/bge-small-zh-v1.5",
+   "embedding.dim": 512,
+   "ranking.semantic": 0.4348,
+   "ranking.importance": 0.1304,
+   "ranking.freshness": 0.1087,
+   "ranking.weight": 0.1087,
+   "ranking.decay": 0.087,
+   "ranking.hit_count": 0.0,
+   "ranking.recency": 0.0652,
+   "ranking.region": 0.0652
+  }
+ },
+ {
+  "name": "fe_rank_hit_count_x0.5",
+  "overrides": {
+   "embedding.provider": "fastembed",
+   "embedding.model": "BAAI/bge-small-zh-v1.5",
+   "embedding.dim": 512,
+   "ranking.semantic": 0.4174,
+   "ranking.importance": 0.1252,
+   "ranking.freshness": 0.1043,
+   "ranking.weight": 0.1043,
+   "ranking.decay": 0.0835,
+   "ranking.hit_count": 0.04,
+   "ranking.recency": 0.0626,
+   "ranking.region": 0.0626
+  }
+ },
+ {
+  "name": "fe_rank_hit_count_x2.0",
+  "overrides": {
+   "embedding.provider": "fastembed",
+   "embedding.model": "BAAI/bge-small-zh-v1.5",
+   "embedding.dim": 512,
+   "ranking.semantic": 0.3652,
+   "ranking.importance": 0.1096,
+   "ranking.freshness": 0.0913,
+   "ranking.weight": 0.0913,
+   "ranking.decay": 0.073,
+   "ranking.hit_count": 0.16,
+   "ranking.recency": 0.0548,
+   "ranking.region": 0.0548
+  }
+ },
+ {
+  "name": "fe_rank_recency_x0.0",
+  "overrides": {
+   "embedding.provider": "fastembed",
+   "embedding.model": "BAAI/bge-small-zh-v1.5",
+   "embedding.dim": 512,
+   "ranking.semantic": 0.4255,
+   "ranking.importance": 0.1277,
+   "ranking.freshness": 0.1064,
+   "ranking.weight": 0.1064,
+   "ranking.decay": 0.0851,
+   "ranking.hit_count": 0.0851,
+   "ranking.recency": 0.0,
+   "ranking.region": 0.0638
+  }
+ },
+ {
+  "name": "fe_rank_recency_x0.5",
+  "overrides": {
+   "embedding.provider": "fastembed",
+   "embedding.model": "BAAI/bge-small-zh-v1.5",
+   "embedding.dim": 512,
+   "ranking.semantic": 0.4128,
+   "ranking.importance": 0.1238,
+   "ranking.freshness": 0.1032,
+   "ranking.weight": 0.1032,
+   "ranking.decay": 0.0826,
+   "ranking.hit_count": 0.0826,
+   "ranking.recency": 0.03,
+   "ranking.region": 0.0619
+  }
+ },
+ {
+  "name": "fe_rank_recency_x2.0",
+  "overrides": {
+   "embedding.provider": "fastembed",
+   "embedding.model": "BAAI/bge-small-zh-v1.5",
+   "embedding.dim": 512,
+   "ranking.semantic": 0.3745,
+   "ranking.importance": 0.1123,
+   "ranking.freshness": 0.0936,
+   "ranking.weight": 0.0936,
+   "ranking.decay": 0.0749,
+   "ranking.hit_count": 0.0749,
+   "ranking.recency": 0.12,
+   "ranking.region": 0.0562
+  }
+ },
+ {
+  "name": "fe_rank_region_x0.0",
+  "overrides": {
+   "embedding.provider": "fastembed",
+   "embedding.model": "BAAI/bge-small-zh-v1.5",
+   "embedding.dim": 512,
+   "ranking.semantic": 0.4255,
+   "ranking.importance": 0.1277,
+   "ranking.freshness": 0.1064,
+   "ranking.weight": 0.1064,
+   "ranking.decay": 0.0851,
+   "ranking.hit_count": 0.0851,
+   "ranking.recency": 0.0638,
+   "ranking.region": 0.0
+  }
+ },
+ {
+  "name": "fe_rank_region_x0.5",
+  "overrides": {
+   "embedding.provider": "fastembed",
+   "embedding.model": "BAAI/bge-small-zh-v1.5",
+   "embedding.dim": 512,
+   "ranking.semantic": 0.4128,
+   "ranking.importance": 0.1238,
+   "ranking.freshness": 0.1032,
+   "ranking.weight": 0.1032,
+   "ranking.decay": 0.0826,
+   "ranking.hit_count": 0.0826,
+   "ranking.recency": 0.0619,
+   "ranking.region": 0.03
+  }
+ },
+ {
+  "name": "fe_rank_region_x2.0",
+  "overrides": {
+   "embedding.provider": "fastembed",
+   "embedding.model": "BAAI/bge-small-zh-v1.5",
+   "embedding.dim": 512,
+   "ranking.semantic": 0.3745,
+   "ranking.importance": 0.1123,
+   "ranking.freshness": 0.0936,
+   "ranking.weight": 0.0936,
+   "ranking.decay": 0.0749,
+   "ranking.hit_count": 0.0749,
+   "ranking.recency": 0.0562,
+   "ranking.region": 0.12
+  }
+ },
+ {
+  "name": "fe_dynoff",
+  "overrides": {
+   "embedding.provider": "fastembed",
+   "embedding.model": "BAAI/bge-small-zh-v1.5",
+   "embedding.dim": 512,
+   "policy.decay_enabled": false,
+   "decay.max_weight_decay": 0.0
+  }
+ },
+ {
+  "name": "fe_united_old",
+  "overrides": {
+   "embedding.provider": "fastembed",
+   "embedding.model": "BAAI/bge-small-zh-v1.5",
+   "embedding.dim": 512,
+   "policy.decay_enabled": false,
+   "decay.max_weight_decay": 0.0,
+   "retrieval.keyword_candidates": 20,
+   "retrieval.top_regions": 1,
+   "retrieval.vector_weight": 0.0,
+   "retrieval.keyword_weight": 0.3,
+   "ranking.semantic": 1.0,
+   "ranking.importance": 0.0,
+   "ranking.freshness": 0.0,
+   "ranking.weight": 0.0,
+   "ranking.decay": 0.0,
+   "ranking.hit_count": 0.0,
+   "ranking.recency": 0.0,
+   "ranking.region": 0.0
+  }
+ }
+]

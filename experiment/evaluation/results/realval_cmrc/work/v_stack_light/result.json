@@ -1,0 +1,34 @@
+{
+ "dataset": "cmrc",
+ "n_memories": 848,
+ "top_k": 10,
+ "overrides": {
+  "retrieval.keyword_candidates": 20,
+  "retrieval.top_regions": 1
+ },
+ "build_s": 43.3,
+ "metrics": {
+  "n_queries": 500,
+  "hit@1": 0.214,
+  "recall@1": 0.214,
+  "hit@3": 0.268,
+  "recall@3": 0.268,
+  "hit@5": 0.342,
+  "recall@5": 0.342,
+  "hit@10": 0.616,
+  "recall@10": 0.616,
+  "mrr": 0.2875,
+  "ndcg@10": 0.3613,
+  "composite": 0.2982,
+  "lat_p50_ms": 68.6,
+  "lat_p95_ms": 86.68,
+  "lat_mean_ms": 69.45
+ },
+ "by_type": {
+  "direct": {
+   "n": 500,
+   "hit@3": 0.268,
+   "mrr": 0.2875
+  }
+ }
+}

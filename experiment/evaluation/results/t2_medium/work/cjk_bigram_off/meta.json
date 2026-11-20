@@ -1,0 +1,41 @@
+{
+ "name": "cjk_bigram_off",
+ "overrides": {
+  "retrieval.cjk_bigram": false
+ },
+ "wall_s": 38.0,
+ "returncode": 0,
+ "n_queries": 1088,
+ "hit@1": 0.17,
+ "recall@1": 0.165,
+ "hit@3": 0.2417,
+ "recall@3": 0.2353,
+ "hit@5": 0.2886,
+ "recall@5": 0.2794,
+ "hit@10": 0.3419,
+ "recall@10": 0.3327,
+ "mrr": 0.2174,
+ "ndcg@10": 0.2425,
+ "composite": 0.2334,
+ "lat_p50_ms": 22.13,
+ "lat_p95_ms": 31.6,
+ "lat_mean_ms": 22.88,
+ "by_type": {
+  "direct": {
+   "n": 815,
+   "hit@3": 0.2908,
+   "mrr": 0.2612
+  },
+  "temporal": {
+   "n": 164,
+   "hit@3": 0.0488,
+   "mrr": 0.0358
+  },
+  "multi": {
+   "n": 109,
+   "hit@3": 0.1651,
+   "mrr": 0.1632
+  }
+ },
+ "status": "ok"
+}

@@ -28,3 +28,12 @@ Thumbs.db
 
 # 智能体会话指令（本地）
 /AGENTS.md
+# 开源比赛数据集(456MB)与运行工作区:永不提交
+experiment/datasets/opensource/
+experiment/evaluation/work/
+
+# 实验运行时残留:不入库
+experiment/evaluation/results/**/*.wal
+experiment/evaluation/results/**/*.lock
+experiment/evaluation/results/**/engine_state*
+experiment/evaluation/results/**/error.log

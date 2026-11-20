@@ -1,0 +1,51 @@
+{
+ "name": "fe_sem2",
+ "overrides": {
+  "embedding.provider": "fastembed",
+  "embedding.model": "BAAI/bge-small-zh-v1.5",
+  "embedding.dim": 512,
+  "ranking.semantic": 0.8,
+  "ranking.importance": 0.04,
+  "ranking.freshness": 0.0333,
+  "ranking.weight": 0.0333,
+  "ranking.decay": 0.0267,
+  "ranking.hit_count": 0.0267,
+  "ranking.recency": 0.02,
+  "ranking.region": 0.02
+ },
+ "wall_s": 108.0,
+ "returncode": 0,
+ "n_queries": 1088,
+ "hit@1": 0.8612,
+ "recall@1": 0.8272,
+ "hit@3": 0.9136,
+ "recall@3": 0.9058,
+ "hit@5": 0.9228,
+ "recall@5": 0.9182,
+ "hit@10": 0.9246,
+ "recall@10": 0.9233,
+ "mrr": 0.8879,
+ "ndcg@10": 0.8957,
+ "composite": 0.9001,
+ "lat_p50_ms": 23.62,
+ "lat_p95_ms": 87.08,
+ "lat_mean_ms": 38.85,
+ "by_type": {
+  "direct": {
+   "n": 815,
+   "hit@3": 0.9632,
+   "mrr": 0.9426
+  },
+  "temporal": {
+   "n": 164,
+   "hit@3": 0.6585,
+   "mrr": 0.6352
+  },
+  "multi": {
+   "n": 109,
+   "hit@3": 0.9266,
+   "mrr": 0.8596
+  }
+ },
+ "status": "ok"
+}

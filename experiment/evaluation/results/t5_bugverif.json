@@ -1,0 +1,92 @@
+[
+ {
+  "id": "P2-1",
+  "title": "混合拉丁+CJK run 整词从 BM25 索引消失(GPT 查不到 GPT4模型)",
+  "verdict": "未复现",
+  "detail": "search('GPT') top4=['GPT4模型的推理能力很强', 'B站的视频很有趣', 'Python语言的生态很好', 'iPhone手机的价格很贵']; search('Python') 对照命中=True"
+ },
+ {
+  "id": "P2-2",
+  "title": "SDK importance=NaN 穿透 clamp,污染排序分",
+  "verdict": "实锤",
+  "detail": "写入后 importance=nan, 检索出现NaN分: 1/1"
+ },
+ {
+  "id": "P2-2b",
+  "title": "SDK importance=+inf",
+  "verdict": "有防护",
+  "detail": "写入后 importance=1.0"
+ },
+ {
+  "id": "P2-4",
+  "title": "import 负 hit_count/weight → 检索除零",
+  "verdict": "实锤",
+  "detail": "检索崩溃: ZeroDivisionError('division by zero')"
+ },
+ {
+  "id": "P3-8",
+  "title": "SDK update 接受纯空白文本入库",
+  "verdict": "实锤",
+  "detail": "更新后 text='   '"
+ },
+ {
+  "id": "P3-9",
+  "title": "add_many importance 不 clamp(可写 7.5)",
+  "verdict": "实锤",
+  "detail": "importance=[7.5, 7.5]"
+ },
+ {
+  "id": "P3-10",
+  "title": "配置注册表与 dataclass 默认不一致(llm.temperature/model)",
+  "verdict": "实锤",
+  "detail": "temperature registry=0.6 dataclass=0.3; model registry='' dataclass='gpt-4o-mini'"
+ },
+ {
+  "id": "P3-15",
+  "title": "from_dict evolve_interval=0 → 写入 ZeroDivision",
+  "verdict": "实锤",
+  "detail": "ZeroDivisionError('division by zero')"
+ },
+ {
+  "id": "P3-5",
+  "title": "演化候选饥饿(12簇超阈 vs MAX_SPLITS_PER_PASS=8)",
+  "verdict": "未复现",
+  "detail": "region数=12, 超阈region数=6, sizes前12=[28, 19, 9, 8, 7, 6, 5, 4, 4, 4, 1, 1]"
+ },
+ {
+  "id": "P3-7",
+  "title": "cold_archive.json 损坏 → 构造崩溃",
+  "verdict": "实锤",
+  "detail": "JSONDecodeError: JSONDecodeError('Expecting property name enclosed in double quotes: line 1 column 2 (char 1)')"
+ },
+ {
+  "id": "P3-13",
+  "title": "factversion 遇无 embedding 记忆",
+  "verdict": "有防护",
+  "detail": "未崩溃, 返回2条"
+ },
+ {
+  "id": "P2-4R",
+  "title": "REST /import 毒数据",
+  "verdict": "环境所限",
+  "detail": "ZeroDivisionError: ZeroDivisionError('division by zero')"
+ },
+ {
+  "id": "P2-2R",
+  "title": "REST importance=NaN 入库",
+  "verdict": "实锤(入库未崩)",
+  "detail": "add=200, 检索=200, scores=[None]"
+ },
+ {
+  "id": "P2-3",
+  "title": "热重建改 mrl_dim → 新旧维度混存",
+  "verdict": "有防护",
+  "detail": "PUT=200, 检索=OK"
+ },
+ {
+  "id": "T1-a",
+  "title": "REST TestClient 离线可用性",
+  "verdict": "环境所限",
+  "detail": "mcp 包未装(可选依赖),test_optimization_contracts 的 3 个 MCP 头测试属环境缺件,非 bug"
+ }
+]

@@ -1,0 +1,30 @@
+{
+ "model": "deepseek-flash",
+ "results": [
+  {
+   "name": "LLM 基础 chat(模型探测)",
+   "ok": true,
+   "detail": "model=deepseek-flash, reply='在线'"
+  },
+  {
+   "name": "LLM chat_json 结构化输出",
+   "ok": true,
+   "detail": "{'fruit': '苹果', 'person': '小明'}"
+  },
+  {
+   "name": "extraction(llm) 抽取事实入库",
+   "ok": true,
+   "detail": "facts=3, 库新增 0 条, 首条: 用户叫黄小乐"
+  },
+  {
+   "name": "consolidation(llm) 摘要生成",
+   "ok": true,
+   "detail": "1 条摘要: 用户喜欢苹果，不同记录中每天吃0到5个不等。"
+  },
+  {
+   "name": "REST /config/check ping LLM",
+   "ok": true,
+   "detail": "{\"configured\": true, \"ok\": true, \"detail\": \"LLM 已配置：https://api.deepseek.com/v1 model=deepseek-flash key=已填；连通：\"}"
+  }
+ ]
+}

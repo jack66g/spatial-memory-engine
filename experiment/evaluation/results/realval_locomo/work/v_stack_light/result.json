@@ -1,0 +1,39 @@
+{
+ "dataset": "locomo",
+ "n_memories": 788,
+ "top_k": 10,
+ "overrides": {
+  "retrieval.keyword_candidates": 20,
+  "retrieval.top_regions": 1
+ },
+ "build_s": 4.0,
+ "metrics": {
+  "n_queries": 301,
+  "hit@1": 0.0233,
+  "recall@1": 0.0183,
+  "hit@3": 0.0831,
+  "recall@3": 0.0742,
+  "hit@5": 0.1528,
+  "recall@5": 0.1417,
+  "hit@10": 0.3223,
+  "recall@10": 0.2988,
+  "mrr": 0.087,
+  "ndcg@10": 0.1314,
+  "composite": 0.0965,
+  "lat_p50_ms": 6.82,
+  "lat_p95_ms": 11.24,
+  "lat_mean_ms": 7.17
+ },
+ "by_type": {
+  "direct": {
+   "n": 246,
+   "hit@3": 0.0813,
+   "mrr": 0.0873
+  },
+  "multi": {
+   "n": 55,
+   "hit@3": 0.0909,
+   "mrr": 0.0857
+  }
+ }
+}

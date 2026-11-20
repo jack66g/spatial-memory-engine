@@ -1,0 +1,48 @@
+{
+ "name": "struct_temporal_boost",
+ "overrides": {
+  "ranking.semantic": 0.3,
+  "ranking.importance": 0.1,
+  "ranking.freshness": 0.2,
+  "ranking.weight": 0.08,
+  "ranking.decay": 0.1,
+  "ranking.hit_count": 0.04,
+  "ranking.recency": 0.14,
+  "ranking.region": 0.04
+ },
+ "wall_s": 44.2,
+ "returncode": 0,
+ "n_queries": 1088,
+ "hit@1": 0.1103,
+ "recall@1": 0.1057,
+ "hit@3": 0.1415,
+ "recall@3": 0.136,
+ "hit@5": 0.1783,
+ "recall@5": 0.1714,
+ "hit@10": 0.2914,
+ "recall@10": 0.2812,
+ "mrr": 0.1464,
+ "ndcg@10": 0.1745,
+ "composite": 0.1515,
+ "lat_p50_ms": 25.56,
+ "lat_p95_ms": 34.79,
+ "lat_mean_ms": 26.52,
+ "by_type": {
+  "direct": {
+   "n": 815,
+   "hit@3": 0.1644,
+   "mrr": 0.1722
+  },
+  "temporal": {
+   "n": 164,
+   "hit@3": 0.0366,
+   "mrr": 0.0254
+  },
+  "multi": {
+   "n": 109,
+   "hit@3": 0.1284,
+   "mrr": 0.1349
+  }
+ },
+ "status": "ok"
+}

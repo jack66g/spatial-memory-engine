@@ -117,6 +117,7 @@ def exponential_decay(age_d: float, half_life_days: float = 30.0) -> float:
 # tokenization (lightweight, language-agnostic)
 # --------------------------------------------------------------------------- #
 _ALNUM_RUN_RE = re.compile(r"[a-z0-9\u4e00-\u9fff]+")
+_RUN_SPLIT_RE = re.compile(r"[a-z0-9]+|[\u4e00-\u9fff]+")
 _CJK_CHAR = re.compile(r"[\u4e00-\u9fff]")
 
 
@@ -127,6 +128,11 @@ def tokenize(text: str, cjk_bigram: bool = False) -> list[str]:
     the historical behavior) or 1-2 grams (``cjk_bigram=True``, used by the
     BM25 keyword channel - "违约金" -> 违/约/金/违约/约金, which cuts the
     single-char inverted-index noise for Chinese terms).
+
+    混合 run（拉丁+CJK 连写，如 "GPT模型"/"iPhone手机"）先按书写系统切段：
+    拉丁段保留整词、CJK 段走 1-2 元。旧实现把整个 run 逐字符打散，拉丁
+    整词（gpt/iphone）从索引中消失，纯拉丁查询对这些文档 BM25 恒为 0
+    （2026-11-20 测试战役 P2-1）。
     """
     if not text:
         return []
@@ -135,10 +141,16 @@ def tokenize(text: str, cjk_bigram: bool = False) -> list[str]:
     has_cjk = _CJK_CHAR.search
     for tok in _ALNUM_RUN_RE.findall(lowered):
         if len(tok) > 1 and has_cjk(tok):
-            result.extend(tok)
-            if cjk_bigram:
-                for i in range(len(tok) - 1):
-                    result.append(tok[i : i + 2])
+            for seg in _RUN_SPLIT_RE.findall(tok):
+                if not seg:
+                    continue
+                if has_cjk(seg):
+                    result.extend(seg)
+                    if cjk_bigram:
+                        for i in range(len(seg) - 1):
+                            result.append(seg[i : i + 2])
+                else:
+                    result.append(seg)
         else:
             result.append(tok)
     return result

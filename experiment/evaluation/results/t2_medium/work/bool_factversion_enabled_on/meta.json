@@ -1,0 +1,41 @@
+{
+ "name": "bool_factversion_enabled_on",
+ "overrides": {
+  "factversion.enabled": true
+ },
+ "wall_s": 39.3,
+ "returncode": 0,
+ "n_queries": 1088,
+ "hit@1": 0.1682,
+ "recall@1": 0.1631,
+ "hit@3": 0.2362,
+ "recall@3": 0.2289,
+ "hit@5": 0.2665,
+ "recall@5": 0.2583,
+ "hit@10": 0.3134,
+ "recall@10": 0.3024,
+ "mrr": 0.21,
+ "ndcg@10": 0.2291,
+ "composite": 0.2253,
+ "lat_p50_ms": 24.16,
+ "lat_p95_ms": 33.53,
+ "lat_mean_ms": 25.01,
+ "by_type": {
+  "direct": {
+   "n": 815,
+   "hit@3": 0.2822,
+   "mrr": 0.252
+  },
+  "temporal": {
+   "n": 164,
+   "hit@3": 0.0427,
+   "mrr": 0.0389
+  },
+  "multi": {
+   "n": 109,
+   "hit@3": 0.1835,
+   "mrr": 0.1535
+  }
+ },
+ "status": "ok"
+}
